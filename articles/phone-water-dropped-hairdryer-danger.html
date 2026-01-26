@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【保存版】スマホを水に落とした！ドライヤーが絶対ダメな理由と正しい乾かし方（iPhone/Android）｜今すぐ解決ノート</title>
+  <meta name="description" content="スマホを水没させた直後にドライヤーはNG。熱で水が奥に入る、部品や防水シールが劣化、バッテリーが危険などの理由を解説。iPhone/Android共通の正しい応急処置（電源オフ・充電しない・SIM取り出し・自然乾燥・乾燥剤）と、やってはいけない行動、修理に持ち込む目安をまとめ。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> スマホ / トラブル</p>
+        <h1>スマホを水に落とした！ドライヤーで乾かすのが絶対ダメな理由</h1>
+        <p class="sub">
+          まず落ち着いて。水没直後にやることを間違えると、<strong>助かるはずのスマホが壊れます</strong>。<br>
+          特に多いのが「ドライヤーで乾かす」。これ、かなり危険。<br>
+          この記事では<strong>ドライヤーがダメな理由</strong>と、iPhone/Android共通で使える<strong>正しい応急処置</strong>を、順番どおりにまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#now">今すぐやること（1分でOK）</a></li>
+            <li><a href="#why">ドライヤーが絶対ダメな理由</a></li>
+            <li><a href="#dont">やってはいけないNG行動</a></li>
+            <li><a href="#dry">正しい乾かし方（iPhone/Android共通）</a></li>
+            <li><a href="#after">乾いた後にやること（起動・充電のタイミング）</a></li>
+            <li><a href="#repair">修理に持ち込む目安</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>超重要：</strong>水没直後は<strong>電源を切る</strong>＆<strong>充電しない</strong>。<br>
+            「乾かす」より先に、<strong>ショート（短絡）を防ぐ</strong>のが最優先です。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="now">
+      <h2>今すぐやること（1分でOK）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">とにかく最初の1分が大事</span></div>
+        <ol class="ol">
+          <li><strong>電源を切る</strong>（可能ならすぐ）</li>
+          <li><strong>充電ケーブルを抜く</strong>／絶対に挿さない</li>
+          <li>ケースを外す</li>
+          <li>可能なら<strong>SIMトレイを抜く</strong>（中の水を逃がす）</li>
+          <li>外側の水分を<strong>やさしく拭く</strong>（ティッシュ/柔らかい布）</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          ここで「動作確認」で電源を入れ直すのが一番危ないパターン。中が濡れてるとショートしやすいです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="why">
+      <h2>ドライヤーが絶対ダメな理由</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge danger">① 熱で水が“奥に押し込まれる”</span></div>
+          <p class="muted" style="margin:0;">
+            ドライヤーの風は強いので、スピーカー穴や端子から入った水を<strong>さらに内部へ</strong>押し込むことがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge danger">② 防水パッキン/接着が劣化する</span></div>
+          <p class="muted" style="margin:0;">
+            スマホは内部で<strong>接着剤やシール</strong>を使っています。熱を当てると劣化や変形が起き、のちのち不具合が出やすいです。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge danger">③ バッテリーが危険（発熱・膨張）</span></div>
+          <p class="muted" style="margin:0;">
+            リチウム電池は熱に弱いです。濡れている状態で熱を加えると、発熱・膨張・最悪トラブルの原因になります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">④ 「乾いたように見える」だけで中は残る</span></div>
+          <p class="muted" style="margin:0;">
+            表面だけ乾いても内部は残りやすいです。そこで電源を入れるとショートしやすい。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">⑤ 塩水/ジュースは“乾くと固まる”</span></div>
+          <p class="muted" style="margin:0;">
+            海水や飲み物は、乾くと成分が残って<strong>腐食</strong>の原因になります。熱で急いで乾かすほど悪化することも。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">結論</span></div>
+          <p class="muted" style="margin:0;">
+            ドライヤーは「早く乾かす」つもりでも、<strong>内部ダメージを増やす</strong>方向に働きやすいです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="dont">
+      <h2>やってはいけないNG行動</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge danger">これやると壊れる確率が上がる</span></div>
+        <ul>
+          <li><strong>電源を入れる</strong>／再起動して動作確認する</li>
+          <li><strong>充電する</strong>（ケーブル/ワイヤレス含む）</li>
+          <li><strong>ドライヤー・ヒーター・直射日光</strong>で加熱する</li>
+          <li><strong>振る</strong>（内部に水が回る）</li>
+          <li><strong>スピーカー穴に綿棒を突っ込む</strong>（奥に押し込む）</li>
+          <li>「米に入れればOK」だけで放置（ゼロではないけど万能ではない）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="dry">
+      <h2>正しい乾かし方（iPhone/Android共通）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">基本は「常温でゆっくり」</span></div>
+        <ol class="ol">
+          <li>電源OFFのまま、ケース/アクセサリを外す</li>
+          <li>タオルで外側をやさしく拭く</li>
+          <li>端子口を下にして、<strong>水が出やすい向き</strong>で数分置く（振らない）</li>
+          <li>風通しの良い場所で<strong>常温乾燥</strong>（扇風機の弱風はOK）</li>
+          <li>可能なら乾燥剤（シリカゲル）と一緒に密閉袋へ（直接端末に粉が付かないように）</li>
+        </ol>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">乾燥の目安時間</h3>
+          <p class="muted" style="margin:0;">
+            目安は<strong>最低でも数時間</strong>、不安なら<strong>24〜48時間</strong>。<br>
+            「水の量」「水の種類」「落とした場所」で変わります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">海水・ジュース・お風呂は注意</h3>
+          <p class="muted" style="margin:0;">
+            成分が残って腐食しやすいので、<strong>自己判断で復活を待つより</strong>修理相談のほうが安全です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="after">
+      <h2>乾いた後にやること（起動・充電のタイミング）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">起動/充電は“完全に乾いた自信がある時だけ”</span></div>
+        <ul>
+          <li>まずは<strong>電源オン</strong>（問題なければ次へ）</li>
+          <li>充電は<strong>有線より慎重</strong>（端子が濡れてると危険）</li>
+          <li>充電中に発熱・異音・画面のちらつきが出たら<strong>すぐ中止</strong></li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          端子が濡れてるときは、機種によって「液体が検出されました」などの警告が出ることがあります。出たら充電しないで乾燥を続けてください。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="repair">
+      <h2>修理に持ち込む目安</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">すぐ相談したほうがいい症状</span></div>
+        <ul>
+          <li>電源が入らない／再起動ループ</li>
+          <li>画面がチカチカ、タッチが効かない</li>
+          <li>スピーカー/マイクが変、音がこもる</li>
+          <li>充電できない、異常に熱い</li>
+          <li>水が「海水」「ジュース」「洗剤」などだった</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          水没は「その日は動くのに、数日後に壊れる」こともあります。早めに対処するほど復旧率が上がります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 防水スマホなら大丈夫？</h3>
+        <p class="muted" style="margin:0;">
+          防水（耐水）でも<strong>100%安全ではありません</strong>。劣化や衝撃で性能が落ちていることもあるので、基本は水没として扱うのが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 米に入れるのは意味ある？</h3>
+        <p class="muted" style="margin:0;">
+          乾燥剤の代わりに使われがちですが、万能ではありません。粉やゴミが端子に入るリスクも。<br>
+          可能なら<strong>シリカゲル（乾燥剤）</strong>のほうが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. スピーカーの水抜き音（アプリ）って使っていい？</h3>
+        <p class="muted" style="margin:0;">
+          スピーカー穴に残った水を出す目的なら一部効果はありますが、内部まで解決できるわけではありません。<br>
+          まずは<strong>電源OFF・乾燥</strong>が優先です。
+        </p>
+      </div>
+    </section>
+
+    
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

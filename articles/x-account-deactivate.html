@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xでアカウントを一時停止・解除する方法（30日以内に復活）｜今すぐ解決ノート</title>
+  <meta name="description" content="X（旧Twitter）のアカウントを一時停止（無効化）する手順と、解除（再開）する方法。iPhone/Android/PC別に、30日ルール・注意点・うまくいかない時の対処まで詳しく解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / X</p>
+        <h1>Xでアカウントを一時停止・解除する方法</h1>
+        <p class="sub">
+          Xの「一時停止（無効化）」は<strong>すぐ消える</strong>ように見えますが、実は<strong>30日間の猶予</strong>があります。<br/>
+          その間にログインすれば<strong>解除（再開）</strong>できます。やり方と注意点を、迷わない順でまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <div class="toc-title">目次</div>
+          <ul>
+            <li><a href="#before">一時停止の前に知っておくこと（重要）</a></li>
+            <li><a href="#ios">iPhone/iPadアプリ：一時停止する手順</a></li>
+            <li><a href="#android">Androidアプリ：一時停止する手順</a></li>
+            <li><a href="#web">PCブラウザ：一時停止する手順</a></li>
+            <li><a href="#reactivate">解除（再開）する方法</a></li>
+            <li><a href="#trouble">うまく解除できない時の対処</a></li>
+            <li><a href="#qa">よくある質問</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="before">
+      <h2>一時停止の前に知っておくこと（重要）</h2>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">30日ルール</h3>
+          <p class="muted">
+            一時停止するとプロフィールは見えなくなりますが、<strong>30日以内にログイン</strong>すれば復活できます。<br/>
+            30日を過ぎると<strong>アカウントは削除</strong>され、基本的に戻せません。
+          </p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">消えるのは“表示”</h3>
+          <p class="muted">
+            一時停止中は、あなたのプロフィールやポストは見えなくなります。<br/>
+            ただし検索エンジンの表示など、外部に残ることがあります（X側では操作できません）。
+          </p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">データを残したいなら</h3>
+          <p class="muted">
+            必要なら、一時停止の前に<strong>データのダウンロード</strong>を検討。<br/>
+            ログインできない/パスワード不明だと、解除もできなくなりがちです。
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">注意</span> <span class="muted">「凍結（suspended）」とは別</span></div>
+        <p class="muted">
+          ここでの「一時停止」はあなたが自分で行う<strong>無効化</strong>です。<br/>
+          ルール違反などでアカウントが<strong>凍結/ロック</strong>されている場合は、解除方法が別になります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="ios">
+      <h2>iPhone/iPadアプリ：一時停止する手順</h2>
+      <ol>
+        <li>Xアプリを開き、下の<strong>プロフィールアイコン</strong> → <strong>設定とプライバシー</strong></li>
+        <li><strong>アカウント</strong>（または「アカウント情報」）を開く</li>
+        <li><strong>アカウントを停止（無効化）</strong> を選ぶ</li>
+        <li>注意事項を読み、下の<strong>停止（無効化）</strong></li>
+        <li>確認のために<strong>パスワード入力</strong> → 完了</li>
+      </ol>
+
+      <div class="callout">
+        <p class="muted">
+          アプリの表示名は更新で少し変わることがあります。<br/>
+          見つからない場合は、次の「PCブラウザ手順」でやるのが確実です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="android">
+      <h2>Androidアプリ：一時停止する手順</h2>
+      <ol>
+        <li>Xアプリ → <strong>プロフィールアイコン</strong> → <strong>設定とプライバシー</strong></li>
+        <li><strong>アカウント</strong> を開く</li>
+        <li><strong>アカウントを停止（無効化）</strong></li>
+        <li>確認 → <strong>停止（無効化）</strong> → <strong>パスワード</strong>入力</li>
+      </ol>
+      <p class="muted">※Androidも、見つからない時はPCブラウザ経由が確実です。</p>
+    </section>
+
+    <section class="card" id="web">
+      <h2>PCブラウザ：一時停止する手順（いちばん確実）</h2>
+      <ol>
+        <li>x.com を開いてログイン</li>
+        <li>左メニューの <strong>もっと見る</strong> → <strong>設定とプライバシー</strong></li>
+        <li><strong>アカウント</strong> → <strong>アカウントを停止（無効化）</strong></li>
+        <li>注意事項を確認 → <strong>停止（無効化）</strong></li>
+        <li>パスワード入力 → 完了</li>
+      </ol>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">コツ</span> <span class="muted">止める前に確認するもの</span></div>
+        <ul>
+          <li>登録メール/電話番号が今も使えるか</li>
+          <li>パスワードが合っているか（不安なら先に変更）</li>
+          <li>二段階認証を使っている場合、認証アプリ/コードを用意</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="reactivate">
+      <h2>解除（再開）する方法</h2>
+      <p>一時停止を解除するのは簡単で、基本は<strong>ログインするだけ</strong>です。</p>
+
+      <ol>
+        <li>Xアプリ または x.com を開く</li>
+        <li><strong>ユーザー名 / メール / 電話番号</strong>と<strong>パスワード</strong>でログイン</li>
+        <li>画面の案内に従い、<strong>再開（reactivate）</strong>を確定</li>
+      </ol>
+
+      <div class="callout">
+        <p class="muted">
+          復活後、フォロー/表示が整うまで少し時間がかかることがあります。<br/>
+          まずは数分待ってから再確認するとスムーズです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="trouble">
+      <h2>うまく解除できない時の対処</h2>
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">パスワードが分からない</h3>
+          <p class="muted">ログイン画面の<strong>「パスワードをお忘れですか？」</strong>から再設定。</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">メール/電話が使えない</h3>
+          <p class="muted">登録情報にアクセスできないと復活が難しいです。可能なら、以前の端末/メールで確認。</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">30日を過ぎたかも</h3>
+          <p class="muted">30日経過後は基本的に復活できません。ユーザー名/メールが再利用可能になる場合があります。</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">注意</span> <span class="muted">「凍結」や「ロック」は別ルート</span></div>
+        <p class="muted">
+          ログイン時に「凍結」「制限」などが出る場合は、一時停止の解除ではなく<strong>異議申し立て/認証</strong>が必要な可能性があります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="qa">
+      <h2>よくある質問</h2>
+
+      <h3 style="margin:0 0 8px;">Q. 一時停止したら相手にはどう見える？</h3>
+      <p class="muted">プロフィールが開けなくなり、基本的に表示されません。過去の言及（@）は文字として残ることがあります。</p>
+
+      <h3 style="margin:16px 0 8px;">Q. 解除したら全部戻る？</h3>
+      <p class="muted">30日以内なら戻ることが多いです。ただし反映に時間がかかる場合があります。</p>
+
+      <h3 style="margin:16px 0 8px;">Q. 完全に消したい時は？</h3>
+      <p class="muted">一時停止して<strong>30日ログインしない</strong>と削除に進む仕組みです。迷っているなら、まず一時停止が安全です。</p>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【偽警告】「ウイルスに感染しました」は本物？広告ポップアップの消し方（iPhone/Android/PC）｜今すぐ解決ノート</title>
+  <meta name="description" content="ブラウザで突然出る「ウイルスに感染しました」警告は、多くが偽の広告（スケアウェア）。本物の警告の見分け方、絶対にやってはいけない行動、iPhone/Android/PC別の消し方（タブを閉じる・履歴/サイトデータ削除・通知許可の解除・拡張機能/アプリ確認）をまとめ。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 安全 / ネット</p>
+        <h1>「ウイルスに感染しました」って画面に出た。それ、本物じゃなくて広告かも</h1>
+        <p class="sub">
+          こういう「ウイルスに感染しました」「今すぐスキャン」「警告！」みたいな画面、<strong>ほとんどは本物のウイルス警告じゃなくて“偽の広告（脅し）”</strong>です。<br>
+          目的は、アプリを入れさせたり、電話させたり、個人情報やカード情報を取ること。<br>
+          この記事では<strong>見分け方 → その場の消し方 → 再発防止</strong>まで、端末別にまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#quick">まずこれ：絶対に押さない</a></li>
+            <li><a href="#real">本物っぽく見える理由と見分け方</a></li>
+            <li><a href="#iphone">iPhone（Safari）で消す</a></li>
+            <li><a href="#android">Android（Chrome）で消す</a></li>
+            <li><a href="#pc">PC（Windows/Mac）で消す</a></li>
+            <li><a href="#prevent">再発防止：通知・拡張機能・アプリをチェック</a></li>
+            <li><a href="#clicked">もし押してしまった/入れてしまった</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>超重要：</strong>画面内の「OK」「閉じる」「スキャン」ボタンは押さない。<br>
+            消すときは<strong>ブラウザ自体を閉じる</strong>／<strong>履歴・サイトデータを消す</strong>のが安全。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>まずこれ：絶対に押さない</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge danger">やってはいけない</span></div>
+          <ul>
+            <li>画面の<strong>OK / Cancel / 閉じる / スキャン開始</strong>を押す</li>
+            <li>表示された<strong>電話番号にかける</strong></li>
+            <li>「ウイルス除去」アプリをその場で入れる</li>
+            <li>Apple ID/Google/クレカ情報を入力する</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">安全な行動</span></div>
+          <ul>
+            <li>ブラウザの<strong>タブを閉じる</strong>（無理ならアプリごと終了）</li>
+            <li>履歴・サイトデータを削除（後で手順あり）</li>
+            <li>同じサイトの<strong>通知許可を外す</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="real">
+      <h2>本物っぽく見える理由と見分け方</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">見分けの基本</span></div>
+        <ul>
+          <li><strong>ブラウザ内で出てる</strong>（Safari/Chromeのページっぽい）→ 偽の可能性が高い</li>
+          <li><strong>電話番号が書いてある</strong> → ほぼ詐欺</li>
+          <li><strong>カウントダウン</strong>や<strong>警告音</strong>で焦らせる → 典型的</li>
+          <li>「今すぐ〇〇を入れて」など<strong>行動を強制</strong> → 典型的</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          本物のセキュリティ警告は、公式の設定画面やセキュリティソフト内で出ることが多く、
+          “いきなりWebページで電話させる”みたいな流れはかなり怪しいです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="iphone">
+      <h2>iPhone（Safari）で消す</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) まずページを閉じる（押さずに）</span></div>
+        <ol class="ol">
+          <li>Safariの<strong>タブ一覧</strong>を開いて、そのタブを閉じる</li>
+          <li>閉じられない場合は<strong>ホームに戻る → アプリスイッチャー → Safariを終了</strong></li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) 履歴/サイトデータを削除</span></div>
+        <ol class="ol">
+          <li>設定 → <strong>Safari</strong></li>
+          <li><strong>履歴とWebサイトデータを消去</strong></li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          同じ広告が出続ける時は、サイト側のデータ（キャッシュ/クッキー）を消すのが効きます。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">3) 再発防止の設定</h3>
+          <ul>
+            <li>設定 → Safari → <strong>ポップアップをブロック</strong> をオン</li>
+            <li>設定 → Safari → <strong>詐欺Webサイトの警告</strong> をオン</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">4) 変なものが入ってないか確認</h3>
+          <ul>
+            <li>設定 → 一般 → <strong>VPNとデバイス管理</strong>（見知らぬプロファイルがあれば注意）</li>
+            <li>カレンダーに不審な予定が増えたら「購読カレンダー」も確認</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          iPhoneで「アプリ入れてスキャンしろ」はほぼ罠。App Store以外に誘導されたら特に危険です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="android">
+      <h2>Android（Chrome）で消す</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) タブを閉じる（無理ならChromeを強制終了）</span></div>
+        <p class="muted" style="margin:0;">
+          タブが閉じられないなら、設定→アプリ→Chrome→<strong>強制停止</strong>で止めてOKです。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) Chromeの閲覧データ削除</span></div>
+        <ol class="ol">
+          <li>Chrome → ︙ → <strong>履歴</strong> → <strong>閲覧履歴データを削除</strong></li>
+          <li>「Cookie とサイトデータ」「キャッシュされた画像とファイル」を選ぶ</li>
+        </ol>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">3) 通知を許可してないか確認</h3>
+          <p class="muted" style="margin:0;">
+            「許可」を押してしまうと、怪しい通知が飛び続けます。<br>
+            Chrome → 設定 → サイトの設定 → <strong>通知</strong> で、見知らぬサイトをブロック/削除。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">4) 最近入れたアプリを見直す</h3>
+          <p class="muted" style="margin:0;">
+            直前に入れたアプリが原因のこともあります。怪しいアプリはアンインストール。
+            可能ならGoogle Playの<strong>Play Protect</strong>もオンに。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="pc">
+      <h2>PC（Windows/Mac）で消す</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) 画面が閉じない時は“ブラウザごと”終了</span></div>
+        <ul>
+          <li>Windows：<strong>Ctrl + Shift + Esc</strong> → タスクマネージャーでブラウザを終了</li>
+          <li>Mac：<strong>Command + Option + Esc</strong> → ブラウザを強制終了</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          “ページの×ボタン”を押すより、ブラウザを閉じた方が安全です（偽ボタンの可能性があるため）。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">2) 拡張機能（アドオン）を確認</h3>
+          <p class="muted" style="margin:0;">
+            変な拡張機能が入ると広告が出続けます。怪しいものは削除。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">3) ブラウザのリセットも有効</h3>
+          <p class="muted" style="margin:0;">
+            Chrome/Edgeには設定を初期化する機能があります。直らない時の最終手段として使えます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="prevent">
+      <h2>再発防止：通知・拡張機能・アプリをチェック</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">サイト通知は基本「許可しない」</span></div>
+          <p class="muted" style="margin:0;">
+            「通知を許可しますか？」は、急いでる時ほど押しがち。<br>
+            迷ったら<strong>ブロック</strong>が安全です。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">“無料クリーナー/高速化”系は注意</span></div>
+          <p class="muted" style="margin:0;">
+            不要な広告アプリや、紛らわしい最適化アプリが原因のこともあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">OSとブラウザを更新</span></div>
+          <p class="muted" style="margin:0;">
+            古い環境ほど悪用されやすい。アップデートは地味に効きます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="clicked">
+      <h2>もし押してしまった/入れてしまった</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">被害を広げないための手順</span></div>
+        <ol class="ol">
+          <li>そのページ/アプリを閉じる（PCならブラウザ強制終了）</li>
+          <li>入れてしまったアプリがあれば<strong>アンインストール</strong></li>
+          <li>怪しいサイトにログインしたなら、<strong>パスワード変更</strong>＋<strong>二段階認証</strong></li>
+          <li>カード情報を入れた/電話した場合は、家族やカード会社に相談</li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「スキャンが必要」と言われても焦らない。まずは<strong>押さずに閉じる</strong>が正解です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. これって“開いただけ”で感染する？</h3>
+        <p class="muted" style="margin:0;">
+          多くは脅し広告です。開いただけで即アウトというより、<strong>ボタンを押す/アプリを入れる/情報を入力する</strong>ことで被害になります。
+          ただしゼロではないので、早めに閉じてデータ削除が安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 「閉じる」を押すのもダメ？</h3>
+        <p class="muted" style="margin:0;">
+          画面内の「閉じる」は偽物の場合があります。できるだけ<strong>タブを閉じる/ブラウザを終了</strong>で対処するのが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 何回も同じ警告が出る…</h3>
+        <p class="muted" style="margin:0;">
+          履歴・サイトデータが残っている、通知許可してしまった、怪しい拡張機能/アプリが入った、のどれかが多いです。
+          このページの手順を上から順にやれば、だいたい止まります。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

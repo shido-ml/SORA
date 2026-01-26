@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Google Classroomに入れない時の対処法（iPhone/PC）｜今すぐ解決ノート</title>
+  <meta name="description" content="Google Classroomにログインできない／クラスに入れない／読み込みが終わらない時の原因と直し方。iPhone・iPad・PC（Chrome）での手順をわかりやすく。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 学校 / Google</p>
+        <h1>Google Classroomに入れない時の対処法（iPhone/PC）</h1>
+        <p class="sub">
+          「ログインできない」「クラスが表示されない」「読み込みが終わらない」など、Classroomが開けない時は、
+          原因が<strong>アカウント</strong>・<strong>通信</strong>・<strong>アプリ/ブラウザ</strong>・<strong>学校側設定</strong>に分かれます。
+          この記事は<strong>確率が高い順</strong>に、iPhone/PCどちらでも直せる手順をまとめました。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#quick">まず最初にやる3つ（最短）</a></li>
+            <li><a href="#check">症状別チェック（どれ？）</a></li>
+            <li><a href="#iphone">iPhone/iPad：対処手順</a></li>
+            <li><a href="#pc">PC（Chrome）：対処手順</a></li>
+            <li><a href="#join">「クラスに参加できない」時</a></li>
+            <li><a href="#school">学校アカウント特有の原因</a></li>
+            <li><a href="#last">どうしても無理な時の確認テンプレ</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>結論：</strong>多いのは「ログインしているGoogleアカウントが違う」「通信が不安定」「アプリ/ブラウザが古い」の3つ。
+            まずは <strong>アカウント確認 → 再起動 → 更新</strong> をやると解決率が高いです。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>まず最初にやる3つ（最短）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">① ログインしているGoogleアカウントを確認</span></div>
+          <ul>
+            <li>学校用（例：@g... / @edu...）と個人用が混ざると起きやすい</li>
+            <li>Classroomは<strong>入っているアカウント</strong>で表示されるクラスが変わります</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">② 端末を再起動・回線切り替え</span></div>
+          <ul>
+            <li>Wi‑Fi → モバイル通信に切り替える（またはその逆）</li>
+            <li>学校Wi‑Fiでだけ起きるなら、ネット側の制限の可能性も</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">③ アプリ/ブラウザを更新</span></div>
+          <ul>
+            <li>App StoreでClassroom/Google/Chromeを更新</li>
+            <li>PCはChromeを最新に</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="check">
+      <h2>症状別チェック（どれ？）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">A：ログイン画面で止まる</h3>
+          <ul>
+            <li>パスワードが違う/制限がかかっている</li>
+            <li>別のGoogleアカウントでログインしている</li>
+            <li>二段階認証/管理者設定の影響</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">B：読み込み中のまま/真っ白</h3>
+          <ul>
+            <li>通信不安定、キャッシュ/拡張機能、古いアプリ</li>
+            <li>Safariで開いていて相性が悪い（iPhone）</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">C：クラスが表示されない</h3>
+          <ul>
+            <li>アカウントが違う</li>
+            <li>先生がまだクラスに追加してない</li>
+            <li>招待を承認してない/参加コードが違う</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">D：クラスに参加できない</h3>
+          <ul>
+            <li>参加コードの有効期限/入力ミス</li>
+            <li>参加できる上限/権限制限（学校管理）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="iphone">
+      <h2>iPhone/iPad：対処手順</h2>
+      <p class="muted">一番多いのは「アカウント違い」「アプリが古い」「Safariで開いている」です。上から順に試してOK。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) Classroomアプリで開く（Safariじゃなく）</span></div>
+        <ul>
+          <li>App Storeで「Google Classroom」を開いて更新</li>
+          <li>ブラウザで開いている場合は、アプリへ切り替える</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) Googleアカウントを切り替える（超重要）</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li>Classroomアプリを開く</li>
+          <li>右上のアカウント（アイコン）をタップ</li>
+          <li>学校アカウントになっているか確認</li>
+          <li>違うなら切り替える（または一度ログアウト→ログイン）</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          <strong>クラスが出ない原因の大半</strong>がこれです。個人Gmailに入ったままだと学校のクラスが出ません。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">3) 通信を切り替える</span></div>
+        <ul>
+          <li>Wi‑Fiを一旦OFF→ON</li>
+          <li>学校Wi‑Fiでダメなら、モバイル通信で試す（できる範囲で）</li>
+          <li>VPN/広告ブロック/フィルタを使っているなら一時OFF</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">4) アプリの再起動・iPhone再起動</span></div>
+        <ul>
+          <li>アプリを完全に終了して開き直す</li>
+          <li>端末を再起動する</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">5) Safariの設定（Webで見る場合）</span></div>
+        <ul>
+          <li>Safariで開く場合、<strong>プライベートブラウズ</strong>をOFF</li>
+          <li>設定 → Safari → <strong>サイト越えトラッキングを防ぐ</strong> を一時OFFで試す（戻すの忘れずに）</li>
+          <li>設定 → Safari → <strong>履歴とWebサイトデータを消去</strong>（ログインし直し）</li>
+        </ul>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>コツ：</strong>iPhoneでWeb版Classroomが不安定なら、Chromeアプリで開くと安定することがあります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="pc">
+      <h2>PC（Chrome）：対処手順</h2>
+      <p class="muted">PCは「拡張機能」「キャッシュ」「アカウント違い」で詰まりがち。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) まずChromeで開く（推奨）</span></div>
+        <ul>
+          <li>ClassroomはChromeが一番安定</li>
+          <li>アドレス：classroom.google.com</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) Googleアカウントを確認（複数ログイン注意）</span></div>
+        <ul>
+          <li>右上のアイコンから学校アカウントになっているか確認</li>
+          <li>違うなら「アカウントを追加」→切り替え</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">3) シークレットモードで試す</span></div>
+        <ul>
+          <li>拡張機能やキャッシュの影響を避けられます</li>
+          <li>開けるなら「拡張機能/キャッシュ」が原因の可能性大</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">4) キャッシュ削除</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li>Chrome設定 → プライバシーとセキュリティ</li>
+          <li>閲覧履歴データの削除</li>
+          <li>「キャッシュされた画像とファイル」を削除</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">5) 拡張機能を一時OFF</span></div>
+        <ul>
+          <li>広告ブロック、セキュリティ系、翻訳系が干渉することがあります</li>
+          <li>一度すべてOFF→Classroomが開けるか確認</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="join">
+      <h2>「クラスに参加できない」時</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">参加コードが通らないときのチェック</span></div>
+        <ul>
+          <li>O（オー）と0（ゼロ）、l（エル）と1（イチ）を間違えてない？</li>
+          <li>コードが期限切れ/無効化されてない？（先生側で再発行が必要）</li>
+          <li>「別アカウントで入ろうとしてる」可能性がない？</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">先生が招待しているのに入れない</span></div>
+        <ul>
+          <li>招待メール/通知を見逃してないか確認</li>
+          <li>「参加」を押していないとクラスに入れません</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="school">
+      <h2>学校アカウント特有の原因</h2>
+      <p class="muted">学校アカウントは、管理者（学校）が設定していることが多く、個人では直せない場合があります。</p>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">管理者がClassroom利用を制限</h3>
+          <p class="muted" style="margin:0;">「このアカウントでは利用できません」系。先生や情報担当に確認が必要。</p>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">パスワード変更/初期設定未完了</h3>
+          <p class="muted" style="margin:0;">新年度や配布直後に多い。ログインテストが必要。</p>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">端末のプロファイル/フィルタ</h3>
+          <p class="muted" style="margin:0;">MDMやフィルタでGoogleサービスが不安定になることも。</p>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">クラス側の設定（先生）</h3>
+          <p class="muted" style="margin:0;">参加コード停止、招待漏れ、クラス作成ミスなど。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="last">
+      <h2>どうしても無理な時：先生に送る確認テンプレ</h2>
+      <p class="muted">「何が起きてるか」を短く伝えると、先生も対応しやすいです。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">LINE/メール 例文</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+Google Classroomに入れず、課題が確認できません。
+
+症状：
+  例）ログインはできるがクラスが表示されない／読み込み中のまま止まる
+試したこと：
+  例）アカウント切り替え、再起動、Wi‑Fi⇄モバイル切替、アプリ更新
+
+可能なら、参加コードの再発行 or 招待状況の確認をお願いできますか？
+よろしくお願いします。</pre>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ここまでやっても無理なら「学校側設定」か「先生側（招待/コード）」が原因の可能性が高いです。
+          その場合は無理にいじらず、上のテンプレで確認するのが最短です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="sensei-line-renraku-ok-ng.html">先生にLINEしてもいい？連絡していい内容・ダメな内容</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

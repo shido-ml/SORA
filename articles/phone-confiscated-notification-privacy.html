@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【学校】スマホ没収で通知の中身は見られる？電源OFFしないと危険？対策まとめ｜今すぐ解決ノート</title>
+  <meta name="description" content="学校でスマホを没収されたとき、ロック画面の通知プレビューで内容（LINE/DM/メール）が見られる可能性はある。iPhone/Androidで「通知の表示」「プレビュー」「ロック画面」の設定次第。見える範囲と、今すぐできる対策（プレビュー非表示、Focus/おやすみ、機内モード等）を解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 学校 / スマホ</p>
+        <h1>学校でスマホ没収された。電源切ってないと通知で見られる？</h1>
+        <p class="sub">
+          結論から言うと、<strong>電源を切ってなくても即「中身全部見られる」わけではない</strong>です。<br>
+          ただし、<strong>ロック画面の通知設定しだいで“通知の内容（本文）”は見えることがあります</strong>。<br>
+          ここでは「見える範囲」と「今後の対策」を、iPhone/Android別に分かりやすくまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：通知の中身は見られる？</a></li>
+            <li><a href="#what-can">見られる可能性があるもの／ないもの</a></li>
+            <li><a href="#iphone">iPhoneの対策（通知プレビューを隠す）</a></li>
+            <li><a href="#android">Androidの対策（ロック画面通知を隠す）</a></li>
+            <li><a href="#emergency">没収されそうな時に“その場で”できること</a></li>
+            <li><a href="#after">返ってきた後に確認すること</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>ポイント：</strong>先生が“端末の中身”を見るには基本<strong>ロック解除</strong>が必要。<br>
+            でも、<strong>ロック画面に通知本文が出る設定</strong>だと、置いてあるだけで見えてしまう可能性があります。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：通知の中身は見られる？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">通知プレビューが「表示」なら、見える可能性あり</span></div>
+        <p class="muted" style="margin:0;">
+          LINE・Instagram・X・メールなどは、設定によって<strong>ロック画面に「送信者＋本文の一部」</strong>が出ます。
+          これがオンだと、電源が入っている限り、新しい通知が来た瞬間に<strong>画面に内容が出る</strong>ことがあります。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">ロックが強ければ「中身全部」は基本見られない</span></div>
+        <p class="muted" style="margin:0;">
+          写真アプリ、トーク履歴、ブラウザ履歴など、端末の中身をがっつり見るには
+          ふつうは<strong>パスコード/生体認証でロック解除</strong>が必要です。
+          だから、最重要は<strong>ロック画面の通知表示</strong>を調整すること。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="what-can">
+      <h2>見られる可能性があるもの／ないもの</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">見られる可能性（設定しだい）</span></div>
+          <ul>
+            <li>ロック画面の通知本文（LINE/DM/メールなど）</li>
+            <li>通知に表示される画像サムネ（アプリ/設定による）</li>
+            <li>着信の相手名</li>
+          </ul>
+          <p class="muted" style="margin:0;">＝「画面に出る情報」は、のぞけば見える。</p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">基本的に見えない（ロックされている限り）</span></div>
+          <ul>
+            <li>トークの全文</li>
+            <li>写真・動画フォルダの中身</li>
+            <li>ブラウザの履歴やブックマーク</li>
+            <li>アプリ内の設定やデータ</li>
+          </ul>
+          <p class="muted" style="margin:0;">＝ロック解除が必要。</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ※学校配布端末や管理プロファイルが入っている端末は話が変わることがありますが、
+          <strong>自分のスマホ（私物）</strong>なら基本は上の考え方でOKです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="iphone">
+      <h2>iPhoneの対策（通知プレビューを隠す）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">最優先：通知の「プレビュー表示」を変える</span></div>
+        <ol class="ol">
+          <li>設定 → <strong>通知</strong></li>
+          <li><strong>プレビューを表示</strong></li>
+          <li>おすすめ：<strong>ロックされていないとき</strong>（または<strong>しない</strong>）にする</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          「ロックされていないとき」だと、Face ID/Touch IDで本人が見てる時だけ本文が出やすくなります。
+          「しない」はもっと強いです（通知の本文が出ません）。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">アプリごとに強くする</h3>
+          <p class="muted" style="margin:0;">
+            設定 → 通知 → 例：LINE → <strong>ロック画面</strong>をオフ、または通知スタイルを調整。<br>
+            「ロック画面に出さない」だけでもかなり安全です。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">集中モード（おやすみ等）を使う</h3>
+          <p class="muted" style="margin:0;">
+            授業中だけ通知を止めたいなら、集中モードで<strong>通知自体を出さない</strong>設定もできます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="android">
+      <h2>Androidの対策（ロック画面通知を隠す）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">ロック画面の通知表示を「非表示/機密だけ隠す」にする</span></div>
+        <p class="muted" style="margin:0;">
+          Androidは機種によってメニュー名が少し違いますが、だいたい下のどれかです。
+        </p>
+        <ul>
+          <li>設定 → 通知 → <strong>ロック画面の通知</strong> → 「表示しない」</li>
+          <li>設定 → 画面ロック → <strong>ロック画面の通知</strong> → 「機密情報を非表示」</li>
+          <li>通知の設定でアプリごとに「ロック画面で内容を表示しない」</li>
+        </ul>
+        <p class="muted" style="margin:0;">
+          “通知は出すけど本文は隠す”にできる機種も多いです。
+        </p>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          Androidはアプリ側（LINE等）の設定でも「通知内容を表示しない」があることが多いので、両方見ておくと強いです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="emergency">
+      <h2>没収されそうな時に“その場で”できること</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">基本はルール優先（揉めない）</span></div>
+          <p class="muted" style="margin:0;">
+            取り返そうとしてトラブルになるのが一番損です。落ち着いて対応しつつ、次のポイントだけ覚えておくと安心。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">通知が心配なら：画面をロックしておく</span></div>
+          <p class="muted" style="margin:0;">
+            ロック解除状態で渡すのは危険。必ず<strong>ロック状態</strong>にする（サイドボタンで画面オフ）。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">可能なら：集中モード/機内モード</span></div>
+          <p class="muted" style="margin:0;">
+            状況が許すなら、通知を止める目的で「集中モード」や「機内モード」を使う手もあります。
+            ただし学校のルールや先生の指示があるなら従うのが無難です。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">電源OFFは確実だが、焦ってやると逆効果も</span></div>
+          <p class="muted" style="margin:0;">
+            電源を切れば新しい通知は出ません。ただ、目の前で慌てて操作すると余計に疑われることもあるので、
+            “次回から設定で守る”のが一番スマートです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="after">
+      <h2>返ってきた後に確認すること</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">チェックリスト</span></div>
+        <ul>
+          <li>通知設定（プレビュー/ロック画面）を見直す</li>
+          <li>怪しいアプリが入っていないか確認</li>
+          <li>重要アカウントは二段階認証をオン（Instagram/X/Google等）</li>
+          <li>ロック解除パスコードを推測されにくいものにする</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 電源切ってないと、先生が勝手に通知を見れる？</h3>
+        <p class="muted" style="margin:0;">
+          “勝手に端末の中身を見る”には基本ロック解除が必要です。<br>
+          ただし<strong>ロック画面に通知本文が出る設定</strong>だと、通知が来た時に画面に表示される分は見えてしまう可能性があります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. Face IDなら通知内容は隠れる？</h3>
+        <p class="muted" style="margin:0;">
+          設定が「ロック解除時のみプレビュー表示」になっていれば、本人の顔認証が通るまで本文が出にくくなります。
+          ただし設定が「常に表示」だと普通に出ます。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. LINEの通知だけ隠したい</h3>
+        <p class="muted" style="margin:0;">
+          iPhoneなら「設定→通知→LINE」でロック画面表示を切るなど、アプリ単位で調整できます。
+          Androidも「アプリごとの通知設定」で同じことができます。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

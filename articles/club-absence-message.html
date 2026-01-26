@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>部活を休む時の連絡文【LINE/メール例文・コピペOK】｜今すぐ解決ノート</title>
+  <meta name="description" content="部活を休む時の連絡文（LINE/メール）を、顧問・先輩・グループ別にコピペOKで用意。体調不良/家庭の用事/学校行事など状況別テンプレと、短く失礼なく伝えるコツ、返信が来ない時の追い連絡も。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 学校 / 文章</p>
+        <h1>部活を休む時の連絡文【LINE/メール例文・コピペOK】</h1>
+        <p class="sub">
+          休む連絡は<strong>「結論→理由→次」</strong>の順が一番きれい。<br/>
+          このページの文章は、必要なところだけ変えてそのまま送れます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <div class="toc-title">目次</div>
+          <ul>
+            <li><a href="#rule">まずこれだけ：失礼にならない3ルール</a></li>
+            <li><a href="#quick">最短テンプレ（1行〜3行）</a></li>
+            <li><a href="#coach">顧問・先生へ（丁寧）</a></li>
+            <li><a href="#senpai">先輩・キャプテンへ（丁寧だけど短く）</a></li>
+            <li><a href="#group">グループへ（共有用）</a></li>
+            <li><a href="#mail">メール版（件名つき）</a></li>
+            <li><a href="#follow">返信が来ない時の追い連絡</a></li>
+            <li><a href="#ng">やりがちNG集</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="rule">
+      <h2>まずこれだけ：失礼にならない3ルール</h2>
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">① 結論を先に</h3>
+          <p class="muted">「本日休みます」→理由→「次回は参加予定です」。長い前置きはいらない。</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">② 理由は短く</h3>
+          <p class="muted">体調/家庭/学校行事など、言える範囲でOK。細かい言い訳は逆に印象が悪くなりがち。</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">③ 次の一言を添える</h3>
+          <p class="muted">「明日は様子を見て連絡します」「次回は参加します」など、次の動きを書くと安心されます。</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">注意</span> <span class="muted">嘘の理由はおすすめしない</span></div>
+        <p class="muted">
+          バレると信頼が一気に落ちます。言いにくい時は「家庭の都合で」「私用で」など、<strong>ぼかす</strong>のが安全です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="quick">
+      <h2>最短テンプレ（1行〜3行）</h2>
+      <p class="muted">まずはこれでOK。必要なら、最後に「すみません」「よろしくお願いします」を足す。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">体調不良</span></div>
+          <pre>【名前】です。
+本日、体調不良のため部活を休みます。
+また明日、参加できるか連絡します。よろしくお願いします。</pre>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">家庭の都合</span></div>
+          <pre>【名前】です。
+本日、家庭の都合で部活を休みます。
+次回は参加予定です。よろしくお願いします。</pre>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">学校行事・用事</span></div>
+          <pre>【名前】です。
+本日、学校の用事があり部活を休みます。
+終わり次第また連絡します。よろしくお願いします。</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="coach">
+      <h2>顧問・先生へ（丁寧）</h2>
+      <p class="muted">先生へは「本日/今日」など日付感を入れると分かりやすいです。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">コピペ</span> <span class="muted">体調不良（無難）</span></div>
+        <pre>顧問の【先生の名前】先生
+【名前】です。お疲れさまです。
+本日（◯月◯日）、体調不良のため部活を休ませてください。
+ご迷惑をおかけしてすみません。回復次第、参加できる日を連絡します。よろしくお願いします。</pre>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge ok">コピペ</span> <span class="muted">家庭の都合（理由をぼかす）</span></div>
+        <pre>顧問の【先生の名前】先生
+【名前】です。お疲れさまです。
+本日（◯月◯日）、家庭の都合で部活を休ませてください。
+次回は参加できるようにします。よろしくお願いします。</pre>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge ok">コピペ</span> <span class="muted">当日ギリギリになった時</span></div>
+        <pre>顧問の【先生の名前】先生
+【名前】です。連絡が遅くなりすみません。
+本日（◯月◯日）、体調が悪く部活を休ませてください。
+ご迷惑をおかけします。よろしくお願いします。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="senpai">
+      <h2>先輩・キャプテンへ（丁寧だけど短く）</h2>
+      <p class="muted">敬語＋短めが正解。「何か引き継ぎありますか？」を入れると好印象。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">体調不良</span></div>
+          <pre>【名前】です。連絡失礼します。
+本日、体調不良のため部活を休みます。
+連絡事項などあれば教えてください。よろしくお願いします。</pre>
+        </div>
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">家庭の都合</span></div>
+          <pre>【名前】です。連絡失礼します。
+本日、家庭の都合で部活を休みます。
+ご迷惑をおかけします。よろしくお願いします。</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="group">
+      <h2>グループへ（共有用）</h2>
+      <p class="muted">グループは短く。「顧問には連絡済み」も添えると混乱が減ります。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">コピペ</span> <span class="muted">グループ向け</span></div>
+        <pre>【名前】です。
+今日の部活は体調不良で休みます。顧問の先生には連絡済みです。
+連絡事項あれば教えてください。お願いします。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="mail">
+      <h2>メール版（件名つき）</h2>
+      <p class="muted">学校がメール文化ならこれ。件名は「要件＋名前」が一番分かりやすい。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">コピペ</span> <span class="muted">メールテンプレ</span></div>
+        <pre>件名：部活欠席の連絡（【名前】）
+
+【先生の名前】先生
+お疲れさまです。【クラス】の【名前】です。
+
+本日（◯月◯日）、体調不良のため部活動を欠席させてください。
+ご迷惑をおかけして申し訳ありません。
+回復次第、参加できる日を改めてご連絡します。
+
+よろしくお願いいたします。
+
+【名前】</pre>
+      </div>
+    </section>
+
+    <section class="card" id="follow">
+      <h2>返信が来ない時の追い連絡</h2>
+      <p class="muted">基本は急かさない。必要なら短く「確認だけ」送ります。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">先輩に確認</span></div>
+          <pre>すみません、確認です。
+今日の欠席連絡は届いていますか？
+もし連絡事項があれば教えてください。お願いします。</pre>
+        </div>
+        <div class="box">
+          <div class="label"><span class="badge ok">コピペ</span> <span class="muted">先生に確認（丁寧）</span></div>
+          <pre>【先生の名前】先生
+【名前】です。先ほど欠席の連絡をお送りしましたが、届いているか念のため確認です。
+お忙しいところ失礼しました。よろしくお願いします。</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="ng">
+      <h2>やりがちNG集</h2>
+      <ul>
+        <li><strong>スタンプだけ</strong>・「今日無理です」だけ（要件が伝わりづらい）</li>
+        <li><strong>理由が長すぎる</strong>（結局なにが言いたいか不明になる）</li>
+        <li><strong>連絡が直前すぎる</strong>（どうしても無理なら「遅れてすみません」を付ける）</li>
+        <li><strong>嘘の理由</strong>（バレた時のダメージが大きい。ぼかしてOK）</li>
+        <li><strong>相手の名前なし</strong>（先生/先輩には最初に一言入れる）</li>
+      </ul>
+
+      <div class="callout">
+        <p class="muted">
+          迷ったら「<strong>本日休みます</strong>」＋「<strong>理由（短く）</strong>」＋「<strong>次の連絡</strong>」の3点セットだけで十分です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

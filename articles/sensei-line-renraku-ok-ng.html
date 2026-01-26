@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>先生にLINEしてもいい？連絡していい内容・ダメな内容｜今すぐ解決ノート</title>
+  <meta name="description" content="先生にLINEしていい内容・避けるべき内容、送る時間帯の目安、失礼になりにくい書き方、コピペ例文をまとめ。学校のルールがある場合の確認ポイントも。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 学校 / 文章</p>
+        <h1>先生にLINEしてもいい？連絡していい内容・ダメな内容</h1>
+        <p class="sub">
+          結論：<strong>学校のルールがOK</strong>で、内容が<strong>用件・事務連絡</strong>なら基本大丈夫。  
+          ただし「時間帯」「言い方」「内容の境界」で失礼になることがあるので、ラインをまとめました。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#rule">最優先：学校のルール確認</a></li>
+            <li><a href="#ok">連絡していい内容（OK例）</a></li>
+            <li><a href="#ng">避けた方がいい内容（NG例）</a></li>
+            <li><a href="#timing">送っていい時間帯の目安</a></li>
+            <li><a href="#manner">失礼になりにくい書き方</a></li>
+            <li><a href="#templates">コピペ例文（状況別）</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>ポイント：</strong>先生にLINEするのは「雑談」じゃなくて<strong>連絡ツール</strong>として使うのが正解。
+            迷ったら <strong>①短く ②丁寧 ③返しやすく</strong> を守ると事故りにくいです。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="rule">
+      <h2>最優先：学校のルール確認</h2>
+      <p class="muted">
+        学校によって「先生に直接LINE禁止」「部活連絡はグループのみ」「夜は連絡禁止」など、ルールがあることがあります。
+        ルールがある場合はそれが最優先です。
+      </p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">確認ポイント</span></div>
+        <ul>
+          <li>学年・担任・部活でルールが違う？（顧問はOK、担任はNGなど）</li>
+          <li>LINEじゃなくて「Teams/Google Classroom/連絡アプリ」指定がある？</li>
+          <li>緊急時だけOK？（欠席・遅刻・事故など）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="ok">
+      <h2>連絡していい内容（OK例）</h2>
+      <p class="muted">基本は「先生が対応できる用件」「学校/部活に関係する事務連絡」です。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">OKになりやすい</span></div>
+          <ul>
+            <li>欠席・遅刻・早退の連絡</li>
+            <li>提出物の確認（提出先/締切/形式）</li>
+            <li>部活の集合時間・場所の確認</li>
+            <li>授業/部活に関わる忘れ物の相談</li>
+            <li>面談や提出の予定変更（できれば早めに）</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">送るならコツあり</span></div>
+          <ul>
+            <li>質問は<strong>1つずつ</strong>（長文の質問攻めはNG）</li>
+            <li>必要情報（クラス・名前・用件・期限）を先に書く</li>
+            <li>返事が必要かどうかを明確にする（「確認だけでOKです」など）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge ok">OK例（良い文章の形）</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【用件】について確認です。
+【質問（1つ）】は【◯◯】で合っていますか？
+お忙しいところすみません。よろしくお願いします。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="ng">
+      <h2>避けた方がいい内容（NG例）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">基本NG</span></div>
+          <ul>
+            <li>雑談（暇つぶし、スタンプ連投、意味のない一言）</li>
+            <li>先生のプライベートに踏み込む（住所、休日の予定、恋愛など）</li>
+            <li>愚痴・悪口（クラス/他の先生/生徒の批判）</li>
+            <li>深夜に緊急でもない連絡</li>
+            <li>一方的な長文（読むのがしんどい）</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">トラブルになりやすい</span></div>
+          <ul>
+            <li>個人情報が絡む相談（家庭の事情、健康、メンタル）→ 原則は面談や電話</li>
+            <li>証拠が必要な話（いじめ/トラブル）→ 学校の正式ルートへ</li>
+            <li>「既読スルー？」などの催促</li>
+            <li>感情が強すぎる文（怒り・泣き落とし）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>迷う境界：</strong>「先生が今すぐ対応できる用件か？」で判断。
+          対応が重い/個別対応が必要なら、LINEではなく<strong>面談・電話・学校の指定ツール</strong>が安全です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="timing">
+      <h2>送っていい時間帯の目安</h2>
+      <p class="muted">学校や先生の方針が最優先。一般的な目安だけ書きます。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">おすすめの時間帯</span></div>
+          <ul>
+            <li>朝：登校前（例：7〜8時台）</li>
+            <li>夕方：部活後〜夕食前（例：16〜19時台）</li>
+          </ul>
+          <p class="muted" style="margin:10px 0 0;">
+            ※先生も忙しいので、返事が遅くても普通です。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">避けたい時間帯</span></div>
+          <ul>
+            <li>夜遅く（目安：21時以降）</li>
+            <li>早朝すぎ（目安：6時前）</li>
+            <li>授業中/会議中っぽい時間（返事を期待しない）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge ok">どうしても夜に送る必要があるとき</span></div>
+        <pre class="pre">先生、夜分に失礼します。【クラス・名前】です。
+明朝までに確認が必要なため、連絡しました。
+【用件】について【質問】です。可能なタイミングで大丈夫なので、よろしくお願いします。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="manner">
+      <h2>失礼になりにくい書き方</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">型（これでOK）</span></div>
+          <ol style="margin:0; padding-left: 18px;">
+            <li><strong>名乗る</strong>（クラス・名前）</li>
+            <li><strong>用件</strong>（何の連絡か）</li>
+            <li><strong>質問/依頼</strong>（1つ）</li>
+            <li><strong>期限</strong>（いつまでに必要か）</li>
+            <li><strong>お礼</strong>（よろしくお願いします）</li>
+          </ol>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">やると印象UP</span></div>
+          <ul>
+            <li>スタンプは<strong>基本なし</strong>（送るなら最小限）</li>
+            <li>敬語は完璧じゃなくてOK、でも<strong>乱暴な言い方は避ける</strong></li>
+            <li>既読/返信の催促はしない</li>
+            <li>一度にまとめて送る（短文連投はNG）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge warn">やりがちNG</span></div>
+        <ul>
+          <li>「今見てます？」など相手を縛る言い方</li>
+          <li>「急いで！」だけ（理由や期限がない）</li>
+          <li>敬語ゼロ・タメ口・絵文字だらけ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="templates">
+      <h2>コピペ例文（状況別）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">① 欠席連絡</span></div>
+        <pre class="pre">先生、おはようございます。【クラス・名前】です。
+本日、体調不良のため欠席します。申し訳ありません。
+明日以降の連絡が必要なことがあれば教えてください。よろしくお願いします。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">② 遅刻連絡</span></div>
+        <pre class="pre">先生、おはようございます。【クラス・名前】です。
+【理由（短く）】のため、【到着予定時刻】頃に登校します。
+遅れて申し訳ありません。よろしくお願いします。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">③ 提出物の確認</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】について確認です。
+提出は【提出先/方法】で合っていますか？締切は【日付】で間違いないでしょうか。
+お忙しいところすみません。よろしくお願いします。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">④ 部活の集合場所確認</span></div>
+        <pre class="pre">先生、お疲れさまです。【部活名】【名前】です。
+明日の部活の集合場所は【場所】で合っていますか？
+確認だけです。よろしくお願いします。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">⑤ 忘れ物の相談</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【忘れ物】を家に忘れてしまいました。
+本日は【どう対応するか案】でよいでしょうか？（例：次回持参/職員室に取りに戻る など）
+申し訳ありません。よろしくお願いします。</pre>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>最後に：</strong>「先生にLINEしていいか不安」なら、最初の一通で  
+          <strong>『今後、連絡はLINEでも大丈夫でしょうか？（緊急時のみ等）』</strong> と聞くのもアリです。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

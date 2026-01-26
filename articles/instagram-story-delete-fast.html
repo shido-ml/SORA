@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>インスタのストーリーを間違えて載せた！一瞬で消す方法｜今すぐ解決ノート</title>
+  <meta name="description" content="Instagramストーリーを誤投稿した時に、最短で削除する手順（iPhone/Android共通）。削除ボタンが出ない時の対処、ハイライトから消す方法、公開範囲の応急処置まで。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> Instagram / トラブル</p>
+        <h1>インスタのストーリーを間違えて載せた！一瞬で消す方法</h1>
+        <p class="sub">
+          まず安心してOK。<strong>ストーリーは投稿後でも削除できます。</strong>
+          ただし「見られたら完全に取り消せるわけではない」ので、<strong>最短で消して、被害を止める</strong>のが正解です。
+          ここでは、iPhone/Android共通で<strong>最速で消す手順</strong>と、消せない時の対処までまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#fast">最速：10秒で消す（いま出てるストーリー）</a></li>
+            <li><a href="#panic">焦るパターン別：公開範囲がヤバい時の応急処置</a></li>
+            <li><a href="#cant">「削除」が出ない／消せない時の対処</a></li>
+            <li><a href="#highlight">ハイライトにも入っちゃった時の消し方</a></li>
+            <li><a href="#after">消したあとにやること（拡散防止）</a></li>
+            <li><a href="#prevent">次からミスらない設定（事故防止）</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>結論：</strong>
+            ストーリーを開く → <strong>「…（その他）」</strong> → <strong>削除</strong>。
+            これが最速。まずここまで一気にやろう。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="fast">
+      <h2>最速：10秒で消す（いま出てるストーリー）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">手順（iPhone / Android 共通）</span></div>
+        <ol class="ol">
+          <li>Instagramを開いて、左上の自分のアイコン（またはプロフィールアイコン）から<strong>自分のストーリー</strong>を開く</li>
+          <li>画面右下（または右上）にある<strong>「…（その他）」</strong>をタップ</li>
+          <li><strong>「削除」</strong>（Delete）を選ぶ</li>
+          <li>確認が出たら、もう一度<strong>「削除」</strong>をタップ</li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>ポイント：</strong>「編集して直す」は基本できません（ストーリーは投稿後の編集が弱い）。
+          <strong>消して、必要なら作り直して再投稿</strong>が早いです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="panic">
+      <h2>焦るパターン別：公開範囲がヤバい時の応急処置</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">① 一瞬でも早く止めたい</h3>
+          <ul>
+            <li>上の手順で<strong>削除</strong>が最優先</li>
+            <li>削除できないなら、いったん<strong>機内モードをOFF→ON</strong>して投稿を止める（投稿直後の最終手段）</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">② 特定の人に見られたくない</h3>
+          <ul>
+            <li>削除が間に合わない時は、ストーリー設定の<strong>「表示しない人」</strong>で対象を追加</li>
+            <li>ただし<strong>すでに見た人は戻せない</strong>ので、基本は削除が最強</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">③ 親しい友達で出すつもりだった</h3>
+          <ul>
+            <li>いったん削除 → 次は「<strong>親しい友達</strong>」で出し直す</li>
+            <li>親しい友達リストが未設定なら、先にリストを作ってから投稿</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">④ 間違えてメンションした／タグつけた</h3>
+          <ul>
+            <li>基本は<strong>削除→作り直し</strong>が早い</li>
+            <li>相手に通知が行ってる可能性があるので、気になるなら一言フォロー</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="cant">
+      <h2>「削除」が出ない／消せない時の対処</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">よくある原因</span></div>
+        <ul>
+          <li>回線が不安定（読み込み中でボタンが出ない）</li>
+          <li>アプリの一時バグ（固まる／操作が効かない）</li>
+          <li>アカウントの一時制限や不具合（まれ）</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">順番に試す（早い順）</span></div>
+        <ol class="ol">
+          <li><strong>アプリを完全に終了</strong>して再起動</li>
+          <li><strong>Wi‑Fi ↔ モバイル通信</strong>を切り替える（回線を変える）</li>
+          <li>ストーリーを開き直して、<strong>「…（その他）」</strong>の位置（右下/右上）を探す</li>
+          <li>Instagramアプリを<strong>アップデート</strong></li>
+          <li>ログアウト→ログイン（時間がある時）</li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          それでも無理なら、いったん<strong>PCブラウザ</strong>や別端末からログインして削除できることがあります。
+          ただ、まずは「アプリ再起動 + 回線切替」で直ることが多いです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="highlight">
+      <h2>ハイライトにも入っちゃった時の消し方</h2>
+      <p class="muted">ストーリー本体を削除しても、ハイライトに残ってると見られます。ここもチェック。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">ハイライトから削除する（一般的な流れ）</span></div>
+        <ol class="ol">
+          <li>プロフィール画面へ</li>
+          <li>該当の<strong>ハイライト</strong>を開く</li>
+          <li>削除したいストーリー表示中に<strong>「…」</strong>（または「その他」）</li>
+          <li><strong>「ハイライトから削除」</strong>（Remove from Highlight）を選ぶ</li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ハイライトの表示UIはアカウントによって変わることがあります。
+          その場合でも「ハイライトを開く → 編集/… → 削除」が基本の流れです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="after">
+      <h2>消したあとにやること（拡散防止）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">① すでに見られた可能性はある</h3>
+          <p class="muted" style="margin:0;">ストーリーは表示された瞬間に見られることもあります。完全に「なかったこと」にするのは難しいです。</p>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">② 重要なら、関係者に一言</h3>
+          <p class="muted" style="margin:0;">誤情報・個人情報が写った等なら、必要な人に短くフォローした方が早く収まることがあります。</p>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">③ 別SNSにも同時投稿してないか確認</h3>
+          <p class="muted" style="margin:0;">Facebook連携などで同時に出ている場合があります。連携先にもストーリーが出てないか見てください。</p>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">④ 乗っ取りっぽい時は別記事へ</h3>
+          <p class="muted" style="margin:0;">勝手に投稿される・ログイン履歴が不明なら、セキュリティ対応が必要です（おすすめ記事にリンク）。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="prevent">
+      <h2>次からミスらない設定（事故防止）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">親しい友達を活用</h3>
+          <ul>
+            <li>公開範囲を最初から限定できる</li>
+            <li>投稿前に「親しい友達」表示になってるか確認</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">ストーリーの表示しない人</h3>
+          <ul>
+            <li>特定の相手にだけ見せたくない時に便利</li>
+            <li>ただし「誤投稿」を完全に救う機能ではない</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">投稿前の最終チェック</h3>
+          <ul>
+            <li>個人情報（制服・学校名・住所っぽい物）が写ってないか</li>
+            <li>位置情報スタンプ/地名を付けてないか</li>
+            <li>音声入りの動画は「周りの声」が入ってないか</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 8px;">下書き・プレビューを使う</h3>
+          <ul>
+            <li>いったん保存して見返すだけで事故率が下がる</li>
+            <li>急いでる時ほど一呼吸</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 消したら相手に通知される？</h3>
+        <p class="muted" style="margin:0;">
+          基本、ストーリーを削除しても「削除しました」という通知は出ません。
+          ただし、相手がたまたま見ていた場合は気づく可能性があります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. すでに見た人の履歴からも消える？</h3>
+        <p class="muted" style="margin:0;">
+          削除すると、ストーリー自体は表示されなくなります。
+          でも「スクショ」「録画」「見た記憶」は戻せないので、早く消すのが大事です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. アーカイブに残る？</h3>
+        <p class="muted" style="margin:0;">
+          設定によってはアーカイブに保存されます。残したくないなら、プロフィールのメニューから
+          「アーカイブ」やストーリー保存設定を見直してください。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

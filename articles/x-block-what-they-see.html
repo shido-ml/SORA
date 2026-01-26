@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【X】ブロックしたら相手の画面でどう見える？消え方・通知・見える範囲まとめ｜今すぐ解決ノート</title>
+  <meta name="description" content="Xでブロックした直後、相手の画面であなたがどう表示されるかを整理。プロフィール表示の「ブロックされています」画面、フォロー解除、DM不可、いいね/返信/リポスト不可、公開/鍵垢での見える範囲の違いまで。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> X（Twitter） / 設定</p>
+        <h1>X（旧Twitter）でブロックした瞬間、相手の画面から私はどう消える？</h1>
+        <p class="sub">
+          ブロックすると「相手の画面から完全に消える？」って気になるやつ。
+          今のXは仕様が変わっていて、<strong>公開アカウント（鍵じゃない）だと相手が投稿を“見るだけ”ならできる場合があります</strong>。
+          ただし、<strong>フォロー・DM・いいね/返信/リポスト</strong>などの「関わる操作」はほぼ全部止まります。
+          相手側での<strong>見え方</strong>を、ケース別に整理します。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#quick">結論：相手の画面で起きること（5行）</a></li>
+            <li><a href="#profile">相手があなたのプロフィールを開いたらどう見える？</a></li>
+            <li><a href="#timeline">相手のタイムライン・検索ではどうなる？</a></li>
+            <li><a href="#can-not">相手ができなくなること一覧（即効）</a></li>
+            <li><a href="#notify">相手に通知は行く？バレる？</a></li>
+            <li><a href="#before">ブロック前にフォロー/DMしてた場合は？</a></li>
+            <li><a href="#how">ブロック方法（最短）</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>ざっくり：</strong>ブロック＝「相手からあなたへの接触を止める」。<br>
+            公開アカでも“閲覧だけ残る場合がある”けど、関わりは止まる。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>結論：相手の画面で起きること（5行）</h2>
+      <div class="box">
+        <ul>
+          <li>相手はあなたを<strong>フォローできなくなる</strong>（フォロー中なら<strong>強制的に外れる</strong>）</li>
+          <li>相手はあなたに<strong>DMを送れない</strong></li>
+          <li>相手はあなたの投稿に<strong>いいね/返信/リポスト等の反応ができない</strong></li>
+          <li>相手があなたのプロフィールを開くと、<strong>ブロックされている表示</strong>が出る（気づく）</li>
+          <li>あなたが<strong>鍵垢（非公開）</strong>なら、相手は投稿を<strong>見られない</strong>（フォロワー限定のため）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="profile">
+      <h2>相手があなたのプロフィールを開いたらどう見える？</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">基本：ブロックされたことが分かる画面になる</h3>
+          <p class="muted" style="margin:0;">
+            相手があなたのプロフィールに行くと、上部に<strong>「ブロックされています」系のメッセージ</strong>が出て、
+            フォロー・DMなどができません。ミュートと違って<strong>隠れない</strong>ので、見に来たらバレます。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">公開アカの場合：投稿が「見えるだけ」になることがある</h3>
+          <p class="muted" style="margin:0;">
+            仕様上、公開アカウントだとブロックしても相手が投稿を<strong>閲覧できるケース</strong>があります。
+            ただし、反応（いいね/返信/リポスト）やフォローはできません。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">鍵垢（非公開）の場合：投稿は見えない</h3>
+          <p class="muted" style="margin:0;">
+            鍵垢は「フォロワーだけに表示」なので、ブロックした相手は<strong>投稿を見られません</strong>。
+            「見られたくない」が最優先なら、ブロック＋鍵運用が一番強いです。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">相手の画面で「あなたが消える」ポイント</h3>
+          <p class="muted" style="margin:0;">
+            フォロー関係が切れるので、相手の「フォロー中」一覧からあなたは消えます。
+            返信や会話の中では「この投稿は表示できません」みたいに見えることもあります。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="timeline">
+      <h2>相手のタイムライン・検索ではどうなる？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">フォロー中タイムライン</span></div>
+        <p class="muted" style="margin:0;">
+          ブロックでフォローが外れるため、相手の<strong>フォロー中（Following）</strong>には
+          あなたの投稿は基本流れなくなります。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">おすすめ（For You）/検索</span></div>
+        <p class="muted" style="margin:0;">
+          公開アカの場合、相手が<strong>検索</strong>したり、投稿のURLを開いたりすると
+          <strong>閲覧できることがあります</strong>（ただし反応は不可）。
+          鍵垢の場合は見えません。
+        </p>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ※表示の細かい挙動（おすすめに出る/出ない等）はアップデートや閲覧状況で変わります。
+          「確実に見せない」を狙うなら<strong>鍵垢＋ブロック</strong>が安全。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="can-not">
+      <h2>相手ができなくなること一覧（即効）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">反応（エンゲージ）できない</h3>
+          <ul>
+            <li>いいね</li>
+            <li>返信</li>
+            <li>リポスト（通常/引用）</li>
+          </ul>
+          <p class="muted" style="margin:0;">＝相手の画面では「押せない/反応できない」状態になります。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">接触できない</h3>
+          <ul>
+            <li>フォローできない（フォロー中でも外れる）</li>
+            <li>DMできない</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">管理系もできない</h3>
+          <ul>
+            <li>あなたをリストに追加できない</li>
+            <li>写真のタグ付けができない</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">あなた側のメリット</h3>
+          <ul>
+            <li>相手の投稿はあなたのタイムラインに出ない</li>
+            <li>相手からの通知が来ない</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="notify">
+      <h2>相手に通知は行く？バレる？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">通知は基本行かない</span></div>
+        <p class="muted" style="margin:0;">
+          ブロックしただけで「ブロックされました」みたいな通知が相手に飛ぶことは基本ありません。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">ただし、相手があなたのプロフィールを見に来たら分かる</span></div>
+        <p class="muted" style="margin:0;">
+          相手があなたのプロフィールを開くと、ブロックされている表示が出るので気づきます。
+          「バレたくない」ならブロックより<strong>ミュート</strong>の方が隠せます（ただし接触は止まらない）。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="before">
+      <h2>ブロック前にフォロー/DMしてた場合は？</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">フォロー関係</h3>
+          <p class="muted" style="margin:0;">
+            ブロックすると、フォローしていた相手は<strong>自動でフォロー解除</strong>になります
+            （あなた→相手、相手→あなたの関係も切れます）。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">DM（過去ログ）</h3>
+          <p class="muted" style="margin:0;">
+            既にあるDMスレッドがどう見えるかは環境で差が出ることがありますが、
+            少なくとも相手はあなたに<strong>新しくDMを送れない</strong>状態になります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">相手があなたをメンションしたら？</h3>
+          <p class="muted" style="margin:0;">
+            ブロック中は相手からの反応・接触が制限されるため、あなた側に通知が来にくくなります。
+            それでも「検索」から見えるケースがあるので、気になるなら鍵運用も検討。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">ブロック解除したら？</h3>
+          <p class="muted" style="margin:0;">
+            解除すると制限は戻りますが、フォローは<strong>自動で復活しません</strong>。
+            必要ならまたフォローし直しになります。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="how">
+      <h2>ブロック方法（最短）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">投稿から</h3>
+          <ol class="ol">
+            <li>相手の投稿右上「…」</li>
+            <li><strong>ブロック</strong>を選ぶ</li>
+            <li>確認して確定</li>
+          </ol>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">プロフィールから</h3>
+          <ol class="ol">
+            <li>相手のプロフィールを開く</li>
+            <li>「…」</li>
+            <li><strong>ブロック</strong></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ブロックしたら相手の「フォロワー一覧」から自分は消える？</h3>
+        <p class="muted" style="margin:0;">
+          フォロー関係が切れるので、基本は相手の一覧からあなたは消えます。
+          ただし検索やリンクでプロフィールが出るかは「公開/鍵」で変わります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 相手はスクショや別アカで見る？</h3>
+        <p class="muted" style="margin:0;">
+          別アカやログアウトなど「別の状態」で見られる可能性はあります。
+          重要な内容を絶対に見せたくないなら、鍵運用・公開範囲の見直しもセットで。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ブロックとミュート、どっちがいい？</h3>
+        <p class="muted" style="margin:0;">
+          <strong>接触を止めたい→ブロック</strong>。<br>
+          <strong>バレずに見たくない→ミュート</strong>（ただしDMやメンション等は止まらない）。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

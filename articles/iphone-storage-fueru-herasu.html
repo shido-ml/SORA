@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhoneのストレージが急に増えた原因と減らし方｜今すぐ解決ノート</title>
+  <meta name="description" content="iPhoneの容量が突然減る原因（写真/動画、Safari、LINE、iCloud写真、システムデータ等）をチェックリストで特定し、手順どおりに安全に減らす方法をまとめ。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> iPhone / 生活</p>
+        <h1>iPhoneのストレージが急に増えた原因と減らし方</h1>
+        <p class="sub">
+          まず「何が増えたか」を特定 → その原因に合わせて減らすのが最短です。安全に容量を空ける手順をまとめました。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#check">まず確認（どれが増えた？）</a></li>
+            <li><a href="#common">よくある原因TOP7</a></li>
+            <li><a href="#howto">減らし方（原因別の手順）</a></li>
+            <li><a href="#systemdata">「システムデータ」が増える対処</a></li>
+            <li><a href="#avoid">二度と増やさない設定</a></li>
+            <li><a href="#caution">やらない方がいいこと</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>先に結論：</strong>増えやすいのは <strong>写真/動画</strong>・<strong>LINE</strong>・<strong>Safari</strong>・<strong>iCloud写真の再同期</strong>・<strong>システムデータ</strong> のどれかです。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="check">
+      <h2>まず確認（どれが増えた？）</h2>
+      <p class="muted">ここで原因の当たりをつけると、無駄に消さずに済みます。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">確認手順</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li><strong>設定</strong> → <strong>一般</strong> → <strong>iPhoneストレージ</strong> を開く</li>
+          <li>上部のバーで「何が多いか」を見る（写真/アプリ/システムデータなど）</li>
+          <li>下のアプリ一覧を<strong>サイズ順</strong>で確認（大きい順に並ぶ）</li>
+        </ol>
+      </div>
+
+      <div class="grid" style="margin-top:14px;">
+        <div class="box">
+          <div class="label"><span class="badge warn">急に増えた時のあるある</span></div>
+          <ul>
+            <li>動画を撮った/保存した</li>
+            <li>LINE・Instagram・TikTokのキャッシュが肥大化</li>
+            <li>SafariのWebデータが増えた</li>
+            <li>iCloud写真が再同期して一時的に増える</li>
+            <li>iOS更新で「システムデータ」が増える</li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="label"><span class="badge ok">やる順番（おすすめ）</span></div>
+          <ol style="margin:0; padding-left: 18px;">
+            <li>写真/動画の整理</li>
+            <li>大きいアプリ（LINEなど）のデータ整理</li>
+            <li>SafariのWebデータ整理</li>
+            <li>最後に「システムデータ」対処</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="common">
+      <h2>よくある原因TOP7</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">1) 写真/動画が増えた</h3>
+          <p class="muted" style="margin:0;">Live Photos・4K動画・スローモーションは一気に容量を使います。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">2) LINEが太った</h3>
+          <p class="muted" style="margin:0;">トークの画像/動画、Keep、キャッシュで増えがち。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">3) Safari（Webサイトデータ）が増えた</h3>
+          <p class="muted" style="margin:0;">動画サイト・SNS・広告系でキャッシュが積もります。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">4) 音楽/動画のダウンロード</h3>
+          <p class="muted" style="margin:0;">Apple Music/Spotify/Netflix/YouTube等のオフライン保存。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">5) 「ファイル」アプリに溜まった</h3>
+          <p class="muted" style="margin:0;">ダウンロードしたPDF/動画/Zipが残っている。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">6) iCloud写真の再同期（待てば戻る場合あり）</h3>
+          <p class="muted" style="margin:0;">端末の状態次第で一時的に増えることがあります。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">7) システムデータが膨らんだ</h3>
+          <p class="muted" style="margin:0;">アップデート/ログ/キャッシュで増える代表。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="howto">
+      <h2>減らし方（原因別の手順）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">写真/動画（最優先）</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li><strong>写真</strong>アプリ → <strong>アルバム</strong> → <strong>最近削除した項目</strong> を空にする（ここが残ると容量が戻りません）</li>
+          <li>大きい動画を探す：<strong>写真</strong> → <strong>検索</strong> で「ビデオ」→ 長い動画から整理</li>
+          <li>設定で軽くする：<strong>設定</strong> → <strong>カメラ</strong> → <strong>フォーマット</strong> を「高効率（HEIF/HEVC）」に</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">LINE（増えやすい）</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li>LINE → <strong>設定</strong> → <strong>トーク</strong> → <strong>データの削除</strong> を確認</li>
+          <li>必要な写真/動画は先に保存（消えると戻せません）</li>
+          <li>効果が大きいのは「キャッシュ」整理。次に「写真」「動画」</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          それでも太いなら、<strong>不要なトークルーム</strong>のメディアを削るのが効きます。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">Safari（Webサイトデータ）</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li><strong>設定</strong> → <strong>Safari</strong></li>
+          <li><strong>履歴とWebサイトデータを消去</strong> を実行</li>
+          <li>ログインが外れるサイトもあるので、必要ならパスワード確認してから</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">アプリの「取り除く」</span></div>
+        <p class="muted">アプリ本体だけ消して、データは残す方法。容量だけ空けたいときに便利。</p>
+        <ol style="margin:0; padding-left: 18px;">
+          <li><strong>設定</strong> → <strong>一般</strong> → <strong>iPhoneストレージ</strong></li>
+          <li>容量が大きいアプリを開く</li>
+          <li><strong>Appを取り除く</strong>（削除ではない）を選ぶ</li>
+          <li>必要になったら再インストールで戻せます</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">ダウンロード（動画/音楽）</span></div>
+        <ul>
+          <li>Spotify/Netflix/YouTubeなど：アプリ内の「ダウンロード」管理から削除</li>
+          <li>Apple Music：設定 → ミュージック → ダウンロード済み から整理</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">「ファイル」アプリ</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li><strong>ファイル</strong> → <strong>ブラウズ</strong> → 「このiPhone内」や「ダウンロード」</li>
+          <li>不要なZip/PDF/動画を削除</li>
+          <li>最後に<strong>最近削除した項目</strong>も空にする</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card" id="systemdata">
+      <h2>「システムデータ」が増える対処</h2>
+      <p class="muted">システムデータは「キャッシュ・ログ・アップデートの残り」などで増えます。減らし方は段階的に。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">① まずやる</span></div>
+          <ul>
+            <li>iPhoneを<strong>再起動</strong>する</li>
+            <li>Wi‑Fiに繋いでしばらく放置（最適化で戻ることがある）</li>
+            <li>SafariのWebサイトデータを消す</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">② まだ大きいなら</span></div>
+          <ul>
+            <li>容量の大きいアプリを「取り除く」→入れ直し</li>
+            <li>不要なメッセージ添付（大きい動画）を削除</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">③ 最終手段（確実）</span></div>
+          <p class="muted" style="margin:0;">
+            <strong>バックアップ → 初期化 → 復元</strong> が一番確実にスッキリします。  
+            ただし手間が大きいので、上の方法で足りるか先に試すのがおすすめです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="avoid">
+      <h2>二度と増やさない設定</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">写真を増やしにくくする</span></div>
+        <ul>
+          <li>設定 → カメラ → <strong>高効率</strong></li>
+          <li>設定 → 写真 → <strong>iPhoneのストレージを最適化</strong>（iCloud写真を使う場合）</li>
+          <li>4K/60fps撮影は必要なときだけにする</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">アプリを増やしにくくする</span></div>
+        <ul>
+          <li>設定 → App Store → <strong>Appを取り除く</strong> をON（使ってないアプリを自動で軽くする）</li>
+          <li>LINEは定期的にキャッシュ整理（月1でも効果大）</li>
+          <li>動画系アプリの「自動ダウンロード」はOFF</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="caution">
+      <h2>やらない方がいいこと</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">むやみにアプリ削除</span></div>
+          <p class="muted" style="margin:0;">
+            消すとログインやデータ復元が面倒なアプリもあります。まずは「取り除く」や「キャッシュ削除」から。
+          </p>
+        </div>
+        <div class="box">
+          <div class="label"><span class="badge warn">よく分からないクリーナーアプリ</span></div>
+          <p class="muted" style="margin:0;">
+            広告が多い/権限が強いアプリは注意。iPhoneは基本、標準機能で十分整理できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>迷ったら：</strong>「設定 → 一般 → iPhoneストレージ」で<strong>上位3つ</strong>を減らすのが最短です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

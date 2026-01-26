@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【学校Wi‑Fi】見てるサイトは先生にバレる？見える範囲と注意点（筒抜け？を解説）｜今すぐ解決ノート</title>
+  <meta name="description" content="学校のWi‑Fiに繋ぐと、見ているサイトはどこまで見られる？HTTPSなら本文は基本見えないが、アクセス先のドメインや通信の記録はネットワーク管理側に残ることがある。先生・学校・業者が見える範囲、見えない範囲、端末管理（MDM/証明書）で変わるポイントと注意点を解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 学校 / ネット</p>
+        <h1>学校のWi‑Fi繋いだら、見てるサイトは先生に筒抜けなの？</h1>
+        <p class="sub">
+          結論から言うと、<strong>「先生がリアルタイムであなたの画面をのぞいてる」</strong>みたいな状態が
+          常に起きてるわけではありません。<br>
+          でも、学校のWi‑Fiは<strong>学校（または業者）が管理しているネットワーク</strong>なので、
+          <strong>アクセス先の記録が残る</strong>ことは普通にあります。<br>
+          ここでは「何が見える／見えない」「誰が見れる」「注意点」を分かりやすく整理します。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：筒抜け？先生にバレる？</a></li>
+            <li><a href="#who">誰が見られるの？（先生・学校・業者）</a></li>
+            <li><a href="#cansee">見えるもの（ログに残りやすい）</a></li>
+            <li><a href="#cantsee">基本的に見えないもの（HTTPSの場合）</a></li>
+            <li><a href="#exceptions">例外：内容まで見えることがあるケース</a></li>
+            <li><a href="#myths">勘違いしがちポイント</a></li>
+            <li><a href="#safe">安全に使うための注意点</a></li>
+            <li><a href="#check">自分の端末で確認できること</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>ざっくり：</strong>HTTPSなら「ページの中身」は基本見えない。<br>
+            でも「どのサイト（ドメイン）にアクセスしたか」は管理側で把握できる可能性が高い。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：筒抜け？先生にバレる？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">ふつう：先生が個人で“全部見る”のは現実的じゃない</span></div>
+        <p class="muted" style="margin:0;">
+          学校Wi‑Fiは、通信をまとめて管理する仕組み（フィルタリングやログ）があります。
+          ただし「先生があなたの閲覧履歴をいつでも自由に全部見れる」かは別問題で、
+          実際は<strong>ネットワーク担当（管理者）</strong>や<strong>委託業者</strong>が扱うことが多いです。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">ただし：アクセス先の記録は残ることがある</span></div>
+        <p class="muted" style="margin:0;">
+          たとえば「いつ・どの端末が・どのサイトにアクセスしたか」は
+          セキュリティやトラブル対応のためにログが取られることがあります。
+          なので「絶対バレない」と思うのは危険です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="who">
+      <h2>誰が見られるの？（先生・学校・業者）</h2>
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">先生（担任・顧問）</h3>
+          <p class="muted" style="margin:0;">
+            ふつうはログ閲覧の権限を持っていないことが多いです。
+            ただし、学校のルール違反やトラブルがあると、<strong>管理者が確認して先生に共有</strong>されることはあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">学校のネットワーク管理者</h3>
+          <p class="muted" style="margin:0;">
+            情報担当の先生・ICT担当・事務局など。フィルタリングやログ管理を担当している場合があります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">外部の業者（委託）</h3>
+          <p class="muted" style="margin:0;">
+            学校がネットワークやフィルタリングを業者に任せているケース。
+            技術的には業者側でログが見られる/分析されることもあります（契約と運用次第）。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="cansee">
+      <h2>見えるもの（ログに残りやすい）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">① どのサイトに接続したか（ドメイン）</span></div>
+          <p class="muted" style="margin:0;">
+            例：youtube.com、google.com みたいな「サイト名」。
+            フィルタリングは基本ここを見てブロックします。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">② いつアクセスしたか（時刻）</span></div>
+          <p class="muted" style="margin:0;">
+            「何時何分にアクセス」など。トラブル時の確認で使われがち。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">③ どの端末か（MAC/端末名/ユーザーID）</span></div>
+          <p class="muted" style="margin:0;">
+            Wi‑Fiの登録方式によっては、個人のアカウント（学校ID）と紐づくことがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">④ 通信量</span></div>
+          <p class="muted" style="margin:0;">
+            大容量動画やゲーム更新などで目立つと、制限や注意につながることがあります。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ポイント：<strong>「どこに行ったか（サイト）」のレベルは見える可能性が高い</strong>です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="cantsee">
+      <h2>基本的に見えないもの（HTTPSの場合）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">HTTPSだと「ページの中身」は暗号化される</span></div>
+        <p class="muted" style="margin:0;">
+          いまのWebの多くはHTTPSなので、学校Wi‑Fiの途中で通信をのぞいても、
+          <strong>具体的に何を読んだか（文章・投稿内容・パスワード）</strong>は基本見えません。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">見えないことが多い例</h3>
+          <ul>
+            <li>検索ワード</li>
+            <li>サイト内で見たページの具体的な内容</li>
+            <li>入力したID・パスワード</li>
+            <li>DMの本文・メールの本文</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">ただし「完全に安心」ではない</h3>
+          <p class="muted" style="margin:0;">
+            例外条件（次の章）では、内容まで見える/記録される可能性が出ます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="exceptions">
+      <h2>例外：内容まで見えることがあるケース</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">① 学校配布端末（管理端末）を使っている</span></div>
+          <p class="muted" style="margin:0;">
+            端末自体に管理アプリ・監視ソフト・フィルタリング拡張機能が入っていると、
+            ネットワークより上のレイヤーで記録されることがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">② “証明書”やプロファイルが入っている</span></div>
+          <p class="muted" style="margin:0;">
+            端末に特別な証明書（ルート証明書）や管理プロファイルが入っていると、
+            HTTPS通信を検査する運用ができてしまう場合があります（運用の有無は学校次第）。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">③ HTTP（暗号化されてない）サイト</span></div>
+          <p class="muted" style="margin:0;">
+            まれにHTTPのままのサイトは内容が見えやすいです。<strong>http://</strong>は警戒。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">④ 学校のアカウントでサービスにログインしている</span></div>
+          <p class="muted" style="margin:0;">
+            Google Workspace for Education 等は、管理者側で利用状況が見える範囲が増えることがあります。
+            「ネットワーク」ではなく「アカウント管理」で見えるケースです。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          大事：<strong>自分のスマホ（私物）＋学校Wi‑Fi</strong> と、<strong>学校配布端末</strong>はリスクが別物。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="myths">
+      <h2>勘違いしがちポイント</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">「シークレットモードならバレない」</h3>
+          <p class="muted" style="margin:0;">
+            シークレットは<strong>端末に履歴を残しにくくする</strong>だけ。
+            ネットワーク側のログには関係ないので、学校Wi‑Fiでは別の話です。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">「HTTPSでも完全に何も残らない」</h3>
+          <p class="muted" style="margin:0;">
+            HTTPSでも<strong>どのサイト（ドメイン）に行ったか</strong>は分かることが多いです。
+            「中身が見えない」＝「何も分からない」ではないです。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">「先生が常に監視してる」</h3>
+          <p class="muted" style="margin:0;">
+            実務的には管理者がまとめて管理します。
+            ただし問題が起きた時にログを確認される、という意味では油断はしない方がいいです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="safe">
+      <h2>安全に使うための注意点</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">基本方針（トラブル回避）</span></div>
+        <ul>
+          <li>学校Wi‑Fiでは<strong>学校ルールに反するサイト</strong>に行かない（ログは残る可能性がある）</li>
+          <li>重要なアカウント（銀行/決済/パスワード管理など）は、できれば<strong>モバイル回線</strong>で</li>
+          <li>OS/アプリは<strong>最新</strong>に（脆弱性対策）</li>
+          <li>怪しいポップアップ・アプリ誘導は<strong>即閉じる</strong></li>
+        </ul>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「見られるか」よりも、<strong>ログが残る可能性がある場所では最初から危ないことをしない</strong>のが一番安全です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="check">
+      <h2>自分の端末で確認できること</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iPhone（私物）</h3>
+          <ul>
+            <li>設定 → 一般 → <strong>VPNとデバイス管理</strong>（プロファイルが入ってないか）</li>
+            <li>設定 → 一般 → 情報 → <strong>証明書信頼設定</strong>（特別な証明書が有効になってないか）</li>
+          </ul>
+          <p class="muted" style="margin:0;">
+            ※学校配布端末だと管理プロファイルが入っているのが普通です。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">学校配布PC/Chromebook</h3>
+          <p class="muted" style="margin:0;">
+            管理者が設定している可能性が高いです。
+            具体的な範囲は学校の利用規約/ICTルールに書いてあることが多いので、そこを見るのが確実です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. YouTubeの「どの動画を見たか」まで分かる？</h3>
+        <p class="muted" style="margin:0;">
+          ネットワークのログだけだと、ふつうは「youtube.comにアクセスした」レベルになりやすいです。
+          ただし学校配布端末や管理アカウントの設定によっては、利用状況が見える範囲が広がることがあります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 自分のスマホでも、学校Wi‑Fiなら同じ？</h3>
+        <p class="muted" style="margin:0;">
+          自分のスマホでも「どのサイトに行ったか」はログに残る可能性があります。
+          ただし“内容まで”見えるかは、端末にプロファイル/証明書が入っているか等で変わります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. じゃあ何も見られたくない時は？</h3>
+        <p class="muted" style="margin:0;">
+          一番確実なのは<strong>学校Wi‑Fiを使わない</strong>（モバイル回線を使う）こと。
+          ただしルールや状況もあるので、無理のない範囲で使い分けるのが現実的です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

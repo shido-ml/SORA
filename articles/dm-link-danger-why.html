@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【危険】知らない人から来たDMのURLは開くだけで危ない？理由と安全な対処（インスタ/X/LINE）｜今すぐ解決ノート</title>
+  <meta name="description" content="知らない人から届くDMのURLは、開いただけでIP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、マルウェア誘導などのリスクがある。『開くだけで何が起きる？』を分かりやすく整理し、Instagram/X/LINE共通の安全な対処手順、見分け方、開いてしまった時の対応まで解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS・ネット / セキュリティ</p>
+        <h1>知らない人から届いたDMのURL、絶対に「開くだけ」でもダメな理由</h1>
+        <p class="sub">
+          知らない人から届いたDMに「これ見て！」みたいなURLが付いてたら、<strong>開かないのが正解</strong>です。<br>
+          「クリックしただけで何が起きるの？」って思うかもだけど、URLを開いた瞬間に<strong>情報が抜かれたり、次の罠に誘導</strong>されたりします。<br>
+          この記事では<strong>“開くだけで危険な理由”</strong>を分かりやすくまとめて、Instagram / X / LINE どれでも使える<strong>安全な対処</strong>まで書きます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：開くだけでもリスクはある</a></li>
+            <li><a href="#why">「開くだけ危険」な理由まとめ</a></li>
+            <li><a href="#what-leaks">開いた瞬間に相手側に伝わり得る情報</a></li>
+            <li><a href="#signs">怪しいURLの特徴（見分け方）</a></li>
+            <li><a href="#safe">安全な対処手順（共通）</a></li>
+            <li><a href="#opened">もし開いてしまった時の対応</a></li>
+            <li><a href="#check">URLを“開かずに”確認する方法</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>最優先：</strong>URLは押さない。返信もしない。<strong>通報→ブロック→削除</strong>でOK。<br>
+            もし不安なら、パスワード変更＋二段階認証もセットで。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：開くだけでもリスクはある</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">“開いただけ”で起きやすいこと</span></div>
+          <ul>
+            <li>IPアドレスなどの<strong>アクセス情報の取得</strong></li>
+            <li>「ログインしてください」など<strong>偽ページへ誘導</strong></li>
+            <li>端末に入っているアプリを使った<strong>深いリンク（別アプリ起動）</strong></li>
+            <li>クッキー/トラッキングで<strong>行動の追跡</strong></li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">“確率は低いが重い”こと</span></div>
+          <ul>
+            <li>偽アプリ/プロファイルの導入へ誘導（入れたら終わる）</li>
+            <li>ブラウザやOSの弱点を悪用される（ゼロではない）</li>
+            <li>詐欺サイトでカード/ID入力してしまう</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          つまり「開くだけで即ウイルス」より、<strong>開いた瞬間に“次の行動”へ誘導される</strong>のが一番怖い。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="why">
+      <h2>「開くだけ危険」な理由まとめ</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">① リンク踏んだ瞬間に“アクセス情報”が相手に渡る</h3>
+        <p class="muted" style="margin:0;">
+          URLを開くと、相手のサーバーには「誰が、いつ、どの端末で開いたか」みたいなログが残ります。<br>
+          これだけで<strong>あなたが“反応する人”</strong>だとバレて、次の詐欺に狙われやすくなります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">② 偽ログイン（フィッシング）に繋げやすい</h3>
+        <p class="muted" style="margin:0;">
+          「Instagramの確認」「Xの認証」「LINEの再ログイン」など、それっぽい画面に誘導して
+          ID/パスワードを入れさせるのが王道です。入れた時点で、乗っ取りの確率が一気に上がります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">③ アプリ起動（深いリンク）で罠へ誘導される</h3>
+        <p class="muted" style="margin:0;">
+          リンクによっては、ブラウザの外でアプリを開かせたり、設定画面へ飛ばしたりできます。<br>
+          そこで「許可」「インストール」「プロファイル追加」を押させる流れが危険。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">④ 追跡（トラッキング）される</h3>
+        <p class="muted" style="margin:0;">
+          開いた時点でトラッキング用の情報が保存され、別のサイトでも広告が出たり、再度誘導されたりすることがあります。<br>
+          これも「ウイルス」ってより<strong>嫌な追跡</strong>です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="what-leaks">
+      <h2>開いた瞬間に相手側に伝わり得る情報</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">一般的にログに残り得るもの</span></div>
+        <ul>
+          <li>IPアドレス（ざっくり地域が推測されることがある）</li>
+          <li>端末/OS/ブラウザの種類（例：iPhone + Safari など）</li>
+          <li>アクセスした時間、回数</li>
+          <li>リファラ（どのアプリ/ページから開いたかの情報が入る場合）</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          これだけで“身元特定”まで行くとは限らないけど、<strong>詐欺の精度を上げる材料</strong>にはなります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="signs">
+      <h2>怪しいURLの特徴（見分け方）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">短縮URL</span></div>
+          <p class="muted" style="margin:0;">
+            どこに飛ぶか分からない。安全確認が難しい。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">公式っぽいのにドメインが違う</span></div>
+          <p class="muted" style="margin:0;">
+            例：instagram-login〜 みたいな紛らわしい文字列。<strong>本物の公式ドメインか</strong>を見る。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">「緊急」「期限」「凍結」など焦らせる文</span></div>
+          <p class="muted" style="margin:0;">
+            焦らせてクリックさせるのが目的。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">やたら儲かる/当選/無料</span></div>
+          <p class="muted" style="margin:0;">
+            釣りワードのセット。ほぼ危険。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="safe">
+      <h2>安全な対処手順（共通）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">基本の正解ムーブ</span></div>
+        <ol class="ol">
+          <li><strong>開かない</strong>（プレビューも押さない）</li>
+          <li>DMを<strong>通報</strong>（迷惑/詐欺）</li>
+          <li>相手を<strong>ブロック</strong></li>
+          <li>メッセージを<strong>削除</strong></li>
+          <li>不安なら：アプリの<strong>ログイン履歴</strong>確認＋<strong>二段階認証</strong></li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「返事して確かめる」はNG。反応するとターゲットにされやすくなります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="opened">
+      <h2>もし開いてしまった時の対応</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">やった方がいい（軽症想定）</span></div>
+          <ul>
+            <li>すぐタブを閉じる（怪しいボタンは押さない）</li>
+            <li>ブラウザの履歴/サイトデータを削除</li>
+            <li>OSとアプリを最新に更新</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge danger">これをやったなら対応を強める</span></div>
+          <ul>
+            <li>ID/パスワードを入力した</li>
+            <li>アプリを入れた/プロファイルを追加した</li>
+            <li>カード情報や電話番号を入れた</li>
+          </ul>
+          <p class="muted" style="margin:10px 0 0;">
+            上に当てはまるなら、<strong>パスワード変更</strong>＋<strong>二段階認証</strong>＋<strong>ログイン中の端末を全てログアウト</strong>を優先。
+          </p>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge warn">乗っ取り疑いが出たら</span></div>
+        <ul>
+          <li>アプリ内の「ログインアクティビティ」で見知らぬ端末がないか確認</li>
+          <li>メール/電話番号が変更されてないか確認</li>
+          <li>友達に不審DMを送ってないか確認</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="check">
+      <h2>URLを“開かずに”確認する方法</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">一番安全：そもそも確認しない</span></div>
+        <p class="muted" style="margin:0;">
+          相手が知らない人なら、確認しなくてOK。<strong>開かないのが最大防御</strong>です。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">どうしても気になる時（最低限）</span></div>
+        <ul>
+          <li>URLの<strong>ドメイン（最後の .com / .jp など）</strong>だけ見る</li>
+          <li>短縮URLは避ける（中身が分からない）</li>
+          <li>安全確認サービスに貼るなら、<strong>個人情報が含まれるURLは貼らない</strong>（ログイン済みリンクなど）</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          例：URLチェック系（VirusTotalなど）に貼る時は、あなた専用のトークンが入ったURLだと漏れる可能性があるので注意。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 「開いただけ」でスマホが乗っ取られる？</h3>
+        <p class="muted" style="margin:0;">
+          多くは「開いただけで即乗っ取り」より、偽ログインやアプリ導入でやられます。<br>
+          ただしゼロではないので、知らない人のURLは開かないのが正解です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 既読を付けずにURLだけ確認できる？</h3>
+        <p class="muted" style="margin:0;">
+          “URLの確認”自体はできますが、結局リンクを触るほど誤タップのリスクが上がります。<br>
+          不安なら触らずに通報→ブロックが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 知り合いから来たURLなら安全？</h3>
+        <p class="muted" style="margin:0;">
+          その知り合いが乗っ取られている可能性があります。<br>
+          「急にURLだけ送ってきた」みたいな時は、別の手段で本人に確認できるならした方が安全です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

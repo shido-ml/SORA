@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagramでリンクをプロフィールに貼る方法（複数OK・できない時の対処）｜今すぐ解決ノート</title>
+  <meta name="description" content="Instagramのプロフィールにリンクを貼る手順（iPhone/Android）。『リンク』から追加する方法、表示されない・押せない時の原因、最低限の安全チェックまで丁寧に解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / Instagram</p>
+        <h1>Instagramでリンクをプロフィールに貼る方法</h1>
+        <p class="sub">
+          プロフィールに貼れる<strong>クリックできるリンク</strong>は、基本的に「自己紹介文にURLを打つ」のではなく、<br/>
+          <strong>プロフィール編集 → リンク</strong>から追加します（これが一番確実）。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <div class="toc-title">目次</div>
+          <ul>
+            <li><a href="#quick">最短：リンクを追加する手順（iPhone/Android共通）</a></li>
+            <li><a href="#multi">複数リンクは追加できる？表示はどうなる？</a></li>
+            <li><a href="#edit">リンクの編集・削除（後から直す）</a></li>
+            <li><a href="#notclick">リンクが押せない/表示されない時の原因</a></li>
+            <li><a href="#safety">安全チェック（怪しいリンクを貼らない）</a></li>
+            <li><a href="#extra">補足：ストーリーズにリンクを貼る方法</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>最短：リンクを追加する手順（iPhone/Android共通）</h2>
+      <p>いちばん迷わない手順です。</p>
+
+      <ol>
+        <li>Instagramアプリを開いて<strong>プロフィール</strong>に移動</li>
+        <li><strong>「プロフィールを編集」</strong>をタップ</li>
+        <li><strong>「リンク」</strong>をタップ</li>
+        <li><strong>「外部リンクを追加」</strong>（または「リンクを追加」）を選ぶ</li>
+        <li><strong>URL</strong>を貼り付け、必要なら<strong>タイトル</strong>（表示名）も入力</li>
+        <li><strong>完了</strong>（右上のチェック/保存）で保存</li>
+      </ol>
+
+      <div class="callout">
+        <p class="muted">
+          URLは <strong>https://〜</strong> の形で貼るのが安全です。<br/>
+          「自己紹介文」にURLを入れても、環境によってはリンクとして押せないことがあります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="multi">
+      <h2>複数リンクは追加できる？表示はどうなる？</h2>
+      <p class="muted">
+        現在のInstagramは、アカウントやアプリ版本によって<strong>複数リンクを追加できる場合</strong>があります。<br/>
+        表示は「リンク」という1つのまとまり（ボタン/テキスト）になって、タップすると一覧が開くことが多いです。
+      </p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">コツ</span> <span class="muted">1つだけなら“公式/最優先”を置く</span></div>
+        <ul>
+          <li>最初は<strong>1リンク</strong>で運用 → 必要になったら追加が一番ラク</li>
+          <li>複数貼れる時は、タイトルを「YouTube」「ブログ」「お問い合わせ」みたいに短く</li>
+          <li>リンクまとめ（Linktree等）を使うなら、<strong>本当に信頼できるサービスだけ</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="edit">
+      <h2>リンクの編集・削除（後から直す）</h2>
+      <ol>
+        <li><strong>プロフィール</strong> → <strong>プロフィールを編集</strong></li>
+        <li><strong>リンク</strong>を開く</li>
+        <li>該当リンクをタップして<strong>編集</strong> / <strong>削除</strong></li>
+        <li>最後に<strong>保存</strong></li>
+      </ol>
+      <p class="muted">※保存しないと反映されないので、最後の「完了」を忘れがちです。</p>
+    </section>
+
+    <section class="card" id="notclick">
+      <h2>リンクが押せない/表示されない時の原因</h2>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">「リンク」項目がない</h3>
+          <ul>
+            <li>アプリが古い → <strong>アップデート</strong></li>
+            <li>一時的なUI差 → <strong>一度ログアウト→ログイン</strong></li>
+            <li>環境差 → <strong>PCブラウザ</strong>で編集を試す</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="margin:0 0 8px;">自己紹介文のURLが押せない</h3>
+          <p class="muted">
+            BioのURLは“文字”として扱われることがあります。<br/>
+            <strong>リンク欄に入れる</strong>のが確実です。
+          </p>
+        </div>
+
+        <div>
+          <h3 style="margin:0 0 8px;">リンクを貼ったのに表示されない</h3>
+          <ul>
+            <li>保存（完了）できてない</li>
+            <li>反映に時間がかかってる → 数分待って再起動</li>
+            <li>通信不安定 → Wi‑Fi/4G切替</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">注意</span> <span class="muted">不審なURLはブロックされることも</span></div>
+        <p class="muted">
+          短縮URLや怪しいドメインは、Instagram側で警告が出たり、クリックできなくなることがあります。<br/>
+          できるだけ<strong>公式ドメイン</strong>（例：yourdomain.com）を使うのが安全です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="safety">
+      <h2>安全チェック（怪しいリンクを貼らない）</h2>
+      <ul>
+        <li>URLの<strong>ドメイン</strong>（.com / .jp など）を自分で読める形にする</li>
+        <li><strong>https</strong>で始まっているか</li>
+        <li>ログイン誘導ページは特に注意（偽ページの可能性）</li>
+        <li>リンク先が変わる短縮URLは、できれば避ける</li>
+      </ul>
+      <p class="muted">「とりあえず貼る」より、最低限の安全チェックをすると信頼感が上がります。</p>
+    </section>
+
+    <section class="card" id="extra">
+      <h2>補足：ストーリーズにリンクを貼る方法</h2>
+      <p class="muted">
+        プロフィールとは別に、ストーリーズには「リンク」スタンプでURLを貼れる場合があります。
+      </p>
+      <ol>
+        <li>ストーリーズ作成画面で画像/動画を選ぶ</li>
+        <li>上の<strong>スタンプ</strong>（四角いニコちゃん）をタップ</li>
+        <li><strong>「リンク」</strong>を選ぶ → URLを入力</li>
+        <li>表示名を調整 → 配置して投稿</li>
+      </ol>
+      <div class="callout">
+        <p class="muted">
+          使えるスタンプはアカウント状態や機能の提供状況で変わることがあります。<br/>
+          まずはプロフィールのリンクを整えるのが安定です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

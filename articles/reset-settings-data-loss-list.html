@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【要注意】「設定をリセット」すると消えるデータ一覧｜iPhone/Android 初期化との違い｜今すぐ解決ノート</title>
+  <meta name="description" content="スマホが重い時に「設定をリセット」すると何が消える？iPhoneの“すべての設定をリセット/ネットワーク設定をリセット/すべてのコンテンツと設定を消去”の違い、Androidの“設定のリセット/ネットワークリセット/工場出荷状態（初期化）”で消えるもの・消えないものを一覧で整理。安全にやる順番とバックアップ確認も解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> スマホ / 設定</p>
+        <h1>動作が重いからって設定を適当にリセットすると消えるデータ一覧</h1>
+        <p class="sub">
+          スマホが重い時に、設定から「リセット」を押すと<strong>種類によって消えるものが全然違います</strong>。<br>
+          「設定だけ戻る」つもりで触ったのに、<strong>Wi‑Fiが全部消えた／壁紙や通知が戻った／最悪、初期化して写真も消えた</strong>…がありがち。<br>
+          ここでは<strong>“どのリセットで何が消えるか”</strong>を、iPhone/Android別に一覧でまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#quick">結論：リセットの種類を間違えると痛い</a></li>
+            <li><a href="#iphone">iPhone：リセット別「消えるもの/消えないもの」</a></li>
+            <li><a href="#android">Android：リセット別「消えるもの/消えないもの」</a></li>
+            <li><a href="#safeorder">重い時に“安全に”試す順番</a></li>
+            <li><a href="#backup">やる前に確認するバックアップ</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>大事：</strong>「リセット」＝「初期化」じゃないこともあるけど、<strong>初期化に近い操作</strong>も混ざっています。<br>
+            まずは<strong>名称</strong>を見て選ぶのがコツ。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>結論：リセットの種類を間違えると痛い</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">設定リセット（軽め）</span></div>
+          <ul>
+            <li>通知/表示/プライバシーなどの<strong>設定が初期状態に戻る</strong></li>
+            <li>写真やトーク履歴など、<strong>データ本体は消えないことが多い</strong></li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">ネットワークリセット（地味に困る）</span></div>
+          <ul>
+            <li>Wi‑Fiパスワード、Bluetooth、APNなどが消える</li>
+            <li>「学校Wi‑Fi」「家Wi‑Fi」入れ直しになる</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge danger">初期化（工場出荷状態）＝データ消去</span></div>
+          <ul>
+            <li>端末がまっさらになる（アプリ・写真・アカウント等）</li>
+            <li>バックアップがないと戻らない</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="iphone">
+      <h2>iPhone：リセット別「消えるもの / 消えないもの」</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">「すべての設定をリセット」（軽め）</span></div>
+        <p class="muted" style="margin:0;">
+          端末の<strong>設定だけ</strong>を初期状態に戻す系。データ消去ではありません。
+        </p>
+        <ul>
+          <li><strong>消える/戻ることがある：</strong>壁紙、通知設定、位置情報の許可、プライバシー設定、キーボード設定、画面表示、アクセシビリティ設定 など</li>
+          <li><strong>基本消えない：</strong>写真/動画、連絡先、メモ、アプリ本体、LINEのトーク（端末内）※</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          ※アプリによって「通知許可」や「権限」が戻ることがあるので、使いづらくなることはあります。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">「ネットワーク設定をリセット」（Wi‑Fi周りが消える）</span></div>
+        <ul>
+          <li><strong>消える：</strong>保存したWi‑Fi（SSID/パスワード）、VPN設定、モバイル通信設定の一部、Bluetoothのペアリング など</li>
+          <li><strong>消えない：</strong>写真/アプリ/データ</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          「Wi‑Fi繋がらない」時は有効だけど、<strong>学校や家のWi‑Fiを入れ直し</strong>になります。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">「キーボードの変換学習をリセット」（地味に戻る）</span></div>
+        <ul>
+          <li><strong>消える：</strong>予測変換の学習、よく使う単語の学習</li>
+          <li><strong>消えない：</strong>他のデータ全般</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge danger">「すべてのコンテンツと設定を消去」（初期化）</span></div>
+        <p class="muted" style="margin:0;">
+          これは<strong>端末のデータを消して工場出荷状態にする</strong>操作。重いからって気軽にやると危険です。
+        </p>
+        <ul>
+          <li><strong>消える：</strong>アプリ、写真/動画（端末にしかない分）、端末内データ、設定、アカウント情報 など</li>
+          <li><strong>残る可能性：</strong>iCloudに同期されている写真/連絡先/メモ等（サインイン後に復元される）</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          「iCloudに同期されてるから大丈夫」と思っても、<strong>同期が止まっていた</strong>なら消えます。必ずバックアップ確認（後述）。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="android">
+      <h2>Android：リセット別「消えるもの / 消えないもの」</h2>
+
+      <div class="callout">
+        <p class="muted" style="margin:0;">
+          Androidは機種（Pixel/Galaxy/Xperiaなど）で名称が少し違うけど、だいたい次の3系統です。
+        </p>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge ok">「設定のリセット（アプリ設定をリセット）」系</span></div>
+        <ul>
+          <li><strong>消える/戻ることがある：</strong>既定のアプリ、通知の許可、権限、バックグラウンド制限、Wi‑Fiの自動接続設定の一部 など</li>
+          <li><strong>基本消えない：</strong>写真/動画、アプリのデータ本体、アカウント</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">「ネットワークのリセット」</span></div>
+        <ul>
+          <li><strong>消える：</strong>保存Wi‑Fi、Bluetoothペアリング、モバイル通信設定の一部（APNなど）</li>
+          <li><strong>消えない：</strong>写真/アプリ/データ</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge danger">「工場出荷状態にリセット（初期化）」</span></div>
+        <ul>
+          <li><strong>消える：</strong>端末内の写真/動画、アプリ、アプリ内データ、ダウンロード、設定、ログイン情報 など</li>
+          <li><strong>残る可能性：</strong>Googleに同期されてる連絡先/カレンダー、Googleフォトにバックアップ済みの写真 など</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          これも「バックアップしてる前提」の操作。<strong>バックアップ設定がOFF</strong>だと、終わります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="safeorder">
+      <h2>重い時に“安全に”試す順番（おすすめ）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">リセット前にまずやる（安全で効果が出やすい）</span></div>
+        <ol class="ol">
+          <li>再起動（意外と効く）</li>
+          <li>ストレージ空き容量を作る（写真整理/不要アプリ削除）</li>
+          <li>OS/アプリ更新（不具合修正が入る）</li>
+          <li>Safari/Chromeのキャッシュ削除（ブラウザが重い場合）</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">リセットするなら軽い順に</span></div>
+        <ol class="ol">
+          <li>（必要なら）ネットワーク設定のリセット</li>
+          <li>すべての設定をリセット（iPhone）/アプリ設定のリセット（Android）</li>
+          <li><strong>最終手段：</strong>初期化（工場出荷状態）※バックアップ必須</li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          “重い＝初期化”は飛びすぎ。まずは<strong>空き容量</strong>と<strong>再起動</strong>が正攻法です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="backup">
+      <h2>やる前に確認するバックアップ（これだけは見て）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iPhone</h3>
+          <ul>
+            <li>設定 → 自分の名前 → iCloud → <strong>iCloudバックアップ</strong></li>
+            <li>写真：iCloud写真がONか、同期が止まってないか</li>
+            <li>LINE：トーク履歴のバックアップ（iCloud/Google Drive）</li>
+          </ul>
+          <p class="muted" style="margin:0;">※「容量不足」で止まってる人が多いので注意。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">Android</h3>
+          <ul>
+            <li>設定 → システム → <strong>バックアップ</strong>（機種で名称違い）</li>
+            <li>写真：GoogleフォトのバックアップがONか</li>
+            <li>LINE：トーク履歴バックアップ（Google Drive）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 「すべての設定をリセット」って写真は消える？</h3>
+        <p class="muted" style="margin:0;">
+          基本は消えません（設定が初期状態に戻るだけ）。ただし通知や権限などが戻って「使いにくい」ことはあります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ネットワークリセットすると何が困る？</h3>
+        <p class="muted" style="margin:0;">
+          Wi‑FiパスワードやBluetoothが消えるので、家/学校のWi‑Fiを入れ直し、イヤホン等を再ペアリングする必要が出ます。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 初期化したら、クラウドにある写真も消える？</h3>
+        <p class="muted" style="margin:0;">
+          端末だけ消すならクラウド側は残ることが多いですが、設定や同期状況によって違います。
+          「同期が止まってた」分は消えるので、初期化前にバックアップ確認が必須です。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

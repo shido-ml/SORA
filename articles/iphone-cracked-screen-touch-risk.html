@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【iPhone】画面ヒビ割れ放置でタッチ不良になる？使い続けた時のリスクと対処｜今すぐ解決ノート</title>
+  <meta name="description" content="iPhoneの画面がひび割れたまま使うと、いつ操作不能になる？タッチ不良（ゴーストタッチ）、液晶/有機ELのにじみ、割れ拡大、水没リスクなどの現実的な危険と、今すぐやるべきバックアップ・応急処置・修理判断を解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> iPhone / 修理</p>
+        <h1>画面のひび割れ、放置して使い続けたら操作できなくなる？</h1>
+        <p class="sub">
+          画面がヒビ割れたままでも「一応使える」から放置しがち。でも実際は、
+          <strong>突然タッチが効かない</strong>／勝手に動く（ゴーストタッチ）／黒いシミが広がる…みたいに
+          <strong>ある日いきなり詰む</strong>ことがあります。
+          ここでは「操作不能になる可能性」と「今すぐやる順番」を、現実的にまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：操作できなくなる？（どのくらい危ない）</a></li>
+            <li><a href="#why">なぜヒビ割れでタッチ不良が起きるの？</a></li>
+            <li><a href="#signs">危険サイン：この症状が出たら放置しない</a></li>
+            <li><a href="#now">今すぐやる：バックアップ＆データ保護</a></li>
+            <li><a href="#first-aid">応急処置（とりあえず今日を乗り切る）</a></li>
+            <li><a href="#repair">修理するべき？判断の目安</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>最重要：</strong>「まだ動く」うちに<strong>バックアップ</strong>を作る。<br>
+            触れなくなってからだと、復旧が一気に難しくなります。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：操作できなくなる？（どのくらい危ない）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">可能性はある。しかも「急に」来る</span></div>
+        <p class="muted" style="margin:0;">
+          ひび割れがタッチ面（ガラス）だけで止まっている間は普通に使えることもあります。
+          でも割れが進むと、タッチを検知する層（デジタイザ）や表示パネルに影響して
+          <strong>タッチ不良</strong>や<strong>誤作動</strong>が起きます。
+          そして一番イヤなのが、<strong>昨日までOK→今日いきなり無理</strong>が普通にあること。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">「いつ操作不能になるか」は予測できない</span></div>
+        <p class="muted" style="margin:0;">
+          割れ方・落とした回数・圧力・水分・温度で変わります。
+          だからこそ「まだ使える」うちに<strong>やるべき順番</strong>があります（後半で解説）。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="why">
+      <h2>なぜヒビ割れでタッチ不良が起きるの？</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">① タッチセンサーが傷んで誤反応する</h3>
+          <p class="muted" style="margin:0;">
+            画面は「ガラス」だけじゃなく、薄い層が何枚も重なっています。
+            割れや圧力でタッチ層がダメになると、<strong>反応しない/勝手にタップされる</strong>が起きます。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">② 液晶/有機ELが傷むと表示が崩れる</h3>
+          <p class="muted" style="margin:0;">
+            黒いシミ（にじみ）・線・ちらつき・色の変化が出たら、表示パネル側まで影響している可能性が高いです。
+            放置すると広がることがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">③ 割れ目から水分・ホコリが入る</h3>
+          <p class="muted" style="margin:0;">
+            耐水性能があっても、割れ目があると弱くなります。
+            水分が入るとタッチ誤作動や故障につながりやすいです。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">④ さらに落とすと「拡大」しやすい</h3>
+          <p class="muted" style="margin:0;">
+            ひびが入った状態は強度が落ちているので、次の衝撃で一気に広がりやすいです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="signs">
+      <h2>危険サイン：この症状が出たら放置しない</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">ゴーストタッチ</span></div>
+          <p class="muted" style="margin:0;">
+            触ってないのに勝手に入力される。パスコードが勝手に押されると、最悪ロックが長時間かかります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">タッチが部分的に効かない</span></div>
+          <p class="muted" style="margin:0;">
+            キーボードの一部が押せない/スワイプできないなど。修理タイミングのサイン。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">黒いシミ・線・ちらつき</span></div>
+          <p class="muted" style="margin:0;">
+            表示パネル側の損傷の可能性。放置で悪化しやすいです。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">ガラスの欠け・指に刺さる</span></div>
+          <p class="muted" style="margin:0;">
+            ケガの危険。テープや保護フィルムで応急でもいいので早めに対策。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="now">
+      <h2>今すぐやる：バックアップ＆データ保護</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">最優先：今の状態でバックアップを作る</span></div>
+        <ol class="ol">
+          <li>Wi‑Fiにつなぐ</li>
+          <li>設定 → 自分の名前 → iCloud → <strong>iCloudバックアップ</strong>（またはバックアップ項目）を確認</li>
+          <li>可能なら<strong>今すぐバックアップ</strong>を実行</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          もしiCloud容量が足りない/支払いで止まってるなら、PCへのバックアップも検討（今できる手段を優先）。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">パスコード入力が不安なら</h3>
+          <p class="muted" style="margin:0;">
+            ゴーストタッチがあるとパスコードを勝手に押されてロックされることがあります。
+            まずは落ち着いて、誤作動が出る前にバックアップを作るのが安全です。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">写真だけでも守る</h3>
+          <p class="muted" style="margin:0;">
+            重要な写真はPCへコピーや別クラウドへ二重保存。
+            「端末が突然使えない」時に一番ダメージが大きいのが写真です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="first-aid">
+      <h2>応急処置（とりあえず今日を乗り切る）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">① 保護フィルム（ガラス/厚め）を貼る</h3>
+          <p class="muted" style="margin:0;">
+            欠けた破片の飛散を抑え、指のケガを減らします。気泡が入ってもOK、まず安全優先。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">② ケースを付ける（縁が高いタイプ）</h3>
+          <p class="muted" style="margin:0;">
+            画面の端が守れると、次の落下での悪化を減らせます。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">③ 水・湿気を避ける</h3>
+          <p class="muted" style="margin:0;">
+            ひび割れがあると水分侵入のリスクが上がります。風呂場/雨の日は特に注意。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">④ タッチ誤作動が出たら一旦電源オフ</h3>
+          <p class="muted" style="margin:0;">
+            勝手に入力される時は、パスコード事故を避けるために一度落ち着かせるのが大事。
+            操作不能が近いサインなので、修理に寄せた方がいいです。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ※テープ直貼りはベタつきや剥がす時の破片で逆に危ないこともあるので、できれば保護フィルム/ケースが無難。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="repair">
+      <h2>修理するべき？判断の目安</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">すぐ修理寄り</h3>
+          <ul>
+            <li>ゴーストタッチがある</li>
+            <li>タッチが効かない部分がある</li>
+            <li>黒いシミ・線・ちらつきがある</li>
+            <li>ガラスが欠けて指に刺さる</li>
+          </ul>
+          <p class="muted" style="margin:0;">＝「操作不能」になる前に動いた方が安全。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">様子見でもいい（ただしバックアップは必須）</h3>
+          <ul>
+            <li>ヒビはあるが、タッチも表示も安定している</li>
+            <li>割れが端の方で広がっていない</li>
+            <li>保護フィルム/ケースで安全を確保できている</li>
+          </ul>
+          <p class="muted" style="margin:0;">
+            ただし「次の落下」で一気に悪化はあるので、油断はしない。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">修理前にやっておくと安心</h3>
+          <ul>
+            <li>バックアップ作成</li>
+            <li>Apple IDのパスワードを確認</li>
+            <li>「探す」をオフにする必要がある場合に備える</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">「費用が不安」なら先に相見積もり</h3>
+          <p class="muted" style="margin:0;">
+            正規/非正規で費用・保証が違います。安さだけで決めると、後で困ることもあるので、
+            “データを守る”視点で選ぶと失敗しにくいです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ひび割れだけなら本当に放置しても平気？</h3>
+        <p class="muted" style="margin:0;">
+          しばらく平気な人もいます。でも「急にタッチが死ぬ」があるので、最低でも<strong>バックアップ</strong>だけは作っておくのが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ヒビが広がるのを止める方法は？</h3>
+        <p class="muted" style="margin:0;">
+          完全には止められません。保護フィルムとケースで“悪化しにくく”するのが現実的です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ゴーストタッチが出たらどうすれば？</h3>
+        <p class="muted" style="margin:0;">
+          まずデータ保護（バックアップ）を最優先。パスコード誤入力でロックされるのが一番キツいので、
+          落ち着いて対応し、できれば早めに修理へ。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【2026年最新】LINEの送信取り消しで通知は消える？ロック画面に残る条件と対策｜今すぐ解決ノート</title>
+  <meta name="description" content="LINEの送信取り消しをすると、通知センター/ロック画面のプッシュ通知は「消えることが多い」。ただし相手がすでに通知を見ていた・スマートウォッチに届いた・通知履歴が残る・古い環境などでは内容が残る場合も。消える/残るパターンと注意点を整理。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / LINE</p>
+        <h1>LINEの「送信取り消し」したら、相手のロック画面の通知も消えるの？</h1>
+        <p class="sub">
+          結論から言うと、LINEの「送信取り消し」は<strong>相手のトーク画面からメッセージを消す</strong>機能ですが、
+          <strong>ロック画面の通知（プッシュ通知）まで必ず消せるか</strong>は状況で変わります。<br>
+          多くの環境では<strong>通知も一緒に消えることが多い</strong>一方で、
+          <strong>相手がすでに通知を見ていた</strong>などの条件では「内容が残った」ように見えることもあります。<br>
+          ここでは「消える/残る」パターンを分かりやすく整理します。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：通知は消える？残る？</a></li>
+            <li><a href="#pattern">消えることが多いパターン</a></li>
+            <li><a href="#remain">残る/バレる可能性があるパターン</a></li>
+            <li><a href="#tips">送信取り消し前後の注意点</a></li>
+            <li><a href="#recipient">受け取る側：ロック画面に内容を出さない設定</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>一言まとめ：</strong>取り消しで通知は消えることが多いが、<strong>「相手が見た/別端末に届いた」</strong>は消せない。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：通知は消える？残る？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">多くのケース：送信取り消しすると、ロック画面/通知センターの通知も消えることが多い</span></div>
+        <p class="muted" style="margin:0;">
+          通知がまだ「未確認」の状態で残っている場合、送信取り消しと同時に
+          その通知が<strong>通知センターやロック画面から消える</strong>挙動になることがあります。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">ただし：すでに見られた情報は消せない</span></div>
+        <p class="muted" style="margin:0;">
+          相手が通知を見た（ロック画面で読んだ・ポップアップで読んだ）、
+          スマートウォッチに届いた、通知履歴に残った…などのケースでは、
+          取り消しても<strong>「内容が見えていた」事実</strong>までは消せません。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="pattern">
+      <h2>消えることが多いパターン</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">① 相手が通知をまだ開いていない</span></div>
+          <p class="muted" style="margin:0;">
+            通知センターに残っている通知が、送信取り消しと同時に消えることがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">② 送信してすぐ取り消した</span></div>
+          <p class="muted" style="margin:0;">
+            相手がスマホを見ていない・反応する前なら、内容が読まれないまま消える可能性が高くなります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">③ 通知内容のプレビュー自体がOFF</span></div>
+          <p class="muted" style="margin:0;">
+            相手が「通知に本文を出さない」設定なら、そもそもロック画面で内容が読めません。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          ポイントは<strong>「相手が読む前に消せるか」</strong>です。送信取り消しは万能ではありません。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="remain">
+      <h2>残る/バレる可能性があるパターン</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">① 相手がロック画面/ポップアップで読んだ</span></div>
+          <p class="muted" style="margin:0;">
+            取り消しても「すでに見た」内容は戻せません。スクショされている可能性もあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">② スマートウォッチ/別端末に通知が届いた</span></div>
+          <p class="muted" style="margin:0;">
+            Apple Watch等に通知が出た場合、その表示が残る・見られることがあります。
+            スマホ側の通知が消えても、別端末側の表示は別扱いになることがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">③ Androidの「通知履歴」に残っている</span></div>
+          <p class="muted" style="margin:0;">
+            機種や設定によっては通知履歴に本文の一部が残ることがあります。
+            送信取り消しでスマホ画面から消えても、履歴側で見えるケースがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">④ 端末/OS/LINEのバージョン差</span></div>
+          <p class="muted" style="margin:0;">
+            古い環境では、取り消し時に「送信を取り消しました」通知が出たり、
+            通知が消えない挙動になる場合があります。挙動はアップデートで変わることがあります。
+          </p>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px;">
+        <div class="label"><span class="badge danger">大事：取り消しても“痕跡”は残る</span></div>
+        <p class="muted" style="margin:0;">
+          トークには「メッセージの送信を取り消しました」という表示が残ります。
+          内容が見えていなくても、取り消した事実は相手に伝わります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>送信取り消し前後の注意点</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">おすすめの動き</span></div>
+        <ol class="ol">
+          <li><strong>気づいたらすぐ取り消す</strong>（相手が見る前の確率を上げる）</li>
+          <li>必要なら<strong>短いフォロー</strong>を送る（例：「誤送信、ごめん！」）</li>
+          <li>“絶対に内容を見られたくない”なら、送信前に<strong>通知に本文が出ない前提</strong>で運用する（次の章）</li>
+        </ol>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「通知まで完全に消えるはず」と期待しすぎるのが一番危険。<strong>相手が見たら終わり</strong>、くらいで考えるのが安全です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="recipient">
+      <h2>受け取る側：ロック画面に内容を出さない設定</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iPhone</h3>
+          <ol class="ol">
+            <li>設定 → 通知 → <strong>プレビューを表示</strong></li>
+            <li><strong>ロックされていないとき</strong> または <strong>しない</strong></li>
+          </ol>
+          <p class="muted" style="margin:10px 0 0;">
+            さらに「設定→通知→LINE」でロック画面表示をオフにするとより強いです。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">Android</h3>
+          <ul>
+            <li>設定 → 通知 → <strong>ロック画面の通知</strong> → 「機密情報を非表示」や「表示しない」</li>
+            <li>アプリ（LINE）の通知設定で「ロック画面に表示しない」</li>
+          </ul>
+          <p class="muted" style="margin:0;">
+            機種で名称が少し違いますが、ロック画面の通知を隠す設定が必ずあります。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 送信取り消ししたのに、相手が内容を知ってた。なぜ？</h3>
+        <p class="muted" style="margin:0;">
+          相手が通知のプレビューで読んでいた、スマートウォッチに出ていた、通知履歴に残っていた、
+          送信直後に画面で見られた…などが原因として多いです。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 既読が付いてなくても、バレる？</h3>
+        <p class="muted" style="margin:0;">
+          既読が付かなくても、通知で読まれている可能性はあります。
+          「既読＝見た」ではなく、「通知プレビューで見た」ルートがあるのがポイントです。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 取り消しができる時間は？</h3>
+        <p class="muted" style="margin:0;">
+          LINEは送信取り消しできる時間が変更されることがあります。アプリの表示に従ってください。
+          OpenChatなど一部は条件が違う場合があります。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

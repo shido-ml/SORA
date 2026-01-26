@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【インスタ】ブロックされた？サブ垢で確認するとバレる？リスクと安全な確認方法｜今すぐ解決ノート</title>
+  <meta name="description" content="Instagramでブロックされた疑いがある時、サブ垢で確認すると相手にバレる可能性は？基本は「プロフ閲覧だけ」なら通知は出ないが、ストーリー閲覧・フォロー/いいね誤タップ・DM・おすすめ表示（連絡先同期/アカウントセンター等）でつながりが見えるリスクがある。バレやすい行動と、より安全な確認手順を整理。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / Instagram</p>
+        <h1>インスタでブロックされたっぽい時、サブ垢で確認しに行くとバレるリスク</h1>
+        <p class="sub">
+          「ブロックされたかも…」って時、サブ垢で見に行けば確認できそうだけど、気になるのが<strong>バレるかどうか</strong>。<br>
+          結論から言うと、<strong>サブ垢で“プロフィールを見ただけ”なら通知は基本出ません</strong>。<br>
+          ただし、ストーリーを見たり、フォロー/いいねを誤タップしたり、アカウント同士が連絡先やアカウントセンターでつながっていると、
+          どこかで「この人…？」って気づかれるリスクはあります。<br>
+          この記事で<strong>バレやすい行動</strong>と<strong>できるだけ安全に確認するコツ</strong>をまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：バレる可能性はある（条件つき）</a></li>
+            <li><a href="#what-is-block">まず：ブロックっぽい症状まとめ</a></li>
+            <li><a href="#risk">サブ垢確認でバレる主なリスク</a></li>
+            <li><a href="#safe-check">安全寄りの確認手順（おすすめ）</a></li>
+            <li><a href="#dont">絶対やらない方がいいこと</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>一言まとめ：</strong>プロフ閲覧だけは基本バレない。でも<strong>ストーリー閲覧・誤操作・アカウントの紐づき</strong>で気づかれることがある。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：バレる可能性はある（条件つき）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">基本：サブ垢でプロフを見るだけ → 通知は出にくい</span></div>
+        <p class="muted" style="margin:0;">
+          Instagramには「プロフィールを見た人の足跡一覧」は公式にはありません。<br>
+          だから<strong>“見るだけ”ならバレにくい</strong>です。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">でも：間違えると一発でバレる</span></div>
+        <p class="muted" style="margin:0;">
+          ストーリーズを見た、フォローした、いいねした、DMを送った、ライブを覗いた…は<strong>相手に表示/通知</strong>されやすいです。<br>
+          さらに、サブ垢があなたと紐づいていそうだと「この人サブ垢かも」と気づかれる可能性もあります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="what-is-block">
+      <h2>まず：ブロックっぽい症状まとめ</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">よくある「ブロック疑い」</span></div>
+        <ul>
+          <li>相手のユーザー名で検索しても出にくい/出ない</li>
+          <li>過去のDMは残ってるのに、プロフィールに飛べない</li>
+          <li>相手の投稿が急に見えなくなった</li>
+          <li>相手のプロフィールを開くと投稿数はあるのに、<strong>投稿が表示されない</strong>（状況により）</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          ※ただし、<strong>アカウント削除</strong>・<strong>ユーザー名変更</strong>・<strong>一時停止</strong>・<strong>通信不具合</strong>でも似た症状になります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="risk">
+      <h2>サブ垢確認でバレる主なリスク</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge danger">① ストーリーズを見てしまう</span></div>
+          <p class="muted" style="margin:0;">
+            ストーリーズは閲覧者リストが出るので、見た瞬間に名前が残ります。<br>
+            「確認だけのつもり」でも<strong>ここでバレる</strong>のが一番多いです。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge danger">② いいね/フォローの誤タップ</span></div>
+          <p class="muted" style="margin:0;">
+            うっかり「いいね」やフォローをすると通知が飛びます。<br>
+            特に古い投稿をスクロールしてる時は危険。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">③ サブ垢が“あなたっぽい”と気づかれる</span></div>
+          <p class="muted" style="margin:0;">
+            アイコン、名前、投稿内容、フォローしている人、タイミング（急に見に来る）などで
+            「この人、あの人のサブ垢？」って推測されることがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">④ おすすめ表示でつながりが見えることがある</span></div>
+          <p class="muted" style="margin:0;">
+            連絡先同期やアカウント同士の関連（Metaのアカウントセンター等）によっては、
+            「知り合いかも」「おすすめ」経由で関係が見える可能性があります。<br>
+            ※仕組みは公開されていない部分もあり、確実に断言はできませんが、<strong>リスク0ではない</strong>と思っておくのが安全。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">⑤ DM・返信・リアクションで痕跡が残る</span></div>
+          <p class="muted" style="margin:0;">
+            メッセージ送信やストーリーへの返信、リアクションは当然バレます。
+            「確認」目的なら絶対やらない方がいいです。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">（参考）プロフ閲覧だけ</span></div>
+          <p class="muted" style="margin:0;">
+            これ単体では通知が出にくいです。ただし上のリスクを踏むと意味がなくなります。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「バレるか？」は、結局<strong>通知が出る行動をしたか</strong>と、<strong>サブ垢があなたと結びついて見えるか</strong>で決まります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="safe-check">
+      <h2>安全寄りの確認手順（おすすめ）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">① まず本垢で“ブロック以外”の可能性を潰す</span></div>
+        <ul>
+          <li>相手のユーザー名が変わってないか（共通の友達のフォロー欄などで確認）</li>
+          <li>通信不具合：一度アプリを再起動/アップデート</li>
+          <li>相手が一時停止/削除している可能性（一定期間出てこない場合）</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">② サブ垢で確認するなら「見るだけ」に徹する</span></div>
+        <ol class="ol">
+          <li>相手のプロフィールを開く（ここまではOK）</li>
+          <li><strong>投稿/プロフィール情報の有無だけを見る</strong></li>
+          <li><strong>ストーリーは絶対に開かない</strong></li>
+          <li>フォロー/いいね/DM/ライブ視聴をしない</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          見たいのは「本垢だと見えないのに、サブ垢だと見えるか」だけ。余計な操作はしない。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">③ “気づかれたくない”なら、結局は確認しないのが最安全</span></div>
+        <p class="muted" style="margin:0;">
+          どれだけ気をつけても、誤タップや偶然でバレる可能性はゼロにできません。<br>
+          もし相手が距離を置きたいなら、無理に追いかけるほど状況が悪化することもあります。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="dont">
+      <h2>絶対やらない方がいいこと</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge danger">相手が嫌がる行動はトラブルの元</span></div>
+        <ul>
+          <li>複数のサブ垢で何度も見に行く（相手に不快感・恐怖を与えることがある）</li>
+          <li>ブロック回避のためにフォロー要求/DMを繰り返す</li>
+          <li>相手を監視する目的の行動（規約違反や通報につながる可能性）</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          「確認」でも、相手が“嫌だ”と思ったらハラスメントになり得ます。線引きは大事。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. サブ垢でプロフ見ただけで足跡は付く？</h3>
+        <p class="muted" style="margin:0;">
+          基本は付きません（プロフィール閲覧の足跡一覧がないため）。<br>
+          ただし、ストーリー閲覧やフォロー/いいねなどの操作をすると足跡・通知になります。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. サブ垢が「おすすめ」に出たらバレる？</h3>
+        <p class="muted" style="margin:0;">
+          おすすめ表示の仕組みは非公開部分があり、確実には言えません。<br>
+          ただ、連絡先同期やアカウント同士の関連があると、相手に表示される可能性はあります。
+          「絶対バレない」は無理なので、気になるなら確認自体をしないのが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ブロックと制限（Restrict）ってどう違う？</h3>
+        <p class="muted" style="margin:0;">
+          ブロックは相手とのやり取りや表示を強く遮断します。制限はコメントやDMの見え方を変える機能です。
+          どちらでも「なんか反応が変」と感じることはあります。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

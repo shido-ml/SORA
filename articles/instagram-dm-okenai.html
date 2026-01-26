@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InstagramでDMが送れない原因まとめ（iPhone/Android/PC）｜今すぐ解決ノート</title>
+  <meta name="description" content="InstagramでDMが送れない・送信できない・エラーになる時の原因と対処法を症状別に整理。iPhone/Android/PC（Web）でのチェック手順も。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / Instagram</p>
+        <h1>InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</h1>
+        <p class="sub">
+          「送信できない」「ぐるぐる読み込み」「エラーが出る」「相手に送れない」など、InstagramのDMトラブルは
+          だいたい<strong>①通信/アプリ</strong>、<strong>②相手側の設定</strong>、<strong>③自分のアカウント制限</strong>のどれかです。
+          この記事は<strong>よくある順</strong>に、最短で潰せる手順をまとめました。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#quick">まず最初にやる5つ（最短チェック）</a></li>
+            <li><a href="#symptoms">症状別：原因の当たりをつける</a></li>
+            <li><a href="#common">よくある原因と対処（共通）</a></li>
+            <li><a href="#privacy">相手の設定が原因のパターン</a></li>
+            <li><a href="#restriction">自分のアカウントが制限されているパターン</a></li>
+            <li><a href="#iphone">iPhone：具体的な直し方</a></li>
+            <li><a href="#android">Android：具体的な直し方</a></li>
+            <li><a href="#pc">PC（Web）：送れない時</a></li>
+            <li><a href="#template">最後の手段：問い合わせ前に送る/確認文</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>先に結論：</strong>まずは <strong>アプリ更新 → 再起動 → 通信切替 → ログインし直し</strong>。
+            それでダメなら、<strong>相手の設定</strong>か<strong>自分の制限</strong>を疑うのが近道です。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>まず最初にやる5つ（最短チェック）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">① 通信を切り替える</span></div>
+          <ul>
+            <li>Wi‑Fi ⇄ モバイル通信に切り替え</li>
+            <li>機内モードON→OFF</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">② Instagramを更新する</span></div>
+          <ul>
+            <li>iPhone：App Storeで更新</li>
+            <li>Android：Google Playで更新</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">③ アプリを完全終了→開き直す</span></div>
+          <ul>
+            <li>バックグラウンドで固まってる時に効きます</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">④ ログアウト→ログイン</span></div>
+          <ul>
+            <li>アカウント周りの不具合がリセットされることがあります</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">⑤ 別の相手に送れるか試す</span></div>
+          <ul>
+            <li>送れる → 「相手側設定/ブロック」系が濃厚</li>
+            <li>誰にも送れない → 「自分の制限/アプリ不具合」系が濃厚</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="symptoms">
+      <h2>症状別：原因の当たりをつける</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">A：送信ボタンを押しても送れない</h3>
+          <ul>
+            <li>通信不安定</li>
+            <li>アプリの一時不具合</li>
+            <li>アカウント制限（短時間でDM送りすぎなど）</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">B：特定の相手だけ送れない</h3>
+          <ul>
+            <li>相手が「メッセージ許可」を制限</li>
+            <li>相手にブロックされている</li>
+            <li>相手のアカウントが停止/削除</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">C：エラー文が出る</h3>
+          <ul>
+            <li>DM機能が制限されている</li>
+            <li>年齢/アカウントの状態</li>
+            <li>不審な操作判定（スパム判定）</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">D：送れているのに相手に届かない気がする</h3>
+          <ul>
+            <li>「メッセージリクエスト」に入っている</li>
+            <li>相手が通知OFF/未読のまま</li>
+            <li>相手が別フォルダ（一般/メイン）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="common">
+      <h2>よくある原因と対処（共通）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) 通信が不安定</span></div>
+        <ul>
+          <li>動画や画像が重いと、DMだけ失敗することがあります</li>
+          <li>まずはテキストだけで送ってみる</li>
+          <li>Wi‑Fiが弱いならモバイル通信に切替</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) アプリが古い/不具合</span></div>
+        <ul>
+          <li>更新 → 直らなければ再起動</li>
+          <li>それでもダメなら一度アンインストール→再インストール（ログイン情報注意）</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">3) Instagram側で障害が起きている</span></div>
+        <ul>
+          <li>短時間だけDMが落ちることがあります</li>
+          <li>少し時間を置く（10〜30分）</li>
+          <li>別端末/PCで同じ症状か確認すると早い</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">4) 添付（写真/動画/リンク）が引っかかっている</span></div>
+        <ul>
+          <li>一部リンクや大量の連投で弾かれることがあります</li>
+          <li>まずテキストだけで送る → 通るなら添付が原因</li>
+          <li>同じ文をコピペ連投しない（スパム判定されやすい）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="privacy">
+      <h2>相手の設定が原因のパターン</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">相手がDM受信を制限</span></div>
+          <ul>
+            <li>相手が「フォローしてる人だけ」などに設定</li>
+            <li>この場合、あなたからは送れない/リクエスト扱いになります</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">ブロックされている</span></div>
+          <ul>
+            <li>プロフィールが見えない/投稿が見えない/検索に出ない等がセットなら濃厚</li>
+            <li>DMだけ送れないこともあります</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">相手のアカウントが停止・削除</span></div>
+          <ul>
+            <li>相手が一時停止/凍結/削除だとDMが不安定になります</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">メッセージリクエストに入っている</span></div>
+          <ul>
+            <li>フォロー関係が薄いと「リクエスト」に入ります</li>
+            <li>相手が承認しないと、会話が進みません</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>切り分けのコツ：</strong>別の相手には送れるのに、この人だけ送れないなら
+          「相手の設定/ブロック/停止」が原因のことが多いです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="restriction">
+      <h2>自分のアカウントが制限されているパターン</h2>
+      <p class="muted">
+        送信自体ができない・連投した直後から急に送れない場合は、Instagram側で一時的に制限されていることがあります。
+      </p>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">よくある制限の原因</span></div>
+        <ul>
+          <li>短時間にDMを送りすぎた（コピペ連投含む）</li>
+          <li>同じ内容を複数人に送った（スパム判定）</li>
+          <li>怪しいリンクを送った</li>
+          <li>ログイン場所が急に変わった/端末を頻繁に変えた</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">制限かどうかの確認方法</span></div>
+        <ul>
+          <li>他の相手にも送れない（全滅）なら制限の可能性が高い</li>
+          <li>プロフィール → メニュー → <strong>設定とプライバシー</strong> →（項目名は変わる）<strong>アカウントの状態</strong> があれば確認</li>
+          <li>ログインに警告が出ていたら、まず安全確認を済ませる</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">直し方（安全）</span></div>
+        <ul>
+          <li>まず<strong>連投を止める</strong>（数時間〜1日空ける）</li>
+          <li>パスワード変更（必要なら）</li>
+          <li>メール/電話番号の登録・本人確認を進める</li>
+          <li>怪しいアプリ連携があれば解除</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="iphone">
+      <h2>iPhone：具体的な直し方</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) Instagramを更新</span></div>
+        <ul>
+          <li>App Store → 検索「Instagram」→ 更新</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) アプリを完全終了</span></div>
+        <ul>
+          <li>画面下からスワイプ→アプリ一覧→Instagramを上に払って終了</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">3) iPhone再起動</span></div>
+        <ul>
+          <li>一時的な通信/メモリ問題が直ることがあります</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">4) 通信を切り替える</span></div>
+        <ul>
+          <li>Wi‑Fiを一度OFF→ON</li>
+          <li>機内モードON→OFF</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">5) どうしてもダメなら再インストール</span></div>
+        <ul>
+          <li>ログイン情報（パスワード）を確認してから</li>
+          <li>削除 → 再インストール → ログイン</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="android">
+      <h2>Android：具体的な直し方</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) アプリを更新</span></div>
+        <ul>
+          <li>Google Play → Instagram → 更新</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) 強制停止</span></div>
+        <ul>
+          <li>設定 → アプリ → Instagram → <strong>強制停止</strong></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">3) キャッシュ削除</span></div>
+        <ul>
+          <li>設定 → アプリ → Instagram → ストレージ → <strong>キャッシュを削除</strong></li>
+          <li>※「データを削除」はログイン情報が消えることがあるので注意</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">4) 再起動／再インストール</span></div>
+        <ul>
+          <li>再起動で直らなければ、再インストールを試す</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="pc">
+      <h2>PC（Web）：送れない時</h2>
+      <p class="muted">ブラウザ版は拡張機能やCookieの影響を受けることがあります。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">1) シークレット/プライベートで試す</span></div>
+        <ul>
+          <li>開けるなら、拡張機能やCookieが原因の可能性</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">2) 広告ブロック等を一時OFF</span></div>
+        <ul>
+          <li>広告ブロック・セキュリティ系がログイン/DMを邪魔することがあります</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">3) Cookie/キャッシュ削除</span></div>
+        <ul>
+          <li>Instagramのサイトデータを削除→再ログイン</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="template">
+      <h2>最後の手段：問い合わせ前に確認すること</h2>
+      <p class="muted">「自分の制限」か「相手の設定」かを、短い確認で切り分けできます。</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">チェックリスト</span></div>
+          <ul>
+            <li>別の相手には送れる？（送れるなら相手側が原因寄り）</li>
+            <li>テキストだけなら送れる？（添付が原因の可能性）</li>
+            <li>同じ文のコピペ連投をしてない？（制限の可能性）</li>
+            <li>アプリ更新/再起動/ログインし直しは済んだ？</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">相手に確認するときの一言（例）</span></div>
+          <pre class="pre">今インスタのDMが不具合っぽくて、あなたにだけ送れないかも。
+もしDMリクエストに入ってたら承認してもらえる？</pre>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          もし「誰にも送れない」状態が続くなら、スパム判定などで一時制限の可能性があります。
+          無理に連投せず、時間を空けるのが一番早く戻ることが多いです。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+        <li><a href="sensei-line-renraku-ok-ng.html">先生にLINEしてもいい？連絡していい内容・ダメな内容</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

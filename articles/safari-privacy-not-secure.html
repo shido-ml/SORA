@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safariで「この接続ではプライバシーが保護されません」と出た時の対処｜今すぐ解決ノート</title>
+  <meta name="description" content="Safariで「この接続ではプライバシーが保護されません」と表示された時の原因（証明書/時刻/ネットワーク/フィルタ/サイト側障害）と安全な対処手順。開いていいかの判断ポイントも。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> iPhone / Safari</p>
+        <h1>Safariで「この接続ではプライバシーが保護されません」と出た時の対処</h1>
+        <p class="sub">
+          これは「通信が安全に暗号化できないかも」という警告です。まずは<strong>開かない</strong>で、原因を切り分けましょう。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#what">この警告は何？</a></li>
+            <li><a href="#judge">開いていいかの判断基準</a></li>
+            <li><a href="#steps">安全な対処手順（上から順に）</a></li>
+            <li><a href="#cases">原因別：よくあるパターン</a></li>
+            <li><a href="#last">どうしても直らない時</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>重要：</strong>ログイン・支払い・個人情報入力があるページでは、この警告が出たら<strong>絶対に入力しない</strong>のが安全です。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="what">
+      <h2>この警告は何？</h2>
+      <p class="muted">
+        Safariが「このサイトは安全な接続（HTTPS/TLS）を作れないかも」と判断したときに出る警告です。
+        原因は大きく分けて<strong>①サイト側（証明書/設定）</strong>か<strong>②自分側（時刻/ネット/フィルタ）</strong>のどちらか。
+      </p>
+
+      <div class="grid" style="margin-top:14px;">
+        <div class="box">
+          <div class="label"><span class="badge warn">サイト側が原因の例</span></div>
+          <ul>
+            <li>SSL証明書の期限切れ</li>
+            <li>証明書が不正/設定ミス</li>
+            <li>ドメインが変わったのに更新してない</li>
+            <li>サイト障害で正しく応答してない</li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="label"><span class="badge ok">自分側が原因の例</span></div>
+          <ul>
+            <li>iPhoneの日時がズレている</li>
+            <li>Wi‑Fiが不安定 / 公衆Wi‑Fi</li>
+            <li>VPN/広告ブロック/フィルタが干渉</li>
+            <li>プロファイルやセキュリティアプリが影響</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="judge">
+      <h2>開いていいかの判断基準</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">開かない方がいい</span></div>
+        <ul>
+          <li>ログイン・支払い・個人情報入力がある（SNS/銀行/ECなど）</li>
+          <li>URLが怪しい（似てる文字・意味不明なドメイン・短縮URL経由）</li>
+          <li>SMS/DMのリンクから飛んだ</li>
+          <li>「続ける」「許可」などを急かしてくる</li>
+        </ul>
+      </div>
+
+      <div class="box" style="margin-top:12px;">
+        <div class="label"><span class="badge ok">一時的に起きるだけのこともある</span></div>
+        <ul>
+          <li>大手サイトで突然出て、少し待つと直る（障害/更新）</li>
+          <li>公衆Wi‑Fiでだけ出る（Wi‑Fi側の制限）</li>
+          <li>VPN/広告ブロックを切ると直る（干渉）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="steps">
+      <h2>安全な対処手順（上から順に）</h2>
+      <p class="muted">基本は「自分側の原因」を先に潰して、それでもダメなら「サイト側」の可能性が高いです。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">① ページを閉じて、URLを見直す</span></div>
+        <ul>
+          <li>SMS/DMから開いたなら、同じサイトを<strong>公式アプリ</strong>か<strong>ブックマーク</strong>から開き直す</li>
+          <li>検索して「公式ドメイン」から入り直す（広告の偽サイトに注意）</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">② 日時設定を自動にする</span></div>
+        <ol style="margin:0; padding-left: 18px;">
+          <li>設定 → 一般 → 日付と時刻</li>
+          <li><strong>自動設定</strong>をON</li>
+          <li>一度Safariを閉じて開き直す</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          証明書は「現在時刻」で判定されるので、ズレていると警告が出やすいです。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">③ 回線を切り替える（Wi‑Fi⇄モバイル）</span></div>
+        <ul>
+          <li>Wi‑Fiで出る → 一旦Wi‑Fiを切ってモバイル通信で試す</li>
+          <li>公衆Wi‑Fiは特に出やすい（制限/偽アクセスポイントの可能性も）</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">④ VPN・広告ブロック・フィルタを一時OFF</span></div>
+        <ul>
+          <li>VPNを使っているならOFFにして試す</li>
+          <li>広告ブロック/コンテンツブロッカーを一旦OFF（設定→Safari→コンテンツブロッカー）</li>
+          <li>学校/家庭のフィルタ（DNS）だと証明書系が引っかかることがあります</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">⑤ Safariのデータを整理</span></div>
+        <p class="muted">キャッシュ/古い情報が悪さしてる場合に効きます。</p>
+        <ol style="margin:0; padding-left: 18px;">
+          <li>設定 → Safari</li>
+          <li><strong>履歴とWebサイトデータを消去</strong></li>
+          <li>再起動してから再確認</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">⑥ iOSを最新にする</span></div>
+        <ul>
+          <li>設定 → 一般 → ソフトウェア・アップデート</li>
+          <li>古いiOSだと証明書まわりで不具合が出ることがあります</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="cases">
+      <h2>原因別：よくあるパターン</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">大手サイトなのに出る</h3>
+          <p class="muted" style="margin:0;">一時的な障害/更新の可能性。時間を置いて再確認、別回線でも試す。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">公衆Wi‑Fiでだけ出る</h3>
+          <p class="muted" style="margin:0;">Wi‑Fi側の制限やログイン画面の挙動が原因のことも。モバイル通信で試すのが安全。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">学校のネットで出る</h3>
+          <p class="muted" style="margin:0;">フィルタ/DNS/プロキシの影響の可能性。別回線で確認して同じならサイト側。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">特定の1サイトだけ出る</h3>
+          <p class="muted" style="margin:0;">証明書期限切れなど「サイト側」原因が濃厚。無理に開かない。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">急に出始めた</h3>
+          <p class="muted" style="margin:0;">日時ズレ/アップデート直後/キャッシュが原因のことが多い。再起動＋手順②⑤が効きやすい。</p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">ログイン画面で出た</h3>
+          <p class="muted" style="margin:0;"><strong>入力しない</strong>で、公式アプリやブックマークから開き直す。SMS/DMリンクは特に注意。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="last">
+      <h2>どうしても直らない時</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">サイト側が原因の可能性が高い</span></div>
+        <ul>
+          <li>別の端末・別回線でも同じ警告が出る</li>
+          <li>そのサイトだけで発生する</li>
+          <li>公式側が障害情報を出している</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          この場合、ユーザー側で安全に直す方法は基本ありません。復旧まで待つのが一番安全です。
+        </p>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>危険回避のコツ：</strong>警告が出たページでは「ログイン・支払い・個人情報入力」をしない。  
+          どうしても必要なら、<strong>公式アプリ</strong>や<strong>別端末</strong>で公式ドメインからアクセスして確認しましょう。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>反省文ってどう書けばいい？【例文あり・そのまま使える】</title>
+  <meta name="description" content="反省文の書き方の型と、スマホ・提出物・遅刻などの例文をまとめました。コピペOK（少し言い換え推奨）。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+<header class="hero" id="top">
+      <div class="hero-inner">
+        <div class="kicker"><span class="dot"></span> 学校で使える：反省文ガイド（例文付き）</div>
+        <h1>反省文ってどう書けばいい？【例文あり・そのまま使える】</h1>
+        <p class="sub">
+          「反省文を書いて」と言われても、何を書けばいいか分からない人向け。
+          反省文の“型”と、スマホ・提出物・遅刻などの例文をまとめました。<br/>
+          ※学校や先生の指示がある場合はそれが最優先。コピペするなら少し言い換えると自然です。
+        </p>
+
+        <div style="margin-top:12px;">
+          <span class="pill"><b>目的</b> 改善を示す</span>
+          <span class="pill"><b>必須</b> 事実→影響→対策</span>
+          <span class="pill"><b>目安</b> 250〜500字</span>
+        </div>
+
+        <nav class="toc" aria-label="目次">
+          <p class="toc-title">目次</p>
+          <ul>
+            <li><a href="#meaning">反省文の考え方</a></li>
+            <li><a href="#template">反省文の型（テンプレ）</a></li>
+            <li><a href="#ng">NGになりやすい書き方</a></li>
+            <li><a href="#examples">例文（万能・パターン別）</a></li>
+            <li><a href="#tips">通りやすくするコツ</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="meaning">
+      <h2>反省文は「謝る文章」じゃなくて「改善の文章」</h2>
+      <p>
+        反省文で大事なのは、気持ちを盛ることよりも <b>次に同じことを起こさないための行動</b> を書くこと。
+        先生が見たいのは、だいたい次の3つです。
+      </p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge">必須</span> 入れるべき3つ</div>
+          <ul>
+            <li><b>何をしたか（事実）</b></li>
+            <li><b>なぜ良くなかったか（影響）</b></li>
+            <li><b>今後どうするか（具体策）</b></li>
+          </ul>
+          <p class="muted">この3点が入っていれば、基本はOK。</p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge">ポイント</span> 文章のトーン</div>
+          <ul>
+            <li>言い訳は短く、対策を長く</li>
+            <li>「気をつけます」だけで終わらせない</li>
+            <li>具体策は1〜2個で十分</li>
+          </ul>
+          <p class="muted">“改善する意思”が見えると強い。</p>
+        </div>
+      </div>
+
+      <div class="callout ok">
+        <b>覚える一文：</b> 反省文は <b>事実 → 影響 → 対策</b> の順で書く。
+      </div>
+    </section>
+
+    <section class="card" id="template">
+      <h2>反省文の型（これに当てはめれば終わる）</h2>
+      <p>迷ったらこの順番で書くと、自然にまとまります。</p>
+
+      <ol>
+        <li><b>今回の出来事（何をしたか）</b></li>
+        <li><b>よくなかった点（自分の考えの甘さ）</b></li>
+        <li><b>周りへの影響（授業・クラス・先生への迷惑）</b></li>
+        <li><b>今後の具体策（どう防ぐか）</b></li>
+        <li><b>締め（反省して改善する意思）</b></li>
+      </ol>
+
+      <div class="callout">
+        <b>コツ：</b> 具体策は「行動ルール」にすると強い（例：<span class="inline">登校したら電源OFF</span>、<span class="inline">前日にカバンへ入れる</span>）。
+      </div>
+    </section>
+
+    <section class="card" id="ng">
+      <h2>NGになりやすい書き方（やりがち）</h2>
+      <div class="grid">
+        <div class="callout warn">
+          <b>避けたい例：</b>
+          <ul>
+            <li>「でも」「だって」から始まる言い訳</li>
+            <li>「気をつけます」だけで終わる（対策がない）</li>
+            <li>相手のせいに見える表現</li>
+            <li>事実がぼやける（何をしたか分からない）</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <b>置き換えるなら：</b>
+          <ul>
+            <li>言い訳より <b>対策</b> を書く</li>
+            <li>対策は <b>1〜2個</b> でOK</li>
+            <li>曖昧なら「〜してしまいました」と事実を短く書く</li>
+            <li>最後は「改善します」で締める</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="examples">
+      <h2>すぐ使える例文（万能テンプレ＋パターン別）</h2>
+      <p class="muted">※提出用なら、1〜2文だけ自分の言い方に直すと自然になります。</p>
+
+      <article class="example">
+        <div class="ex-head">
+          <strong>例文①：万能（短め・無難）</strong>
+          <button class="copy" data-copy="ex1">コピー</button>
+        </div>
+        <pre id="ex1">このたびは、私の軽率な行動によりご迷惑をおかけし、申し訳ありませんでした。今回の出来事を通して、学校の決まりはただ厳しくするためではなく、全員が安心して学校生活を送るために必要なものだと分かりました。自分では大したことではないと思ってしまっていましたが、その考えが甘く、周りの学習環境や先生方からの信頼に影響する可能性があることを理解できていませんでした。
+今後は、決まりを守ることを当たり前として受け止め、事前に自分の行動を見直してから行動します。同じことを繰り返さないよう、日頃から意識して学校生活を送ります。</pre>
+      </article>
+
+      <article class="example">
+        <div class="ex-head">
+          <strong>例文②：しっかりめ（提出向き）</strong>
+          <button class="copy" data-copy="ex2">コピー</button>
+        </div>
+        <pre id="ex2">今回の出来事について深く反省しています。私は（今回の行為）をしてしまいました。自分では一時的なこと、軽い行動のつもりでしたが、学校生活の秩序を乱したり、周囲の人が安心して過ごす環境を損ねる可能性がある行動でした。また、先生方からの信頼を失うことにもつながると気づきました。
+今後は、学校のルールを守ることを優先し、同じ状況になったときは（具体的な対策：例：電源を切ってカバンの奥に入れる／事前に準備して不必要な行動をしない／迷ったら先生に確認する）など、行動を決めて再発を防ぎます。今回の反省を忘れず、気持ちを切り替えて学校生活に取り組みます。</pre>
+      </article>
+
+      <h3>パターン別</h3>
+
+      <article class="example">
+        <div class="ex-head">
+          <strong>A）スマホを学校で使ってしまった</strong>
+          <button class="copy" data-copy="exA">コピー</button>
+        </div>
+        <pre id="exA">このたび、学校内でスマートフォンを使用してしまい、決まりを破ったことを反省しています。自分では短時間で大したことではないと思ってしまいましたが、学校は学習の場であり、ルールを守ることが当たり前であるにもかかわらず、自分の判断を優先してしまいました。この行動は周囲の集中を妨げる可能性があり、先生方からの信頼にも関わることだと理解しました。
+今後は、登校した時点でスマートフォンの電源を切り、カバンの奥に入れて取り出さないようにします。また、連絡が必要な場合は自己判断で使わず、必ず先生に相談します。同じことを繰り返さないよう、行動を改めます。</pre>
+      </article>
+
+      <article class="example">
+        <div class="ex-head">
+          <strong>B）提出物を忘れた</strong>
+          <button class="copy" data-copy="exB">コピー</button>
+        </div>
+        <pre id="exB">私は（提出物）を提出期限までに出せず、ルールを守れなかったことを反省しています。提出物は授業の理解や評価にも関わるものであり、自分の管理不足が原因で先生方の負担を増やしてしまいました。期限を守ることは社会でも必要な基本であるのに、後回しにしてしまった自分の考えの甘さを感じています。
+今後は、提出物を受け取ったらその日のうちに期限を確認し、メモに締切を記録します。また、前日には必ずカバンに入れるところまでをルール化し、忘れ物が起きないようにします。今回の反省を生かして改善します。</pre>
+      </article>
+
+      <article class="example">
+        <div class="ex-head">
+          <strong>C）遅刻した</strong>
+          <button class="copy" data-copy="exC">コピー</button>
+        </div>
+        <pre id="exC">私は本日の遅刻について深く反省しています。時間に間に合うように行動するのは当たり前のことであり、遅刻は授業の進行や周囲に迷惑をかける行動です。自分の準備や時間の見積もりが甘く、余裕を持った行動ができていませんでした。
+今後は、出発時刻を決めて逆算し、前日のうちに持ち物の準備を終わらせます。また、起床後すぐに動けるように生活リズムを整え、同じことを繰り返さないようにします。</pre>
+      </article>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>反省文を“通りやすくする”コツ</h2>
+      <ul>
+        <li><b>「気をつけます」だけで終わらせない</b>（対策を1つ入れる）</li>
+        <li><b>具体策は1〜2個でいい</b>（多すぎると嘘っぽい）</li>
+        <li><b>文字数は250〜500字</b>が無難（指定があればそれ優先）</li>
+        <li><b>最後は改善の意思で締める</b>（反省→行動）</li>
+      </ul>
+      <div class="callout">
+        <b>自然に見せる小技：</b>
+        「軽い気持ちでやってしまった」「その場の判断が甘かった」みたいな <b>自分の言葉を1文だけ</b>混ぜる。
+      </div>
+    </section>
+
+    <section class="card faq" id="faq">
+      <h2>よくある質問</h2>
+
+      <details>
+        <summary>Q. どれくらいの文字数がいい？</summary>
+        <p>指定がなければ <b>250〜500字</b> が無難。長すぎると言い訳っぽく見えることもあります。</p>
+      </details>
+
+      <details>
+        <summary>Q. コピペしたらバレる？</summary>
+        <p>同じ文が複数人と被ると目立つことがあります。<b>1〜2文だけ言い回しを変える</b>と自然です。</p>
+      </details>
+
+      <details>
+        <summary>Q. 反省文で絶対に書かない方がいいことは？</summary>
+        <p>「でも」「だって」などの言い訳連発、相手のせいに見える表現、事実をぼかす書き方は避けた方が無難です。</p>
+      </details>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // コピーボタン（ページ内の例文をクリップボードへ）
+    function copyText(text){
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      ta.style.top = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta);
+      return Promise.resolve();
+    }
+
+    document.querySelectorAll('button.copy').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.getAttribute('data-copy');
+        const el = document.getElementById(id);
+        const text = el ? el.innerText : '';
+        await copyText(text);
+
+        const old = btn.textContent;
+        btn.textContent = 'コピーした';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = old;
+          btn.disabled = false;
+        }, 900);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【2026年最新】Instagramのプロフィール閲覧で足跡はつく？バレる条件と対策まとめ｜今すぐ解決ノート</title>
+  <meta name="description" content="Instagramは「プロフィールを見た人の一覧（足跡）」を公式には表示しない。見えるのはストーリーズ視聴・ライブ視聴・DM既読など“相手に通知が出る行動”だけ。プロフ閲覧がバレると言われる理由、足跡が付くケース、バレないための注意点、危険な外部アプリのリスクを解説。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / Instagram</p>
+        <h1>インスタのプロフ見ただけで足跡つくと思ってる人へ。実際はどう？</h1>
+        <p class="sub">
+          結論から言うと、<strong>Instagramは「プロフィールを見た人の足跡（一覧）」を表示する公式機能はありません</strong>。<br>
+          ただし、<strong>ストーリーズを見る／DMを開く／ライブに入る</strong>などの行動は
+          相手に「見た・反応した」と分かる（=足跡が付く）ことがあります。<br>
+          「プロフ見ただけでバレる？」の真相と、バレやすい行動を整理します。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：プロフ閲覧だけで足跡は付かない</a></li>
+            <li><a href="#why">「バレる」と言われる理由</a></li>
+            <li><a href="#leave">足跡が付く行動（バレるのはこっち）</a></li>
+            <li><a href="#safe">バレたくない時の注意点</a></li>
+            <li><a href="#apps">「足跡アプリ」系は危険</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>最重要：</strong>プロフ閲覧は基本バレない。<br>
+            でも、<strong>ストーリーズ視聴 / ライブ視聴 / いいね / フォロー / DM既読</strong>は足跡になりやすい。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：プロフ閲覧だけで足跡は付かない</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">プロフィールを見ただけで「相手に通知が飛ぶ」ことは基本ない</span></div>
+        <p class="muted" style="margin:0;">
+          Instagramには、プロフィールを見た人の名前が出る「訪問者リスト」や「足跡一覧」はありません。
+          プロアカウントのインサイトでも、分かるのは<strong>訪問数などの“数字”</strong>が中心です。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">ただし：バレるのは「プロフ」ではなく“行動”</span></div>
+        <p class="muted" style="margin:0;">
+          プロフを見た後に、ストーリーズを見たり、いいね・フォロー・DMを送ったりすると、
+          そこで足跡が付いて「見に来たのがバレた」ように感じます。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="why">
+      <h2>「バレる」と言われる理由</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">理由①：ストーリーズを見てしまう</h3>
+          <p class="muted" style="margin:0;">
+            ストーリーズは閲覧者リストが出るので、見た瞬間に名前が残ります。
+            「プロフ見ただけのはずなのに…」は、だいたいこれ。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">理由②：うっかり「いいね」やフォロー</h3>
+          <p class="muted" style="margin:0;">
+            指が当たって「いいね」→通知、フォロー→通知。
+            これも“足跡”として一番多いパターンです。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">理由③：外部の「足跡アプリ」を信じてる</h3>
+          <p class="muted" style="margin:0;">
+            「誰が見たか分かる」とうたうアプリやサイトが出回っていますが、
+            公式の仕組みではありません。危険なので後述します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="leave">
+      <h2>足跡が付く行動（バレるのはこっち）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge warn">ストーリーズを見る</span></div>
+          <p class="muted" style="margin:0;">
+            閲覧者リストに表示されます。こっそり見たい時は要注意。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">ライブ配信を見る</span></div>
+          <p class="muted" style="margin:0;">
+            視聴中に名前が表示されることがあります（仕様や画面は変わることあり）。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">DMを開く（既読）</span></div>
+          <p class="muted" style="margin:0;">
+            既読表示が出るタイプのDMは、開封が相手に伝わります。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">いいね・コメント・フォロー</span></div>
+          <p class="muted" style="margin:0;">
+            通知が飛ぶのでほぼ確実にバレます。誤タップ注意。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">ストーリーズにリアクション/投票/質問</span></div>
+          <p class="muted" style="margin:0;">
+            反応した時点で相手に届きます（DM扱いになることも）。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge ok">プロフを見るだけ</span></div>
+          <p class="muted" style="margin:0;">
+            これだけなら足跡は基本つきません。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「プロフを見たのがバレた」体験のほとんどは、<strong>ストーリーを見た／反応した／誤タップ</strong>が原因です。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="safe">
+      <h2>バレたくない時の注意点</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">チェックリスト</span></div>
+        <ul>
+          <li>ストーリーズは見ない（閲覧者リストに出る）</li>
+          <li>誤タップ防止：スクロール中に投稿へ触れない（特に古い投稿）</li>
+          <li>いいね・フォローは慎重に（通知が残る）</li>
+          <li>DMは既読になる前に開かない（通知される可能性）</li>
+          <li>怪しいリンクや外部ログイン画面には入力しない（乗っ取り対策）</li>
+        </ul>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">「見るだけ」なら基本OK</h3>
+          <p class="muted" style="margin:0;">
+            プロフ閲覧は足跡になりません。安全なのは“触らないこと”です。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">不安なら「別アカ」運用は慎重に</h3>
+          <p class="muted" style="margin:0;">
+            別アカでも、ストーリーズを見れば足跡は残ります。
+            そして乗っ取り・凍結リスクを上げる操作はしないのが無難です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="apps">
+      <h2>「足跡アプリ」系は危険</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge danger">結論：入れない・ログインしない</span></div>
+        <p class="muted" style="margin:0;">
+          「誰がプロフィールを見たか分かる」と言うアプリ/サイトは要注意です。
+          公式で提供されていない情報を“正確に”出すのは難しく、<strong>アカウント乗っ取り・情報抜き取り</strong>のリスクがあります。<br>
+          特に「Instagramでログインしてください」「パスワードを入力」系は危険です。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">よくある危険サイン</span></div>
+        <ul>
+          <li>外部サイトでInstagramのID/パスワード入力を求める</li>
+          <li>「足跡が100%分かる」と断言している</li>
+          <li>広告が異常に多い／課金に誘導する</li>
+          <li>レビューが不自然に高い</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ビジネスアカウントなら“誰が見たか”分かる？</h3>
+        <p class="muted" style="margin:0;">
+          分かるのは基本<strong>数（プロフィールアクセス数など）</strong>です。
+          「誰が見たか」を名前で一覧表示する公式機能はありません。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. ストーリーズを見たのにバレない方法は？</h3>
+        <p class="muted" style="margin:0;">
+          ストーリーズは閲覧者が分かる設計です。バレたくないなら見ないのが一番安全です。
+          外部ツールでの回避は、乗っ取りや凍結のリスクが上がるのでおすすめしません。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 「ストーリーの閲覧順」でプロフ見た人が分かるって本当？</h3>
+        <p class="muted" style="margin:0;">
+          閲覧順は“相互の関わり”など複数要素で変わると言われます。
+          「上にいる＝プロフ見てる」と断定できるものではありません。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

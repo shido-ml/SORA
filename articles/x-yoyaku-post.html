@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xの予約投稿（スケジュール投稿）のやり方｜今すぐ解決ノート</title>
+  <meta name="description" content="X（旧Twitter）の予約投稿（スケジュール投稿）を、X Pro（旧TweetDeck）で確実に設定する手順。予約一覧の確認・編集、出てこない時の対処も。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / X</p>
+        <h1>Xの予約投稿（スケジュール投稿）のやり方</h1>
+        <p class="sub">
+          いちばん確実なのは <strong>X Pro（旧TweetDeck）</strong> を使う方法。<br/>
+          ここでは「設定 → 予約一覧の確認 → 編集/削除」まで、迷わない順でまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <div class="toc-title">目次</div>
+          <ul>
+            <li><a href="#prepare">まず確認（できる方法は3つ）</a></li>
+            <li><a href="#xpro">方法1：X Proで予約投稿する（おすすめ）</a></li>
+            <li><a href="#list">予約した投稿の確認・編集・削除</a></li>
+            <li><a href="#tips">失敗しないコツ（時間・リンク・画像）</a></li>
+            <li><a href="#notfound">「Schedule post」が出ない/押せない時</a></li>
+            <li><a href="#alt">方法2/3：広告管理・外部ツール</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="prepare">
+      <h2>まず確認（できる方法は3つ）</h2>
+      <p>Xの「予約投稿」は、利用環境によって入口が違います。</p>
+      <ul>
+        <li><strong>方法1：X Pro（旧TweetDeck）</strong> … 一般ユーザーでも使いやすい。予約一覧の管理もしやすい。</li>
+        <li><strong>方法2：X広告（ads.x.com）</strong> … 広告クリエイティブ管理から「Scheduled Posts」を扱う流れ。</li>
+        <li><strong>方法3：外部ツール</strong> … Buffer / Hootsuite など。チーム運用や分析が必要なとき向け。</li>
+      </ul>
+
+      <div class="callout">
+        <p class="muted">
+          この記事は<strong>方法1（X Pro）</strong>を中心に解説します。いちばん「迷いにくい」からです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="xpro">
+      <h2>方法1：X Proで予約投稿する（おすすめ）</h2>
+      <p class="muted">PCブラウザで進めるのがラクです（スマホでも可能な場合がありますが、表示が違うことがあります）。</p>
+
+      <ol>
+        <li><strong>X Proを開く</strong><br/>
+          ブラウザで <strong>tweetdeck.x.com</strong> を開いて、Xアカウントでログインします。
+        </li>
+        <li><strong>左のバー上部の「post（ポスト）」</strong> をクリック。</li>
+        <li><strong>投稿するアカウント</strong> を選択（複数ある場合）。</li>
+        <li>本文を入力して、必要なら<strong>画像/動画</strong>も追加。</li>
+        <li><strong>「Schedule post（ポストを予約投稿）」</strong> をクリックして、日時を選びます。</li>
+        <li>最後に <strong>「post at [date/time]」</strong> を押して予約完了。</li>
+      </ol>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">ポイント</span> <span class="muted">予約投稿は「公開されるまで見えない」</span></div>
+        <div class="grid">
+          <div><p class="muted"><strong>投稿日時</strong><br/>「何時に出すか」だけ決めればOK。まずは1本試すのが早い。</p></div>
+          <div><p class="muted"><strong>アカウント選択</strong><br/>複数アカウント運用だと、ここで間違えがち。</p></div>
+          <div><p class="muted"><strong>最終ボタン</strong><br/>「Post」ではなく「post at date/time」になってるか確認。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="list">
+      <h2>予約した投稿の確認・編集・削除</h2>
+      <p>予約を入れたら、ちゃんと入ってるか確認しましょう。</p>
+
+      <h3 style="margin-top:16px;">① 予約一覧を見る（Scheduledコラム）</h3>
+      <ol>
+        <li>左のナビで <strong>＋（Add column）</strong> をクリック。</li>
+        <li>コラム種類の中から <strong>Scheduled（予定投稿）</strong> を追加。</li>
+        <li>そこに<strong>予約投稿が一覧</strong>で出ます。</li>
+      </ol>
+
+      <h3 style="margin-top:16px;">② 編集/削除</h3>
+      <ul>
+        <li>Scheduledコラム内の投稿から、<strong>編集</strong>や<strong>削除</strong>ができます（表示項目はUI更新で変わることがあります）。</li>
+        <li>チーム/企業環境で共有している場合、同じアカウントを共有している人が予約投稿を見られることがあります。</li>
+      </ul>
+
+      <div class="callout">
+        <p class="muted">
+          予約が「消えた」ように見える時は、Scheduledコラムを見てください。通常のタイムラインには出ません。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>失敗しないコツ（時間・リンク・画像）</h2>
+      <ul>
+        <li><strong>時間帯</strong>：フォロワーが多い時間に合わせる（夜・通学通勤帯など）。まずは「いつもより少し良い時間」でOK。</li>
+        <li><strong>リンクのプレビュー</strong>：URLを入れたら、プレビューが出るか確認してから予約（出ない時はリンク先側の問題のことも）。</li>
+        <li><strong>画像/動画</strong>：アップロードが終わったのを確認してから予約（回線が弱いと失敗しやすい）。</li>
+        <li><strong>誤字チェック</strong>：予約して安心→誤字に気づきがち。送る前に「声に出して読む」のが速い。</li>
+        <li><strong>時差</strong>：予約時刻は、基本「あなたの環境のタイムゾーン」で表示されます。海外向けなら注意。</li>
+      </ul>
+    </section>
+
+    <section class="card" id="notfound">
+      <h2>「Schedule post」が出ない/押せない時</h2>
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">よくある原因</h3>
+          <ul>
+            <li>X Proではなく、通常のX画面を見ている</li>
+            <li>一時的な不具合（ログアウト→再ログインで直ることあり）</li>
+            <li>ブラウザ拡張（広告ブロック等）でUIが崩れている</li>
+            <li>アカウント制限や権限（共有/チーム運用）</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">この順で試す</h3>
+          <ol>
+            <li>tweetdeck.x.com を開き直す</li>
+            <li>別ブラウザ or シークレットで試す</li>
+            <li>拡張機能を一時OFF</li>
+            <li>Scheduledコラムが追加できるか確認</li>
+          </ol>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">最終手段</h3>
+          <p class="muted">どうしてもダメなら、方法2（ads.x.com）や外部ツールで代替できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="alt">
+      <h2>方法2/3：広告管理・外部ツール（補足）</h2>
+
+      <h3 style="margin-top:0;">方法2：ads.x.com（広告管理）</h3>
+      <p class="muted">
+        X広告の画面（ads.x.com）では、Creatives → Posts で <strong>Scheduled Posts</strong> を表示・管理できる案内があります。
+        広告運用をしている/する予定がある人向けです。
+      </p>
+
+      <h3>方法3：外部ツール</h3>
+      <p class="muted">
+        チームでの承認フロー、予約カレンダー、分析などが必要なら外部ツールが便利です。
+        ただし、連携アプリに権限を渡すので、信頼できるサービスに絞るのがおすすめです。
+      </p>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

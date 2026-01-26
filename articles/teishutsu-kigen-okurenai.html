@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>提出期限に間に合わない時の謝罪文テンプレ｜今すぐ解決ノート</title>
+  <meta name="description" content="提出に遅れそう/遅れた時にそのまま送れる例文を状況別に。理由の書き方、延長お願い、遅延後のフォロー、NG例までまとめ。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 学校 / 文章</p>
+        <h1>提出期限に間に合わない時の謝罪文テンプレ</h1>
+        <p class="sub">
+          「遅れそう」「もう遅れた」どっちもOK。コピペで使える例文＋失礼になりにくい型をまとめました。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#quick">まずコピペ（最短）</a></li>
+            <li><a href="#ask">期限延長をお願いする例文</a></li>
+            <li><a href="#late">すでに遅れた時（提出済みの謝罪）</a></li>
+            <li><a href="#reason">理由の書き方（言い方・NG）</a></li>
+            <li><a href="#structure">失礼になりにくい文章の型</a></li>
+            <li><a href="#templates">状況別テンプレ集</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>結論：</strong>「①お詫び → ②状況（短く） → ③いつ出せるか → ④対応（添付/提出方法） → ⑤再度お詫び」の順に書くと安定です。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="quick">
+      <h2>まずコピペ（最短）</h2>
+
+      <p class="muted">時間がないときはこれだけでOK。必要なら【】の中だけ差し替え。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">先生に送る（LINE/Teams）</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】の提出が期限に間に合いません。申し訳ありません。
+【いつ】までに提出します。提出方法は【提出先/方法】で問題ないでしょうか。
+ご迷惑をおかけしてすみません。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">メール（件名あり）</span></div>
+        <pre class="pre">件名：【提出遅れ】（【クラス・名前】）【提出物名】
+
+【先生のお名前】先生
+
+お疲れさまです。【クラス・名前】です。
+【提出物名】の提出が期限に間に合わず、申し訳ありません。
+
+【いつ】までに提出いたします。
+提出方法は【提出先/方法】で問題ないでしょうか。
+
+お手数をおかけしますが、よろしくお願いいたします。</pre>
+      </div>
+
+      <div class="grid" style="margin-top:14px;">
+        <div class="box">
+          <div class="label"><span class="badge warn">ポイント</span></div>
+          <ul>
+            <li>「すみません」より<strong>「申し訳ありません」</strong>が丁寧</li>
+            <li>理由は長く書かない（言い訳に見えやすい）</li>
+            <li><strong>提出できる日時</strong>を必ず入れる</li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="label"><span class="badge ok">今すぐできる行動</span></div>
+          <ul>
+            <li>できている部分だけでも提出（途中でもOKか確認）</li>
+            <li>「いつ出せるか」を先に決めて連絡</li>
+            <li>提出先（紙/Teams/Google Classroomなど）を明記</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="ask">
+      <h2>期限延長をお願いする例文</h2>
+      <p class="muted">「間に合わない → いつなら出せる」をセットで。延長だけお願いすると印象が悪くなりやすいです。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">延長をお願い（丁寧）</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】が期限に間に合いません。申し訳ありません。
+
+【理由（短く）】のため、【いつ】まで延長していただくことは可能でしょうか。
+【いつ】までには必ず提出します。ご検討いただけると助かります。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">延長がダメでも出す意思を見せる</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】が期限に間に合いません。申し訳ありません。
+
+もし延長が難しければ、できている範囲を【今日/明日】先に提出します。
+提出のしかたは【提出先/方法】でよいか、教えていただけますか。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="late">
+      <h2>すでに遅れた時（提出済みの謝罪）</h2>
+      <p class="muted">「遅れた」場合は、まず提出 → その後に短くお詫びが一番ラクです。</p>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">提出と同時に送る</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】を提出しました。期限を過ぎてしまい申し訳ありません。
+今後は余裕をもって取り組みます。確認よろしくお願いいたします。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">遅れが大きい時（丁寧）</span></div>
+        <pre class="pre">【先生のお名前】先生
+
+お疲れさまです。【クラス・名前】です。
+【提出物名】の提出が【◯日】遅れてしまい、申し訳ありません。
+
+本日提出いたしました。以後このようなことがないよう、スケジュール管理を見直します。
+お忙しいところ恐れ入りますが、確認よろしくお願いいたします。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="reason">
+      <h2>理由の書き方（言い方・NG）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <div class="label"><span class="badge ok">理由は「短く・事実だけ」</span></div>
+          <ul>
+            <li>体調不良</li>
+            <li>家庭の事情</li>
+            <li>機器トラブル（PC故障・データ破損）</li>
+            <li>部活動/学校行事が重なった（※言い訳に見えやすいので短く）</li>
+          </ul>
+          <p class="muted" style="margin:10px 0 0;">
+            具体的に書ける場合は「○時まで復旧予定」「今は△△まで完了」など<strong>状況</strong>を入れると信用されやすいです。
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="label"><span class="badge warn">NGになりやすい言い方</span></div>
+          <ul>
+            <li>「忘れてました」だけ（反省が見えない）</li>
+            <li>「忙しくて無理でした」だけ（期限を軽く見てる印象）</li>
+            <li>長い言い訳（読む側がしんどい）</li>
+            <li>相手のせいに聞こえる（「課題多すぎ」など）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="structure">
+      <h2>失礼になりにくい文章の型</h2>
+      <p class="muted">迷ったらこの順で書くとほぼ事故りません。</p>
+
+      <div class="box">
+        <ol style="margin:0; padding-left: 18px;">
+          <li><strong>名乗る</strong>（クラス・名前）</li>
+          <li><strong>要件</strong>（提出が間に合わない/遅れた）</li>
+          <li><strong>お詫び</strong>（申し訳ありません）</li>
+          <li><strong>状況</strong>（理由は短く）</li>
+          <li><strong>いつ出せるか</strong>（日時）</li>
+          <li><strong>提出方法の確認</strong>（提出先/添付/紙）</li>
+          <li><strong>締め</strong>（よろしくお願いします）</li>
+        </ol>
+      </div>
+
+      <div class="box" style="margin-top:12px;">
+        <div class="label"><span class="badge ok">例（型どおり）</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】の提出が期限に間に合いません。申し訳ありません。
+【理由（短く）】のため、【いつ】までに提出します。
+提出方法は【提出先/方法】で問題ないでしょうか。
+ご迷惑をおかけしてすみません。よろしくお願いいたします。</pre>
+      </div>
+    </section>
+
+    <section class="card" id="templates">
+      <h2>状況別テンプレ集</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">① 体調不良</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+体調不良のため、【提出物名】が期限に間に合いません。申し訳ありません。
+回復次第、【いつ】までに提出します。提出方法は【提出先/方法】でよいでしょうか。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">② 家庭の事情（ぼかしてOK）</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+家庭の事情で対応が遅れ、【提出物名】が期限に間に合いません。申し訳ありません。
+【いつ】までに提出します。提出方法について確認させてください。【提出先/方法】で問題ないでしょうか。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">③ PC/データトラブル</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+PCトラブル（データ不具合）のため、【提出物名】の提出が遅れます。申し訳ありません。
+現在復旧対応中で、【いつ】までに提出します。途中までのデータ提出が必要なら、すぐ送ります。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">④ 忘れていた（正直＋短く）</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+【提出物名】の提出を失念しており、期限を過ぎてしまいました。申し訳ありません。
+本日【何時】までに提出します。今後は期限管理を徹底します。確認よろしくお願いいたします。</pre>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">⑤ グループ課題で自分が遅れた</span></div>
+        <pre class="pre">先生、お疲れさまです。【クラス・名前】です。
+グループ課題の【担当部分】が遅れており、全体提出が間に合わない可能性があります。申し訳ありません。
+私の担当分は【いつ】までに必ず仕上げて共有します。必要なら、現時点の進捗も提出します。</pre>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          <strong>ワンポイント：</strong>「遅れます」だけで終わらず、<strong>具体的な提出日時</strong>と<strong>提出方法</strong>まで書くと、相手が返しやすいです。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

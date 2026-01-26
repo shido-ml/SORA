@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xでアカウントが凍結される原因と解除の流れ（異議申し立て）｜今すぐ解決ノート</title>
+  <meta name="description" content="X（旧Twitter）の『凍結』『ロック』『一時的制限』の違い、凍結されやすい原因、解除（異議申し立て）の手順、フォームが開かない時の対処、再凍結を防ぐコツまで。" />
+  <style>
+
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / X</p>
+        <h1>Xでアカウントが凍結される原因と解除の流れ</h1>
+        <p class="sub">
+          Xで急に<strong>「凍結（suspended）」</strong>や<strong>「ロック（locked）」</strong>が出ると焦ります。<br/>
+          でも多くは<strong>原因の見分け → 正しい手順</strong>で対応できます。迷わない順にまとめました。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <div class="toc-title">目次</div>
+          <ul>
+            <li><a href="#types">まず確認：凍結 / ロック / 一時的制限の違い</a></li>
+            <li><a href="#check">最初にやること（通知・メール・ログイン画面）</a></li>
+            <li><a href="#reasons">凍結されやすい主な原因</a></li>
+            <li><a href="#unlock">ロックの解除手順（本人確認）</a></li>
+            <li><a href="#appeal">凍結の解除手順（異議申し立て）</a></li>
+            <li><a href="#template">異議申し立て文のテンプレ（コピペOK）</a></li>
+            <li><a href="#trouble">うまくいかない時の対処（フォームが開かない等）</a></li>
+            <li><a href="#after">解除後にやること（再発防止）</a></li>
+            <li><a href="#qa">よくある質問</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="types">
+      <h2>まず確認：凍結 / ロック / 一時的制限の違い</h2>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">凍結（Suspended）</h3>
+          <p class="muted">
+            ルール違反の疑いで<strong>アカウント自体が止まっている</strong>状態。
+            ログインできても投稿できない/見えない等。
+          </p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">ロック（Locked）</h3>
+          <p class="muted">
+            セキュリティ上の理由で<strong>一時的に操作を止められている</strong>状態。
+            電話番号・メール・CAPTCHA等で解除できることが多いです。
+          </p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">一時的制限</h3>
+          <p class="muted">
+            「いいね/フォロー/DMができない」など<strong>一部機能だけ制限</strong>される状態。
+            連打や短時間の大量操作で起きやすいです。
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">結論</span> <span class="muted">まず「凍結」か「ロック」かを判定</span></div>
+        <p class="muted">画面の文言（Suspended / Locked）と、Xから来たメールの内容で、取るべき手順が変わります。</p>
+      </div>
+    </section>
+
+    <section class="card" id="check">
+      <h2>最初にやること（通知・メール・ログイン画面）</h2>
+      <ol>
+        <li><strong>Xからのメール</strong>を確認（迷惑メールも）。理由や次の手順が書かれていることがあります。</li>
+        <li><strong>ログインして表示される案内</strong>を読む（電話番号認証や確認が出る場合あり）。</li>
+        <li>第三者アプリ連携や不審ログインが心配なら、可能なら<strong>パスワード変更</strong>と<strong>2段階認証</strong>を検討。</li>
+      </ol>
+
+      <div class="callout">
+        <p class="muted"><strong>注意：</strong>「凍結解除できます」系のDMや外部サイトは詐欺が多いです。<strong>パスワードを入力させる</strong>タイプは特に危険。</p>
+      </div>
+    </section>
+
+    <section class="card" id="reasons">
+      <h2>凍結されやすい主な原因</h2>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">スパムっぽい動き</h3>
+          <ul>
+            <li>短時間で大量フォロー/大量解除</li>
+            <li>同じ文面を連投・コピペ返信の連打</li>
+            <li>外部リンクばかり投稿</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">自動化/ツールの使い方</h3>
+          <ul>
+            <li>怪しい自動フォロー・自動いいね</li>
+            <li>非公式クライアント/連携アプリの乱用</li>
+            <li>複数アカで同時に同じ操作</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">ルール違反の可能性</h3>
+          <ul>
+            <li>なりすまし・偽装</li>
+            <li>嫌がらせ/脅し/個人情報の晒し</li>
+            <li>暴力的・差別的表現など（Xのルールに抵触）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">ポイント</span> <span class="muted">「心当たりがない」時ほど“操作の速さ”を疑う</span></div>
+        <p class="muted">
+          ルール違反の自覚がなくても、短時間の大量操作（フォロー・リプ・DMなど）がスパム判定されることがあります。
+          まずは<strong>直前に何をしたか</strong>を思い出しておくと、異議申し立てが書きやすいです。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="unlock">
+      <h2>ロックの解除手順（本人確認）</h2>
+      <p class="muted">ロックの場合は、画面に表示される案内どおりに進めるのが最短です。</p>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">よくある解除方法</h3>
+          <ul>
+            <li>電話番号 or メールの認証</li>
+            <li>CAPTCHA（私はロボットではありません）</li>
+            <li>パスワード再設定</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">失敗しやすい原因</h3>
+          <ul>
+            <li>古いメール/電話番号のまま</li>
+            <li>SMSが届かない（圏外/制限）</li>
+            <li>アプリが古い/通信不安定</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">先に試すこと</h3>
+          <ul>
+            <li>アプリ更新 → 再起動</li>
+            <li>Wi‑Fi/モバイル回線切替</li>
+            <li>別ブラウザ/別端末でログイン</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="appeal">
+      <h2>凍結の解除手順（異議申し立て）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">流れ</span> <span class="muted">まずは「画面の指示」→ダメなら「異議申し立て」</span></div>
+        <ol>
+          <li>凍結されたアカウントで<strong>ログイン</strong>して、表示される案内（本人確認/認証など）があれば完了します。</li>
+          <li>それでも凍結のまま、または心当たりが薄いなら、<strong>異議申し立て（Appeal）</strong>を行います。</li>
+          <li>異議申し立て後は、<strong>返信を待つ</strong>（繰り返し送ると逆効果になる場合があります）。</li>
+        </ol>
+      </div>
+
+      <h3 style="margin:18px 0 8px;">異議申し立てのコツ</h3>
+      <ul>
+        <li><strong>短く丁寧</strong>に：状況、心当たり、今後の対応（ルール遵守）を簡潔に。</li>
+        <li>心当たりがあるなら、<strong>どの行動が原因かもしれない</strong>を正直に書く。</li>
+        <li>不正ログインが疑いなら、<strong>乗っ取り対策（パスワード変更/連携解除）</strong>も記載。</li>
+      </ul>
+
+      <div class="callout">
+        <p class="muted"><strong>フォームが開かない場合：</strong>異議申し立てフォームはブラウザによって開けないことがあります。<strong>別ブラウザ（Chrome/Safari）</strong>や<strong>PC</strong>でも試してください。</p>
+      </div>
+    </section>
+
+    <section class="card" id="template">
+      <h2>異議申し立て文のテンプレ（コピペOK）</h2>
+      <p class="muted">そのまま貼ってOK。必要な所だけ自分の状況に合わせて直してください。</p>
+
+      <div class="example">
+        <div class="ex-head">
+          <strong>テンプレ</strong>
+          <button class="copy" type="button" data-copy="appealTpl">コピー</button>
+        </div>
+        <pre id="appealTpl"><code>件名：アカウント凍結の異議申し立て
+
+アカウント：@（ユーザー名）
+登録メール： （登録しているメール）
+
+Xのルールに反する意図はなく利用していましたが、アカウントが凍結されました。
+もし私の操作（例：短時間でのフォロー/投稿/返信など）がスパム判定につながった可能性があれば、今後は頻度を下げ、ルールを守って利用します。
+
+心当たりがないため、誤判定の可能性も含めて確認をお願いします。
+不正ログインの可能性も考え、パスワード変更などの対策も行います。
+
+解除の可否と、必要な追加対応があれば教えてください。よろしくお願いします。</code></pre>
+      </div>
+    </section>
+
+    <section class="card" id="trouble">
+      <h2>うまくいかない時の対処（フォームが開かない等）</h2>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">異議申し立てフォームが開かない</h3>
+          <p class="muted">別ブラウザ（Safari/Chrome）・PCで試す。広告ブロックやコンテンツブロッカーを一時OFFにすると開く場合があります。</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">ログインできない</h3>
+          <p class="muted">パスワード再設定を先に。メール/電話番号が古いと詰みやすいので、まず登録情報にアクセスできるか確認。</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">返信が来ない</h3>
+          <p class="muted">混雑で時間がかかることがあります。短時間で何度も送るより、内容を整えて1回の方が安全です。</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">注意</span> <span class="muted">「代行」や「解除ツール」に注意</span></div>
+        <p class="muted">凍結解除をうたう外部サービスは、乗っ取りや詐欺が多いです。公式がパスワードを要求することは基本ありません。</p>
+      </div>
+    </section>
+
+    <section class="card" id="after">
+      <h2>解除後にやること（再発防止）</h2>
+      <ol>
+        <li><strong>パスワード変更</strong>（使い回しなら特に）。</li>
+        <li>連携アプリを見直し（怪しいものは<strong>連携解除</strong>）。</li>
+        <li>2段階認証を設定（可能なら<strong>認証アプリ</strong>）。</li>
+        <li>しばらくはフォロー/DM/投稿の頻度を抑えて、通常運用に戻す。</li>
+      </ol>
+
+      <div class="grid">
+        <div>
+          <h3 style="margin:0 0 8px;">やりがちNG</h3>
+          <ul>
+            <li>解除直後に大量フォロー</li>
+            <li>同じ文面の連投</li>
+            <li>自動化ツールを再開</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">安全運用</h3>
+          <ul>
+            <li>操作はゆっくり/分散</li>
+            <li>返信はコピペ連打を避ける</li>
+            <li>怪しいDMリンクは踏まない</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px;">関連チェック</h3>
+          <ul>
+            <li>シャドウバンの有無</li>
+            <li>ログイン履歴</li>
+            <li>メールのセキュリティ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="qa">
+      <h2>よくある質問</h2>
+
+      <h3 style="margin:0 0 8px;">Q. 「凍結」と「一時停止」は違う？</h3>
+      <p class="muted">別物です。一時停止（無効化）は自分で行う機能で、30日以内ならログインで復活できます。凍結はルール/安全面の対応で、解除には認証や異議申し立てが必要なことがあります。</p>
+
+      <h3 style="margin:16px 0 8px;">Q. どれくらいで解除される？</h3>
+      <p class="muted">状況により差があります。すぐ直る場合も、調査で時間がかかる場合もあります。</p>
+
+      <h3 style="margin:16px 0 8px;">Q. 新しいアカウント作ってもいい？</h3>
+      <p class="muted">凍結理由によっては、回避行為と見なされる可能性があります。まずは正規ルート（認証/異議申し立て）を優先してください。</p>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+        <li><a href="sensei-line-renraku-ok-ng.html">先生にLINEしてもいい？連絡していい内容・ダメな内容</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // クリップボード（記事内のコピーボタン）
+    for (const btn of document.querySelectorAll('.copy')) {
+      btn.addEventListener('click', async () => {
+        const id = btn.getAttribute('data-copy');
+        const el = document.getElementById(id);
+        if (!el) return;
+        const text = el.innerText;
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.textContent = "コピー済み";
+          setTimeout(()=>btn.textContent="コピー", 1200);
+        } catch (e) {
+          btn.textContent = "失敗";
+          setTimeout(()=>btn.textContent="コピー", 1200);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

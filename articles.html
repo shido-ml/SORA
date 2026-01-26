@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>記事一覧｜今すぐ解決ノート</title>
+  <meta name="description" content="今すぐ解決ノートの記事一覧（新しい順）。" />
+  <style>
+    :root{
+      --bg:#FFFFFF;
+      --text:#333333;
+      --muted:#5c5c5c;
+      --line:#E8E8E8;
+      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
+      --shadow: 0 10px 24px rgba(11,42,74,.10);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.75;
+      letter-spacing:.01em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:2px solid var(--navy);
+      border-radius:10px;
+      z-index:9999;
+      box-shadow: var(--shadow);
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Nav ===== */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:var(--navy);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border-radius:7px;
+      background:#fff;
+      opacity:.12;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      letter-spacing:0;
+      margin-top:2px;
+      font-size:12px;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .menu a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Sections ===== */
+    section{ padding:72px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    .section-lead{
+      margin:0;
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    /* ===== Hero ===== */
+    .hero{ padding:64px 0 72px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--navy);
+      background:rgba(11,42,74,.04);
+      font-weight:700;
+      font-size:12.5px;
+      letter-spacing:.03em;
+    }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 60ch;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--navy);
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.02em;
+      box-shadow: 0 10px 24px rgba(11,42,74,.18);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(11,42,74,.22);
+    }
+    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
+
+    .btn-ghost{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:800;
+    }
+    .btn-ghost:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+    }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .mini-title{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--navy);
+      text-transform: uppercase;
+    }
+    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
+    .mini-list li{ margin:8px 0; color:var(--muted); }
+    .mini-list b{ color:var(--text); }
+
+    /* ===== Cards / grids ===== */
+    .grid-cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 12px;
+      background:rgba(11,42,74,.08);
+      border:1px solid rgba(11,42,74,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      font-weight:900;
+      margin-bottom:12px;
+      user-select:none;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
+    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* ===== New posts ===== */
+    .post-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+    }
+    .post-meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--navy);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.03em;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .post-title{
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .post-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* ===== Profile table ===== */
+    .table-wrap{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
+    th, td{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    th{
+      width: 220px;
+      text-align:left;
+      color:var(--navy);
+      font-weight:800;
+      background: rgba(11,42,74,.03);
+    }
+    tr:last-child th, tr:last-child td{ border-bottom:none; }
+    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
+
+    /* ===== Contact (enhanced) ===== */
+    .contact-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contact-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:20px;
+    }
+    .contact-panel h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
+    .contact-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+    .contact-list li{ margin:6px 0; }
+    .contact-kv{
+      margin-top:14px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .kv-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .kv-row b{ color:var(--text); }
+    .email-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--text);
+      font-weight:700;
+      user-select: all;
+      overflow-wrap:anywhere;
+    }
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .mini-btn:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font: inherit;
+      line-height: 1.4;
+      transition: border-color .12s ease, box-shadow .12s ease;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(11,42,74,.35);
+      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
+      outline: none;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+    .form-hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .toast{
+      display:none;
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .toast.show{ display:block; }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:var(--muted);
+      font-weight:600;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    .footer-links a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      section{ padding:60px 0; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 780px){
+      th{ width: 160px; }
+      .menu{ gap:8px; }
+      .menu a{ padding:8px 8px; }
+      .form-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ===== Focus ===== */
+    :focus-visible{
+      outline: 3px solid rgba(11,42,74,.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; }
+    }
+  
+
+    /* ===== Search ===== */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .searchbar{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .searchbar input{
+      border:0;
+      outline:0;
+      width:100%;
+      font:inherit;
+      font-size:14px;
+      background:transparent;
+      color:var(--text);
+      min-width:0;
+    }
+    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
+    .searchbar .clear{
+      border:0;
+      background:rgba(11,42,74,.06);
+      color:var(--navy);
+      font-weight:900;
+      border-radius:10px;
+      padding:7px 10px;
+      cursor:pointer;
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
+    .search-meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="index.html">← ホーム</a> <span class="muted">/</span> <a href="articles.html">記事一覧</a> <span class="muted">/</span> <a href="policy.html">運営ポリシー</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> 記事</p>
+        <h1>記事一覧</h1>
+        <p class="sub">すべての記事を新しい順に表示します。</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2 style="margin-top:0;">すべての記事</h2>
+      <form class="searchbar" id="searchForm" role="search" aria-label="記事検索">
+        <label class="sr-only" for="searchInput">記事を検索</label>
+        <input id="searchInput" type="search" placeholder="キーワードで検索（例：Safari / X / iPhone / LINE）" />
+        <button type="button" class="clear" id="clearBtn" aria-label="検索をクリア">×</button>
+      </form>
+      <p class="search-meta" id="searchMeta"></p>
+
+      <div id="postsAll" class="grid-cards" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>  // HTMLエスケープ用（XSS対策）
+  function esc(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+    const POSTS = [
+                                                                                                            {
+        title: "【保存版】スマホを水に落とした！ドライヤーが絶対ダメな理由と正しい乾かし方（iPhone/Android）",
+        desc: "スマホを水没させた直後にドライヤーはNG。熱で水が奥に入る、部品や防水シールが劣化、バッテリーが危険などの理由を解説。iPhone/Android共通の正しい応急処置（電源オフ・充電しない・SIM取り出し・自然乾燥・乾燥剤）と、やってはいけない行動、修理に持ち込む目安をまとめ。",
+        date: "2026-01-18",
+        tag: "スマホ / トラブル",
+        url: "articles/phone-water-dropped-hairdryer-danger.html"
+      },
+{
+        title: "【危険】知らない人から来たDMのURLは開くだけで危ない？理由と安全な対処（インスタ/X/LINE）",
+        desc: "知らない人から届くDMのURLは、開いただけでIP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、マルウェア誘導などのリスクがある。『開くだけで何が起きる？』を分かりやすく整理し、Instagram/X/LINE共通の安全な対処手順、見分け方、開いてしまった時の対応まで解説。",
+        date: "2026-01-17",
+        tag: "SNS・ネット / セキュリティ",
+        url: "articles/instagram-block-check-subaccount-risk.html"
+      },
+{
+        title: "【要注意】「設定をリセット」すると消えるデータ一覧｜iPhone/Android 初期化との違い",
+        desc: "スマホが重い時に「設定をリセット」すると何が消える？iPhoneの“すべての設定をリセット/ネットワーク設定をリセット/すべてのコンテンツと設定を消去”の違い、Androidの“設定のリセット/ネットワークリセット/工場出荷状態（初期化）”で消えるもの・消えないものを一覧で整理。安全にやる順番とバックアップ確認も解説。",
+        date: "2026-01-17",
+        tag: "スマホ / 設定",
+        url: "articles/reset-settings-data-loss-list.html"
+      },
+{
+        title: "【偽警告】「ウイルスに感染しました」は本物？広告ポップアップの消し方（iPhone/Android/PC）",
+        desc: "ブラウザで突然出る「ウイルスに感染しました」警告は、多くが偽の広告（スケアウェア）。本物の警告の見分け方、絶対にやってはいけない行動、iPhone/Android/PC別の消し方（タブを閉じる・履歴/サイトデータ削除・通知許可の解除・拡張機能/アプリ確認）をまとめ。",
+        date: "2026-01-17",
+        tag: "安全 / ネット",
+        url: "articles/fake-virus-alert-popup.html"
+      },
+{
+        title: "【2026年最新】LINEの送信取り消しで通知は消える？ロック画面に残る条件と対策",
+        desc: "LINEの送信取り消しをすると、通知センター/ロック画面のプッシュ通知は「消えることが多い」。ただし相手がすでに通知を見ていた・スマートウォッチに届いた・通知履歴が残る・古い環境などでは内容が残る場合も。消える/残るパターンと注意点を整理。",
+        date: "2026-01-17",
+        tag: "SNS / LINE",
+        url: "articles/line-unsend-notification-lockscreen.html"
+      },
+{
+        title: "【2026年最新】Instagramのプロフィール閲覧で足跡はつく？バレる条件と対策まとめ",
+        desc: "Instagramは「プロフィールを見た人の一覧（足跡）」を公式には表示しない。見えるのはストーリーズ視聴・ライブ視聴・DM既読など“相手に通知が出る行動”だけ。プロフ閲覧がバレると言われる理由、足跡が付くケース、バレないための注意点、危険な外部アプリのリスクを解説。",
+        date: "2026-01-17",
+        tag: "SNS / Instagram",
+        url: "articles/instagram-profile-view-footprint.html"
+      },
+{
+        title: "【学校】スマホ没収で通知の中身は見られる？電源OFFしないと危険？対策まとめ",
+        desc: "学校でスマホを没収されたとき、ロック画面の通知プレビューで内容（LINE/DM/メール）が見られる可能性はある。iPhone/Androidで「通知の表示」「プレビュー」「ロック画面」の設定次第。見える範囲と、今すぐできる対策（プレビュー非表示、Focus/おやすみ、機内モード等）を解説。",
+        date: "2026-01-17",
+        tag: "学校 / スマホ",
+        url: "articles/phone-confiscated-notification-privacy.html"
+      },
+{
+        title: "【学校Wi‑Fi】見てるサイトは先生にバレる？見える範囲と注意点（筒抜け？を解説）",
+        desc: "学校のWi‑Fiに繋ぐと、見ているサイトはどこまで見られる？HTTPSなら本文は基本見えないが、アクセス先のドメインや通信の記録はネットワーク管理側に残ることがある。先生・学校・業者が見える範囲、見えない範囲、端末管理（MDM/証明書）で変わるポイントと注意点を解説。",
+        date: "2026-01-17",
+        tag: "学校 / ネット",
+        url: "articles/school-wifi-what-can-they-see.html"
+      },
+{
+        title: "【危険】知らない人のDMリンクは開くだけでNG？理由と安全な対処（Instagram/X/LINE）",
+        desc: "知らない人から届いたDMのURLは、開いただけで個人情報が漏れたり、詐欺の罠に引っかかったりすることがある。IP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、脆弱性悪用など「開くだけ危険」の理由と、安全な対処手順をまとめ。",
+        date: "2026-01-17",
+        tag: "SNS・ネット / セキュリティ",
+        url: "articles/dm-link-danger-why.html"
+      },
+{
+        title: "【iPhone】画面ヒビ割れ放置でタッチ不良になる？使い続けた時のリスクと対処",
+        desc: "iPhoneの画面がひび割れたまま使うと、いつ操作不能になる？タッチ不良（ゴーストタッチ）、液晶/有機ELのにじみ、割れ拡大、水没リスクなどの現実的な危険と、今すぐやるべきバックアップ・応急処置・修理判断を解説。",
+        date: "2026-01-17",
+        tag: "iPhone / 修理",
+        url: "articles/iphone-cracked-screen-touch-risk.html"
+      },
+{
+        title: "【iPhone】iCloud支払い失敗で写真は消える？期限切れの影響と今すぐやる対処",
+        desc: "iCloud+の支払いが失敗/期限切れになった時、写真がすぐ消えるのかを解説。基本は即削除されないが、容量超過で同期やバックアップが止まる。詐欺メールの見分け、支払い復旧、写真を守るバックアップ手順まで。",
+        date: "2026-01-17",
+        tag: "iPhone / iCloud",
+        url: "articles/icloud-payment-failed-photos.html"
+      },
+{
+        title: "【X】ブロックしたら相手の画面でどう見える？消え方・通知・見える範囲まとめ",
+        desc: "Xでブロックした直後、相手の画面であなたがどう表示されるかを整理。プロフィール表示の「ブロックされています」画面、フォロー解除、DM不可、いいね/返信/リポスト不可、公開/鍵垢での見える範囲の違いまで。",
+        date: "2026-01-17",
+        tag: "X（Twitter） / 設定",
+        url: "articles/x-block-what-they-see.html"
+      },
+{
+        title: "Instagram投稿をアーカイブするとタグ付け相手にはどう見える？見え方・通知・戻し方",
+        desc: "Instagramの投稿をアーカイブした時、タグ付けされた相手の「タグ付け」欄にどう表示されるか（基本は見えなくなる）。通知は行く？相手の画面での見え方、戻す方法、やるべき確認を整理。",
+        date: "2026-01-17",
+        tag: "Instagram / 設定",
+        url: "articles/instagram-archive-tagged-visibility.html"
+      },
+{
+        title: "【iPhone/Safari】怪しい警告画面が消えない時の対処法｜変なサイトを開いた時の消し方",
+        desc: "iPhoneで怪しいサイトの『ウイルスに感染』『警告が消えない』などの画面が出た時に、最短で閉じる手順（Safari中心）。タップしてはいけない操作、履歴/サイトデータの削除、通知の解除、プロファイル確認まで。",
+        date: "2026-01-17",
+        tag: "Safari / セキュリティ",
+        url: "articles/safari-warning-stuck-close.html"
+      },
+{
+        title: "【iPhone】知らない番号からFaceTimeが来た時の対処法｜拒否してOK？",
+        desc: "知らない番号からFaceTimeがかかってきた時は、拒否してOK。安全な対処（ブロック/通報/設定で防ぐ）と、詐欺っぽいサイン、うっかり出た時の対処をまとめ。",
+        date: "2026-01-17",
+        tag: "iPhone / セキュリティ",
+        url: "articles/facetime-unknown-number-reject-ok.html"
+      },
+{
+        title: "インスタのストーリーを間違えて載せた！一瞬で消す方法",
+        desc: "Instagramストーリーを誤投稿した時に、最短で削除する手順（iPhone/Android共通）。削除ボタンが出ない時の対処、ハイライトから消す方法、公開範囲の応急処置まで。",
+        date: "2026-01-17",
+        tag: "Instagram / トラブル",
+        url: "articles/instagram-story-delete-fast.html"
+      },
+{
+        title: "SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）",
+        desc: "ログインできない／不正投稿／メール・電話番号が変わった等の「乗っ取り」疑いの時に、最短で被害を止める手順をまとめ。X・Instagram・LINEの共通手順と個別手順。",
+        date: "2026-01-17",
+        tag: "SNS / セキュリティ",
+        url: "articles/account-hijacked-sos.html"
+      },
+{
+        title: "Xでアカウントが凍結される原因と解除の流れ（異議申し立て）",
+        desc: "X（旧Twitter）の「凍結」「ロック」「一時的制限」の違い、凍結されやすい原因、解除（異議申し立て）の手順、フォームが開かない時の対処、再凍結を防ぐコツまで。",
+        date: "2026-01-21",
+        tag: "SNS / X",
+        url: "articles/x-account-suspended.html"
+      },
+      {
+        title: "InstagramでDMが送れない原因まとめ（iPhone/Android/PC）",
+        desc: "InstagramでDMが送れない・送信できない・エラーになる時の原因と対処法を症状別に整理。iPhone/Android/PC（Web）でのチェック手順も。",
+        date: "2026-01-20",
+        tag: "SNS / Instagram",
+        url: "articles/instagram-dm-okenai.html"
+      },
+      {
+        title: "Google Classroomに入れない時の対処法（iPhone/PC）",
+        desc: "Google Classroomにログインできない／クラスに入れない／読み込みが終わらない時の原因と直し方。iPhone・iPad・PC（Chrome）での手順をわかりやすく。",
+        date: "2026-01-20",
+        tag: "学校 / Google",
+        url: "articles/google-classroom-hairenai.html"
+      },
+      {
+        title: "先生にLINEしてもいい？連絡していい内容・ダメな内容",
+        desc: "先生にLINEしていい内容・避けるべき内容、送る時間帯の目安、失礼になりにくい書き方、コピペ例文をまとめ。学校のルールがある場合の確認ポイントも。",
+        date: "2026-01-20",
+        tag: "学校 / 文章",
+        url: "articles/sensei-line-renraku-ok-ng.html"
+      },
+      {
+        title: "Xでシャドウバンされてるか確認する方法",
+        desc: "検索に出ない/通知が伸びない時の原因がシャドウバンかどうかを、安全にチェックする手順。種類（サーチ/リプ/ゴースト等）と解除までにやることも。",
+        date: "2026-01-20",
+        tag: "SNS / X",
+        url: "articles/x-shadowban-check.html"
+      },
+      {
+        title: "Safariで「この接続ではプライバシーが保護されません」と出た時の対処",
+        desc: "Safariで「この接続ではプライバシーが保護されません」と表示された時の原因（証明書/時刻/ネットワーク/フィルタ/サイト側障害）と安全な対処手順。開いていいかの判断ポイントも。",
+        date: "2026-01-20",
+        tag: "iPhone / Safari",
+        url: "articles/safari-privacy-not-secure.html"
+      },
+      {
+        title: "iPhoneのストレージが急に増えた原因と減らし方",
+        desc: "iPhoneの容量が突然減る原因（写真/動画、Safari、LINE、iCloud写真、システムデータ等）をチェックリストで特定し、手順どおりに安全に減らす方法をまとめ。",
+        date: "2026-01-20",
+        tag: "iPhone / 生活",
+        url: "articles/iphone-storage-fueru-herasu.html"
+      },
+      {
+        title: "提出期限に間に合わない時の謝罪文テンプレ",
+        desc: "提出に遅れそう/遅れた時にそのまま送れる例文を状況別に。理由の書き方、延長お願い、遅延後のフォロー、NG例までまとめ。",
+        date: "2026-01-20",
+        tag: "学校 / 文章",
+        url: "articles/teishutsu-kigen-okurenai.html"
+      },
+      {
+        title: "部活を休む時の連絡文【LINE/メール例文・コピペOK】",
+        desc: "顧問/先輩/グループに送るテンプレを状況別に。短く失礼なく伝えるコツ、返信が来ない時の追いLINEも。",
+        date: "2026-01-19",
+        tag: "学校 / 文章",
+        url: "articles/club-absence-message.html"
+      },
+      {
+        title: "Instagramでリンクをプロフィールに貼る方法（複数OK・できない時の対処）",
+        desc: "プロフィールの『リンク』から追加する手順を画像なしでも迷わない順で。貼れない/押せない時の原因も。",
+        date: "2026-01-18",
+        tag: "SNS / Instagram",
+        url: "articles/instagram-profile-link.html"
+      },
+      {
+        title: "Xでアカウントを一時停止・解除する方法（30日以内に復活）",
+        desc: "一時停止の手順（iPhone/Android/PC）と、解除（再開）する方法。30日ルールや注意点もまとめて解説。",
+        date: "2026-01-18",
+        tag: "SNS / X",
+        url: "articles/x-account-deactivate.html"
+      },
+      {
+        title: "Safariでキャッシュを削除する方法（iPhone/iPad）",
+        desc: "表示崩れ・ログイン不具合・重い時に効く。キャッシュとCookieの違い、消す範囲の選び方も。",
+        date: "2026-01-17",
+        tag: "スマホ / Safari",
+        url: "articles/safari-cache-clear.html"
+      },
+      {
+        title: "Xの予約投稿（スケジュール投稿）のやり方｜X Proで確実に設定する",
+        desc: "X Pro（旧TweetDeck）で予約投稿する手順、予約一覧の確認・編集、出てこない時の対処まで。",
+        date: "2026-01-16",
+        tag: "SNS / X",
+        url: "articles/x-yoyaku-post.html"
+      },
+      {
+        title: "Safariでサイトをホーム画面に追加する方法（iPhone/iPad）",
+        desc: "よく見るサイトをワンタップで開けるようにする手順。出てこない時のチェックも。",
+        date: "2026-01-15",
+        tag: "スマホ / Safari",
+        url: "articles/safari-home-screen.html"
+      },
+      {
+        title: "反省文ってどう書けばいい？【例文あり・そのまま使える】",
+        desc: "反省文の“型”と、スマホ・提出物・遅刻などの例文をまとめました（コピペOK・言い換え推奨）。",
+        date: "2026-01-14",
+        tag: "学校 / 文章",
+        url: "articles/hanseibun.html"
+      }
+    ];
+
+    const sorted = [...POSTS].sort((a,b) => (b.date || "").localeCompare(a.date || ""));
+    const postsAllEl = document.getElementById("postsAll");
+
+    const input = document.getElementById("searchInput");
+    const metaEl = document.getElementById("searchMeta");
+    const clearBtn = document.getElementById("clearBtn");
+
+    // --- Better search (relevance + Japanese-friendly normalization) ---
+    const normalizeText = (s) => (s || "")
+      .toString()
+      .toLowerCase()
+      .normalize("NFKC")
+      .replace(/[’'"]/g, "")
+      .replace(/[‐‑‒–—―]/g, "-")
+      // keep: alnum/_/-, spaces, kana, kanji
+      .replace(/[^\w\u3040-\u30ff\u3400-\u9fff\s-]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const isAsciiWord = (t) => /^[a-z0-9_-]+$/i.test(t || "");
+
+    const toHiragana = (s) => (s || "").replace(/[\u30a1-\u30f6]/g, ch =>
+      String.fromCharCode(ch.charCodeAt(0) - 0x60)
+    );
+    const toKatakana = (s) => (s || "").replace(/[\u3041-\u3096]/g, ch =>
+      String.fromCharCode(ch.charCodeAt(0) + 0x60)
+    );
+
+    const expandQuery = (q) => {
+      let s = (q || "").toString();
+      // よくある言い方ゆれ（最低限）
+      const rules = [
+        [/twitter/gi, "x"],
+        [/ツイッター/g, "x"],
+        [/インスタ/gi, "instagram"],
+        [/クラスルーム/g, "classroom"],
+        [/グーグル/gi, "google"],
+      ];
+      for (const [re, to] of rules) s = s.replace(re, to);
+      return s;
+    };
+
+    const makeNgrams = (text, n) => {
+      const out = [];
+      for (let i = 0; i <= text.length - n; i++) out.push(text.slice(i, i + n));
+      return out;
+    };
+
+    const queryTokens = (rawQuery) => {
+      const expanded = expandQuery(rawQuery);
+      const base = normalizeText(expanded);
+      if (!base) return { phrase: "", words: [], tokens: [] };
+
+      const words = base.split(" ").filter(Boolean);
+      const tokens = new Set();
+
+      for (const w of words) {
+        tokens.add(w);
+
+        const h = toHiragana(w);
+        const k = toKatakana(w);
+        tokens.add(h);
+        tokens.add(k);
+
+        // 日本語は部分一致で強く拾えるように n-gram を追加
+        if (!isAsciiWord(w)) {
+          if (w.length >= 2) makeNgrams(w, 2).forEach(t => tokens.add(t));
+          if (w.length >= 3) makeNgrams(w, 3).forEach(t => tokens.add(t));
+        }
+      }
+
+      return { phrase: base, words, tokens: Array.from(tokens) };
+    };
+
+    const buildHay = (p) => {
+      if (p._hay) return p._hay;
+      const title = normalizeText(p.title);
+      const desc  = normalizeText(p.desc || "");
+      const tag   = normalizeText(p.tag || "");
+      const all   = `${title} ${desc} ${tag}`.trim();
+      p._hay = {
+        title, desc, tag,
+        all,
+        allH: toHiragana(all),
+        allK: toKatakana(all),
+        titleH: toHiragana(title),
+        titleK: toKatakana(title),
+      };
+      return p._hay;
+    };
+
+    const includesAny = (hay, t) => {
+      if (!t) return false;
+      return hay.all.includes(t) || hay.allH.includes(t) || hay.allK.includes(t);
+    };
+
+    const inTitleAny = (hay, t) => {
+      if (!t) return false;
+      return hay.title.includes(t) || hay.titleH.includes(t) || hay.titleK.includes(t);
+    };
+
+    const scorePost = (p, q) => {
+      const hay = buildHay(p);
+      let score = 0;
+
+      if (!q.phrase) return 0;
+
+      // フレーズ一致（強め）
+      if (inTitleAny(hay, q.phrase)) score += 140;
+      else if (includesAny(hay, q.phrase)) score += 60;
+
+      // 単語（ANDっぽく）+ 重みづけ
+      let wordsHit = 0;
+      for (const w of q.words) {
+        if (!w) continue;
+
+        const inTitle = inTitleAny(hay, w);
+        const inTag   = hay.tag.includes(w) || toHiragana(hay.tag).includes(toHiragana(w)) || toKatakana(hay.tag).includes(toKatakana(w));
+        const inDesc  = hay.desc.includes(w) || toHiragana(hay.desc).includes(toHiragana(w)) || toKatakana(hay.desc).includes(toKatakana(w));
+        const any     = inTitle || inTag || inDesc || includesAny(hay, w);
+
+        if (any) wordsHit += 1;
+
+        if (inTitle) score += 60;
+        else if (inTag) score += 30;
+        else if (inDesc) score += 18;
+        else if (any) score += 10;
+      }
+
+      if (q.words.length >= 2 && wordsHit === q.words.length) score += 45; // 全部ヒットしたらボーナス
+
+      // n-gram / 部分一致（弱め・補助）
+      for (const t of q.tokens) {
+        if (!t || t.length < 2) continue;
+        if (q.words.includes(t)) continue; // 単語で加点済み
+
+        if (includesAny(hay, t)) {
+          score += (t.length >= 3 ? 6 : 3);
+        }
+      }
+
+      // 新しめの記事を少しだけ優遇（同点のときに効く程度）
+      if (p.date) {
+        const d = new Date(p.date);
+        if (!isNaN(d.getTime())) {
+          const days = (Date.now() - d.getTime()) / 86400000;
+          const bonus = Math.max(0, 6 - (days / 60)); // ざっくり半年以内で弱く加点
+          score += bonus;
+        }
+      }
+
+      return score;
+    };
+
+    function setQueryParam(query){
+      try{
+        const url = new URL(window.location.href);
+        const q = (query || "").trim();
+        if(q) url.searchParams.set('q', q);
+        else url.searchParams.delete('q');
+        history.replaceState(null, "", url);
+      }catch(e){}
+    }
+
+    function render(list, query){
+      if(!postsAllEl) return;
+
+      if(list.length === 0){
+        postsAllEl.innerHTML = `
+          <div class="card" style="grid-column:1/-1;">
+            <h3 style="margin-top:0;">該当する記事が見つかりませんでした</h3>
+            <p class="muted" style="margin:0;">キーワードを短くする／言い方を変える（例：インスタ→Instagram）などで再検索してみてください。</p>
+          </div>
+        `;
+      }else{
+        postsAllEl.innerHTML = list.map(p => {
+          const safeTitle = esc(p.title);
+          const safeDesc  = esc(p.desc);
+          const safeTag   = esc(p.tag);
+          const safeDate  = esc(p.date);
+          return `
+            <article class="card">
+              <p class="meta"><span class="chip">${safeTag}</span><span class="date">${safeDate}</span></p>
+              <h3>${safeTitle}</h3>
+              <p>${safeDesc}</p>
+              <a class="read" href="${p.url}">記事を読む →</a>
+            </article>
+          `;
+        }).join("");
+      }
+
+      if(metaEl){
+        const q = (query || "").trim();
+        metaEl.textContent = q
+          ? `検索結果：${list.length}件 / 全${sorted.length}件（キーワード：${q}）`
+          : `全${sorted.length}件を表示`;
+      }
+    }
+
+    function apply(query){
+      const raw = (query || "").toString().trim();
+      setQueryParam(raw);
+
+      const nq = raw.toLowerCase();
+      let filtered = sorted;
+
+      // 元の挙動：入力した文字列が含まれる記事だけ表示（単純な部分一致）
+      if(nq){
+        filtered = sorted.filter(p => {
+          const hay = String(p.title || "") + " " + String(p.desc || "") + " " + String(p.tag || "");
+          return hay.toLowerCase().includes(nq);
+        });
+      }
+
+      render(filtered, raw);
+    }
+
+// 入力しながら更新（URLのqも同期）
+    if(input){
+      input.addEventListener('input', () => {
+        const q = input.value;
+        setQueryParam(q);
+        apply(q);
+      });
+    }
+
+    if(clearBtn && input){
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        setQueryParam('');
+        apply('');
+        input.focus();
+      });
+    }
+
+    const form = document.getElementById('searchForm');
+    if(form && input){
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const q = input.value;
+        setQueryParam(q);
+        apply(q);
+      });
+    }
+
+    // 初期クエリ（?q=）
+    try{
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q') || '';
+      if(input) input.value = q;
+      apply(q);
+    }catch(e){
+      apply('');
+    }
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

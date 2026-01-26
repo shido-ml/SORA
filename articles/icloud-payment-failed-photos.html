@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【iPhone】iCloud支払い失敗で写真は消える？期限切れの影響と今すぐやる対処｜今すぐ解決ノート</title>
+  <meta name="description" content="iCloud+の支払いが失敗/期限切れになった時、写真がすぐ消えるのかを解説。基本は即削除されないが、容量超過で同期やバックアップが止まる。詐欺メールの見分け、支払い復旧、写真を守るバックアップ手順まで。" />
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.12);
+      --accent: #7dd3fc;      /* 水色 */
+      --accent2: #a7f3d0;     /* ミント */
+      --warn: #fca5a5;        /* 赤 */
+      --ok: #86efac;          /* 緑 */
+      --shadow: 0 16px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, .25), transparent 55%),
+        radial-gradient(900px 500px at 110% 0%, rgba(167, 243, 208, .18), transparent 50%),
+        radial-gradient(900px 700px at 50% 120%, rgba(99, 102, 241, .14), transparent 55%),
+        linear-gradient(180deg, #070a10 0%, #0b0f17 60%, #070a10 100%);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    header.hero{
+      position: relative;
+      padding: 28px 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(500px 240px at 15% 20%, rgba(125, 211, 252, .25), transparent 60%),
+        radial-gradient(450px 240px at 85% 30%, rgba(167, 243, 208, .18), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+    }
+    h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.2vw, 38px);
+      letter-spacing: .01em;
+      line-height: 1.25;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 72ch;
+    }
+
+    nav.toc{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+    }
+    .toc-title{
+      margin:0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .toc ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    @media (min-width: 820px){
+      .toc ul{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      margin-top: 18px;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: .01em;
+    }
+    section.card h3{
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+    }
+    p{ margin: 10px 0; }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 10px 8px 0 0;
+      user-select:none;
+    }
+    .pill b{ color: rgba(255,255,255,.92); font-weight: 600; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+    }
+    .box .label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+    }
+    ul, ol{ margin: 10px 0 0; }
+    li{ margin: 6px 0; color: rgba(255,255,255,.90); }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.16);
+      padding: 14px 14px;
+      margin-top: 12px;
+    }
+    .callout.warn{ border-left-color: var(--warn); }
+    .callout.ok{ border-left-color: var(--ok); }
+
+    .example{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.22);
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .example .ex-head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .example .ex-head strong{
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .copy{
+      margin-left:auto;
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      cursor: pointer;
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); }
+    .copy:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: var(--sans);
+      color: rgba(255,255,255,.92);
+      line-height: 1.85;
+      font-size: 15.5px;
+    }
+
+    .faq details{
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(0,0,0,.14);
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq summary:before{
+      content: "▶";
+      display:inline-block;
+      margin-right: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      transform: translateY(-1px);
+    }
+    details[open] summary:before{ content:"▼"; }
+
+    footer{
+      margin-top: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.14);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    code.inline{
+      font-family: var(--mono);
+      font-size: .95em;
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.9);
+    }
+
+    /* 印刷（提出用にプリントする時） */
+    @media print{
+      body{ background: #fff; color:#111; }
+      header.hero, section.card, footer, nav.toc{
+        box-shadow: none !important;
+        background: #fff !important;
+        border-color: #ddd !important;
+      }
+      a{ color:#111; text-decoration:none; }
+      .copy{ display:none; }
+      .pill{ border-color:#ddd; color:#444; background:#fff; }
+      .muted{ color:#555; }
+      .callout{ background:#fff; border-color:#ddd; }
+      .example{ background:#fff; border-color:#ddd; }
+      .kicker{ border-color:#ddd; background:#fff; color:#444; }
+    }
+  
+    .topnav{
+      display:flex;
+      justify-content:flex-start;
+      margin: 0 0 12px;
+    }
+    .topnav a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      color: var(--accent);
+      text-decoration:none;
+    }
+    .topnav a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span> iPhone / iCloud</p>
+        <h1>iCloudの支払い期限切れた。写真はすぐ消えちゃうの？</h1>
+        <p class="sub">
+          「支払いが通らなかった」「iCloudが期限切れって出た」→ いちばん不安なのが<strong>写真が消えるか</strong>。
+          結論から言うと、<strong>写真が“すぐ消える”ことは基本ありません</strong>。ただし放置すると
+          <strong>同期・バックアップが止まって事故りやすくなる</strong>ので、今すぐやる順番をまとめます。
+        </p>
+
+        <nav class="toc" aria-label="目次">
+          <ul>
+            <li><a href="#answer">結論：写真はすぐ消える？</a></li>
+            <li><a href="#what-changes">支払い期限切れで起きること（よくある症状）</a></li>
+            <li><a href="#scam">まず確認：それ、詐欺メールじゃない？</a></li>
+            <li><a href="#fix-pay">支払いを直す（最短）</a></li>
+            <li><a href="#protect">写真を守る：今すぐできる安全策</a></li>
+            <li><a href="#optimize">要注意：iPhoneの「容量を最適化」設定の人</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </nav>
+
+        <div class="callout">
+          <p class="muted" style="margin:0;">
+            <strong>先に結論：</strong>即削除されない。<br>
+            ただし<strong>容量オーバーのまま放置</strong>すると、同期停止 → 端末故障/機種変更で詰むリスクが上がる。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="answer">
+      <h2>結論：写真はすぐ消える？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">基本：すぐ消えない</span></div>
+        <p class="muted" style="margin:0;">
+          iCloud+の支払いが失敗しても、写真が「即日で全部消える」みたいな動きは基本ありません。
+          ただし、<strong>iCloudの空き容量が足りない状態</strong>になると、iCloud写真の同期やバックアップが止まります。
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">危険なのは「消える」より「同期が止まる」</span></div>
+        <p class="muted" style="margin:0;">
+          同期が止まると、新しい写真がiCloudに上がらない／バックアップが更新されないので、
+          その間にスマホが壊れたり初期化したら、<strong>取り戻せない写真</strong>が出ます。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="what-changes">
+      <h2>支払い期限切れで起きること（よくある症状）</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iCloud写真が「更新中のまま」止まる</h3>
+          <p class="muted" style="margin:0;">
+            容量不足だとアップロードが止まりやすいです。設定の「iCloud写真」に警告が出ることもあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iCloudバックアップが失敗する</h3>
+          <p class="muted" style="margin:0;">
+            「前回のバックアップを完了できませんでした」「ストレージが不足」などが出ます。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iCloud Driveやメモの同期が止まる</h3>
+          <p class="muted" style="margin:0;">
+            空き容量がないと更新できないので、端末間でズレが出ることがあります。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">iCloud+機能が使えないことがある</h3>
+          <p class="muted" style="margin:0;">
+            Private Relayやメールを隠す等の機能が止まる場合があります（プラン状態による）。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="scam">
+      <h2>まず確認：それ、詐欺メールじゃない？</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">「写真が消えるので今すぐカード情報を」系は要警戒</span></div>
+        <p class="muted" style="margin:0;">
+          iCloudを装った詐欺メールは多いです。<strong>メールのリンクから支払い情報を入れない</strong>のが安全。
+          まずはiPhoneの設定から確認してください。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">安全な確認ルート</h3>
+          <ol class="ol">
+            <li><strong>設定</strong> → いちばん上の<strong>自分の名前</strong></li>
+            <li><strong>サブスクリプション</strong>（または「iCloud」→「プランを管理」）</li>
+            <li>iCloud+の状態と請求先を確認</li>
+          </ol>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">詐欺っぽい特徴</h3>
+          <ul>
+            <li>差出人がAppleっぽくない</li>
+            <li>日本語が不自然</li>
+            <li>URLがAppleの公式ドメインじゃない</li>
+            <li>期限を煽りすぎる（「今すぐ」「24時間以内」など）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="fix-pay">
+      <h2>支払いを直す（最短）</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge ok">やる順番</span></div>
+        <ol class="ol">
+          <li><strong>設定</strong> → <strong>自分の名前</strong> → <strong>お支払いと配送先</strong> を開く</li>
+          <li>カード/決済方法が正しいか確認（期限切れ、残高不足、利用制限に注意）</li>
+          <li>必要なら支払い方法を追加/変更</li>
+          <li><strong>設定</strong> → <strong>自分の名前</strong> → <strong>サブスクリプション</strong>でiCloud+が有効か確認</li>
+        </ol>
+        <p class="muted" style="margin:10px 0 0;">
+          直した後、反映に少し時間がかかることがあります。焦って変なサイトに入力しないのが大事。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="protect">
+      <h2>写真を守る：今すぐできる安全策</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">① いま端末に写真があるか確認</h3>
+          <p class="muted" style="margin:0;">
+            写真アプリで最近の写真が見えるかチェック。見えていれば「今すぐ全消し」の状態ではありません。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">② Wi‑Fi＋充電で同期を待つ</h3>
+          <p class="muted" style="margin:0;">
+            支払い復旧後は、Wi‑Fiにつないで充電しながらしばらく置くと同期が再開しやすいです。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">③ 念のため別の場所にもバックアップ</h3>
+          <p class="muted" style="margin:0;">
+            大事な写真は「1か所だけ」にしないのが最強。<br>
+            ・PCにコピー（Windows/Mac）<br>
+            ・外付けSSD/USBに退避<br>
+            ・Googleフォト等に二重保存（容量に注意）
+          </p>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">④ iCloudの使用量を確認して整理</h3>
+          <p class="muted" style="margin:0;">
+            設定 → 自分の名前 → iCloud → ストレージ管理。<br>
+            何が容量を食ってるか見て、不要なバックアップやデータを削除すると復旧が早いです。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          「写真が消える」より、「<strong>バックアップが止まってる間にスマホが壊れる</strong>」の方が現実に起きます。
+          なので、先にバックアップを作るのが安全。
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="optimize">
+      <h2>要注意：iPhoneの「容量を最適化」設定の人</h2>
+
+      <div class="box">
+        <div class="label"><span class="badge warn">端末に“全部の原本”が入ってないことがある</span></div>
+        <p class="muted" style="margin:0;">
+          写真アプリの設定で「iPhoneのストレージを最適化」を使っていると、
+          端末には軽いプレビューしかなく、原本はiCloud側にあることがあります。<br>
+          この状態で同期が止まると「全部は手元にない」可能性があるので、早めの対処が重要です。
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="margin:0 0 8px;">チェック方法</h3>
+          <ol class="ol">
+            <li>設定 → 写真</li>
+            <li><strong>iCloud写真</strong>がオンか確認</li>
+            <li>「iPhoneのストレージを最適化」/「オリジナルをダウンロード」どっちか確認</li>
+          </ol>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;">安全な考え方</h3>
+          <p class="muted" style="margin:0;">
+            支払い復旧後に同期が安定してから、必要ならPCへまとめてコピーするのが安心です。
+            「オリジナルをダウンロード」は端末容量が必要なので無理に切り替えなくてOK。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. 支払い失敗のまま何日か放置しても大丈夫？</h3>
+        <p class="muted" style="margin:0;">
+          すぐ消えることは少ないですが、同期が止まっている間に事故ると終わります。
+          <strong>今日中に支払い復旧か、写真の退避</strong>のどちらかはやるのが安全です。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. iPhoneから写真が消えたら、もう終わり？</h3>
+        <p class="muted" style="margin:0;">
+          まずは「最近削除した項目」や、iCloud写真の同期状態を確認。
+          支払いを直した後に戻るケースもあります。焦って初期化はしない方がいいです。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3 style="margin:0 0 8px;">Q. どれが本物のiCloud通知？</h3>
+        <p class="muted" style="margin:0;">
+          一番安全なのは、メールのリンクではなく<strong>設定アプリ</strong>から確認すること。
+          公式っぽく見えても詐欺はあります。
+        </p>
+      </div>
+    </section>
+
+<section class="card" id="recommend">
+  <h2>おすすめ（内部リンク）</h2>
+  <ul>
+        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+  </ul>
+</section>
+
+<footer>
+      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
