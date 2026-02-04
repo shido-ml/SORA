@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>支払い画面でボタン連打しちゃった…二重で決済されてないか確認する方法｜今すぐ解決ノート</title>
+  <meta name="description" content="クレカ/デビット/PayPay/Apple Pay/アプリ課金別に、30秒でできる確認→二重だった時の返金手順まで分かりやすく解説。" />
+  <meta name="theme-color" content="#0B2A4A" />
+  <style>
+:root{
+      --bg:#FFFFFF;
+      --text:#333333;
+      --muted:#5c5c5c;
+      --line:#E8E8E8;
+      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
+      --shadow: 0 10px 24px rgba(11,42,74,.10);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.75;
+      letter-spacing:.01em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:2px solid var(--navy);
+      border-radius:10px;
+      z-index:9999;
+      box-shadow: var(--shadow);
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Nav ===== */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:var(--navy);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border-radius:7px;
+      background:#fff;
+      opacity:.12;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      letter-spacing:0;
+      margin-top:2px;
+      font-size:12px;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .menu a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Sections ===== */
+    section{ padding:72px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    .section-lead{
+      margin:0;
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    /* ===== Hero ===== */
+    .hero{ padding:64px 0 72px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--navy);
+      background:rgba(11,42,74,.04);
+      font-weight:700;
+      font-size:12.5px;
+      letter-spacing:.03em;
+    }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 60ch;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--navy);
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.02em;
+      box-shadow: 0 10px 24px rgba(11,42,74,.18);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(11,42,74,.22);
+    }
+    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
+
+    .btn-ghost{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:800;
+    }
+    .btn-ghost:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+    }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .mini-title{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--navy);
+      text-transform: uppercase;
+    }
+    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
+    .mini-list li{ margin:8px 0; color:var(--muted); }
+    .mini-list b{ color:var(--text); }
+
+    /* ===== Cards / grids ===== */
+    .grid-cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 12px;
+      background:rgba(11,42,74,.08);
+      border:1px solid rgba(11,42,74,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      font-weight:900;
+      margin-bottom:12px;
+      user-select:none;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
+    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* ===== New posts ===== */
+    .post-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+    }
+    .post-meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--navy);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.03em;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .post-title{
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .post-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* ===== Profile table ===== */
+    .table-wrap{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
+    th, td{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    th{
+      width: 220px;
+      text-align:left;
+      color:var(--navy);
+      font-weight:800;
+      background: rgba(11,42,74,.03);
+    }
+    tr:last-child th, tr:last-child td{ border-bottom:none; }
+    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
+
+    /* ===== Contact (enhanced) ===== */
+    .contact-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contact-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:20px;
+    }
+    .contact-panel h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
+    .contact-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+    .contact-list li{ margin:6px 0; }
+    .contact-kv{
+      margin-top:14px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .kv-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .kv-row b{ color:var(--text); }
+    .email-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--text);
+      font-weight:700;
+      user-select: all;
+      overflow-wrap:anywhere;
+    }
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .mini-btn:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font: inherit;
+      line-height: 1.4;
+      transition: border-color .12s ease, box-shadow .12s ease;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(11,42,74,.35);
+      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
+      outline: none;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+    .form-hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .toast{
+      display:none;
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .toast.show{ display:block; }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:var(--muted);
+      font-weight:600;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    .footer-links a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      section{ padding:60px 0; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 780px){
+      th{ width: 160px; }
+      .menu{ gap:8px; }
+      .menu a{ padding:8px 8px; }
+      .form-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ===== Focus ===== */
+    :focus-visible{
+      outline: 3px solid rgba(11,42,74,.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; }
+    }
+  
+
+    /* ===== Search ===== */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .searchbar{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .searchbar input{
+      border:0;
+      outline:0;
+      width:100%;
+      font:inherit;
+      font-size:14px;
+      background:transparent;
+      color:var(--text);
+      min-width:0;
+    }
+    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
+    .searchbar .clear{
+      border:0;
+      background:rgba(11,42,74,.06);
+      color:var(--navy);
+      font-weight:900;
+      border-radius:10px;
+      padding:7px 10px;
+      cursor:pointer;
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
+    .search-meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  /* ===== Article-only small helpers ===== */
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .meta-pill{ border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted); background:#fff; }
+  .callout{ border:1px solid var(--line); border-left:6px solid var(--navy); border-radius: var(--radius); padding:14px 14px; background:#fff; }
+  .callout h3{ margin:0 0 8px; font-size:16px; }
+  .steps ol{ margin: 10px 0 0 18px; }
+  .steps li{ margin: 6px 0; }
+  .qa{ border-top:1px solid var(--line); padding-top:14px; margin-top:14px; }
+  .qa h3{ margin:0 0 6px; font-size:16px; }
+  pre{ white-space:pre-wrap; word-break:break-word; background:#f7f8fa; border:1px solid var(--line); border-radius:12px; padding:12px; margin:10px 0 0; font-size:13.5px; }
+  .mini{ font-size:13.5px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <div class="wrap">
+
+    <div class="topnav"><a href="../index.html">← ホーム</a> <span class="mini">/</span> <a href="../articles.html">記事一覧</a> <span class="mini">/</span> <a href="../policy.html">運営ポリシー</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="badge"><span class="dot" aria-hidden="true"></span> スマホ / トラブル</span>
+        <h1 style="margin-top:14px;">支払い画面でボタン連打しちゃった…二重で決済されてないか確認する方法</h1>
+        <p class="sub">クレカ/デビット/PayPay/Apple Pay/アプリ課金別に、30秒でできる確認→二重だった時の返金手順まで分かりやすく解説。</p>
+        <div class="meta-row" aria-label="記事メタ情報">
+          <span class="meta-pill">公開日：2026-01-30</span>
+          <span class="meta-pill">目安：3〜5分</span>
+          <span class="meta-pill">対象：ネット通販 / アプリ課金 / QR決済</span>
+        </div>
+        <p class="note">※ 重要な判断は、決済アプリ・カード会社・購入先の公式案内もあわせて確認してください。</p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="card">
+        <h2 style="margin-top:0;">まず結論：二重決済“っぽく見える”だけのことが多い</h2>
+        <p>支払い画面でボタンを連打すると、<b>「決済が2回通った」ように見える表示</b>が出ることがあります。けど実際は、よくあるのがこの2パターンです。</p>
+
+        <div class="grid" style="margin-top:12px;">
+          <div class="callout">
+            <h3>① 与信（オーソリ）が2回付いただけ</h3>
+            <p class="mini">クレカ/Apple Pay/Google Payで多い。<b>保留（未確定）</b>が2本立って、数日〜1週間で片方が消えることがあります。</p>
+          </div>
+          <div class="callout">
+            <h3>② 注文は1回、通知や履歴が2回出ただけ</h3>
+            <p class="mini">「読み込み中に戻る→再送信」などで、同じ処理が表示上だけ重複することがあります。</p>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <h3>30秒チェック（最短）</h3>
+          <div class="steps">
+            <ol>
+              <li><b>購入先の注文履歴</b>で「注文が何件あるか」を見る（同額が2件ある？）</li>
+              <li><b>決済アプリ/カード明細</b>で「確定」か「保留（未確定）」かを見る</li>
+              <li>同額が2件とも<b>確定</b>なら、返金対応へ（下の手順）</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">確認する順番（ここだけ見ればOK）</h2>
+        <div class="steps">
+          <ol>
+            <li><b>メール/通知</b>：レシート（注文番号）が2通ある？</li>
+            <li><b>購入先の注文履歴</b>：注文が2件になってない？（同額・同時刻）</li>
+            <li><b>決済履歴</b>：PayPay/Apple Pay/Google Payの支払い履歴が2回？</li>
+            <li><b>カード/銀行の明細</b>：同額が2つ「確定」になってる？</li>
+          </ol>
+        </div>
+        <p class="note">ポイント：<b>「注文が2件」なのか</b>、<b>「支払いだけ2回」なのか</b>で、連絡先が変わります。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">支払い方法別：どこを見ればいい？</h2>
+
+        <h3>クレジットカード（Apple Pay / Google Pay含む）</h3>
+        <ul>
+          <li><b>カードの明細で「保留」か「確定」か</b>を確認</li>
+          <li>同額が2つあっても、片方が<b>保留</b>なら数日で消えることが多い</li>
+          <li>同額が2つとも<b>確定</b>なら、まず<b>購入先（お店/アプリ）</b>に連絡</li>
+        </ul>
+        <div class="callout">
+          <h3>目安（よくある）</h3>
+          <p class="mini">保留が消える：1〜7日くらい（カード会社や加盟店で差あり）／確定が2本：購入先に連絡→返金処理</p>
+        </div>
+
+        <h3 style="margin-top:16px;">デビットカード / プリペイド</h3>
+        <ul>
+          <li>デビットは<b>即時引き落とし</b>になりやすいので、二重だとダメージが大きい</li>
+          <li>ただし、ここも<b>保留→後で戻る</b>ケースはあります</li>
+          <li>同額が2回引き落としになっていたら<b>購入先に連絡</b>（返金の処理が早い）</li>
+        </ul>
+
+        <h3 style="margin-top:16px;">PayPay（QR決済）</h3>
+        <ul>
+          <li>PayPayアプリの<b>取引履歴</b>で、同額の支払いが2回あるか確認</li>
+          <li>購入先の注文履歴が1件なら、支払い履歴のスクショを準備して<b>購入先へ</b></li>
+          <li>注文が2件なら、<b>購入先側でキャンセル/返金</b>になることが多い</li>
+        </ul>
+
+        <h3 style="margin-top:16px;">App Store / Google Play（アプリ課金）</h3>
+        <ul>
+          <li>購入履歴で「同じアイテムが2回購入」になってないか確認</li>
+          <li>サブスクは「<b>二重契約</b>」になってないか（別プラン/別アカウント）も確認</li>
+          <li>二重の可能性が高い場合は、まず<b>購入履歴の画面</b>を押さえる（スクショ）</li>
+        </ul>
+
+        <p class="note">※ 上のどれでも共通：<b>まずは「注文が2件か？」</b>を確認すると迷いません。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">二重だった場合：返金までの最短ルート</h2>
+        <div class="grid" style="margin-top:12px;">
+          <div class="callout">
+            <h3>注文が2件ある（＝購入先の問題）</h3>
+            <p class="mini"><b>購入先（ショップ/アプリ運営）に連絡</b> → 片方キャンセル → 返金。<br>注文番号があると一発で進みます。</p>
+          </div>
+          <div class="callout">
+            <h3>注文は1件なのに請求だけ2回（＝決済の問題）</h3>
+            <p class="mini">まず購入先へ → ダメなら<b>決済会社/カード会社</b>へ。<br>最終手段としてカードの問い合わせ（調査/チャージバック）</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:16px;">問い合わせテンプレ（コピペOK）</h3>
+        <p class="mini">購入先サポートに送る文章（必要なら調整してね）</p>
+        <pre>件名：二重決済の確認（注文番号：〇〇）
+
+お世話になっております。
+2026-01-30頃に支払い画面で操作中、決済ボタンを複数回押してしまいました。
+
+以下の通り、二重決済の可能性があり確認をお願いします。
+・購入（注文）内容：〇〇
+・金額：〇〇円
+・決済手段：クレジットカード / PayPay / Apple Pay など
+・発生日時：〇〇（だいたいでOK）
+・状況：同額の請求（または履歴）が2回表示されています
+
+注文履歴（または決済履歴）のスクリーンショットも添付できます。
+二重の場合は、片方のキャンセル/返金対応をお願いいたします。</pre>
+        <p class="note">カード会社に連絡する場合は「加盟店名」「金額」「日時」「確定/保留」が分かると早いです。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">よくある質問（FAQ）</h2>
+
+        <div class="qa">
+          <h3>Q. 明細に2回出てるけど、放置していい？</h3>
+          <p class="mini">まず「保留（未確定）」か「確定」かを見てください。<b>保留が2回</b>なら、数日で片方が消えることが多いです。<b>確定が2回</b>なら、購入先へ連絡が安全です。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. 決済完了画面が出てないのに請求がある</h3>
+          <p class="mini">通信が不安定だと、画面は失敗でも裏で与信が付くことがあります。購入先の注文履歴が「0件」なら保留の可能性が高いので、数日様子見→消えない/確定なら問い合わせが安心です。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. すぐカードを止めた方がいい？</h3>
+          <p class="mini">二重決済“だけ”が心配なら、まずは履歴確認→購入先へ連絡でOK。<b>不正利用っぽい（知らない店/金額）</b>なら、すぐカード会社へ連絡が安全です。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. 返金はいつ戻る？</h3>
+          <p class="mini">購入先が返金処理しても、カード/決済側の反映まで数日〜数週間かかることがあります（支払い方法で差）。「返金処理済み」のメールや番号を控えておくと安心です。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">まとめ</h2>
+        <ul>
+          <li>まずは<b>注文履歴</b>で「注文が2件か？」を確認</li>
+          <li>次に<b>明細が「保留」か「確定」か</b>を見る</li>
+          <li>確定が二重なら<b>購入先→決済会社/カード会社</b>の順で連絡</li>
+        </ul>
+        <p class="note">このページをブックマークしておくと、焦った時にすぐ確認できます。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">おすすめ（内部リンク）</h2>
+        <ul>
+          <li><a href="instagram-dm-link-clicked-safe.html">インスタのDMで変なリンク踏んだ。その後何も起きなければセーフなの？</a></li>
+          <li><a href="login-attempt-email-ignore.html">「ログイン試行がありました」ってメール届いた。無視して寝て大丈夫？</a></li>
+          <li><a href="browser-history-clear-10sec.html">検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順</a></li>
+        </ul>
+      </section>
+<p class="note">免責：本記事は一般的な確認方法のまとめです。個別の契約・返金可否は購入先/決済会社のルールが優先されます。</p>
+    </main>
+
+    <footer style="padding:30px 0 60px; color:var(--muted); font-size:13px;">
+      <div class="container" style="padding:0;">
+        © 2026 今すぐ解決ノート
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

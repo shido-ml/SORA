@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【2026年版】インスタDMを既読つけずに読む方法｜既読（Seen）をオフにする設定と注意点｜今すぐ解決ノート</title>
+  <meta name="description" content="結論：今でも可能。Instagramの「既読表示（Read receipts）」をオフにすれば、DMを開いても相手に“既読/Seen”が出にくい。全体/特定チャット別の設定と注意点をまとめました。" />
+  <meta name="theme-color" content="#0B2A4A" />
+  <style>
+:root{
+      --bg:#FFFFFF;
+      --text:#333333;
+      --muted:#5c5c5c;
+      --line:#E8E8E8;
+      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
+      --shadow: 0 10px 24px rgba(11,42,74,.10);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.75;
+      letter-spacing:.01em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:2px solid var(--navy);
+      border-radius:10px;
+      z-index:9999;
+      box-shadow: var(--shadow);
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Nav ===== */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:var(--navy);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border-radius:7px;
+      background:#fff;
+      opacity:.12;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      letter-spacing:0;
+      margin-top:2px;
+      font-size:12px;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .menu a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Sections ===== */
+    section{ padding:72px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    .section-lead{
+      margin:0;
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    /* ===== Hero ===== */
+    .hero{ padding:64px 0 72px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--navy);
+      background:rgba(11,42,74,.04);
+      font-weight:700;
+      font-size:12.5px;
+      letter-spacing:.03em;
+    }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 60ch;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--navy);
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.02em;
+      box-shadow: 0 10px 24px rgba(11,42,74,.18);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(11,42,74,.22);
+    }
+    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
+
+    .btn-ghost{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:800;
+    }
+    .btn-ghost:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+    }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .mini-title{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--navy);
+      text-transform: uppercase;
+    }
+    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
+    .mini-list li{ margin:8px 0; color:var(--muted); }
+    .mini-list b{ color:var(--text); }
+
+    /* ===== Cards / grids ===== */
+    .grid-cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 12px;
+      background:rgba(11,42,74,.08);
+      border:1px solid rgba(11,42,74,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      font-weight:900;
+      margin-bottom:12px;
+      user-select:none;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
+    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* ===== New posts ===== */
+    .post-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+    }
+    .post-meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--navy);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.03em;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .post-title{
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .post-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* ===== Profile table ===== */
+    .table-wrap{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
+    th, td{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    th{
+      width: 220px;
+      text-align:left;
+      color:var(--navy);
+      font-weight:800;
+      background: rgba(11,42,74,.03);
+    }
+    tr:last-child th, tr:last-child td{ border-bottom:none; }
+    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
+
+    /* ===== Contact (enhanced) ===== */
+    .contact-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contact-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:20px;
+    }
+    .contact-panel h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
+    .contact-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+    .contact-list li{ margin:6px 0; }
+    .contact-kv{
+      margin-top:14px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .kv-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .kv-row b{ color:var(--text); }
+    .email-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--text);
+      font-weight:700;
+      user-select: all;
+      overflow-wrap:anywhere;
+    }
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .mini-btn:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font: inherit;
+      line-height: 1.4;
+      transition: border-color .12s ease, box-shadow .12s ease;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(11,42,74,.35);
+      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
+      outline: none;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+    .form-hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .toast{
+      display:none;
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .toast.show{ display:block; }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:var(--muted);
+      font-weight:600;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    .footer-links a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      section{ padding:60px 0; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 780px){
+      th{ width: 160px; }
+      .menu{ gap:8px; }
+      .menu a{ padding:8px 8px; }
+      .form-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ===== Focus ===== */
+    :focus-visible{
+      outline: 3px solid rgba(11,42,74,.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; }
+    }
+  
+
+    /* ===== Search ===== */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .searchbar{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .searchbar input{
+      border:0;
+      outline:0;
+      width:100%;
+      font:inherit;
+      font-size:14px;
+      background:transparent;
+      color:var(--text);
+      min-width:0;
+    }
+    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
+    .searchbar .clear{
+      border:0;
+      background:rgba(11,42,74,.06);
+      color:var(--navy);
+      font-weight:900;
+      border-radius:10px;
+      padding:7px 10px;
+      cursor:pointer;
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
+    .search-meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  /* ===== Article-only helpers ===== */
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .meta-pill{ border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted); background:#fff; }
+  .callout{ border:1px solid var(--line); border-left:6px solid var(--navy); border-radius: var(--radius); padding:14px 14px; background:#fff; }
+  .callout h3{ margin:0 0 8px; font-size:16px; }
+  .steps ol{ margin: 10px 0 0 18px; }
+  .steps li{ margin: 6px 0; }
+  .qa{ border-top:1px solid var(--line); padding-top:14px; margin-top:14px; }
+  .qa h3{ margin:0 0 6px; font-size:16px; }
+  .mini{ font-size:13.5px; color:var(--muted); }
+  .danger{ border-left-color:#b00020; }
+  .ok{ border-left-color:#0a7a2f; }
+  .tip{ border-left-color:#0a5bd3; }
+  code{ background:#f7f8fa; border:1px solid var(--line); padding:2px 6px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <div class="wrap">
+    <div class="topnav"><a href="../index.html">← ホーム</a> <span class="mini">/</span> <a href="../articles.html">記事一覧</a> <span class="mini">/</span> <a href="../policy.html">運営ポリシー</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="badge"><span class="dot" aria-hidden="true"></span> SNS / インスタ</span>
+        <h1 style="margin-top:14px;">【2026年版】インスタDMを既読つけずに読む方法｜既読（Seen）をオフにする設定と注意点</h1>
+        <p class="sub">結論：今でも可能。Instagramの「既読表示（Read receipts）」をオフにすれば、DMを開いても相手に“既読/Seen”が出にくい。全体/特定チャット別の設定と注意点をまとめました。</p>
+        <div class="meta-row" aria-label="記事メタ情報">
+          <span class="meta-pill">公開日：2026-01-31</span>
+          <span class="meta-pill">目安：3〜6分</span>
+          <span class="meta-pill">対象：iPhone / Android</span>
+        </div>
+        <p class="note"><b>結論：</b>今でもできます。いちばん安全で確実なのは、Instagramの<b>「既読表示（Read receipts）」をオフ</b>にする方法。さらに「通知のプレビュー」で内容を読む方法も紹介します。</p>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <section class="card">
+        <h2 style="margin-top:0;">まず確認：インスタの“既読”はオフにできる</h2>
+        <p>最近のInstagramでは、DMの<b>既読表示（Seen / Read receipts）をオフ</b>にできるようになっています。設定を変えれば、DMを開いても相手側に「既読」が出にくくなります。</p>
+        <div class="callout ok">
+          <h3>おすすめはこの順番</h3>
+          <ol>
+            <li><b>設定で「既読表示」をオフ（公式）</b> ← いちばん確実</li>
+            <li>通知のプレビューで内容だけ見る ← ちょい確認向き</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">方法①（おすすめ）：既読表示（Read receipts）をオフにする</h2>
+
+        <div class="callout tip">
+          <h3>全体（すべてのDM）でオフにする手順</h3>
+          <div class="steps">
+            <ol>
+              <li>インスタを開く → <b>プロフィール</b>（右下）</li>
+              <li>右上の<b>≡（メニュー）</b> → <b>設定とプライバシー</b></li>
+              <li><b>「メッセージとストーリーズへの返信」</b>を開く</li>
+              <li><b>「既読表示（Show read receipts）」</b>を<b>OFF</b></li>
+            </ol>
+          </div>
+          <p class="mini">※メニュー名はアップデートで微妙に変わることがあります。「read receipts / 既読表示」で探すと早いです。</p>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <h3>特定の相手（そのチャットだけ）オフにする手順</h3>
+          <div class="steps">
+            <ol>
+              <li>DM一覧から<b>対象のチャット</b>を開く</li>
+              <li>画面上の<b>名前（相手名/グループ名）</b>をタップ</li>
+              <li><b>「プライバシーと安全」</b>を開く</li>
+              <li><b>「既読表示（Read receipts）」</b>を<b>OFF</b></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="callout danger" style="margin-top:12px;">
+          <h3>注意：オフにすると「自分も相手の既読」が見えないことが多い</h3>
+          <p class="mini">“自分だけ得する”設定ではなく、相手の既読も表示されなくなるパターンがあります。困る人は「特定チャットだけOFF」がおすすめ。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">方法②：通知プレビューで“内容だけ”読む（短文向け）</h2>
+        <p>「開かずに内容だけ見たい」なら、通知のプレビューで読むのが安全です（ただし長文は切れることがあります）。</p>
+
+        <div class="grid" style="margin-top:12px;">
+          <div class="callout">
+            <h3>iPhone</h3>
+            <ul class="mini">
+              <li>設定 → 通知 → Instagram</li>
+              <li>プレビュー表示（ロック画面/常に など）を調整</li>
+              <li>ロック画面や通知センターで内容を確認</li>
+            </ul>
+          </div>
+          <div class="callout">
+            <h3>Android</h3>
+            <ul class="mini">
+              <li>設定 → 通知 → アプリ → Instagram</li>
+              <li>通知の内容表示（ロック画面の表示）を調整</li>
+              <li>通知から内容を確認</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note">この方法は「DMを開かない」ので既読が付く心配が少ないです。<b>まずは通知で確認→返信するなら開く</b>が鉄板。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">よくある疑問</h2>
+
+        <div class="qa">
+          <h3>Q. 既読表示をオフにしたら、相手に通知される？</h3>
+          <p class="mini">基本的に「既読表示をオフにしたこと」が通知でバレるケースは少ないです。ただし相手が「既読が付かない」ことで気づく可能性はあります。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. グループDMでも使える？</h3>
+          <p class="mini">アプリのバージョンやチャットの種類で挙動が変わることがあります。まずは「特定チャットだけOFF」を試すのが安全です。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. 既読が付いた…取り消せる？</h3>
+          <p class="mini">一度付いた既読を「なかったこと」に戻すのは基本できません。次からは先に既読表示をOFFにしておくのが確実。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">まとめ</h2>
+        <ul>
+          <li>今でも<b>「既読をつけずに読む」ことは可能</b></li>
+          <li>一番確実：<b>既読表示（Read receipts）をOFF</b></li>
+          <li>ちょい確認：<b>通知プレビュー</b>で内容だけ読む</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">おすすめ（内部リンク）</h2>
+        <ul>
+          <li><a href="instagram-dm-link-clicked-safe.html">インスタのDMで変なリンク踏んだ。その後何も起きなければセーフなの？</a></li>
+          <li><a href="login-attempt-email-ignore.html">「ログイン試行がありました」ってメール届いた。無視して寝て大丈夫？</a></li>
+          <li><a href="browser-history-clear-10sec.html">検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順</a></li>
+        </ul>
+      </section>
+<p class="note">免責：Instagramの仕様はアップデートで変わります。メニュー名が違う場合は「設定とプライバシー」内で <code>既読</code> / <code>read receipts</code> を探してみてください。</p>
+    </main>
+
+    <footer style="padding:30px 0 60px; color:var(--muted); font-size:13px;">
+      <div class="container" style="padding:0;">
+        © 2026 今すぐ解決ノート
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

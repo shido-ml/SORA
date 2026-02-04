@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【X】エロ垢にフォローされた！フォロワーにバレる前に消す方法（削除・ブロック・鍵垢）｜今すぐ解決ノート</title>
+  <meta name="description" content="結論：いちばん静かに消すなら「Remove this follower（フォロワーを削除）」、再フォローも防ぐなら「ブロック」。フォロワーに“通知”でバレることは基本ないけど、フォロー一覧を見られると気づかれる可能性あり。最短手順と再発防止をまとめました。" />
+  <meta name="theme-color" content="#0B2A4A" />
+  <style>
+:root{
+      --bg:#FFFFFF;
+      --text:#333333;
+      --muted:#5c5c5c;
+      --line:#E8E8E8;
+      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
+      --shadow: 0 10px 24px rgba(11,42,74,.10);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.75;
+      letter-spacing:.01em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:2px solid var(--navy);
+      border-radius:10px;
+      z-index:9999;
+      box-shadow: var(--shadow);
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Nav ===== */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:var(--navy);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border-radius:7px;
+      background:#fff;
+      opacity:.12;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      letter-spacing:0;
+      margin-top:2px;
+      font-size:12px;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .menu a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Sections ===== */
+    section{ padding:72px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    .section-lead{
+      margin:0;
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    /* ===== Hero ===== */
+    .hero{ padding:64px 0 72px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--navy);
+      background:rgba(11,42,74,.04);
+      font-weight:700;
+      font-size:12.5px;
+      letter-spacing:.03em;
+    }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 60ch;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--navy);
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.02em;
+      box-shadow: 0 10px 24px rgba(11,42,74,.18);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(11,42,74,.22);
+    }
+    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
+
+    .btn-ghost{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:800;
+    }
+    .btn-ghost:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+    }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .mini-title{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--navy);
+      text-transform: uppercase;
+    }
+    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
+    .mini-list li{ margin:8px 0; color:var(--muted); }
+    .mini-list b{ color:var(--text); }
+
+    /* ===== Cards / grids ===== */
+    .grid-cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 12px;
+      background:rgba(11,42,74,.08);
+      border:1px solid rgba(11,42,74,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      font-weight:900;
+      margin-bottom:12px;
+      user-select:none;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
+    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* ===== New posts ===== */
+    .post-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+    }
+    .post-meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--navy);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.03em;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .post-title{
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .post-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* ===== Profile table ===== */
+    .table-wrap{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
+    th, td{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    th{
+      width: 220px;
+      text-align:left;
+      color:var(--navy);
+      font-weight:800;
+      background: rgba(11,42,74,.03);
+    }
+    tr:last-child th, tr:last-child td{ border-bottom:none; }
+    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
+
+    /* ===== Contact (enhanced) ===== */
+    .contact-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contact-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:20px;
+    }
+    .contact-panel h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
+    .contact-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+    .contact-list li{ margin:6px 0; }
+    .contact-kv{
+      margin-top:14px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .kv-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .kv-row b{ color:var(--text); }
+    .email-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--text);
+      font-weight:700;
+      user-select: all;
+      overflow-wrap:anywhere;
+    }
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .mini-btn:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font: inherit;
+      line-height: 1.4;
+      transition: border-color .12s ease, box-shadow .12s ease;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(11,42,74,.35);
+      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
+      outline: none;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+    .form-hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .toast{
+      display:none;
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .toast.show{ display:block; }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:var(--muted);
+      font-weight:600;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    .footer-links a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      section{ padding:60px 0; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 780px){
+      th{ width: 160px; }
+      .menu{ gap:8px; }
+      .menu a{ padding:8px 8px; }
+      .form-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ===== Focus ===== */
+    :focus-visible{
+      outline: 3px solid rgba(11,42,74,.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; }
+    }
+  
+
+    /* ===== Search ===== */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .searchbar{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .searchbar input{
+      border:0;
+      outline:0;
+      width:100%;
+      font:inherit;
+      font-size:14px;
+      background:transparent;
+      color:var(--text);
+      min-width:0;
+    }
+    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
+    .searchbar .clear{
+      border:0;
+      background:rgba(11,42,74,.06);
+      color:var(--navy);
+      font-weight:900;
+      border-radius:10px;
+      padding:7px 10px;
+      cursor:pointer;
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
+    .search-meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .meta-pill{ border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted); background:#fff; }
+  .callout{ border:1px solid var(--line); border-left:6px solid var(--navy); border-radius: var(--radius); padding:14px 14px; background:#fff; }
+  .callout h3{ margin:0 0 8px; font-size:16px; }
+  .mini{ font-size:13.5px; color:var(--muted); }
+  .danger{ border-left-color:#b00020; }
+  .ok{ border-left-color:#0a7a2f; }
+  .tip{ border-left-color:#0a5bd3; }
+  code{ background:#f7f8fa; border:1px solid var(--line); padding:2px 6px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <div class="wrap">
+    <div class="topnav"><a href="../index.html">← ホーム</a> <span class="mini">/</span> <a href="../articles.html">記事一覧</a> <span class="mini">/</span> <a href="../policy.html">運営ポリシー</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="badge"><span class="dot" aria-hidden="true"></span> SNS / X</span>
+        <h1 style="margin-top:14px;">【X】エロ垢にフォローされた！フォロワーにバレる前に消す方法（削除・ブロック・鍵垢）</h1>
+        <p class="sub">結論：いちばん静かに消すなら「Remove this follower（フォロワーを削除）」、再フォローも防ぐなら「ブロック」。フォロワーに“通知”でバレることは基本ないけど、フォロー一覧を見られると気づかれる可能性あり。最短手順と再発防止をまとめました。</p>
+
+        <div class="meta-row" aria-label="記事メタ情報">
+          <span class="meta-pill">公開日：2026-02-03</span>
+          <span class="meta-pill">目安：3〜6分</span>
+          <span class="meta-pill">対象：X（旧Twitter）</span>
+        </div>
+
+        <p class="note"><b>最短結論：</b><b>①「Remove this follower」で静かに消す</b> → さらに不安なら <b>②ブロック</b>（再フォロー防止）がおすすめ。</p>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <section class="card">
+        <h2 style="margin-top:0;">フォロワーに「通知」でバレる？</h2>
+        <div class="callout tip">
+          <h3>基本：あなたのフォロワーに“通知”は行かない</h3>
+          <p class="mini">あなたに「新しいフォロワーが増えた」通知が来ることはありますが、<b>あなたのフォロワー全員に「誰々があなたをフォローした」通知が飛ぶ仕組みは通常ありません</b>。</p>
+        </div>
+
+        <div class="callout danger" style="margin-top:12px;">
+          <h3>ただし：気づかれるパターンはある</h3>
+          <ul class="mini" style="margin:8px 0 0 18px;">
+            <li>誰かがあなたのプロフィールを開いて<b>フォロワー一覧を見た</b>とき（公開アカウントだと見られやすい）</li>
+            <li>エロ垢が<b>あなたの投稿にリプ/いいね/引用</b>して目立ったとき</li>
+            <li>共通の知り合いがそのアカウントを見ていて「おすすめ」などで気づいたとき</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">1番静かに消す：Remove this follower（フォロワーを削除）</h2>
+
+        <div class="callout ok">
+          <h3>手順（Web版：スマホのブラウザ or PC）</h3>
+          <ol class="mini" style="margin:8px 0 0 18px;">
+            <li><b>x.com</b> をブラウザで開いてログイン</li>
+            <li>自分のプロフィール → <b>フォロワー</b> を開く</li>
+            <li>消したいアカウントの右側にある <b>…（もっと）</b> を押す</li>
+            <li><b>Remove this follower（フォロワーを削除）</b> → 確認で Remove</li>
+          </ol>
+          <p class="mini" style="margin-top:10px;">ポイント：X公式ヘルプでも「フォロワーの削除」は案内されていて、<b>現時点ではWeb版のみ</b>とされています。</p>
+        </div>
+
+        <div class="callout tip" style="margin-top:12px;">
+          <h3>「Remove」が見当たらないとき</h3>
+          <ul class="mini" style="margin:8px 0 0 18px;">
+            <li>アプリでは出ないことがあります → <b>Safari/Chromeでx.com</b>を開く</li>
+            <li>キャッシュ/ログイン状態が不安定 → 一度ログアウト→ログイン</li>
+            <li>相手が凍結/制限中 → フォロワー数が勝手に減ることもあります</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">再フォローも防ぎたい：ブロック（いちばん強い）</h2>
+
+        <div class="callout danger">
+          <h3>おすすめ：スパムっぽいならブロック</h3>
+          <p class="mini">ブロックすると、相手はあなたをフォローできず、あなたの投稿ややりとりもしづらくなります。<b>ブロックされた相手に通知は行きません</b>が、相手があなたのプロフィールを見に来たら「ブロックされている」と表示されて気づく可能性はあります。</p>
+          <ol class="mini" style="margin:8px 0 0 18px;">
+            <li>相手のプロフィールを開く</li>
+            <li><b>…（もっと）</b> → <b>Block（ブロック）</b></li>
+          </ol>
+        </div>
+
+        <div class="callout tip" style="margin-top:12px;">
+          <h3>「静かに消す」だけなら Remove → さらに不安ならブロック</h3>
+          <p class="mini">まず <b>Remove</b> でフォロー関係を切って、もしまた付いてきたりDMが来るなら<b>ブロック</b>が安心です。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">今後の対策（スパム/エロ垢が増えるのを減らす）</h2>
+
+        <div class="callout tip">
+          <h3>① 鍵垢（投稿を保護）にして「承認制」にする</h3>
+          <p class="mini">投稿を保護すると、あなたの投稿は<b>承認したフォロワーだけ</b>が見られるようになります。知らないアカウントは申請してくるので、そこで弾けます。</p>
+        </div>
+
+        <div class="callout tip" style="margin-top:12px;">
+          <h3>② 通知フィルターを強める（変な通知を減らす）</h3>
+          <p class="mini">通知タブの設定で <b>Quality filter</b> や <b>Advanced filters</b> をオンにすると、低品質/自動っぽい通知が減ることがあります。</p>
+        </div>
+
+        <div class="callout tip" style="margin-top:12px;">
+          <h3>③ 明らかなスパムなら報告</h3>
+          <p class="mini">同じ文面DM、怪しいリンク、連続フォローなどは<b>Report（報告）</b>も選択肢です。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">よくある質問</h2>
+
+        <div class="callout">
+          <h3>Q. Removeしたら相手にバレる？</h3>
+          <p class="mini">相手に「あなたに削除されました」という通知が行くとは案内されていません。<b>ただし</b>相手があなたのプロフィールを見て「フォローしてない状態」に気づく可能性はあります。</p>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <h3>Q. ブロックすると相手は気づく？</h3>
+          <p class="mini">通知は行きませんが、相手があなたのプロフィールを開けば「ブロックされています」と表示されるので気づきます。</p>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <h3>Q. フォロワーに一番バレにくいのは？</h3>
+          <p class="mini"><b>相手が目立つ行動をする前に Remove</b>が一番ラクです。さらに不安なら、投稿を保護して承認制にするのが安全。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">まとめ</h2>
+        <ul>
+          <li>フォロワーに<b>通知でバレる</b>ことは基本ない</li>
+          <li>静かに消すなら：<b>Web版の「Remove this follower」</b></li>
+          <li>再フォローも防ぐなら：<b>ブロック</b></li>
+          <li>対策：<b>鍵垢（投稿を保護）</b>＋通知フィルター</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">おすすめ（内部リンク）</h2>
+        <ul>
+          <li><a href="x-list-added-notification.html">【X】リストに追加したの、相手に通知でバレてる？公開/非公開リストの違い</a></li>
+          <li><a href="x-like-followers-timeline.html">【X】いいねした投稿はフォロワーに流れる？タイムラインに出る条件まとめ</a></li>
+          <li><a href="login-attempt-email-ignore.html">「ログイン試行がありました」メールは無視して寝ていい？確認ポイント</a></li>
+        </ul>
+      </section>
+</main>
+
+    <footer style="padding:30px 0 60px; color:var(--muted); font-size:13px;">
+      <div class="container" style="padding:0;">
+        © 2026 今すぐ解決ノート
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

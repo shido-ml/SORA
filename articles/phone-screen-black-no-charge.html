@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>スマホの画面が真っ暗で充電しても反応しない…寿命？原因と今すぐできる対処法（iPhone/Android）｜今すぐ解決ノート</title>
+  <meta name="description" content="結論：寿命とは限らない。放電・フリーズ・充電器/端子トラブルが多い。まずは30分充電→強制再起動→別ケーブル確認。危険サインも解説。" />
+  <meta name="theme-color" content="#0B2A4A" />
+  <style>
+:root{
+      --bg:#FFFFFF;
+      --text:#333333;
+      --muted:#5c5c5c;
+      --line:#E8E8E8;
+      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
+      --shadow: 0 10px 24px rgba(11,42,74,.10);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.75;
+      letter-spacing:.01em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:2px solid var(--navy);
+      border-radius:10px;
+      z-index:9999;
+      box-shadow: var(--shadow);
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Nav ===== */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:var(--navy);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border-radius:7px;
+      background:#fff;
+      opacity:.12;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      letter-spacing:0;
+      margin-top:2px;
+      font-size:12px;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .menu a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Sections ===== */
+    section{ padding:72px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    .section-lead{
+      margin:0;
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    /* ===== Hero ===== */
+    .hero{ padding:64px 0 72px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--navy);
+      background:rgba(11,42,74,.04);
+      font-weight:700;
+      font-size:12.5px;
+      letter-spacing:.03em;
+    }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 60ch;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--navy);
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.02em;
+      box-shadow: 0 10px 24px rgba(11,42,74,.18);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(11,42,74,.22);
+    }
+    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
+
+    .btn-ghost{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:800;
+    }
+    .btn-ghost:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+    }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .mini-title{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--navy);
+      text-transform: uppercase;
+    }
+    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
+    .mini-list li{ margin:8px 0; color:var(--muted); }
+    .mini-list b{ color:var(--text); }
+
+    /* ===== Cards / grids ===== */
+    .grid-cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 12px;
+      background:rgba(11,42,74,.08);
+      border:1px solid rgba(11,42,74,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      font-weight:900;
+      margin-bottom:12px;
+      user-select:none;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
+    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* ===== New posts ===== */
+    .post-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+    }
+    .post-meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--navy);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.03em;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .post-title{
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .post-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* ===== Profile table ===== */
+    .table-wrap{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
+    th, td{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    th{
+      width: 220px;
+      text-align:left;
+      color:var(--navy);
+      font-weight:800;
+      background: rgba(11,42,74,.03);
+    }
+    tr:last-child th, tr:last-child td{ border-bottom:none; }
+    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
+
+    /* ===== Contact (enhanced) ===== */
+    .contact-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contact-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:20px;
+    }
+    .contact-panel h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
+    .contact-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+    .contact-list li{ margin:6px 0; }
+    .contact-kv{
+      margin-top:14px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .kv-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .kv-row b{ color:var(--text); }
+    .email-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--text);
+      font-weight:700;
+      user-select: all;
+      overflow-wrap:anywhere;
+    }
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .mini-btn:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font: inherit;
+      line-height: 1.4;
+      transition: border-color .12s ease, box-shadow .12s ease;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(11,42,74,.35);
+      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
+      outline: none;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+    .form-hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .toast{
+      display:none;
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .toast.show{ display:block; }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:var(--muted);
+      font-weight:600;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    .footer-links a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      section{ padding:60px 0; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 780px){
+      th{ width: 160px; }
+      .menu{ gap:8px; }
+      .menu a{ padding:8px 8px; }
+      .form-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ===== Focus ===== */
+    :focus-visible{
+      outline: 3px solid rgba(11,42,74,.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; }
+    }
+  
+
+    /* ===== Search ===== */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .searchbar{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .searchbar input{
+      border:0;
+      outline:0;
+      width:100%;
+      font:inherit;
+      font-size:14px;
+      background:transparent;
+      color:var(--text);
+      min-width:0;
+    }
+    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
+    .searchbar .clear{
+      border:0;
+      background:rgba(11,42,74,.06);
+      color:var(--navy);
+      font-weight:900;
+      border-radius:10px;
+      padding:7px 10px;
+      cursor:pointer;
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
+    .search-meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  /* ===== Article-only helpers ===== */
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .meta-pill{ border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted); background:#fff; }
+  .callout{ border:1px solid var(--line); border-left:6px solid var(--navy); border-radius: var(--radius); padding:14px 14px; background:#fff; }
+  .callout h3{ margin:0 0 8px; font-size:16px; }
+  .steps ol{ margin: 10px 0 0 18px; }
+  .steps li{ margin: 6px 0; }
+  .qa{ border-top:1px solid var(--line); padding-top:14px; margin-top:14px; }
+  .qa h3{ margin:0 0 6px; font-size:16px; }
+  .mini{ font-size:13.5px; color:var(--muted); }
+  .danger{ border-left-color:#b00020; }
+  .ok{ border-left-color:#0a7a2f; }
+  .tip{ border-left-color:#0a5bd3; }
+  code{ background:#f7f8fa; border:1px solid var(--line); padding:2px 6px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <div class="wrap">
+    <div class="topnav"><a href="../index.html">← ホーム</a> <span class="mini">/</span> <a href="../articles.html">記事一覧</a> <span class="mini">/</span> <a href="../policy.html">運営ポリシー</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="badge"><span class="dot" aria-hidden="true"></span> スマホ / 故障</span>
+        <h1 style="margin-top:14px;">スマホの画面が真っ暗で充電しても反応しない…寿命？原因と今すぐできる対処法（iPhone/Android）</h1>
+        <p class="sub">結論：寿命とは限らない。放電・フリーズ・充電器/端子トラブルが多い。まずは30分充電→強制再起動→別ケーブル確認。危険サインも解説。</p>
+        <div class="meta-row" aria-label="記事メタ情報">
+          <span class="meta-pill">公開日：2026-01-30</span>
+          <span class="meta-pill">目安：5〜8分</span>
+          <span class="meta-pill">対象：iPhone / Android</span>
+        </div>
+        <p class="note">先に結論：<b>「寿命」と決めつけるのは早い</b>です。放電・フリーズ・充電器/端子トラブルで「完全に真っ暗」になることがよくあります。順番どおりに潰せば復活することも多いです。</p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="card">
+        <h2 style="margin-top:0;">まず確認：危険サインがあるなら中止</h2>
+        <div class="callout danger">
+          <h3>この症状があるなら、充電や再起動を続けない</h3>
+          <ul>
+            <li>本体が<b>膨らんでいる</b>／画面が浮いている</li>
+            <li>異臭・煙・異常発熱（触れないほど熱い）</li>
+            <li>水没直後で、まだ濡れている</li>
+          </ul>
+          <p class="mini">→ 安全のため電源操作をやめて、ショップ/修理店に相談が安心です。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">結論：よくある原因トップ4</h2>
+        <div class="grid" style="margin-top:12px;">
+          <div class="callout tip">
+            <h3>① 電池が完全放電</h3>
+            <p class="mini">0%より下まで落ちると、充電してもすぐには反応しないことがあります。</p>
+          </div>
+          <div class="callout tip">
+            <h3>② フリーズ（固まってる）</h3>
+            <p class="mini">画面が真っ暗でも、内部は固まっていて再起動が必要な場合があります。</p>
+          </div>
+          <div class="callout">
+            <h3>③ 充電器/ケーブル/端子が原因</h3>
+            <p class="mini">ケーブル断線・アダプタ不良・端子にホコリで充電できないケースが多いです。</p>
+          </div>
+          <div class="callout">
+            <h3>④ 画面/基板などハード故障</h3>
+            <p class="mini">落下・水没・経年劣化など。ここまで行くと修理が必要なことも。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">今すぐやる順番（これで9割の切り分け）</h2>
+        <div class="steps">
+          <ol>
+            <li><b>① 充電環境を変えて30分待つ</b>（まずは放電対策）</li>
+            <li><b>② 強制再起動</b>（フリーズ対策）</li>
+            <li><b>③ 別のケーブル/アダプタ/コンセントで試す</b></li>
+            <li><b>④ 充電端子を目視チェック</b>（ホコリ詰まり）</li>
+            <li><b>⑤ それでもダメなら修理相談</b>（故障の可能性）</li>
+          </ol>
+        </div>
+        <p class="note">ポイント：焦って連打すると判断がつきにくいので、<b>順番どおり</b>が一番早いです。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">① 充電しても反応しない時は「待つ」が正解なことがある</h2>
+        <p>完全放電だと、挿してもすぐに画面が点かないことがあります。</p>
+        <div class="callout ok">
+          <h3>おすすめ手順</h3>
+          <ul>
+            <li>できれば<b>純正/信頼できる充電器</b>を使う</li>
+            <li>コンセント直挿し（PCのUSBより安定）</li>
+            <li>そのまま<b>30分</b>放置して反応を見る</li>
+          </ul>
+          <p class="mini">途中で本体が少し温まるなら、充電が通っている可能性があります。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">② 強制再起動（iPhone）</h2>
+        <p class="mini">機種で手順が違います。分からなければ、まず「iPhone X以降」の手順を試すと当たりやすいです。</p>
+
+        <div class="callout tip">
+          <h3>iPhone 8 / X / 11 / 12 / 13 / 14 / 15 など（ホームボタンなし系）</h3>
+          <div class="steps">
+            <ol>
+              <li>音量を上げるボタンを<b>押してすぐ離す</b></li>
+              <li>音量を下げるボタンを<b>押してすぐ離す</b></li>
+              <li>サイドボタン（電源）を<b>長押し</b>（Appleロゴが出るまで）</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <h3>iPhone 7 / 7 Plus</h3>
+          <p class="mini"><b>音量下</b>＋<b>電源</b>を同時に長押し（Appleロゴまで）</p>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <h3>iPhone 6s以前（ホームボタンあり）</h3>
+          <p class="mini"><b>ホーム</b>＋<b>電源</b>を同時に長押し（Appleロゴまで）</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">③ 強制再起動（Android）</h2>
+        <p>Androidはメーカー差がありますが、だいたい次のどれかで再起動できます。</p>
+        <div class="callout tip">
+          <h3>よくある手順</h3>
+          <ul>
+            <li><b>電源ボタン長押し（10〜20秒）</b></li>
+            <li><b>電源＋音量下</b>を同時長押し（10〜20秒）</li>
+          </ul>
+          <p class="mini">振動が1回でもあれば、反応している可能性があります。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">④ 充電器・ケーブル・端子のチェック（ここが一番多い）</h2>
+        <div class="steps">
+          <ol>
+            <li><b>別のケーブル</b>で試す（断線多い）</li>
+            <li><b>別の充電アダプタ</b>で試す</li>
+            <li><b>別のコンセント</b>で試す（タコ足・ゆるい差し込みも地味に多い）</li>
+            <li>端子（Lightning/USB-C）を<b>ライトで覗く</b>（ホコリ/ゴミ）</li>
+          </ol>
+        </div>
+        <div class="callout danger" style="margin-top:12px;">
+          <h3>端子掃除の注意</h3>
+          <p class="mini">金属ピンを折ると悪化します。無理に奥をゴリゴリしないで、目立つホコリがあるなら慎重に。自信がなければ店での清掃が安全です。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">「寿命っぽい」サインと、修理に行く目安</h2>
+        <div class="callout">
+          <h3>寿命・故障の可能性が上がるサイン</h3>
+          <ul>
+            <li>落下・水没のあとから起きた</li>
+            <li>充電器を変えても、端末が一切反応しない（振動も音もない）</li>
+            <li>画面は真っ暗なのに、通知音/バイブはある（画面故障の疑い）</li>
+            <li>最近、電池が急に減る・突然落ちるのが増えていた</li>
+          </ul>
+        </div>
+        <p class="note">ここまで当てはまるなら、バッテリー交換や修理で直るケースもあります（＝寿命確定ではない）。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">データが心配な人へ（やっていいこと・避けること）</h2>
+        <div class="callout ok">
+          <h3>やっていい</h3>
+          <ul>
+            <li>充電器を変える・強制再起動（この記事の範囲）</li>
+            <li>落ち着いて復旧を試す（連打しない）</li>
+          </ul>
+        </div>
+        <div class="callout danger" style="margin-top:12px;">
+          <h3>避けた方がいい</h3>
+          <ul class="mini">
+            <li>加熱する/冷やすなど極端なこと（結露・悪化の原因）</li>
+            <li>分解・こじ開け</li>
+            <li>膨張や異臭があるのに使い続ける</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">よくある質問（FAQ）</h2>
+        <div class="qa">
+          <h3>Q. 充電マークも出ない。完全に終わり？</h3>
+          <p class="mini">終わりとは限りません。完全放電やケーブル不良が多いので、<b>30分充電→強制再起動→別充電器</b>の順で試すのが最短です。</p>
+        </div>
+        <div class="qa">
+          <h3>Q. 真っ暗だけど通知音は鳴る</h3>
+          <p class="mini">画面（ディスプレイ）側の故障の可能性があります。修理で直るケースが多いので、まずは店に相談がおすすめ。</p>
+        </div>
+        <div class="qa">
+          <h3>Q. 充電中に熱くなる</h3>
+          <p class="mini">少し温かい程度は普通ですが、触れないほど熱い・異臭がするなら危険です。すぐ中止して相談を。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">まとめ</h2>
+        <ul>
+          <li>画面真っ暗＆充電無反応でも、<b>寿命とは限らない</b></li>
+          <li>まずは<b>30分充電</b>→<b>強制再起動</b>→<b>別充電器</b>で切り分け</li>
+          <li>膨張・異臭・異常発熱は<b>中止して相談</b></li>
+          <li>通知音が鳴るなら<b>画面故障</b>の可能性（修理で改善することも）</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">おすすめ（内部リンク）</h2>
+        <ul>
+          <li><a href="instagram-dm-link-clicked-safe.html">インスタのDMで変なリンク踏んだ。その後何も起きなければセーフなの？</a></li>
+          <li><a href="login-attempt-email-ignore.html">「ログイン試行がありました」ってメール届いた。無視して寝て大丈夫？</a></li>
+          <li><a href="browser-history-clear-10sec.html">検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順</a></li>
+        </ul>
+      </section>
+<p class="note">免責：端末やOSの仕様はアップデートで変わることがあります。この記事は一般的な切り分け手順です。不安が強い場合は公式サポートや修理店へ。</p>
+    </main>
+
+    <footer style="padding:30px 0 60px; color:var(--muted); font-size:13px;">
+      <div class="container" style="padding:0;">
+        © 2026 今すぐ解決ノート
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

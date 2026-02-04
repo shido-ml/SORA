@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>インスタ「親しい友達」から外されたら通知される？バレる？相手に起きる変化まとめ｜今すぐ解決ノート</title>
+  <meta name="description" content="結論：通知は行かない。でも緑のリングが消える/限定ストーリーが見えなくなるなど“間接的に気づく”可能性はある。サインと注意点を整理。" />
+  <meta name="theme-color" content="#0B2A4A" />
+  <style>
+:root{
+      --bg:#FFFFFF;
+      --text:#333333;
+      --muted:#5c5c5c;
+      --line:#E8E8E8;
+      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
+      --shadow: 0 10px 24px rgba(11,42,74,.10);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.75;
+      letter-spacing:.01em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:2px solid var(--navy);
+      border-radius:10px;
+      z-index:9999;
+      box-shadow: var(--shadow);
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Nav ===== */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:var(--navy);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:9px;
+      border-radius:7px;
+      background:#fff;
+      opacity:.12;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      letter-spacing:0;
+      margin-top:2px;
+      font-size:12px;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .menu a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Sections ===== */
+    section{ padding:72px 0; }
+    .section-title{
+      font-size:22px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    .section-lead{
+      margin:0;
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    /* ===== Hero ===== */
+    .hero{ padding:64px 0 72px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--navy);
+      background:rgba(11,42,74,.04);
+      font-weight:700;
+      font-size:12.5px;
+      letter-spacing:.03em;
+    }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 60ch;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--navy);
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.02em;
+      box-shadow: 0 10px 24px rgba(11,42,74,.18);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(11,42,74,.22);
+    }
+    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
+
+    .btn-ghost{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:800;
+    }
+    .btn-ghost:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+    }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .mini-title{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--navy);
+      text-transform: uppercase;
+    }
+    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
+    .mini-list li{ margin:8px 0; color:var(--muted); }
+    .mini-list b{ color:var(--text); }
+
+    /* ===== Cards / grids ===== */
+    .grid-cards{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 12px;
+      background:rgba(11,42,74,.08);
+      border:1px solid rgba(11,42,74,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--navy);
+      font-weight:900;
+      margin-bottom:12px;
+      user-select:none;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
+    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* ===== New posts ===== */
+    .post-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      background:#fff;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .post-card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+    }
+    .post-meta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:8px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--navy);
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.03em;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .post-title{
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .post-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* ===== Profile table ===== */
+    .table-wrap{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
+    th, td{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+    }
+    th{
+      width: 220px;
+      text-align:left;
+      color:var(--navy);
+      font-weight:800;
+      background: rgba(11,42,74,.03);
+    }
+    tr:last-child th, tr:last-child td{ border-bottom:none; }
+    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
+
+    /* ===== Contact (enhanced) ===== */
+    .contact-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contact-panel{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:20px;
+    }
+    .contact-panel h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--text);
+      letter-spacing:.01em;
+    }
+    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
+    .contact-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+    .contact-list li{ margin:6px 0; }
+    .contact-kv{
+      margin-top:14px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    .kv-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .kv-row b{ color:var(--text); }
+    .email-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,42,74,.03);
+      color:var(--text);
+      font-weight:700;
+      user-select: all;
+      overflow-wrap:anywhere;
+    }
+    .mini-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .mini-btn:hover{
+      background:rgba(11,42,74,.05);
+      border-color: rgba(11,42,74,.18);
+      text-decoration:none;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font: inherit;
+      line-height: 1.4;
+      transition: border-color .12s ease, box-shadow .12s ease;
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(11,42,74,.35);
+      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
+      outline: none;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:4px;
+    }
+    .form-hint{
+      margin:0;
+      color:var(--muted);
+      font-size:12.5px;
+    }
+    .toast{
+      display:none;
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .toast.show{ display:block; }
+
+    /* ===== Footer ===== */
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:var(--muted);
+      font-weight:600;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    .footer-links a:hover{
+      color:var(--navy);
+      background:rgba(11,42,74,.06);
+      text-decoration:none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      section{ padding:60px 0; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 780px){
+      th{ width: 160px; }
+      .menu{ gap:8px; }
+      .menu a{ padding:8px 8px; }
+      .form-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ===== Focus ===== */
+    :focus-visible{
+      outline: 3px solid rgba(11,42,74,.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; }
+    }
+  
+
+    /* ===== Search ===== */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .searchbar{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .searchbar input{
+      border:0;
+      outline:0;
+      width:100%;
+      font:inherit;
+      font-size:14px;
+      background:transparent;
+      color:var(--text);
+      min-width:0;
+    }
+    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
+    .searchbar .clear{
+      border:0;
+      background:rgba(11,42,74,.06);
+      color:var(--navy);
+      font-weight:900;
+      border-radius:10px;
+      padding:7px 10px;
+      cursor:pointer;
+      flex:0 0 auto;
+      line-height:1;
+    }
+    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
+    .search-meta{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  /* ===== Article-only helpers ===== */
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .meta-pill{ border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:13px; color:var(--muted); background:#fff; }
+  .callout{ border:1px solid var(--line); border-left:6px solid var(--navy); border-radius: var(--radius); padding:14px 14px; background:#fff; }
+  .callout h3{ margin:0 0 8px; font-size:16px; }
+  .steps ol{ margin: 10px 0 0 18px; }
+  .steps li{ margin: 6px 0; }
+  .qa{ border-top:1px solid var(--line); padding-top:14px; margin-top:14px; }
+  .qa h3{ margin:0 0 6px; font-size:16px; }
+  .mini{ font-size:13.5px; color:var(--muted); }
+  .danger{ border-left-color:#b00020; }
+  .ok{ border-left-color:#0a7a2f; }
+  .tip{ border-left-color:#0a5bd3; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <div class="wrap">
+    <div class="topnav"><a href="../index.html">← ホーム</a> <span class="mini">/</span> <a href="../articles.html">記事一覧</a> <span class="mini">/</span> <a href="../policy.html">運営ポリシー</a></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <span class="badge"><span class="dot" aria-hidden="true"></span> Instagram / SNS</span>
+        <h1 style="margin-top:14px;">インスタ「親しい友達」から外されたら通知される？バレる？相手に起きる変化まとめ</h1>
+        <p class="sub">結論：通知は行かない。でも緑のリングが消える/限定ストーリーが見えなくなるなど“間接的に気づく”可能性はある。サインと注意点を整理。</p>
+        <div class="meta-row" aria-label="記事メタ情報">
+          <span class="meta-pill">公開日：2026-01-30</span>
+          <span class="meta-pill">目安：3〜6分</span>
+          <span class="meta-pill">対象：Instagram（ストーリー）</span>
+        </div>
+        <p class="note">先に結論：<b>外されても通知は来ません</b>。ただし、<b>見え方が変わる</b>ので「察する」ことはありえます。</p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="card">
+        <h2 style="margin-top:0;">結論：通知は来ない（でも“変化”は起きる）</h2>
+        <p>インスタの「親しい友達」は、追加・削除しても相手に通知が飛びません。</p>
+        <div class="callout ok">
+          <h3>相手に起きる変化（ざっくり）</h3>
+          <ul>
+            <li>あなたの<b>親しい友達ストーリー（緑のリング）</b>が表示されなくなる</li>
+            <li>親しい友達限定で上げたストーリー/ハイライトが<b>見えなくなる</b>ことがある</li>
+            <li>ただし「外された」と確定できる画面はない（推測しかできない）</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">外されたら、相手の画面で何が変わる？</h2>
+        <p>相手が気づくとしたら、ほとんどが「見え方の差」です。</p>
+
+        <div class="grid" style="margin-top:12px;">
+          <div class="callout tip">
+            <h3>① 緑のリングが消える</h3>
+            <p class="mini">親しい友達限定ストーリーは、見る側に緑色のリングが出ます。外されると、その表示自体が出なくなります。</p>
+          </div>
+          <div class="callout tip">
+            <h3>② 親しい友達ストーリーが見えない</h3>
+            <p class="mini">親しい友達限定で上げたストーリーは、外された人には表示されません（ストーリー一覧に出ない／リンクからも見られない）。</p>
+          </div>
+          <div class="callout">
+            <h3>③ ハイライトが減ったように見えることがある</h3>
+            <p class="mini">親しい友達限定で保存されたハイライトがあると、外された側では“見えない”ため、ハイライトが減ったように感じることがあります。</p>
+          </div>
+        </div>
+
+        <p class="note">ただし、緑リングが出ない理由は「外された」以外にもあります（最近投稿してない・投稿を親しい友達にしてない等）。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">相手に通知が行くケースは？</h2>
+        <div class="callout ok">
+          <h3>基本：親しい友達の追加・削除で通知は行かない</h3>
+          <p class="mini">「○○があなたを親しい友達から外しました」みたいな通知はありません。</p>
+        </div>
+
+        <div class="callout danger" style="margin-top:12px;">
+          <h3>ただし“通知っぽく見える”ことはありえる</h3>
+          <ul class="mini">
+            <li>相手がたまたま緑リングをいつも見ていて「最近見えない」と気づく</li>
+            <li>親しい友達限定の話題が合わなくなる（「あのストーリー見た？」が通じない）</li>
+            <li>あなたが親しい友達に上げた内容を、相手が見れなくなって察する</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">「外されたか確実に確認する方法」はある？</h2>
+        <p><b>確実な方法はありません</b>。アプリ内に「自分が親しい友達に入ってるか」を表示する画面はないためです。</p>
+        <div class="callout tip">
+          <h3>推測のサイン（当てになりすぎ注意）</h3>
+          <ul>
+            <li>以前は緑リングのストーリーがよく出ていたのに、最近まったく出ない</li>
+            <li>親しい友達っぽいハイライトが急に見えなくなった</li>
+            <li>共通の友達と“見えてる内容”が違う</li>
+          </ul>
+        </div>
+        <p class="note">サインがあっても、相手が単に「親しい友達投稿してない」「ストーリーをあまり上げてない」だけの可能性もあります。</p>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">混同しがち：ブロック/制限/フォロー外しとの違い</h2>
+        <div class="grid" style="margin-top:12px;">
+          <div class="callout">
+            <h3>親しい友達から外す</h3>
+            <p class="mini">通知なし。限定ストーリーが見えなくなる（緑リングが出ない）。</p>
+          </div>
+          <div class="callout">
+            <h3>制限（Restrict）</h3>
+            <p class="mini">通知なし。コメントやDMの見え方が変わる（相手が気づきにくい）。</p>
+          </div>
+          <div class="callout danger">
+            <h3>ブロック</h3>
+            <p class="mini">通知はないが、プロフィールが見つからない等で気づかれる可能性が高い。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">トラブル回避のコツ</h2>
+        <div class="steps">
+          <ol>
+            <li>親しい友達に上げる内容は「スクショされてもOK」くらいで考える</li>
+            <li>“外されたかも”で突っ込むと、関係が悪化しやすい（相手の事情もある）</li>
+            <li>どうしても気になるなら、ストーリーじゃなく普通に会話で距離感を調整する</li>
+          </ol>
+        </div>
+        <div class="callout ok" style="margin-top:12px;">
+          <h3>メンタル的に大事な話</h3>
+          <p class="mini">親しい友達は「整理される」ことが普通にあります。嫌われた確定ではないので、まずは深呼吸でOK。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">よくある質問（FAQ）</h2>
+
+        <div class="qa">
+          <h3>Q. 外された瞬間に通知は来る？</h3>
+          <p class="mini">来ません。通知は出ない仕様です。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. 外されたら、過去に出てた親しい友達ストーリーはどうなる？</h3>
+          <p class="mini">基本は見えなくなります。相手の「ストーリー一覧」に表示されなくなるイメージです。</p>
+        </div>
+
+        <div class="qa">
+          <h3>Q. 外されたか確実に知る方法はある？</h3>
+          <p class="mini">確実に確認する方法はありません。見え方から推測するしかないです。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">まとめ</h2>
+        <ul>
+          <li>親しい友達から外されても<b>通知は来ない</b></li>
+          <li>ただし<b>緑リングが消える/限定ストーリーが見えない</b>などの変化は起きる</li>
+          <li>外されたか<b>確定する画面はない</b>（推測のみ）</li>
+          <li>気になる時ほど、まずはトラブルを増やさない行動が安全</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 style="margin-top:0;">おすすめ（内部リンク）</h2>
+        <ul>
+          <li><a href="instagram-dm-link-clicked-safe.html">インスタのDMで変なリンク踏んだ。その後何も起きなければセーフなの？</a></li>
+          <li><a href="login-attempt-email-ignore.html">「ログイン試行がありました」ってメール届いた。無視して寝て大丈夫？</a></li>
+          <li><a href="browser-history-clear-10sec.html">検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順</a></li>
+        </ul>
+      </section>
+<p class="note">免責：Instagramの仕様はアップデートで変わることがあります。表示が違っても「親しい友達（Close Friends）」周辺の仕様は大枠同じです。</p>
+    </main>
+
+    <footer style="padding:30px 0 60px; color:var(--muted); font-size:13px;">
+      <div class="container" style="padding:0;">
+        © 2026 今すぐ解決ノート
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
