@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）｜今すぐ解決ノート</title>
-  <meta name="description" content="ログインできない／不正投稿／メール・電話番号が変わった等の「乗っ取り」疑いの時に、最短で被害を止める手順をまとめ。X・Instagram・LINEの共通手順と個別手順。" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）｜今すぐ解決ノート</title>
+<meta content="ログインできない／不正投稿／メール・電話番号が変わった等の「乗っ取り」疑いの時に、最短で被害を止める手順をまとめ。X・Instagram・LINEの共通手順と個別手順。" name="description"/>
+<style>
     :root{
       --bg: #0b0f17;
       --panel: rgba(255,255,255,.06);
@@ -322,366 +323,331 @@
     }
     .topnav a:hover{ text-decoration: underline; }
   </style>
-</head>
+<link href="https://shido-ml.github.io/SORA/articles/account-hijacked-sos.html" rel="canonical"/><meta content="https://shido-ml.github.io/SORA/articles/account-hijacked-sos.html" property="og:url"/><meta content="今すぐ解決ノート" property="og:site_name"/></head>
 <body>
-  <div class="wrap">
-
-    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
-
-    <header class="hero">
-      <div class="hero-inner">
-        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / セキュリティ</p>
-        <h1>SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）</h1>
-        <p class="sub">
+<div class="wrap">
+<div class="topnav"><a href="../index.html">← ホームに戻る</a> <span class="mini">/</span> <a href="../articles.html#ai">AIラクワザ</a></div>
+<header class="hero">
+<div class="hero-inner">
+<p class="kicker"><span aria-hidden="true" class="dot"></span> SNS / セキュリティ</p>
+<h1>SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）</h1>
+<p class="sub">
           「勝手に投稿されてる」「フォロー/DMが増えてる」「ログインできない」「メールや電話番号が変わった」などは
           <strong>乗っ取り（不正アクセス）</strong>の可能性があります。大事なのは、<strong>証拠集めより先に “被害を止める”</strong> こと。
           この記事は、X/Instagram/LINE共通で使える<strong>緊急手順</strong>を、最短順にまとめました。
         </p>
-
-        <nav class="toc" aria-label="目次">
-          <ul>
-            <li><a href="#quick">まず最初に：30秒でやること（被害停止）</a></li>
-            <li><a href="#signs">乗っ取りのサイン（よくある症状）</a></li>
-            <li><a href="#common">共通：最短の緊急手順（順番が大事）</a></li>
-            <li><a href="#can-login">ログインできる場合の手順</a></li>
-            <li><a href="#cannot-login">ログインできない場合の手順</a></li>
-            <li><a href="#x">X（旧Twitter）：乗っ取り対処</a></li>
-            <li><a href="#ig">Instagram：乗っ取り対処</a></li>
-            <li><a href="#line">LINE：乗っ取り対処</a></li>
-            <li><a href="#after">復旧後にやるべきこと（再発防止）</a></li>
-            <li><a href="#template">周りに送る注意喚起テンプレ</a></li>
-          </ul>
-        </nav>
-
-        <div class="callout">
-          <p class="muted" style="margin:0;">
-            <strong>いちばん大事：</strong>
+<nav aria-label="目次" class="toc">
+<ul>
+<li><a href="#quick">まず最初に：30秒でやること（被害停止）</a></li>
+<li><a href="#signs">乗っ取りのサイン（よくある症状）</a></li>
+<li><a href="#common">共通：最短の緊急手順（順番が大事）</a></li>
+<li><a href="#can-login">ログインできる場合の手順</a></li>
+<li><a href="#cannot-login">ログインできない場合の手順</a></li>
+<li><a href="#x">X（旧Twitter）：乗っ取り対処</a></li>
+<li><a href="#ig">Instagram：乗っ取り対処</a></li>
+<li><a href="#line">LINE：乗っ取り対処</a></li>
+<li><a href="#after">復旧後にやるべきこと（再発防止）</a></li>
+<li><a href="#template">周りに送る注意喚起テンプレ</a></li>
+</ul>
+</nav>
+<div class="callout">
+<p class="muted" style="margin:0;">
+<strong>いちばん大事：</strong>
             ① <strong>パスワード変更</strong> → ② <strong>全端末ログアウト</strong> → ③ <strong>2段階認証</strong> → ④ <strong>連携アプリ解除</strong>。
             ここまでやると、ほとんどの乗っ取りは止まります。
           </p>
-        </div>
-      </div>
-    </header>
-
-    <section class="card" id="quick">
-      <h2>まず最初に：30秒でやること（被害停止）</h2>
-      <div class="grid">
-        <div class="box">
-          <div class="label"><span class="badge warn">① まずパスワード変更（最優先）</span></div>
-          <ul>
-            <li>できれば<strong>別端末</strong>や<strong>ブラウザ</strong>で操作（乗っ取られ端末が怪しい時）</li>
-            <li>同じパスワードの使い回しは全て変更</li>
-          </ul>
-        </div>
-        <div class="box">
-          <div class="label"><span class="badge warn">② 全端末からログアウト</span></div>
-          <ul>
-            <li>「ログイン中の端末/セッション」を全部切る</li>
-            <li>乗っ取り犯の操作を止める効果が大きい</li>
-          </ul>
-        </div>
-        <div class="box">
-          <div class="label"><span class="badge ok">③ 2段階認証（2FA）をON</span></div>
-          <ul>
-            <li>可能なら<strong>認証アプリ</strong>（SMSより強い）</li>
-          </ul>
-        </div>
-        <div class="box">
-          <div class="label"><span class="badge ok">④ 連携アプリ/外部サービスを解除</span></div>
-          <ul>
-            <li>知らない連携があれば即解除</li>
-          </ul>
-        </div>
-      </div>
-      <div class="callout" style="margin-top:14px;">
-        <p class="muted" style="margin:0;">
-          <strong>注意：</strong>「怪しいURLにログインした」「無料ツールで認証した」直後に起きたなら、まず<strong>そのサイトに再ログインしない</strong>でOK。
+</div>
+</div>
+</header>
+<section class="card" id="quick">
+<h2>まず最初に：30秒でやること（被害停止）</h2>
+<div class="grid">
+<div class="box">
+<div class="label"><span class="badge warn">① まずパスワード変更（最優先）</span></div>
+<ul>
+<li>できれば<strong>別端末</strong>や<strong>ブラウザ</strong>で操作（乗っ取られ端末が怪しい時）</li>
+<li>同じパスワードの使い回しは全て変更</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">② 全端末からログアウト</span></div>
+<ul>
+<li>「ログイン中の端末/セッション」を全部切る</li>
+<li>乗っ取り犯の操作を止める効果が大きい</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">③ 2段階認証（2FA）をON</span></div>
+<ul>
+<li>可能なら<strong>認証アプリ</strong>（SMSより強い）</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">④ 連携アプリ/外部サービスを解除</span></div>
+<ul>
+<li>知らない連携があれば即解除</li>
+</ul>
+</div>
+</div>
+<div class="callout" style="margin-top:14px;">
+<p class="muted" style="margin:0;">
+<strong>注意：</strong>「怪しいURLにログインした」「無料ツールで認証した」直後に起きたなら、まず<strong>そのサイトに再ログインしない</strong>でOK。
           先にSNS側を守るのが正解です。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="signs">
-      <h2>乗っ取りのサイン（よくある症状）</h2>
-      <div class="grid">
-        <div class="box">
-          <h3 style="margin:0 0 8px;">勝手に投稿/DMが送られる</h3>
-          <ul>
-            <li>仮想通貨・投資・プレゼント系の投稿が増える</li>
-            <li>同じ文を複数人にDMしている</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3 style="margin:0 0 8px;">フォロー/いいねが増える</h3>
-          <ul>
-            <li>知らない海外アカウントを大量フォロー</li>
-            <li>広告っぽい投稿にいいね</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3 style="margin:0 0 8px;">ログインできない/パスワードが変わった</h3>
-          <ul>
-            <li>パスワードが通らない</li>
-            <li>メール/電話番号が変わっている</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3 style="margin:0 0 8px;">通知に「見覚えのないログイン」</h3>
-          <ul>
-            <li>知らない端末・地域からログイン通知</li>
-            <li>身に覚えのないコードが届く</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="common">
-      <h2>共通：最短の緊急手順（順番が大事）</h2>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">Step 1：パスワードを変える（できれば長く）</span></div>
-        <ul>
-          <li>12文字以上・英大文字/小文字/数字/記号を混ぜる</li>
-          <li>他サービスと同じパスワードを使ってたなら、<strong>同じものを全部変更</strong></li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">Step 2：ログイン中の端末を全部切る（セッション削除）</span></div>
-        <ul>
-          <li>「ログイン履歴」「端末」「アクティビティ」などの項目から実行</li>
-          <li>これで、相手が持っているログイン状態を強制解除できます</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge ok">Step 3：2段階認証をON</span></div>
-        <ul>
-          <li>可能なら「認証アプリ」を使う（SMSはSIM乗っ取り等のリスクがある）</li>
-          <li>バックアップコードが出る場合は、安全な場所に保管</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge ok">Step 4：連携アプリ（外部アクセス）を見直す</span></div>
-        <ul>
-          <li>「アプリとセッション」「接続済みアプリ」などを確認</li>
-          <li>知らない連携があれば即削除</li>
-          <li>便利ツール系（フォロワー分析/自動いいね等）はリスクが高いことが多い</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge ok">Step 5：メールも守る（超重要）</span></div>
-        <ul>
-          <li>SNSのログインがメール経由なら、メールが乗っ取られていると再発します</li>
-          <li>メール（Gmail等）のパスワード変更・2FAも必ず</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card" id="can-login">
-      <h2>ログインできる場合の手順（ここまでで大体止まる）</h2>
-      <div class="grid">
-        <div class="box">
-          <div class="label"><span class="badge ok">① パスワード変更</span></div>
-          <p class="muted" style="margin:0;">まずここ。次に全端末ログアウト。</p>
-        </div>
-        <div class="box">
-          <div class="label"><span class="badge ok">② 全端末ログアウト</span></div>
-          <p class="muted" style="margin:0;">相手の操作を止める。</p>
-        </div>
-        <div class="box">
-          <div class="label"><span class="badge ok">③ 2段階認証ON</span></div>
-          <p class="muted" style="margin:0;">再ログインを防ぐ。</p>
-        </div>
-        <div class="box">
-          <div class="label"><span class="badge ok">④ 連携アプリ解除</span></div>
-          <p class="muted" style="margin:0;">“裏口”を塞ぐ。</p>
-        </div>
-      </div>
-      <div class="callout" style="margin-top:14px;">
-        <p class="muted" style="margin:0;">
+</div>
+</section>
+<section class="card" id="signs">
+<h2>乗っ取りのサイン（よくある症状）</h2>
+<div class="grid">
+<div class="box">
+<h3 style="margin:0 0 8px;">勝手に投稿/DMが送られる</h3>
+<ul>
+<li>仮想通貨・投資・プレゼント系の投稿が増える</li>
+<li>同じ文を複数人にDMしている</li>
+</ul>
+</div>
+<div class="box">
+<h3 style="margin:0 0 8px;">フォロー/いいねが増える</h3>
+<ul>
+<li>知らない海外アカウントを大量フォロー</li>
+<li>広告っぽい投稿にいいね</li>
+</ul>
+</div>
+<div class="box">
+<h3 style="margin:0 0 8px;">ログインできない/パスワードが変わった</h3>
+<ul>
+<li>パスワードが通らない</li>
+<li>メール/電話番号が変わっている</li>
+</ul>
+</div>
+<div class="box">
+<h3 style="margin:0 0 8px;">通知に「見覚えのないログイン」</h3>
+<ul>
+<li>知らない端末・地域からログイン通知</li>
+<li>身に覚えのないコードが届く</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="card" id="common">
+<h2>共通：最短の緊急手順（順番が大事）</h2>
+<div class="box">
+<div class="label"><span class="badge warn">Step 1：パスワードを変える（できれば長く）</span></div>
+<ul>
+<li>12文字以上・英大文字/小文字/数字/記号を混ぜる</li>
+<li>他サービスと同じパスワードを使ってたなら、<strong>同じものを全部変更</strong></li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">Step 2：ログイン中の端末を全部切る（セッション削除）</span></div>
+<ul>
+<li>「ログイン履歴」「端末」「アクティビティ」などの項目から実行</li>
+<li>これで、相手が持っているログイン状態を強制解除できます</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">Step 3：2段階認証をON</span></div>
+<ul>
+<li>可能なら「認証アプリ」を使う（SMSはSIM乗っ取り等のリスクがある）</li>
+<li>バックアップコードが出る場合は、安全な場所に保管</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">Step 4：連携アプリ（外部アクセス）を見直す</span></div>
+<ul>
+<li>「アプリとセッション」「接続済みアプリ」などを確認</li>
+<li>知らない連携があれば即削除</li>
+<li>便利ツール系（フォロワー分析/自動いいね等）はリスクが高いことが多い</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">Step 5：メールも守る（超重要）</span></div>
+<ul>
+<li>SNSのログインがメール経由なら、メールが乗っ取られていると再発します</li>
+<li>メール（Gmail等）のパスワード変更・2FAも必ず</li>
+</ul>
+</div>
+</section>
+<section class="card" id="can-login">
+<h2>ログインできる場合の手順（ここまでで大体止まる）</h2>
+<div class="grid">
+<div class="box">
+<div class="label"><span class="badge ok">① パスワード変更</span></div>
+<p class="muted" style="margin:0;">まずここ。次に全端末ログアウト。</p>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">② 全端末ログアウト</span></div>
+<p class="muted" style="margin:0;">相手の操作を止める。</p>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">③ 2段階認証ON</span></div>
+<p class="muted" style="margin:0;">再ログインを防ぐ。</p>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">④ 連携アプリ解除</span></div>
+<p class="muted" style="margin:0;">“裏口”を塞ぐ。</p>
+</div>
+</div>
+<div class="callout" style="margin-top:14px;">
+<p class="muted" style="margin:0;">
           ここまでやっても不正投稿が続く場合は、<strong>端末（スマホ/PC）自体が怪しい</strong>可能性。
           いったん別端末で操作し、怪しいアプリ/拡張機能を削除してください。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="cannot-login">
-      <h2>ログインできない場合の手順（メール/電話番号が変わった時）</h2>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">1) まず公式の「アカウント復旧」ルートを使う</span></div>
-        <ul>
-          <li>各SNSの「パスワードを忘れた」「ログインできない」から復旧</li>
-          <li>メール/電話番号に届くコードで本人確認</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">2) 登録メールに「変更通知」が来てないか確認</span></div>
-        <ul>
-          <li>メール変更時は通知が来ることが多い（戻せるリンクが付く場合あり）</li>
-          <li>迷惑メールも確認</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge ok">3) 使ってるメール自体も乗っ取られてないか確認</span></div>
-        <ul>
-          <li>メールが奪われていると復旧コードも盗まれます</li>
-          <li>先にメールのパスワード変更・2FAを入れるのが安全</li>
-        </ul>
-      </div>
-
-      <div class="callout" style="margin-top:14px;">
-        <p class="muted" style="margin:0;">
+</div>
+</section>
+<section class="card" id="cannot-login">
+<h2>ログインできない場合の手順（メール/電話番号が変わった時）</h2>
+<div class="box">
+<div class="label"><span class="badge warn">1) まず公式の「アカウント復旧」ルートを使う</span></div>
+<ul>
+<li>各SNSの「パスワードを忘れた」「ログインできない」から復旧</li>
+<li>メール/電話番号に届くコードで本人確認</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">2) 登録メールに「変更通知」が来てないか確認</span></div>
+<ul>
+<li>メール変更時は通知が来ることが多い（戻せるリンクが付く場合あり）</li>
+<li>迷惑メールも確認</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">3) 使ってるメール自体も乗っ取られてないか確認</span></div>
+<ul>
+<li>メールが奪われていると復旧コードも盗まれます</li>
+<li>先にメールのパスワード変更・2FAを入れるのが安全</li>
+</ul>
+</div>
+<div class="callout" style="margin-top:14px;">
+<p class="muted" style="margin:0;">
           「復旧できない」「連絡先が全部変わってる」場合は、各SNSのサポート（本人確認）に進む必要があります。
           その間も、周りに注意喚起（次のテンプレ）を送るのが大事です。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="x">
-      <h2>X（旧Twitter）：乗っ取り対処</h2>
-      <div class="box">
-        <div class="label"><span class="badge ok">ログインできる場合</span></div>
-        <ul>
-          <li>設定とプライバシー → アカウント → パスワードを変更</li>
-          <li>設定とプライバシー → セキュリティとアカウントアクセス → アプリとセッション
+</div>
+</section>
+<section class="card" id="x">
+<h2>X（旧Twitter）：乗っ取り対処</h2>
+<div class="box">
+<div class="label"><span class="badge ok">ログインできる場合</span></div>
+<ul>
+<li>設定とプライバシー → アカウント → パスワードを変更</li>
+<li>設定とプライバシー → セキュリティとアカウントアクセス → アプリとセッション
             <ul>
-              <li>セッション（ログイン中の端末）を確認して、知らないものは削除</li>
-              <li>接続済みアプリを確認して、怪しいものは削除</li>
-            </ul>
-          </li>
-          <li>2要素認証（2FA）をON</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">ログインできない場合</span></div>
-        <ul>
-          <li>ログイン画面の「パスワードを忘れた」から復旧</li>
-          <li>登録メールに「アカウント変更」通知が来ていないか確認</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card" id="ig">
-      <h2>Instagram：乗っ取り対処</h2>
-      <div class="box">
-        <div class="label"><span class="badge ok">ログインできる場合</span></div>
-        <ul>
-          <li>設定とアクティビティ → アカウントセンター → パスワードとセキュリティ
+<li>セッション（ログイン中の端末）を確認して、知らないものは削除</li>
+<li>接続済みアプリを確認して、怪しいものは削除</li>
+</ul>
+</li>
+<li>2要素認証（2FA）をON</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">ログインできない場合</span></div>
+<ul>
+<li>ログイン画面の「パスワードを忘れた」から復旧</li>
+<li>登録メールに「アカウント変更」通知が来ていないか確認</li>
+</ul>
+</div>
+</section>
+<section class="card" id="ig">
+<h2>Instagram：乗っ取り対処</h2>
+<div class="box">
+<div class="label"><span class="badge ok">ログインできる場合</span></div>
+<ul>
+<li>設定とアクティビティ → アカウントセンター → パスワードとセキュリティ
             <ul>
-              <li>パスワード変更</li>
-              <li>ログインしている場所（ログインアクティビティ）を確認して、不明な場所をログアウト</li>
-            </ul>
-          </li>
-          <li>2段階認証をON（可能なら認証アプリ）</li>
-          <li>連携アプリ/ウェブサイト（接続）を見直す</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">ログインできない場合</span></div>
-        <ul>
-          <li>ログイン画面 → 「ログインに関するヘルプ」/「パスワードを忘れた」</li>
-          <li>メール変更の通知が来ていないか確認</li>
-          <li>本人確認（動画セルフィー等）が必要になる場合あり</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card" id="line">
-      <h2>LINE：乗っ取り対処</h2>
-      <p class="muted">LINEは「別端末ログイン」や「連携アプリ」が原因になることがあります。被害が広がる前に止めましょう。</p>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">まずやること（ログインできる前提）</span></div>
-        <ul>
-          <li>LINE設定 → アカウント → パスワード変更</li>
-          <li>LINE設定 → アカウント（またはログイン/端末）→ ログイン中の端末を確認して、知らない端末はログアウト</li>
-          <li>2段階認証/ログイン許可（表示があれば）を見直す</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">ログインできない場合</span></div>
-        <ul>
-          <li>電話番号/メールの認証が必要になることがあります</li>
-          <li>端末変更直後や、SMSが受け取れない場合は、回線側（SIM/番号）も確認</li>
-        </ul>
-      </div>
-
-      <div class="callout" style="margin-top:14px;">
-        <p class="muted" style="margin:0;">
-          <strong>LINEの注意：</strong>勝手に友だちへメッセージが送られているなら、周りにも被害が出ます。
+<li>パスワード変更</li>
+<li>ログインしている場所（ログインアクティビティ）を確認して、不明な場所をログアウト</li>
+</ul>
+</li>
+<li>2段階認証をON（可能なら認証アプリ）</li>
+<li>連携アプリ/ウェブサイト（接続）を見直す</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">ログインできない場合</span></div>
+<ul>
+<li>ログイン画面 → 「ログインに関するヘルプ」/「パスワードを忘れた」</li>
+<li>メール変更の通知が来ていないか確認</li>
+<li>本人確認（動画セルフィー等）が必要になる場合あり</li>
+</ul>
+</div>
+</section>
+<section class="card" id="line">
+<h2>LINE：乗っ取り対処</h2>
+<p class="muted">LINEは「別端末ログイン」や「連携アプリ」が原因になることがあります。被害が広がる前に止めましょう。</p>
+<div class="box">
+<div class="label"><span class="badge warn">まずやること（ログインできる前提）</span></div>
+<ul>
+<li>LINE設定 → アカウント → パスワード変更</li>
+<li>LINE設定 → アカウント（またはログイン/端末）→ ログイン中の端末を確認して、知らない端末はログアウト</li>
+<li>2段階認証/ログイン許可（表示があれば）を見直す</li>
+</ul>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">ログインできない場合</span></div>
+<ul>
+<li>電話番号/メールの認証が必要になることがあります</li>
+<li>端末変更直後や、SMSが受け取れない場合は、回線側（SIM/番号）も確認</li>
+</ul>
+</div>
+<div class="callout" style="margin-top:14px;">
+<p class="muted" style="margin:0;">
+<strong>LINEの注意：</strong>勝手に友だちへメッセージが送られているなら、周りにも被害が出ます。
           テンプレで早めに注意喚起するのがベストです。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="after">
-      <h2>復旧後にやるべきこと（再発防止）</h2>
-
-      <div class="grid">
-        <div class="box">
-          <h3 style="margin:0 0 8px;">同じパスワードの使い回しをやめる</h3>
-          <p class="muted" style="margin:0;">パスワード漏洩で連鎖乗っ取りが起きやすい。</p>
-        </div>
-        <div class="box">
-          <h3 style="margin:0 0 8px;">2段階認証は認証アプリが強い</h3>
-          <p class="muted" style="margin:0;">SMSより安全。可能なら切替。</p>
-        </div>
-        <div class="box">
-          <h3 style="margin:0 0 8px;">怪しいアプリ/拡張機能を削除</h3>
-          <p class="muted" style="margin:0;">「自動化」「無料解析」「激安」系は注意。</p>
-        </div>
-        <div class="box">
-          <h3 style="margin:0 0 8px;">友だち・フォロワーに注意喚起</h3>
-          <p class="muted" style="margin:0;">被害拡大を止める。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="template">
-      <h2>周りに送る注意喚起テンプレ</h2>
-      <p class="muted">「変なDM/リンクを踏まないで！」を短く伝えるのがポイント。</p>
-
-      <div class="grid">
-        <div class="box">
-          <div class="label"><span class="badge ok">DM/LINE 例文（短い）</span></div>
-          <pre class="pre">ごめん、今SNSが乗っ取られたかも。
+</div>
+</section>
+<section class="card" id="after">
+<h2>復旧後にやるべきこと（再発防止）</h2>
+<div class="grid">
+<div class="box">
+<h3 style="margin:0 0 8px;">同じパスワードの使い回しをやめる</h3>
+<p class="muted" style="margin:0;">パスワード漏洩で連鎖乗っ取りが起きやすい。</p>
+</div>
+<div class="box">
+<h3 style="margin:0 0 8px;">2段階認証は認証アプリが強い</h3>
+<p class="muted" style="margin:0;">SMSより安全。可能なら切替。</p>
+</div>
+<div class="box">
+<h3 style="margin:0 0 8px;">怪しいアプリ/拡張機能を削除</h3>
+<p class="muted" style="margin:0;">「自動化」「無料解析」「激安」系は注意。</p>
+</div>
+<div class="box">
+<h3 style="margin:0 0 8px;">友だち・フォロワーに注意喚起</h3>
+<p class="muted" style="margin:0;">被害拡大を止める。</p>
+</div>
+</div>
+</section>
+<section class="card" id="template">
+<h2>周りに送る注意喚起テンプレ</h2>
+<p class="muted">「変なDM/リンクを踏まないで！」を短く伝えるのがポイント。</p>
+<div class="grid">
+<div class="box">
+<div class="label"><span class="badge ok">DM/LINE 例文（短い）</span></div>
+<pre class="pre">ごめん、今SNSが乗っ取られたかも。
 もし自分から変なDM/リンクが届いてたら、開かずに無視して！</pre>
-        </div>
-
-        <div class="box">
-          <div class="label"><span class="badge ok">少し丁寧版</span></div>
-          <pre class="pre">お疲れ！今アカウントが不正アクセスされた可能性があって対応中です。
+</div>
+<div class="box">
+<div class="label"><span class="badge ok">少し丁寧版</span></div>
+<pre class="pre">お疲れ！今アカウントが不正アクセスされた可能性があって対応中です。
 自分から怪しいURLや投資系のメッセージが届いていたら、開かずに削除してください。
 復旧できたらまた連絡します。</pre>
-        </div>
-      </div>
-    </section>
-
-<section class="card" id="recommend">
-  <h2>おすすめ（内部リンク）</h2>
-  <ul>
-        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
-        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
-        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
-  </ul>
+</div>
+</div>
 </section>
-
+<section class="card" id="recommend">
+<h2>おすすめ（内部リンク）</h2>
+<ul>
+<li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+<li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+<li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+</ul>
+</section>
 <footer>
-      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
-    </footer>
-
-  </div>
-
-  <script>
+<div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+</footer>
+</div>
+<script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>

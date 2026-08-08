@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xでアカウントを一時停止・解除する方法（30日以内に復活）｜今すぐ解決ノート</title>
-  <meta name="description" content="X（旧Twitter）のアカウントを一時停止（無効化）する手順と、解除（再開）する方法。iPhone/Android/PC別に、30日ルール・注意点・うまくいかない時の対処まで詳しく解説。" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Xでアカウントを一時停止・解除する方法（30日以内に復活）｜今すぐ解決ノート</title>
+<meta content="X（旧Twitter）のアカウントを一時停止（無効化）する手順と、解除（再開）する方法。iPhone/Android/PC別に、30日ルール・注意点・うまくいかない時の対処まで詳しく解説。" name="description"/>
+<style>
     :root{
       --bg: #0b0f17;
       --panel: rgba(255,255,255,.06);
@@ -322,194 +323,169 @@
     }
     .topnav a:hover{ text-decoration: underline; }
   </style>
-</head>
-
+<link href="https://shido-ml.github.io/SORA/articles/x-account-deactivate.html" rel="canonical"/><meta content="https://shido-ml.github.io/SORA/articles/x-account-deactivate.html" property="og:url"/><meta content="今すぐ解決ノート" property="og:site_name"/></head>
 <body>
-  <div class="wrap">
-
-    <div class="topnav"><a href="../index.html">← ホームに戻る</a></div>
-
-    <header class="hero" id="top">
-      <div class="hero-inner">
-        <p class="kicker"><span class="dot" aria-hidden="true"></span> SNS / X</p>
-        <h1>Xでアカウントを一時停止・解除する方法</h1>
-        <p class="sub">
+<div class="wrap">
+<div class="topnav"><a href="../index.html">← ホームに戻る</a> <span class="mini">/</span> <a href="../articles.html#ai">AIラクワザ</a></div>
+<header class="hero" id="top">
+<div class="hero-inner">
+<p class="kicker"><span aria-hidden="true" class="dot"></span> SNS / X</p>
+<h1>Xでアカウントを一時停止・解除する方法</h1>
+<p class="sub">
           Xの「一時停止（無効化）」は<strong>すぐ消える</strong>ように見えますが、実は<strong>30日間の猶予</strong>があります。<br/>
           その間にログインすれば<strong>解除（再開）</strong>できます。やり方と注意点を、迷わない順でまとめます。
         </p>
-
-        <nav class="toc" aria-label="目次">
-          <div class="toc-title">目次</div>
-          <ul>
-            <li><a href="#before">一時停止の前に知っておくこと（重要）</a></li>
-            <li><a href="#ios">iPhone/iPadアプリ：一時停止する手順</a></li>
-            <li><a href="#android">Androidアプリ：一時停止する手順</a></li>
-            <li><a href="#web">PCブラウザ：一時停止する手順</a></li>
-            <li><a href="#reactivate">解除（再開）する方法</a></li>
-            <li><a href="#trouble">うまく解除できない時の対処</a></li>
-            <li><a href="#qa">よくある質問</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="card" id="before">
-      <h2>一時停止の前に知っておくこと（重要）</h2>
-
-      <div class="grid">
-        <div>
-          <h3 style="margin:0 0 8px;">30日ルール</h3>
-          <p class="muted">
+<nav aria-label="目次" class="toc">
+<div class="toc-title">目次</div>
+<ul>
+<li><a href="#before">一時停止の前に知っておくこと（重要）</a></li>
+<li><a href="#ios">iPhone/iPadアプリ：一時停止する手順</a></li>
+<li><a href="#android">Androidアプリ：一時停止する手順</a></li>
+<li><a href="#web">PCブラウザ：一時停止する手順</a></li>
+<li><a href="#reactivate">解除（再開）する方法</a></li>
+<li><a href="#trouble">うまく解除できない時の対処</a></li>
+<li><a href="#qa">よくある質問</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="card" id="before">
+<h2>一時停止の前に知っておくこと（重要）</h2>
+<div class="grid">
+<div>
+<h3 style="margin:0 0 8px;">30日ルール</h3>
+<p class="muted">
             一時停止するとプロフィールは見えなくなりますが、<strong>30日以内にログイン</strong>すれば復活できます。<br/>
             30日を過ぎると<strong>アカウントは削除</strong>され、基本的に戻せません。
           </p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px;">消えるのは“表示”</h3>
-          <p class="muted">
+</div>
+<div>
+<h3 style="margin:0 0 8px;">消えるのは“表示”</h3>
+<p class="muted">
             一時停止中は、あなたのプロフィールやポストは見えなくなります。<br/>
             ただし検索エンジンの表示など、外部に残ることがあります（X側では操作できません）。
           </p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px;">データを残したいなら</h3>
-          <p class="muted">
+</div>
+<div>
+<h3 style="margin:0 0 8px;">データを残したいなら</h3>
+<p class="muted">
             必要なら、一時停止の前に<strong>データのダウンロード</strong>を検討。<br/>
             ログインできない/パスワード不明だと、解除もできなくなりがちです。
           </p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">注意</span> <span class="muted">「凍結（suspended）」とは別</span></div>
-        <p class="muted">
+</div>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">注意</span> <span class="muted">「凍結（suspended）」とは別</span></div>
+<p class="muted">
           ここでの「一時停止」はあなたが自分で行う<strong>無効化</strong>です。<br/>
           ルール違反などでアカウントが<strong>凍結/ロック</strong>されている場合は、解除方法が別になります。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="ios">
-      <h2>iPhone/iPadアプリ：一時停止する手順</h2>
-      <ol>
-        <li>Xアプリを開き、下の<strong>プロフィールアイコン</strong> → <strong>設定とプライバシー</strong></li>
-        <li><strong>アカウント</strong>（または「アカウント情報」）を開く</li>
-        <li><strong>アカウントを停止（無効化）</strong> を選ぶ</li>
-        <li>注意事項を読み、下の<strong>停止（無効化）</strong></li>
-        <li>確認のために<strong>パスワード入力</strong> → 完了</li>
-      </ol>
-
-      <div class="callout">
-        <p class="muted">
+</div>
+</section>
+<section class="card" id="ios">
+<h2>iPhone/iPadアプリ：一時停止する手順</h2>
+<ol>
+<li>Xアプリを開き、下の<strong>プロフィールアイコン</strong> → <strong>設定とプライバシー</strong></li>
+<li><strong>アカウント</strong>（または「アカウント情報」）を開く</li>
+<li><strong>アカウントを停止（無効化）</strong> を選ぶ</li>
+<li>注意事項を読み、下の<strong>停止（無効化）</strong></li>
+<li>確認のために<strong>パスワード入力</strong> → 完了</li>
+</ol>
+<div class="callout">
+<p class="muted">
           アプリの表示名は更新で少し変わることがあります。<br/>
           見つからない場合は、次の「PCブラウザ手順」でやるのが確実です。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="android">
-      <h2>Androidアプリ：一時停止する手順</h2>
-      <ol>
-        <li>Xアプリ → <strong>プロフィールアイコン</strong> → <strong>設定とプライバシー</strong></li>
-        <li><strong>アカウント</strong> を開く</li>
-        <li><strong>アカウントを停止（無効化）</strong></li>
-        <li>確認 → <strong>停止（無効化）</strong> → <strong>パスワード</strong>入力</li>
-      </ol>
-      <p class="muted">※Androidも、見つからない時はPCブラウザ経由が確実です。</p>
-    </section>
-
-    <section class="card" id="web">
-      <h2>PCブラウザ：一時停止する手順（いちばん確実）</h2>
-      <ol>
-        <li>x.com を開いてログイン</li>
-        <li>左メニューの <strong>もっと見る</strong> → <strong>設定とプライバシー</strong></li>
-        <li><strong>アカウント</strong> → <strong>アカウントを停止（無効化）</strong></li>
-        <li>注意事項を確認 → <strong>停止（無効化）</strong></li>
-        <li>パスワード入力 → 完了</li>
-      </ol>
-
-      <div class="box">
-        <div class="label"><span class="badge ok">コツ</span> <span class="muted">止める前に確認するもの</span></div>
-        <ul>
-          <li>登録メール/電話番号が今も使えるか</li>
-          <li>パスワードが合っているか（不安なら先に変更）</li>
-          <li>二段階認証を使っている場合、認証アプリ/コードを用意</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card" id="reactivate">
-      <h2>解除（再開）する方法</h2>
-      <p>一時停止を解除するのは簡単で、基本は<strong>ログインするだけ</strong>です。</p>
-
-      <ol>
-        <li>Xアプリ または x.com を開く</li>
-        <li><strong>ユーザー名 / メール / 電話番号</strong>と<strong>パスワード</strong>でログイン</li>
-        <li>画面の案内に従い、<strong>再開（reactivate）</strong>を確定</li>
-      </ol>
-
-      <div class="callout">
-        <p class="muted">
+</div>
+</section>
+<section class="card" id="android">
+<h2>Androidアプリ：一時停止する手順</h2>
+<ol>
+<li>Xアプリ → <strong>プロフィールアイコン</strong> → <strong>設定とプライバシー</strong></li>
+<li><strong>アカウント</strong> を開く</li>
+<li><strong>アカウントを停止（無効化）</strong></li>
+<li>確認 → <strong>停止（無効化）</strong> → <strong>パスワード</strong>入力</li>
+</ol>
+<p class="muted">※Androidも、見つからない時はPCブラウザ経由が確実です。</p>
+</section>
+<section class="card" id="web">
+<h2>PCブラウザ：一時停止する手順（いちばん確実）</h2>
+<ol>
+<li>x.com を開いてログイン</li>
+<li>左メニューの <strong>もっと見る</strong> → <strong>設定とプライバシー</strong></li>
+<li><strong>アカウント</strong> → <strong>アカウントを停止（無効化）</strong></li>
+<li>注意事項を確認 → <strong>停止（無効化）</strong></li>
+<li>パスワード入力 → 完了</li>
+</ol>
+<div class="box">
+<div class="label"><span class="badge ok">コツ</span> <span class="muted">止める前に確認するもの</span></div>
+<ul>
+<li>登録メール/電話番号が今も使えるか</li>
+<li>パスワードが合っているか（不安なら先に変更）</li>
+<li>二段階認証を使っている場合、認証アプリ/コードを用意</li>
+</ul>
+</div>
+</section>
+<section class="card" id="reactivate">
+<h2>解除（再開）する方法</h2>
+<p>一時停止を解除するのは簡単で、基本は<strong>ログインするだけ</strong>です。</p>
+<ol>
+<li>Xアプリ または x.com を開く</li>
+<li><strong>ユーザー名 / メール / 電話番号</strong>と<strong>パスワード</strong>でログイン</li>
+<li>画面の案内に従い、<strong>再開（reactivate）</strong>を確定</li>
+</ol>
+<div class="callout">
+<p class="muted">
           復活後、フォロー/表示が整うまで少し時間がかかることがあります。<br/>
           まずは数分待ってから再確認するとスムーズです。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="trouble">
-      <h2>うまく解除できない時の対処</h2>
-      <div class="grid">
-        <div>
-          <h3 style="margin:0 0 8px;">パスワードが分からない</h3>
-          <p class="muted">ログイン画面の<strong>「パスワードをお忘れですか？」</strong>から再設定。</p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px;">メール/電話が使えない</h3>
-          <p class="muted">登録情報にアクセスできないと復活が難しいです。可能なら、以前の端末/メールで確認。</p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px;">30日を過ぎたかも</h3>
-          <p class="muted">30日経過後は基本的に復活できません。ユーザー名/メールが再利用可能になる場合があります。</p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="label"><span class="badge warn">注意</span> <span class="muted">「凍結」や「ロック」は別ルート</span></div>
-        <p class="muted">
+</div>
+</section>
+<section class="card" id="trouble">
+<h2>うまく解除できない時の対処</h2>
+<div class="grid">
+<div>
+<h3 style="margin:0 0 8px;">パスワードが分からない</h3>
+<p class="muted">ログイン画面の<strong>「パスワードをお忘れですか？」</strong>から再設定。</p>
+</div>
+<div>
+<h3 style="margin:0 0 8px;">メール/電話が使えない</h3>
+<p class="muted">登録情報にアクセスできないと復活が難しいです。可能なら、以前の端末/メールで確認。</p>
+</div>
+<div>
+<h3 style="margin:0 0 8px;">30日を過ぎたかも</h3>
+<p class="muted">30日経過後は基本的に復活できません。ユーザー名/メールが再利用可能になる場合があります。</p>
+</div>
+</div>
+<div class="box">
+<div class="label"><span class="badge warn">注意</span> <span class="muted">「凍結」や「ロック」は別ルート</span></div>
+<p class="muted">
           ログイン時に「凍結」「制限」などが出る場合は、一時停止の解除ではなく<strong>異議申し立て/認証</strong>が必要な可能性があります。
         </p>
-      </div>
-    </section>
-
-    <section class="card" id="qa">
-      <h2>よくある質問</h2>
-
-      <h3 style="margin:0 0 8px;">Q. 一時停止したら相手にはどう見える？</h3>
-      <p class="muted">プロフィールが開けなくなり、基本的に表示されません。過去の言及（@）は文字として残ることがあります。</p>
-
-      <h3 style="margin:16px 0 8px;">Q. 解除したら全部戻る？</h3>
-      <p class="muted">30日以内なら戻ることが多いです。ただし反映に時間がかかる場合があります。</p>
-
-      <h3 style="margin:16px 0 8px;">Q. 完全に消したい時は？</h3>
-      <p class="muted">一時停止して<strong>30日ログインしない</strong>と削除に進む仕組みです。迷っているなら、まず一時停止が安全です。</p>
-    </section>
-
-<section class="card" id="recommend">
-  <h2>おすすめ（内部リンク）</h2>
-  <ul>
-        <li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
-        <li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
-        <li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
-  </ul>
+</div>
 </section>
-
+<section class="card" id="qa">
+<h2>よくある質問</h2>
+<h3 style="margin:0 0 8px;">Q. 一時停止したら相手にはどう見える？</h3>
+<p class="muted">プロフィールが開けなくなり、基本的に表示されません。過去の言及（@）は文字として残ることがあります。</p>
+<h3 style="margin:16px 0 8px;">Q. 解除したら全部戻る？</h3>
+<p class="muted">30日以内なら戻ることが多いです。ただし反映に時間がかかる場合があります。</p>
+<h3 style="margin:16px 0 8px;">Q. 完全に消したい時は？</h3>
+<p class="muted">一時停止して<strong>30日ログインしない</strong>と削除に進む仕組みです。迷っているなら、まず一時停止が安全です。</p>
+</section>
+<section class="card" id="recommend">
+<h2>おすすめ（内部リンク）</h2>
+<ul>
+<li><a href="x-account-suspended.html">Xでアカウントが凍結される原因と解除の流れ（異議申し立て）</a></li>
+<li><a href="instagram-dm-okenai.html">InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</a></li>
+<li><a href="google-classroom-hairenai.html">Google Classroomに入れない時の対処法（iPhone/PC）</a></li>
+</ul>
+</section>
 <footer>
-      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
-    </footer>
-
-  </div>
-
-  <script>
+<div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
+</footer>
+</div>
+<script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>

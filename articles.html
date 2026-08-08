@@ -1,1257 +1,1119 @@
-<!doctype html>
-<html lang="ja">
+<!doctype html><html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>記事一覧｜今すぐ解決ノート</title>
-  <meta name="description" content="今すぐ解決ノートの記事一覧（新しい順）。" />
-  <style>
-    :root{
-      --bg:#FFFFFF;
-      --text:#333333;
-      --muted:#5c5c5c;
-      --line:#E8E8E8;
-      --navy:#0B2A4A; /* 誠実なネイビー（アクセント1色） */
-      --shadow: 0 10px 24px rgba(11,42,74,.10);
-      --radius: 14px;
-      --max: 1120px;
-      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-    }
-
-    *{ box-sizing:border-box; }
-    html, body{ height:100%; }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:var(--sans);
-      line-height:1.75;
-      letter-spacing:.01em;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-
-    .skip{
-      position:absolute;
-      left:-9999px;
-      top:auto;
-      width:1px; height:1px;
-      overflow:hidden;
-    }
-    .skip:focus{
-      left:16px; top:16px;
-      width:auto; height:auto;
-      padding:10px 12px;
-      background:#fff;
-      border:2px solid var(--navy);
-      border-radius:10px;
-      z-index:9999;
-      box-shadow: var(--shadow);
-    }
-
-    .container{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 20px;
-    }
-
-    /* ===== Nav ===== */
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(255,255,255,.92);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:800;
-      letter-spacing:.02em;
-    }
-    .mark{
-      width:36px; height:36px;
-      border-radius:10px;
-      background:var(--navy);
-      position:relative;
-      flex:0 0 auto;
-    }
-    .mark:before{
-      content:"";
-      position:absolute;
-      inset:9px;
-      border-radius:7px;
-      background:#fff;
-      opacity:.12;
-    }
-    .brand small{
-      display:block;
-      font-weight:600;
-      color:var(--muted);
-      letter-spacing:0;
-      margin-top:2px;
-      font-size:12px;
-    }
-
-    .menu{
-      display:flex;
-      gap:18px;
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .menu a{
-      color:var(--muted);
-      font-weight:600;
-      font-size:14px;
-      padding:8px 10px;
-      border-radius:10px;
-    }
-    .menu a:hover{
-      color:var(--navy);
-      background:rgba(11,42,74,.06);
-      text-decoration:none;
-    }
-
-    /* ===== Sections ===== */
-    section{ padding:72px 0; }
-    .section-title{
-      font-size:22px;
-      margin:0 0 10px;
-      letter-spacing:.01em;
-    }
-    .section-lead{
-      margin:0;
-      color:var(--muted);
-      max-width:72ch;
-    }
-
-    /* ===== Hero ===== */
-    .hero{ padding:64px 0 72px; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:40px;
-      align-items:center;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:7px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--navy);
-      background:rgba(11,42,74,.04);
-      font-weight:700;
-      font-size:12.5px;
-      letter-spacing:.03em;
-    }
-    .dot{ width:10px; height:10px; border-radius:50%; background:var(--navy); }
-    h1{
-      margin:14px 0 12px;
-      font-size: clamp(30px, 4.2vw, 48px);
-      line-height:1.18;
-      letter-spacing:.01em;
-    }
-    .hero p{
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-      max-width: 60ch;
-    }
-    .cta-row{
-      display:flex;
-      gap:12px;
-      margin-top:22px;
-      flex-wrap:wrap;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:12px;
-      border:1px solid var(--navy);
-      background:var(--navy);
-      color:#fff;
-      font-weight:800;
-      font-size:14px;
-      letter-spacing:.02em;
-      box-shadow: 0 10px 24px rgba(11,42,74,.18);
-      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-      cursor:pointer;
-    }
-    .btn:hover{
-      text-decoration:none;
-      transform: translateY(-1px);
-      box-shadow: 0 14px 34px rgba(11,42,74,.22);
-    }
-    .btn:active{ transform: translateY(0); box-shadow: 0 10px 24px rgba(11,42,74,.18); }
-
-    .btn-ghost{
-      background:#fff;
-      color:var(--navy);
-      border:1px solid var(--line);
-      box-shadow:none;
-      font-weight:800;
-    }
-    .btn-ghost:hover{
-      background:rgba(11,42,74,.05);
-      border-color: rgba(11,42,74,.18);
-    }
-
-    .hero-panel{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background:#fff;
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    .mini-title{
-      margin:0 0 10px;
-      font-size:14px;
-      letter-spacing:.08em;
-      color:var(--navy);
-      text-transform: uppercase;
-    }
-    .mini-list{ margin:0; padding-left: 18px; color:var(--text); }
-    .mini-list li{ margin:8px 0; color:var(--muted); }
-    .mini-list b{ color:var(--text); }
-
-    /* ===== Cards / grids ===== */
-    .grid-cards{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap:18px;
-    }
-    .card{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding:18px;
-      background:#fff;
-      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-    }
-    .card:hover{
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-      border-color: rgba(11,42,74,.18);
-    }
-    .icon{
-      width:44px; height:44px;
-      border-radius: 12px;
-      background:rgba(11,42,74,.08);
-      border:1px solid rgba(11,42,74,.14);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--navy);
-      font-weight:900;
-      margin-bottom:12px;
-      user-select:none;
-    }
-    .card h3{ margin:0 0 6px; font-size:16px; letter-spacing:.01em; }
-    .card p{ margin:0; color:var(--muted); font-size:14.5px; }
-
-    /* ===== New posts ===== */
-    .post-card{
-      display:block;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding:18px;
-      background:#fff;
-      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-    }
-    .post-card:hover{
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-      border-color: rgba(11,42,74,.18);
-      text-decoration:none;
-    }
-    .post-meta{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:12.5px;
-      margin-bottom:8px;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(11,42,74,.03);
-      color:var(--navy);
-      font-weight:800;
-      font-size:12px;
-      letter-spacing:.03em;
-      user-select:none;
-      white-space:nowrap;
-    }
-    .post-title{
-      margin:0 0 6px;
-      font-size:16px;
-      color:var(--text);
-      letter-spacing:.01em;
-    }
-    .post-desc{
-      margin:0;
-      color:var(--muted);
-      font-size:14.5px;
-    }
-
-    /* ===== Profile table ===== */
-    .table-wrap{
-      margin-top:18px;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      overflow:hidden;
-      background:#fff;
-    }
-    table{ width:100%; border-collapse: collapse; font-size:14.5px; }
-    th, td{
-      padding:14px 16px;
-      border-bottom:1px solid var(--line);
-      vertical-align:top;
-    }
-    th{
-      width: 220px;
-      text-align:left;
-      color:var(--navy);
-      font-weight:800;
-      background: rgba(11,42,74,.03);
-    }
-    tr:last-child th, tr:last-child td{ border-bottom:none; }
-    .note{ color:var(--muted); font-size:13.5px; margin-top:10px; }
-
-    /* ===== Contact (enhanced) ===== */
-    .contact-grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-      align-items:start;
-    }
-    .contact-panel{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background:#fff;
-      padding:20px;
-    }
-    .contact-panel h3{
-      margin:0 0 8px;
-      font-size:16px;
-      color:var(--text);
-      letter-spacing:.01em;
-    }
-    .contact-panel p{ margin:0; color:var(--muted); font-size:14.5px; }
-    .contact-list{
-      margin:12px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-      font-size:14.5px;
-    }
-    .contact-list li{ margin:6px 0; }
-    .contact-kv{
-      margin-top:14px;
-      border-top:1px solid var(--line);
-      padding-top:14px;
-      display:grid;
-      gap:10px;
-    }
-    .kv-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:13.5px;
-    }
-    .kv-row b{ color:var(--text); }
-    .email-pill{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(11,42,74,.03);
-      color:var(--text);
-      font-weight:700;
-      user-select: all;
-      overflow-wrap:anywhere;
-    }
-    .mini-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--navy);
-      font-weight:800;
-      font-size:13px;
-      cursor:pointer;
-      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
-    }
-    .mini-btn:hover{
-      background:rgba(11,42,74,.05);
-      border-color: rgba(11,42,74,.18);
-      text-decoration:none;
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
-    }
-    form{
-      display:grid;
-      gap:12px;
-      margin-top:10px;
-    }
-    label{
-      display:grid;
-      gap:6px;
-      font-size:13px;
-      color:var(--muted);
-      font-weight:700;
-    }
-    input, textarea, select{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--text);
-      font: inherit;
-      line-height: 1.4;
-      transition: border-color .12s ease, box-shadow .12s ease;
-    }
-    textarea{ min-height: 140px; resize: vertical; }
-    input:focus, textarea:focus, select:focus{
-      border-color: rgba(11,42,74,.35);
-      box-shadow: 0 0 0 4px rgba(11,42,74,.10);
-      outline: none;
-    }
-    .form-row{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    .form-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-      margin-top:4px;
-    }
-    .form-hint{
-      margin:0;
-      color:var(--muted);
-      font-size:12.5px;
-    }
-    .toast{
-      display:none;
-      margin-top:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .toast.show{ display:block; }
-
-    /* ===== Footer ===== */
-    footer{
-      border-top:1px solid var(--line);
-      padding:28px 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .footer-links a{
-      color:var(--muted);
-      font-weight:600;
-      padding:6px 8px;
-      border-radius:10px;
-    }
-    .footer-links a:hover{
-      color:var(--navy);
-      background:rgba(11,42,74,.06);
-      text-decoration:none;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      section{ padding:60px 0; }
-      .contact-grid{ grid-template-columns: 1fr; }
-    }
-    @media (max-width: 780px){
-      th{ width: 160px; }
-      .menu{ gap:8px; }
-      .menu a{ padding:8px 8px; }
-      .form-row{ grid-template-columns: 1fr; }
-    }
-
-    /* ===== Focus ===== */
-    :focus-visible{
-      outline: 3px solid rgba(11,42,74,.35);
-      outline-offset: 3px;
-      border-radius: 12px;
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      *{ scroll-behavior:auto !important; transition:none !important; }
-    }
-  
-
-    /* ===== Search ===== */
-    .sr-only{
-      position:absolute;
-      width:1px; height:1px;
-      padding:0; margin:-1px;
-      overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;
-      border:0;
-    }
-
-    .searchbar{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:10px 12px;
-      background:#fff;
-      margin-top:12px;
-    }
-    .searchbar input{
-      border:0;
-      outline:0;
-      width:100%;
-      font:inherit;
-      font-size:14px;
-      background:transparent;
-      color:var(--text);
-      min-width:0;
-    }
-    .searchbar input::placeholder{ color: rgba(51,51,51,.55); }
-    .searchbar .clear{
-      border:0;
-      background:rgba(11,42,74,.06);
-      color:var(--navy);
-      font-weight:900;
-      border-radius:10px;
-      padding:7px 10px;
-      cursor:pointer;
-      flex:0 0 auto;
-      line-height:1;
-    }
-    .searchbar .clear:hover{ background:rgba(11,42,74,.10); }
-    .search-meta{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>記事一覧｜今すぐ解決ノート</title>
+<meta name="description" content="今すぐ解決ノートの全153記事。SNS・スマホ・学校・ネット安全・ChatGPT・Gemini・Copilotなどを検索・カテゴリで絞り込めます。">
+<link rel="canonical" href="https://shido-ml.github.io/SORA/articles.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="記事一覧｜今すぐ解決ノート">
+<meta property="og:description" content="今すぐ解決ノートの全153記事。SNS・スマホ・学校・ネット安全・ChatGPT・Gemini・Copilotなどを検索・カテゴリで絞り込めます。">
+<meta property="og:url" content="https://shido-ml.github.io/SORA/articles.html">
+<meta property="og:site_name" content="今すぐ解決ノート">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <div class="wrap">
+<body><header class="site-header"><div class="container header-inner">
+<a class="logo" href="index.html"><span class="logo-mark">解</span><span>今すぐ解決ノート</span></a>
+<button class="menu-btn" aria-label="メニュー">☰</button>
+<nav>
+<a href="articles.html">記事一覧</a>
+<a href="articles.html#ai">AIラクワザ</a>
+<a href="about.html">このサイトについて</a>
+<a href="policy.html">運営ポリシー</a>
+<a href="contact.html">お問い合わせ</a>
+</nav></div></header>
+<main>
+<section class="hero" style="padding-bottom:34px"><div class="container">
+<span class="eyebrow">ALL ARTICLES</span><h1 style="font-size:clamp(34px,5vw,54px)">全153記事から探す</h1>
+<p>SNS・スマホの困りごと53記事と、生成AIを使いこなす「AIラクワザ」100記事をまとめています。</p>
+<div class="search-wrap"><input id="site-search" placeholder="キーワードで検索" type="search" aria-label="記事を検索"><button type="button">検索</button></div>
+</div></section>
+<section class="section" style="padding-top:20px"><div class="container">
+<div class="chips"><button class="chip active" data-cat="すべて">すべて</button><button class="chip" data-cat="暮らし・ネット">暮らし・ネット</button><button class="chip" data-cat="AIラクワザ">AIラクワザ</button><button class="chip" data-cat="Instagram">Instagram</button><button class="chip" data-cat="X">X</button><button class="chip" data-cat="TikTok">TikTok</button><button class="chip" data-cat="LINE">LINE</button><button class="chip" data-cat="スマホ">スマホ</button><button class="chip" data-cat="学校・連絡">学校・連絡</button><button class="chip" data-cat="ネット安全">ネット安全</button><button class="chip" data-cat="ChatGPT">ChatGPT</button><button class="chip" data-cat="Gemini">Gemini</button><button class="chip" data-cat="Gemini Notebook">Gemini Notebook</button><button class="chip" data-cat="Copilot">Copilot</button><button class="chip" data-cat="Claude">Claude</button><button class="chip" data-cat="Perplexity">Perplexity</button><button class="chip" data-cat="比較">比較</button><button class="chip" data-cat="仕事術">仕事術</button><button class="chip" data-cat="安全">安全</button></div>
 
-    <div class="topnav"><a href="index.html">← ホーム</a> <span class="muted">/</span> <a href="articles.html">記事一覧</a> <span class="muted">/</span> <a href="policy.html">運営ポリシー</a></div>
-
-    <header class="hero">
-      <div class="hero-inner">
-        <p class="kicker"><span class="dot" aria-hidden="true"></span> 記事</p>
-        <h1>記事一覧</h1>
-        <p class="sub">すべての記事を新しい順に表示します。</p>
+<div class="section-title" id="daily"><div><span class="eyebrow">暮らし・ネット</span><h2>SNS・スマホ・学校の困りごと</h2></div><p>既存URLを維持した53記事。</p></div>
+<div class="grid"><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）</h3>
+        <p>ログインできない／不正投稿／メール・電話番号が変わった等の「乗っ取り」疑いの時に、最短で被害を止める手順をまとめ。X・Instagram・LINEの共通手順と個別手順。</p>
+        <a class="card-link" href="articles/account-hijacked-sos.html">この記事を読む →</a>
       </div>
-    </header>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順（iPhone/Android/PC）</h3>
+        <p>Safari/Chrome/Edge/Firefox別に、今すぐ履歴を一括削除する最短手順。消えるもの・消えないもの（Google履歴）もセットで解説。</p>
+        <a class="card-link" href="articles/browser-history-clear-10sec.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="学校・連絡" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">学校・連絡</span><span class="thumb-icon">✎</span></div>
+      <div class="card-body">
+        <h3>部活を休む時の連絡文【LINE/メール例文・コピペOK】</h3>
+        <p>部活を休む時の連絡文（LINE/メール）を、顧問・先輩・グループ別にコピペOKで用意。体調不良/家庭の用事/学校行事など状況別テンプレと、短く失礼なく伝えるコツ、返信が来ない時の追い連絡も。</p>
+        <a class="card-link" href="articles/club-absence-message.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>知らない人から届いたDMのURL、絶対に「開くだけ」でもダメな理由</h3>
+        <p>知らない人から届くDMのURLは、開いただけでIP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、マルウェア誘導などのリスクがある。『開くだけで何が起きる？』を分かりやすく整理し、Instagram/X/LINE共通の安全な対処手順、見分け方、開いてしまった時の対応まで解説。</p>
+        <a class="card-link" href="articles/dm-link-danger-why.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>知らない番号からFaceTimeが来た。拒否しても大丈夫？</h3>
+        <p>知らない番号からFaceTimeがかかってきた時は、拒否してOK。安全な対処（ブロック/通報/設定で防ぐ）と、詐欺っぽいサイン、うっかり出た時の対処をまとめ。</p>
+        <a class="card-link" href="articles/facetime-unknown-number-reject-ok.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>「ウイルスに感染しました」って画面に出た。それ、本物じゃなくて広告かも</h3>
+        <p>ブラウザで突然出る「ウイルスに感染しました」警告は、多くが偽の広告（スケアウェア）。本物の警告の見分け方、絶対にやってはいけない行動、iPhone/Android/PC別の消し方（タブを閉じる・履歴/サイトデータ削除・通知許可の解除・拡張機能/アプリ確認）をまとめ。</p>
+        <a class="card-link" href="articles/fake-virus-alert-popup.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>フィルタリングで開けないサイトは危険？原因の確認と“許可を得て”安全に閲覧する方法</h3>
+        <p>結論：ブロック＝危険確定ではないが、無理に回避はNG。原因を切り分け→安全性チェック→管理者/保護者/キャリアに正規ルートで申請する手順をまとめました。</p>
+        <a class="card-link" href="articles/filtering-blocked-site-safe-view.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="学校・連絡" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">学校・連絡</span><span class="thumb-icon">✎</span></div>
+      <div class="card-body">
+        <h3>Google Classroomに入れない時の対処法（iPhone/PC）</h3>
+        <p>Google Classroomにログインできない／クラスに入れない／読み込みが終わらない時の原因と直し方。iPhone・iPad・PC（Chrome）での手順をわかりやすく。</p>
+        <a class="card-link" href="articles/google-classroom-hairenai.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="学校・連絡" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">学校・連絡</span><span class="thumb-icon">✎</span></div>
+      <div class="card-body">
+        <h3>反省文ってどう書けばいい？【例文あり・そのまま使える】</h3>
+        <p>反省文の書き方の型と、スマホ・提出物・遅刻などの例文をまとめました。コピペOK（少し言い換え推奨）。</p>
+        <a class="card-link" href="articles/hanseibun.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>親に内緒で入れたアプリ、ホーム画面から隠しても設定アプリからバレる？（結論：バレる）</h3>
+        <p>結論：ホーム画面から消しても“インストール済み”なら設定やストレージ等で見つかる可能性大。iPhone/Androidでバレる場所と、安心の対処をまとめました。</p>
+        <a class="card-link" href="articles/hidden-app-visible-settings.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>iCloudの支払い期限切れた。写真はすぐ消えちゃうの？</h3>
+        <p>iCloud+の支払いが失敗/期限切れになった時、写真がすぐ消えるのかを解説。基本は即削除されないが、容量超過で同期やバックアップが止まる。詐欺メールの見分け、支払い復旧、写真を守るバックアップ手順まで。</p>
+        <a class="card-link" href="articles/icloud-payment-failed-photos.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>インスタの投稿をアーカイブに隠したら、タグ付けされた相手はどう見える？</h3>
+        <p>Instagramの投稿をアーカイブした時、タグ付けされた相手の「タグ付け」欄にどう表示されるか（基本は見えなくなる）。通知は行く？相手の画面での見え方、戻す方法、やるべき確認を整理。</p>
+        <a class="card-link" href="articles/instagram-archive-tagged-visibility.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>インスタでブロックされたっぽい時、サブ垢で確認しに行くとバレるリスク</h3>
+        <p>Instagramでブロックされた疑いがある時、サブ垢で確認すると相手にバレる可能性は？基本は「プロフ閲覧だけ」なら通知は出ないが、ストーリー閲覧・フォロー/いいね誤タップ・DM・おすすめ表示（連絡先同期/アカウントセンター等）でつながりが見えるリスクがある。バレやすい行動と、より安全な確認手順を整</p>
+        <a class="card-link" href="articles/instagram-block-check-subaccount-risk.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>インスタ「親しい友達」から外されたら通知される？バレる？相手に起きる変化まとめ</h3>
+        <p>結論：通知は行かない。でも緑のリングが消える/限定ストーリーが見えなくなるなど“間接的に気づく”可能性はある。サインと注意点を整理。</p>
+        <a class="card-link" href="articles/instagram-close-friends-removed-notification.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>【危険】インスタDMの「これあなた？」動画リンクは押すな！乗っ取り手口と対処法</h3>
+        <p>結論：そのDMは乗っ取り/フィッシングの可能性大。リンク先でID/パスワードを入れるとアカウントを奪われます。押してしまった時の確認ポイントと今すぐやるべき対策をまとめました。</p>
+        <a class="card-link" href="articles/instagram-dm-is-this-you-video-link-scam.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>インスタDMで変なリンク踏んだ…その後何も起きなければセーフ？（結論：油断NG）</h3>
+        <p>結論：何も起きなくても“後から被害”はありえる。今すぐやる5分チェック（ログイン履歴/連携アプリ/2段階認証）と、やってしまった時の対処を解説。</p>
+        <a class="card-link" href="articles/instagram-dm-link-clicked-safe.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>InstagramでDMが送れない原因まとめ（iPhone/Android/PC）</h3>
+        <p>InstagramでDMが送れない・送信できない・エラーになる時の原因と対処法を症状別に整理。iPhone/Android/PC（Web）でのチェック手順も。</p>
+        <a class="card-link" href="articles/instagram-dm-okenai.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>【2026年版】インスタDMを既読つけずに読む方法｜既読（Seen）をオフにする設定と注意点</h3>
+        <p>結論：今でも可能。Instagramの「既読表示（Read receipts）」をオフにすれば、DMを開いても相手に“既読/Seen”が出にくい。全体/特定チャット別の設定と注意点をまとめました。</p>
+        <a class="card-link" href="articles/instagram-dm-read-without-seen.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>【インスタ】DMの画像が1回で消えた…もう一度見る方法は？（View Once/Allow Replay）</h3>
+        <p>結論：相手が「View once（1回のみ）」で送った画像は再表示できません。「Allow replay（リプレイ可）」ならチャットで画像をもう一度タップして再生できます。見分け方と対処をまとめました。</p>
+        <a class="card-link" href="articles/instagram-dm-view-once-replay.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>【インスタ】特定の人のストーリーをミュートしたらバレる？通知・見え方・解除方法まとめ</h3>
+        <p>結論：ストーリーをミュートしても相手に通知は行きません。ただし、あなたが閲覧者リストに出なくなるので気づかれる可能性はあります。ミュート手順・解除方法・「見ない」と「見せない」の違いも解説。</p>
+        <a class="card-link" href="articles/instagram-mute-story-notification.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>Instagramでリンクをプロフィールに貼る方法</h3>
+        <p>Instagramのプロフィールにリンクを貼る手順（iPhone/Android）。『リンク』から追加する方法、表示されない・押せない時の原因、最低限の安全チェックまで丁寧に解説。</p>
+        <a class="card-link" href="articles/instagram-profile-link.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>インスタのプロフ見ただけで足跡つくと思ってる人へ。実際はどう？</h3>
+        <p>Instagramは「プロフィールを見た人の一覧（足跡）」を公式には表示しない。見えるのはストーリーズ視聴・ライブ視聴・DM既読など“相手に通知が出る行動”だけ。プロフ閲覧がバレると言われる理由、足跡が付くケース、バレないための注意点、危険な外部アプリのリスクを解説。</p>
+        <a class="card-link" href="articles/instagram-profile-view-footprint.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Instagram" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">Instagram</span><span class="thumb-icon">◎</span></div>
+      <div class="card-body">
+        <h3>インスタのストーリーを間違えて載せた！一瞬で消す方法</h3>
+        <p>Instagramストーリーを誤投稿した時に、最短で削除する手順（iPhone/Android共通）。削除ボタンが出ない時の対処、ハイライトから消す方法、公開範囲の応急処置まで。</p>
+        <a class="card-link" href="articles/instagram-story-delete-fast.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>画面のひび割れ、放置して使い続けたら操作できなくなる？</h3>
+        <p>iPhoneの画面がひび割れたまま使うと、いつ操作不能になる？タッチ不良（ゴーストタッチ）、液晶/有機ELのにじみ、割れ拡大、水没リスクなどの現実的な危険と、今すぐやるべきバックアップ・応急処置・修理判断を解説。</p>
+        <a class="card-link" href="articles/iphone-cracked-screen-touch-risk.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>容量不足で写真消すとき「最近削除した項目」まで空にすると戻せない？（結論と復元の可能性）</h3>
+        <p>結論：最近削除を空にすると、写真アプリからは基本戻せない。例外（バックアップ/iCloud/他アプリ）と、容量を増やす安全な手順を分かりやすく解説。</p>
+        <a class="card-link" href="articles/iphone-recently-deleted-permanent.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>iPhoneのストレージが急に増えた原因と減らし方</h3>
+        <p>iPhoneの容量が突然減る原因（写真/動画、Safari、LINE、iCloud写真、システムデータ等）をチェックリストで特定し、手順どおりに安全に減らす方法をまとめ。</p>
+        <a class="card-link" href="articles/iphone-storage-fueru-herasu.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="LINE" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">LINE</span><span class="thumb-icon">L</span></div>
+      <div class="card-body">
+        <h3>LINEグループを退会しても発言は消えない？過去メッセージが残る理由と削除できる範囲</h3>
+        <p>結論：退会＝表示が消えるだけで、あなたの過去発言は相手側に残る。消せるのは「送信取消」(期限あり)だけ。退会後にどう見えるか/何ができるかを解説。</p>
+        <a class="card-link" href="articles/line-group-leave-message-remains.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="LINE" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">LINE</span><span class="thumb-icon">L</span></div>
+      <div class="card-body">
+        <h3>LINEの送信取消ボタンがない！もう消せない？原因と対処法【1時間制限/7日】</h3>
+        <p>結論：時間切れだと「送信取消」が表示されません。日本では無料は送信後1時間以内、LYPプレミアムは7日以内（条件あり）。削除との違いと、今できる対処法をまとめました。</p>
+        <a class="card-link" href="articles/line-unsend-no-button.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="LINE" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">LINE</span><span class="thumb-icon">L</span></div>
+      <div class="card-body">
+        <h3>LINEの「送信取り消し」したら、相手のロック画面の通知も消えるの？</h3>
+        <p>LINEの送信取り消しをすると、通知センター/ロック画面のプッシュ通知は「消えることが多い」。ただし相手がすでに通知を見ていた・スマートウォッチに届いた・通知履歴が残る・古い環境などでは内容が残る場合も。消える/残るパターンと注意点を整理。</p>
+        <a class="card-link" href="articles/line-unsend-notification-lockscreen.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>「ログイン試行がありました」ってメールが来た…無視して寝て大丈夫？（結論：今すぐ確認）</h3>
+        <p>本物か詐欺かの見分け→ログイン履歴の確認→最短1分の対処まで。寝る前にやるべき最低ラインもまとめました。</p>
+        <a class="card-link" href="articles/login-attempt-email-ignore.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>支払い画面でボタン連打しちゃった…二重で決済されてないか確認する方法</h3>
+        <p>クレカ/デビット/PayPay/Apple Pay/アプリ課金別に、30秒でできる確認→二重だった時の返金手順まで分かりやすく解説。</p>
+        <a class="card-link" href="articles/payment-double-charge-check.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>学校でスマホ没収された。電源切ってないと通知で見られる？</h3>
+        <p>学校でスマホを没収されたとき、ロック画面の通知プレビューで内容（LINE/DM/メール）が見られる可能性はある。iPhone/Androidで「通知の表示」「プレビュー」「ロック画面」の設定次第。見える範囲と、今すぐできる対策（プレビュー非表示、Focus/おやすみ、機内モード等）を解説。</p>
+        <a class="card-link" href="articles/phone-confiscated-notification-privacy.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>スマホの画面が真っ暗で充電しても反応しない…寿命？原因と今すぐできる対処法（iPhone/Android）</h3>
+        <p>結論：寿命とは限らない。放電・フリーズ・充電器/端子トラブルが多い。まずは30分充電→強制再起動→別ケーブル確認。危険サインも解説。</p>
+        <a class="card-link" href="articles/phone-screen-black-no-charge.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>スマホを水に落とした！ドライヤーで乾かすのが絶対ダメな理由</h3>
+        <p>スマホを水没させた直後にドライヤーはNG。熱で水が奥に入る、部品や防水シールが劣化、バッテリーが危険などの理由を解説。iPhone/Android共通の正しい応急処置（電源オフ・充電しない・SIM取り出し・自然乾燥・乾燥剤）と、やってはいけない行動、修理に持ち込む目安をまとめ。</p>
+        <a class="card-link" href="articles/phone-water-dropped-hairdryer-danger.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>動作が重いからって設定を適当にリセットすると消えるデータ一覧</h3>
+        <p>スマホが重い時に「設定をリセット」すると何が消える？iPhoneの“すべての設定をリセット/ネットワーク設定をリセット/すべてのコンテンツと設定を消去”の違い、Androidの“設定のリセット/ネットワークリセット/工場出荷状態（初期化）”で消えるもの・消えないものを一覧で整理。安全にやる順番とバッ</p>
+        <a class="card-link" href="articles/reset-settings-data-loss-list.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>Safariでキャッシュを削除する方法（iPhone/iPad）</h3>
+        <p>Safariの表示崩れ・ログイン不具合・重い時に効く『キャッシュ削除』。iPhone/iPadでの手順、消えるもの・消えないもの、出てこない時の対処を丁寧に解説。</p>
+        <a class="card-link" href="articles/safari-cache-clear.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>Safariでサイトをホーム画面に追加する方法</h3>
+        <p>Safariで見ているサイトを『ホーム画面に追加』して、ワンタップで開けるようにする手順。出てこないときの確認ポイントも。</p>
+        <a class="card-link" href="articles/safari-home-screen.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>Safariで「この接続ではプライバシーが保護されません」と出た時の対処</h3>
+        <p>Safariで「この接続ではプライバシーが保護されません」と表示された時の原因（証明書/時刻/ネットワーク/フィルタ/サイト側障害）と安全な対処手順。開いていいかの判断ポイントも。</p>
+        <a class="card-link" href="articles/safari-privacy-not-secure.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="スマホ" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">スマホ</span><span class="thumb-icon">📱</span></div>
+      <div class="card-body">
+        <h3>間違えて変なサイトを開いた。警告画面が消えない時の消し方</h3>
+        <p>iPhoneで怪しいサイトの『ウイルスに感染』『警告が消えない』などの画面が出た時に、最短で閉じる手順（Safari中心）。タップしてはいけない操作、履歴/サイトデータの削除、通知の解除、プロファイル確認まで。</p>
+        <a class="card-link" href="articles/safari-warning-stuck-close.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="学校・連絡" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">学校・連絡</span><span class="thumb-icon">✎</span></div>
+      <div class="card-body">
+        <h3>学校のWi‑Fi繋いだら、見てるサイトは先生に筒抜けなの？</h3>
+        <p>学校のWi‑Fiに繋ぐと、見ているサイトはどこまで見られる？HTTPSなら本文は基本見えないが、アクセス先のドメインや通信の記録はネットワーク管理側に残ることがある。先生・学校・業者が見える範囲、見えない範囲、端末管理（MDM/証明書）で変わるポイントと注意点を解説。</p>
+        <a class="card-link" href="articles/school-wifi-what-can-they-see.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="学校・連絡" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">学校・連絡</span><span class="thumb-icon">✎</span></div>
+      <div class="card-body">
+        <h3>先生にLINEしてもいい？連絡していい内容・ダメな内容</h3>
+        <p>先生にLINEしていい内容・避けるべき内容、送る時間帯の目安、失礼になりにくい書き方、コピペ例文をまとめ。学校のルールがある場合の確認ポイントも。</p>
+        <a class="card-link" href="articles/sensei-line-renraku-ok-ng.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ネット安全" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">ネット安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>【例文あり】友達に勝手にSNSへ写真を載せられた…角を立てずに消してもらう言い方</h3>
+        <p>結論：まずは短く“お願い”→理由は最小限→代案（ぼかし/トリミング）を出すと角が立ちにくい。コピペOKの例文と、相手が消してくれない時の対処もまとめました。</p>
+        <a class="card-link" href="articles/sns-photo-posted-without-permission-delete-request.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="学校・連絡" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">学校・連絡</span><span class="thumb-icon">✎</span></div>
+      <div class="card-body">
+        <h3>提出期限に間に合わない時の謝罪文テンプレ</h3>
+        <p>提出に遅れそう/遅れた時にそのまま送れる例文を状況別に。理由の書き方、延長お願い、遅延後のフォロー、NG例までまとめ。</p>
+        <a class="card-link" href="articles/teishutsu-kigen-okurenai.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="TikTok" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">TikTok</span><span class="thumb-icon">♪</span></div>
+      <div class="card-body">
+        <h3>【TikTok LIVE】入った瞬間『〇〇が入室しました』を消す方法は？すぐ消える？バレない見方も解説</h3>
+        <p>結論：視聴者側で入室メッセージを“消す”ボタンはありません。自然に流れるのを待つだけ。どうしても目立ちたくない時の対処（入室しないで見る/すぐ退出/設定の見直し）をまとめました。</p>
+        <a class="card-link" href="articles/tiktok-live-joined-message-hide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="TikTok" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">TikTok</span><span class="thumb-icon">♪</span></div>
+      <div class="card-body">
+        <h3>【TikTok】動画を保存したらバレる？誰が保存したか投稿者に通知される？【お気に入り/ダウンロード】</h3>
+        <p>結論：TikTokの「ダウンロード保存」は基本バレない（誰が保存したか投稿者に通知なし）。ただし「お気に入り（☆）保存」は通知/アクティビティに表示される場合あり。見分け方と対策も解説。</p>
+        <a class="card-link" href="articles/tiktok-video-save-notification.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>Xでアカウントを一時停止・解除する方法</h3>
+        <p>X（旧Twitter）のアカウントを一時停止（無効化）する手順と、解除（再開）する方法。iPhone/Android/PC別に、30日ルール・注意点・うまくいかない時の対処まで詳しく解説。</p>
+        <a class="card-link" href="articles/x-account-deactivate.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>Xでアカウントが凍結される原因と解除の流れ</h3>
+        <p>X（旧Twitter）の『凍結』『ロック』『一時的制限』の違い、凍結されやすい原因、解除（異議申し立て）の手順、フォームが開かない時の対処、再凍結を防ぐコツまで。</p>
+        <a class="card-link" href="articles/x-account-suspended.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>X（旧Twitter）でブロックした瞬間、相手の画面から私はどう消える？</h3>
+        <p>Xでブロックした直後、相手の画面であなたがどう表示されるかを整理。プロフィール表示の「ブロックされています」画面、フォロー解除、DM不可、いいね/返信/リポスト不可、公開/鍵垢での見える範囲の違いまで。</p>
+        <a class="card-link" href="articles/x-block-what-they-see.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>【X】エロ垢にフォローされた！フォロワーにバレる前に消す方法（削除・ブロック・鍵垢）</h3>
+        <p>結論：いちばん静かに消すなら「Remove this follower（フォロワーを削除）」、再フォローも防ぐなら「ブロック」。フォロワーに“通知”でバレることは基本ないけど、フォロー一覧を見られると気づかれる可能性あり。最短手順と再発防止をまとめました。</p>
+        <a class="card-link" href="articles/x-ero-account-followed-remove.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>X（旧Twitter）の「いいね」ってフォロワーのタイムラインに流れてる？（結論と対策）</h3>
+        <p>結論：今は「いいね一覧」は他人に見えない。だけど“おすすめ”で同じ投稿が出ることはある。バレ方/バレない範囲/対策を1ページで。</p>
+        <a class="card-link" href="articles/x-like-followers-timeline.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>X（旧Twitter）でリストに追加したら通知される？相手にバレる条件（公開/非公開）</h3>
+        <p>結論：追加しただけで通知は基本来ない。でも公開リストなら相手は「自分が入っているリスト」から確認できる。バレる仕組みと対策を解説。</p>
+        <a class="card-link" href="articles/x-list-added-notification.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>Xでシャドウバンされてるか確認する方法</h3>
+        <p>検索に出ない/通知が伸びない時の原因がシャドウバンかどうかを、安全にチェックする手順。種類（サーチ/リプ/ゴースト等）と解除までにやることも。</p>
+        <a class="card-link" href="articles/x-shadowban-check.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="X" data-group="暮らし・ネット">
+      <div class="thumb"><span class="badge">X</span><span class="thumb-icon">𝕏</span></div>
+      <div class="card-body">
+        <h3>Xの予約投稿（スケジュール投稿）のやり方</h3>
+        <p>X（旧Twitter）の予約投稿（スケジュール投稿）を、X Pro（旧TweetDeck）で確実に設定する手順。予約一覧の確認・編集、出てこない時の対処も。</p>
+        <a class="card-link" href="articles/x-yoyaku-post.html">この記事を読む →</a>
+      </div>
+    </article></div>
 
-    <section class="card">
-      <h2 style="margin-top:0;">すべての記事</h2>
-      <form class="searchbar" id="searchForm" role="search" aria-label="記事検索">
-        <label class="sr-only" for="searchInput">記事を検索</label>
-        <input id="searchInput" type="search" placeholder="キーワードで検索（例：Safari / X / iPhone / LINE）" />
-        <button type="button" class="clear" id="clearBtn" aria-label="検索をクリア">×</button>
-      </form>
-      <p class="search-meta" id="searchMeta"></p>
-
-      <div id="postsAll" class="grid-cards" aria-live="polite"></div>
-    </section>
-
-    <footer>
-      <div class="muted">© <span id="y"></span> 今すぐ解決ノート</div>
-    </footer>
-
-  </div>
-
-  <script>  // HTMLエスケープ用（XSS対策）
-  function esc(str) {
-    return String(str)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#39;");
-  }
-
-    const POSTS = [
-                                                                                                            {
-        title: "【保存版】スマホを水に落とした！ドライヤーが絶対ダメな理由と正しい乾かし方（iPhone/Android）",
-        desc: "スマホを水没させた直後にドライヤーはNG。熱で水が奥に入る、部品や防水シールが劣化、バッテリーが危険などの理由を解説。iPhone/Android共通の正しい応急処置（電源オフ・充電しない・SIM取り出し・自然乾燥・乾燥剤）と、やってはいけない行動、修理に持ち込む目安をまとめ。",
-        date: "2026-01-18",
-        tag: "スマホ / トラブル",
-        url: "articles/phone-water-dropped-hairdryer-danger.html"
-      },
-{
-        title: "【危険】知らない人から来たDMのURLは開くだけで危ない？理由と安全な対処（インスタ/X/LINE）",
-        desc: "知らない人から届くDMのURLは、開いただけでIP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、マルウェア誘導などのリスクがある。『開くだけで何が起きる？』を分かりやすく整理し、Instagram/X/LINE共通の安全な対処手順、見分け方、開いてしまった時の対応まで解説。",
-        date: "2026-01-17",
-        tag: "SNS・ネット / セキュリティ",
-        url: "articles/instagram-block-check-subaccount-risk.html"
-      },
-{
-        title: "【要注意】「設定をリセット」すると消えるデータ一覧｜iPhone/Android 初期化との違い",
-        desc: "スマホが重い時に「設定をリセット」すると何が消える？iPhoneの“すべての設定をリセット/ネットワーク設定をリセット/すべてのコンテンツと設定を消去”の違い、Androidの“設定のリセット/ネットワークリセット/工場出荷状態（初期化）”で消えるもの・消えないものを一覧で整理。安全にやる順番とバックアップ確認も解説。",
-        date: "2026-01-17",
-        tag: "スマホ / 設定",
-        url: "articles/reset-settings-data-loss-list.html"
-      },
-{
-        title: "【偽警告】「ウイルスに感染しました」は本物？広告ポップアップの消し方（iPhone/Android/PC）",
-        desc: "ブラウザで突然出る「ウイルスに感染しました」警告は、多くが偽の広告（スケアウェア）。本物の警告の見分け方、絶対にやってはいけない行動、iPhone/Android/PC別の消し方（タブを閉じる・履歴/サイトデータ削除・通知許可の解除・拡張機能/アプリ確認）をまとめ。",
-        date: "2026-01-17",
-        tag: "安全 / ネット",
-        url: "articles/fake-virus-alert-popup.html"
-      },
-{
-        title: "【2026年最新】LINEの送信取り消しで通知は消える？ロック画面に残る条件と対策",
-        desc: "LINEの送信取り消しをすると、通知センター/ロック画面のプッシュ通知は「消えることが多い」。ただし相手がすでに通知を見ていた・スマートウォッチに届いた・通知履歴が残る・古い環境などでは内容が残る場合も。消える/残るパターンと注意点を整理。",
-        date: "2026-01-17",
-        tag: "SNS / LINE",
-        url: "articles/line-unsend-notification-lockscreen.html"
-      },
-{
-        title: "【2026年最新】Instagramのプロフィール閲覧で足跡はつく？バレる条件と対策まとめ",
-        desc: "Instagramは「プロフィールを見た人の一覧（足跡）」を公式には表示しない。見えるのはストーリーズ視聴・ライブ視聴・DM既読など“相手に通知が出る行動”だけ。プロフ閲覧がバレると言われる理由、足跡が付くケース、バレないための注意点、危険な外部アプリのリスクを解説。",
-        date: "2026-01-17",
-        tag: "SNS / Instagram",
-        url: "articles/instagram-profile-view-footprint.html"
-      },
-{
-        title: "【学校】スマホ没収で通知の中身は見られる？電源OFFしないと危険？対策まとめ",
-        desc: "学校でスマホを没収されたとき、ロック画面の通知プレビューで内容（LINE/DM/メール）が見られる可能性はある。iPhone/Androidで「通知の表示」「プレビュー」「ロック画面」の設定次第。見える範囲と、今すぐできる対策（プレビュー非表示、Focus/おやすみ、機内モード等）を解説。",
-        date: "2026-01-17",
-        tag: "学校 / スマホ",
-        url: "articles/phone-confiscated-notification-privacy.html"
-      },
-{
-        title: "【学校Wi‑Fi】見てるサイトは先生にバレる？見える範囲と注意点（筒抜け？を解説）",
-        desc: "学校のWi‑Fiに繋ぐと、見ているサイトはどこまで見られる？HTTPSなら本文は基本見えないが、アクセス先のドメインや通信の記録はネットワーク管理側に残ることがある。先生・学校・業者が見える範囲、見えない範囲、端末管理（MDM/証明書）で変わるポイントと注意点を解説。",
-        date: "2026-01-17",
-        tag: "学校 / ネット",
-        url: "articles/school-wifi-what-can-they-see.html"
-      },
-{
-        title: "【危険】知らない人のDMリンクは開くだけでNG？理由と安全な対処（Instagram/X/LINE）",
-        desc: "知らない人から届いたDMのURLは、開いただけで個人情報が漏れたり、詐欺の罠に引っかかったりすることがある。IP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、脆弱性悪用など「開くだけ危険」の理由と、安全な対処手順をまとめ。",
-        date: "2026-01-17",
-        tag: "SNS・ネット / セキュリティ",
-        url: "articles/dm-link-danger-why.html"
-      },
-{
-        title: "【iPhone】画面ヒビ割れ放置でタッチ不良になる？使い続けた時のリスクと対処",
-        desc: "iPhoneの画面がひび割れたまま使うと、いつ操作不能になる？タッチ不良（ゴーストタッチ）、液晶/有機ELのにじみ、割れ拡大、水没リスクなどの現実的な危険と、今すぐやるべきバックアップ・応急処置・修理判断を解説。",
-        date: "2026-01-17",
-        tag: "iPhone / 修理",
-        url: "articles/iphone-cracked-screen-touch-risk.html"
-      },
-{
-        title: "【iPhone】iCloud支払い失敗で写真は消える？期限切れの影響と今すぐやる対処",
-        desc: "iCloud+の支払いが失敗/期限切れになった時、写真がすぐ消えるのかを解説。基本は即削除されないが、容量超過で同期やバックアップが止まる。詐欺メールの見分け、支払い復旧、写真を守るバックアップ手順まで。",
-        date: "2026-01-17",
-        tag: "iPhone / iCloud",
-        url: "articles/icloud-payment-failed-photos.html"
-      },
-{
-        title: "【X】ブロックしたら相手の画面でどう見える？消え方・通知・見える範囲まとめ",
-        desc: "Xでブロックした直後、相手の画面であなたがどう表示されるかを整理。プロフィール表示の「ブロックされています」画面、フォロー解除、DM不可、いいね/返信/リポスト不可、公開/鍵垢での見える範囲の違いまで。",
-        date: "2026-01-17",
-        tag: "X（Twitter） / 設定",
-        url: "articles/x-block-what-they-see.html"
-      },
-{
-        title: "Instagram投稿をアーカイブするとタグ付け相手にはどう見える？見え方・通知・戻し方",
-        desc: "Instagramの投稿をアーカイブした時、タグ付けされた相手の「タグ付け」欄にどう表示されるか（基本は見えなくなる）。通知は行く？相手の画面での見え方、戻す方法、やるべき確認を整理。",
-        date: "2026-01-17",
-        tag: "Instagram / 設定",
-        url: "articles/instagram-archive-tagged-visibility.html"
-      },
-{
-        title: "【iPhone/Safari】怪しい警告画面が消えない時の対処法｜変なサイトを開いた時の消し方",
-        desc: "iPhoneで怪しいサイトの『ウイルスに感染』『警告が消えない』などの画面が出た時に、最短で閉じる手順（Safari中心）。タップしてはいけない操作、履歴/サイトデータの削除、通知の解除、プロファイル確認まで。",
-        date: "2026-01-17",
-        tag: "Safari / セキュリティ",
-        url: "articles/safari-warning-stuck-close.html"
-      },
-{
-        title: "【iPhone】知らない番号からFaceTimeが来た時の対処法｜拒否してOK？",
-        desc: "知らない番号からFaceTimeがかかってきた時は、拒否してOK。安全な対処（ブロック/通報/設定で防ぐ）と、詐欺っぽいサイン、うっかり出た時の対処をまとめ。",
-        date: "2026-01-17",
-        tag: "iPhone / セキュリティ",
-        url: "articles/facetime-unknown-number-reject-ok.html"
-      },
-{
-        title: "インスタのストーリーを間違えて載せた！一瞬で消す方法",
-        desc: "Instagramストーリーを誤投稿した時に、最短で削除する手順（iPhone/Android共通）。削除ボタンが出ない時の対処、ハイライトから消す方法、公開範囲の応急処置まで。",
-        date: "2026-01-17",
-        tag: "Instagram / トラブル",
-        url: "articles/instagram-story-delete-fast.html"
-      },
-{
-        title: "SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）",
-        desc: "ログインできない／不正投稿／メール・電話番号が変わった等の「乗っ取り」疑いの時に、最短で被害を止める手順をまとめ。X・Instagram・LINEの共通手順と個別手順。",
-        date: "2026-01-17",
-        tag: "SNS / セキュリティ",
-        url: "articles/account-hijacked-sos.html"
-      },
-{
-        title: "Xでアカウントが凍結される原因と解除の流れ（異議申し立て）",
-        desc: "X（旧Twitter）の「凍結」「ロック」「一時的制限」の違い、凍結されやすい原因、解除（異議申し立て）の手順、フォームが開かない時の対処、再凍結を防ぐコツまで。",
-        date: "2026-01-21",
-        tag: "SNS / X",
-        url: "articles/x-account-suspended.html"
-      },
-      {
-        title: "InstagramでDMが送れない原因まとめ（iPhone/Android/PC）",
-        desc: "InstagramでDMが送れない・送信できない・エラーになる時の原因と対処法を症状別に整理。iPhone/Android/PC（Web）でのチェック手順も。",
-        date: "2026-01-20",
-        tag: "SNS / Instagram",
-        url: "articles/instagram-dm-okenai.html"
-      },
-      {
-        title: "Google Classroomに入れない時の対処法（iPhone/PC）",
-        desc: "Google Classroomにログインできない／クラスに入れない／読み込みが終わらない時の原因と直し方。iPhone・iPad・PC（Chrome）での手順をわかりやすく。",
-        date: "2026-01-20",
-        tag: "学校 / Google",
-        url: "articles/google-classroom-hairenai.html"
-      },
-      {
-        title: "先生にLINEしてもいい？連絡していい内容・ダメな内容",
-        desc: "先生にLINEしていい内容・避けるべき内容、送る時間帯の目安、失礼になりにくい書き方、コピペ例文をまとめ。学校のルールがある場合の確認ポイントも。",
-        date: "2026-01-20",
-        tag: "学校 / 文章",
-        url: "articles/sensei-line-renraku-ok-ng.html"
-      },
-      {
-        title: "Xでシャドウバンされてるか確認する方法",
-        desc: "検索に出ない/通知が伸びない時の原因がシャドウバンかどうかを、安全にチェックする手順。種類（サーチ/リプ/ゴースト等）と解除までにやることも。",
-        date: "2026-01-20",
-        tag: "SNS / X",
-        url: "articles/x-shadowban-check.html"
-      },
-      {
-        title: "Safariで「この接続ではプライバシーが保護されません」と出た時の対処",
-        desc: "Safariで「この接続ではプライバシーが保護されません」と表示された時の原因（証明書/時刻/ネットワーク/フィルタ/サイト側障害）と安全な対処手順。開いていいかの判断ポイントも。",
-        date: "2026-01-20",
-        tag: "iPhone / Safari",
-        url: "articles/safari-privacy-not-secure.html"
-      },
-      {
-        title: "iPhoneのストレージが急に増えた原因と減らし方",
-        desc: "iPhoneの容量が突然減る原因（写真/動画、Safari、LINE、iCloud写真、システムデータ等）をチェックリストで特定し、手順どおりに安全に減らす方法をまとめ。",
-        date: "2026-01-20",
-        tag: "iPhone / 生活",
-        url: "articles/iphone-storage-fueru-herasu.html"
-      },
-      {
-        title: "提出期限に間に合わない時の謝罪文テンプレ",
-        desc: "提出に遅れそう/遅れた時にそのまま送れる例文を状況別に。理由の書き方、延長お願い、遅延後のフォロー、NG例までまとめ。",
-        date: "2026-01-20",
-        tag: "学校 / 文章",
-        url: "articles/teishutsu-kigen-okurenai.html"
-      },
-      {
-        title: "部活を休む時の連絡文【LINE/メール例文・コピペOK】",
-        desc: "顧問/先輩/グループに送るテンプレを状況別に。短く失礼なく伝えるコツ、返信が来ない時の追いLINEも。",
-        date: "2026-01-19",
-        tag: "学校 / 文章",
-        url: "articles/club-absence-message.html"
-      },
-      {
-        title: "Instagramでリンクをプロフィールに貼る方法（複数OK・できない時の対処）",
-        desc: "プロフィールの『リンク』から追加する手順を画像なしでも迷わない順で。貼れない/押せない時の原因も。",
-        date: "2026-01-18",
-        tag: "SNS / Instagram",
-        url: "articles/instagram-profile-link.html"
-      },
-      {
-        title: "Xでアカウントを一時停止・解除する方法（30日以内に復活）",
-        desc: "一時停止の手順（iPhone/Android/PC）と、解除（再開）する方法。30日ルールや注意点もまとめて解説。",
-        date: "2026-01-18",
-        tag: "SNS / X",
-        url: "articles/x-account-deactivate.html"
-      },
-      {
-        title: "Safariでキャッシュを削除する方法（iPhone/iPad）",
-        desc: "表示崩れ・ログイン不具合・重い時に効く。キャッシュとCookieの違い、消す範囲の選び方も。",
-        date: "2026-01-17",
-        tag: "スマホ / Safari",
-        url: "articles/safari-cache-clear.html"
-      },
-      {
-        title: "Xの予約投稿（スケジュール投稿）のやり方｜X Proで確実に設定する",
-        desc: "X Pro（旧TweetDeck）で予約投稿する手順、予約一覧の確認・編集、出てこない時の対処まで。",
-        date: "2026-01-16",
-        tag: "SNS / X",
-        url: "articles/x-yoyaku-post.html"
-      },
-      {
-        title: "Safariでサイトをホーム画面に追加する方法（iPhone/iPad）",
-        desc: "よく見るサイトをワンタップで開けるようにする手順。出てこない時のチェックも。",
-        date: "2026-01-15",
-        tag: "スマホ / Safari",
-        url: "articles/safari-home-screen.html"
-      },
-      {
-        title: "反省文ってどう書けばいい？【例文あり・そのまま使える】",
-        desc: "反省文の“型”と、スマホ・提出物・遅刻などの例文をまとめました（コピペOK・言い換え推奨）。",
-        date: "2026-01-14",
-        tag: "学校 / 文章",
-        url: "articles/hanseibun.html"
-      },
-  {
-    title: "【インスタ】DMの画像が1回で消えた…もう一度見る方法は？（View Once/Allow Replay）",
-    desc: "結論：相手が「View once（1回のみ）」で送った画像は再表示できません。「Allow replay（リプレイ可）」ならチャットで画像をもう一度タップして再生できます。見分け方と対処をまとめました。",
-    date: "2026-02-03",
-    tag: "SNS / Instagram",
-    url: "articles/instagram-dm-view-once-replay.html"
-  },
-  {
-    title: "【X】エロ垢にフォローされた！フォロワーにバレる前に消す方法（削除・ブロック・鍵垢）",
-    desc: "結論：いちばん静かに消すなら「Remove this follower（フォロワーを削除）」、再フォローも防ぐなら「ブロック」。フォロワーに“通知”でバレることは基本ないけど、フォロー一覧を見られると気づかれる可能性あり。最短手順と再発防止をまとめました。",
-    date: "2026-02-03",
-    tag: "SNS / X",
-    url: "articles/x-ero-account-followed-remove.html"
-  },
-  {
-    title: "【TikTok LIVE】入った瞬間『〇〇が入室しました』を消す方法は？すぐ消える？バレない見方も解説",
-    desc: "結論：視聴者側で入室メッセージを“消す”ボタンはありません。自然に流れるのを待つだけ。どうしても目立ちたくない時の対処（入室しないで見る/すぐ退出/設定の見直し）をまとめました。",
-    date: "2026-02-03",
-    tag: "SNS / TikTok",
-    url: "articles/tiktok-live-joined-message-hide.html"
-  },
-  {
-    title: "【危険】インスタDMの「これあなた？」動画リンクは押すな！乗っ取り手口と対処法",
-    desc: "結論：そのDMは乗っ取り/フィッシングの可能性大。リンク先でID/パスワードを入れるとアカウントを奪われます。押してしまった時の確認ポイントと今すぐやるべき対策をまとめました。",
-    date: "2026-01-31",
-    tag: "SNS / Instagram",
-    url: "articles/instagram-dm-is-this-you-video-link-scam.html"
-  },
-  {
-    title: "【例文あり】友達に勝手にSNSへ写真を載せられた…角を立てずに消してもらう言い方",
-    desc: "結論：まずは短く“お願い”→理由は最小限→代案（ぼかし/トリミング）を出すと角が立ちにくい。コピペOKの例文と、相手が消してくれない時の対処もまとめました。",
-    date: "2026-01-31",
-    tag: "SNS / トラブル",
-    url: "articles/sns-photo-posted-without-permission-delete-request.html"
-  },
-  {
-    title: "【インスタ】特定の人のストーリーをミュートしたらバレる？通知・見え方・解除方法まとめ",
-    desc: "結論：ストーリーをミュートしても相手に通知は行きません。ただし、あなたが閲覧者リストに出なくなるので気づかれる可能性はあります。ミュート手順・解除方法・「見ない」と「見せない」の違いも解説。",
-    date: "2026-01-31",
-    tag: "SNS / Instagram",
-    url: "articles/instagram-mute-story-notification.html"
-  },
-  {
-    title: "【TikTok】動画を保存したらバレる？誰が保存したか投稿者に通知される？【お気に入り/ダウンロード】",
-    desc: "結論：ダウンロード保存は基本バレない（通知なし）。ただしお気に入り（☆）保存は通知/アクティビティに出る場合あり。違いと対策を解説。",
-    date: "2026-01-31",
-    tag: "SNS / TikTok",
-    url: "articles/tiktok-video-save-notification.html"
-  },
-  {
-    title: "【2026年版】インスタDMを既読つけずに読む方法｜既読（Seen）をオフにする設定と注意点",
-    desc: "結論：今でも可能。Instagramの「既読表示（Read receipts）」をオフにすれば、DMを開いても相手に“既読/Seen”が出にくい。全体/特定チャット別の設定と注意点をまとめました。",
-    date: "2026-01-31",
-    tag: "SNS / インスタ",
-    url: "articles/instagram-dm-read-without-seen.html"
-  },
-  {
-    title: "LINEの送信取消ボタンがない！もう消せない？原因と対処法【1時間制限/7日】",
-    desc: "結論：時間切れだと「送信取消」が表示されません。日本では無料は送信後1時間以内、LYPプレミアムは7日以内（条件あり）。削除との違いと、今できる対処法をまとめました。",
-    date: "2026-01-31",
-    tag: "SNS / LINE",
-    url: "articles/line-unsend-no-button.html"
-  },
-  {
-    title: "親に内緒で入れたアプリ、ホーム画面から隠しても設定アプリからバレる？（結論：バレる）",
-    desc: "結論：ホーム画面から消しても“インストール済み”なら設定やストレージ等で見つかる可能性大。iPhone/Androidでバレる場所と、安心の対処をまとめました。",
-    date: "2026-01-30",
-    tag: "スマホ / プライバシー",
-    url: "articles/hidden-app-visible-settings.html"
-  },
-  {
-    title: "検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順（iPhone/Android/PC）",
-    desc: "Safari/Chrome/Edge/Firefox別に、今すぐ履歴を一括削除する最短手順。消えるもの・消えないもの（Google履歴）もセットで解説。",
-    date: "2026-01-30",
-    tag: "スマホ / プライバシー",
-    url: "articles/browser-history-clear-10sec.html"
-  },
-  {
-    title: "支払い画面でボタン連打しちゃった…二重で決済されてないか確認する方法",
-    desc: "クレカ/デビット/PayPay/Apple Pay/アプリ課金別に、30秒でできる確認→二重だった時の返金手順まで分かりやすく解説。",
-    date: "2026-01-30",
-    tag: "スマホ / トラブル",
-    url: "articles/payment-double-charge-check.html"
-  },
-  {
-    title: "容量不足で写真消すとき「最近削除した項目」まで空にすると戻せない？（結論と復元の可能性）",
-    desc: "結論：最近削除を空にすると、写真アプリからは基本戻せない。例外（バックアップ/iCloud/他アプリ）と、容量を増やす安全な手順を分かりやすく解説。",
-    date: "2026-01-30",
-    tag: "iPhone / 容量不足",
-    url: "articles/iphone-recently-deleted-permanent.html"
-  },
-  {
-    title: "フィルタリングで開けないサイトは危険？原因の確認と“許可を得て”安全に閲覧する方法",
-    desc: "結論：ブロック＝危険確定ではないが、無理に回避はNG。原因を切り分け→安全性チェック→管理者/保護者/キャリアに正規ルートで申請する手順をまとめました。",
-    date: "2026-01-30",
-    tag: "スマホ / セキュリティ",
-    url: "articles/filtering-blocked-site-safe-view.html"
-  },
-  {
-    title: "スマホの画面が真っ暗で充電しても反応しない…寿命？原因と今すぐできる対処法（iPhone/Android）",
-    desc: "結論：寿命とは限らない。放電・フリーズ・充電器/端子トラブルが多い。まずは30分充電→強制再起動→別ケーブル確認。危険サインも解説。",
-    date: "2026-01-30",
-    tag: "スマホ / 故障",
-    url: "articles/phone-screen-black-no-charge.html"
-  },
-  {
-    title: "インスタ「親しい友達」から外されたら通知される？バレる？相手に起きる変化まとめ",
-    desc: "結論：通知は行かない。でも緑のリングが消える/限定ストーリーが見えなくなるなど“間接的に気づく”可能性はある。サインと注意点を整理。",
-    date: "2026-01-30",
-    tag: "Instagram / SNS",
-    url: "articles/instagram-close-friends-removed-notification.html"
-  },
-  {
-    title: "インスタDMで変なリンク踏んだ…その後何も起きなければセーフ？（結論：油断NG）",
-    desc: "結論：何も起きなくても“後から被害”はありえる。今すぐやる5分チェック（ログイン履歴/連携アプリ/2段階認証）と、やってしまった時の対処を解説。",
-    date: "2026-01-30",
-    tag: "SNS / セキュリティ",
-    url: "articles/instagram-dm-link-clicked-safe.html"
-  },
-  {
-    title: "「ログイン試行がありました」ってメールが来た…無視して寝て大丈夫？（結論：今すぐ確認）",
-    desc: "本物か詐欺かの見分け→ログイン履歴の確認→最短1分の対処まで。寝る前にやるべき最低ラインもまとめました。",
-    date: "2026-01-30",
-    tag: "セキュリティ / メール",
-    url: "articles/login-attempt-email-ignore.html"
-  },
-  {
-    title: "X（旧Twitter）の「いいね」ってフォロワーのタイムラインに流れてる？（結論と対策）",
-    desc: "結論：今は「いいね一覧」は他人に見えない。だけど“おすすめ”で同じ投稿が出ることはある。バレ方/バレない範囲/対策を1ページで。",
-    date: "2026-01-30",
-    tag: "SNS / プライバシー",
-    url: "articles/x-like-followers-timeline.html"
-  },
-  {
-    title: "X（旧Twitter）でリストに追加したら通知される？相手にバレる条件（公開/非公開）",
-    desc: "結論：追加しただけで通知は基本来ない。でも公開リストなら相手は「自分が入っているリスト」から確認できる。バレる仕組みと対策を解説。",
-    date: "2026-01-30",
-    tag: "X / プライバシー",
-    url: "articles/x-list-added-notification.html"
-  },
-  {
-    title: "LINEグループを退会しても発言は消えない？過去メッセージが残る理由と削除できる範囲",
-    desc: "結論：退会＝表示が消えるだけで、あなたの過去発言は相手側に残る。消せるのは「送信取消」(期限あり)だけ。退会後にどう見えるか/何ができるかを解説。",
-    date: "2026-01-30",
-    tag: "LINE / トラブル",
-    url: "articles/line-group-leave-message-remains.html"
-  },
-];
-
-    const sorted = [...POSTS].sort((a,b) => (b.date || "").localeCompare(a.date || ""));
-    const postsAllEl = document.getElementById("postsAll");
-
-    const input = document.getElementById("searchInput");
-    const metaEl = document.getElementById("searchMeta");
-    const clearBtn = document.getElementById("clearBtn");
-
-    // --- Better search (relevance + Japanese-friendly normalization) ---
-    const normalizeText = (s) => (s || "")
-      .toString()
-      .toLowerCase()
-      .normalize("NFKC")
-      .replace(/[’'"]/g, "")
-      .replace(/[‐‑‒–—―]/g, "-")
-      // keep: alnum/_/-, spaces, kana, kanji
-      .replace(/[^\w\u3040-\u30ff\u3400-\u9fff\s-]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-
-    const isAsciiWord = (t) => /^[a-z0-9_-]+$/i.test(t || "");
-
-    const toHiragana = (s) => (s || "").replace(/[\u30a1-\u30f6]/g, ch =>
-      String.fromCharCode(ch.charCodeAt(0) - 0x60)
-    );
-    const toKatakana = (s) => (s || "").replace(/[\u3041-\u3096]/g, ch =>
-      String.fromCharCode(ch.charCodeAt(0) + 0x60)
-    );
-
-    const expandQuery = (q) => {
-      let s = (q || "").toString();
-      // よくある言い方ゆれ（最低限）
-      const rules = [
-        [/twitter/gi, "x"],
-        [/ツイッター/g, "x"],
-        [/インスタ/gi, "instagram"],
-        [/クラスルーム/g, "classroom"],
-        [/グーグル/gi, "google"],
-      ];
-      for (const [re, to] of rules) s = s.replace(re, to);
-      return s;
-    };
-
-    const makeNgrams = (text, n) => {
-      const out = [];
-      for (let i = 0; i <= text.length - n; i++) out.push(text.slice(i, i + n));
-      return out;
-    };
-
-    const queryTokens = (rawQuery) => {
-      const expanded = expandQuery(rawQuery);
-      const base = normalizeText(expanded);
-      if (!base) return { phrase: "", words: [], tokens: [] };
-
-      const words = base.split(" ").filter(Boolean);
-      const tokens = new Set();
-
-      for (const w of words) {
-        tokens.add(w);
-
-        const h = toHiragana(w);
-        const k = toKatakana(w);
-        tokens.add(h);
-        tokens.add(k);
-
-        // 日本語は部分一致で強く拾えるように n-gram を追加
-        if (!isAsciiWord(w)) {
-          if (w.length >= 2) makeNgrams(w, 2).forEach(t => tokens.add(t));
-          if (w.length >= 3) makeNgrams(w, 3).forEach(t => tokens.add(t));
-        }
-      }
-
-      return { phrase: base, words, tokens: Array.from(tokens) };
-    };
-
-    const buildHay = (p) => {
-      if (p._hay) return p._hay;
-      const title = normalizeText(p.title);
-      const desc  = normalizeText(p.desc || "");
-      const tag   = normalizeText(p.tag || "");
-      const all   = `${title} ${desc} ${tag}`.trim();
-      p._hay = {
-        title, desc, tag,
-        all,
-        allH: toHiragana(all),
-        allK: toKatakana(all),
-        titleH: toHiragana(title),
-        titleK: toKatakana(title),
-      };
-      return p._hay;
-    };
-
-    const includesAny = (hay, t) => {
-      if (!t) return false;
-      return hay.all.includes(t) || hay.allH.includes(t) || hay.allK.includes(t);
-    };
-
-    const inTitleAny = (hay, t) => {
-      if (!t) return false;
-      return hay.title.includes(t) || hay.titleH.includes(t) || hay.titleK.includes(t);
-    };
-
-    const scorePost = (p, q) => {
-      const hay = buildHay(p);
-      let score = 0;
-
-      if (!q.phrase) return 0;
-
-      // フレーズ一致（強め）
-      if (inTitleAny(hay, q.phrase)) score += 140;
-      else if (includesAny(hay, q.phrase)) score += 60;
-
-      // 単語（ANDっぽく）+ 重みづけ
-      let wordsHit = 0;
-      for (const w of q.words) {
-        if (!w) continue;
-
-        const inTitle = inTitleAny(hay, w);
-        const inTag   = hay.tag.includes(w) || toHiragana(hay.tag).includes(toHiragana(w)) || toKatakana(hay.tag).includes(toKatakana(w));
-        const inDesc  = hay.desc.includes(w) || toHiragana(hay.desc).includes(toHiragana(w)) || toKatakana(hay.desc).includes(toKatakana(w));
-        const any     = inTitle || inTag || inDesc || includesAny(hay, w);
-
-        if (any) wordsHit += 1;
-
-        if (inTitle) score += 60;
-        else if (inTag) score += 30;
-        else if (inDesc) score += 18;
-        else if (any) score += 10;
-      }
-
-      if (q.words.length >= 2 && wordsHit === q.words.length) score += 45; // 全部ヒットしたらボーナス
-
-      // n-gram / 部分一致（弱め・補助）
-      for (const t of q.tokens) {
-        if (!t || t.length < 2) continue;
-        if (q.words.includes(t)) continue; // 単語で加点済み
-
-        if (includesAny(hay, t)) {
-          score += (t.length >= 3 ? 6 : 3);
-        }
-      }
-
-      // 新しめの記事を少しだけ優遇（同点のときに効く程度）
-      if (p.date) {
-        const d = new Date(p.date);
-        if (!isNaN(d.getTime())) {
-          const days = (Date.now() - d.getTime()) / 86400000;
-          const bonus = Math.max(0, 6 - (days / 60)); // ざっくり半年以内で弱く加点
-          score += bonus;
-        }
-      }
-
-      return score;
-    };
-
-    function setQueryParam(query){
-      try{
-        const url = new URL(window.location.href);
-        const q = (query || "").trim();
-        if(q) url.searchParams.set('q', q);
-        else url.searchParams.delete('q');
-        history.replaceState(null, "", url);
-      }catch(e){}
-    }
-
-    function render(list, query){
-      if(!postsAllEl) return;
-
-      if(list.length === 0){
-        postsAllEl.innerHTML = `
-          <div class="card" style="grid-column:1/-1;">
-            <h3 style="margin-top:0;">該当する記事が見つかりませんでした</h3>
-            <p class="muted" style="margin:0;">キーワードを短くする／言い方を変える（例：インスタ→Instagram）などで再検索してみてください。</p>
-          </div>
-        `;
-      }else{
-        postsAllEl.innerHTML = list.map(p => {
-          const safeTitle = esc(p.title);
-          const safeDesc  = esc(p.desc);
-          const safeTag   = esc(p.tag);
-          const safeDate  = esc(p.date);
-          return `
-            <article class="card">
-              <p class="meta"><span class="chip">${safeTag}</span><span class="date">${safeDate}</span></p>
-              <h3>${safeTitle}</h3>
-              <p>${safeDesc}</p>
-              <a class="read" href="${p.url}">記事を読む →</a>
-            </article>
-          `;
-        }).join("");
-      }
-
-      if(metaEl){
-        const q = (query || "").trim();
-        metaEl.textContent = q
-          ? `検索結果：${list.length}件 / 全${sorted.length}件（キーワード：${q}）`
-          : `全${sorted.length}件を表示`;
-      }
-    }
-
-    function apply(query){
-      const raw = (query || "").toString().trim();
-      setQueryParam(raw);
-
-      const nq = raw.toLowerCase();
-      let filtered = sorted;
-
-      // 元の挙動：入力した文字列が含まれる記事だけ表示（単純な部分一致）
-      if(nq){
-        filtered = sorted.filter(p => {
-          const hay = String(p.title || "") + " " + String(p.desc || "") + " " + String(p.tag || "");
-          return hay.toLowerCase().includes(nq);
-        });
-      }
-
-      render(filtered, raw);
-    }
-
-// 入力しながら更新（URLのqも同期）
-    if(input){
-      input.addEventListener('input', () => {
-        const q = input.value;
-        setQueryParam(q);
-        apply(q);
-      });
-    }
-
-    if(clearBtn && input){
-      clearBtn.addEventListener('click', () => {
-        input.value = '';
-        setQueryParam('');
-        apply('');
-        input.focus();
-      });
-    }
-
-    const form = document.getElementById('searchForm');
-    if(form && input){
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const q = input.value;
-        setQueryParam(q);
-        apply(q);
-      });
-    }
-
-    // 初期クエリ（?q=）
-    try{
-      const params = new URLSearchParams(window.location.search);
-      const q = params.get('q') || '';
-      if(input) input.value = q;
-      apply(q);
-    }catch(e){
-      apply('');
-    }
-
-    document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+<div style="height:72px" id="ai"></div>
+<div class="section-title"><div><span class="eyebrow">AIラクワザ</span><h2>AIを今日から使える形に</h2></div><p>ChatGPT・Gemini・Copilot・Claude・Perplexityなど100記事。</p></div>
+<div class="grid"><article class="article-card" data-cat="安全" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>生成AIに機密情報を入れないためのチェックリスト｜入力前の確認</h3>
+        <p>生成AIへ文章やファイルを入力する前に、個人情報、顧客情報、認証情報、未公開情報を見つけて除く手順を解説します。</p>
+        <a class="card-link" href="articles/ai-confidential-info-checklist.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="安全" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>生成AIと著作権の基本｜文章・画像を公開する前の確認</h3>
+        <p>生成AIで作った文章や画像を公開するときに、入力素材、類似性、引用、商用利用条件を確認する基本手順を解説します。</p>
+        <a class="card-link" href="articles/ai-copyright-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="仕事術" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">仕事術</span><span class="thumb-icon">🧰</span></div>
+      <div class="card-body">
+        <h3>AIでメールを校正する方法｜誤送信と情報漏えいを防ぐ手順</h3>
+        <p>生成AIにメール本文を渡して、誤字、分かりにくさ、強すぎる表現を確認し、送信前に人が最終チェックする方法を解説します。</p>
+        <a class="card-link" href="articles/ai-email-proofreading.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="仕事術" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">仕事術</span><span class="thumb-icon">🧰</span></div>
+      <div class="card-body">
+        <h3>AIでExcelデータを整える方法｜重複・表記ゆれ・欠損を確認</h3>
+        <p>生成AIを使ってExcelやCSVの列、重複、表記ゆれ、欠損を調べ、元データを残しながら修正する手順を解説します。</p>
+        <a class="card-link" href="articles/ai-excel-data-cleaning.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="安全" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>生成AIの回答をファクトチェックする方法｜5段階の確認手順</h3>
+        <p>ChatGPTやGeminiなどの回答に含まれる誤情報、古い情報、存在しない出典を見抜くための実践的な確認手順を解説します。</p>
+        <a class="card-link" href="articles/ai-fact-check-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="安全" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>AIの嘘を減らす質問方法｜根拠・不明点・確認手順を指定</h3>
+        <p>生成AIのもっともらしい誤りを減らすために、対象範囲、出典、不明点の表示、検証方法を指示するプロンプトを解説します。</p>
+        <a class="card-link" href="articles/ai-hallucination-prevention.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="仕事術" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">仕事術</span><span class="thumb-icon">🧰</span></div>
+      <div class="card-body">
+        <h3>AIを転職活動に使う方法｜求人整理・応募書類・面接練習</h3>
+        <p>生成AIを求人票の整理、経験の棚卸し、応募書類の下書き、面接練習に使い、事実を盛らずに進める方法を解説します。</p>
+        <a class="card-link" href="articles/ai-job-search-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="仕事術" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">仕事術</span><span class="thumb-icon">🧰</span></div>
+      <div class="card-body">
+        <h3>AIで議事録を作る流れ｜録音前・要約・確認のチェックリスト</h3>
+        <p>生成AIで議事録を作るときに、録音の同意、文字起こし、要約、参加者確認までを安全に進める手順を解説します。</p>
+        <a class="card-link" href="articles/ai-meeting-workflow.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>AIでプレゼン資料を作る方法｜無料から試す手順と注意点</h3>
+        <p>AIを使って構成、見出し、本文、図解案を作り、PowerPoint等に仕上げる効率的な手順を解説します。</p>
+        <a class="card-link" href="articles/ai-presentation-tools.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="安全" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>生成AIに個人情報を入力して大丈夫？安全な使い方と注意点</h3>
+        <p>ChatGPT、Gemini、Copilotなどに入力してはいけない情報、匿名化、データ設定、社内利用ルールの基本を解説します。</p>
+        <a class="card-link" href="articles/ai-privacy-safety.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="安全" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">安全</span><span class="thumb-icon">🛡️</span></div>
+      <div class="card-body">
+        <h3>AI時代の詐欺メールを見分ける方法｜文章・画像・音声の確認</h3>
+        <p>生成AIで自然になった詐欺メールや偽画像、なりすまし音声に対して、送信元、URL、要求内容を別経路で確認する手順を解説します。</p>
+        <a class="card-link" href="articles/ai-scam-detection-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTの使い方を初心者向けに解説｜無料で始める基本手順</h3>
+        <p>ChatGPTを初めて使う人向けに、登録から質問の作り方、回答の直し方、安全に使う注意点まで順番に解説します。</p>
+        <a class="card-link" href="articles/chatgpt-beginner-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTでブログ構成を作る方法｜検索意図から見出しを整理</h3>
+        <p>ChatGPTに想定読者、検索する悩み、記事のゴールを渡し、重複の少ない見出し構成を作る方法を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-blog-outline-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT Canvasの使い方｜文章を部分修正するコツ</h3>
+        <p>ChatGPT Canvasで長文やコードを編集し、特定部分だけを修正する方法と、通常チャットとの使い分けを解説します。</p>
+        <a class="card-link" href="articles/chatgpt-canvas-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTにコードを相談する方法｜エラー修正で伝える情報</h3>
+        <p>ChatGPTへコードの目的、実行環境、エラー全文、再現手順を伝え、安全に修正案を確認する方法を初心者向けに解説します。</p>
+        <a class="card-link" href="articles/chatgpt-code-help-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>カスタムGPTの作り方｜専用AIの指示・知識・公開範囲を設定</h3>
+        <p>カスタムGPTに役割、回答形式、参照資料を設定し、プレビューで確認して安全な範囲で共有する手順を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-custom-gpt-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTカスタム指示の使い方｜毎回の条件入力を減らす</h3>
+        <p>ChatGPTのカスタム指示に文体、前提、出力形式を登録し、繰り返し作業を効率化する方法と入力してはいけない情報を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-custom-instructions.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTでデータ分析する方法｜CSV・Excelからグラフを作る</h3>
+        <p>CSVやExcelをChatGPTへ読み込ませ、集計、傾向、外れ値、グラフを確認する方法と、分析結果を検証する手順を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-data-analysis.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT Deep Researchの使い方｜出典付き調査を依頼するコツ</h3>
+        <p>ChatGPT Deep Researchで調査計画を確認し、対象期間・情報源・比較条件を指定して、出典付きレポートを作る手順を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-deep-research-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTでメールを作る方法｜そのまま使えるプロンプト7選</h3>
+        <p>依頼、謝罪、日程調整、お礼などのメールをChatGPTで作る手順と、コピペして使えるプロンプトを紹介します。</p>
+        <a class="card-link" href="articles/chatgpt-email-writing.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTで英会話練習する方法｜初心者向け会話プロンプト</h3>
+        <p>ChatGPTを会話相手にして、難易度、場面、訂正方法を指定しながら英会話を練習する手順を紹介します。</p>
+        <a class="card-link" href="articles/chatgpt-english-conversation-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTでExcel関数を作る方法｜初心者向け実例と確認手順</h3>
+        <p>やりたい処理を日本語で説明し、Excel関数を作ってもらう方法を、IF、XLOOKUP、集計などの例で解説します。</p>
+        <a class="card-link" href="articles/chatgpt-excel-formulas.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTにファイルをアップロードする方法｜PDF・Excelの確認手順</h3>
+        <p>ChatGPTへPDFや表計算ファイルなどを添付し、要約・抽出・比較を依頼するときの基本手順と安全確認を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-file-upload-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT無料版でできること・できないこと｜初心者向け整理</h3>
+        <p>ChatGPT無料版の活用方法と、有料機能が必要になりやすい場面を、変動する制限に注意しながら分かりやすく整理します。</p>
+        <a class="card-link" href="articles/chatgpt-free-plan.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTに画像を読み込ませる方法｜スクショ・グラフの質問例</h3>
+        <p>ChatGPTへスクリーンショット、写真、グラフを添付し、内容の説明や文字の確認を依頼する方法と注意点を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-image-analysis-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTで画像を作る方法｜初心者向けプロンプトと修正手順</h3>
+        <p>ChatGPTで画像を生成・編集する基本手順と、構図、文字、サイズ、雰囲気を具体的に伝えるプロンプトの作り方を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-image-generation.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTで議事録を要約する方法｜決定事項とタスクを整理</h3>
+        <p>会議メモや文字起こしをChatGPTで議事録に整え、決定事項・担当者・期限を抜き出す方法を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-meeting-summary.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTのメモリ機能の使い方｜記憶の確認・削除方法</h3>
+        <p>ChatGPTのメモリ機能を有効化し、保存内容を確認・修正・削除する手順と、覚えさせない方がよい情報を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-memory-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTでPDFを要約する方法｜読めないときの対処法も解説</h3>
+        <p>PDFをChatGPTに読み込ませ、章別要約、重要数字、疑問点を整理する方法と、スキャンPDFなどで失敗する場合の対処を紹介します。</p>
+        <a class="card-link" href="articles/chatgpt-pdf-summary.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT Projectsの使い方｜チャットと資料をまとめて管理</h3>
+        <p>ChatGPTのProjectsで、関連チャット、参考ファイル、専用指示を一か所にまとめる基本手順と活用例を紹介します。</p>
+        <a class="card-link" href="articles/chatgpt-projects-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTプロンプトの作り方｜初心者向け5要素テンプレート</h3>
+        <p>ChatGPTへの指示を「目的・背景・材料・条件・出力形式」の5要素で組み立て、回答のズレを減らす方法を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-prompt-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTで履歴書・職務経歴書を作る方法｜盛らずに強みを伝える</h3>
+        <p>ChatGPTで職務経歴を整理し、実績を具体化して履歴書・職務経歴書の下書きを作る方法と、虚偽を防ぐ確認手順を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-resume-writing.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT Searchの使い方｜最新情報を出典付きで調べるコツ</h3>
+        <p>ChatGPT Searchで最新情報を調べ、出典リンク、日付、一次情報を確認しながら回答の信頼性を高める手順を紹介します。</p>
+        <a class="card-link" href="articles/chatgpt-search-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT学習モードの使い方｜答えを見る前に理解を深める</h3>
+        <p>ChatGPTの学習モードで、質問、ヒント、確認問題を使いながら理解を深める方法と、宿題・試験勉強での注意点を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-study-mode.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTのタスク機能の使い方｜リマインダーと定期確認を設定</h3>
+        <p>ChatGPTのタスク機能で一回限りの通知や定期的な確認を設定し、編集・一時停止・削除する方法を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-tasks-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTの一時チャットとは？履歴・メモリとの違いと使い方</h3>
+        <p>ChatGPTの一時チャットを使う場面、通常チャットとの違い、利用前に確認したいデータ上の注意点を初心者向けに整理します。</p>
+        <a class="card-link" href="articles/chatgpt-temporary-chat-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTで翻訳する方法｜自然な日本語に直すプロンプト</h3>
+        <p>ChatGPTで文章を翻訳し、用途・読み手・固有名詞を指定して自然な表現へ調整する方法と確認手順を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-translation-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPTでWebページを要約する方法｜URLが読めない時の対処</h3>
+        <p>ChatGPT SearchなどでWebページの内容を確認し、URL、対象範囲、要約形式を指定する方法と、取得できない場合の対処を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-url-summary-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="ChatGPT" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">ChatGPT</span><span class="thumb-icon">AI</span></div>
+      <div class="card-body">
+        <h3>ChatGPT音声モードの使い方｜会話練習とアイデア整理に活用</h3>
+        <p>ChatGPT音声モードの始め方、語学練習、面接練習、移動中のメモ整理に使う方法とプライバシー設定を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-voice-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>ChatGPTとClaudeはどっちがいい？文章・調査・ファイルで比較</h3>
+        <p>ChatGPTとClaudeを、文章作成、Web調査、ファイル処理、継続作業、安全確認の観点で選ぶ方法を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-vs-claude.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>ChatGPTとCopilotはどっちがいい？仕事・検索・Office連携で比較</h3>
+        <p>ChatGPTとMicrosoft Copilotを、一般的なAI相談、Web検索、ファイル、Microsoft 365、Windowsとの連携で比較します。</p>
+        <a class="card-link" href="articles/chatgpt-vs-copilot.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>ChatGPTとGeminiはどっちがおすすめ？用途別の選び方</h3>
+        <p>ChatGPTとGeminiを文章作成、Google連携、長文編集、資料整理などの用途で比較し、自分に合う選び方を解説します。</p>
+        <a class="card-link" href="articles/chatgpt-vs-gemini.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claude Artifactsの使い方｜文書・コード・簡単なツールを編集</h3>
+        <p>Claude Artifactsで文書、コード、図、簡単なツールを別画面に表示し、会話しながら部分修正・共有する基本手順を解説します。</p>
+        <a class="card-link" href="articles/claude-artifacts-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claudeの使い方を初心者向けに解説｜文章・要約・資料整理</h3>
+        <p>AnthropicのAIアシスタントClaudeを初めて使う人向けに、文章作成、長文要約、ファイル整理の基本と注意点を解説します。</p>
+        <a class="card-link" href="articles/claude-beginner-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claudeにコードを相談する方法｜長いコードの直し方と注意点</h3>
+        <p>Claudeへ実行環境、目的、エラー、関連コードを伝え、変更範囲を小さく保ちながら修正案を確認する方法を解説します。</p>
+        <a class="card-link" href="articles/claude-code-help-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claudeにファイルをアップロードする方法｜対応形式と質問例</h3>
+        <p>Claudeへ文書、表、テキストなどを添付し、要約・抽出・分析を依頼するときの基本手順と注意点を解説します。</p>
+        <a class="card-link" href="articles/claude-file-upload-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claudeで長文資料を整理する方法｜章ごとに要約・比較するコツ</h3>
+        <p>Claudeで長い文書を扱うときに、目的、対象範囲、出力形式を分けて指定し、抜け漏れを減らす方法を解説します。</p>
+        <a class="card-link" href="articles/claude-long-document-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>ClaudeでPDFを要約する方法｜表・グラフを確認するコツ</h3>
+        <p>ClaudeへPDFを添付し、ページ、章、表、グラフを指定して要点を整理する方法と、原文照合のポイントを解説します。</p>
+        <a class="card-link" href="articles/claude-pdf-summary-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claude Projectsの使い方｜資料と指示をまとめて管理</h3>
+        <p>Claude Projectsに関連資料とプロジェクト指示をまとめ、会話をまたいで同じ前提で作業する方法を解説します。</p>
+        <a class="card-link" href="articles/claude-projects-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claude Researchの使い方｜複雑なテーマを出典付きで調査</h3>
+        <p>Claude Researchで調査の範囲とゴールを伝え、複数回の検索を使った結果を引用から検証する手順を解説します。</p>
+        <a class="card-link" href="articles/claude-research-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Claudeのスタイル設定方法｜文章のトーンを自分向けに調整</h3>
+        <p>Claudeのプリセットまたはカスタムスタイルで、回答の長さ、文体、説明の詳しさを調整する方法を解説します。</p>
+        <a class="card-link" href="articles/claude-styles-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Claude" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Claude</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>ClaudeのWeb検索の使い方｜引用付き回答を確認する方法</h3>
+        <p>ClaudeのWeb検索を有効にし、期間、地域、優先する情報源を指定して、引用付きの回答を確認する方法を解説します。</p>
+        <a class="card-link" href="articles/claude-web-search-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Microsoft Copilotの使い方｜できることを初心者向けに解説</h3>
+        <p>Microsoft Copilotの基本的な質問、文章作成、要約、画像を使う作業の考え方と安全な使い方を解説します。</p>
+        <a class="card-link" href="articles/copilot-beginner-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot Deep Researchの使い方｜複数情報源から調べるコツ</h3>
+        <p>CopilotのDeep Researchで調査範囲、対象期間、優先する情報源を指定し、出典付きの結果を確認する方法を解説します。</p>
+        <a class="card-link" href="articles/copilot-deep-research-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>EdgeのCopilotの使い方｜開いているページを要約・比較</h3>
+        <p>Microsoft EdgeでCopilotを開き、閲覧中の公開ページについて要約、質問、比較を行う方法と取得範囲の注意を解説します。</p>
+        <a class="card-link" href="articles/copilot-edge-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>CopilotでExcel作業を効率化する方法｜実例と注意点</h3>
+        <p>Copilot in Excelで表の作成、数式、分析、グラフ作成を依頼する基本と、結果を確認する方法を解説します。</p>
+        <a class="card-link" href="articles/copilot-excel-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Microsoft Copilotにファイルをアップロードする方法｜要約・比較の例</h3>
+        <p>Microsoft CopilotへPDFやOfficeファイルなどを添付し、要約、抽出、比較を依頼する基本手順と注意点を解説します。</p>
+        <a class="card-link" href="articles/copilot-file-upload-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilotで画像を生成・編集する方法｜日本語プロンプトの作り方</h3>
+        <p>Copilotで画像の主題、構図、色、用途、入れない要素を指定し、修正指示で仕上げる方法と権利上の注意を解説します。</p>
+        <a class="card-link" href="articles/copilot-image-generation-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot in Outlookの使い方｜メール要約・下書き・推敲</h3>
+        <p>OutlookのCopilotで長いメールスレッドを要約し、返信を下書きし、トーンや分かりやすさを改善する方法を解説します。</p>
+        <a class="card-link" href="articles/copilot-outlook-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot Pagesの使い方｜AIの回答を共同編集できる文書へ整理</h3>
+        <p>Copilot Pagesで回答を編集可能なページへ移し、見出しやタスクを整理して共有する基本手順を解説します。</p>
+        <a class="card-link" href="articles/copilot-pages-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot in PowerPointの使い方｜資料からスライドを作る</h3>
+        <p>Copilot in PowerPointで新しいプレゼンを作り、WordやPDFを基にスライドを生成・追加・要約する方法を解説します。</p>
+        <a class="card-link" href="articles/copilot-powerpoint-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot Visionの使い方｜画面を見せて質問するときの注意</h3>
+        <p>Copilot VisionにブラウザやPC画面、カメラ映像を共有して質問する基本手順と、映り込みを防ぐ安全確認を解説します。</p>
+        <a class="card-link" href="articles/copilot-vision-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot Voiceの使い方｜音声で質問・アイデア整理する方法</h3>
+        <p>Copilot Voiceで会話を始め、目的と終了時のまとめ方を指定して、ハンズフリーで考えを整理する方法を解説します。</p>
+        <a class="card-link" href="articles/copilot-voice-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>WindowsのCopilotの使い方｜PC作業で質問するときの基本</h3>
+        <p>WindowsでCopilotを開き、設定の探し方、文章作成、ファイルの相談などに使う基本手順と安全確認を解説します。</p>
+        <a class="card-link" href="articles/copilot-windows-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Copilot" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Copilot</span><span class="thumb-icon">C</span></div>
+      <div class="card-body">
+        <h3>Copilot in Wordの使い方｜下書き・要約・書き直しを効率化</h3>
+        <p>Microsoft WordのCopilotで文書を下書きし、既存文書を要約・書き直す手順と、内容を正確に確認する方法を解説します。</p>
+        <a class="card-link" href="articles/copilot-word-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>無料AI画像生成ツールの選び方｜日本語・商用利用を確認</h3>
+        <p>無料で試せるAI画像生成ツールを選ぶ際の、画質、日本語指示、編集、商用利用、透かし、権利のチェック方法を紹介します。</p>
+        <a class="card-link" href="articles/free-ai-image-tools.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>無料で使えるAI文章作成ツールの選び方｜目的別チェック項目</h3>
+        <p>無料AI文章作成ツールを、メール、記事、要約、長文編集など目的別に選ぶ基準と、比較時の注意点を解説します。</p>
+        <a class="card-link" href="articles/free-ai-writing-tools.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Geminiの音声概要を作る方法｜資料を耳で確認する使い方</h3>
+        <p>Geminiの音声概要で資料の内容を会話形式などにまとめ、移動中の復習に使う手順と確認ポイントを解説します。</p>
+        <a class="card-link" href="articles/gemini-audio-overview-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Google Geminiの使い方｜初心者が無料で試す基本手順</h3>
+        <p>Google Geminiを初めて使う人向けに、質問、文章作成、アイデア整理、ファイル分析の基本と注意点を紹介します。</p>
+        <a class="card-link" href="articles/gemini-beginner-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>GeminiでGoogleカレンダーを使う方法｜予定確認・作成の例</h3>
+        <p>GeminiからGoogleカレンダーの予定を確認し、日時・タイムゾーン・参加者を確かめながら予定案を作る方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-calendar-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Gemini Canvasの使い方｜文書・スライド・簡単なアプリを作る</h3>
+        <p>Gemini Canvasで文書、スライド、コード、簡単なアプリを作成・編集し、DocsやSlidesへ書き出す基本手順を解説します。</p>
+        <a class="card-link" href="articles/gemini-canvas-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Geminiの接続アプリとは？Gmail・Drive連携の確認方法</h3>
+        <p>Geminiの接続アプリでGoogleサービスなどを利用する前に、権限、対象アカウント、使うデータを確認する手順を解説します。</p>
+        <a class="card-link" href="articles/gemini-connected-apps-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Geminiのカスタム指示を設定する方法｜回答の好みを固定</h3>
+        <p>Geminiに回答の長さ、文体、説明レベルなどの好みを設定し、必要に応じて見直す方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-custom-instructions-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Gemini Deep Researchの使い方｜調査計画から出典確認まで</h3>
+        <p>Gemini Deep Researchで調査テーマ、情報源、調査計画を設定し、長いレポートを出典付きで作る基本手順を解説します。</p>
+        <a class="card-link" href="articles/gemini-deep-research.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Gemini in Google Driveの使い方｜ファイルとフォルダを要約</h3>
+        <p>Google Drive内のファイルやフォルダをGeminiで検索・要約し、複数資料から共通点や次の作業を整理する方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-drive-summary.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Geminiにファイルをアップロードする方法｜PDF・表の要約手順</h3>
+        <p>GeminiへPDF、文書、表などを添付し、確認したい項目と出力形式を指定して要約・比較する方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-file-upload-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Gemini Gemsの作り方｜繰り返し作業用の専用AIを設定</h3>
+        <p>Gemini Gemsに役割、目的、回答形式、参考ファイルを設定し、毎回の指示を短くする方法と安全な運用のポイントを解説します。</p>
+        <a class="card-link" href="articles/gemini-gems-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>GeminiでGmailを要約する方法｜未返信メールと要点を整理</h3>
+        <p>Geminiの接続アプリを使ってGmailのスレッドを要約し、未回答の質問や次の対応を整理する方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-gmail-summary-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Geminiで画像を生成・編集する方法｜指示文と権利の注意点</h3>
+        <p>Geminiで画像を生成し、アップロード画像を編集する基本手順と、構図・背景・比率を伝えるプロンプト例を紹介します。</p>
+        <a class="card-link" href="articles/gemini-image-generation.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Gemini Liveの使い方｜音声で相談・画面共有する基本</h3>
+        <p>Gemini Liveで音声会話を始め、必要に応じてカメラや画面を共有しながら質問する基本手順とプライバシー上の注意を解説します。</p>
+        <a class="card-link" href="articles/gemini-live-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini Notebookの音声概要の作り方｜資料を会話形式で復習</h3>
+        <p>Gemini Notebookに資料を追加し、音声概要を作成して重要な論点を耳で復習する方法と、内容確認のポイントを解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-audio-overview.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini Notebook（旧NotebookLM）の使い方｜初心者向けガイド</h3>
+        <p>Gemini Notebookに資料を追加し、資料に基づく質問、要約、学習用整理を行う基本手順を解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini Notebookでマインドマップを作る方法｜資料の関係を整理</h3>
+        <p>Gemini Notebookで資料内のテーマ、原因、結果、対立点などの関係をマインドマップとして整理する手順を解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-mind-map.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini NotebookでPDFを要約する方法｜複数資料の比較にも対応</h3>
+        <p>Gemini NotebookへPDFを追加し、章別要約、比較表、根拠付きの質問回答を作る方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-pdf-summary.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini Notebookで資料からクイズを作る方法｜学習効率を上げる</h3>
+        <p>教科書、講義資料、社内マニュアルなどから理解度チェック問題を作り、復習に活用する方法を紹介します。</p>
+        <a class="card-link" href="articles/gemini-notebook-quiz.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini Notebookのソース追加方法｜引用を確認しやすくするコツ</h3>
+        <p>Gemini NotebookへPDFやWebページなどのソースを追加し、出典付き回答を得るための整理方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-sources-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini Notebookで学習ガイドを作る方法｜要点・用語・問題を整理</h3>
+        <p>Gemini Notebookに学習資料を登録し、要点、重要語句、確認問題、復習計画をまとめた学習ガイドを作る方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-study-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini Notebook" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini Notebook</span><span class="thumb-icon">N</span></div>
+      <div class="card-body">
+        <h3>Gemini NotebookでYouTube動画を要約する方法｜字幕が必要</h3>
+        <p>公開YouTube動画をソースに追加し、要点、タイムライン、学習メモを作る方法と、読み込めない場合の原因を解説します。</p>
+        <a class="card-link" href="articles/gemini-notebook-youtube-summary.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>Geminiのスケジュール機能の使い方｜定期レポートを設定</h3>
+        <p>Geminiのスケジュール機能で定期的なまとめや通知を設定し、編集・一時停止・削除する方法を解説します。</p>
+        <a class="card-link" href="articles/gemini-scheduled-actions-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>GeminiでAI動画を作る方法｜短い動画の指示文と注意点</h3>
+        <p>Geminiの動画生成機能で構図、動き、長さ、雰囲気を指定し、短い動画案を作る方法と権利・公開上の注意を解説します。</p>
+        <a class="card-link" href="articles/gemini-video-generation-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>GeminiとClaudeはどっちがおすすめ？Google連携と文章作成で比較</h3>
+        <p>GeminiとClaudeを、Googleサービスとの連携、文章作成、長文資料、調査機能、共有方法の観点から比較します。</p>
+        <a class="card-link" href="articles/gemini-vs-claude.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Gemini" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Gemini</span><span class="thumb-icon">G</span></div>
+      <div class="card-body">
+        <h3>GeminiでYouTubeを要約する方法｜動画URLから確認するコツ</h3>
+        <p>GeminiにYouTube動画のURLと確認したい観点を伝え、要点や手順を整理する方法と、字幕がない場合の注意点を解説します。</p>
+        <a class="card-link" href="articles/gemini-youtube-summary-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexityで論文を探す方法｜Academic検索と原文確認</h3>
+        <p>PerplexityでAcademicなどの検索対象を使い、研究テーマ、期間、研究手法を指定して論文候補を探す方法を解説します。</p>
+        <a class="card-link" href="articles/perplexity-academic-research-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexityの使い方｜出典付きAI検索を初心者向けに解説</h3>
+        <p>Perplexityで質問し、出典リンクを確認しながら調査を進める基本手順と、Quick Search・Pro Searchなどの使い分けを解説します。</p>
+        <a class="card-link" href="articles/perplexity-beginner-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexityの出典を確認する方法｜引用と回答が合うか検証</h3>
+        <p>Perplexityの引用番号から元ページを開き、主張、対象期間、一次情報かどうかを確認する具体的な手順を解説します。</p>
+        <a class="card-link" href="articles/perplexity-citation-check-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexityにファイルをアップロードする方法｜PDF・音声の調べ方</h3>
+        <p>Perplexityへ文書、画像、音声などを添付し、ファイル内容とWeb検索を使い分けて質問する方法を解説します。</p>
+        <a class="card-link" href="articles/perplexity-file-upload-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexity Pro Searchの使い方｜通常検索との使い分け</h3>
+        <p>PerplexityのPro Searchで複雑な質問を分解し、検索対象と情報源を選んで出典付き回答を得る方法を解説します。</p>
+        <a class="card-link" href="articles/perplexity-pro-search-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexity Projectsの使い方｜検索・資料・指示をまとめる</h3>
+        <p>Perplexity Projectsに関連スレッド、資料、カスタム指示をまとめ、継続的な調査を整理する方法を解説します。</p>
+        <a class="card-link" href="articles/perplexity-projects-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="Perplexity" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">Perplexity</span><span class="thumb-icon">P</span></div>
+      <div class="card-body">
+        <h3>Perplexityで旅行プランを作る方法｜営業時間・移動時間を確認</h3>
+        <p>Perplexityで旅行日、地域、予算、移動条件を指定し、公式情報へ戻って確認できる旅行案を作る方法を解説します。</p>
+        <a class="card-link" href="articles/perplexity-travel-plan-guide.html">この記事を読む →</a>
+      </div>
+    </article><article class="article-card" data-cat="比較" data-group="AIラクワザ">
+      <div class="thumb"><span class="badge">比較</span><span class="thumb-icon">⚖️</span></div>
+      <div class="card-body">
+        <h3>PerplexityとChatGPT Searchの違い｜AI検索の使い分け</h3>
+        <p>PerplexityとChatGPT Searchを、検索の進め方、引用の見やすさ、会話、ファイル、継続作業の観点で比較します。</p>
+        <a class="card-link" href="articles/perplexity-vs-chatgpt-search.html">この記事を読む →</a>
+      </div>
+    </article></div>
+</div></section>
+</main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><a class="logo" href="index.html"><span class="logo-mark">解</span><span>今すぐ解決ノート</span></a>
+<p>スマホ・SNS・学校・AIの「困った」を、すぐ使える手順で解決する実用メディア。AI記事は「AIラクワザ」シリーズとして掲載しています。</p></div>
+<div><b>コンテンツ</b><a href="articles.html">記事一覧</a><a href="articles.html#ai">AIラクワザ</a><a href="about.html">このサイトについて</a></div>
+<div><b>サイト情報</b><a href="policy.html">運営ポリシー</a><a href="privacy-policy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a><a href="sitemap.xml">サイトマップ</a></div>
+</div><div class="copyright">© 2026 今すぐ解決ノート. 内容は公開時点の情報です。重要事項は各サービスの公式情報をご確認ください。</div></div></footer><script src="assets/js/main.js"></script></body></html>
