@@ -1,0 +1,1617 @@
+[
+  {
+    "title": "AirDropで受け取ったファイルが見つからない",
+    "description": "AirDropで受け取ったファイルが見つからないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airdrop-files-missing/"
+  },
+  {
+    "title": "AirDropで相手が表示されない",
+    "description": "AirDropで相手が表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airdrop-person-not-showing/"
+  },
+  {
+    "title": "AirDropの「連絡先のみ」で送れない",
+    "description": "AirDropの「連絡先のみ」で送れないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airdrop-contacts-only-not-working/"
+  },
+  {
+    "title": "AirDropの送信が待機中・途中で止まる",
+    "description": "AirDropの送信が待機中・途中で止まるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airdrop-transfer-stuck/"
+  },
+  {
+    "title": "AirDropを受信できない",
+    "description": "AirDropを受信できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airdrop-cannot-receive/"
+  },
+  {
+    "title": "AIでExcelデータを整える方法｜重複・表記ゆれ・欠損を確認｜AIラクワザ",
+    "description": "生成AIを使ってExcelやCSVの列、重複、表記ゆれ、欠損を調べ、元データを残しながら修正する手順を解説します。",
+    "url": "/articles/ai-excel-data-cleaning.html"
+  },
+  {
+    "title": "AIでプレゼン資料を作る方法｜無料から試す手順と注意点｜AIラクワザ",
+    "description": "AIを使って構成、見出し、本文、図解案を作り、PowerPoint等に仕上げる効率的な手順を解説します。",
+    "url": "/articles/ai-presentation-tools.html"
+  },
+  {
+    "title": "AIでメールを校正する方法｜誤送信と情報漏えいを防ぐ手順｜AIラクワザ",
+    "description": "生成AIにメール本文を渡して、誤字、分かりにくさ、強すぎる表現を確認し、送信前に人が最終チェックする方法を解説します。",
+    "url": "/articles/ai-email-proofreading.html"
+  },
+  {
+    "title": "AIで議事録を作る流れ｜録音前・要約・確認のチェックリスト｜AIラクワザ",
+    "description": "生成AIで議事録を作るときに、録音の同意、文字起こし、要約、参加者確認までを安全に進める手順を解説します。",
+    "url": "/articles/ai-meeting-workflow.html"
+  },
+  {
+    "title": "AIの嘘を減らす質問方法｜根拠・不明点・確認手順を指定｜AIラクワザ",
+    "description": "生成AIのもっともらしい誤りを減らすために、対象範囲、出典、不明点の表示、検証方法を指示するプロンプトを解説します。",
+    "url": "/articles/ai-hallucination-prevention.html"
+  },
+  {
+    "title": "AIを転職活動に使う方法｜求人整理・応募書類・面接練習｜AIラクワザ",
+    "description": "生成AIを求人票の整理、経験の棚卸し、応募書類の下書き、面接練習に使い、事実を盛らずに進める方法を解説します。",
+    "url": "/articles/ai-job-search-guide.html"
+  },
+  {
+    "title": "AI時代の詐欺メールを見分ける方法｜文章・画像・音声の確認｜AIラクワザ",
+    "description": "生成AIで自然になった詐欺メールや偽画像、なりすまし音声に対して、送信元、URL、要求内容を別経路で確認する手順を解説します。",
+    "url": "/articles/ai-scam-detection-guide.html"
+  },
+  {
+    "title": "Androidで「システムUIは応答していません」と表示される",
+    "description": "AndroidでシステムUI停止の警告が繰り返すときに、再起動、容量、更新、セーフモードで原因を切り分ける手順です。",
+    "url": "/android/android-system-ui-not-responding/"
+  },
+  {
+    "title": "Androidの画面ロックPINを忘れて開けない",
+    "description": "AndroidのPIN・パターン・パスワードを忘れたときに、データ消去を伴う操作の前に、アカウント、バックアップ、メーカー手順を確認する方法です。",
+    "url": "/android/android-forgot-lock-pin/"
+  },
+  {
+    "title": "Androidスマホがロゴ画面から進まない・再起動を繰り返す",
+    "description": "Androidスマホがメーカーのロゴで止まる、または再起動を繰り返すときに、充電・ケース・ボタン・セーフモードを確認し、初期化を避けて切り分ける方法です。",
+    "url": "/android/android-stuck-on-logo/"
+  },
+  {
+    "title": "AndroidスマホでSDカードを認識しない",
+    "description": "AndroidスマホでmicroSDカードが表示されない、読み込めない、破損と表示されるときに、装着・端末・カードのどこが原因かをデータを消さずに確認する方法です。",
+    "url": "/android/android-sd-card-not-detected/"
+  },
+  {
+    "title": "Androidスマホでモバイルデータ通信ができない",
+    "description": "Androidでアンテナ表示はあるのにネットへ接続できないときに、機内モード、SIM、データ上限、回線設定を確認します。",
+    "url": "/android/android-mobile-data-not-working/"
+  },
+  {
+    "title": "Androidスマホで通知が来ない・遅れて届く",
+    "description": "AndroidでLINEやメールなどの通知が来ない、アプリを開くとまとめて届くときに、通知許可、サイレントモード、電池制限を確認します。",
+    "url": "/android/android-notifications-not-arriving/"
+  },
+  {
+    "title": "Androidスマホで電話を受けられない・着信しない",
+    "description": "Androidで相手には呼び出し音が鳴るのに着信しない、すぐ留守番電話になるときに、圏外、拒否、転送、通知を切り分ける方法です。",
+    "url": "/android/android-not-receiving-calls/"
+  },
+  {
+    "title": "Androidスマホの指紋認証が反応しない",
+    "description": "Androidの指紋認証でロック解除できないときに、指とセンサー、画面保護、登録状態、端末更新を確認します。",
+    "url": "/android/android-fingerprint-not-working/"
+  },
+  {
+    "title": "AndroidスマホをPCにUSB接続してもファイル転送できない",
+    "description": "AndroidをWindowsやMacへUSB接続しても充電だけになる、フォルダーが表示されないときに、ケーブルとUSB用途を確認する手順です。",
+    "url": "/android/android-usb-file-transfer-not-working/"
+  },
+  {
+    "title": "App Storeが開かない・読み込めない",
+    "description": "App Storeが開かない・読み込めないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/app-store-not-loading/"
+  },
+  {
+    "title": "Apple Accountがロック・使用停止になった",
+    "description": "Apple Accountがロック・使用停止になったときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/apple-account-locked/"
+  },
+  {
+    "title": "Apple Accountにサインインできない",
+    "description": "Apple Accountにサインインできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/apple-account-sign-in-failed/"
+  },
+  {
+    "title": "Apple Accountのパスワードを忘れた",
+    "description": "Apple Accountのパスワードを忘れたときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/forgot-apple-account-password/"
+  },
+  {
+    "title": "Apple Accountの確認コードが届かない",
+    "description": "Apple Accountの確認コードが届かないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/verification-code-not-arriving/"
+  },
+  {
+    "title": "BluetoothイヤホンがiPhoneに接続できない",
+    "description": "BluetoothイヤホンがiPhoneに接続できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-earbuds-not-connecting/"
+  },
+  {
+    "title": "BluetoothイヤホンがWindowsに接続済みなのに音が出ない",
+    "description": "WindowsでBluetoothイヤホンが接続済みでもスピーカーから音が出る、無音になるときに、出力先、音量、再接続、形式を確認する方法です。",
+    "url": "/peripherals/windows-bluetooth-headphones-no-sound/"
+  },
+  {
+    "title": "Bluetoothイヤホンの音が遅れる",
+    "description": "Bluetoothイヤホンの音が遅れるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-audio-delay/"
+  },
+  {
+    "title": "Bluetoothイヤホンの音量が小さい",
+    "description": "Bluetoothイヤホンの音量が小さいときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-volume-low/"
+  },
+  {
+    "title": "BluetoothマウスがWindowsで動かない・反応しない",
+    "description": "Bluetoothマウスが接続済みなのに動かない、一覧に出ないときに、電池、ペアリング、別端末、Windows設定を切り分けます。",
+    "url": "/peripherals/bluetooth-mouse-not-working-windows/"
+  },
+  {
+    "title": "Bluetooth接続が頻繁に切れる",
+    "description": "Bluetooth接続が頻繁に切れるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-keeps-disconnecting/"
+  },
+  {
+    "title": "Bluetooth機器がiPhoneに表示されない",
+    "description": "Bluetooth機器がiPhoneに表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-device-not-showing/"
+  },
+  {
+    "title": "ChatGPT Canvasの使い方｜文章を部分修正するコツ｜AIラクワザ",
+    "description": "ChatGPT Canvasで長文やコードを編集し、特定部分だけを修正する方法と、通常チャットとの使い分けを解説します。",
+    "url": "/articles/chatgpt-canvas-guide.html"
+  },
+  {
+    "title": "ChatGPT Deep Researchの使い方｜出典付き調査を依頼するコツ｜AIラクワザ",
+    "description": "ChatGPT Deep Researchで調査計画を確認し、対象期間・情報源・比較条件を指定して、出典付きレポートを作る手順を解説します。",
+    "url": "/articles/chatgpt-deep-research-guide.html"
+  },
+  {
+    "title": "ChatGPT Projectsの使い方｜チャットと資料をまとめて管理｜AIラクワザ",
+    "description": "ChatGPTのProjectsで、関連チャット、参考ファイル、専用指示を一か所にまとめる基本手順と活用例を紹介します。",
+    "url": "/articles/chatgpt-projects-guide.html"
+  },
+  {
+    "title": "ChatGPT Searchの使い方｜最新情報を出典付きで調べるコツ｜AIラクワザ",
+    "description": "ChatGPT Searchで最新情報を調べ、出典リンク、日付、一次情報を確認しながら回答の信頼性を高める手順を紹介します。",
+    "url": "/articles/chatgpt-search-guide.html"
+  },
+  {
+    "title": "ChatGPTでExcel関数を作る方法｜初心者向け実例と確認手順｜AIラクワザ",
+    "description": "やりたい処理を日本語で説明し、Excel関数を作ってもらう方法を、IF、XLOOKUP、集計などの例で解説します。",
+    "url": "/articles/chatgpt-excel-formulas.html"
+  },
+  {
+    "title": "ChatGPTでPDFを要約する方法｜読めないときの対処法も解説｜AIラクワザ",
+    "description": "PDFをChatGPTに読み込ませ、章別要約、重要数字、疑問点を整理する方法と、スキャンPDFなどで失敗する場合の対処を紹介します。",
+    "url": "/articles/chatgpt-pdf-summary.html"
+  },
+  {
+    "title": "ChatGPTでWebページを要約する方法｜URLが読めない時の対処｜AIラクワザ",
+    "description": "ChatGPT SearchなどでWebページの内容を確認し、URL、対象範囲、要約形式を指定する方法と、取得できない場合の対処を解説します。",
+    "url": "/articles/chatgpt-url-summary-guide.html"
+  },
+  {
+    "title": "ChatGPTでデータ分析する方法｜CSV・Excelからグラフを作る｜AIラクワザ",
+    "description": "CSVやExcelをChatGPTへ読み込ませ、集計、傾向、外れ値、グラフを確認する方法と、分析結果を検証する手順を解説します。",
+    "url": "/articles/chatgpt-data-analysis.html"
+  },
+  {
+    "title": "ChatGPTでブログ構成を作る方法｜検索意図から見出しを整理｜AIラクワザ",
+    "description": "ChatGPTに想定読者、検索する悩み、記事のゴールを渡し、重複の少ない見出し構成を作る方法を解説します。",
+    "url": "/articles/chatgpt-blog-outline-guide.html"
+  },
+  {
+    "title": "ChatGPTでメールを作る方法｜そのまま使えるプロンプト7選｜AIラクワザ",
+    "description": "依頼、謝罪、日程調整、お礼などのメールをChatGPTで作る手順と、コピペして使えるプロンプトを紹介します。",
+    "url": "/articles/chatgpt-email-writing.html"
+  },
+  {
+    "title": "ChatGPTで履歴書・職務経歴書を作る方法｜盛らずに強みを伝える｜AIラクワザ",
+    "description": "ChatGPTで職務経歴を整理し、実績を具体化して履歴書・職務経歴書の下書きを作る方法と、虚偽を防ぐ確認手順を解説します。",
+    "url": "/articles/chatgpt-resume-writing.html"
+  },
+  {
+    "title": "ChatGPTで画像を作る方法｜初心者向けプロンプトと修正手順｜AIラクワザ",
+    "description": "ChatGPTで画像を生成・編集する基本手順と、構図、文字、サイズ、雰囲気を具体的に伝えるプロンプトの作り方を解説します。",
+    "url": "/articles/chatgpt-image-generation.html"
+  },
+  {
+    "title": "ChatGPTで翻訳する方法｜自然な日本語に直すプロンプト｜AIラクワザ",
+    "description": "ChatGPTで文章を翻訳し、用途・読み手・固有名詞を指定して自然な表現へ調整する方法と確認手順を解説します。",
+    "url": "/articles/chatgpt-translation-guide.html"
+  },
+  {
+    "title": "ChatGPTで英会話練習する方法｜初心者向け会話プロンプト｜AIラクワザ",
+    "description": "ChatGPTを会話相手にして、難易度、場面、訂正方法を指定しながら英会話を練習する手順を紹介します。",
+    "url": "/articles/chatgpt-english-conversation-guide.html"
+  },
+  {
+    "title": "ChatGPTで議事録を要約する方法｜決定事項とタスクを整理｜AIラクワザ",
+    "description": "会議メモや文字起こしをChatGPTで議事録に整え、決定事項・担当者・期限を抜き出す方法を解説します。",
+    "url": "/articles/chatgpt-meeting-summary.html"
+  },
+  {
+    "title": "ChatGPTとClaudeはどっちがいい？文章・調査・ファイルで比較｜AIラクワザ",
+    "description": "ChatGPTとClaudeを、文章作成、Web調査、ファイル処理、継続作業、安全確認の観点で選ぶ方法を解説します。",
+    "url": "/articles/chatgpt-vs-claude.html"
+  },
+  {
+    "title": "ChatGPTとCopilotはどっちがいい？仕事・検索・Office連携で比較｜AIラクワザ",
+    "description": "ChatGPTとMicrosoft Copilotを、一般的なAI相談、Web検索、ファイル、Microsoft 365、Windowsとの連携で比較します。",
+    "url": "/articles/chatgpt-vs-copilot.html"
+  },
+  {
+    "title": "ChatGPTとGeminiはどっちがおすすめ？用途別の選び方｜AIラクワザ",
+    "description": "ChatGPTとGeminiを文章作成、Google連携、長文編集、資料整理などの用途で比較し、自分に合う選び方を解説します。",
+    "url": "/articles/chatgpt-vs-gemini.html"
+  },
+  {
+    "title": "ChatGPTにコードを相談する方法｜エラー修正で伝える情報｜AIラクワザ",
+    "description": "ChatGPTへコードの目的、実行環境、エラー全文、再現手順を伝え、安全に修正案を確認する方法を初心者向けに解説します。",
+    "url": "/articles/chatgpt-code-help-guide.html"
+  },
+  {
+    "title": "ChatGPTにファイルをアップロードする方法｜PDF・Excelの確認手順｜AIラクワザ",
+    "description": "ChatGPTへPDFや表計算ファイルなどを添付し、要約・抽出・比較を依頼するときの基本手順と安全確認を解説します。",
+    "url": "/articles/chatgpt-file-upload-guide.html"
+  },
+  {
+    "title": "ChatGPTに画像を読み込ませる方法｜スクショ・グラフの質問例｜AIラクワザ",
+    "description": "ChatGPTへスクリーンショット、写真、グラフを添付し、内容の説明や文字の確認を依頼する方法と注意点を解説します。",
+    "url": "/articles/chatgpt-image-analysis-guide.html"
+  },
+  {
+    "title": "ChatGPTのタスク機能の使い方｜リマインダーと定期確認を設定｜AIラクワザ",
+    "description": "ChatGPTのタスク機能で一回限りの通知や定期的な確認を設定し、編集・一時停止・削除する方法を解説します。",
+    "url": "/articles/chatgpt-tasks-guide.html"
+  },
+  {
+    "title": "ChatGPTのメモリ機能の使い方｜記憶の確認・削除方法｜AIラクワザ",
+    "description": "ChatGPTのメモリ機能を有効化し、保存内容を確認・修正・削除する手順と、覚えさせない方がよい情報を解説します。",
+    "url": "/articles/chatgpt-memory-guide.html"
+  },
+  {
+    "title": "ChatGPTの一時チャットとは？履歴・メモリとの違いと使い方｜AIラクワザ",
+    "description": "ChatGPTの一時チャットを使う場面、通常チャットとの違い、利用前に確認したいデータ上の注意点を初心者向けに整理します。",
+    "url": "/articles/chatgpt-temporary-chat-guide.html"
+  },
+  {
+    "title": "ChatGPTの使い方を初心者向けに解説｜無料で始める基本手順｜AIラクワザ",
+    "description": "ChatGPTを初めて使う人向けに、登録から質問の作り方、回答の直し方、安全に使う注意点まで順番に解説します。",
+    "url": "/articles/chatgpt-beginner-guide.html"
+  },
+  {
+    "title": "ChatGPTカスタム指示の使い方｜毎回の条件入力を減らす｜AIラクワザ",
+    "description": "ChatGPTのカスタム指示に文体、前提、出力形式を登録し、繰り返し作業を効率化する方法と入力してはいけない情報を解説します。",
+    "url": "/articles/chatgpt-custom-instructions.html"
+  },
+  {
+    "title": "ChatGPTプロンプトの作り方｜初心者向け5要素テンプレート｜AIラクワザ",
+    "description": "ChatGPTへの指示を「目的・背景・材料・条件・出力形式」の5要素で組み立て、回答のズレを減らす方法を解説します。",
+    "url": "/articles/chatgpt-prompt-guide.html"
+  },
+  {
+    "title": "ChatGPT学習モードの使い方｜答えを見る前に理解を深める｜AIラクワザ",
+    "description": "ChatGPTの学習モードで、質問、ヒント、確認問題を使いながら理解を深める方法と、宿題・試験勉強での注意点を解説します。",
+    "url": "/articles/chatgpt-study-mode.html"
+  },
+  {
+    "title": "ChatGPT無料版でできること・できないこと｜初心者向け整理｜AIラクワザ",
+    "description": "ChatGPT無料版の活用方法と、有料機能が必要になりやすい場面を、変動する制限に注意しながら分かりやすく整理します。",
+    "url": "/articles/chatgpt-free-plan.html"
+  },
+  {
+    "title": "ChatGPT音声モードの使い方｜会話練習とアイデア整理に活用｜AIラクワザ",
+    "description": "ChatGPT音声モードの始め方、語学練習、面接練習、移動中のメモ整理に使う方法とプライバシー設定を解説します。",
+    "url": "/articles/chatgpt-voice-guide.html"
+  },
+  {
+    "title": "ChromeでPDFが開けない・表示されない",
+    "description": "ChromeでPDFが真っ白、読み込み中、ダウンロードだけになるときに、PDF設定、ファイル破損、拡張機能を切り分ける方法です。",
+    "url": "/browser/chrome-pdf-not-opening/"
+  },
+  {
+    "title": "Chromeで「Aw, Snap!」が出てページが落ちる",
+    "description": "Chromeで「Aw, Snap!」「エラー」が表示されタブが落ちるときに、メモリ、拡張機能、更新、セキュリティソフトを切り分ける手順です。",
+    "url": "/browser/chrome-aw-snap/"
+  },
+  {
+    "title": "Chromeで「ERR_TOO_MANY_REDIRECTS」が表示される",
+    "description": "Chromeでリダイレクト回数が多すぎるエラーが出るときに、サイト障害、Cookie、ログイン、URL設定を安全に切り分ける方法です。",
+    "url": "/browser/chrome-too-many-redirects/"
+  },
+  {
+    "title": "Chromeで「この接続ではプライバシーが保護されません」と表示される",
+    "description": "Chromeの証明書エラーが出たときに、端末の日時、公共Wi-Fi、サイト側の証明書を安全に切り分けます。",
+    "url": "/browser/chrome-connection-not-private/"
+  },
+  {
+    "title": "Chromeでファイルをダウンロードできない",
+    "description": "Chromeで「失敗」「ネットワークエラー」「ブロック済み」などが出るときに、原因ごとの対処を解説します。",
+    "url": "/browser/chrome-file-download-failed/"
+  },
+  {
+    "title": "Chromeでページが開かず「このサイトにアクセスできません」と表示される",
+    "description": "ChromeでERR_CONNECTION_RESETやタイムアウトが出るときに、サイト、回線、拡張機能、VPNを切り分けます。",
+    "url": "/browser/chrome-page-not-loading/"
+  },
+  {
+    "title": "Chromeで勝手に広告・ポップアップや知らないページが開く",
+    "description": "Chromeで操作していない広告や別サイトが開くときに、サイト通知、ポップアップ許可、拡張機能、不審なアプリを確認します。",
+    "url": "/browser/chrome-unwanted-popups-redirects/"
+  },
+  {
+    "title": "Chromeに保存したパスワードが消えた・自動入力されない",
+    "description": "Chromeの保存パスワードが表示されない、自動入力候補が出ないときに、プロフィール、Googleパスワードマネージャー、同期を確認する方法です。",
+    "url": "/browser/chrome-saved-passwords-missing/"
+  },
+  {
+    "title": "Chromeのブックマークが消えた・表示されない",
+    "description": "Google Chromeのブックマークバーや保存したサイトが見つからないときに、表示設定、プロフィール、同期、別フォルダーを確認し、上書きを避けて探す方法です。",
+    "url": "/browser/chrome-bookmarks-missing/"
+  },
+  {
+    "title": "Claude Artifactsの使い方｜文書・コード・簡単なツールを編集｜AIラクワザ",
+    "description": "Claude Artifactsで文書、コード、図、簡単なツールを別画面に表示し、会話しながら部分修正・共有する基本手順を解説します。",
+    "url": "/articles/claude-artifacts-guide.html"
+  },
+  {
+    "title": "Claude Projectsの使い方｜資料と指示をまとめて管理｜AIラクワザ",
+    "description": "Claude Projectsに関連資料とプロジェクト指示をまとめ、会話をまたいで同じ前提で作業する方法を解説します。",
+    "url": "/articles/claude-projects-guide.html"
+  },
+  {
+    "title": "Claude Researchの使い方｜複雑なテーマを出典付きで調査｜AIラクワザ",
+    "description": "Claude Researchで調査の範囲とゴールを伝え、複数回の検索を使った結果を引用から検証する手順を解説します。",
+    "url": "/articles/claude-research-guide.html"
+  },
+  {
+    "title": "ClaudeでPDFを要約する方法｜表・グラフを確認するコツ｜AIラクワザ",
+    "description": "ClaudeへPDFを添付し、ページ、章、表、グラフを指定して要点を整理する方法と、原文照合のポイントを解説します。",
+    "url": "/articles/claude-pdf-summary-guide.html"
+  },
+  {
+    "title": "Claudeで長文資料を整理する方法｜章ごとに要約・比較するコツ｜AIラクワザ",
+    "description": "Claudeで長い文書を扱うときに、目的、対象範囲、出力形式を分けて指定し、抜け漏れを減らす方法を解説します。",
+    "url": "/articles/claude-long-document-guide.html"
+  },
+  {
+    "title": "Claudeにコードを相談する方法｜長いコードの直し方と注意点｜AIラクワザ",
+    "description": "Claudeへ実行環境、目的、エラー、関連コードを伝え、変更範囲を小さく保ちながら修正案を確認する方法を解説します。",
+    "url": "/articles/claude-code-help-guide.html"
+  },
+  {
+    "title": "Claudeにファイルをアップロードする方法｜対応形式と質問例｜AIラクワザ",
+    "description": "Claudeへ文書、表、テキストなどを添付し、要約・抽出・分析を依頼するときの基本手順と注意点を解説します。",
+    "url": "/articles/claude-file-upload-guide.html"
+  },
+  {
+    "title": "ClaudeのWeb検索の使い方｜引用付き回答を確認する方法｜AIラクワザ",
+    "description": "ClaudeのWeb検索を有効にし、期間、地域、優先する情報源を指定して、引用付きの回答を確認する方法を解説します。",
+    "url": "/articles/claude-web-search-guide.html"
+  },
+  {
+    "title": "Claudeのスタイル設定方法｜文章のトーンを自分向けに調整｜AIラクワザ",
+    "description": "Claudeのプリセットまたはカスタムスタイルで、回答の長さ、文体、説明の詳しさを調整する方法を解説します。",
+    "url": "/articles/claude-styles-guide.html"
+  },
+  {
+    "title": "Claudeの使い方を初心者向けに解説｜文章・要約・資料整理｜AIラクワザ",
+    "description": "AnthropicのAIアシスタントClaudeを初めて使う人向けに、文章作成、長文要約、ファイル整理の基本と注意点を解説します。",
+    "url": "/articles/claude-beginner-guide.html"
+  },
+  {
+    "title": "Copilot Deep Researchの使い方｜複数情報源から調べるコツ｜AIラクワザ",
+    "description": "CopilotのDeep Researchで調査範囲、対象期間、優先する情報源を指定し、出典付きの結果を確認する方法を解説します。",
+    "url": "/articles/copilot-deep-research-guide.html"
+  },
+  {
+    "title": "Copilot in Outlookの使い方｜メール要約・下書き・推敲｜AIラクワザ",
+    "description": "OutlookのCopilotで長いメールスレッドを要約し、返信を下書きし、トーンや分かりやすさを改善する方法を解説します。",
+    "url": "/articles/copilot-outlook-guide.html"
+  },
+  {
+    "title": "Copilot in PowerPointの使い方｜資料からスライドを作る｜AIラクワザ",
+    "description": "Copilot in PowerPointで新しいプレゼンを作り、WordやPDFを基にスライドを生成・追加・要約する方法を解説します。",
+    "url": "/articles/copilot-powerpoint-guide.html"
+  },
+  {
+    "title": "Copilot in Wordの使い方｜下書き・要約・書き直しを効率化｜AIラクワザ",
+    "description": "Microsoft WordのCopilotで文書を下書きし、既存文書を要約・書き直す手順と、内容を正確に確認する方法を解説します。",
+    "url": "/articles/copilot-word-guide.html"
+  },
+  {
+    "title": "Copilot Pagesの使い方｜AIの回答を共同編集できる文書へ整理｜AIラクワザ",
+    "description": "Copilot Pagesで回答を編集可能なページへ移し、見出しやタスクを整理して共有する基本手順を解説します。",
+    "url": "/articles/copilot-pages-guide.html"
+  },
+  {
+    "title": "Copilot Visionの使い方｜画面を見せて質問するときの注意｜AIラクワザ",
+    "description": "Copilot VisionにブラウザやPC画面、カメラ映像を共有して質問する基本手順と、映り込みを防ぐ安全確認を解説します。",
+    "url": "/articles/copilot-vision-guide.html"
+  },
+  {
+    "title": "Copilot Voiceの使い方｜音声で質問・アイデア整理する方法｜AIラクワザ",
+    "description": "Copilot Voiceで会話を始め、目的と終了時のまとめ方を指定して、ハンズフリーで考えを整理する方法を解説します。",
+    "url": "/articles/copilot-voice-guide.html"
+  },
+  {
+    "title": "CopilotでExcel作業を効率化する方法｜実例と注意点｜AIラクワザ",
+    "description": "Copilot in Excelで表の作成、数式、分析、グラフ作成を依頼する基本と、結果を確認する方法を解説します。",
+    "url": "/articles/copilot-excel-guide.html"
+  },
+  {
+    "title": "Copilotで画像を生成・編集する方法｜日本語プロンプトの作り方｜AIラクワザ",
+    "description": "Copilotで画像の主題、構図、色、用途、入れない要素を指定し、修正指示で仕上げる方法と権利上の注意を解説します。",
+    "url": "/articles/copilot-image-generation-guide.html"
+  },
+  {
+    "title": "Discordでマイクの声が相手に届かない",
+    "description": "Discordの通話で声が入らないときに、ミュート、入力機器、マイクテスト、OS権限を順番に確認します。",
+    "url": "/sns/discord-microphone-not-working/"
+  },
+  {
+    "title": "EdgeのCopilotの使い方｜開いているページを要約・比較｜AIラクワザ",
+    "description": "Microsoft EdgeでCopilotを開き、閲覧中の公開ページについて要約、質問、比較を行う方法と取得範囲の注意を解説します。",
+    "url": "/articles/copilot-edge-guide.html"
+  },
+  {
+    "title": "Gemini Canvasの使い方｜文書・スライド・簡単なアプリを作る｜AIラクワザ",
+    "description": "Gemini Canvasで文書、スライド、コード、簡単なアプリを作成・編集し、DocsやSlidesへ書き出す基本手順を解説します。",
+    "url": "/articles/gemini-canvas-guide.html"
+  },
+  {
+    "title": "Gemini Deep Researchの使い方｜調査計画から出典確認まで｜AIラクワザ",
+    "description": "Gemini Deep Researchで調査テーマ、情報源、調査計画を設定し、長いレポートを出典付きで作る基本手順を解説します。",
+    "url": "/articles/gemini-deep-research.html"
+  },
+  {
+    "title": "Gemini Gemsの作り方｜繰り返し作業用の専用AIを設定｜AIラクワザ",
+    "description": "Gemini Gemsに役割、目的、回答形式、参考ファイルを設定し、毎回の指示を短くする方法と安全な運用のポイントを解説します。",
+    "url": "/articles/gemini-gems-guide.html"
+  },
+  {
+    "title": "Gemini in Google Driveの使い方｜ファイルとフォルダを要約｜AIラクワザ",
+    "description": "Google Drive内のファイルやフォルダをGeminiで検索・要約し、複数資料から共通点や次の作業を整理する方法を解説します。",
+    "url": "/articles/gemini-drive-summary.html"
+  },
+  {
+    "title": "Gemini Liveの使い方｜音声で相談・画面共有する基本｜AIラクワザ",
+    "description": "Gemini Liveで音声会話を始め、必要に応じてカメラや画面を共有しながら質問する基本手順とプライバシー上の注意を解説します。",
+    "url": "/articles/gemini-live-guide.html"
+  },
+  {
+    "title": "Gemini NotebookでPDFを要約する方法｜複数資料の比較にも対応｜AIラクワザ",
+    "description": "Gemini NotebookへPDFを追加し、章別要約、比較表、根拠付きの質問回答を作る方法を解説します。",
+    "url": "/articles/gemini-notebook-pdf-summary.html"
+  },
+  {
+    "title": "Gemini NotebookでYouTube動画を要約する方法｜字幕が必要｜AIラクワザ",
+    "description": "公開YouTube動画をソースに追加し、要点、タイムライン、学習メモを作る方法と、読み込めない場合の原因を解説します。",
+    "url": "/articles/gemini-notebook-youtube-summary.html"
+  },
+  {
+    "title": "Gemini Notebookでマインドマップを作る方法｜資料の関係を整理｜AIラクワザ",
+    "description": "Gemini Notebookで資料内のテーマ、原因、結果、対立点などの関係をマインドマップとして整理する手順を解説します。",
+    "url": "/articles/gemini-notebook-mind-map.html"
+  },
+  {
+    "title": "Gemini Notebookで学習ガイドを作る方法｜要点・用語・問題を整理｜AIラクワザ",
+    "description": "Gemini Notebookに学習資料を登録し、要点、重要語句、確認問題、復習計画をまとめた学習ガイドを作る方法を解説します。",
+    "url": "/articles/gemini-notebook-study-guide.html"
+  },
+  {
+    "title": "Gemini Notebookで資料からクイズを作る方法｜学習効率を上げる｜AIラクワザ",
+    "description": "教科書、講義資料、社内マニュアルなどから理解度チェック問題を作り、復習に活用する方法を紹介します。",
+    "url": "/articles/gemini-notebook-quiz.html"
+  },
+  {
+    "title": "Gemini Notebookのソース追加方法｜引用を確認しやすくするコツ｜AIラクワザ",
+    "description": "Gemini NotebookへPDFやWebページなどのソースを追加し、出典付き回答を得るための整理方法を解説します。",
+    "url": "/articles/gemini-notebook-sources-guide.html"
+  },
+  {
+    "title": "Gemini Notebookの音声概要の作り方｜資料を会話形式で復習｜AIラクワザ",
+    "description": "Gemini Notebookに資料を追加し、音声概要を作成して重要な論点を耳で復習する方法と、内容確認のポイントを解説します。",
+    "url": "/articles/gemini-notebook-audio-overview.html"
+  },
+  {
+    "title": "Gemini Notebook（旧NotebookLM）の使い方｜初心者向けガイド｜AIラクワザ",
+    "description": "Gemini Notebookに資料を追加し、資料に基づく質問、要約、学習用整理を行う基本手順を解説します。",
+    "url": "/articles/gemini-notebook-guide.html"
+  },
+  {
+    "title": "GeminiでAI動画を作る方法｜短い動画の指示文と注意点｜AIラクワザ",
+    "description": "Geminiの動画生成機能で構図、動き、長さ、雰囲気を指定し、短い動画案を作る方法と権利・公開上の注意を解説します。",
+    "url": "/articles/gemini-video-generation-guide.html"
+  },
+  {
+    "title": "GeminiでGmailを要約する方法｜未返信メールと要点を整理｜AIラクワザ",
+    "description": "Geminiの接続アプリを使ってGmailのスレッドを要約し、未回答の質問や次の対応を整理する方法を解説します。",
+    "url": "/articles/gemini-gmail-summary-guide.html"
+  },
+  {
+    "title": "GeminiでGoogleカレンダーを使う方法｜予定確認・作成の例｜AIラクワザ",
+    "description": "GeminiからGoogleカレンダーの予定を確認し、日時・タイムゾーン・参加者を確かめながら予定案を作る方法を解説します。",
+    "url": "/articles/gemini-calendar-guide.html"
+  },
+  {
+    "title": "GeminiでYouTubeを要約する方法｜動画URLから確認するコツ｜AIラクワザ",
+    "description": "GeminiにYouTube動画のURLと確認したい観点を伝え、要点や手順を整理する方法と、字幕がない場合の注意点を解説します。",
+    "url": "/articles/gemini-youtube-summary-guide.html"
+  },
+  {
+    "title": "Geminiで画像を生成・編集する方法｜指示文と権利の注意点｜AIラクワザ",
+    "description": "Geminiで画像を生成し、アップロード画像を編集する基本手順と、構図・背景・比率を伝えるプロンプト例を紹介します。",
+    "url": "/articles/gemini-image-generation.html"
+  },
+  {
+    "title": "GeminiとClaudeはどっちがおすすめ？Google連携と文章作成で比較｜AIラクワザ",
+    "description": "GeminiとClaudeを、Googleサービスとの連携、文章作成、長文資料、調査機能、共有方法の観点から比較します。",
+    "url": "/articles/gemini-vs-claude.html"
+  },
+  {
+    "title": "Geminiにファイルをアップロードする方法｜PDF・表の要約手順｜AIラクワザ",
+    "description": "GeminiへPDF、文書、表などを添付し、確認したい項目と出力形式を指定して要約・比較する方法を解説します。",
+    "url": "/articles/gemini-file-upload-guide.html"
+  },
+  {
+    "title": "Geminiのカスタム指示を設定する方法｜回答の好みを固定｜AIラクワザ",
+    "description": "Geminiに回答の長さ、文体、説明レベルなどの好みを設定し、必要に応じて見直す方法を解説します。",
+    "url": "/articles/gemini-custom-instructions-guide.html"
+  },
+  {
+    "title": "Geminiのスケジュール機能の使い方｜定期レポートを設定｜AIラクワザ",
+    "description": "Geminiのスケジュール機能で定期的なまとめや通知を設定し、編集・一時停止・削除する方法を解説します。",
+    "url": "/articles/gemini-scheduled-actions-guide.html"
+  },
+  {
+    "title": "Geminiの接続アプリとは？Gmail・Drive連携の確認方法｜AIラクワザ",
+    "description": "Geminiの接続アプリでGoogleサービスなどを利用する前に、権限、対象アカウント、使うデータを確認する手順を解説します。",
+    "url": "/articles/gemini-connected-apps-guide.html"
+  },
+  {
+    "title": "Geminiの音声概要を作る方法｜資料を耳で確認する使い方｜AIラクワザ",
+    "description": "Geminiの音声概要で資料の内容を会話形式などにまとめ、移動中の復習に使う手順と確認ポイントを解説します。",
+    "url": "/articles/gemini-audio-overview-guide.html"
+  },
+  {
+    "title": "Gmailで送信したメールが相手に届かない",
+    "description": "Gmailの送信済みにあるメールが相手へ届かないときに、宛先、エラー返信、迷惑メール、添付、送信制限を切り分ける方法です。",
+    "url": "/google/gmail-sent-mail-not-delivered/"
+  },
+  {
+    "title": "Gmailにメールが届かない",
+    "description": "Gmailで一部またはすべてのメールを受信できないときに、迷惑メール、フィルタ、転送、保存容量を確認します。",
+    "url": "/google/gmail-not-receiving-email/"
+  },
+  {
+    "title": "Google Classroomに入れない時の対処法（iPhone/PC）",
+    "description": "Google Classroomにログインできない／クラスに入れない／読み込みが終わらない時の原因と直し方。iPhone・iPad・PC（Chrome）での手順をわかりやすく。",
+    "url": "/articles/google-classroom-hairenai.html"
+  },
+  {
+    "title": "Google Geminiの使い方｜初心者が無料で試す基本手順｜AIラクワザ",
+    "description": "Google Geminiを初めて使う人向けに、質問、文章作成、アイデア整理、ファイル分析の基本と注意点を紹介します。",
+    "url": "/articles/gemini-beginner-guide.html"
+  },
+  {
+    "title": "Google Playストアのダウンロードが保留中のまま進まない",
+    "description": "Androidでアプリのダウンロードが保留中・待機中になるときに、通信、他の更新、空き容量、Playストアを確認します。",
+    "url": "/android/google-play-download-pending/"
+  },
+  {
+    "title": "Googleカレンダーの予定が同期されない・表示されない",
+    "description": "スマホとPCでGoogleカレンダーの予定が違う、追加した予定が別端末に出ないときに、アカウント、表示、同期設定を確認します。",
+    "url": "/google/google-calendar-not-syncing/"
+  },
+  {
+    "title": "Googleドライブのアップロードが進まない",
+    "description": "Googleドライブへのファイル送信が待機中・処理中のまま止まるときに、通信、容量、ファイル、ブラウザを切り分けます。",
+    "url": "/google/google-drive-upload-stuck/"
+  },
+  {
+    "title": "Googleドライブのファイルが消えた・見つからない",
+    "description": "Googleドライブで保存したファイルが見つからないときに、アカウント、検索条件、最近使用したアイテム、ゴミ箱、共有解除を確認して探す方法です。",
+    "url": "/google/google-drive-files-missing/"
+  },
+  {
+    "title": "Googleドライブの共有ファイルを開けない・アクセス権が必要と出る",
+    "description": "Googleドライブの共有リンクでアクセス権が必要、権限がありませんと出るときに、アカウント、共有先、所有者を確認する方法です。",
+    "url": "/google/google-drive-access-denied/"
+  },
+  {
+    "title": "Googleフォトのバックアップが進まない",
+    "description": "Googleフォトが準備中・バックアップ中のまま止まるときに、対象アカウント、通信、容量、端末フォルダを確認します。",
+    "url": "/google/google-photos-backup-stuck/"
+  },
+  {
+    "title": "Googleフォトの写真が消えた・見つからない",
+    "description": "Googleフォトで以前の写真が見つからないときに、アカウント、日付、アーカイブ、ゴミ箱、端末フォルダー、バックアップを確認する方法です。",
+    "url": "/google/google-photos-missing-photos/"
+  },
+  {
+    "title": "iCloudのサインイン要求が繰り返し表示される",
+    "description": "iCloudのサインイン要求が繰り返し表示されるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/icloud-sign-in-loop/"
+  },
+  {
+    "title": "InstagramでDMが送れない原因まとめ（iPhone/Android/PC）",
+    "description": "InstagramでDMが送れない・送信できない・エラーになる時の原因と対処法を症状別に整理。iPhone/Android/PC（Web）でのチェック手順も。",
+    "url": "/articles/instagram-dm-okenai.html"
+  },
+  {
+    "title": "Instagramでリンクをプロフィールに貼る方法（複数OK・できない時の対処）",
+    "description": "Instagramのプロフィールにリンクを貼る手順（iPhone/Android）。『リンク』から追加する方法、表示されない・押せない時の原因、最低限の安全チェックまで丁寧に解説。",
+    "url": "/articles/instagram-profile-link.html"
+  },
+  {
+    "title": "Instagramで写真やストーリーズを投稿できない",
+    "description": "Instagramで投稿が処理中・失敗になるときに、障害、通信、ファイル形式、権限、アカウント制限を切り分ける手順です。",
+    "url": "/sns/instagram-post-upload-failed/"
+  },
+  {
+    "title": "Instagramにログインできない",
+    "description": "Instagramでパスワードエラー、確認コード未着、登録メールを使えない場合に、公式の復旧手順へ安全に進む方法を解説します。",
+    "url": "/sns/instagram-cannot-log-in/"
+  },
+  {
+    "title": "Instagram投稿をアーカイブするとタグ付け相手にはどう見える？見え方・通知・戻し方",
+    "description": "Instagramの投稿をアーカイブした時、タグ付けされた相手の「タグ付け」欄にどう表示されるか（基本は見えなくなる）。通知は行く？相手の画面での見え方、戻す方法、やるべき確認を整理。",
+    "url": "/articles/instagram-archive-tagged-visibility.html"
+  },
+  {
+    "title": "iOSをアップデートできない",
+    "description": "iOSをアップデートできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/ios-update-failed/"
+  },
+  {
+    "title": "iPhoneから音が出ない",
+    "description": "iPhoneから音が出ないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/no-sound/"
+  },
+  {
+    "title": "iPhoneが5G表示にならない",
+    "description": "iPhoneが5G表示にならないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/5g-not-showing/"
+  },
+  {
+    "title": "iPhoneがBluetooth機器につながらない",
+    "description": "iPhoneがBluetooth機器につながらないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-not-connecting/"
+  },
+  {
+    "title": "iPhoneがWi-Fiにつながらない",
+    "description": "iPhoneがWi-Fiにつながらないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-not-connecting/"
+  },
+  {
+    "title": "iPhoneがワイヤレス充電できない",
+    "description": "iPhoneがワイヤレス充電できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wireless-charging-not-working/"
+  },
+  {
+    "title": "iPhoneが充電できない",
+    "description": "iPhoneが充電できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-not-charging/"
+  },
+  {
+    "title": "iPhoneが充電中に熱くなる",
+    "description": "iPhoneが充電中に熱くなるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-hot-while-charging/"
+  },
+  {
+    "title": "iPhoneが勝手に再起動する",
+    "description": "iPhoneが勝手に再起動するときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-restarts-randomly/"
+  },
+  {
+    "title": "iPhoneが固まって動かない",
+    "description": "iPhoneが固まって動かないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-frozen/"
+  },
+  {
+    "title": "iPhoneが圏外・SOS表示になる",
+    "description": "iPhoneが圏外・SOS表示になるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/no-service/"
+  },
+  {
+    "title": "iPhoneが車のBluetoothにつながらない",
+    "description": "iPhoneが車のBluetoothにつながらないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-car-not-connecting/"
+  },
+  {
+    "title": "iPhoneでAirDropできない",
+    "description": "iPhoneでAirDropできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airdrop-not-working/"
+  },
+  {
+    "title": "iPhoneでeSIMを有効化できない",
+    "description": "iPhoneでeSIMを有効化できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/esim-not-activating/"
+  },
+  {
+    "title": "iPhoneでFace IDが使えない",
+    "description": "iPhoneでFace IDが使えないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/face-id-not-working/"
+  },
+  {
+    "title": "iPhoneでアプリを削除できない",
+    "description": "iPhoneでアプリを削除できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/cannot-delete-app/"
+  },
+  {
+    "title": "iPhoneでコピー＆ペーストできない",
+    "description": "iPhoneでコピー＆ペーストできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/copy-paste-not-working/"
+  },
+  {
+    "title": "iPhoneでスクリーンショットできない",
+    "description": "iPhoneでスクリーンショットできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screenshot-not-working/"
+  },
+  {
+    "title": "iPhoneでモバイル通信が使えない",
+    "description": "iPhoneでモバイル通信が使えないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/mobile-data-not-working/"
+  },
+  {
+    "title": "iPhoneにSIMなし・無効なSIMと表示される",
+    "description": "iPhoneにSIMなし・無効なSIMと表示されるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/sim-not-recognized/"
+  },
+  {
+    "title": "iPhoneにWi-Fiのネットワーク名が表示されない",
+    "description": "iPhoneにWi-Fiのネットワーク名が表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-network-not-showing/"
+  },
+  {
+    "title": "iPhoneに「充電保留中」と表示される",
+    "description": "iPhoneに「充電保留中」と表示されるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/charging-on-hold/"
+  },
+  {
+    "title": "iPhoneにアプリをインストールできない",
+    "description": "iPhoneにアプリをインストールできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/cannot-install-app/"
+  },
+  {
+    "title": "iPhoneに通知が来ない",
+    "description": "iPhoneに通知が来ないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/notifications-not-arriving/"
+  },
+  {
+    "title": "iPhoneのBluetoothがグレーでオンにできない",
+    "description": "iPhoneのBluetoothがグレーでオンにできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/bluetooth-toggle-grayed-out/"
+  },
+  {
+    "title": "iPhoneのGPS位置がずれる",
+    "description": "iPhoneのGPS位置がずれるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/gps-inaccurate/"
+  },
+  {
+    "title": "iPhoneのWi-Fiが遅い",
+    "description": "iPhoneのWi-Fiが遅いときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-slow/"
+  },
+  {
+    "title": "iPhoneのWi-Fiが頻繁に切れる",
+    "description": "iPhoneのWi-Fiが頻繁に切れるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-keeps-disconnecting/"
+  },
+  {
+    "title": "iPhoneのWi-Fi設定がグレーで押せない",
+    "description": "iPhoneのWi-Fi設定がグレーで押せないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-settings-grayed-out/"
+  },
+  {
+    "title": "iPhoneのアプリがすぐ落ちる",
+    "description": "iPhoneのアプリがすぐ落ちるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/app-keeps-crashing/"
+  },
+  {
+    "title": "iPhoneのアプリがホーム画面から消えた",
+    "description": "iPhoneのアプリがホーム画面から消えたときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/app-missing-from-home-screen/"
+  },
+  {
+    "title": "iPhoneのアプリが開かない",
+    "description": "iPhoneのアプリが開かないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/app-wont-open/"
+  },
+  {
+    "title": "iPhoneのアプリをアップデートできない",
+    "description": "iPhoneのアプリをアップデートできないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/cannot-update-app/"
+  },
+  {
+    "title": "iPhoneのアプリ内課金ができない",
+    "description": "iPhoneのアプリ内課金ができないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/in-app-purchase-not-working/"
+  },
+  {
+    "title": "iPhoneのインカメラが映らない",
+    "description": "iPhoneのインカメラが映らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/front-camera-not-working/"
+  },
+  {
+    "title": "iPhoneのインターネット共有ができない",
+    "description": "iPhoneのインターネット共有ができないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/personal-hotspot-not-working/"
+  },
+  {
+    "title": "iPhoneのカメラが真っ黒",
+    "description": "iPhoneのカメラが真っ黒ときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/camera-black-screen/"
+  },
+  {
+    "title": "iPhoneのカメラが起動しない",
+    "description": "iPhoneのカメラが起動しないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/camera-not-opening/"
+  },
+  {
+    "title": "iPhoneのキーボードが表示されない",
+    "description": "iPhoneのキーボードが表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/keyboard-not-appearing/"
+  },
+  {
+    "title": "iPhoneのストレージが急に増えた原因と減らし方",
+    "description": "iPhoneの容量が突然減る原因（写真/動画、Safari、LINE、iCloud写真、システムデータ等）をチェックリストで特定し、手順どおりに安全に減らす方法をまとめ。",
+    "url": "/articles/iphone-storage-fueru-herasu.html"
+  },
+  {
+    "title": "iPhoneのストレージ容量が足りない",
+    "description": "iPhoneのストレージ容量が足りないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/storage-full/"
+  },
+  {
+    "title": "iPhoneのスピーカー音が割れる・雑音がする",
+    "description": "iPhoneのスピーカー音が割れる・雑音がするときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/speaker-crackling/"
+  },
+  {
+    "title": "iPhoneのタッチ操作が反応しない",
+    "description": "iPhoneのタッチ操作が反応しないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/touchscreen-not-responding/"
+  },
+  {
+    "title": "iPhoneのバッテリー減りが早い",
+    "description": "iPhoneのバッテリー減りが早いときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/battery-drains-fast/"
+  },
+  {
+    "title": "iPhoneのフラッシュが光らない",
+    "description": "iPhoneのフラッシュが光らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/flash-not-working/"
+  },
+  {
+    "title": "iPhoneのマイクが反応しない",
+    "description": "iPhoneのマイクが反応しないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/microphone-not-working/"
+  },
+  {
+    "title": "iPhoneの位置情報が使えない",
+    "description": "iPhoneの位置情報が使えないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/location-services-not-working/"
+  },
+  {
+    "title": "iPhoneの充電が80%で止まる",
+    "description": "iPhoneの充電が80%で止まるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/charging-stops-at-80/"
+  },
+  {
+    "title": "iPhoneの充電が遅い",
+    "description": "iPhoneの充電が遅いときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-charging-slowly/"
+  },
+  {
+    "title": "iPhoneの写真がぼやける",
+    "description": "iPhoneの写真がぼやけるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/camera-blurry/"
+  },
+  {
+    "title": "iPhoneの常時表示ディスプレイが表示されない",
+    "description": "iPhoneの常時表示ディスプレイが表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/always-on-display-not-working/"
+  },
+  {
+    "title": "iPhoneの明るさが勝手に変わる",
+    "description": "iPhoneの明るさが勝手に変わるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/brightness-changes/"
+  },
+  {
+    "title": "iPhoneの機内モードが解除できない",
+    "description": "iPhoneの機内モードが解除できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/airplane-mode-stuck/"
+  },
+  {
+    "title": "iPhoneの画面がちらつく",
+    "description": "iPhoneの画面がちらつくときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/display-flickering/"
+  },
+  {
+    "title": "iPhoneの画面が勝手に暗くなる",
+    "description": "iPhoneの画面が勝手に暗くなるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screen-dims-automatically/"
+  },
+  {
+    "title": "iPhoneの画面が拡大されたまま戻らない",
+    "description": "iPhoneの画面が拡大されたまま戻らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screen-zoomed-in/"
+  },
+  {
+    "title": "iPhoneの画面が暗い",
+    "description": "iPhoneの画面が暗いときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screen-too-dark/"
+  },
+  {
+    "title": "iPhoneの画面が横向きにならない",
+    "description": "iPhoneの画面が横向きにならないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screen-not-rotating/"
+  },
+  {
+    "title": "iPhoneの画面が消えない",
+    "description": "iPhoneの画面が消えないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screen-does-not-turn-off/"
+  },
+  {
+    "title": "iPhoneの画面が真っ黒になった",
+    "description": "iPhoneの画面が真っ黒になったときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/screen-black/"
+  },
+  {
+    "title": "iPhoneの着信音が鳴らない",
+    "description": "iPhoneの着信音が鳴らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/ringtone-not-sounding/"
+  },
+  {
+    "title": "iPhoneの通知が遅れて届く",
+    "description": "iPhoneの通知が遅れて届くときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/notifications-delayed/"
+  },
+  {
+    "title": "iPhoneの通知音が鳴らない",
+    "description": "iPhoneの通知音が鳴らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/notification-sound-not-working/"
+  },
+  {
+    "title": "iPhoneの電源が入らない",
+    "description": "iPhoneの電源が入らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-wont-turn-on/"
+  },
+  {
+    "title": "iPhoneの音量が小さい",
+    "description": "iPhoneの音量が小さいときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/volume-too-low/"
+  },
+  {
+    "title": "iPhoneを再起動できない",
+    "description": "iPhoneを再起動できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-wont-restart/"
+  },
+  {
+    "title": "iPhoneアプリのデータが同期されない",
+    "description": "iPhoneアプリのデータが同期されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/app-data-not-syncing/"
+  },
+  {
+    "title": "iPhoneカメラのピントが合わない",
+    "description": "iPhoneカメラのピントが合わないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/camera-not-focusing/"
+  },
+  {
+    "title": "iPhoneカメラの映像が揺れる・ぶれる",
+    "description": "iPhoneカメラの映像が揺れる・ぶれるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/camera-shakes/"
+  },
+  {
+    "title": "iPhone本体が熱い",
+    "description": "iPhone本体が熱いときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-overheating/"
+  },
+  {
+    "title": "LINEのトーク履歴が消えた・表示されない",
+    "description": "LINEの機種変更・再インストール後や一部トークで履歴が消えたときに、バックアップ、アカウント、非表示・削除を確認する方法です。",
+    "url": "/sns/line-chat-history-missing/"
+  },
+  {
+    "title": "LINEのメッセージが送信できない",
+    "description": "LINEのメッセージ横に送信中や再送マークが出るときに、回線、障害、アプリ状態、利用制限を切り分けます。",
+    "url": "/sns/line-messages-not-sending/"
+  },
+  {
+    "title": "LINEの送信取消ボタンがない！もう消せない？原因と対処法【1時間制限/7日】",
+    "description": "結論：時間切れだと「送信取消」が表示されません。日本では無料は送信後1時間以内、LYPプレミアムは7日以内（条件あり）。削除との違いと、今できる対処法をまとめました。",
+    "url": "/articles/line-unsend-no-button.html"
+  },
+  {
+    "title": "LINEグループを退会しても発言は消えない？過去メッセージが残る理由と削除できる範囲",
+    "description": "結論：退会＝表示が消えるだけで、あなたの過去発言は相手側に残る。消せるのは「送信取消」(期限あり)だけ。退会後にどう見えるか/何ができるかを解説。",
+    "url": "/articles/line-group-leave-message-remains.html"
+  },
+  {
+    "title": "LINE通話ができない・相手の声が聞こえない",
+    "description": "LINEの音声通話・ビデオ通話がつながらない、着信しない、声が聞こえないときに、通信、通話設定、マイク権限、音声出力を切り分ける手順です。",
+    "url": "/sns/line-calls-not-working/"
+  },
+  {
+    "title": "MacBookのキーボードが反応しない・一部のキーを入力できない",
+    "description": "MacBookで全部または一部のキーが反応しないときに、アプリ、入力ソース、アクセシビリティ、汚れ、故障を切り分けます。",
+    "url": "/mac/macbook-keyboard-not-working/"
+  },
+  {
+    "title": "macOSアップデートが進まない・準備中で止まる",
+    "description": "macOS更新が確認中・準備中・残り時間表示のまま進まないときに、容量、通信、電源、セーフモードを確認する手順です。",
+    "url": "/mac/macos-update-stuck/"
+  },
+  {
+    "title": "Macで「開発元を確認できないため開けません」と表示される",
+    "description": "Macで未確認の開発元やAppleによる確認不可の警告が出たときに、配布元と署名を確認し、安全な場合だけ開く方法です。",
+    "url": "/mac/mac-developer-cannot-be-verified/"
+  },
+  {
+    "title": "Macで外付けSSD・HDDがFinderに表示されない",
+    "description": "Macに接続した外付けSSDやHDDがFinderに出ないときに、表示設定、ケーブル、マウント、ディスクの状態を確認します。",
+    "url": "/mac/external-drive-not-showing/"
+  },
+  {
+    "title": "Macで画面が真っ黒だが電源は入っている",
+    "description": "Macの起動音やファンは動くのに内蔵画面が映らないときに、明るさ、外部機器、強制終了、復旧環境を確認する手順です。",
+    "url": "/mac/mac-black-screen-power-on/"
+  },
+  {
+    "title": "Macの「システムデータ」が大きすぎる",
+    "description": "Macのストレージでシステムデータが異常に大きいときに、Time Machineスナップショット、キャッシュ、バックアップを安全に切り分ける方法です。",
+    "url": "/mac/mac-system-data-too-large/"
+  },
+  {
+    "title": "Macの電源が入らない",
+    "description": "Macが無反応で起動しないときに、電源、画面だけの問題、周辺機器、電源ボタン操作を順番に確認します。",
+    "url": "/mac/mac-wont-turn-on/"
+  },
+  {
+    "title": "Mac起動時に点滅する「？」フォルダが表示される",
+    "description": "Macの電源を入れると点滅する疑問符付きフォルダが出て起動しないときに、起動ディスクの選択、macOS復旧、ディスクユーティリティを安全な順番で試す方法です。",
+    "url": "/mac/mac-flashing-question-mark-folder/"
+  },
+  {
+    "title": "MagSafeでiPhoneを充電できない",
+    "description": "MagSafeでiPhoneを充電できないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/magsafe-not-charging/"
+  },
+  {
+    "title": "Microsoft Copilotにファイルをアップロードする方法｜要約・比較の例｜AIラクワザ",
+    "description": "Microsoft CopilotへPDFやOfficeファイルなどを添付し、要約、抽出、比較を依頼する基本手順と注意点を解説します。",
+    "url": "/articles/copilot-file-upload-guide.html"
+  },
+  {
+    "title": "Microsoft Copilotの使い方｜できることを初心者向けに解説｜AIラクワザ",
+    "description": "Microsoft Copilotの基本的な質問、文章作成、要約、画像を使う作業の考え方と安全な使い方を解説します。",
+    "url": "/articles/copilot-beginner-guide.html"
+  },
+  {
+    "title": "Microsoft Storeのダウンロードが進まない",
+    "description": "Microsoft Storeのアプリが保留中・取得中のまま進まないときに、通信、時刻、アカウント、キャッシュ、更新を確認する手順です。",
+    "url": "/windows/microsoft-store-download-stuck/"
+  },
+  {
+    "title": "OneDriveの同期が「保留中」のまま進まない",
+    "description": "OneDriveのファイルやフォルダーが「同期保留中」から進まないときに、サービス障害・サインイン・容量・ファイル名を確認し、データを失わず同期を再開する手順を解説します。",
+    "url": "/windows/onedrive-sync-pending/"
+  },
+  {
+    "title": "ONUのLOSランプが赤く点灯してネットにつながらない",
+    "description": "光回線終端装置のLOS・光回線ランプが赤い、または消灯して全端末がつながらないときに、安全に配線と回線障害を確認する方法です。",
+    "url": "/internet/onu-los-light-red/"
+  },
+  {
+    "title": "Perplexity Pro Searchの使い方｜通常検索との使い分け｜AIラクワザ",
+    "description": "PerplexityのPro Searchで複雑な質問を分解し、検索対象と情報源を選んで出典付き回答を得る方法を解説します。",
+    "url": "/articles/perplexity-pro-search-guide.html"
+  },
+  {
+    "title": "Perplexity Projectsの使い方｜検索・資料・指示をまとめる｜AIラクワザ",
+    "description": "Perplexity Projectsに関連スレッド、資料、カスタム指示をまとめ、継続的な調査を整理する方法を解説します。",
+    "url": "/articles/perplexity-projects-guide.html"
+  },
+  {
+    "title": "Perplexityで旅行プランを作る方法｜営業時間・移動時間を確認｜AIラクワザ",
+    "description": "Perplexityで旅行日、地域、予算、移動条件を指定し、公式情報へ戻って確認できる旅行案を作る方法を解説します。",
+    "url": "/articles/perplexity-travel-plan-guide.html"
+  },
+  {
+    "title": "Perplexityで論文を探す方法｜Academic検索と原文確認｜AIラクワザ",
+    "description": "PerplexityでAcademicなどの検索対象を使い、研究テーマ、期間、研究手法を指定して論文候補を探す方法を解説します。",
+    "url": "/articles/perplexity-academic-research-guide.html"
+  },
+  {
+    "title": "PerplexityとChatGPT Searchの違い｜AI検索の使い分け｜AIラクワザ",
+    "description": "PerplexityとChatGPT Searchを、検索の進め方、引用の見やすさ、会話、ファイル、継続作業の観点で比較します。",
+    "url": "/articles/perplexity-vs-chatgpt-search.html"
+  },
+  {
+    "title": "Perplexityにファイルをアップロードする方法｜PDF・音声の調べ方｜AIラクワザ",
+    "description": "Perplexityへ文書、画像、音声などを添付し、ファイル内容とWeb検索を使い分けて質問する方法を解説します。",
+    "url": "/articles/perplexity-file-upload-guide.html"
+  },
+  {
+    "title": "Perplexityの使い方｜出典付きAI検索を初心者向けに解説｜AIラクワザ",
+    "description": "Perplexityで質問し、出典リンクを確認しながら調査を進める基本手順と、Quick Search・Pro Searchなどの使い分けを解説します。",
+    "url": "/articles/perplexity-beginner-guide.html"
+  },
+  {
+    "title": "Perplexityの出典を確認する方法｜引用と回答が合うか検証｜AIラクワザ",
+    "description": "Perplexityの引用番号から元ページを開き、主張、対象期間、一次情報かどうかを確認する具体的な手順を解説します。",
+    "url": "/articles/perplexity-citation-check-guide.html"
+  },
+  {
+    "title": "Safariで「この接続ではプライバシーが保護されません」と出た時の対処",
+    "description": "Safariで「この接続ではプライバシーが保護されません」と表示された時の原因（証明書/時刻/ネットワーク/フィルタ/サイト側障害）と安全な対処手順。開いていいかの判断ポイントも。",
+    "url": "/articles/safari-privacy-not-secure.html"
+  },
+  {
+    "title": "Safariでキャッシュを削除する方法（iPhone/iPad）",
+    "description": "Safariの表示崩れ・ログイン不具合・重い時に効く『キャッシュ削除』。iPhone/iPadでの手順、消えるもの・消えないもの、出てこない時の対処を丁寧に解説。",
+    "url": "/articles/safari-cache-clear.html"
+  },
+  {
+    "title": "Safariでサイトをホーム画面に追加する方法（iPhone/iPad）",
+    "description": "Safariで見ているサイトを『ホーム画面に追加』して、ワンタップで開けるようにする手順。出てこないときの確認ポイントも。",
+    "url": "/articles/safari-home-screen.html"
+  },
+  {
+    "title": "SNSアカウントが乗っ取られた時の即対処法（X/Instagram/LINE共通）",
+    "description": "ログインできない／不正投稿／メール・電話番号が変わった等の「乗っ取り」疑いの時に、最短で被害を止める手順をまとめ。X・Instagram・LINEの共通手順と個別手順。",
+    "url": "/articles/account-hijacked-sos.html"
+  },
+  {
+    "title": "USBメモリに「フォーマットする必要があります」と表示される",
+    "description": "USBメモリを挿すとフォーマット要求が出て中のデータを開けないときに、データを消さず接続・ファイルシステムを確認する方法です。",
+    "url": "/peripherals/usb-drive-format-required/"
+  },
+  {
+    "title": "Wi-Fiが夜だけ遅い・時間帯で速度が落ちる",
+    "description": "夜間だけWi-Fiが遅くなるときに、回線混雑、無線混雑、家族の通信、ルーター負荷を測定して切り分ける方法です。",
+    "url": "/internet/wifi-slow-at-night/"
+  },
+  {
+    "title": "Wi-Fiルーターが勝手に再起動する・電源が落ちる",
+    "description": "ルーターのランプが一斉に消えて再起動を繰り返すときに、電源、発熱、負荷、ファームウェア、故障を切り分ける方法です。",
+    "url": "/internet/router-keeps-restarting/"
+  },
+  {
+    "title": "Wi-Fiルーターの5GHzのSSIDが表示されない",
+    "description": "2.4GHzは見えるのに5GHzのWi-Fi名だけ表示されないときに、端末対応、ルーター設定、DFSによる一時停止、距離を確認する手順です。",
+    "url": "/internet/router-5ghz-ssid-not-showing/"
+  },
+  {
+    "title": "Wi-Fiルーターのインターネットランプが赤・消灯してつながらない",
+    "description": "ルーターのInternet・ACTIVE・WANランプが赤や消灯になったときに、端末設定ではなくONU、配線、回線、動作モードを切り分けます。",
+    "url": "/internet/router-internet-light-red/"
+  },
+  {
+    "title": "Wi-Fi接続済みなのにインターネットが使えない",
+    "description": "Wi-Fi接続済みなのにインターネットが使えないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-connected-no-internet/"
+  },
+  {
+    "title": "Windows 11でCドライブの空き容量が勝手に減る",
+    "description": "Cドライブの空き容量が急に減るときに、一時ファイル、更新、復元ポイント、同期、休止ファイルを安全に特定する方法です。",
+    "url": "/windows/windows-c-drive-space-disappearing/"
+  },
+  {
+    "title": "Windows 11でWi-Fiの項目が消えた・表示されない",
+    "description": "Windows 11のクイック設定やネットワーク設定からWi-Fiスイッチが消えたときに、機内モード、アダプター、WLANサービスを確認します。",
+    "url": "/windows/wifi-option-missing-windows-11/"
+  },
+  {
+    "title": "Windows 11でスタートメニューが開かない",
+    "description": "Windows 11でスタートボタンやWindowsキーを押しても反応しないときに、Explorer、更新、システムファイルを安全な順で確認する手順です。",
+    "url": "/windows/windows-start-menu-not-opening/"
+  },
+  {
+    "title": "Windows 11でブルースクリーンが出て再起動する",
+    "description": "Windows 11で青い画面や黒い画面と停止コードが表示され、PCが再起動するときに、コードを記録してドライバー・更新・機器を安全に切り分ける方法を解説します。",
+    "url": "/windows/windows-blue-screen-restarts/"
+  },
+  {
+    "title": "Windows 11の動作が急に遅くなった",
+    "description": "Windows 11の起動や操作が急に重くなったときに、CPU・メモリ・ディスク使用率、空き容量、スタートアップを安全に切り分けます。",
+    "url": "/windows/windows-pc-running-slow/"
+  },
+  {
+    "title": "Windows PCから音が出ない",
+    "description": "Windowsでスピーカーやイヤホンから音が出ないときに、音量、出力先、アプリ別設定、ドライバーを順に確認します。",
+    "url": "/windows/windows-no-sound/"
+  },
+  {
+    "title": "Windows PCで2台目のモニターが認識されない",
+    "description": "HDMIやUSB-Cで接続した外部モニターが映らないときに、入力切替、ケーブル、Windows設定を順番に確認します。",
+    "url": "/windows/second-monitor-not-detected/"
+  },
+  {
+    "title": "Windows Updateが0%・100%のまま進まない",
+    "description": "Windows Updateのダウンロードやインストールが止まったときに、強制終了を急がず原因を切り分ける手順を解説します。",
+    "url": "/windows/windows-update-stuck/"
+  },
+  {
+    "title": "WindowsでUSB機器が認識されない",
+    "description": "USBメモリや外付け機器が表示されないときに、機器、ケーブル、USBハブ、ドライバーのどこに原因があるかを切り分けます。",
+    "url": "/windows/usb-device-not-recognized/"
+  },
+  {
+    "title": "Windowsで「PINを使用できません」と表示されサインインできない",
+    "description": "Windowsのロック画面でPINが使えないと表示されたときに、再起動、パスワードでのサインイン、PIN再設定を安全に進めます。",
+    "url": "/windows/windows-pin-not-available/"
+  },
+  {
+    "title": "Windowsでエクスプローラーが応答しない・固まる",
+    "description": "ファイルやフォルダーを開くとエクスプローラーが固まるときに、特定場所、外付け機器、履歴、システム破損を切り分ける方法です。",
+    "url": "/windows/file-explorer-not-responding/"
+  },
+  {
+    "title": "Windowsでカメラが見つからない（0xA00F4244）",
+    "description": "Windows 11・10のカメラアプリで0xA00F4244（NoCamerasAreAttached）が出るときに、物理スイッチ、権限、デバイスマネージャー、ドライバーを確認する手順です。",
+    "url": "/windows/windows-camera-error-0xa00f4244/"
+  },
+  {
+    "title": "Windowsでプリンターがオフラインと表示される",
+    "description": "電源が入っているプリンターがオフラインになるときに、Wi-Fi、印刷待ち、既定プリンター、オフライン設定を確認します。",
+    "url": "/peripherals/printer-offline-windows/"
+  },
+  {
+    "title": "Windowsにサインイン後、画面が真っ黒でカーソルだけ表示される",
+    "description": "Windowsへサインインした後に黒画面とマウスポインターだけになるときに、表示出力、Explorer、ドライバーを切り分ける手順です。",
+    "url": "/windows/windows-black-screen-with-cursor/"
+  },
+  {
+    "title": "WindowsのCopilotの使い方｜PC作業で質問するときの基本｜AIラクワザ",
+    "description": "WindowsでCopilotを開き、設定の探し方、文章作成、ファイルの相談などに使う基本手順と安全確認を解説します。",
+    "url": "/articles/copilot-windows-guide.html"
+  },
+  {
+    "title": "Xでアカウントが凍結される原因と解除の流れ（異議申し立て）",
+    "description": "X（旧Twitter）の『凍結』『ロック』『一時的制限』の違い、凍結されやすい原因、解除（異議申し立て）の手順、フォームが開かない時の対処、再凍結を防ぐコツまで。",
+    "url": "/articles/x-account-suspended.html"
+  },
+  {
+    "title": "Xでアカウントを一時停止・解除する方法（30日以内に復活）",
+    "description": "X（旧Twitter）のアカウントを一時停止（無効化）する手順と、解除（再開）する方法。iPhone/Android/PC別に、30日ルール・注意点・うまくいかない時の対処まで詳しく解説。",
+    "url": "/articles/x-account-deactivate.html"
+  },
+  {
+    "title": "Xでシャドウバンされてるか確認する方法",
+    "description": "検索に出ない/通知が伸びない時の原因がシャドウバンかどうかを、安全にチェックする手順。種類（サーチ/リプ/ゴースト等）と解除までにやることも。",
+    "url": "/articles/x-shadowban-check.html"
+  },
+  {
+    "title": "Xで画像・動画が読み込めない",
+    "description": "Xのタイムラインで画像が表示されない、動画が再生できないときに、データ節約、通信、VPN、キャッシュ、サービス障害を切り分ける方法です。",
+    "url": "/sns/x-media-not-loading/"
+  },
+  {
+    "title": "Xにログインできない",
+    "description": "Xでユーザー名やパスワードが通らない、リセットメールや認証コードが届かないときに、登録情報と公式の復旧手順を確認します。",
+    "url": "/sns/x-cannot-log-in/"
+  },
+  {
+    "title": "Xの予約投稿（スケジュール投稿）のやり方",
+    "description": "X（旧Twitter）の予約投稿（スケジュール投稿）を、X Pro（旧TweetDeck）で確実に設定する手順。予約一覧の確認・編集、出てこない時の対処も。",
+    "url": "/articles/x-yoyaku-post.html"
+  },
+  {
+    "title": "X（旧Twitter）でリストに追加したら通知される？相手にバレる条件（公開/非公開）",
+    "description": "結論：追加しただけで通知は基本来ない。でも公開リストなら相手は「自分が入っているリスト」から確認できる。バレる仕組みと対策を解説。",
+    "url": "/articles/x-list-added-notification.html"
+  },
+  {
+    "title": "X（旧Twitter）の「いいね」ってフォロワーのタイムラインに流れてる？（結論と対策）",
+    "description": "結論：今は「いいね一覧」は他人に見えない。だけど“おすすめ”で同じ投稿が出ることはある。バレ方/バレない範囲/対策を1ページで。",
+    "url": "/articles/x-like-followers-timeline.html"
+  },
+  {
+    "title": "Zoomでカメラが映らない・黒い画面になる",
+    "description": "Zoomミーティングで自分の映像が出ないときに、ビデオ停止、カメラ選択、他アプリ、OS権限を確認します。",
+    "url": "/sns/zoom-camera-not-working/"
+  },
+  {
+    "title": "「このアクセサリは使用できない可能性があります」と出る",
+    "description": "「このアクセサリは使用できない可能性があります」と出るときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/usb-accessory-not-supported/"
+  },
+  {
+    "title": "「ログイン試行がありました」ってメールが来た…無視して寝て大丈夫？（結論：今すぐ確認）",
+    "description": "本物か詐欺かの見分け→ログイン履歴の確認→最短1分の対処まで。寝る前にやるべき最低ラインもまとめました。",
+    "url": "/articles/login-attempt-email-ignore.html"
+  },
+  {
+    "title": "【2026年最新】Instagramのプロフィール閲覧で足跡はつく？バレる条件と対策まとめ",
+    "description": "Instagramは「プロフィールを見た人の一覧（足跡）」を公式には表示しない。見えるのはストーリーズ視聴・ライブ視聴・DM既読など“相手に通知が出る行動”だけ。プロフ閲覧がバレると言われる理由、足跡が付くケース、バレないための注意点、危険な外部アプリのリスクを解説。",
+    "url": "/articles/instagram-profile-view-footprint.html"
+  },
+  {
+    "title": "【2026年最新】LINEの送信取り消しで通知は消える？ロック画面に残る条件と対策",
+    "description": "LINEの送信取り消しをすると、通知センター/ロック画面のプッシュ通知は「消えることが多い」。ただし相手がすでに通知を見ていた・スマートウォッチに届いた・通知履歴が残る・古い環境などでは内容が残る場合も。消える/残るパターンと注意点を整理。",
+    "url": "/articles/line-unsend-notification-lockscreen.html"
+  },
+  {
+    "title": "【2026年版】インスタDMを既読つけずに読む方法｜既読（Seen）をオフにする設定と注意点",
+    "description": "結論：今でも可能。Instagramの「既読表示（Read receipts）」をオフにすれば、DMを開いても相手に“既読/Seen”が出にくい。全体/特定チャット別の設定と注意点をまとめました。",
+    "url": "/articles/instagram-dm-read-without-seen.html"
+  },
+  {
+    "title": "【iPhone/Safari】怪しい警告画面が消えない時の対処法｜変なサイトを開いた時の消し方",
+    "description": "iPhoneで怪しいサイトの『ウイルスに感染』『警告が消えない』などの画面が出た時に、最短で閉じる手順（Safari中心）。タップしてはいけない操作、履歴/サイトデータの削除、通知の解除、プロファイル確認まで。",
+    "url": "/articles/safari-warning-stuck-close.html"
+  },
+  {
+    "title": "【iPhone】iCloud支払い失敗で写真は消える？期限切れの影響と今すぐやる対処",
+    "description": "iCloud+の支払いが失敗/期限切れになった時、写真がすぐ消えるのかを解説。基本は即削除されないが、容量超過で同期やバックアップが止まる。詐欺メールの見分け、支払い復旧、写真を守るバックアップ手順まで。",
+    "url": "/articles/icloud-payment-failed-photos.html"
+  },
+  {
+    "title": "【iPhone】画面ヒビ割れ放置でタッチ不良になる？使い続けた時のリスクと対処",
+    "description": "iPhoneの画面がひび割れたまま使うと、いつ操作不能になる？タッチ不良（ゴーストタッチ）、液晶/有機ELのにじみ、割れ拡大、水没リスクなどの現実的な危険と、今すぐやるべきバックアップ・応急処置・修理判断を解説。",
+    "url": "/articles/iphone-cracked-screen-touch-risk.html"
+  },
+  {
+    "title": "【iPhone】知らない番号からFaceTimeが来た時の対処法｜拒否してOK？",
+    "description": "知らない番号からFaceTimeがかかってきた時は、拒否してOK。安全な対処（ブロック/通報/設定で防ぐ）と、詐欺っぽいサイン、うっかり出た時の対処をまとめ。",
+    "url": "/articles/facetime-unknown-number-reject-ok.html"
+  },
+  {
+    "title": "【TikTok LIVE】入った瞬間『〇〇が入室しました』を消す方法は？すぐ消える？バレない見方も解説",
+    "description": "結論：視聴者側で入室メッセージを“消す”ボタンはありません。自然に流れるのを待つだけ。どうしても目立ちたくない時の対処（入室しないで見る/すぐ退出/設定の見直し）をまとめました。",
+    "url": "/articles/tiktok-live-joined-message-hide.html"
+  },
+  {
+    "title": "【TikTok】動画を保存したらバレる？誰が保存したか投稿者に通知される？【お気に入り/ダウンロード】",
+    "description": "結論：TikTokの「ダウンロード保存」は基本バレない（誰が保存したか投稿者に通知なし）。ただし「お気に入り（☆）保存」は通知/アクティビティに表示される場合あり。見分け方と対策も解説。",
+    "url": "/articles/tiktok-video-save-notification.html"
+  },
+  {
+    "title": "【X】エロ垢にフォローされた！フォロワーにバレる前に消す方法（削除・ブロック・鍵垢）",
+    "description": "結論：いちばん静かに消すなら「Remove this follower（フォロワーを削除）」、再フォローも防ぐなら「ブロック」。フォロワーに“通知”でバレることは基本ないけど、フォロー一覧を見られると気づかれる可能性あり。最短手順と再発防止をまとめました。",
+    "url": "/articles/x-ero-account-followed-remove.html"
+  },
+  {
+    "title": "【X】ブロックしたら相手の画面でどう見える？消え方・通知・見える範囲まとめ",
+    "description": "Xでブロックした直後、相手の画面であなたがどう表示されるかを整理。プロフィール表示の「ブロックされています」画面、フォロー解除、DM不可、いいね/返信/リポスト不可、公開/鍵垢での見える範囲の違いまで。",
+    "url": "/articles/x-block-what-they-see.html"
+  },
+  {
+    "title": "【インスタ】DMの画像が1回で消えた…もう一度見る方法は？（View Once/Allow Replay）",
+    "description": "結論：相手が「View once（1回のみ）」で送った画像は再表示できません。「Allow replay（リプレイ可）」ならチャットで画像をもう一度タップして再生できます。見分け方と対処をまとめました。",
+    "url": "/articles/instagram-dm-view-once-replay.html"
+  },
+  {
+    "title": "【インスタ】ブロックされた？サブ垢で確認するとバレる？リスクと安全な確認方法",
+    "description": "Instagramでブロックされた疑いがある時、サブ垢で確認すると相手にバレる可能性は？基本は「プロフ閲覧だけ」なら通知は出ないが、ストーリー閲覧・フォロー/いいね誤タップ・DM・おすすめ表示（連絡先同期/アカウントセンター等）でつながりが見えるリスクがある。バレやすい行動と、より安全な確認手順を整理。",
+    "url": "/articles/instagram-block-check-subaccount-risk.html"
+  },
+  {
+    "title": "【インスタ】特定の人のストーリーをミュートしたらバレる？通知・見え方・解除方法まとめ",
+    "description": "結論：ストーリーをミュートしても相手に通知は行きません。ただし、あなたが閲覧者リストに出なくなるので気づかれる可能性はあります。ミュート手順・解除方法・「見ない」と「見せない」の違いも解説。",
+    "url": "/articles/instagram-mute-story-notification.html"
+  },
+  {
+    "title": "【例文あり】友達に勝手にSNSへ写真を載せられた…角を立てずに消してもらう言い方",
+    "description": "結論：まずは短く“お願い”→理由は最小限→代案（ぼかし/トリミング）を出すと角が立ちにくい。コピペOKの例文と、相手が消してくれない時の対処もまとめました。",
+    "url": "/articles/sns-photo-posted-without-permission-delete-request.html"
+  },
+  {
+    "title": "【保存版】スマホを水に落とした！ドライヤーが絶対ダメな理由と正しい乾かし方（iPhone/Android）",
+    "description": "スマホを水没させた直後にドライヤーはNG。熱で水が奥に入る、部品や防水シールが劣化、バッテリーが危険などの理由を解説。iPhone/Android共通の正しい応急処置（電源オフ・充電しない・SIM取り出し・自然乾燥・乾燥剤）と、やってはいけない行動、修理に持ち込む目安をまとめ。",
+    "url": "/articles/phone-water-dropped-hairdryer-danger.html"
+  },
+  {
+    "title": "【偽警告】「ウイルスに感染しました」は本物？広告ポップアップの消し方（iPhone/Android/PC）",
+    "description": "ブラウザで突然出る「ウイルスに感染しました」警告は、多くが偽の広告（スケアウェア）。本物の警告の見分け方、絶対にやってはいけない行動、iPhone/Android/PC別の消し方（タブを閉じる・履歴/サイトデータ削除・通知許可の解除・拡張機能/アプリ確認）をまとめ。",
+    "url": "/articles/fake-virus-alert-popup.html"
+  },
+  {
+    "title": "【危険】インスタDMの「これあなた？」動画リンクは押すな！乗っ取り手口と対処法",
+    "description": "結論：そのDMは乗っ取り/フィッシングの可能性大。リンク先でID/パスワードを入れるとアカウントを奪われます。押してしまった時の確認ポイントと今すぐやるべき対策をまとめました。",
+    "url": "/articles/instagram-dm-is-this-you-video-link-scam.html"
+  },
+  {
+    "title": "【危険】知らない人から来たDMのURLは開くだけで危ない？理由と安全な対処（インスタ/X/LINE）",
+    "description": "知らない人から届くDMのURLは、開いただけでIP/端末情報の取得、偽ログイン誘導、トラッキング、アプリ深いリンク、マルウェア誘導などのリスクがある。『開くだけで何が起きる？』を分かりやすく整理し、Instagram/X/LINE共通の安全な対処手順、見分け方、開いてしまった時の対応まで解説。",
+    "url": "/articles/dm-link-danger-why.html"
+  },
+  {
+    "title": "【学校Wi‑Fi】見てるサイトは先生にバレる？見える範囲と注意点（筒抜け？を解説）",
+    "description": "学校のWi‑Fiに繋ぐと、見ているサイトはどこまで見られる？HTTPSなら本文は基本見えないが、アクセス先のドメインや通信の記録はネットワーク管理側に残ることがある。先生・学校・業者が見える範囲、見えない範囲、端末管理（MDM/証明書）で変わるポイントと注意点を解説。",
+    "url": "/articles/school-wifi-what-can-they-see.html"
+  },
+  {
+    "title": "【学校】スマホ没収で通知の中身は見られる？電源OFFしないと危険？対策まとめ",
+    "description": "学校でスマホを没収されたとき、ロック画面の通知プレビューで内容（LINE/DM/メール）が見られる可能性はある。iPhone/Androidで「通知の表示」「プレビュー」「ロック画面」の設定次第。見える範囲と、今すぐできる対策（プレビュー非表示、Focus/おやすみ、機内モード等）を解説。",
+    "url": "/articles/phone-confiscated-notification-privacy.html"
+  },
+  {
+    "title": "【要注意】「設定をリセット」すると消えるデータ一覧｜iPhone/Android 初期化との違い",
+    "description": "スマホが重い時に「設定をリセット」すると何が消える？iPhoneの“すべての設定をリセット/ネットワーク設定をリセット/すべてのコンテンツと設定を消去”の違い、Androidの“設定のリセット/ネットワークリセット/工場出荷状態（初期化）”で消えるもの・消えないものを一覧で整理。安全にやる順番とバックアップ確認も解説。",
+    "url": "/articles/reset-settings-data-loss-list.html"
+  },
+  {
+    "title": "アプリが待機中・読み込み中のまま進まない",
+    "description": "アプリが待機中・読み込み中のまま進まないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/app-stuck-waiting/"
+  },
+  {
+    "title": "アプリアイコンの通知バッジが表示されない",
+    "description": "アプリアイコンの通知バッジが表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/notification-badges-not-showing/"
+  },
+  {
+    "title": "イヤホンから音が出ない",
+    "description": "イヤホンから音が出ないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/headphones-no-sound/"
+  },
+  {
+    "title": "インスタDMで変なリンク踏んだ…その後何も起きなければセーフ？（結論：油断NG）",
+    "description": "結論：何も起きなくても“後から被害”はありえる。今すぐやる5分チェック（ログイン履歴/連携アプリ/2段階認証）と、やってしまった時の対処を解説。",
+    "url": "/articles/instagram-dm-link-clicked-safe.html"
+  },
+  {
+    "title": "インスタ「親しい友達」から外されたら通知される？バレる？相手に起きる変化まとめ",
+    "description": "結論：通知は行かない。でも緑のリングが消える/限定ストーリーが見えなくなるなど“間接的に気づく”可能性はある。サインと注意点を整理。",
+    "url": "/articles/instagram-close-friends-removed-notification.html"
+  },
+  {
+    "title": "インスタのストーリーを間違えて載せた！一瞬で消す方法",
+    "description": "Instagramストーリーを誤投稿した時に、最短で削除する手順（iPhone/Android共通）。削除ボタンが出ない時の対処、ハイライトから消す方法、公開範囲の応急処置まで。",
+    "url": "/articles/instagram-story-delete-fast.html"
+  },
+  {
+    "title": "カスタムGPTの作り方｜専用AIの指示・知識・公開範囲を設定｜AIラクワザ",
+    "description": "カスタムGPTに役割、回答形式、参照資料を設定し、プレビューで確認して安全な範囲で共有する手順を解説します。",
+    "url": "/articles/chatgpt-custom-gpt-guide.html"
+  },
+  {
+    "title": "スマホの画面が真っ暗で充電しても反応しない…寿命？原因と今すぐできる対処法（iPhone/Android）",
+    "description": "結論：寿命とは限らない。放電・フリーズ・充電器/端子トラブルが多い。まずは30分充電→強制再起動→別ケーブル確認。危険サインも解説。",
+    "url": "/articles/phone-screen-black-no-charge.html"
+  },
+  {
+    "title": "テザリング接続済みなのにネットが使えない",
+    "description": "テザリング接続済みなのにネットが使えないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/personal-hotspot-no-internet/"
+  },
+  {
+    "title": "バッテリーの状態に「サービス」と表示される",
+    "description": "バッテリーの状態に「サービス」と表示されるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/battery-health-service/"
+  },
+  {
+    "title": "フィルタリングで開けないサイトは危険？原因の確認と“許可を得て”安全に閲覧する方法",
+    "description": "結論：ブロック＝危険確定ではないが、無理に回避はNG。原因を切り分け→安全性チェック→管理者/保護者/キャリアに正規ルートで申請する手順をまとめました。",
+    "url": "/articles/filtering-blocked-site-safe-view.html"
+  },
+  {
+    "title": "プリンターの印刷待ちジョブを削除できない",
+    "description": "Windowsの印刷キューでジョブが削除中・エラーのまま残り、新しい印刷も進まないときにスプーラーを安全に復旧する方法です。",
+    "url": "/peripherals/printer-queue-wont-delete/"
+  },
+  {
+    "title": "メッシュWi-Fiの子機だけつながらない",
+    "description": "メッシュWi-Fiのサテライト・エージェントだけがオフラインになるときに、距離、親機接続、設定同期、バックホールを確認する方法です。",
+    "url": "/internet/mesh-wifi-node-not-connecting/"
+  },
+  {
+    "title": "ロック画面に通知が表示されない",
+    "description": "ロック画面に通知が表示されないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/lock-screen-notifications-hidden/"
+  },
+  {
+    "title": "先生にLINEしてもいい？連絡していい内容・ダメな内容",
+    "description": "先生にLINEしていい内容・避けるべき内容、送る時間帯の目安、失礼になりにくい書き方、コピペ例文をまとめ。学校のルールがある場合の確認ポイントも。",
+    "url": "/articles/sensei-line-renraku-ok-ng.html"
+  },
+  {
+    "title": "公共Wi-Fiのログイン画面が出ない",
+    "description": "公共Wi-Fiのログイン画面が出ないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/public-wifi-login-not-appearing/"
+  },
+  {
+    "title": "写真を消してもiPhoneの容量が減らない",
+    "description": "写真を消してもiPhoneの容量が減らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/photos-deleted-storage-not-reduced/"
+  },
+  {
+    "title": "反省文ってどう書けばいい？【例文あり・そのまま使える】",
+    "description": "反省文の書き方の型と、スマホ・提出物・遅刻などの例文をまとめました。コピペOK（少し言い換え推奨）。",
+    "url": "/articles/hanseibun.html"
+  },
+  {
+    "title": "容量不足で写真消すとき「最近削除した項目」まで空にすると戻せない？（結論と復元の可能性）",
+    "description": "結論：最近削除を空にすると、写真アプリからは基本戻せない。例外（バックアップ/iCloud/他アプリ）と、容量を増やす安全な手順を分かりやすく解説。",
+    "url": "/articles/iphone-recently-deleted-permanent.html"
+  },
+  {
+    "title": "提出期限に間に合わない時の謝罪文テンプレ",
+    "description": "提出に遅れそう/遅れた時にそのまま送れる例文を状況別に。理由の書き方、延長お願い、遅延後のフォロー、NG例までまとめ。",
+    "url": "/articles/teishutsu-kigen-okurenai.html"
+  },
+  {
+    "title": "支払い画面でボタン連打しちゃった…二重で決済されてないか確認する方法",
+    "description": "クレカ/デビット/PayPay/Apple Pay/アプリ課金別に、30秒でできる確認→二重だった時の返金手順まで分かりやすく解説。",
+    "url": "/articles/payment-double-charge-check.html"
+  },
+  {
+    "title": "検索履歴を見られそう！10秒でブラウザの履歴を全部消す手順（iPhone/Android/PC）",
+    "description": "Safari/Chrome/Edge/Firefox別に、今すぐ履歴を一括削除する最短手順。消えるもの・消えないもの（Google履歴）もセットで解説。",
+    "url": "/articles/browser-history-clear-10sec.html"
+  },
+  {
+    "title": "正しいはずのWi-Fiパスワードが違うと表示される",
+    "description": "正しいはずのWi-Fiパスワードが違うと表示されるときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/wifi-password-incorrect/"
+  },
+  {
+    "title": "無料AI画像生成ツールの選び方｜日本語・商用利用を確認｜AIラクワザ",
+    "description": "無料で試せるAI画像生成ツールを選ぶ際の、画質、日本語指示、編集、商用利用、透かし、権利のチェック方法を紹介します。",
+    "url": "/articles/free-ai-image-tools.html"
+  },
+  {
+    "title": "無料で使えるAI文章作成ツールの選び方｜目的別チェック項目｜AIラクワザ",
+    "description": "無料AI文章作成ツールを、メール、記事、要約、長文編集など目的別に選ぶ基準と、比較時の注意点を解説します。",
+    "url": "/articles/free-ai-writing-tools.html"
+  },
+  {
+    "title": "特定アプリだけ通知が来ない",
+    "description": "特定アプリだけ通知が来ないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/one-app-notifications-missing/"
+  },
+  {
+    "title": "生成AIと著作権の基本｜文章・画像を公開する前の確認｜AIラクワザ",
+    "description": "生成AIで作った文章や画像を公開するときに、入力素材、類似性、引用、商用利用条件を確認する基本手順を解説します。",
+    "url": "/articles/ai-copyright-guide.html"
+  },
+  {
+    "title": "生成AIに個人情報を入力して大丈夫？安全な使い方と注意点｜AIラクワザ",
+    "description": "ChatGPT、Gemini、Copilotなどに入力してはいけない情報、匿名化、データ設定、社内利用ルールの基本を解説します。",
+    "url": "/articles/ai-privacy-safety.html"
+  },
+  {
+    "title": "生成AIに機密情報を入れないためのチェックリスト｜入力前の確認｜AIラクワザ",
+    "description": "生成AIへ文章やファイルを入力する前に、個人情報、顧客情報、認証情報、未公開情報を見つけて除く手順を解説します。",
+    "url": "/articles/ai-confidential-info-checklist.html"
+  },
+  {
+    "title": "生成AIの回答をファクトチェックする方法｜5段階の確認手順｜AIラクワザ",
+    "description": "ChatGPTやGeminiなどの回答に含まれる誤情報、古い情報、存在しない出典を見抜くための実践的な確認手順を解説します。",
+    "url": "/articles/ai-fact-check-guide.html"
+  },
+  {
+    "title": "親に内緒で入れたアプリ、ホーム画面から隠しても設定アプリからバレる？（結論：バレる）",
+    "description": "結論：ホーム画面から消しても“インストール済み”なら設定やストレージ等で見つかる可能性大。iPhone/Androidでバレる場所と、安心の対処をまとめました。",
+    "url": "/articles/hidden-app-visible-settings.html"
+  },
+  {
+    "title": "通話相手に自分の声が聞こえない",
+    "description": "通話相手に自分の声が聞こえないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/callers-cannot-hear/"
+  },
+  {
+    "title": "部活を休む時の連絡文【LINE/メール例文・コピペOK】",
+    "description": "部活を休む時の連絡文（LINE/メール）を、顧問・先輩・グループ別にコピペOKで用意。体調不良/家庭の用事/学校行事など状況別テンプレと、短く失礼なく伝えるコツ、返信が来ない時の追い連絡も。",
+    "url": "/articles/club-absence-message.html"
+  },
+  {
+    "title": "電池切れ後にiPhoneの電源が入らない",
+    "description": "電池切れ後にiPhoneの電源が入らないときに、データを消さずに原因を切り分ける確認順と対処法を解説します。",
+    "url": "/iphone/iphone-wont-turn-on-after-empty/"
+  }
+]
