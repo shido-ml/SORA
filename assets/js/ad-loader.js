@@ -1,6 +1,17 @@
 (function () {
   "use strict";
 
+  // NINJA ADMAX TEMPORARILY DISABLED FOR ADSENSE REVIEW.
+  // Change only this flag to true to restore every Ninja AdMax placement.
+  var NINJA_ADMAX_ENABLED = false;
+
+  if (!NINJA_ADMAX_ENABLED) {
+    document.querySelectorAll(".sora-ad-slot").forEach(function (slot) {
+      slot.remove();
+    });
+    return;
+  }
+
   var MOBILE_STICKY = "https://adm.shinobi.jp/s/d044499f6d5b29a4f32ef05cb49e97fc";
   var PC_AD = "https://adm.shinobi.jp/s/f02de23bd9ffa66bc8b94ee3eef2c5c6";
   var INLINE_SDK = "https://adm.shinobi.jp/st/t.js";
