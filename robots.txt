@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shido-ml.github.io/SORA/sitemap.xml
+Sitemap: https://sora-navi-jp.com/sitemap.xml

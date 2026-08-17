@@ -4,7 +4,7 @@
 - 既存記事: 53本（既存ファイル名・URLを維持）
 - 追加: AIラクワザ 100本
 - 合計記事数: 153本
-- 公開想定URL: https://shido-ml.github.io/SORA/
+- 公開想定URL: https://sora-navi-jp.com/
 - 問い合わせ: Googleフォーム外部リンク
 - 個人メールの公開: なし
 - sitemap.xml: 固定ページ6 + 記事153 = 159 URL
