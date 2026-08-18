@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  // NINJA ADMAX TEMPORARILY DISABLED FOR ADSENSE REVIEW.
-  // Change only this flag to true to restore every Ninja AdMax placement.
-  var NINJA_ADMAX_ENABLED = false;
+  // Ninja AdMax is enabled while AdSense auto ads are paused.
+  // Change only this flag to false to stop every Ninja AdMax placement.
+  var NINJA_ADMAX_ENABLED = true;
 
   if (!NINJA_ADMAX_ENABLED) {
     document.querySelectorAll(".sora-ad-slot").forEach(function (slot) {
@@ -24,23 +24,67 @@
     document.write('<script src="' + source + '" ' + attrs + '><\/script>');
   }
 
-  var inlineSlots = document.querySelectorAll(".sora-mobile-inline-ad");
+  function directArticleChild(article, element) {
+    var block = element;
+
+    while (block.parentElement && block.parentElement !== article) {
+      block = block.parentElement;
+    }
+
+    return block;
+  }
+
+  function addMidArticleSlot(originalSlot) {
+    var article = originalSlot.closest("article") || originalSlot.parentElement;
+    var headings;
+    var target;
+    var addedSlot;
+
+    if (!article) {
+      return;
+    }
+
+    headings = article.querySelectorAll("h2");
+    if (headings.length < 3) {
+      return;
+    }
+
+    target = directArticleChild(article, headings[Math.floor(headings.length / 2)]);
+    if (!target || target === originalSlot || !target.parentNode) {
+      return;
+    }
+
+    addedSlot = originalSlot.cloneNode(true);
+    addedSlot.classList.add("sora-injected-inline-ad");
+    addedSlot.setAttribute("data-ad-placement", "article-middle");
+    target.parentNode.insertBefore(addedSlot, target);
+  }
+
+  var originalInlineSlot = document.querySelector(".sora-mobile-inline-ad");
+
+  // Run ads only on pages that already contain an approved placement marker.
+  if (!originalInlineSlot) {
+    return;
+  }
 
   if (isMobile) {
+    addMidArticleSlot(originalInlineSlot);
     writeScript(MOBILE_STICKY);
 
-    if (inlineSlots.length) {
-      window.admaxads = (window.admaxads || []).filter(function (item) {
-        return item.admax_id !== INLINE_ID;
-      });
+    var inlineSlots = document.querySelectorAll(".sora-mobile-inline-ad");
+    window.admaxads = (window.admaxads || []).filter(function (item) {
+      return item.admax_id !== INLINE_ID;
+    });
+
+    inlineSlots.forEach(function () {
       window.admaxads.push({ admax_id: INLINE_ID, type: "banner" });
-      window.__admax_tag__ = undefined;
-      writeScript(INLINE_SDK, "async");
-    }
+    });
+
+    window.__admax_tag__ = undefined;
+    writeScript(INLINE_SDK, "async");
   } else {
-    inlineSlots.forEach(function (slot) {
-      slot.hidden = true;
-      slot.setAttribute("aria-hidden", "true");
+    document.querySelectorAll(".sora-mobile-inline-ad").forEach(function (slot) {
+      slot.remove();
     });
     writeScript(PC_AD);
   }
