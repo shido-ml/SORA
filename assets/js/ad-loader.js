@@ -60,6 +60,33 @@
     target.parentNode.insertBefore(addedSlot, target);
   }
 
+  function movePcStickyToSide() {
+    var attempts = 0;
+    var timer = window.setInterval(function () {
+      var wrapper = document.querySelector("[data-admax-sticky-wrapper]");
+      var stickyAd;
+
+      attempts += 1;
+
+      if (wrapper) {
+        stickyAd = Array.prototype.find.call(wrapper.children, function (element) {
+          return window.getComputedStyle(element).position === "fixed";
+        });
+      }
+
+      if (stickyAd) {
+        stickyAd.classList.add("sora-pc-admax-side");
+        stickyAd.style.left = "auto";
+        stickyAd.style.right = "16px";
+        stickyAd.style.bottom = "16px";
+        stickyAd.style.transform = "none";
+        window.clearInterval(timer);
+      } else if (attempts >= 40) {
+        window.clearInterval(timer);
+      }
+    }, 100);
+  }
+
   var originalInlineSlot = document.querySelector(".sora-mobile-inline-ad");
 
   // Run ads only on pages that already contain an approved placement marker.
@@ -86,6 +113,13 @@
     document.querySelectorAll(".sora-mobile-inline-ad").forEach(function (slot) {
       slot.remove();
     });
+
+    // A 300px sticky unit would cover the article on narrower desktop widths.
+    if (!window.matchMedia("(min-width: 1200px)").matches) {
+      return;
+    }
+
     writeScript(PC_AD);
+    movePcStickyToSide();
   }
 })();
