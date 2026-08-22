@@ -1,0 +1,485 @@
+[
+  {
+    "topic": "Windows 11 Wi-Fi 接続済み インターネットなし",
+    "category": "windows",
+    "path": "/windows/windows-wifi-connected-no-internet/",
+    "slug": "windows-wifi-connected-no-internet",
+    "title": "Windows 11でWi-Fi接続済みなのにインターネットが使えない",
+    "answer": "ほかの端末が通信できるなら、PC側の保存済みWi-Fi設定、VPN・プロキシ、IP/DNS設定を順に確認します。ネットワークのリセットは再設定が必要になるため最後に行います。",
+    "steps": ["同じWi-Fiに接続した別端末で通信できるか確認する", "機内モードとWi-Fiを切り替え、対象SSIDを削除して再接続する", "VPN・プロキシを一時停止し、IPアドレスとDNSの自動取得を確認する", "Windowsのネットワーク診断を実行し、最後にネットワークをリセットする"],
+    "causes": ["保存済みWi-Fi構成の不整合", "VPN・プロキシ・DNS設定", "無線LANドライバーまたはDHCPの不調"],
+    "escalation": "別端末は通信できるのにネットワークのリセット後も改善しない場合は、PCメーカーまたはMicrosoftサポートへ相談します。",
+    "source_label": "Microsoft Support - Windows の Wi-Fi 接続問題を修正する",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows",
+    "related_existing": ["/windows/wifi-option-missing-windows-11/", "/iphone/wifi-connected-no-internet/", "/browser/chrome-page-not-loading/"]
+  },
+  {
+    "topic": "Windows 11 Bluetooth ボタン 消えた",
+    "category": "windows",
+    "path": "/windows/windows-bluetooth-toggle-missing/",
+    "slug": "windows-bluetooth-toggle-missing",
+    "title": "Windows 11でBluetoothのボタンが消えた・オンにできない",
+    "answer": "クイック設定だけでなく設定画面とデバイスマネージャーを確認し、Bluetoothアダプターの無効化、ドライバー不調、非搭載機種を切り分けます。",
+    "steps": ["機内モードを解除し、設定のBluetooth項目を確認する", "デバイスマネージャーでBluetoothアダプターの有無と状態を確認する", "Windows UpdateとPCメーカー提供ドライバーを適用する", "Bluetoothトラブルシューティングを実行する"],
+    "causes": ["クイック設定からの項目削除", "Bluetoothアダプターの無効化・ドライバー不調", "端末がBluetooth非搭載またはハード故障"],
+    "escalation": "デバイスマネージャーにもアダプターが表示されない場合は、PCの仕様を確認してメーカーへ相談します。",
+    "source_label": "Microsoft Support - Windows の Bluetooth の問題を解決する",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/bluetooth/fix-bluetooth-problems-in-windows",
+    "related_existing": ["/peripherals/bluetooth-mouse-not-working-windows/", "/peripherals/windows-bluetooth-headphones-no-sound/", "/iphone/bluetooth-toggle-grayed-out/"]
+  },
+  {
+    "topic": "Windows 11 マイク 反応しない",
+    "category": "windows",
+    "path": "/windows/windows-microphone-not-working/",
+    "slug": "windows-microphone-not-working",
+    "title": "Windows 11でマイクが反応しない・声を認識しない",
+    "answer": "物理ミュート、入力デバイス、Windowsのマイク許可、アプリ側の入力先を順に確認すると原因を切り分けられます。",
+    "steps": ["ヘッドセットの接続と物理ミュートを確認する", "設定のサウンドで正しい入力デバイスを選びテストする", "プライバシーとセキュリティでマイクアクセスを許可する", "アプリ側の入力先とドライバー更新を確認する"],
+    "causes": ["物理ミュートまたは誤った入力先", "Windows・アプリのマイク権限", "オーディオドライバーや端子の不調"],
+    "escalation": "別のマイクでも入力レベルが動かない場合は、PCメーカーまたは音響機器メーカーへ相談します。",
+    "source_label": "Microsoft Support - Fix microphone problems",
+    "source_url": "https://support.microsoft.com/en-us/windows/fix-microphone-problems-5f230348-106d-bfa4-1db5-336f35576011",
+    "related_existing": ["/windows/windows-no-sound/", "/sns/discord-microphone-not-working/", "/iphone/microphone-not-working/"]
+  },
+  {
+    "topic": "Windows Hello 顔認証 できない",
+    "category": "windows",
+    "path": "/windows/windows-hello-face-not-working/",
+    "slug": "windows-hello-face-not-working",
+    "title": "Windows Helloの顔認証が使えない・認識されない",
+    "answer": "対応IRカメラ、カメラ権限、顔データ、PINの状態を確認し、顔認証の再登録はPINでサインインできることを確認してから行います。",
+    "steps": ["PINでサインインできることと対応カメラ搭載を確認する", "カメラの遮蔽物・汚れ・照明とプライバシー設定を確認する", "Windows Updateと生体認証・カメラドライバーを更新する", "サインインオプションから顔認証を改善または再登録する"],
+    "causes": ["IRカメラ非搭載・遮蔽", "カメラ権限やドライバー不調", "顔データまたはWindows Hello構成の不整合"],
+    "escalation": "対応IRカメラが認識されない、またはPINでもサインインできない場合は、初期化せずメーカーへ相談します。",
+    "source_label": "Microsoft Support - Windows Hello の一般的な問題",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/security/identity-signin/windows-hello-common-issues-and-troubleshooting-tips",
+    "related_existing": ["/windows/windows-camera-error-0xa00f4244/", "/windows/windows-pin-not-available/", "/iphone/face-id-not-working/"]
+  },
+  {
+    "topic": "Windows 11 検索 反応しない",
+    "category": "windows",
+    "path": "/windows/windows-search-not-working/",
+    "slug": "windows-search-not-working",
+    "title": "Windows 11の検索が開かない・結果が表示されない",
+    "answer": "検索画面だけの停止か、インデックス不調かを分け、Searchプロセスの再起動、検索インデックス設定、更新の順で確認します。",
+    "steps": ["タスクマネージャーから検索プロセスを終了して再起動する", "検索対象フォルダーとインデックス状況を確認する", "検索とインデックス作成のトラブルシューティングを実行する", "Windows Updateとシステムファイル検査を行う"],
+    "causes": ["検索プロセスの一時停止", "インデックスの破損・対象外設定", "Windows更新やシステムファイルの不整合"],
+    "escalation": "新しいユーザーでも検索できない場合は、Microsoftサポートへ診断結果を添えて相談します。",
+    "source_label": "Microsoft Support - Windows の検索インデックス作成",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/performance-optimization/search-indexing-in-windows",
+    "related_existing": ["/windows/windows-start-menu-not-opening/", "/windows/file-explorer-not-responding/", "/windows/windows-pc-running-slow/"]
+  },
+  {
+    "topic": "Windows 11 タスクバー 固まる",
+    "category": "windows",
+    "path": "/windows/windows-taskbar-not-responding/",
+    "slug": "windows-taskbar-not-responding",
+    "title": "Windows 11のタスクバーが反応しない・固まる",
+    "answer": "Windowsエクスプローラーを再起動し、更新、常駐アプリ、ユーザープロファイルの順に原因を切り分けます。",
+    "steps": ["Ctrl+Shift+Escでタスクマネージャーを開く", "Windowsエクスプローラーを再起動する", "Windows Updateを適用し再起動する", "クリーンブートまたは別ユーザーで再現を確認する"],
+    "causes": ["Explorerプロセスの停止", "常駐アプリやシェル拡張の干渉", "ユーザープロファイル・システムファイルの不整合"],
+    "escalation": "別ユーザーでも再現しSFC/DISM後も直らない場合は、MicrosoftまたはPCメーカーへ相談します。",
+    "source_label": "Microsoft Support - Windows troubleshooting",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/windows/windows-start-menu-not-opening/", "/windows/file-explorer-not-responding/", "/windows/windows-black-screen-with-cursor/"]
+  },
+  {
+    "topic": "Windows サムネイル 表示されない",
+    "category": "windows",
+    "path": "/windows/windows-thumbnails-not-showing/",
+    "slug": "windows-thumbnails-not-showing",
+    "title": "Windowsで写真や動画のサムネイルが表示されない",
+    "answer": "エクスプローラーの表示設定、ファイル形式、OneDriveの実体、サムネイルキャッシュを順に確認します。ファイル本体を削除する必要はありません。",
+    "steps": ["常にアイコンを表示する設定が有効でないか確認する", "対象ファイルを開けるか、ローカルに保存済みか確認する", "エクスプローラーを再起動する", "ディスククリーンアップでサムネイルキャッシュだけを再生成する"],
+    "causes": ["サムネイル非表示設定", "クラウド上のみのファイル・未対応形式", "サムネイルキャッシュの破損"],
+    "escalation": "特定形式だけ表示できない場合は、コーデック提供元またはアプリメーカーの仕様を確認します。",
+    "source_label": "Microsoft Support - File Explorer",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/windows/file-explorer-not-responding/", "/windows/onedrive-sync-pending/", "/google/google-drive-files-missing/"]
+  },
+  {
+    "topic": "Windows セキュリティ 開かない",
+    "category": "windows",
+    "path": "/windows/windows-security-not-opening/",
+    "slug": "windows-security-not-opening",
+    "title": "Windows セキュリティが開かない・真っ白になる",
+    "answer": "Windows更新、別のセキュリティ製品、組織の管理設定、アプリ破損を確認し、保護機能を無効化せずに復旧します。",
+    "steps": ["Windows Updateと再起動を行う", "別のウイルス対策ソフトと職場・学校の管理表示を確認する", "設定からWindows セキュリティアプリを修復する", "SFCとDISMでシステムファイルを検査する"],
+    "causes": ["更新待ち・アプリ破損", "他社セキュリティ製品との役割切替", "組織ポリシーまたはシステムファイル不整合"],
+    "escalation": "ウイルス感染が疑われる、または保護状態を確認できない場合はネットワークを切り、Microsoftサポートへ相談します。",
+    "source_label": "Microsoft Support - Windows でアプリを修復する",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/apps/repair-apps-and-programs-in-windows",
+    "related_existing": ["/articles/fake-virus-alert-popup.html", "/windows/windows-update-stuck/", "/articles/safari-warning-stuck-close.html"]
+  },
+  {
+    "topic": "BitLocker 回復キー 突然 求められる",
+    "category": "windows",
+    "path": "/windows/bitlocker-recovery-key-prompt/",
+    "slug": "bitlocker-recovery-key-prompt",
+    "title": "BitLocker回復キーを突然求められたときの確認方法",
+    "answer": "画面の回復キーIDを控え、個人のMicrosoftアカウント、職場・学校アカウント、印刷・USB保存を確認します。回復キーを回避する正規手段はありません。",
+    "steps": ["回復キーIDと端末名を安全に控える", "別端末でMicrosoftアカウントの回復キー一覧を確認する", "職場・学校端末は管理者へキーIDを伝える", "印刷物・USB・購入時資料を確認する"],
+    "causes": ["TPM・BIOS・起動構成の変更", "セキュリティ更新後の保護確認", "組織管理端末のBitLockerポリシー"],
+    "escalation": "回復キーが見つからない場合、Microsoftもキーを再生成できないため、データ消去を決める前に管理者・メーカーへ相談します。",
+    "source_label": "Microsoft Account - BitLocker recovery keys",
+    "source_url": "https://account.microsoft.com/devices/recoverykey",
+    "related_existing": ["/windows/windows-pin-not-available/", "/windows/windows-blue-screen-restarts/", "/windows/windows-update-stuck/"]
+  },
+  {
+    "topic": "Windows スリープ 勝手に解除",
+    "category": "windows",
+    "path": "/windows/windows-wakes-from-sleep-immediately/",
+    "slug": "windows-wakes-from-sleep-immediately",
+    "title": "Windows PCがスリープ直後に勝手に復帰する",
+    "answer": "直前に復帰させたデバイスやタスクを記録で確認し、マウス・LAN・更新の復帰許可を必要な範囲だけ調整します。",
+    "steps": ["powercfg /lastwakeで直前の復帰元を確認する", "マウス・キーボード・LANアダプターの復帰許可を確認する", "ウェイクタイマーと自動メンテナンスを確認する", "ドライバーとBIOSを公式手順で更新する"],
+    "causes": ["入力機器の微小な動作", "Wake on LAN", "更新・メンテナンスのウェイクタイマー"],
+    "escalation": "復帰元が不明のまま毎回再現する場合は、powercfgの結果を添えてPCメーカーへ相談します。",
+    "source_label": "Microsoft Support - Sleep and wake",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/windows/windows-pc-running-slow/", "/windows/windows-black-screen-with-cursor/", "/windows/windows-update-stuck/"]
+  },
+  {
+    "topic": "Windows スリープ 復帰しない",
+    "category": "windows",
+    "path": "/windows/windows-wont-wake-from-sleep/",
+    "slug": "windows-wont-wake-from-sleep",
+    "title": "Windows PCがスリープから復帰しない・画面が映らない",
+    "answer": "電源そのものと画面出力を分け、入力操作、ディスプレイ、強制終了の必要性、グラフィックス・電源ドライバーを確認します。",
+    "steps": ["電源ランプ・ファン・外部モニターの状態を確認する", "キーボード・電源ボタンを一度押し、画面出力を切り替える", "反応がなければ未保存データ消失を理解して長押し終了する", "再起動後にWindows Update、GPU・チップセット、BIOSを確認する"],
+    "causes": ["画面出力だけの停止", "グラフィックス・電源管理ドライバー", "周辺機器またはファームウェア不調"],
+    "escalation": "強制終了を繰り返す、電源ランプも反応しない場合は使用を止めてメーカーへ相談します。",
+    "source_label": "Microsoft Support - Power and sleep",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/windows/windows-black-screen-with-cursor/", "/windows/windows-blue-screen-restarts/", "/windows/second-monitor-not-detected/"]
+  },
+  {
+    "topic": "Windows ノートPC 電源接続 充電されない",
+    "category": "windows",
+    "path": "/windows/laptop-plugged-in-not-charging/",
+    "slug": "laptop-plugged-in-not-charging",
+    "title": "WindowsノートPCが電源接続済みなのに充電されない",
+    "answer": "充電器の出力、USB-Cポート、バッテリー保護上限、温度を確認し、膨張や異臭がある場合は充電を中止します。",
+    "steps": ["純正または必要出力を満たす充電器・ケーブルか確認する", "別の対応ポートとコンセントを試す", "メーカーの充電上限・スマート充電設定と温度表示を確認する", "電源・バッテリードライバーとBIOSを公式手順で更新する"],
+    "causes": ["充電器の出力不足・ケーブル不良", "充電上限機能や高低温保護", "バッテリー劣化・ポート故障"],
+    "escalation": "膨張、異臭、異常発熱、充電率低下が続く場合は電源を外しメーカー修理へ相談します。",
+    "source_label": "Microsoft Support and PC manufacturer support",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/iphone/charging-on-hold/", "/iphone/battery-health-service/", "/iphone/iphone-not-charging/"]
+  },
+  {
+    "topic": "Windows 11 設定 開かない",
+    "category": "windows",
+    "path": "/windows/windows-settings-not-opening/",
+    "slug": "windows-settings-not-opening",
+    "title": "Windows 11の「設定」が開かない・すぐ閉じる",
+    "answer": "ショートカットからの起動、更新、設定アプリの修復、システムファイルの順に確認し、PCのリセットは最後まで避けます。",
+    "steps": ["Windowsキー+Iとスタートメニューの両方から起動を試す", "PCを再起動してWindows Updateを確認する", "PowerShellなど公式手順で設定アプリを再登録する前に復元ポイントを確認する", "SFCとDISMでシステムファイルを検査する"],
+    "causes": ["設定アプリプロセスの停止", "更新の不整合", "ユーザープロファイル・システムファイル破損"],
+    "escalation": "別ユーザーでも開かず修復コマンド後も改善しない場合は、インプレース修復を行う前にMicrosoftへ相談します。",
+    "source_label": "Microsoft Support - Settings",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/windows/windows-start-menu-not-opening/", "/windows/windows-update-stuck/", "/windows/file-explorer-not-responding/"]
+  },
+  {
+    "topic": "Windows キーボード 違う文字 入力",
+    "category": "windows",
+    "path": "/windows/windows-keyboard-wrong-characters/",
+    "slug": "windows-keyboard-wrong-characters",
+    "title": "Windowsでキーボードを押すと違う文字が入力される",
+    "answer": "日本語・英語配列、入力言語、NumLock、IMEを確認し、ソフト設定か物理キー故障かを切り分けます。",
+    "steps": ["画面の入力言語とIME状態を確認する", "日本語106/109キーと英語101/102キーの配列設定を確認する", "NumLock・Fn Lock・固定キーを確認する", "スクリーンキーボードと別キーボードで再現を比較する"],
+    "causes": ["キーボード配列の誤設定", "入力言語・IME・ロックキー", "物理キー故障や液体侵入"],
+    "escalation": "別OSやBIOS画面でも誤入力する場合はハード故障の可能性が高いためメーカーへ相談します。",
+    "source_label": "Microsoft Support - Keyboard",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/mac/macbook-keyboard-not-working/", "/iphone/keyboard-not-appearing/", "/peripherals/bluetooth-mouse-not-working-windows/"]
+  },
+  {
+    "topic": "Windows 時計 ずれる 同期できない",
+    "category": "windows",
+    "path": "/windows/windows-time-wrong-not-syncing/",
+    "slug": "windows-time-wrong-not-syncing",
+    "title": "Windows 11の時計がずれる・時刻を同期できない",
+    "answer": "自動時刻とタイムゾーン、ネット接続、Windows Timeサービスを確認します。電源を切るたび大きくずれる場合はCMOS電池も疑います。",
+    "steps": ["時刻を自動的に設定とタイムゾーンを確認する", "設定から今すぐ同期を実行する", "VPN・企業ネットワークとWindows Timeサービスを確認する", "完全電源オフ後もずれるか記録する"],
+    "causes": ["タイムゾーンの誤設定", "時刻サーバーへの通信失敗", "CMOS電池・基板時計の不調"],
+    "escalation": "電源断のたびに時刻が初期化される場合は、分解せずPCメーカーへ電池交換を相談します。",
+    "source_label": "Microsoft Support - Date and time",
+    "source_url": "https://support.microsoft.com/ja-jp/windows",
+    "related_existing": ["/browser/chrome-connection-not-private/", "/windows/windows-update-stuck/", "/articles/safari-privacy-not-secure.html"]
+  },
+  {
+    "topic": "Android Wi-Fi 接続済み インターネットなし", "category": "android", "path": "/android/android-wifi-connected-no-internet/", "slug": "android-wifi-connected-no-internet", "title": "AndroidでWi-Fi接続済みなのにインターネットが使えない",
+    "answer": "別端末が通信できるかでルーター側と端末側を分け、ログイン画面、VPN・プライベートDNS、保存済みネットワークを確認します。",
+    "steps": ["同じWi-Fiの別端末とモバイル通信で通信可否を比較する", "ブラウザーで認証画面を開き、VPNと「設定→ネットワークとインターネット→プライベートDNS」を一時的にオフまたは自動へ戻す", "「設定→ネットワークとインターネット→インターネット」で対象SSIDを削除してパスワードを再入力する", "保存済みWi-FiとBluetooth登録が消えることを確認したうえで、最後にネットワーク設定だけをリセットする"], "causes": ["認証画面未完了", "VPN・DNS設定", "保存済みネットワークの不整合"], "escalation": "全端末で通信不可なら回線事業者、当該端末だけならメーカーへ相談します。", "source_label": "Android ヘルプ - インターネット接続の問題を修正する", "source_url": "https://support.google.com/android/answer/2651367?hl=ja", "related_existing": ["/android/android-mobile-data-not-working/", "/iphone/wifi-connected-no-internet/", "/iphone/public-wifi-login-not-appearing/"]
+  },
+  {
+    "topic": "Android Wi-Fi つながらない", "category": "android", "path": "/android/android-wifi-not-connecting/", "slug": "android-wifi-not-connecting", "title": "AndroidスマホがWi-Fiにつながらない",
+    "answer": "SSID・パスワード、機内モード、ルーターとの距離を確認し、保存設定削除とセーフモードで切り分けます。",
+    "steps": ["「設定→ネットワークとインターネット→インターネット」で正しいSSIDを選び、機内モードがオフか確認する", "ルーターのラベル等でパスワードを確認し、大文字・小文字を区別して入力する", "端末とルーターを再起動し、対象SSIDをいったん削除して再登録する", "別のWi-Fiとセーフモードで比較し、登録情報が消えるネットワーク設定リセットは最後に行う"], "causes": ["認証情報の誤り", "アプリ干渉", "Wi-Fiモジュールまたはルーターの不調"], "escalation": "複数Wi-Fiへ一切接続できない場合は端末メーカーへ相談します。", "source_label": "Android ヘルプ - Wi-Fi ネットワークに接続する", "source_url": "https://support.google.com/android/answer/9075847?hl=ja", "related_existing": ["/android/android-mobile-data-not-working/", "/iphone/wifi-not-connecting/", "/iphone/wifi-password-incorrect/"]
+  },
+  {
+    "topic": "Android バッテリー 減りが早い", "category": "android", "path": "/android/android-battery-drains-fast/", "slug": "android-battery-drains-fast", "title": "Androidスマホのバッテリーの減りが急に早い",
+    "answer": "電池使用量で増加したアプリを確認し、更新、バックグラウンド制限、電波状態、電池劣化を順に見ます。",
+    "steps": ["「設定→バッテリー→バッテリー使用量」で直近24時間のアプリ別消費を確認する", "AndroidとGoogle Playシステム、消費が増えたアプリを更新して再起動する", "原因候補のアプリだけバックグラウンド使用を「最適化」または「制限」にする", "一晩の待機時消費とセーフモード時を比較し、電池診断がある機種は結果を保存する"], "causes": ["アプリの暴走", "弱電波・位置情報の連続使用", "バッテリー劣化"], "escalation": "膨張や異常発熱があれば使用を止め、メーカー修理へ相談します。", "source_label": "Google Pixel ヘルプ - バッテリーと充電", "source_url": "https://support.google.com/pixelphone/answer/10011133?hl=ja", "related_existing": ["/iphone/battery-drains-fast/", "/iphone/iphone-overheating/", "/iphone/battery-health-service/"]
+  },
+  {
+    "topic": "Android 充電できない", "category": "android", "path": "/android/android-not-charging/", "slug": "android-not-charging", "title": "Androidスマホが充電できない・充電が増えない",
+    "answer": "電源、ケーブル、端子、温度、液体検出を確認し、別の安全な充電器で端末側か付属品側かを分けます。",
+    "steps": ["ケースを外し、対応出力の充電器・ケーブル・壁コンセントを一つずつ交換して試す", "端子を照明で目視し、液体警告や高温表示がある間は挿さず自然乾燥・自然冷却する", "正常な充電器へ接続して10分待ち、電源オフ時と起動時の充電表示を比較する", "再起動とセーフモードでも充電率が増えない場合は初期化せず診断・修理へ進む"], "causes": ["ケーブル・充電器不良", "端子汚れ・液体・温度保護", "バッテリーや基板故障"], "escalation": "膨張、焦げ臭、異常発熱がある場合は直ちに充電を中止します。", "source_label": "Google Pixel ヘルプ - 充電できない端末を修正する", "source_url": "https://support.google.com/pixelphone/answer/7167687?hl=ja", "related_existing": ["/iphone/iphone-not-charging/", "/articles/phone-water-dropped-hairdryer-danger.html", "/iphone/charging-on-hold/"]
+  },
+  {
+    "topic": "Android 本体 熱い", "category": "android", "path": "/android/android-overheating/", "slug": "android-overheating", "title": "Androidスマホが熱い・高温警告が出る",
+    "answer": "充電と高負荷アプリを止め、直射日光を避けて自然に冷まします。急冷や冷蔵庫は結露の原因になるため使いません。",
+    "steps": ["充電ケーブルを外し、ゲーム・撮影・テザリングなど高負荷の操作を止める", "ケースを外して電源を切り、日陰の風通しがよい場所で自然に冷ます", "十分に冷えた後で「設定→バッテリー→バッテリー使用量」から負荷の高いアプリを確認する", "Androidとアプリを更新し、セーフモードでも高温が再発するか記録する"], "causes": ["高負荷処理・弱電波", "高温環境・充電", "電池やアプリの異常"], "escalation": "触れないほど熱い、膨張、警告反復なら電源を切りメーカーへ相談します。", "source_label": "Google Pixel ヘルプ - 端末の過熱を防ぐ", "source_url": "https://support.google.com/pixelphone/answer/3333708?hl=ja", "related_existing": ["/iphone/iphone-overheating/", "/iphone/iphone-hot-while-charging/", "/iphone/battery-drains-fast/"]
+  },
+  {
+    "topic": "Android アプリ すぐ落ちる", "category": "android", "path": "/android/android-app-keeps-crashing/", "slug": "android-app-keeps-crashing", "title": "Androidアプリがすぐ落ちる・強制終了する",
+    "answer": "特定アプリか全体かを確認し、更新、強制停止、キャッシュ削除、空き容量の順に試します。データ消去は引き継ぎ確認後だけ行います。",
+    "steps": ["落ちるアプリ名、操作、エラー時刻を記録し、同じ操作を別アプリでも試す", "Playストアの「アプリとデバイスの管理」とシステム更新からアプリ・WebView・Androidを更新する", "「設定→アプリ→対象アプリ」で強制停止し、ストレージからキャッシュだけを削除する", "空き容量を確保し、ログイン情報とバックアップを確認できた場合だけ再インストールを検討する"], "causes": ["アプリ・WebViewの不具合", "キャッシュ破損・容量不足", "OS互換性"], "escalation": "データ消去や再インストール前にログイン・バックアップを確認し、開発元へ報告します。", "source_label": "Google Play ヘルプ - 動作しない Android アプリを修正する", "source_url": "https://support.google.com/googleplay/answer/2668665?hl=ja", "related_existing": ["/android/android-system-ui-not-responding/", "/iphone/app-keeps-crashing/", "/android/google-play-download-pending/"]
+  },
+  {
+    "topic": "Android アプリ 開かない", "category": "android", "path": "/android/android-app-wont-open/", "slug": "android-app-wont-open", "title": "Androidアプリが開かない・起動しない",
+    "answer": "起動直後に落ちる問題と分け、通信、権限、更新、WebView、空き容量を確認します。",
+    "steps": ["公式障害情報を確認し、Wi-Fiとモバイル通信を切り替えて起動する", "Playストアから対象アプリとAndroid System WebViewを更新し、Androidの更新も確認する", "「設定→アプリ→対象アプリ」で強制停止し、キャッシュだけを削除して再起動する", "セーフモードで比較し、データ消去・再インストールはアカウント連携とバックアップ確認後に行う"], "causes": ["サービス障害・通信不良", "権限や互換性", "キャッシュ・ストレージ不足"], "escalation": "アプリデータ消去前にアカウント連携を確認し、開発元へ相談します。", "source_label": "Google Play ヘルプ - 動作しない Android アプリを修正する", "source_url": "https://support.google.com/googleplay/answer/2668665?hl=ja", "related_existing": ["/android/android-system-ui-not-responding/", "/iphone/app-wont-open/", "/android/google-play-download-pending/"]
+  },
+  {
+    "topic": "Android ストレージ 容量不足", "category": "android", "path": "/android/android-storage-full/", "slug": "android-storage-full", "title": "Androidスマホのストレージ容量が足りない",
+    "answer": "ストレージ内訳を確認し、ダウンロード、不要なオフラインデータ、バックアップ済み写真の順に安全に整理します。",
+    "steps": ["「設定→ストレージ」でアプリ・写真・動画・ダウンロードの内訳を確認する", "Files by Googleやファイル管理アプリで大きいファイルを確認し、不要と判断できるダウンロードだけ削除する", "音楽・動画・地図アプリのオフライン保存を各アプリ内から整理する", "写真はクラウド上で開けることを確認し、ごみ箱の保持期間も理解してから端末上のコピーを整理する"], "causes": ["動画・ダウンロードの蓄積", "アプリキャッシュ・オフラインデータ", "ごみ箱や重複ファイル"], "escalation": "正体不明の容量が増え続ける場合はバックアップ後にメーカーへ相談します。", "source_label": "Files by Google ヘルプ - 端末の空き容量を増やす", "source_url": "https://support.google.com/files/answer/9848742?hl=ja", "related_existing": ["/iphone/storage-full/", "/articles/iphone-storage-fueru-herasu.html", "/mac/mac-system-data-too-large/"]
+  },
+  {
+    "topic": "Android カメラ 真っ黒", "category": "android", "path": "/android/android-camera-black-screen/", "slug": "android-camera-black-screen", "title": "Androidのカメラが真っ黒で映らない・起動しない",
+    "answer": "カメラのプライバシー切替、権限、他アプリによる占有を確認し、標準カメラと別アプリで比較します。",
+    "steps": ["クイック設定の「カメラへのアクセス」と「設定→アプリ→対象アプリ→権限」を許可する", "ビデオ通話・QR読取などカメラを使う他アプリを終了して端末を再起動する", "「設定→アプリ→カメラ→ストレージとキャッシュ」でキャッシュだけを削除する", "前面・背面カメラを標準カメラと別アプリで比較し、セーフモードでも黒いか確認する"], "causes": ["カメラ権限・プライバシー設定", "他アプリの占有", "カメラ部品故障"], "escalation": "全アプリで前後カメラが映らない場合はメーカー修理へ相談します。", "source_label": "Android ヘルプ - カメラとマイクのアクセスを確認する", "source_url": "https://support.google.com/android/answer/13532937?hl=ja", "related_existing": ["/iphone/camera-black-screen/", "/iphone/camera-not-opening/", "/windows/windows-camera-error-0xa00f4244/"]
+  },
+  {
+    "topic": "Android マイク 反応しない", "category": "android", "path": "/android/android-microphone-not-working/", "slug": "android-microphone-not-working", "title": "Androidスマホのマイクが反応しない・声が届かない",
+    "answer": "マイク権限、プライバシー切替、Bluetooth出力、ケースや端子を確認し、録音アプリで本体マイクをテストします。",
+    "steps": ["クイック設定の「マイクへのアクセス」と「設定→アプリ→対象アプリ→権限」を許可する", "Bluetoothを切り、ケースや汚れが本体のマイク穴を塞いでいないか目視する", "標準の録音アプリで録音し、通話・ビデオ撮影・別アプリの音声と比較する", "再起動とセーフモードでも無音か確認し、マイク穴へ針や液体を入れない"], "causes": ["権限・プライバシー設定", "Bluetoothやケースによる入力先変更", "マイク部品故障"], "escalation": "録音アプリでも無音ならメーカーへ修理相談します。", "source_label": "Android ヘルプ - アプリの権限を変更する", "source_url": "https://support.google.com/android/answer/9431959?hl=ja", "related_existing": ["/iphone/microphone-not-working/", "/iphone/callers-cannot-hear/", "/sns/discord-microphone-not-working/"]
+  },
+  {
+    "topic": "Android Bluetooth つながらない", "category": "android", "path": "/android/android-bluetooth-not-connecting/", "slug": "android-bluetooth-not-connecting", "title": "AndroidスマホがBluetooth機器につながらない",
+    "answer": "相手機器をペアリングモードにし、別端末との接続を解除してから登録を削除・再作成します。",
+    "steps": ["相手機器を充電して説明書どおりペアリングモードにし、Androidの0.5～1m以内へ置く", "相手機器に残るスマホ・PCとの接続を切り、必要なら機器側の登録上限を確認する", "「設定→接続済みのデバイス」で既存登録を削除し、「新しいデバイスとペア設定」から再登録する", "別のBluetooth機器と比較し、保存済み接続が消えるネットワーク設定リセットは最後に行う"], "causes": ["ペアリングモード未開始", "他端末への自動接続", "互換性・Bluetooth設定不調"], "escalation": "複数機器へ接続できなければ端末メーカー、特定機器だけなら機器メーカーへ相談します。", "source_label": "Android ヘルプ - Bluetooth の問題を解決する", "source_url": "https://support.google.com/android/answer/9769184?hl=ja", "related_existing": ["/iphone/bluetooth-not-connecting/", "/peripherals/bluetooth-mouse-not-working-windows/", "/iphone/bluetooth-device-not-showing/"]
+  },
+  {
+    "topic": "Android 音が出ない", "category": "android", "path": "/android/android-no-sound/", "slug": "android-no-sound", "title": "Androidスマホから音が出ない・スピーカーが無音",
+    "answer": "メディア・着信それぞれの音量、サイレント、Bluetooth出力を確認し、スピーカー故障と設定を分けます。",
+    "steps": ["音量ボタンを押してメディア・着信・アラームの各スライダーを上げ、サイレントとおやすみ時間モードを解除する", "Bluetoothとキャストをオフにし、音声出力先を「このスマートフォン」に戻す", "イヤホン、着信音、動画、スピーカーテストで音が出ない範囲を切り分ける", "端末を再起動し、セーフモードでも本体スピーカーが無音か確認する"], "causes": ["音量・サイレント設定", "Bluetooth等への出力", "スピーカーやOS不調"], "escalation": "イヤホンでは鳴るが本体だけ無音ならメーカー修理へ相談します。", "source_label": "Android Help / device manufacturer", "source_url": "https://support.google.com/android/", "related_existing": ["/iphone/no-sound/", "/windows/windows-no-sound/", "/iphone/headphones-no-sound/"]
+  },
+  {
+    "topic": "Android 緊急通報のみ 圏外", "category": "android", "path": "/android/android-emergency-calls-only/", "slug": "android-emergency-calls-only", "title": "Androidで「緊急通報のみ」と表示され通話できない",
+    "answer": "通信障害とエリア、機内モード、SIM・eSIM、回線契約を確認し、ネットワーク選択を自動に戻します。",
+    "steps": ["通信事業者の障害・工事・料金未払いによる利用停止がないか公式ページで確認する", "機内モードを30秒オンにして戻し、端末を再起動してSIM・eSIMの表示を確認する", "「設定→ネットワークとインターネット→SIM」で対象回線を有効にし、ネットワーク選択を自動へ戻す", "別の場所と別SIMで比較し、APN初期化やネットワーク設定リセットは契約情報を控えてから行う"], "causes": ["圏外・通信障害", "SIM・eSIM認識不良", "契約停止・端末制限"], "escalation": "SIMを別端末でも使えなければ通信事業者、当該端末だけならメーカーへ相談します。", "source_label": "Android Help and carrier support", "source_url": "https://support.google.com/android/", "related_existing": ["/android/android-not-receiving-calls/", "/iphone/no-service/", "/iphone/sim-not-recognized/"]
+  },
+  {
+    "topic": "Android タッチ 反応しない", "category": "android", "path": "/android/android-touchscreen-not-responding/", "slug": "android-touchscreen-not-responding", "title": "Androidスマホのタッチパネルが反応しない・固まる",
+    "answer": "画面の水分・汚れ・保護ガラスを確認し、強制再起動とセーフモードでソフトか破損かを分けます。",
+    "steps": ["充電器を外し、画面と手の水分・汚れを柔らかい乾いた布で拭く", "ケースと浮いた保護ガラスを外し、機種別の公式手順で強制再起動する", "画面の一部だけか全体かを緊急通報など重要操作を避けて確認する", "セーフモードでも反応しない場合はUSB等で可能な範囲をバックアップし、初期化せず修理へ進む"], "causes": ["水分・保護ガラス・充電ノイズ", "アプリやOSの停止", "落下・画面・電池膨張"], "escalation": "割れ、浮き、膨張、線表示があれば使用を止めメーカーへ相談します。", "source_label": "Google Pixel ヘルプ - 画面が正常に動作しないとき", "source_url": "https://support.google.com/pixelphone/answer/6010316?hl=ja", "related_existing": ["/android/android-stuck-on-logo/", "/iphone/touchscreen-not-responding/", "/articles/iphone-cracked-screen-touch-risk.html"]
+  },
+  {
+    "topic": "Google Play 開発者サービス 繰り返し停止", "category": "android", "path": "/android/google-play-services-keeps-stopping/", "slug": "google-play-services-keeps-stopping", "title": "「Google Play開発者サービスが繰り返し停止しています」と出る",
+    "answer": "日付、空き容量、Google Play開発者サービスとPlayストアの更新・キャッシュを確認します。ストレージ消去やアカウント削除は最後です。",
+    "steps": ["「設定→システム→日付と時刻」を自動にし、1GB以上を目安に空き容量を確保して再起動する", "Playストアの「アプリとデバイスの管理」で全更新を行い、AndroidとGoogle Playシステム更新も適用する", "「設定→アプリ→Google Play開発者サービス→ストレージとキャッシュ」でキャッシュだけを削除する", "改善しない場合は同期状態と2段階認証手段を確認し、データ消去やGoogleアカウント削除は最後にする"], "causes": ["更新の不整合", "容量不足・キャッシュ破損", "Googleアカウント同期不調"], "escalation": "データ消去やアカウント削除前に同期と2段階認証手段を確認しメーカーへ相談します。", "source_label": "Google Play Help", "source_url": "https://support.google.com/googleplay/", "related_existing": ["/android/google-play-download-pending/", "/android/android-system-ui-not-responding/", "/windows/microsoft-store-download-stuck/"]
+  },
+  {
+    "topic": "Mac Wi-Fi 接続済み インターネットなし", "category": "mac", "path": "/mac/mac-wifi-connected-no-internet/", "slug": "mac-wifi-connected-no-internet", "title": "MacでWi-Fi接続済みなのにインターネットが使えない",
+    "answer": "別端末と比較し、VPN・プロキシ、Wi-Fi詳細、DHCP、Appleのワイヤレス診断を順に確認します。",
+    "steps": ["同じWi-Fiの別端末と、MacをiPhoneのインターネット共有へつないだ場合を比較する", "「システム設定→ネットワーク→VPN」と「Wi-Fi→詳細→プロキシ」で不要な設定を一時停止する", "「Wi-Fi→詳細→TCP/IP」でDHCPリースを更新し、DNSを自動または契約先指定へ戻す", "Optionキーを押しながらWi-Fiメニューを開いて「ワイヤレス診断」を実行し、結果を保存する"], "causes": ["VPN・プロキシ", "DHCP・DNS不調", "ルーター・回線障害"], "escalation": "当該Macだけ改善しない場合は診断結果を添えてAppleへ相談します。", "source_label": "Apple サポート - Mac が Wi-Fi 経由で接続できない場合", "source_url": "https://support.apple.com/ja-jp/101588", "related_existing": ["/iphone/wifi-connected-no-internet/", "/internet/router-internet-light-red/", "/browser/chrome-page-not-loading/"]
+  },
+  {
+    "topic": "Mac Wi-Fi つながらない", "category": "mac", "path": "/mac/mac-wifi-not-connecting/", "slug": "mac-wifi-not-connecting", "title": "MacがWi-Fiにつながらない・パスワードを受け付けない",
+    "answer": "SSIDとパスワード、日付、保存済みネットワーク、Macとルーターの更新を確認します。",
+    "steps": ["メニューバーのWi-Fiをオンにし、正しいSSIDと大文字・小文字を区別したパスワードを確認する", "「システム設定→Wi-Fi→詳細」から対象ネットワークを削除し、Macとルーターを再起動して再接続する", "日付と時刻を自動へ戻し、macOSとルーターの公式ファームウェアを更新する", "別のWi-Fiで比較してからOptionキーのWi-Fiメニューで「ワイヤレス診断」を実行する"], "causes": ["認証情報不整合", "保存済み設定・日付ずれ", "ルーター互換性"], "escalation": "複数のWi-Fiへ接続できない場合はAppleへ相談します。", "source_label": "Apple サポート - MacでWi-Fiネットワークに接続できない場合", "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchlp1185/mac", "related_existing": ["/iphone/wifi-not-connecting/", "/iphone/wifi-password-incorrect/", "/windows/wifi-option-missing-windows-11/"]
+  },
+  {
+    "topic": "Mac Bluetooth つながらない", "category": "mac", "path": "/mac/mac-bluetooth-not-connecting/", "slug": "mac-bluetooth-not-connecting", "title": "MacがBluetooth機器につながらない・表示されない",
+    "answer": "機器の充電とペアリングモード、他端末への接続を確認し、登録解除・再接続します。",
+    "steps": ["機器を充電して説明書どおり検出可能にし、Macの近くへ置く", "機器が自動接続するiPhoneやPCを切断し、登録台数の上限を確認する", "「システム設定→Bluetooth」で対象機器を「このデバイスの登録を解除」してから再接続する", "macOSを更新し、別のBluetooth機器とUSB 3機器を離した状態で比較する"], "causes": ["ペアリング未開始", "他端末への接続", "互換性・電波干渉"], "escalation": "複数機器がつながらなければApple、特定機器だけならメーカーへ相談します。", "source_label": "Apple サポート - BluetoothデバイスをMacに接続する", "source_url": "https://support.apple.com/ja-jp/guide/mac-help/blth1004/mac", "related_existing": ["/iphone/bluetooth-not-connecting/", "/peripherals/bluetooth-mouse-not-working-windows/", "/iphone/bluetooth-device-not-showing/"]
+  },
+  {
+    "topic": "Mac 音が出ない", "category": "mac", "path": "/mac/mac-no-sound/", "slug": "mac-no-sound", "title": "Macから音が出ない・内蔵スピーカーが無音",
+    "answer": "出力先、消音、Bluetooth・AirPlay、アプリ別音量を確認し、セーフモードでソフト起因を分けます。",
+    "steps": ["アプリ内の消音を解除し、「システム設定→サウンド→出力」で内蔵スピーカーと出力音量を確認する", "ヘッドフォン、USB音響機器、外部ディスプレイを外し、BluetoothとAirPlayの接続を解除する", "別の音源と別アプリで再生し、イヤホンと内蔵スピーカーのどちらが無音か比較する", "Macを再起動してmacOSを更新し、セーフモードでも同じ症状か確認する"], "causes": ["出力先の誤選択", "外部機器への音声出力", "macOS・スピーカー不調"], "escalation": "起動音を含め無音ならAppleへ診断相談します。", "source_label": "Apple サポート - Macの内蔵スピーカーが機能しない場合", "source_url": "https://support.apple.com/ja-jp/102411", "related_existing": ["/windows/windows-no-sound/", "/iphone/no-sound/", "/iphone/headphones-no-sound/"]
+  },
+  {
+    "topic": "Mac マイク 反応しない", "category": "mac", "path": "/mac/mac-microphone-not-working/", "slug": "mac-microphone-not-working", "title": "Macのマイクが反応しない・声を認識しない",
+    "answer": "入力先とレベル、アプリのマイク権限、Bluetooth機器を確認し、録音で本体マイクをテストします。",
+    "steps": ["「システム設定→サウンド→入力」で内蔵マイクを選び、話したとき入力レベルが動くか確認する", "「プライバシーとセキュリティ→マイク」で対象アプリを許可し、アプリを終了して開き直す", "BluetoothヘッドセットとUSB音響機器を外し、ボイスメモ等の録音と通話アプリを比較する", "Macを再起動し、別ユーザーでも内蔵マイクの入力レベルが動かないか確認する"], "causes": ["入力先・権限", "Bluetooth機器", "マイク部品不調"], "escalation": "全アプリ・別ユーザーでも無入力ならAppleへ相談します。", "source_label": "Apple サポート - Macのマイクへのアクセスを制御する", "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchla1b1e1fe/mac", "related_existing": ["/iphone/microphone-not-working/", "/sns/discord-microphone-not-working/", "/sns/zoom-camera-not-working/"]
+  },
+  {
+    "topic": "Mac カメラ 映らない", "category": "mac", "path": "/mac/mac-camera-not-working/", "slug": "mac-camera-not-working", "title": "Macのカメラが映らない・使用できない",
+    "answer": "カメラ権限、スクリーンタイム制限、他アプリの占有、外部カメラ接続を確認します。",
+    "steps": ["FaceTime・Zoom等カメラを使うアプリをすべて終了し、「プライバシーとセキュリティ→カメラ」で対象アプリを許可する", "「スクリーンタイム→コンテンツとプライバシー」でカメラの利用制限を確認する", "Photo Boothと別の通話アプリで内蔵カメラを比較し、外付けカメラは別ポートへ直接つなぐ", "Macを再起動してmacOSを更新し、緑のランプ点滅や全アプリ不認識が続くか確認する"], "causes": ["権限・利用制限", "他アプリによる占有", "カメラ部品・USB不調"], "escalation": "全アプリで認識されなければAppleまたはカメラメーカーへ相談します。", "source_label": "Apple サポート - Macの内蔵カメラが機能しない場合", "source_url": "https://support.apple.com/ja-jp/102437", "related_existing": ["/windows/windows-camera-error-0xa00f4244/", "/sns/zoom-camera-not-working/", "/iphone/camera-black-screen/"]
+  },
+  {
+    "topic": "MacBook 充電できない", "category": "mac", "path": "/mac/macbook-not-charging/", "slug": "macbook-not-charging", "title": "MacBookが充電できない・電源接続中のまま増えない",
+    "answer": "電源アダプタの出力、ケーブル、ポート、バッテリー充電の最適化、温度を確認します。",
+    "steps": ["Macの推奨ワット数以上でUSB Power Delivery対応のアダプタと充電用ケーブルか確認する", "動作する壁コンセントと別ポートへ直接つなぎ、ケーブル・端子の変色や破損を目視する", "「システム設定→バッテリー」でバッテリー状態、充電保留中、最適化、温度を確認する", "Macを再起動してApple Diagnosticsを実行し、エラーコードを保存する"], "causes": ["出力不足・ケーブル不良", "最適化充電・温度保護", "バッテリー・ポート故障"], "escalation": "膨張、異臭、異常発熱があれば電源を外しAppleへ相談します。", "source_label": "Apple サポート - USB-C電源アダプタで充電されない場合", "source_url": "https://support.apple.com/ja-jp/102464", "related_existing": ["/iphone/iphone-not-charging/", "/iphone/battery-health-service/", "/mac/mac-wont-turn-on/"]
+  },
+  {
+    "topic": "Mac アプリ 応答しない", "category": "mac", "path": "/mac/mac-app-not-responding/", "slug": "mac-app-not-responding", "title": "Macアプリが応答しない・終了できない",
+    "answer": "保存を待ってから通常終了を試し、反応がなければ未保存データ消失を理解して強制終了します。",
+    "steps": ["保存処理中の可能性があれば数分待ち、Command+Qまたはアプリメニューの「終了」を先に試す", "応答しなければOption+Command+Escで対象アプリだけを選び、未保存内容が失われることを理解して強制終了する", "Macを再起動し、アプリとmacOSを更新して同じファイル以外でも再現するか確認する", "セーフモードまたは新規ユーザーで比較し、再インストール前にアプリ内データをバックアップする"], "causes": ["高負荷・メモリ不足", "アプリデータ・互換性", "外部ファイル・プラグイン"], "escalation": "同じデータで再現する場合は複製を作り、アプリ開発元へ相談します。", "source_label": "Apple サポート - Macのアプリが反応しない場合", "source_url": "https://support.apple.com/ja-jp/102152", "related_existing": ["/windows/file-explorer-not-responding/", "/iphone/app-keeps-crashing/", "/mac/mac-system-data-too-large/"]
+  },
+  {
+    "topic": "Mac AirDrop できない", "category": "mac", "path": "/mac/mac-airdrop-not-working/", "slug": "mac-airdrop-not-working", "title": "MacでAirDropできない・相手が表示されない",
+    "answer": "双方のWi-Fi・Bluetooth、受信範囲、距離、連絡先情報、ファイアウォールを確認します。",
+    "steps": ["送受信するMac・iPhone双方でWi-FiとBluetoothをオンにし、インターネット共有をオフにする", "Finderの「AirDrop」で受信設定を「すべての人」に一時変更するか、連絡先カードの電話番号・メールを一致させる", "端末を10m以内へ近づけ、スリープを解除して小さいファイルで再試行する", "両端末を再起動・更新し、Macのファイアウォールで「すべての受信接続をブロック」がオフか確認する"], "causes": ["受信設定・連絡先情報", "距離・無線状態", "互換性・ファイアウォール"], "escalation": "対応条件を満たす複数端末間で失敗する場合はAppleへ相談します。", "source_label": "Apple Support - AirDrop", "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mh35868/mac", "related_existing": ["/iphone/airdrop-not-working/", "/iphone/airdrop-person-not-showing/", "/iphone/airdrop-transfer-stuck/"]
+  },
+  {
+    "topic": "Mac iCloud Drive 同期しない", "category": "mac", "path": "/mac/icloud-drive-not-syncing-mac/", "slug": "icloud-drive-not-syncing-mac", "title": "MacのiCloud Driveが同期しない・更新されない",
+    "answer": "Appleの障害、アカウント、iCloud容量、ファイル状態を確認し、Web上のデータを確認する前に削除・サインアウトしません。",
+    "steps": ["Appleのシステム状況でiCloud Driveの障害を確認し、別サイトが開くか通信を確認する", "「システム設定→Apple Account→iCloud→Drive」とiCloud容量、Finderの雲アイコンを確認する", "iCloud.comで対象ファイルが開けるか確認し、Macを再起動してmacOSを更新する", "未同期のローカルファイルをiCloud Drive外へコピーしてから、ファイル名・権限・別ユーザーを比較する"], "causes": ["サービス障害・容量不足", "アカウント・同期設定", "ファイル名・権限・アップロード待ち"], "escalation": "未同期のローカルファイルを退避してからAppleへ相談します。", "source_label": "Apple サポート - MacのiCloud Driveにファイルを保存する", "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchle5a61431/mac", "related_existing": ["/windows/onedrive-sync-pending/", "/iphone/app-data-not-syncing/", "/google/google-drive-files-missing/"]
+  },
+  {
+    "topic": "全端末 Wi-Fi 接続済み インターネットなし", "category": "internet", "path": "/internet/wifi-connected-no-internet-all-devices/", "slug": "wifi-connected-no-internet-all-devices", "title": "全端末でWi-Fi接続済みなのにインターネットが使えない",
+    "answer": "全端末で同時に使えない場合は端末設定よりONU・ルーター・回線側を優先し、ランプ、障害、配線、再起動順を確認します。", "steps": ["スマホとPCの2台以上で同時に再現するか確認し、可能なら有線LANでも比較する", "回線事業者の障害情報を確認し、ONU・ルーターの型番と異常ランプを記録する", "電源・光・WAN/LANケーブルの外れを目視し、光コネクタは抜いたり覗いたりしない", "公式手順に従ってONU、ルーターの順に電源を入れ直し、各機器の起動完了を待つ"], "causes": ["回線障害", "ONU・ルーター・配線不調", "接続認証・IPoE設定"], "escalation": "異常ランプや全端末障害が続く場合は回線事業者へ連絡します。", "source_label": "BUFFALO / Aterm / carrier official support", "source_url": "https://www.buffalo.jp/support/faq/flow/wifi.html", "related_existing": ["/internet/router-internet-light-red/", "/internet/onu-los-light-red/", "/internet/router-keeps-restarting/"]
+  },
+  {
+    "topic": "2.4GHz 専用機器 新しいルーター つながらない", "category": "internet", "path": "/internet/2-4ghz-device-cannot-connect-new-router/", "slug": "2-4ghz-device-cannot-connect-new-router", "title": "2.4GHz専用機器が新しいWi-Fiルーターにつながらない",
+    "answer": "家電・プリンターなどの対応帯域と暗号化方式を確認し、2.4GHzのSSID、バンドステアリング、WPA3・Wi-Fi 6/7互換設定をメーカー手順内で調整します。", "steps": ["接続する機器の仕様表で2.4GHz専用か、対応暗号化がWPA2か確認する", "ルーターの2.4GHz用SSIDへスマホも接続し、スマホのモバイル通信を一時的に切る", "メーカー手順でSSID統合・バンドステアリングを一時分離し、WPA2/WPA3互換モードを確認する", "接続後にルーターのファームウェアを更新し、安全性を下げた設定を常用せずメーカーへ確認する"], "causes": ["帯域違い", "WPA3・Wi-Fi 6/7互換性", "SSID統合・バンドステアリング"], "escalation": "安全性を下げる設定を常用せず、機器・ルーターメーカーへ対応方式を確認します。", "source_label": "Aterm Support", "source_url": "https://www.aterm.jp/support/qa/qa/12029.html", "related_existing": ["/internet/router-5ghz-ssid-not-showing/", "/internet/mesh-wifi-node-not-connecting/", "/iphone/wifi-network-not-showing/"]
+  },
+  {
+    "topic": "全端末 Wi-Fi 頻繁に切れる", "category": "internet", "path": "/internet/wifi-keeps-disconnecting-all-devices/", "slug": "wifi-keeps-disconnecting-all-devices", "title": "複数端末のWi-Fiが頻繁に切れる・すぐ再接続する",
+    "answer": "端末固有ではなく、ルーターの再起動有無、熱・電源、回線、電波干渉を記録して切り分けます。", "steps": ["切断時刻と全端末・ONU/ルーターのランプ状態を記録する", "ルーターを棚や熱源から出し、純正電源とWAN/LANケーブルの緩みを確認する", "ルーター近くで2.4GHzと5GHzを比較し、電子レンジやBluetooth機器から離す", "公式ファームウェアと回線障害を確認し、有線LANでも同時に切れるか比較する"], "causes": ["電波干渉・距離", "ルーターの熱・電源", "回線断・ファームウェア"], "escalation": "ランプ消灯や再起動を伴う場合はルーターメーカーまたは回線事業者へ相談します。", "source_label": "Aterm Support - 接続が安定しない場合", "source_url": "https://www.aterm.jp/support/qa/qa/00064.html", "related_existing": ["/internet/router-keeps-restarting/", "/iphone/wifi-keeps-disconnecting/", "/internet/wifi-slow-at-night/"]
+  },
+  {
+    "topic": "ルーター 設定画面 開かない", "category": "internet", "path": "/internet/router-settings-page-not-opening/", "slug": "router-settings-page-not-opening", "title": "Wi-Fiルーターの設定画面が開かない",
+    "answer": "設定対象ルーターへ接続しているか確認し、既定ゲートウェイまたはメーカーアプリから開きます。検索欄ではなくアドレス欄を使います。", "steps": ["対象ルーターのWi-FiまたはLANへ直接接続し、中継機や別ルーター側へつながっていないか確認する", "スマホのモバイル通信とVPNを切り、端末のネットワーク詳細で「ルーター」または既定ゲートウェイを確認する", "メーカー公式アプリか、検索欄ではなくアドレス欄へ正しい管理アドレスを入力する", "別ブラウザーと別端末で試して再起動し、初期化は設定・契約情報の控えを作ってから検討する"], "causes": ["別ルーター・モバイル通信への接続", "管理IP変更", "VPN・ブラウザー・ブリッジモード"], "escalation": "初期化前に設定バックアップと契約情報を確認しメーカーへ相談します。", "source_label": "BUFFALO Support", "source_url": "https://www.buffalo.jp/support/faq/detail/129.html", "related_existing": ["/browser/chrome-page-not-loading/", "/internet/router-internet-light-red/", "/internet/mesh-wifi-node-not-connecting/"]
+  },
+  {
+    "topic": "ルーター 管理者パスワード 忘れた", "category": "internet", "path": "/internet/router-admin-password-forgotten/", "slug": "router-admin-password-forgotten", "title": "Wi-Fiルーターの管理者パスワードを忘れた",
+    "answer": "Wi-Fi接続パスワードと管理者パスワードを区別し、本体ラベル、セットアップカード、保存済み資格情報を確認します。初期化は最後です。", "steps": ["ログイン画面が求めるものが管理者用かWi-Fi接続用か、画面と機種別マニュアルで確認する", "本体ラベル・セットアップカード・公式アプリの初期ユーザー名とパスワードを確認する", "変更済みならパスワード管理アプリやブラウザーの保存済み資格情報を本人の端末で確認する", "不明なままならPPPoE・IPoE・電話設定の控えを作り、メーカー確認後にだけ工場出荷状態へ戻す"], "causes": ["2種類のパスワードの混同", "変更済み管理者パスワード", "中古・引継ぎ端末"], "escalation": "初期化でインターネット設定が消える機種はメーカー・回線事業者へ先に相談します。", "source_label": "BUFFALO Support", "source_url": "https://www.buffalo.jp/support/faq/detail/15793.html", "related_existing": ["/internet/router-internet-light-red/", "/browser/chrome-page-not-loading/", "/iphone/wifi-password-incorrect/"]
+  },
+  {
+    "topic": "WPS 接続 失敗", "category": "internet", "path": "/internet/wps-not-connecting/", "slug": "wps-not-connecting", "title": "WPSボタンを押してもWi-Fi接続できない",
+    "answer": "親機と子機双方のWPS対応、開始順、受付時間、暗号化方式を確認し、失敗時はSSIDと暗号化キーで手動接続します。", "steps": ["親機と子機の型番を確認し、双方がWPS対応か機種別マニュアルで確認する", "前回の失敗状態を解除して子機側のWPSを開始し、指定時間内に親機のWPSボタンを押す", "親機・子機のランプ色と点滅回数をマニュアルで確認し、互いを1m程度へ近づける", "再失敗したら暗号化を弱めず、2.4GHzのSSIDと暗号化キーを入力して手動接続する"], "causes": ["WPS非対応", "受付時間切れ", "WPA3・メッシュ等の互換設定"], "escalation": "セキュリティを下げず、機種別ランプが不明ならメーカーへ相談します。", "source_label": "Aterm Support - WPS", "source_url": "https://www.aterm.jp/support/qa/qa_external/12029/wps.html", "related_existing": ["/internet/router-5ghz-ssid-not-showing/", "/internet/mesh-wifi-node-not-connecting/", "/iphone/wifi-network-not-showing/"]
+  },
+  {
+    "topic": "有線LAN 接続済み インターネットなし", "category": "internet", "path": "/internet/ethernet-connected-no-internet/", "slug": "ethernet-connected-no-internet", "title": "有線LAN接続済みなのにインターネットが使えない",
+    "answer": "リンクランプ、LANケーブル、ルーターポート、IP取得を確認し、ケーブル・端末・ルーターのどこで止まるか分けます。", "steps": ["PCとルーターのLAN端子にあるリンクランプが点灯・点滅するか確認する", "規格対応の別LANケーブル、別LANポート、別PCを一つずつ交換して比較する", "Windowsの「設定→ネットワークとインターネット→イーサネット」でIPとDNSが自動取得か確認する", "ネットワーク診断とアダプター更新を行い、保存済みVPN等が消えるネットワークリセットは最後にする"], "causes": ["ケーブル・ポート不良", "固定IP・DHCP設定", "回線・ルーター障害"], "escalation": "全有線端末が使えなければ回線・ルーター、1台だけなら端末メーカーへ相談します。", "source_label": "Microsoft Support - イーサネット接続の問題を修正する", "source_url": "https://support.microsoft.com/ja-jp/windows/experience/connectivity-networking/fix-ethernet-connection-problems-in-windows", "related_existing": ["/internet/router-internet-light-red/", "/windows/wifi-option-missing-windows-11/", "/browser/chrome-page-not-loading/"]
+  },
+  {
+    "topic": "部屋 Wi-Fi 電波 弱い", "category": "internet", "path": "/internet/wifi-signal-weak-in-room/", "slug": "wifi-signal-weak-in-room", "title": "特定の部屋だけWi-Fiが弱い・届かない",
+    "answer": "ルーターを床・収納・家電から離し、2.4GHzと5/6GHzを使い分け、必要ならメッシュや有線アクセスポイントを検討します。", "steps": ["同じ端末でルーターの1m付近と問題の部屋を測り、壁・床・家具の位置を記録する", "ルーターを床・棚の中・金属・水槽から離し、家の中央に近い高く開けた場所へ移す", "遠い部屋では2.4GHz、近い部屋では5/6GHzを比較し、電子レンジやコードレス電話から離す", "中継機・メッシュは親機との中間地点へ置き、改善しなければ有線アクセスポイントを検討する"], "causes": ["距離・壁・床", "電子レンジ等の干渉", "周波数帯・子機配置"], "escalation": "増設前に住宅条件と対応規格をメーカーへ相談します。", "source_label": "Aterm Support - 接続が安定しない場合", "source_url": "https://www.aterm.jp/support/qa/qa/00064.html", "related_existing": ["/internet/mesh-wifi-node-not-connecting/", "/internet/wifi-slow-at-night/", "/iphone/wifi-slow/"]
+  },
+  {
+    "topic": "ONU PON ランプ 消灯 点滅", "category": "internet", "path": "/internet/onu-pon-light-off-blinking/", "slug": "onu-pon-light-off-blinking", "title": "ONUのPONランプが消灯・点滅してネットにつながらない",
+    "answer": "機種別ランプ表でPON、認証、光回線、UNIを区別し、光コードを強く曲げたりコネクタを開けたりせず回線事業者へ確認します。", "steps": ["ONUの型番を確認し、回線事業者の取扱説明書でPON・認証・光回線・UNIランプの正常状態を照合する", "電源とLANケーブルの外れ、光コードの強い曲がりや家具による圧迫だけを目視する", "回線事業者の工事・障害情報を契約住所で確認し、発生時刻とランプ状態を控える", "事業者指定の順序でONUとルーターだけを再起動し、PONの異常が続けばそれ以上触らず連絡する"], "causes": ["光信号・認証未完了", "光コード・ONU不調", "回線工事・障害"], "escalation": "光コネクタを覗かず、異常ランプが続けば回線事業者へ連絡します。", "source_label": "NTT East/West official support", "source_url": "https://flets.com/customer/", "related_existing": ["/internet/onu-los-light-red/", "/internet/router-internet-light-red/", "/internet/router-keeps-restarting/"]
+  },
+  {
+    "topic": "ルーター 交換後 インターネットつながらない", "category": "internet", "path": "/internet/cannot-connect-after-router-replacement/", "slug": "cannot-connect-after-router-replacement", "title": "Wi-Fiルーター交換後にインターネットへつながらない",
+    "answer": "ONUとの接続、ルーター・ブリッジモード、PPPoEまたはIPoE情報、ONUの再起動を契約回線の公式手順で確認します。", "steps": ["ONU・ホームゲートウェイのLANポートと新ルーターのWANポートを接続し、各ランプを記録する", "上流機器がルーター機能を持つか確認し、新ルーターのルーターモード・AP/ブリッジモードを契約構成に合わせる", "契約書・プロバイダー案内でPPPoEかIPoEかを確認し、必要な接続IDまたは事業者プロファイルだけを設定する", "回線事業者の指定順でONUとルーターを再起動し、初期化や旧機器廃棄は接続確認後にする"], "causes": ["WAN配線・動作モード", "PPPoE認証情報・IPoEプロファイル", "旧ルーター情報・ONUの保持"], "escalation": "契約方式が不明なら初期化を繰り返さず回線事業者へ確認します。", "source_label": "Aterm Support - PPPoE接続を確認する", "source_url": "https://www.aterm.jp/support/qa/qa/00206.html", "related_existing": ["/internet/router-internet-light-red/", "/internet/onu-los-light-red/", "/internet/mesh-wifi-node-not-connecting/"]
+  },
+  {
+    "topic": "USBメモリ Windows 表示されない", "category": "peripherals", "path": "/peripherals/usb-drive-not-showing-windows/", "slug": "usb-drive-not-showing-windows", "title": "USBメモリがWindowsに表示されない・開けない",
+    "answer": "別ポート・別PC、デバイスマネージャー、ディスクの管理を確認します。必要なデータがある場合は初期化・フォーマットしません。", "steps": ["USBハブを外し、PC本体の別ポートと別PCへ直接つないで認識音を確認する", "「デバイスマネージャー」で警告表示を確認し、「ディスクの管理」で容量・状態・ドライブ文字を見る", "正常表示なら既存と重複しないドライブ文字を割り当て、BitLocker等の暗号化表示を確認する", "RAW・未割当・0バイト表示で必要データがある場合は初期化・フォーマット・chkdskを行わず取り外す"], "causes": ["ポート・メモリ故障", "ドライブ文字未割当", "ファイルシステム・暗号化問題"], "escalation": "未割当・RAW表示で必要データがある場合は操作を止めデータ復旧へ相談します。", "source_label": "Microsoft Support / storage manufacturer", "source_url": "https://support.microsoft.com/ja-jp/windows", "related_existing": ["/peripherals/usb-drive-format-required/", "/windows/usb-device-not-recognized/", "/android/android-usb-file-transfer-not-working/"]
+  },
+  {
+    "topic": "外付けHDD SSD 勝手に切れる Windows", "category": "peripherals", "path": "/peripherals/external-drive-keeps-disconnecting-windows/", "slug": "external-drive-keeps-disconnecting-windows", "title": "外付けHDD・SSDがWindowsで頻繁に切断される",
+    "answer": "重要データを先に退避し、ケーブル、電源、USBポート、省電力、メーカー診断を確認します。", "steps": ["認識している間に重要データを別の正常な媒体へコピーし、移動や最適化はしない", "USBハブを外し、短い対応ケーブル・PC本体の別ポート・付属ACアダプターで比較する", "「デバイスマネージャー→USBルートハブ」の電源管理とWindowsの電源プランを確認する", "メーカー公式診断でSMARTを確認し、異音・再接続反復・警告があれば診断を打ち切る"], "causes": ["ケーブル・電力不足", "USB省電力", "ドライブ劣化"], "escalation": "異音、認識反復、SMART警告があれば通電を減らしメーカー・復旧業者へ相談します。", "source_label": "Microsoft / drive manufacturer support", "source_url": "https://support.microsoft.com/ja-jp/windows", "related_existing": ["/mac/external-drive-not-showing/", "/peripherals/usb-drive-format-required/", "/windows/usb-device-not-recognized/"]
+  },
+  {
+    "topic": "プリンター 白紙 印刷", "category": "peripherals", "path": "/peripherals/printer-prints-blank-pages/", "slug": "printer-prints-blank-pages", "title": "プリンターから白紙しか出ない・文字が印刷されない",
+    "answer": "本体テスト印刷でPC側かプリンター側かを分け、インク・トナー、保護材、ノズル、ドライバーを確認します。", "steps": ["プリンター本体メニューからノズルチェックまたはテストページを印刷し、PCを介さず再現するか確認する", "インク・トナー残量、保護テープ、通気口、色ごとの装着位置を機種別マニュアルどおり確認する", "インクジェットは公式のヘッドクリーニングを指定回数だけ行い、時間を空けて再テストする", "本体テストが正常ならPCの用紙・色・ドライバー設定を初期値へ戻し、公式ドライバーで再印刷する"], "causes": ["インク切れ・装着不良", "ノズル詰まり", "ドライバー・文書設定"], "escalation": "清掃を繰り返しすぎず、本体テストも白紙ならメーカーへ相談します。", "source_label": "Canon / Epson / Brother official support", "source_url": "https://www.epson.jp/support/", "related_existing": ["/peripherals/printer-offline-windows/", "/peripherals/printer-queue-wont-delete/", "/windows/windows-update-stuck/"]
+  },
+  {
+    "topic": "プリンター 紙詰まり 取れない", "category": "peripherals", "path": "/peripherals/printer-paper-jam-wont-clear/", "slug": "printer-paper-jam-wont-clear", "title": "プリンターの紙詰まり表示が消えない・紙が取れない",
+    "answer": "電源処理と取り出し方向を機種別マニュアルで確認し、紙片・背面・両面ユニットを点検します。無理に引き抜きません。", "steps": ["液晶のエラー番号と機種型番を控え、メーカー公式の紙詰まり手順を開く", "指定どおり電源を切ってプラグを抜き、熱い定着部など注意箇所を冷ましてからカバーを開く", "給紙方向へ両手でゆっくり引き、背面・両面ユニット・給紙トレイに小さな紙片がないか照明で確認する", "正しいサイズの平らな用紙を規定枚数以下で入れ、表示が残るなら分解せず修理へ進む"], "causes": ["紙片の残留", "用紙サイズ・反り・過積載", "センサー・ローラー不調"], "escalation": "見えない紙、破損部品、表示継続は分解せずメーカー修理へ相談します。", "source_label": "Printer manufacturer official support", "source_url": "https://canon.jp/support", "related_existing": ["/peripherals/printer-queue-wont-delete/", "/peripherals/printer-offline-windows/", "/windows/usb-device-not-recognized/"]
+  },
+  {
+    "topic": "プリンタードライバー 使用できません Windows", "category": "peripherals", "path": "/peripherals/printer-driver-unavailable-windows/", "slug": "printer-driver-unavailable-windows", "title": "Windowsで「プリンタードライバーは使用できません」と出る",
+    "answer": "Windows Updateとプリンターメーカー公式ドライバーを確認し、登録削除・再追加を行います。非公式ドライバーサイトは使いません。", "steps": ["プリンターの正確な型番と「設定→システム→バージョン情報」のWindows版・システム種類を確認する", "Windows Updateのオプション更新と、メーカー公式サポートの対応OS・最新ドライバーを確認する", "未送信ジョブを保存・削除してから「設定→Bluetoothとデバイス→プリンターとスキャナー」で対象を削除する", "USBまたは同一ネットワークへ接続し、メーカー公式の順序でドライバーを導入してプリンターを再追加する"], "causes": ["古い・不一致ドライバー", "更新途中の破損", "サポート終了機種"], "escalation": "対応OS一覧に現行Windowsがない場合はメーカーへ代替手段を確認します。", "source_label": "Microsoft / printer manufacturer support", "source_url": "https://support.microsoft.com/ja-jp/windows", "related_existing": ["/peripherals/printer-offline-windows/", "/peripherals/printer-queue-wont-delete/", "/windows/windows-update-stuck/"]
+  },
+  {
+    "topic": "Bluetoothキーボード Windows 反応しない", "category": "peripherals", "path": "/peripherals/bluetooth-keyboard-not-working-windows/", "slug": "bluetooth-keyboard-not-working-windows", "title": "BluetoothキーボードがWindowsで反応しない",
+    "answer": "電池、入力切替、ペアリング、他端末への接続を確認し、登録を削除して再接続します。", "steps": ["新品または充電済み電池、電源スイッチ、Windows/Mac切替、接続チャンネルを確認する", "キーボードを説明書どおりペアリングモードにし、スマホなど他端末への自動接続を解除する", "Windowsの「設定→Bluetoothとデバイス」で既存登録を削除し、近くに置いて再ペアリングする", "WindowsとBluetoothドライバーを更新し、別PCでも同じキーが反応しないか比較する"], "causes": ["電池・入力切替", "他端末への自動接続", "Bluetoothドライバー・互換性"], "escalation": "別PCでも反応しなければキーボードメーカー、複数機器が不可ならPCメーカーへ相談します。", "source_label": "Microsoft Support - Windows の Bluetooth の問題を解決する", "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/bluetooth/fix-bluetooth-problems-in-windows", "related_existing": ["/peripherals/bluetooth-mouse-not-working-windows/", "/mac/macbook-keyboard-not-working/", "/iphone/bluetooth-not-connecting/"]
+  },
+  {
+    "topic": "SDカード 書き込み禁止 解除できない", "category": "peripherals", "path": "/peripherals/sd-card-write-protected/", "slug": "sd-card-write-protected", "title": "SDカードが書き込み禁止で保存・削除できない",
+    "answer": "SDアダプターのLOCKスイッチ、別リーダー、カードの劣化を確認し、必要データを退避します。故障保護で読み取り専用になる場合があります。", "steps": ["microSDを挿したSDアダプターのLOCKスイッチを解除側へ動かし、挿し直す", "別のカードリーダー・USBポート・端末で新規の小さいファイルを保存できるか比較する", "読み取れるうちに必要データを別媒体へコピーし、カードメーカーの公式診断を確認する", "複数端末で読み取り専用なら劣化保護を疑い、必要データがある間はフォーマットせず交換する"], "causes": ["LOCKスイッチ", "リーダー接触不良", "フラッシュメモリ劣化"], "escalation": "読めるが書けない状態が続く場合は交換し、必要データがあればフォーマットしません。", "source_label": "SD Association / device manufacturer", "source_url": "https://www.sdcard.org/", "related_existing": ["/android/android-sd-card-not-detected/", "/peripherals/usb-drive-format-required/", "/windows/usb-device-not-recognized/"]
+  },
+  {
+    "topic": "スキャナー Windows 認識しない", "category": "peripherals", "path": "/peripherals/scanner-not-detected-windows/", "slug": "scanner-not-detected-windows", "title": "Windowsでスキャナーを認識しない・スキャンできない",
+    "answer": "本体接続、USB・ネットワーク、Windows Scan、WIA、メーカー公式ドライバーを確認します。", "steps": ["スキャナーの電源・エラー表示を確認し、USBは本体へ直接、ネットワーク型はPCと同じSSIDへ接続する", "「設定→Bluetoothとデバイス→プリンターとスキャナー」とWindows Scanで機器が表示されるか確認する", "メーカー公式スキャンユーティリティで比較し、Windows Image Acquisition（WIA）サービスを再起動する", "Windowsとメーカー公式ドライバーを更新し、ファイアウォールを無効化せず公式アプリの許可だけ確認する"], "causes": ["接続先・ネットワーク違い", "WIA・ドライバー不調", "ファイアウォール・本体故障"], "escalation": "本体単体テストも失敗する場合はメーカーへ相談します。", "source_label": "Microsoft / scanner manufacturer support", "source_url": "https://support.microsoft.com/ja-jp/windows", "related_existing": ["/peripherals/printer-offline-windows/", "/windows/usb-device-not-recognized/", "/android/android-usb-file-transfer-not-working/"]
+  },
+  {
+    "topic": "Chrome 起動しない", "category": "browser", "path": "/browser/chrome-not-opening/", "slug": "chrome-not-opening", "title": "Google Chromeが起動しない・すぐ閉じる",
+    "answer": "残留プロセス、拡張機能、ユーザープロファイル、セキュリティソフトを確認し、同期・ブックマークを保護してから再インストールします。", "steps": ["Chromeプロセスを終了しPCを再起動する", "拡張機能なし・新規プロファイルで起動を試す", "公式版を更新し必要なら同期確認後に再インストールする", "Windowsのイベント履歴とセキュリティソフトの遮断記録を確認し、新規プロファイルでも落ちる場合は時刻とChromeバージョンを控える"], "causes": ["プロセス残留", "拡張機能・プロファイル破損", "セキュリティソフト・更新不整合"], "escalation": "新規プロファイルでも起動できない場合はChromeヘルプとOS側を確認します。", "source_label": "Google Chrome Help", "source_url": "https://support.google.com/chrome/", "related_existing": ["/browser/chrome-aw-snap/", "/browser/chrome-page-not-loading/", "/browser/chrome-bookmarks-missing/"]
+  },
+  {
+    "topic": "Chrome 動作 遅い 重い", "category": "browser", "path": "/browser/chrome-running-slow/", "slug": "chrome-running-slow", "title": "Google Chromeの動作が遅い・重い",
+    "answer": "Chromeタスクマネージャーで重いタブ・拡張機能を特定し、更新、メモリ、ハードウェアアクセラレーションを確認します。", "steps": ["Chromeタスクマネージャーで負荷を確認する", "不要なタブ・拡張機能を止めて更新する", "新規プロファイルとハードウェアアクセラレーションで比較する", "同じサイトをEdgeとChromeの新規プロファイルで比較し、OS全体も遅い場合は空きメモリとディスク使用率を確認する"], "causes": ["多数タブ・拡張機能", "メモリ不足", "GPU・プロファイル不調"], "escalation": "OS全体も遅ければPC側の記事へ誘導し、Chromeだけならヘルプへ相談します。", "source_label": "Google Chrome Help", "source_url": "https://support.google.com/chrome/", "related_existing": ["/windows/windows-pc-running-slow/", "/browser/chrome-aw-snap/", "/browser/chrome-page-not-loading/"]
+  },
+  {
+    "topic": "Chrome 拡張機能 動かない", "category": "browser", "path": "/browser/chrome-extensions-not-working/", "slug": "chrome-extensions-not-working", "title": "Chromeの拡張機能が動かない・無効になる",
+    "answer": "有効状態、サイトアクセス権、シークレット制限、組織ポリシー、拡張機能の公開状況を確認します。", "steps": ["拡張機能管理画面でエラーと有効状態を見る", "対象サイトへのアクセス権を確認する", "更新・再インストールと管理対象表示を確認する", "新規プロファイルで対象拡張だけを入れて比較し、「組織によって管理されています」と出る場合は管理者へ確認する"], "causes": ["権限不足", "Chrome更新との非互換", "管理者ポリシー・公開停止"], "escalation": "権限を過剰に与えず、開発元の公式サポートへ確認します。", "source_label": "Google Chrome Help - Extensions", "source_url": "https://support.google.com/chrome/answer/2664769", "related_existing": ["/browser/chrome-unwanted-popups-redirects/", "/browser/chrome-pdf-not-opening/", "/browser/chrome-aw-snap/"]
+  },
+  {
+    "topic": "Chrome 同期 一時停止", "category": "browser", "path": "/browser/chrome-sync-paused/", "slug": "chrome-sync-paused", "title": "Chromeの同期が一時停止・再ログインを繰り返す",
+    "answer": "Googleアカウントの再認証と端末上のサイトデータ保持設定を確認し、ローカルデータを消さずに同期を再開します。", "steps": ["プロフィールから本人確認して再ログインする", "終了時にサイトデータを削除する設定を確認する", "同期対象とアカウントのセキュリティ通知を確認する", "Googleアカウント上にブックマーク等が保存済みか別端末で確認し、同期のリセットはローカルデータを書き出してから行う"], "causes": ["認証期限切れ", "終了時のCookie削除", "アカウント保護・組織ポリシー"], "escalation": "ブックマーク等がクラウドにあるか確認してから同期リセットを検討します。", "source_label": "Google Chrome Help - Sync", "source_url": "https://support.google.com/chrome/answer/9175737", "related_existing": ["/browser/chrome-bookmarks-missing/", "/browser/chrome-saved-passwords-missing/", "/windows/onedrive-sync-pending/"]
+  },
+  {
+    "topic": "Chrome 通知 消えない 止めたい", "category": "browser", "path": "/browser/chrome-notifications-wont-stop/", "slug": "chrome-notifications-wont-stop", "title": "Chromeから知らないサイトの通知が届く・止められない",
+    "answer": "ポップアップではなくサイト通知かを見分け、Chromeの通知許可一覧から該当サイトを削除・ブロックします。", "steps": ["通知に表示されたサイト名を確認する", "Chromeのサイト設定から通知許可を削除する", "不審な拡張機能とOS通知設定を確認する", "通知をクリックせず発信元URLを控え、Chromeを終了しても出る場合はWindows・macOS側の通知許可一覧も確認する"], "causes": ["サイト通知を誤って許可", "不審な拡張機能", "OS側通知との混同"], "escalation": "リダイレクトやアプリ導入もある場合は既存の不審広告記事へ誘導します。", "source_label": "Google Chrome Help - Notifications", "source_url": "https://support.google.com/chrome/", "related_existing": ["/browser/chrome-unwanted-popups-redirects/", "/articles/fake-virus-alert-popup.html", "/iphone/one-app-notifications-missing/"]
+  },
+  {
+    "topic": "Chrome カメラ マイク 許可したのに使えない", "category": "browser", "path": "/browser/chrome-camera-microphone-not-working/", "slug": "chrome-camera-microphone-not-working", "title": "Chromeでカメラ・マイクを許可しても使えない",
+    "answer": "サイト単位の権限、既定デバイス、OSのプライバシー許可、他アプリの占有を順に確認します。", "steps": ["アドレスバーのサイト権限を確認する", "Chromeで正しいカメラ・マイクを選ぶ", "Windows・Macの権限と他アプリの使用状態を確認する", "権限変更後にタブを再読み込みし、シークレットウィンドウと別ブラウザーで同じ会議テストを比較する"], "causes": ["サイト権限", "入力デバイス誤選択", "OS権限・他アプリ占有"], "escalation": "複数サイトで使えなければOS・機器側、1サイトだけならサービス側へ相談します。", "source_label": "Google Chrome Help - Camera and microphone", "source_url": "https://support.google.com/chrome/answer/2693767", "related_existing": ["/sns/zoom-camera-not-working/", "/sns/discord-microphone-not-working/", "/windows/windows-camera-error-0xa00f4244/"]
+  },
+  {
+    "topic": "Microsoft Edge 同期しない", "category": "browser", "path": "/browser/edge-sync-not-working/", "slug": "edge-sync-not-working", "title": "Microsoft Edgeのお気に入り・パスワードが同期されない",
+    "answer": "正しいプロファイル、同期項目、アカウント状態、職場・学校ポリシーを確認し、クラウド側確認前にリセットしません。", "steps": ["Edgeのプロファイルと同期状態を確認する", "お気に入り・パスワード等の対象項目を確認する", "アカウント再認証と組織ポリシーを確認する", "お気に入りをHTMLへ書き出しパスワードの保存状況も確認してから、Edgeを更新してアカウントを再認証する"], "causes": ["別プロファイル", "同期項目オフ・認証切れ", "組織ポリシー"], "escalation": "ローカルデータをエクスポートしてからMicrosoftサポートへ相談します。", "source_label": "Microsoft Support - Edge", "source_url": "https://support.microsoft.com/ja-jp/microsoft-edge", "related_existing": ["/browser/chrome-bookmarks-missing/", "/browser/chrome-saved-passwords-missing/", "/windows/onedrive-sync-pending/"]
+  },
+  {
+    "topic": "Gmail 容量いっぱい 送受信できない", "category": "google", "path": "/google/gmail-storage-full/", "slug": "gmail-storage-full", "title": "Gmailの保存容量がいっぱいでメールを送受信できない",
+    "answer": "Google Oneの内訳でGmail・Drive・Photosを分け、大容量メール、ごみ箱、不要ファイルを確認します。削除反映には時間がかかる場合があります。", "steps": ["Google Oneで容量内訳を確認する", "Gmailの大容量メールとごみ箱を整理する", "Drive・Photosも確認して反映を待つ", "ごみ箱と迷惑メールを空にした後は容量表示の更新を待ち、24時間以上変わらなければ削除履歴と容量画面を保存する"], "causes": ["添付メール蓄積", "Drive・Photosとの共通容量", "ごみ箱未削除"], "escalation": "必要データを消さず、容量表示が更新されない場合はGoogle Oneサポートへ相談します。", "source_label": "Gmail / Google One Help", "source_url": "https://support.google.com/mail/", "related_existing": ["/google/gmail-not-receiving-email/", "/google/gmail-sent-mail-not-delivered/", "/google/google-photos-backup-stuck/"]
+  },
+  {
+    "topic": "Gmail 添付ファイル アップロードできない", "category": "google", "path": "/google/gmail-attachment-upload-failed/", "slug": "gmail-attachment-upload-failed", "title": "Gmailで添付ファイルを送れない・アップロードが止まる",
+    "answer": "サイズ、禁止形式、通信、ブラウザー、保存容量を確認し、大きいファイルはGoogle Drive共有を使います。", "steps": ["ファイルサイズと種類、容量を確認する", "通信・ブラウザー・拡張機能を切り分ける", "大容量はDriveへ保存し共有権限を確認する", "自分宛ての小さいテストファイルで送信を確認し、送信後は送信済みにあるかと共有リンクの閲覧権限を確認する"], "causes": ["サイズ・形式制限", "通信・ブラウザー不調", "容量不足"], "escalation": "機密ファイルは共有範囲を確認し、組織アカウントなら管理者へ相談します。", "source_label": "Gmail Help", "source_url": "https://support.google.com/mail/", "related_existing": ["/google/gmail-sent-mail-not-delivered/", "/google/google-drive-upload-stuck/", "/google/gmail-not-receiving-email/"]
+  },
+  {
+    "topic": "Google アカウント 確認コード 届かない", "category": "google", "path": "/google/google-account-verification-code-not-arriving/", "slug": "google-account-verification-code-not-arriving", "title": "Googleアカウントの確認コードが届かない",
+    "answer": "Googleプロンプト、SMS、音声、バックアップコードを確認し、連続再送を避けてアカウント復元手順を使います。", "steps": ["別のログイン済み端末のGoogleプロンプトを確認する", "電話番号、SMS拒否、電波状態を確認する", "別手段またはアカウント復元を選ぶ", "ログインできた後は再設定用電話番号とメール、バックアップコードを更新し、確認コードはサポート担当を名乗る相手にも渡さない"], "causes": ["送信先・電波・SMS拒否", "再送制限", "端末変更・アカウント保護"], "escalation": "コードを他人に伝えず、公式のアカウント復元以外の代行を使いません。", "source_label": "Google Account Help", "source_url": "https://support.google.com/accounts/", "related_existing": ["/iphone/verification-code-not-arriving/", "/articles/login-attempt-email-ignore.html", "/sns/instagram-cannot-log-in/"]
+  },
+  {
+    "topic": "Google アカウント 無効", "category": "google", "path": "/google/google-account-disabled/", "slug": "google-account-disabled", "title": "Googleアカウントが無効になりログインできない",
+    "answer": "ログイン画面に示された理由を確認し、Google公式の異議申し立て・復元手順を使います。解除をうたう第三者へ認証情報を渡しません。", "steps": ["公式ログイン画面で無効理由を確認する", "該当ポリシーと異議申し立てフォームを確認する", "可能ならデータダウンロード案内を確認する", "表示された申請期限とケース番号を保存し、利用できる場合はデータダウンロードを先に行って公式フォームから一度だけ申し立てる"], "causes": ["ポリシー違反判定", "不審な操作・乗っ取り保護", "年齢・組織管理"], "escalation": "期限表示がある場合は公式フォームから速やかに申請します。", "source_label": "Google Account Help", "source_url": "https://support.google.com/accounts/", "related_existing": ["/articles/account-hijacked-sos.html", "/articles/login-attempt-email-ignore.html", "/sns/x-cannot-log-in/"]
+  },
+  {
+    "topic": "Googleマップ 現在地 ずれる", "category": "google", "path": "/google/google-maps-location-inaccurate/", "slug": "google-maps-location-inaccurate", "title": "Googleマップの現在地がずれる・方向がおかしい",
+    "answer": "正確な位置情報、Wi-Fi・Bluetoothスキャン、コンパス調整、省電力を確認し、地図情報の誤りと端末測位を分けます。", "steps": ["位置情報と正確な位置情報の権限を確認する", "屋外でGPS、Wi-Fi、Bluetoothを比較する", "コンパス調整と省電力設定を確認する", "端末を8の字に動かしてコンパスを調整し、現在地のずれと店舗・道路など地図情報の誤りを別々に報告する"], "causes": ["権限・省電力", "GPS受信環境・コンパス", "地図データの誤り"], "escalation": "他アプリでも大きくずれるなら端末メーカー、地点情報だけならマップへ修正報告します。", "source_label": "Google Maps Help", "source_url": "https://support.google.com/maps/", "related_existing": ["/iphone/gps-inaccurate/", "/iphone/location-services-not-working/", "/android/android-mobile-data-not-working/"]
+  },
+  {
+    "topic": "Google Drive for desktop 同期しない", "category": "google", "path": "/google/drive-for-desktop-not-syncing/", "slug": "drive-for-desktop-not-syncing", "title": "Google Drive for desktopが同期しない・止まる",
+    "answer": "同期エラー、保存容量、ストリーミング・ミラーリング、ファイル権限を確認し、未同期のローカルファイルを退避してから再インストールします。", "steps": ["Driveアイコンの同期エラーと障害情報を確認する", "容量、対象フォルダー、ファイル名・権限を確認する", "未同期ファイルを退避して再起動・更新する", "同期していないローカルファイルをDrive外へコピーし、サインアウトや再インストールは退避後にだけ行う"], "causes": ["容量不足・一時停止", "ファイル権限・名前", "アプリ更新・アカウント不調"], "escalation": "再インストール前に未同期データを別フォルダーへ保護しGoogleへ相談します。", "source_label": "Google Drive Help", "source_url": "https://support.google.com/drive/", "related_existing": ["/google/google-drive-upload-stuck/", "/google/google-drive-files-missing/", "/windows/onedrive-sync-pending/"]
+  },
+  {
+    "topic": "LINE 通知 来ない", "category": "sns", "path": "/sns/line-notifications-not-arriving/", "slug": "line-notifications-not-arriving", "title": "LINEの通知が来ない・アプリを開くとまとめて届く",
+    "answer": "LINE内通知、トーク個別ミュート、OS通知、集中モード、電池・バックグラウンド制限を順に確認します。", "steps": ["LINE全体と対象トークの通知を確認する", "OSの通知・集中モードを確認する", "電池最適化・バックグラウンド通信を確認する", "LINEとOSを更新して端末を再起動し、再インストールはトーク履歴バックアップが完了した表示を確認してから検討する"], "causes": ["LINE・トークの通知オフ", "OS集中モード", "電池・バックグラウンド制限"], "escalation": "再インストール前に必ずトーク履歴バックアップと引継ぎ設定を確認します。", "source_label": "LINE Help Center", "source_url": "https://help.line.me/line/smartphone?lang=ja", "related_existing": ["/sns/line-messages-not-sending/", "/android/android-notifications-not-arriving/", "/iphone/one-app-notifications-missing/"]
+  },
+  {
+    "topic": "LINE 認証番号 届かない", "category": "sns", "path": "/sns/line-verification-code-not-arriving/", "slug": "line-verification-code-not-arriving", "title": "LINEの認証番号がSMSで届かない",
+    "answer": "国番号と電話番号、SMS・迷惑電話拒否、電波、再送制限を確認し、表示される場合は音声通話認証を使います。", "steps": ["国・電話番号とSIMの受信状態を確認する", "SMS拒否・海外番号拒否を確認する", "時間を空けて再送または音声認証を試す", "短時間の連続再送を止めて一定時間待ち、画面に表示される場合だけ音声通話認証を選んで番号を第三者へ伝えない"], "causes": ["番号・回線状態", "SMS拒否設定", "短時間の再送制限"], "escalation": "認証番号は誰にも伝えず、届かない場合は通信事業者とLINE公式へ相談します。", "source_label": "LINE Help Center", "source_url": "https://help.line.me/line/smartphone?lang=ja", "related_existing": ["/sns/line-messages-not-sending/", "/iphone/verification-code-not-arriving/", "/sns/instagram-cannot-log-in/"]
+  },
+  {
+    "topic": "Instagram DM 通知 来ない", "category": "sns", "path": "/sns/instagram-dm-notifications-not-arriving/", "slug": "instagram-dm-notifications-not-arriving", "title": "InstagramのDM通知が来ない・遅れる",
+    "answer": "Instagramの通知設定、特定チャットのミュート、静かモード、OS通知、電池制限を確認します。", "steps": ["Instagramのメッセージ通知を確認する", "対象チャットのミュートと静かモードを確認する", "OS通知・集中モード・バックグラウンド制限を確認する", "別アカウントまたは別端末でも同じDM通知が遅れるか比較し、アプリ更新後も続く場合は発生時刻を添えて問題を報告する"], "causes": ["DM・チャット通知オフ", "静かモード・集中モード", "バックグラウンド制限"], "escalation": "複数端末で同じなら障害・アカウント側としてInstagram公式へ報告します。", "source_label": "Instagram Help Center", "source_url": "https://help.instagram.com/", "related_existing": ["/sns/instagram-cannot-log-in/", "/iphone/one-app-notifications-missing/", "/iphone/notifications-delayed/"]
+  },
+  {
+    "topic": "TikTok 動画 投稿できない", "category": "sns", "path": "/sns/tiktok-video-upload-failed/", "slug": "tiktok-video-upload-failed", "title": "TikTokで動画を投稿できない・アップロードが止まる",
+    "answer": "障害、通信、動画仕様、空き容量、アカウント状態を確認します。下書きは端末内の場合があるため再インストール前に保護します。", "steps": ["障害情報、通信、アカウント通知を確認する", "動画形式・長さ・空き容量を確認する", "アプリ更新とキャッシュ整理を行う", "下書きが端末内だけにある可能性を確認して必要な動画を端末へ保存し、再インストールは下書き消失を了承した場合だけ行う"], "causes": ["通信・サービス障害", "動画仕様・容量", "投稿制限・アプリ不調"], "escalation": "下書き消失リスクを確認し、再インストール前にTikTok公式へ報告します。", "source_label": "TikTok Support", "source_url": "https://support.tiktok.com/ja/", "related_existing": ["/sns/instagram-post-upload-failed/", "/sns/x-media-not-loading/", "/iphone/storage-full/"]
+  },
+  {
+    "topic": "Discord RTC接続中 終わらない", "category": "sns", "path": "/sns/discord-rtc-connecting-stuck/", "slug": "discord-rtc-connecting-stuck", "title": "Discordが「RTC接続中」のまま通話できない",
+    "answer": "Discord障害、回線、VPN・ファイアウォール、音声地域、アプリ更新を確認し、別ネットワークで比較します。", "steps": ["Discord Statusと他サービス通信を確認する", "VPNを切り別ネットワークで試す", "Discord更新、音声設定リセット、ファイアウォールを確認する", "ブラウザー版とアプリ版、別端末で同じ通話を比較し、改善しなければ音声デバッグログと発生時刻を保存する"], "causes": ["Discord障害", "VPN・ファイアウォール・UDP制限", "アプリ・音声地域不調"], "escalation": "学校・職場ネットワークでは回避せず管理者へ確認し、家庭回線ならDiscordへログを添えて相談します。", "source_label": "Discord Support / Status", "source_url": "https://support.discord.com/", "related_existing": ["/sns/discord-microphone-not-working/", "/sns/line-calls-not-working/", "/browser/chrome-page-not-loading/"]
+  },
+  {
+    "topic": "Zoom マイク 声 届かない", "category": "sns", "path": "/sns/zoom-microphone-not-working/", "slug": "zoom-microphone-not-working", "title": "Zoomでマイクの声が相手に届かない・反応しない",
+    "answer": "Zoom内ミュート、オーディオ参加、入力デバイス、OS・ブラウザー権限を確認し、テストマイクで切り分けます。", "steps": ["オーディオへ参加しミュートを解除する", "Zoom設定で正しいマイクを選びテストする", "OS権限、ブラウザー権限、他アプリ占有を確認する", "Zoomのテストミーティングと端末の録音アプリで同じマイクを試し、どちらだけ無音かを記録する"], "causes": ["ミュート・未参加", "入力デバイス誤選択", "権限・他アプリ占有"], "escalation": "録音アプリでも無入力なら端末側、ZoomだけならZoomサポートへ相談します。", "source_label": "Zoom Support", "source_url": "https://support.zoom.com/", "related_existing": ["/sns/zoom-camera-not-working/", "/sns/discord-microphone-not-working/", "/iphone/microphone-not-working/"]
+  }
+]

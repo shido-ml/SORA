@@ -96,6 +96,7 @@
 
   if (isMobile) {
     addMidArticleSlot(originalInlineSlot);
+    document.body.classList.add("sora-admax-mobile-sticky-active");
     writeScript(MOBILE_STICKY);
 
     var inlineSlots = document.querySelectorAll(".sora-mobile-inline-ad");
@@ -114,11 +115,12 @@
       slot.remove();
     });
 
-    // A 300px sticky unit would cover the article on narrower desktop widths.
-    if (!window.matchMedia("(min-width: 1200px)").matches) {
+    // Keep the 300px side unit outside the 1180px content canvas.
+    if (!window.matchMedia("(min-width: 1900px)").matches) {
       return;
     }
 
+    document.body.classList.add("sora-admax-pc-side-active");
     writeScript(PC_AD);
     movePcStickyToSide();
   }
