@@ -5,10 +5,10 @@ import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
-STYLE = '<link href="/assets/css/site-v2.css?v=20260823" rel="stylesheet"/>'
-SCRIPT = '<script defer src="/assets/js/site-v2.js?v=20260823"></script>'
+STYLE = '<link href="/assets/css/site-v2.css?v=20260823-2" rel="stylesheet"/>'
+SCRIPT = '<script defer src="/assets/js/site-v2.js?v=20260823-2"></script>'
 FAVICON = '<link href="/assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>'
-AD_SCRIPT = '<script src="/assets/js/ad-loader.js?v=20260823"></script>'
+AD_SCRIPT = '<script src="/assets/js/ad-loader.js?v=20260823-2"></script>'
 SKIP = {ROOT / "googlec674e3cbc3834198.html"}
 HEADER = (
     '<header class="site-header sora-v2-header"><div class="sora-v2-header-inner">'
