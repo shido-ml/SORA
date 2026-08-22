@@ -75,6 +75,7 @@
       }
 
       if (stickyAd) {
+        document.body.classList.add("sora-admax-pc-side-active");
         stickyAd.classList.add("sora-pc-admax-side");
         stickyAd.style.left = "auto";
         stickyAd.style.right = "16px";
@@ -115,12 +116,12 @@
       slot.remove();
     });
 
-    // Keep the 300px side unit outside the 1180px content canvas.
-    if (!window.matchMedia("(min-width: 1900px)").matches) {
+    // On ordinary PC widths, reserve a dedicated 300px rail in CSS so the
+    // sticky unit never covers the article.
+    if (!window.matchMedia("(min-width: 1280px)").matches) {
       return;
     }
 
-    document.body.classList.add("sora-admax-pc-side-active");
     writeScript(PC_AD);
     movePcStickyToSide();
   }
