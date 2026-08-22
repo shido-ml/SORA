@@ -507,6 +507,22 @@ html.sora-ui-v2 {
   left: 18px;
 }
 
+@media (min-width: 1280px) {
+  .sora-admax-pc-side-active .page-hero .wrap,
+  .sora-admax-pc-side-active .article-layout,
+  .sora-admax-pc-side-active .sora-v2-footer-grid {
+    width: min(1180px, calc(100% - 380px)) !important;
+    margin-left: auto !important;
+    margin-right: 340px !important;
+  }
+
+  .sora-admax-pc-side-active.sora-legacy-card .wrap {
+    width: min(1000px, calc(100% - 380px)) !important;
+    margin-left: auto !important;
+    margin-right: 340px !important;
+  }
+}
+
 .sora-table-scroll {
   max-width: 100%;
   overflow-x: auto;
