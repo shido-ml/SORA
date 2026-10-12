@@ -1,0 +1,508 @@
+[
+  {
+    "category": "windows",
+    "slug": "windows-clipboard-history-disabled",
+    "title": "Windows 11でクリップボード履歴が使えない",
+    "path": "/windows/windows-clipboard-history-disabled/",
+    "steps": [
+      "Win＋Vで履歴の有効化画面が出るか確認する",
+      "設定のシステムからクリップボード履歴がオンか確認する",
+      "組織のPCでは管理ポリシーによる制限を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-night-light-not-working",
+    "title": "Windows 11で夜間モードが切り替わらない",
+    "path": "/windows/windows-night-light-not-working/",
+    "steps": [
+      "ディスプレイ設定から夜間モードを手動で切り替える",
+      "自動スケジュールと時刻の設定を確認する",
+      "HDRやグラフィックスドライバー更新後の変化を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-touchpad-not-working",
+    "title": "WindowsノートPCのタッチパッドが反応しない",
+    "path": "/windows/windows-touchpad-not-working/",
+    "steps": [
+      "タッチパッドの有効化キーと外付けマウスを確認する",
+      "Windows設定でタッチパッドが認識されるか確認する",
+      "デバイスマネージャーでドライバーの警告を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-mouse-pointer-disappears",
+    "title": "Windowsでマウスポインターが消える・見えない",
+    "path": "/windows/windows-mouse-pointer-disappears/",
+    "steps": [
+      "USBやBluetoothの別マウスを接続して比較する",
+      "ポインターのサイズと色を変更して確認する",
+      "再起動後も特定アプリだけで消えるか調べる"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-fingerprint-setting-missing",
+    "title": "Windowsで指紋認証の設定が表示されない",
+    "path": "/windows/windows-fingerprint-setting-missing/",
+    "steps": [
+      "Windows Hello対応の指紋センサーが搭載されているか確認する",
+      "設定のサインインオプションで表示内容を確認する",
+      "デバイスマネージャーで生体認証デバイスの認識状態を調べる"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-default-app-reset",
+    "title": "Windows 11で既定のアプリが勝手に変わる",
+    "path": "/windows/windows-default-app-reset/",
+    "steps": [
+      "対象の拡張子でどのアプリが開くか確認する",
+      "既定のアプリをファイル形式ごとに設定し直す",
+      "アプリ更新後に設定が変わるかを確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-screen-recording-no-audio",
+    "title": "Windowsの画面録画に音が入らない",
+    "path": "/windows/windows-screen-recording-no-audio/",
+    "steps": [
+      "録画アプリのシステム音声とマイク音声を確認する",
+      "マイクのプライバシー設定と録音テストを確認する",
+      "Bluetoothイヤホンを外すと音声入力先が変わるか確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-windows-key-not-working",
+    "title": "Windowsキーが効かない・ショートカットが動かない",
+    "path": "/windows/windows-windows-key-not-working/",
+    "steps": [
+      "別のキーボードでWindowsキーを試す",
+      "ゲームモードやWin Lockを解除して試す",
+      "スクリーンキーボードでは反応するか確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-file-copy-slow",
+    "title": "Windowsでファイルコピーが極端に遅い",
+    "path": "/windows/windows-file-copy-slow/",
+    "steps": [
+      "同じドライブ内とUSB外付け先の転送速度を比べる",
+      "空き容量とUSBポートやケーブルの規格を確認する",
+      "ディスク使用率とウイルス検査の影響を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-ethernet-not-detected",
+    "title": "Windows 11で有線LANが認識されない",
+    "path": "/windows/windows-ethernet-not-detected/",
+    "steps": [
+      "LANケーブルとルーターの別ポートで試す",
+      "設定のネットワークからイーサネット項目を確認する",
+      "デバイスマネージャーで有線LANアダプターを確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-hdr-washed-out",
+    "title": "WindowsでHDRを有効にすると画面が白っぽい",
+    "path": "/windows/windows-hdr-washed-out/",
+    "steps": [
+      "ディスプレイがHDR対応か型番を確認する",
+      "HDR設定でSDRコンテンツの明るさを調整する",
+      "モニターの映像モードとケーブル接続を比較する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-bluetooth-audio-stutters",
+    "title": "WindowsでBluetoothイヤホンの音が途切れる",
+    "path": "/windows/windows-bluetooth-audio-stutters/",
+    "steps": [
+      "イヤホンとPCの距離と干渉源を確認する",
+      "通話用と通常再生用の出力先を比較する",
+      "Bluetoothドライバーとイヤホンの更新を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-audio-output-keeps-changing",
+    "title": "Windowsの音声出力先が勝手に切り替わる",
+    "path": "/windows/windows-audio-output-keeps-changing/",
+    "steps": [
+      "接続中のBluetoothとHDMI機器を確認する",
+      "アプリごとの音量ミキサーで出力先を確認する",
+      "再接続後に既定の再生機器が変わるかを確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-drag-drop-not-working",
+    "title": "Windowsでファイルをドラッグ＆ドロップできない",
+    "path": "/windows/windows-drag-drop-not-working/",
+    "steps": [
+      "エクスプローラー内で移動できるかを試す",
+      "管理者権限で動くアプリとの間だけ発生するか確認する",
+      "エクスプローラーを再起動して変化を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-snipping-tool-not-saving",
+    "title": "Windowsのスクリーンショットが保存されない",
+    "path": "/windows/windows-snipping-tool-not-saving/",
+    "steps": [
+      "切り取りツールの保存設定と通知を確認する",
+      "保存先を変更して手動保存できるか試す",
+      "保存先の空き容量とOneDriveの同期を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-usb-c-monitor-no-signal",
+    "title": "WindowsでUSB-C接続の外部モニターが映らない",
+    "path": "/windows/windows-usb-c-monitor-no-signal/",
+    "steps": [
+      "PCのUSB-C端子が映像出力対応か確認する",
+      "データ・映像対応ケーブルか仕様を確認する",
+      "モニター入力とWindowsのディスプレイ検出を試す"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-wifi-slow-after-sleep",
+    "title": "Windowsでスリープ復帰後だけWi-Fiが遅い",
+    "path": "/windows/windows-wifi-slow-after-sleep/",
+    "steps": [
+      "再起動直後とスリープ復帰直後を比較する",
+      "無線LANアダプターの省電力設定を確認する",
+      "ドライバー更新とルーターの接続状況を確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-file-history-backup-fails",
+    "title": "Windowsのファイル履歴バックアップが失敗する",
+    "path": "/windows/windows-file-history-backup-fails/",
+    "steps": [
+      "バックアップ先の接続と空き容量を確認する",
+      "対象フォルダーとドライブのエラーを確認する",
+      "重要データを別の保存先に退避してから修復を検討する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-widgets-not-loading",
+    "title": "Windows 11のウィジェットが読み込まれない",
+    "path": "/windows/windows-widgets-not-loading/",
+    "steps": [
+      "Microsoftアカウントと通信の状態を確認する",
+      "ウィジェット機能の再起動とStore更新を確認する",
+      "VPNと職場・学校のポリシーを確認する"
+    ]
+  },
+  {
+    "category": "windows",
+    "slug": "windows-language-bar-missing",
+    "title": "WindowsでIMEの「あ」「A」表示が消えた",
+    "path": "/windows/windows-language-bar-missing/",
+    "steps": [
+      "タスクバーの入力インジケーター表示を確認する",
+      "Win＋Spaceで日本語入力へ切り替えられるか試す",
+      "言語設定に日本語キーボードがあるか確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-quick-settings-missing",
+    "title": "Androidのクイック設定ボタンが消えた",
+    "path": "/android/android-quick-settings-missing/",
+    "steps": [
+      "通知パネルを完全展開して編集ボタンを探す",
+      "編集画面で対象タイルが非表示でないか確認する",
+      "メーカー独自機能や管理制限を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-keyboard-language-switch-fails",
+    "title": "Androidでキーボードの日本語と英語を切り替えられない",
+    "path": "/android/android-keyboard-language-switch-fails/",
+    "steps": [
+      "使用しているキーボードアプリと入力言語を確認する",
+      "スペースキー長押しや言語切替キーを試す",
+      "キーボードの更新と端末再起動を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-alarm-not-ringing",
+    "title": "Androidのアラームが鳴らない",
+    "path": "/android/android-alarm-not-ringing/",
+    "steps": [
+      "アラーム音量と設定時刻を確認する",
+      "おやすみモードと電池最適化を確認する",
+      "別の音で短いテストアラームを試す"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-screen-recording-no-sound",
+    "title": "Androidの画面録画で音が入らない",
+    "path": "/android/android-screen-recording-no-sound/",
+    "steps": [
+      "録画開始時の音声ソースを確認する",
+      "マイク許可と他アプリによる占有を確認する",
+      "録画対象アプリの内部音声制限を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-auto-rotate-stuck",
+    "title": "Androidの画面が自動回転しない",
+    "path": "/android/android-auto-rotate-stuck/",
+    "steps": [
+      "クイック設定の自動回転が有効か確認する",
+      "動画アプリとホーム画面で挙動を比較する",
+      "再起動してセンサーの反応を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-file-transfer-usb-not-working",
+    "title": "AndroidをUSB接続してもPCに写真が表示されない",
+    "path": "/android/android-file-transfer-usb-not-working/",
+    "steps": [
+      "画面ロックを解除しUSBの用途をファイル転送にする",
+      "データ転送対応ケーブルと別ポートで試す",
+      "Windows側の接続通知とUSB設定を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-sim-data-slow",
+    "title": "Androidのモバイル通信だけ極端に遅い",
+    "path": "/android/android-sim-data-slow/",
+    "steps": [
+      "Wi-Fiとモバイル通信で速度を比較する",
+      "データ節約と契約の速度制限を確認する",
+      "通信障害と電波状況を別の場所で確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-fingerprint-enrollment-fails",
+    "title": "Androidで指紋を登録できない",
+    "path": "/android/android-fingerprint-enrollment-fails/",
+    "steps": [
+      "センサーと指を乾いた清潔な状態にする",
+      "画面保護フィルムの対応と厚さを確認する",
+      "更新後から問題が起きたかを確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-photos-backup-paused",
+    "title": "AndroidのGoogleフォトのバックアップが止まる",
+    "path": "/android/android-photos-backup-paused/",
+    "steps": [
+      "バックアップ状態とGoogleの保存容量を確認する",
+      "Wi-Fiと省電力・データ節約の制限を確認する",
+      "バックアップ対象フォルダーとアカウントを確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-app-links-open-browser",
+    "title": "Androidでアプリのリンクがブラウザで開いてしまう",
+    "path": "/android/android-app-links-open-browser/",
+    "steps": [
+      "既定で開くリンクの設定を確認する",
+      "対象アプリが更新済みか確認する",
+      "別の同サービスのURLでも起きるか調べる"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-notification-history-empty",
+    "title": "Androidの通知履歴が残らない",
+    "path": "/android/android-notification-history-empty/",
+    "steps": [
+      "通知履歴の設定が有効か確認する",
+      "有効化した後の新着通知で試す",
+      "メーカーごとの履歴保存機能を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-dark-mode-stuck",
+    "title": "Androidのダークモードが解除できない",
+    "path": "/android/android-dark-mode-stuck/",
+    "steps": [
+      "ダークテーマのスケジュールを確認する",
+      "バッテリーセーバーと個別アプリのテーマを確認する",
+      "再起動と端末更新で変化を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-homescreen-widgets-freeze",
+    "title": "Androidのホーム画面ウィジェットが更新されない",
+    "path": "/android/android-homescreen-widgets-freeze/",
+    "steps": [
+      "アプリ本体で新しい情報が表示されるか確認する",
+      "バックグラウンド通信と電池制限を確認する",
+      "再配置の前にウィジェット設定を控える"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-play-store-pending-download",
+    "title": "AndroidのPlayストアでダウンロード保留が続く",
+    "path": "/android/android-play-store-pending-download/",
+    "steps": [
+      "Wi-Fiと空き容量とほかの更新待ちを確認する",
+      "自動更新の通信条件とPlayストア再起動を試す",
+      "アカウント同期とサービス障害を確認する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-screen-color-yellow",
+    "title": "Androidの画面が黄色く見える・色が変わった",
+    "path": "/android/android-screen-color-yellow/",
+    "steps": [
+      "夜間モードとブルーライト軽減を確認する",
+      "色補正とカラープロファイルを確認する",
+      "スクリーンショットを別端末で見て表示側の問題か比較する"
+    ]
+  },
+  {
+    "category": "android",
+    "slug": "android-wifi-calling-unavailable",
+    "title": "AndroidでWi-Fi通話を設定できない",
+    "path": "/android/android-wifi-calling-unavailable/",
+    "steps": [
+      "契約先と機種がWi-Fi通話に対応するか確認する",
+      "SIM契約と通話設定の表示を確認する",
+      "通信事業者の対応地域と条件を確認する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-airdrop-device-not-visible",
+    "title": "MacのAirDropに相手の端末が表示されない",
+    "path": "/mac/mac-airdrop-device-not-visible/",
+    "steps": [
+      "両端末のWi-FiとBluetoothをオンにする",
+      "AirDropの受信対象と端末の距離を確認する",
+      "VPNと共有設定の影響を確認して再試行する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-keyboard-shortcuts-not-working",
+    "title": "Macでキーボードショートカットが効かない",
+    "path": "/mac/mac-keyboard-shortcuts-not-working/",
+    "steps": [
+      "システム全体と特定アプリで動作を比較する",
+      "キーボードショートカットの競合を確認する",
+      "外付けキーボードの修飾キー配列を確認する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-external-drive-readonly",
+    "title": "Macで外付けSSDが読み取り専用になる",
+    "path": "/mac/mac-external-drive-readonly/",
+    "steps": [
+      "ディスクユーティリティでファイルシステムを確認する",
+      "NTFSなど書き込み非対応の形式か調べる",
+      "データをバックアップするまで初期化しない"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-spotlight-missing-files",
+    "title": "MacのSpotlight検索にファイルが出てこない",
+    "path": "/mac/mac-spotlight-missing-files/",
+    "steps": [
+      "Finderで対象ファイルの存在を確認する",
+      "Spotlightのプライバシー対象を確認する",
+      "インデックス再作成の前に対象ボリュームを確認する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-stage-manager-windows-missing",
+    "title": "Macのステージマネージャでウィンドウが見つからない",
+    "path": "/mac/mac-stage-manager-windows-missing/",
+    "steps": [
+      "Mission Controlでアプリのウィンドウを探す",
+      "ステージマネージャの表示設定を確認する",
+      "外部ディスプレイ側に移動していないか確認する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-microphone-permission-missing",
+    "title": "Macでアプリにマイクのアクセス許可が出ない",
+    "path": "/mac/mac-microphone-permission-missing/",
+    "steps": [
+      "プライバシーとセキュリティでマイク許可を確認する",
+      "アプリ再起動で権限ダイアログの表示を試す",
+      "ブラウザ版ならサイト別の権限を確認する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-safari-downloads-fail",
+    "title": "MacのSafariでファイルをダウンロードできない",
+    "path": "/mac/mac-safari-downloads-fail/",
+    "steps": [
+      "保存先フォルダーの空き容量と権限を確認する",
+      "Safari設定のダウンロード先を確認する",
+      "拡張機能と特定サイトの制限を比較する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-external-display-blurry",
+    "title": "Macの外部ディスプレイの文字がぼやける",
+    "path": "/mac/mac-external-display-blurry/",
+    "steps": [
+      "モニターの推奨解像度と表示倍率を確認する",
+      "HDMIとUSB-Cのケーブル仕様を確認する",
+      "別のディスプレイか端子で比較する"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-finder-tags-not-syncing",
+    "title": "MacのFinderタグがほかの端末と揃わない",
+    "path": "/mac/mac-finder-tags-not-syncing/",
+    "steps": [
+      "ファイル保存先がiCloud Drive内か確認する",
+      "Apple AccountとiCloud Driveの同期を確認する",
+      "別ファイルのタグ変更で反映を試す"
+    ]
+  },
+  {
+    "category": "mac",
+    "slug": "mac-bluetooth-mouse-lag",
+    "title": "MacのBluetoothマウスがカクつく",
+    "path": "/mac/mac-bluetooth-mouse-lag/",
+    "steps": [
+      "電池残量と干渉源を確認する",
+      "別のBluetooth機器を切り離して比較する",
+      "macOSとマウスの更新を確認する"
+    ]
+  }
+]
