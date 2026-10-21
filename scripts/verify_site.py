@@ -25,7 +25,10 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://sora-navi-jp.com"
-EXPECTED_ARTICLES = 400
+EXPECTED_ARTICLES = 400 + sum(
+    len(json.loads(path.read_text(encoding="utf-8")))
+    for path in (ROOT / "data" / "daily").glob("????-??-??.json")
+)
 USER_AGENT = "SORA-Site-Verification/1.0"
 INLINE_AD_ID = "23a16b749b5224c46c26784399bdfcad"
 
@@ -159,6 +162,19 @@ def validate_sitemap(index: list[dict[str, str]], urls: list[str]) -> list[str]:
     missing = sorted(article_paths - sitemap_paths)
     if missing:
         errors.append(f"sitemap missing {len(missing)} articles; first: {missing[0]}")
+    xml_root = ElementTree.parse(ROOT / "sitemap.xml").getroot()
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    lastmods = {
+        loc.text.strip(): (node.findtext("sm:lastmod", namespaces=namespace) or "")
+        for node in xml_root.findall("sm:url", namespace)
+        if (loc := node.find("sm:loc", namespace)) is not None and loc.text
+    }
+    for plan_file in (ROOT / "data" / "daily").glob("????-??-??.json"):
+        day = plan_file.stem
+        for record in json.loads(plan_file.read_text(encoding="utf-8")):
+            url = ORIGIN + record["path"]
+            if lastmods.get(url) != day:
+                errors.append(f"daily article sitemap lastmod mismatch: {url}")
     for url in urls:
         path = local_path(canonical_path(url))
         if not path.is_file():

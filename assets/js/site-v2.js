@@ -23,14 +23,14 @@
     return '<div class="sora-v2-header-inner">' + brandMarkup() +
       '<button aria-controls="sora-v2-nav" aria-expanded="false" aria-label="メニューを開く" class="sora-v2-menu" type="button">☰</button>' +
       '<nav aria-label="メインナビゲーション" class="sora-v2-nav" id="sora-v2-nav">' +
-      '<a href="/">トップ</a><a href="/categories/">カテゴリ</a><a href="/articles/">全400記事</a>' +
+      '<a href="/">トップ</a><a href="/categories/">カテゴリ</a><a href="/articles/">記事一覧</a>' +
       '<a href="/articles.html">SNS・AI</a><a href="/about/">このサイトについて</a></nav></div>';
   }
 
   function footerMarkup() {
     return '<div class="sora-v2-footer-grid"><div>' + brandMarkup() +
       '<p>スマホ、PC、ブラウザ、Webサービスの不調を、危険の少ない確認から順番に切り分ける実用ガイドです。</p></div>' +
-      '<nav aria-label="フッターのガイド"><strong>ガイド</strong><a href="/articles/">全400記事</a>' +
+      '<nav aria-label="フッターのガイド"><strong>ガイド</strong><a href="/articles/">記事一覧</a>' +
       '<a href="/categories/">カテゴリ一覧</a><a href="/iphone/">iPhone</a><a href="/articles.html">SNS・AI</a></nav>' +
       '<nav aria-label="運営情報"><strong>運営情報</strong><a href="/about/">このサイトについて</a>' +
       '<a href="/contact/">お問い合わせ</a><a href="/privacy/">プライバシー</a><a href="/disclaimer/">免責事項</a></nav></div>' +

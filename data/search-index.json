@@ -1,5 +1,155 @@
 [
   {
+    "title": "Windows 11でノートPCのタッチパッドが反応しないときの確認手順",
+    "description": "Windows 11のタッチパッドだけが動かないとき、設定、外付けマウス、ドライバーの順に原因を切り分ける手順を案内します。",
+    "url": "/windows/touchpad-not-working-windows-11/"
+  },
+  {
+    "title": "Windows 11のタッチスクリーンが反応しないときの確認手順",
+    "description": "Windows 11のタッチスクリーンが反応しないときの確認手順。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/windows-touchscreen-not-responding/"
+  },
+  {
+    "title": "Windows 11でクリップボードの履歴が表示されないとき",
+    "description": "Windows 11でクリップボードの履歴が表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/clipboard-history-not-showing-windows-11/"
+  },
+  {
+    "title": "Windows 11からワイヤレスディスプレイに接続できないとき",
+    "description": "Windows 11からワイヤレスディスプレイに接続できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/wireless-display-not-connecting-windows-11/"
+  },
+  {
+    "title": "Windows 11で画面の明るさが勝手に変わるとき",
+    "description": "Windows 11で画面の明るさが勝手に変わるとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/windows-auto-brightness-changing/"
+  },
+  {
+    "title": "Windows 11で撮ったスクリーンショットが見つからないとき",
+    "description": "Windows 11で撮ったスクリーンショットが見つからないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/windows-screenshot-file-not-found/"
+  },
+  {
+    "title": "Windows 11で特定アプリだけカメラを使えないとき",
+    "description": "Windows 11で特定アプリだけカメラを使えないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/windows-camera-permission-blocked/"
+  },
+  {
+    "title": "Windows 11で夜間モードをオンにしても画面の色が変わらないとき",
+    "description": "Windows 11で夜間モードをオンにしても画面の色が変わらないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/windows/night-light-not-changing-color-windows/"
+  },
+  {
+    "title": "MacでTouch IDを使ってロック解除できないとき",
+    "description": "MacでTouch IDを使ってロック解除できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/mac-touch-id-not-unlocking/"
+  },
+  {
+    "title": "MacのSafariでページが読み込めないとき",
+    "description": "MacのSafariでページが読み込めないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/safari-pages-not-loading-mac/"
+  },
+  {
+    "title": "MacでTime Machineのバックアップを作成できないとき",
+    "description": "MacでTime Machineのバックアップを作成できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/time-machine-backup-failed/"
+  },
+  {
+    "title": "MacのAirPlayで接続先のテレビが表示されないとき",
+    "description": "MacのAirPlayで接続先のテレビが表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/airplay-device-not-showing-mac/"
+  },
+  {
+    "title": "iPhoneをMacにつないでもFinderに表示されないとき",
+    "description": "iPhoneをMacにつないでもFinderに表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/iphone-not-showing-in-finder-mac/"
+  },
+  {
+    "title": "Macの外付けディスプレイが低解像度でぼやけるとき",
+    "description": "Macの外付けディスプレイが低解像度でぼやけるとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/external-display-low-resolution-mac/"
+  },
+  {
+    "title": "Macでアプリの通知が来ないときに集中モードを確認する方法",
+    "description": "Macでアプリの通知が来ないときに集中モードを確認する方法。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/mac/mac-notifications-silent-focus/"
+  },
+  {
+    "title": "Gmailでアーカイブしたメールが見つからないとき",
+    "description": "Gmailでアーカイブしたメールが見つからないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/gmail-archived-mail-not-found/"
+  },
+  {
+    "title": "Gmailで必要なメールが迷惑メールに入るとき",
+    "description": "Gmailで必要なメールが迷惑メールに入るとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/gmail-legitimate-mail-in-spam/"
+  },
+  {
+    "title": "Gmailのメールが勝手にゴミ箱へ入るときはフィルタを確認",
+    "description": "Gmailのメールが勝手にゴミ箱へ入るときはフィルタを確認。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/gmail-filter-moves-mail-to-trash/"
+  },
+  {
+    "title": "パソコン版Gmailで新着メールの通知が出ないとき",
+    "description": "パソコン版Gmailで新着メールの通知が出ないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/gmail-desktop-notifications-missing/"
+  },
+  {
+    "title": "Gmailで誤ってブロックした送信者を解除する前の確認",
+    "description": "Gmailで誤ってブロックした送信者を解除する前の確認。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/gmail-accidentally-blocked-sender/"
+  },
+  {
+    "title": "Googleカレンダーの招待予定が表示されないとき",
+    "description": "Googleカレンダーの招待予定が表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/google-calendar-invite-not-appearing/"
+  },
+  {
+    "title": "Googleドライブのファイルをオフラインで開けないとき",
+    "description": "Googleドライブのファイルをオフラインで開けないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/google/drive-offline-file-unavailable/"
+  },
+  {
+    "title": "Androidで画面が自動回転しないときの確認方法",
+    "description": "Androidで画面が自動回転しないときの確認方法。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/android/android-auto-rotate-not-working/"
+  },
+  {
+    "title": "Androidのテザリングに接続できるのにネットが使えないとき",
+    "description": "Androidのテザリングに接続できるのにネットが使えないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/android/android-hotspot-connected-no-internet/"
+  },
+  {
+    "title": "Androidのバックアップが完了しないときに確認すること",
+    "description": "Androidのバックアップが完了しないときに確認すること。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/android/android-backup-not-complete/"
+  },
+  {
+    "title": "Androidで特定アプリにカメラを許可できないとき",
+    "description": "Androidで特定アプリにカメラを許可できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/android/android-camera-permission-denied-app/"
+  },
+  {
+    "title": "Chromeで外国語ページの翻訳が表示されないとき",
+    "description": "Chromeで外国語ページの翻訳が表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/browser/chrome-page-translation-not-offered/"
+  },
+  {
+    "title": "Chromeで特定サイトに位置情報を許可できないとき",
+    "description": "Chromeで特定サイトに位置情報を許可できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/browser/chrome-site-location-blocked/"
+  },
+  {
+    "title": "Chromeで住所や連絡先が自動入力されないとき",
+    "description": "Chromeで住所や連絡先が自動入力されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/browser/chrome-address-autofill-not-working/"
+  },
+  {
+    "title": "Chromeのページだけ文字や画像が大きすぎるとき",
+    "description": "Chromeのページだけ文字や画像が大きすぎるとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+    "url": "/browser/chrome-page-zoom-too-large/"
+  },
+  {
     "title": "Windows 11でWi-Fi接続済みなのにインターネットが使えない",
     "description": "Windows 11でWi-Fi接続済みなのにインターネットが使えないときに、原因を切り分け、データを消さずに試せる対処手順を解説します。",
     "url": "/windows/windows-wifi-connected-no-internet/"

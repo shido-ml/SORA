@@ -1,0 +1,932 @@
+[
+  {
+    "topic": "Windows 11 ノートPCのタッチパッドが反応しない",
+    "category": "windows",
+    "path": "/windows/touchpad-not-working-windows-11/",
+    "slug": "touchpad-not-working-windows-11",
+    "title": "Windows 11でノートPCのタッチパッドが反応しないときの確認手順",
+    "description": "Windows 11のタッチパッドだけが動かないとき、設定、外付けマウス、ドライバーの順に原因を切り分ける手順を案内します。",
+    "answer": "最初に外付けマウスとキーボードでWindowsが操作できるかを確認します。タッチパッドが無効になっていないかを調べ、更新後に始まった症状ならWindows Updateとデバイスマネージャーでドライバーの状態を確認してください。",
+    "steps": [
+      "USBまたはBluetoothマウスでポインターが動くか確かめ、PC全体のフリーズとタッチパッドだけの不調を分ける",
+      "設定のBluetoothとデバイスにあるタッチパッドのオン・オフを確認し、機種固有のタッチパッド切替キーがないか取扱説明書で調べる",
+      "Windows Updateを確認して更新を適用し、再起動後にタッチパッドをもう一度試す",
+      "デバイスマネージャーのヒューマンインターフェイスデバイスまたはマウスとそのほかのポインティングデバイスで、該当ドライバーの状態と更新を確認する"
+    ],
+    "causes": [
+      "タッチパッドの設定や機種固有の切替キーで入力が無効になっている",
+      "Windows更新やドライバーの変更後にタッチパッド用ドライバーが正常に読み込まれていない",
+      "外付けマウスでは正常なのに内蔵入力だけ反応せず、本体側の故障が疑われる"
+    ],
+    "diagnosis": "外付けマウスも動かず画面全体が固まっているなら、タッチパッド専用の問題として進めず、PCの応答や再起動を先に確認します。外付けマウスだけ正常なら入力先を切り分けられます。症状がWindows Updateの直後か、落下・水濡れの直後かも記録してください。ドライバーの操作は、対象機器を確認してから行います。",
+    "caution": "ドライバーを削除する操作は、入力手段や再インストール方法が確保できてから行ってください。業務用・学校用PCでは管理者の設定によって変更できない場合があります。底面を開けたり分解したりせず、物理的な損傷が疑われるときはメーカーに相談します。",
+    "escalation": "設定と更新を確認しても内蔵タッチパッドだけが反応しない場合は、PCの型番、Windowsのバージョン、デバイスマネージャーの表示、症状が始まった時期を添えてメーカーへ相談します。",
+    "source_label": "Microsoft サポート：Windows のタッチパッドの問題を解決する",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/input-devices/fix-touchpad-problems-in-windows",
+    "related_existing": [
+      "/windows/windows-keyboard-wrong-characters/",
+      "/peripherals/bluetooth-mouse-not-working-windows/",
+      "/windows/windows-pc-running-slow/"
+    ],
+    "fact_check": "2026-10-21にMicrosoftの一次情報を確認。ドライバー更新はWindows Updateまたはデバイスマネージャー、再インストールもデバイスマネージャーと案内されている。機種固有キーは一般化せず取扱説明書の確認に留めた。"
+  },
+    {
+      "topic": "Windows 11のタッチスクリーンが反応しないときの確認手順",
+      "category": "windows",
+      "path": "/windows/windows-touchscreen-not-responding/",
+      "slug": "windows-touchscreen-not-responding",
+      "title": "Windows 11のタッチスクリーンが反応しないときの確認手順",
+      "description": "Windows 11のタッチスクリーンが反応しないときの確認手順。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "キーボードやマウスでは操作できるかを確かめ、画面全体のフリーズとタッチ入力だけの問題を分けます。再起動後も続く場合は、Windows Updateとタッチスクリーン用デバイスの状態を順に確認します。",
+      "steps": [
+        "マウスで画面を操作し、タッチ以外の入力が正常か確認する",
+        "PCを再起動し、画面全体と一部領域のどちらで反応しないか試す",
+        "Windows Updateとオプションの更新プログラムを確認する",
+        "デバイスマネージャーでHID準拠タッチスクリーンが無効になっていないか確認する"
+      ],
+      "causes": [
+        "画面全体のフリーズで入力を受け付けない",
+        "更新やドライバーの状態によってタッチ入力だけが利用できない",
+        "画面の一部だけ反応せずパネル側に異常がある"
+      ],
+      "diagnosis": "マウスで操作できるならタッチ機能に絞って確認できます。画面の端だけ、特定アプリだけ、サインイン画面を含めて全体のどこで起こるかを分けて記録してください。落下や液体との接触後に始まった場合は、ソフトウェアの設定だけでは改善しない可能性があります。",
+      "caution": "デバイスマネージャーで無効化や削除を試す前に、マウスまたはキーボードで操作できる状態を確保してください。画面を強く押したり分解したりせず、破損が疑われる場合はメーカーの案内を優先します。",
+      "escalation": "更新とデバイスの状態を確認してもタッチ入力が戻らない場合は、反応しない範囲とPCの型番を記録してメーカーに相談します。",
+      "source_label": "Microsoft サポート：Windows でタッチスクリーンが動作しない場合",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/input-devices/what-to-try-if-a-touchscreen-doesn-t-work-in-windows",
+      "related_existing": [
+        "/windows/windows-pc-running-slow/",
+        "/windows/windows-settings-not-opening/",
+        "/windows/windows-update-stuck/"
+      ],
+      "fact_check": "Microsoftの案内で再起動後に更新プログラムを確認する順序を確認した。HID準拠タッチスクリーンの有効化手順も同社の公式説明で照合した。"
+    },
+    {
+      "topic": "Windows 11でクリップボードの履歴が表示されないとき",
+      "category": "windows",
+      "path": "/windows/clipboard-history-not-showing-windows-11/",
+      "slug": "clipboard-history-not-showing-windows-11",
+      "title": "Windows 11でクリップボードの履歴が表示されないとき",
+      "description": "Windows 11でクリップボードの履歴が表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "WindowsキーとVキーで履歴を開き、有効化を求める表示があればオンにします。再起動後はピン留め以外の履歴が消える仕様なので、以前の内容が見えないことと機能が動かないことを分けてください。",
+      "steps": [
+        "WindowsキーとVキーを押し、履歴画面が開くか確認する",
+        "有効化ボタンが表示された場合は内容を読んで履歴をオンにする",
+        "短いテキストを新しくコピーして履歴に追加されるか試す",
+        "再起動前にコピーした項目を探している場合は、ピン留めの有無を確認する"
+      ],
+      "causes": [
+        "クリップボード履歴が無効になっている",
+        "再起動によってピン留め以外の履歴が消えた",
+        "コピー自体が成功していない、またはアプリ側で制限されている"
+      ],
+      "diagnosis": "まず新しい短文をコピーして、履歴に現れるかどうかを確かめます。新規の項目は見えるのに過去の項目だけない場合、再起動や履歴の消去による可能性が高くなります。別のアプリからコピーした内容は見えるかも比較し、一つのアプリに限る問題かを分けます。",
+      "caution": "履歴を一括消去すると保存した項目を失う可能性があります。共有PCでは履歴に個人情報が残る場合もあるため、有効化する前に利用環境を確認してください。消えた履歴の復元を保証するツールは案内しません。",
+      "escalation": "新しいテキストも履歴に出ず、設定を変更できない場合は、管理端末の制限の有無を管理者に確認します。",
+      "source_label": "Microsoft サポート：クリップボードの使用",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/apps/using-the-clipboard",
+      "related_existing": [
+        "/windows/windows-keyboard-wrong-characters/",
+        "/windows/windows-settings-not-opening/",
+        "/windows/file-explorer-not-responding/"
+      ],
+      "fact_check": "Microsoftの公式説明でWindowsキーとVキーによる初回有効化、再起動時の履歴消去とピン留めの例外を確認した。"
+    },
+    {
+      "topic": "Windows 11からワイヤレスディスプレイに接続できないとき",
+      "category": "windows",
+      "path": "/windows/wireless-display-not-connecting-windows-11/",
+      "slug": "wireless-display-not-connecting-windows-11",
+      "title": "Windows 11からワイヤレスディスプレイに接続できないとき",
+      "description": "Windows 11からワイヤレスディスプレイに接続できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "最初にPCと表示先がMiracastに対応するかを確認します。WindowsキーとKキーで接続候補を開き、Wi-Fiがオンか、表示先が受信待ちかを確かめてから再接続します。",
+      "steps": [
+        "WindowsキーとKキーを押し、非対応の案内が出ないか確認する",
+        "PC側のWi-Fiをオンにし、表示先の電源とワイヤレス接続設定を確認する",
+        "表示先が候補に出るか調べ、近くで再試行する",
+        "接続先の取扱説明書でMiracast対応と受信モードの操作を確認する"
+      ],
+      "causes": [
+        "PCまたは表示先がMiracastに対応していない",
+        "PCのWi-Fiがオフになっている",
+        "表示先が受信待ちでない、または接続先が異なる"
+      ],
+      "diagnosis": "HDMIケーブルなら映る場合も、ワイヤレス接続の対応状況は別に確認が必要です。WindowsキーとKキーで非対応メッセージが出るなら、設定変更を繰り返さずPCの仕様を確認してください。候補に出るのに接続できない場合は、表示先の入力と受信状態を確認します。",
+      "caution": "ワイヤレス表示のために無関係なドライバーやネットワーク設定を一括削除しないでください。会議室の共有ディスプレイでは他人の画面に接続しないよう機器名を確認します。非対応機器では有線接続が必要な場合があります。",
+      "escalation": "両機器の対応を確認しても接続できない場合は、表示先の型番、PCの型番、WindowsキーとKキーの表示を添えてメーカーに相談します。",
+      "source_label": "Microsoft サポート：ワイヤレスディスプレイへの接続の問題",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/display-graphics/fix-connections-to-wireless-displays-or-docks-in-windows",
+      "related_existing": [
+        "/windows/second-monitor-not-detected/",
+        "/windows/windows-black-screen-with-cursor/",
+        "/windows/windows-wifi-connected-no-internet/"
+      ],
+      "fact_check": "Microsoftの一次資料でWindowsキーとKキーによるMiracast対応確認、PCのWi-Fiオン、表示先の対応確認を照合した。"
+    },
+    {
+      "topic": "Windows 11で画面の明るさが勝手に変わるとき",
+      "category": "windows",
+      "path": "/windows/windows-auto-brightness-changing/",
+      "slug": "windows-auto-brightness-changing",
+      "title": "Windows 11で画面の明るさが勝手に変わるとき",
+      "description": "Windows 11で画面の明るさが勝手に変わるとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "内蔵ディスプレイの明るさ自動調整設定と、HDRを使っているかを先に確認します。部屋の明るさや表示内容を変えたときだけ変化するなら、対応機種の自動調整が動作している可能性があります。",
+      "steps": [
+        "設定からシステム、ディスプレイを開き、明るさの項目を確認する",
+        "照明条件に応じた明るさの自動調整がある機種では、その設定を確認する",
+        "HDRディスプレイを使用中ならHDR設定と変化のタイミングを確認する",
+        "手動の明るさスライダーで調整できるか確かめ、外部ディスプレイだけなら本体側の設定も調べる"
+      ],
+      "causes": [
+        "周囲の照明に応じた自動調整が有効になっている",
+        "HDR表示時の輝度調整が働いている",
+        "外部ディスプレイ固有の設定が明るさを制御している"
+      ],
+      "diagnosis": "明るさが変わる瞬間に部屋の照明、ACアダプターの接続、HDRコンテンツの表示が変わっていないか記録します。内蔵画面だけか外部画面だけかを比較すると、Windows側とディスプレイ本体側を分けられます。項目が表示されない機種では機能が非対応の可能性を考えます。",
+      "caution": "画面が突然消える、ちらつく、焦げた臭いがする場合は単なる自動調整と決めつけず使用を中断してください。色の設定やドライバーを一度に変更すると原因が追いにくくなるため、設定は一つずつ試します。",
+      "escalation": "手動調整もできず、再起動後も異常な変化が続く場合は、機種と画面の種類を添えてメーカーに相談します。",
+      "source_label": "Microsoft サポート：ディスプレイの明るさと色を変更する",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows",
+      "related_existing": [
+        "/windows/second-monitor-not-detected/",
+        "/windows/windows-black-screen-with-cursor/",
+        "/windows/windows-pc-running-slow/"
+      ],
+      "fact_check": "Microsoftの公式案内で照明に応じた明るさの自動調整、内蔵ディスプレイの設定、HDR時の輝度の挙動を確認した。"
+    },
+    {
+      "topic": "Windows 11で撮ったスクリーンショットが見つからないとき",
+      "category": "windows",
+      "path": "/windows/windows-screenshot-file-not-found/",
+      "slug": "windows-screenshot-file-not-found",
+      "title": "Windows 11で撮ったスクリーンショットが見つからないとき",
+      "description": "Windows 11で撮ったスクリーンショットが見つからないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "使ったショートカットで保存先が異なります。WindowsキーとPrint Screenキーで撮った画像は画像フォルダー内のスクリーンショットを確認し、WindowsキーとShiftキーとSキーの場合は切り取りツールとクリップボード側を確認します。",
+      "steps": [
+        "使ったキーがWindowsキーとPrint Screenキーか、WindowsキーとShiftキーとSキーかを思い出す",
+        "エクスプローラーの画像フォルダー内にあるスクリーンショットを確認する",
+        "切り取りツールを開き、撮影直後の通知や編集画面が残っていないか確認する",
+        "新たにテスト画像を撮り、直後にどこへ表示されるかを確認する"
+      ],
+      "causes": [
+        "撮影方法ごとに画像ファイルとクリップボードの扱いが異なる",
+        "保存場所として別の画像フォルダーを探している",
+        "撮影後に保存操作を完了していない"
+      ],
+      "diagnosis": "ファイルを探す前に使った撮影方法を分けることが重要です。WindowsキーとPrint Screenキーの方法なら画像フォルダー内のスクリーンショットを探します。切り取りツールの方法なら、撮影しただけで目的の場所へファイル保存したと思い込まないよう、アプリ画面と通知を確かめます。",
+      "caution": "探している画像が機密情報を含む場合、公開フォルダーやチャットに試し貼り付けしないでください。検索結果に出ないからといって一括削除や復元ツールをすぐ実行せず、まず撮影方法と保存先を確認します。",
+      "escalation": "テスト撮影でも画像が残らず、切り取りツールが起動しない場合は、表示されたエラーとWindowsの版を記録してサポートへ相談します。",
+      "source_label": "Microsoft サポート：画面印刷のキーボードショートカット",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/%E7%94%BB%E9%9D%A2%E5%8D%B0%E5%88%B7%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89-%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88-601210c0-b3a9-7b58-bc40-bae4dcf5f108",
+      "related_existing": [
+        "/windows/file-explorer-not-responding/",
+        "/windows/windows-thumbnails-not-showing/",
+        "/windows/windows-c-drive-space-disappearing/"
+      ],
+      "fact_check": "Microsoftの説明でWindowsキーとPrint Screenキーの保存先が画像内スクリーンショットであること、切り取りツールの撮影ショートカットを確認した。"
+    },
+    {
+      "topic": "Windows 11で特定アプリだけカメラを使えないとき",
+      "category": "windows",
+      "path": "/windows/windows-camera-permission-blocked/",
+      "slug": "windows-camera-permission-blocked",
+      "title": "Windows 11で特定アプリだけカメラを使えないとき",
+      "description": "Windows 11で特定アプリだけカメラを使えないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "カメラアプリでは映るのに会議アプリだけ映らない場合は、デバイス全体のカメラアクセスとアプリ別の許可を確認します。デスクトップアプリはMicrosoft Storeアプリの一覧に出ない場合があります。",
+      "steps": [
+        "Windowsのカメラアプリで映像が表示されるか試す",
+        "設定のプライバシーとセキュリティからカメラへのアクセスを確認する",
+        "問題のアプリについてカメラアクセスの許可とアプリ内の入力先を確認する",
+        "デスクトップアプリの場合は該当するデスクトップアプリ向けアクセス設定を確認する"
+      ],
+      "causes": [
+        "デバイス全体のカメラアクセスが無効",
+        "特定アプリへのカメラ許可が無効",
+        "アプリ側で別のカメラが入力先に選ばれている"
+      ],
+      "diagnosis": "カメラアプリでも映らない場合は、権限だけでなく接続やドライバーの問題を疑います。カメラアプリでは正常で特定アプリだけ黒い場合は、許可設定とアプリ内の入力先を優先します。設定画面にアプリ名がない場合は、デスクトップアプリかどうかを確認してください。",
+      "caution": "権限は必要なアプリだけに許可し、使用後に不要な許可を見直してください。管理者が制御する職場・学校のPCで設定を変更できない場合は、別の方法で制限を回避しようとせず管理者に相談します。",
+      "escalation": "カメラアプリは正常なのにアプリ別設定を確認しても映らない場合は、アプリ名と権限画面の状態を添えてアプリ提供元へ相談します。",
+      "source_label": "Microsoft サポート：カメラへのアプリのアクセス許可を管理する",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/privacy/manage-app-permissions-for-a-camera-in-windows",
+      "related_existing": [
+        "/windows/windows-camera-error-0xa00f4244/",
+        "/sns/zoom-camera-not-working/",
+        "/mac/mac-camera-not-working/"
+      ],
+      "fact_check": "Microsoft公式資料でデバイス全体とStoreアプリ別のカメラアクセス、一覧にないデスクトップアプリの扱いを確認した。"
+    },
+    {
+      "topic": "Windows 11で夜間モードをオンにしても画面の色が変わらないとき",
+      "category": "windows",
+      "path": "/windows/night-light-not-changing-color-windows/",
+      "slug": "night-light-not-changing-color-windows",
+      "title": "Windows 11で夜間モードをオンにしても画面の色が変わらないとき",
+      "description": "Windows 11で夜間モードをオンにしても画面の色が変わらないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "夜間モードがオンかを確認し、強度スライダーを動かして変化を比べます。時間指定を使っている場合はスケジュールの設定とWindowsの時刻を確認し、外部ディスプレイだけの問題かも分けます。",
+      "steps": [
+        "設定のシステムからディスプレイ、夜間モードを開いてオンの状態を確認する",
+        "強度スライダーを動かし、内蔵画面の色が変わるか確かめる",
+        "スケジュールを使う場合は開始時刻とWindowsの時計を確認する",
+        "外部ディスプレイだけ変化しない場合は画面側の設定と接続方法を確認する"
+      ],
+      "causes": [
+        "夜間モードがオフ、または強度が低い",
+        "スケジュール時刻と実際の時計が合っていない",
+        "ディスプレイ側の色設定や接続状況が異なる"
+      ],
+      "diagnosis": "夜間モードを手動でオンにした場合と、時刻に任せた場合を別々に試してください。手動で色が変わるのに予定時刻には変わらないなら、時刻やスケジュールに絞れます。内蔵画面と外部画面で違う場合は、画面ごとの表示設定と接続経路を記録します。",
+      "caution": "画面の色が大きく変化する症状を夜間モードだけで説明できない場合があります。色プロファイルの削除やドライバーの入れ直しを先に行わず、設定を一つずつ確認してください。作業に色の正確さが必要なら変更前の設定を控えます。",
+      "escalation": "設定と時刻を確認しても手動の切替で色が変わらない場合は、Windowsとディスプレイの型番を添えてサポートへ相談します。",
+      "source_label": "Microsoft サポート：ディスプレイの明るさと色を変更する",
+      "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows",
+      "related_existing": [
+        "/windows/windows-time-wrong-not-syncing/",
+        "/windows/second-monitor-not-detected/",
+        "/windows/windows-black-screen-with-cursor/"
+      ],
+      "fact_check": "Microsoftの一次資料で夜間モードの設定場所、強度スライダー、スケジュール設定を確認した。表示機種ごとの差は断定せず切り分けとして記述した。"
+    },
+    {
+      "topic": "MacでTouch IDを使ってロック解除できないとき",
+      "category": "mac",
+      "path": "/mac/mac-touch-id-not-unlocking/",
+      "slug": "mac-touch-id-not-unlocking",
+      "title": "MacでTouch IDを使ってロック解除できないとき",
+      "description": "MacでTouch IDを使ってロック解除できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "再起動直後などパスワード入力が必要な場面かを先に確かめます。通常の解除でも認識しない場合は指とセンサーを清潔で乾いた状態にし、Touch IDの設定とMagic Keyboardの接続を確認します。",
+      "steps": [
+        "再起動直後や認証失敗後など、パスワードが要求される場面か確認する",
+        "指とTouch IDセンサーを乾いた清潔な状態にしてもう一度試す",
+        "システム設定のTouch IDとパスワードでMacのロック解除が有効か確認する",
+        "Magic Keyboardを使う場合はMacとの接続と対応条件を確認する"
+      ],
+      "causes": [
+        "安全上の理由でパスワード入力が必要な状態",
+        "指やセンサーの水分・汚れによる読み取り不良",
+        "Magic Keyboardの接続または対応条件の問題"
+      ],
+      "diagnosis": "パスワードで正常にログインでき、Touch IDだけ使えないかを分けます。Mac本体のセンサーかMagic Keyboardのセンサーかでも確認事項は異なります。特に再起動後は故障と決めつけず、パスワードを入力した後の通常のスリープ解除で再現するか調べてください。",
+      "caution": "指紋の削除や再登録を始める前に、ログイン用パスワードを確実に把握してください。Magic Keyboardの対応条件はMacとmacOSの組み合わせで異なるため、別の機種の手順をそのまま適用しないでください。",
+      "escalation": "対応条件と設定を確認しても認識しない場合は、Macの機種、macOS、キーボードの種類と表示された文言を添えてAppleに相談します。",
+      "source_label": "Apple サポート：MacでTouch IDが機能しない場合",
+      "source_url": "https://support.apple.com/ja-jp/102356",
+      "related_existing": [
+        "/mac/macbook-keyboard-not-working/",
+        "/mac/mac-app-not-responding/",
+        "/mac/macos-update-stuck/"
+      ],
+      "fact_check": "Appleの一次資料でMagic Keyboardの接続と対応条件、指とセンサーの確認、パスワードが必要になる場面を照合した。"
+    },
+    {
+      "topic": "MacのSafariでページが読み込めないとき",
+      "category": "mac",
+      "path": "/mac/safari-pages-not-loading-mac/",
+      "slug": "safari-pages-not-loading-mac",
+      "title": "MacのSafariでページが読み込めないとき",
+      "description": "MacのSafariでページが読み込めないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "同じサイトを別のブラウザで開けるかを調べ、回線側とSafari側を分けます。Safariではページの再読み込みとアプリの再起動から試し、特定サイトだけかすべてのサイトかを確認します。",
+      "steps": [
+        "同じMacの別ブラウザで対象サイトが開くか確認する",
+        "Safariの表示メニューからページを再読み込みする",
+        "Safariを終了して開き直し、対象サイトをもう一度試す",
+        "特定サイトだけの場合はURLを確認し、他サイトも開けない場合はネットワーク状態を確認する"
+      ],
+      "causes": [
+        "一時的なページの読み込み失敗",
+        "特定サイトのURLやサイト側の問題",
+        "Macのネットワーク接続またはSafariの状態"
+      ],
+      "diagnosis": "一つのサイトだけ開かないのか、すべてのサイトが開かないのかを最初に分けます。同じWi-Fiで他の端末も開けない場合は回線やサイト側が候補です。別ブラウザでは開ける場合はSafari側の状態に絞り、再読み込みと終了・起動の結果を記録してください。",
+      "caution": "閲覧履歴やWebサイトデータの消去は保存されたログイン状態などに影響する場合があります。最初からデータ削除をせず、再読み込み、URL、回線の確認を先に行ってください。証明書の警告は無視して進まないでください。",
+      "escalation": "複数サイトがSafariだけで開けず再起動後も続く場合は、macOSの版と表示されたエラーを添えてAppleに相談します。",
+      "source_label": "Apple サポート：MacのSafariが正常に機能しない場合",
+      "source_url": "https://support.apple.com/ja-jp/102564",
+      "related_existing": [
+        "/mac/mac-wifi-connected-no-internet/",
+        "/browser/chrome-page-not-loading/",
+        "/browser/chrome-connection-not-private/"
+      ],
+      "fact_check": "Appleの公式案内でcommandとRによる再読み込み、Safariの終了と再試行を確認した。サイトと回線の比較は切り分けとして補足した。"
+    },
+    {
+      "topic": "MacでTime Machineのバックアップを作成できないとき",
+      "category": "mac",
+      "path": "/mac/time-machine-backup-failed/",
+      "slug": "time-machine-backup-failed",
+      "title": "MacでTime Machineのバックアップを作成できないとき",
+      "description": "MacでTime Machineのバックアップを作成できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "バックアップ先のディスクが接続され、電源が入っているかから確認します。ネットワーク上のディスクなら接続状態も調べ、表示されたエラーを記録してからTime Machineの設定と空き容量を見直します。",
+      "steps": [
+        "バックアップ先ディスクの電源、ケーブル、Macとの接続を確認する",
+        "ネットワークディスクならMacがそのネットワークへ接続できるか確かめる",
+        "Time Machineの画面で最後の成功時刻とエラーメッセージを確認する",
+        "ディスクの空き容量やセキュリティソフトの影響を公式案内に沿って確認する"
+      ],
+      "causes": [
+        "バックアップディスクの電源または接続不良",
+        "ネットワークディスクへの接続が切れている",
+        "容量やセキュリティソフトの設定による妨げ"
+      ],
+      "diagnosis": "バックアップ先をFinderで見られるかと、Time Machineがそのディスクを認識しているかは分けて調べます。外付けディスクなら端子と電源、ネットワーク先なら同じネットワークへの接続を確認します。最後の成功日時を控え、今すぐ必要なファイルに別のコピーがあるかも確認してください。",
+      "caution": "バックアップ先を消去したり、古いバックアップを削除したりする前に、ほかに復元可能なコピーがあるか確認してください。ウイルス対策ソフトを一時停止する場合は安全な範囲に限り、確認後に元の設定へ戻します。",
+      "escalation": "接続と容量を確認しても失敗する場合は、ディスクの型番とTime Machineのエラー文言を添えてAppleまたはディスクメーカーへ相談します。",
+      "source_label": "Apple サポート：Time Machineでバックアップを作成できない場合",
+      "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchlb955003d/mac",
+      "related_existing": [
+        "/mac/external-drive-not-showing/",
+        "/mac/mac-system-data-too-large/",
+        "/mac/mac-app-not-responding/"
+      ],
+      "fact_check": "Appleの一次資料でバックアップディスクの電源と接続、ネットワーク先、ウイルス対策ソフトによる影響の確認事項を照合した。"
+    },
+    {
+      "topic": "MacのAirPlayで接続先のテレビが表示されないとき",
+      "category": "mac",
+      "path": "/mac/airplay-device-not-showing-mac/",
+      "slug": "airplay-device-not-showing-mac",
+      "title": "MacのAirPlayで接続先のテレビが表示されないとき",
+      "description": "MacのAirPlayで接続先のテレビが表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "AirPlay対応の機器同士が近くにあり電源が入っているかを確かめます。両方のソフトウェアを更新し、ネットワーク接続と受信側のAirPlay設定を順に確認します。",
+      "steps": [
+        "テレビや受信機の電源とAirPlay対応状況を確認する",
+        "Macと接続先が近くにあり、利用するネットワークへ接続しているか確認する",
+        "両方の機器のソフトウェア更新状況を確認する",
+        "受信側のAirPlay設定と許可するユーザーの範囲を確認する"
+      ],
+      "causes": [
+        "表示先がAirPlay非対応または電源オフ",
+        "接続先を発見できないネットワーク状態",
+        "受信側のAirPlayや許可範囲の設定"
+      ],
+      "diagnosis": "候補に一度も表示されない場合は、接続失敗ではなく発見できない原因から調べます。テレビの別の入力端子が映っているだけでも、AirPlay機能自体の設定は確認が必要です。ほかのApple機器から表示先が見えるかを比較すると、Mac側と受信側を分けやすくなります。",
+      "caution": "公共の場や共有のテレビで、他人の機器に画面を誤送信しないよう接続先の名称を確認してください。パスワードや許可範囲を不用意に広げず、受信側の取扱説明書に従います。ネットワーク設定の初期化は最初の手順にしません。",
+      "escalation": "機器の対応と受信設定を確認しても候補に表示されない場合は、Macと表示先の型番を添えてメーカーへ相談します。",
+      "source_label": "Apple サポート：AirPlay対応デバイスで問題が起きる場合",
+      "source_url": "https://support.apple.com/ja-jp/102587",
+      "related_existing": [
+        "/mac/mac-airdrop-not-working/",
+        "/mac/mac-wifi-not-connecting/",
+        "/windows/second-monitor-not-detected/"
+      ],
+      "fact_check": "Appleの公式説明で機器の電源と距離、両方のソフトウェア更新の確認を照合した。受信設定はAppleのMacヘルプとも照らした。"
+    },
+    {
+      "topic": "iPhoneをMacにつないでもFinderに表示されないとき",
+      "category": "mac",
+      "path": "/mac/iphone-not-showing-in-finder-mac/",
+      "slug": "iphone-not-showing-in-finder-mac",
+      "title": "iPhoneをMacにつないでもFinderに表示されないとき",
+      "description": "iPhoneをMacにつないでもFinderに表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "充電できていてもデータ通信できるとは限りません。USBケーブルとポートを替えて接続を確認し、iPhoneの画面上に信頼を求める表示がないかを調べます。",
+      "steps": [
+        "iPhoneのロックを解除し、接続時に信頼を求める表示がないか確認する",
+        "USBケーブルの接続を確認し、別のケーブルでも試す",
+        "Macの別のUSBポートに接続し、Finderのサイドバーを確認する",
+        "ほかのMacでも再現するか調べ、VPNやセキュリティソフトの影響を確認する"
+      ],
+      "causes": [
+        "ケーブルやポートがデータ接続できていない",
+        "端末の信頼確認が完了していない",
+        "Mac側の接続やセキュリティソフトによる妨げ"
+      ],
+      "diagnosis": "iPhoneが充電されるだけなのか、Finderのサイドバーに名前が出るのかを分けます。ほかのケーブルやポートで表示されるなら接続経路が候補です。別のMacで同じiPhoneを試せる場合は、端末側とMac側を切り分けられます。試した組み合わせを記録してください。",
+      "caution": "端末内の写真やバックアップが必要なら、接続のためにiPhoneを初期化しないでください。見知らぬMacに接続して信頼を許可せず、自分の管理する端末だけで確認します。セキュリティソフトを変更する前に管理者の方針を確認してください。",
+      "escalation": "複数のケーブルとポートでも認識されない場合は、iPhoneとMacの型番、OS、試した接続方法を添えてAppleに相談します。",
+      "source_label": "Apple サポート：コンピュータでiPhoneやiPadが認識されない場合",
+      "source_url": "https://support.apple.com/ja-jp/108643",
+      "related_existing": [
+        "/mac/external-drive-not-showing/",
+        "/iphone/iphone-not-charging/",
+        "/iphone/airdrop-not-working/"
+      ],
+      "fact_check": "Appleの公式手順でUSBケーブル、別ポートまたはMac、VPNや他社製セキュリティソフトの確認事項を照合した。"
+    },
+    {
+      "topic": "Macの外付けディスプレイが低解像度でぼやけるとき",
+      "category": "mac",
+      "path": "/mac/external-display-low-resolution-mac/",
+      "slug": "external-display-low-resolution-mac",
+      "title": "Macの外付けディスプレイが低解像度でぼやけるとき",
+      "description": "Macの外付けディスプレイが低解像度でぼやけるとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "まずMacとディスプレイが対応する解像度とリフレッシュレートを確認します。ケーブルや変換アダプター、同時接続している画面の数によって表示上限が変わるため、構成を一つずつ簡単にして試します。",
+      "steps": [
+        "システム設定のディスプレイで対象画面と現在の解像度を確認する",
+        "Macの機種と外付け画面の対応解像度、同時接続できる台数を確認する",
+        "変換アダプターやケーブルを確認し、可能なら直接接続で比較する",
+        "複数画面をつないでいる場合は一台ずつにして解像度が変わるか試す"
+      ],
+      "causes": [
+        "Macまたは表示先の対応解像度を超えている",
+        "ケーブルやアダプターが高解像度の条件を満たしていない",
+        "複数画面の同時利用で対応上限に達している"
+      ],
+      "diagnosis": "低解像度になるのが特定のケーブルだけか、接続する画面の台数によって変わるかを調べます。Macと画面の型番を確認し、対応できる組み合わせをメーカー仕様で見比べてください。解像度設定が見当たらない場合も、まず接続構成を記録すると相談しやすくなります。",
+      "caution": "非対応の解像度を無理に固定しないでください。設定後に真っ暗になった場合はAppleの案内に従い、一定時間待って自動的に戻るか確認します。高価なアダプターを購入する前にMacとディスプレイの仕様を確認します。",
+      "escalation": "対応するはずの組み合わせでも低解像度が続く場合は、Mac、画面、ケーブルとアダプターの型番をそろえて各メーカーへ相談します。",
+      "source_label": "Apple サポート：外付けディスプレイが暗い・低解像度の場合",
+      "source_url": "https://support.apple.com/ja-jp/102501",
+      "related_existing": [
+        "/mac/external-drive-not-showing/",
+        "/mac/mac-black-screen-power-on/",
+        "/windows/second-monitor-not-detected/"
+      ],
+      "fact_check": "Appleの公式案内で対応画面数と最大解像度、ケーブルやアダプター、他画面の構成が上限に影響することを照合した。"
+    },
+    {
+      "topic": "Macでアプリの通知が来ないときに集中モードを確認する方法",
+      "category": "mac",
+      "path": "/mac/mac-notifications-silent-focus/",
+      "slug": "mac-notifications-silent-focus",
+      "title": "Macでアプリの通知が来ないときに集中モードを確認する方法",
+      "description": "Macでアプリの通知が来ないときに集中モードを確認する方法。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "まず通知センターに通知が残っているかを見ます。画面に出ないだけなら集中モードとアプリごとの通知設定を確認し、特定アプリだけかMac全体かを分けます。",
+      "steps": [
+        "通知センターを開き、対象アプリの通知が残っているか確認する",
+        "コントロールセンターで集中モードが有効になっていないか確認する",
+        "システム設定の通知で対象アプリの通知方法を確認する",
+        "別のアプリからも通知が来ないか試し、問題の範囲を記録する"
+      ],
+      "causes": [
+        "集中モードが通知を抑制している",
+        "アプリごとの通知許可や表示方法が異なる",
+        "アプリ側で通知が発生していない"
+      ],
+      "diagnosis": "バナーが出ないのに通知センターには残る場合、通知そのものが届かない場合とは調べる場所が違います。集中モードが予定に合わせて自動でオンになる設定もあるため、症状が起こる時刻を控えます。特定アプリだけなら、そのアプリ側の通知設定も確認してください。",
+      "caution": "通知を確認するために集中モードの許可範囲を全員へ広げる必要はありません。仕事や就寝時の設定を変更する場合は、元のルールを控えてから試してください。アプリのデータ削除や再インストールは最初に行いません。",
+      "escalation": "通知設定と集中モードを確認しても特定アプリだけ届かない場合は、アプリ名、macOSと発生時刻を添えて提供元へ相談します。",
+      "source_label": "Apple サポート：Macで集中モードを設定する",
+      "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchl613dc43f/mac",
+      "related_existing": [
+        "/mac/mac-app-not-responding/",
+        "/iphone/notifications-not-arriving/",
+        "/sns/line-notifications-not-arriving/"
+      ],
+      "fact_check": "Appleの一次資料で集中モードの連絡先・アプリ別通知許可とオンオフの仕組みを確認した。通知センターの確認は症状の切り分けとして加えた。"
+    },
+    {
+      "topic": "Gmailでアーカイブしたメールが見つからないとき",
+      "category": "google",
+      "path": "/google/gmail-archived-mail-not-found/",
+      "slug": "gmail-archived-mail-not-found",
+      "title": "Gmailでアーカイブしたメールが見つからないとき",
+      "description": "Gmailでアーカイブしたメールが見つからないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "アーカイブすると受信トレイからは外れますが、すべてのメールから探せます。送信者や件名で検索し、ゴミ箱・迷惑メールと混同していないか確認してください。",
+      "steps": [
+        "ブラウザ版Gmailで左側のその他からすべてのメールを開く",
+        "送信者や件名の一部を検索し、対象メールがあるか確かめる",
+        "検索条件を絞りすぎていないか確認する",
+        "すべてのメールにもない場合はゴミ箱と迷惑メールを別に確認する"
+      ],
+      "causes": [
+        "アーカイブにより受信トレイから表示が消えた",
+        "検索語や期間条件が対象メールを除外している",
+        "実際は削除または迷惑メールへの振り分けが行われた"
+      ],
+      "diagnosis": "受信トレイにないことだけでは削除されたと判断できません。まずすべてのメールを開いて件名や送信者で探し、検索条件を外した場合も比較します。特定のメールが自動で受信トレイから消えるなら、後でフィルタや転送の設定を確認する必要があります。",
+      "caution": "メールが見つからない段階でゴミ箱を空にしないでください。フィルタを変更する場合は、その設定がほかのメールにも適用されることを理解してから行います。機密メールを第三者の検索ツールへ転送しないでください。",
+      "escalation": "すべてのメール、ゴミ箱、迷惑メールと検索条件を確認しても見つからない場合は、送信者と受信時期を控えてGmailヘルプの手順を確認します。",
+      "source_label": "Google Gmail ヘルプ：メールを表示、検索する",
+      "source_url": "https://support.google.com/mail/answer/9259955?hl=ja",
+      "related_existing": [
+        "/google/gmail-not-receiving-email/",
+        "/google/gmail-sent-mail-not-delivered/",
+        "/google/gmail-storage-full/"
+      ],
+      "fact_check": "Googleの一次資料でアーカイブ済みメールはすべてのメールから探せること、検索条件を使えることを確認した。"
+    },
+    {
+      "topic": "Gmailで必要なメールが迷惑メールに入るとき",
+      "category": "google",
+      "path": "/google/gmail-legitimate-mail-in-spam/",
+      "slug": "gmail-legitimate-mail-in-spam",
+      "title": "Gmailで必要なメールが迷惑メールに入るとき",
+      "description": "Gmailで必要なメールが迷惑メールに入るとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "まず送信者と内容を確認し、本当に必要なメールか判断します。誤判定なら迷惑メールではないことを報告し、同じ送信者をブロックしていないか確認します。",
+      "steps": [
+        "迷惑メール内の対象メールの送信者アドレスと内容を慎重に確認する",
+        "必要なメールと判断できた場合に迷惑メールではないことをGmailへ報告する",
+        "設定で送信者をブロックしていないか確認する",
+        "次に届くメールの場所を確かめ、まだ迷惑メールに入る場合は公式の追加手順を参照する"
+      ],
+      "causes": [
+        "送信者を自分でブロックしている",
+        "Gmailの迷惑メール判定が必要なメールにも適用された",
+        "送信者側のメール設定や送信方法に問題がある"
+      ],
+      "diagnosis": "送信者名だけで判断せず、メールアドレスや普段のやり取りと一致するかを確認します。実際にブロックしている場合はその設定が振り分けに直結します。ブロックを解除しても続く場合は、個別の迷惑メール報告と送信側の設定という別の原因を考えます。",
+      "caution": "迷惑メールのURLや添付ファイルを開いて正当性を確認しないでください。見た目が知人からのメールでも送信者のなりすましはあり得ます。安全を確認できないメールは、振り分けを解除せず別の連絡手段で送信者に確認します。",
+      "escalation": "特定の送信者の正当なメールが繰り返し誤判定される場合は、送信者へ状況を伝え、Googleの公式ヘルプに従って追加確認します。",
+      "source_label": "Google Gmail ヘルプ：正当なメールが迷惑メールに入る問題",
+      "source_url": "https://support.google.com/mail/answer/16457426?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/google/gmail-not-receiving-email/",
+        "/google/gmail-sent-mail-not-delivered/",
+        "/articles/login-attempt-email-ignore.html"
+      ],
+      "fact_check": "Googleの公式資料でブロック解除と迷惑メール誤判定への対処を確認した。安全性の判断前にリンクを開かない注意を追加した。"
+    },
+    {
+      "topic": "Gmailのメールが勝手にゴミ箱へ入るときはフィルタを確認",
+      "category": "google",
+      "path": "/google/gmail-filter-moves-mail-to-trash/",
+      "slug": "gmail-filter-moves-mail-to-trash",
+      "title": "Gmailのメールが勝手にゴミ箱へ入るときはフィルタを確認",
+      "description": "Gmailのメールが勝手にゴミ箱へ入るときはフィルタを確認。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "まずブラウザ版Gmailでフィルタとブロック中のアドレスを開き、削除や受信トレイをスキップする条件を探します。条件に合うメールだけが移動するなら、該当フィルタを編集します。",
+      "steps": [
+        "ゴミ箱で移動したメールの送信者と件名を確認する",
+        "Gmailのすべての設定からフィルタとブロック中のアドレスを開く",
+        "削除して、または受信トレイをスキップする条件を探す",
+        "該当する条件があれば内容を控えてから編集または削除し、次のメールで結果を確かめる"
+      ],
+      "causes": [
+        "既存のフィルタが条件に合うメールを自動削除している",
+        "受信トレイをスキップするフィルタにより見えなくなっている",
+        "外部メールアプリの操作がGmail側にも反映された"
+      ],
+      "diagnosis": "すべてのメールでは見つかるのに受信トレイにない場合と、ゴミ箱にある場合で設定の候補が異なります。移動する送信者や件名に共通点があるか調べ、フィルタの条件と照合してください。外部メールアプリを使っているなら、そこで削除した操作が連動していないかも確認します。",
+      "caution": "フィルタの一括削除は、必要な整理ルールも消すため慎重に行います。ゴミ箱を空にすると復元の機会を失う場合があります。原因を確認する前にアカウントを削除したり、メールアプリを再設定したりしないでください。",
+      "escalation": "フィルタと外部メールアプリの設定を確認しても自動移動が続く場合は、該当メールの時刻と条件を記録してGmailヘルプを参照します。",
+      "source_label": "Google Gmail ヘルプ：Gmailのメールが見つからない",
+      "source_url": "https://support.google.com/mail/answer/7015314?co=GENIE.Platform%3DAndroid&hl=ja",
+      "related_existing": [
+        "/google/gmail-not-receiving-email/",
+        "/google/gmail-storage-full/",
+        "/google/gmail-sent-mail-not-delivered/"
+      ],
+      "fact_check": "Googleの一次資料で削除して・受信トレイをスキップするフィルタの確認手順、転送とPOP/IMAP設定による影響を照合した。"
+    },
+    {
+      "topic": "パソコン版Gmailで新着メールの通知が出ないとき",
+      "category": "google",
+      "path": "/google/gmail-desktop-notifications-missing/",
+      "slug": "gmail-desktop-notifications-missing",
+      "title": "パソコン版Gmailで新着メールの通知が出ないとき",
+      "description": "パソコン版Gmailで新着メールの通知が出ないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "ブラウザ版Gmailのデスクトップ通知がオンかを確認します。新規メールと重要メールだけの通知は設定が異なるため、受信はできているのに通知だけ来ない場合は選択中の範囲を確かめます。",
+      "steps": [
+        "ブラウザ版Gmailで新着メール自体は受信できているか確認する",
+        "設定からすべての設定を表示し、デスクトップ通知の項目を開く",
+        "新規メールON、重要メールON、OFFのどれになっているか確認する",
+        "変更した場合はページ下部の変更を保存を押し、ブラウザの通知許可も確認する"
+      ],
+      "causes": [
+        "Gmailのデスクトップ通知がオフになっている",
+        "重要メールだけ通知する設定で対象メールが含まれない",
+        "ブラウザ側の通知許可が与えられていない"
+      ],
+      "diagnosis": "受信トレイにはメールがあるのに画面上の通知だけないなら、配信トラブルではなく通知設定を調べます。重要メールだけを通知する設定の場合、すべての新着メールで通知が出るわけではありません。Gmail内の設定とブラウザ側の許可は別なので両方を確認します。",
+      "caution": "共有PCで通知をオンにすると、メールの件名などが画面に表示されることがあります。機密性の高いメールを扱う場合は表示範囲を確認してください。受信できているメールを直すためにアカウントを削除しないでください。",
+      "escalation": "Gmailとブラウザの通知設定を確認しても出ない場合は、ブラウザ名、OS、設定内容を記録してGoogleの公式ヘルプを参照します。",
+      "source_label": "Google Gmail ヘルプ：Gmailの通知設定を変更する",
+      "source_url": "https://support.google.com/mail/answer/1075549?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/google/gmail-not-receiving-email/",
+        "/browser/chrome-notifications-wont-stop/",
+        "/google/gmail-storage-full/"
+      ],
+      "fact_check": "Googleの公式ページでGmailのデスクトップ通知は新規・重要・オフを選べ、変更の保存が必要なことを確認した。"
+    },
+    {
+      "topic": "Gmailで誤ってブロックした送信者を解除する前の確認",
+      "category": "google",
+      "path": "/google/gmail-accidentally-blocked-sender/",
+      "slug": "gmail-accidentally-blocked-sender",
+      "title": "Gmailで誤ってブロックした送信者を解除する前の確認",
+      "description": "Gmailで誤ってブロックした送信者を解除する前の確認。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "送信者をブロックすると、その送信者からの後続メールは迷惑メールへ振り分けられます。まずアドレスが正しい相手か確認し、必要な送信者だけブロックを解除します。",
+      "steps": [
+        "迷惑メールに入ったメールの送信者アドレスを確認する",
+        "Gmailのブロック中のアドレスを調べ、対象が含まれるか確認する",
+        "正当な送信者と確認できた場合だけブロックを解除する",
+        "次のメールが受信トレイに届くか見て、続く場合は迷惑メールの別の原因を調べる"
+      ],
+      "causes": [
+        "誤って送信者をブロックした",
+        "送信者名が似た別アドレスをブロック対象と取り違えた",
+        "ブロック解除後も別の迷惑メール判定が続いている"
+      ],
+      "diagnosis": "ブロック設定は特定アドレスからの後続メールに影響します。過去のメールの位置だけで現在の設定を判断せず、対象のアドレスとブロック一覧を照合してください。解除後も迷惑メールに入る場合は、Gmailの別の判定が原因の可能性があるため、それぞれを分けて対処します。",
+      "caution": "表示名が知人と同じでもアドレスが違うメールは、なりすましの可能性があります。リンクを開いたり添付をダウンロードしたりせず、普段使う別の連絡先で本人確認してから解除してください。不要な広告メールは解除より登録解除が適切な場合があります。",
+      "escalation": "解除後も同じ送信者の正当なメールが迷惑メールに入る場合は、Googleの誤判定対処の公式手順を確認します。",
+      "source_label": "Google Gmail ヘルプ：メールアドレスをブロックする",
+      "source_url": "https://support.google.com/mail/answer/8151?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/google/gmail-not-receiving-email/",
+        "/google/gmail-sent-mail-not-delivered/",
+        "/articles/login-attempt-email-ignore.html"
+      ],
+      "fact_check": "Googleの一次資料で送信者ブロック後のメールが迷惑メールへ振り分けられること、解除後も続く場合の案内を照合した。"
+    },
+    {
+      "topic": "Googleカレンダーの招待予定が表示されないとき",
+      "category": "google",
+      "path": "/google/google-calendar-invite-not-appearing/",
+      "slug": "google-calendar-invite-not-appearing",
+      "title": "Googleカレンダーの招待予定が表示されないとき",
+      "description": "Googleカレンダーの招待予定が表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "招待メールが届いているのに予定がカレンダーに見えない場合は、招待状を自動追加する設定を確認します。知っている人からの招待だけ、または返答した後だけ追加する設定では、すべての招待が自動表示されません。",
+      "steps": [
+        "Gmailで主催者からの招待メールが届いているか確認する",
+        "Googleカレンダーの設定で招待状を追加する条件を確認する",
+        "招待メールから出欠への返答が必要な設定か調べる",
+        "主催者に登録したメールアドレスが正しいか確認してもらう"
+      ],
+      "causes": [
+        "招待状の自動追加を制限する設定",
+        "出欠返答後だけ追加する設定",
+        "主催者が別のメールアドレスを招待している"
+      ],
+      "diagnosis": "招待メール自体がない場合と、メールはあるがカレンダーに予定がない場合は分けてください。後者なら追加条件の設定が候補です。Googleの案内では、知っているユーザーから届いた招待だけを自動追加する方法や、返答したときだけ追加する方法があります。",
+      "caution": "見覚えのない招待のリンクや添付ファイルを開いて確認しないでください。迷惑な招待を避ける設定を解除すると、不要な予定まで表示される場合があります。招待の差出人を確認してから返答や設定変更を行います。",
+      "escalation": "招待先アドレスと追加設定を確認しても表示されない場合は、主催者へ招待状の再送を相談し、Googleカレンダーの公式ヘルプを確認します。",
+      "source_label": "Google カレンダーヘルプ：招待状を管理する",
+      "source_url": "https://support.google.com/calendar/answer/13159188?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/google/google-calendar-not-syncing/",
+        "/google/gmail-not-receiving-email/",
+        "/google/google-account-verification-code-not-arriving/"
+      ],
+      "fact_check": "Googleの一次資料で知っている人からの招待だけ追加する設定、招待メールへの返答後に追加する設定を確認した。"
+    },
+    {
+      "topic": "Googleドライブのファイルをオフラインで開けないとき",
+      "category": "google",
+      "path": "/google/drive-offline-file-unavailable/",
+      "slug": "drive-offline-file-unavailable",
+      "title": "Googleドライブのファイルをオフラインで開けないとき",
+      "description": "Googleドライブのファイルをオフラインで開けないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "パソコン版ドライブがストリーミング設定なら、すべてのファイルが自動的にオフラインで使えるわけではありません。オンラインのうちに必要な項目をオフラインで使用可能にしたか、アプリが起動しているかを確認します。",
+      "steps": [
+        "オンライン時に対象ファイルを開けるか確認する",
+        "パソコン版ドライブがストリーミングかミラーリングかを確認する",
+        "ストリーミングなら対象項目をオフラインで使用可能にする",
+        "オフライン時にパソコン版ドライブが起動しているかとディスクの空き容量を確認する"
+      ],
+      "causes": [
+        "ストリーミング中のファイルを事前にオフライン設定していない",
+        "パソコン版ドライブが起動していない",
+        "ローカルディスクに必要な空き容量がない"
+      ],
+      "diagnosis": "同じファイルがオンラインでは開けるかから確認すると、共有権限の問題とオフライン設定の問題を分けられます。ストリーミングとミラーリングでは保存場所が異なります。対象のファイルだけ開けないのか、すべてのオフラインファイルが開けないのかも記録してください。",
+      "caution": "アカウントの接続解除はストリーミング中のオフラインファイルを削除する場合があります。重要な未同期の変更があるときは、原因を確かめる前に接続解除やアプリの再インストールを行わないでください。",
+      "escalation": "設定とディスク容量を確認しても開けない場合は、ストリーミング・ミラーリングの別とエラー文言を添えてGoogleのサポート資料を確認します。",
+      "source_label": "Google ドライブヘルプ：オフラインでファイルを使用する",
+      "source_url": "https://support.google.com/drive/answer/2375012?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/google/drive-for-desktop-not-syncing/",
+        "/google/google-drive-files-missing/",
+        "/google/google-drive-access-denied/"
+      ],
+      "fact_check": "Googleの一次資料でストリーミングは個別のオフライン設定とアプリ起動が必要で、ミラーリングは自動的にローカルへ保存されることを確認した。"
+    },
+    {
+      "topic": "Androidで画面が自動回転しないときの確認方法",
+      "category": "android",
+      "path": "/android/android-auto-rotate-not-working/",
+      "slug": "android-auto-rotate-not-working",
+      "title": "Androidで画面が自動回転しないときの確認方法",
+      "description": "Androidで画面が自動回転しないときの確認方法。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "クイック設定の自動回転がオンかを確かめます。設定のディスプレイとタップからも確認でき、特定アプリだけ固定される場合はアプリの画面と端末全体の設定を分けて考えます。",
+      "steps": [
+        "画面を上から下へスワイプし、クイック設定の自動回転タイルを確認する",
+        "設定のディスプレイとタップから自動回転画面の状態を確認する",
+        "写真やブラウザなど別の画面でも回転するか試す",
+        "端末を再起動し、すべての画面で続くか再確認する"
+      ],
+      "causes": [
+        "自動回転がオフで縦向きに固定されている",
+        "特定アプリが画面の向きを固定している",
+        "端末の回転検知またはOSの状態に問題がある"
+      ],
+      "diagnosis": "まず同じ画面を縦横に動かしてから、別のアプリでも試します。一つのアプリだけ回転しなければ、そのアプリの仕様や設定が候補です。複数の画面で回転しない場合はクイック設定とシステム設定を調べ、機種によって項目名が違う点にも注意してください。",
+      "caution": "画面を回すために端末を強く振ったり落としたりしないでください。自動回転の設定が見当たらない機種では、製造元の案内を確認します。原因が分からないまま端末を初期化すると保存データに影響するため、最初の対処にはしません。",
+      "escalation": "複数アプリで回転せず設定もオンの場合は、機種名とAndroidの版、再現するアプリを記録してメーカーへ相談します。",
+      "source_label": "Google Android ヘルプ：Androidデバイスを操作する",
+      "source_url": "https://support.google.com/android/answer/9079644?hl=ja",
+      "related_existing": [
+        "/android/android-touchscreen-not-responding/",
+        "/android/android-system-ui-not-responding/",
+        "/android/android-app-keeps-crashing/"
+      ],
+      "fact_check": "Googleの公式案内でクイック設定の自動回転タイル、設定のディスプレイとタップからの確認手順を照合した。"
+    },
+    {
+      "topic": "Androidのテザリングに接続できるのにネットが使えないとき",
+      "category": "android",
+      "path": "/android/android-hotspot-connected-no-internet/",
+      "slug": "android-hotspot-connected-no-internet",
+      "title": "Androidのテザリングに接続できるのにネットが使えないとき",
+      "description": "Androidのテザリングに接続できるのにネットが使えないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "親機のAndroidスマホ単体でモバイルデータ通信ができるかを先に確認します。親機が通信できなければホットスポットだけを直しても改善しません。親機が正常なら、共有設定と接続先端末を切り分けます。",
+      "steps": [
+        "親機でWi-Fiを使わずモバイルデータ通信ができるか試す",
+        "親機のアクセス ポイントがオンで、接続先が正しい名前を選んでいるか確認する",
+        "接続先を一度切って接続し直し、別の端末でも同じか試す",
+        "携帯通信会社のテザリング条件と利用可能なデータ通信量を確認する"
+      ],
+      "causes": [
+        "親機のモバイルデータ通信そのものが利用できない",
+        "接続先が別のアクセスポイントを選んでいる",
+        "通信会社の契約や通信制限が共有を妨げている"
+      ],
+      "diagnosis": "接続先端末にWi-Fiマークが出ても、親機がインターネットへ接続できるとは限りません。親機単体の通信を確認し、親機だけ通信できる場合は接続先を一台ずつ試します。複数の端末すべてで使えないなら、親機の共有設定や契約条件を確認する順序が有効です。",
+      "caution": "通信会社によってテザリングに制限や追加料金があるため、契約を確かめず長時間の利用を続けないでください。ホットスポットのパスワードを無効にして接続を試すことは避け、共有後は不要ならオフにします。",
+      "escalation": "親機単体の通信は正常で複数端末に共有できない場合は、機種名と契約のテザリング条件を添えて通信会社またはメーカーへ相談します。",
+      "source_label": "Google Android ヘルプ：テザリングでモバイル接続を共有する",
+      "source_url": "https://support.google.com/android/answer/9059108?hl=ja",
+      "related_existing": [
+        "/android/android-mobile-data-not-working/",
+        "/android/android-wifi-connected-no-internet/",
+        "/iphone/personal-hotspot-no-internet/"
+      ],
+      "fact_check": "Googleの一次資料でテザリングは親機のモバイル接続を共有する仕組みで、通信会社による制限や追加料金があり得ることを確認した。"
+    },
+    {
+      "topic": "Androidのバックアップが完了しないときに確認すること",
+      "category": "android",
+      "path": "/android/android-backup-not-complete/",
+      "slug": "android-backup-not-complete",
+      "title": "Androidのバックアップが完了しないときに確認すること",
+      "description": "Androidのバックアップが完了しないときに確認すること。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "まず設定でバックアップがオンか、保存先のGoogleアカウントが正しいかを確認します。バックアップには時間がかかる場合があるため、すぐ失敗と判断せず、詳細画面で保存されたデータと状態を確かめます。",
+      "steps": [
+        "設定のGoogleからバックアップを開き、オンになっているか確認する",
+        "バックアップ先アカウントと保存容量を確認する",
+        "必要なら今すぐバックアップを実行し、完了状況を待って確認する",
+        "バックアップの詳細で保存対象を確認し、アプリ固有のデータは提供元の案内も調べる"
+      ],
+      "causes": [
+        "バックアップがオフ、または想定と違うアカウントを選んでいる",
+        "保存容量や通信状態の制約がある",
+        "バックアップに時間がかかっている、または一部アプリが対象外"
+      ],
+      "diagnosis": "最後のバックアップ時刻だけでなく、どの種類のデータが保存されているかを確認してください。Googleの案内では完了まで時間がかかる場合があり、アプリによっては一部データを復元できないこともあります。写真の保存先と端末設定のバックアップを同じものとして扱わないことが重要です。",
+      "caution": "バックアップが確認できるまでは、機種変更や初期化で元の端末のデータを消さないでください。アカウント ダッシュボードのすべてのデータを削除は複数デバイスのバックアップに影響します。容量不足でも安易に過去のバックアップを削除しないでください。",
+      "escalation": "十分待っても完了せずエラーが続く場合は、バックアップ画面の表示と対象データ、端末の機種を記録してGoogleまたはメーカーへ相談します。",
+      "source_label": "Google Android ヘルプ：データをバックアップ、復元する",
+      "source_url": "https://support.google.com/android/answer/2819582?hl=ja",
+      "related_existing": [
+        "/android/android-storage-full/",
+        "/android/android-stuck-on-logo/",
+        "/google/google-photos-backup-stuck/"
+      ],
+      "fact_check": "Googleの一次資料でバックアップ先アカウント、手動の今すぐバックアップ、所要時間、対象外のアプリデータ、削除時の注意を確認した。"
+    },
+    {
+      "topic": "Androidで特定アプリにカメラを許可できないとき",
+      "category": "android",
+      "path": "/android/android-camera-permission-denied-app/",
+      "slug": "android-camera-permission-denied-app",
+      "title": "Androidで特定アプリにカメラを許可できないとき",
+      "description": "Androidで特定アプリにカメラを許可できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "標準カメラで撮影できるのに特定アプリだけ使えない場合は、アプリのカメラ権限と端末全体のカメラアクセスを分けて確認します。権限マネージャーから該当アプリの許可状態を調べます。",
+      "steps": [
+        "標準カメラアプリで撮影できるか確かめる",
+        "設定のセキュリティとプライバシーから権限マネージャーを開く",
+        "カメラの権限で該当アプリの許可状態を確認する",
+        "クイック設定に端末全体のカメラアクセス切替があればブロックされていないか確認する"
+      ],
+      "causes": [
+        "該当アプリのカメラ権限が拒否されている",
+        "端末全体のカメラアクセスがオフ",
+        "アプリ側の不調で権限があるのにカメラが使えない"
+      ],
+      "diagnosis": "標準カメラも使えない場合は、アプリ個別の権限だけを変更しても直らない可能性があります。特定アプリだけ失敗するなら、そのアプリの権限とアプリ内の入力設定を調べます。画面右上のカメラインジケーターが出るかも確認し、実際にアクセスしているアプリを分けてください。",
+      "caution": "カメラへのアクセスをすべてのアプリへ無条件に許可しないでください。使う目的が分かっているアプリにだけ与え、利用後は不要な権限を見直します。仕事用端末などで制限されている場合は、管理者の設定を迂回しないでください。",
+      "escalation": "標準カメラは正常で権限を許可しても特定アプリが使えない場合は、アプリ名、端末、権限画面を記録して提供元へ相談します。",
+      "source_label": "Google Android ヘルプ：アプリの権限を変更する",
+      "source_url": "https://support.google.com/android/answer/9431959?hl=ja",
+      "related_existing": [
+        "/android/android-camera-black-screen/",
+        "/android/android-microphone-not-working/",
+        "/browser/chrome-camera-microphone-not-working/"
+      ],
+      "fact_check": "Googleの公式案内で権限マネージャーからアプリのカメラ権限を変更する手順と、端末全体のカメラアクセス切替を確認した。"
+    },
+    {
+      "topic": "Chromeで外国語ページの翻訳が表示されないとき",
+      "category": "browser",
+      "path": "/browser/chrome-page-translation-not-offered/",
+      "slug": "chrome-page-translation-not-offered",
+      "title": "Chromeで外国語ページの翻訳が表示されないとき",
+      "description": "Chromeで外国語ページの翻訳が表示されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "Chromeの言語設定でGoogle翻訳が有効か確認します。対象言語を翻訳しない言語に登録していると提案が出ないことがあるため、設定を見直し、ページから手動翻訳も試します。",
+      "steps": [
+        "Chromeの設定から言語を開き、Google翻訳を使用する設定を確認する",
+        "対象言語が翻訳するか確認しない言語に入っていないか調べる",
+        "対象ページを開き直し、メニューからページ翻訳を試す",
+        "別の外国語ページでも翻訳が提案されないか比較する"
+      ],
+      "causes": [
+        "Google翻訳を使用する設定がオフ",
+        "対象言語が翻訳を提案しない一覧に入っている",
+        "ページの言語判定やページ自体の構造による違い"
+      ],
+      "diagnosis": "すべての外国語ページで提案が出ないのか、一つのサイトだけなのかを分けてください。設定で翻訳しない言語を指定している場合、その言語だけ表示が変わります。別の言語のページでは使えるなら、Chrome全体の故障と考える前に対象言語の設定を確認します。",
+      "caution": "翻訳文は原文と意味がずれる場合があります。契約、医療、支払いなど重要な内容は翻訳だけで判断せず原文と公式情報を確認してください。翻訳を試すために不審な拡張機能を追加する必要はありません。",
+      "escalation": "言語設定を確認しても複数ページで翻訳できない場合は、Chromeの版と対象言語を記録してGoogleのヘルプを確認します。",
+      "source_label": "Google Chrome ヘルプ：ページを翻訳し言語を変更する",
+      "source_url": "https://support.google.com/chrome/answer/173424?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/browser/chrome-page-not-loading/",
+        "/browser/chrome-extensions-not-working/",
+        "/browser/chrome-running-slow/"
+      ],
+      "fact_check": "Googleの一次資料でGoogle翻訳のオンオフ、翻訳しない言語の一覧、自動翻訳する言語の管理方法を照合した。"
+    },
+    {
+      "topic": "Chromeで特定サイトに位置情報を許可できないとき",
+      "category": "browser",
+      "path": "/browser/chrome-site-location-blocked/",
+      "slug": "chrome-site-location-blocked",
+      "title": "Chromeで特定サイトに位置情報を許可できないとき",
+      "description": "Chromeで特定サイトに位置情報を許可できないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "Chromeのサイト設定で位置情報の許可を確認します。サイトだけでなくWindowsやMac本体の位置情報がオフの場合もあるため、ブラウザとOSの二段階を分けて調べます。",
+      "steps": [
+        "問題のサイトで位置情報を求める表示が出るか確認する",
+        "Chromeのプライバシーとセキュリティからサイトの設定、位置情報を開く",
+        "対象サイトがブロックされているか確認し、必要なサイトだけ許可を見直す",
+        "OSが位置情報をオフにしていないか確認し、別サイトでも再現するか試す"
+      ],
+      "causes": [
+        "Chromeで対象サイトをブロックしている",
+        "Chrome全体の位置情報設定が制限されている",
+        "WindowsまたはMacの位置情報機能がオフ"
+      ],
+      "diagnosis": "一つのサイトだけ位置情報を取得できないならサイト別の許可を優先します。複数サイトで同じならChromeの既定設定とOS側の設定を確認します。位置情報を許可したのに現在地がずれる場合は、許可できない問題とは別に端末の測位精度を調べてください。",
+      "caution": "位置情報は訪問先に現在地を伝える機能です。必要性とサイトのプライバシーポリシーを確かめ、すべてのサイトへ一括許可することは避けてください。管理端末の設定を無理に解除せず管理者に相談します。",
+      "escalation": "OSとChromeの設定を確認しても対象サイトだけ利用できない場合は、サイト名とブラウザの設定状態を記録してサイト運営者へ相談します。",
+      "source_label": "Google Chrome ヘルプ：位置情報の設定を管理する",
+      "source_url": "https://support.google.com/chrome/answer/142065?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/browser/chrome-camera-microphone-not-working/",
+        "/browser/chrome-page-not-loading/",
+        "/google/google-maps-location-inaccurate/"
+      ],
+      "fact_check": "Googleの公式資料でChromeのサイト設定から位置情報を管理する経路と、WindowsまたはMacの位置情報設定が影響する旨を確認した。"
+    },
+    {
+      "topic": "Chromeで住所や連絡先が自動入力されないとき",
+      "category": "browser",
+      "path": "/browser/chrome-address-autofill-not-working/",
+      "slug": "chrome-address-autofill-not-working",
+      "title": "Chromeで住所や連絡先が自動入力されないとき",
+      "description": "Chromeで住所や連絡先が自動入力されないとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "パスワードの自動入力とは別に、住所やその他の情報の保存・入力設定を確認します。保存済みの住所があるか、対象サイトが入力を受け付ける形式かを分けて調べます。",
+      "steps": [
+        "Chromeのパスワードと自動入力から住所やその他の情報を開く",
+        "住所を保存・入力する設定がオンか確認する",
+        "保存された氏名や住所が正しいか確認する",
+        "別の信頼できるサイトの入力欄でも同じか比較する"
+      ],
+      "causes": [
+        "住所の保存・入力機能がオフ",
+        "入力したい情報がChromeに保存されていない",
+        "サイト側のフォームが自動入力に対応していない"
+      ],
+      "diagnosis": "パスワードだけ自動入力される場合でも、住所用の設定がオンとは限りません。保存済み住所の有無を確認し、特定サイトだけ失敗するならフォーム側の条件を考えます。複数サイトで同じならChrome側の設定とプロフィールを優先して調べてください。",
+      "caution": "住所やカード情報を入力する前に、サイトのURLと安全性を確かめてください。共有PCでは保存する個人情報の範囲に注意します。自動入力されないからといって、第三者の拡張機能へ個人情報を渡す必要はありません。",
+      "escalation": "保存設定と内容を確認しても複数サイトで自動入力されない場合は、Chromeの版と症状を記録してGoogleのヘルプを確認します。",
+      "source_label": "Google Chrome ヘルプ：フォームに自動入力する",
+      "source_url": "https://support.google.com/chrome/answer/142893?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/browser/chrome-saved-passwords-missing/",
+        "/browser/chrome-sync-paused/",
+        "/browser/chrome-page-not-loading/"
+      ],
+      "fact_check": "Googleの一次資料で住所などの保存・入力設定を確認する手順と、安全でない可能性があるサイトでは情報が表示されない場合を照合した。"
+    },
+    {
+      "topic": "Chromeのページだけ文字や画像が大きすぎるとき",
+      "category": "browser",
+      "path": "/browser/chrome-page-zoom-too-large/",
+      "slug": "chrome-page-zoom-too-large",
+      "title": "Chromeのページだけ文字や画像が大きすぎるとき",
+      "description": "Chromeのページだけ文字や画像が大きすぎるとき。安全な順番で原因を切り分ける手順と、データを守る注意点を案内します。",
+      "answer": "一つのサイトだけ大きいか、すべてのサイトで大きいかを確認します。Chromeのページズームを標準へ戻し、全画面表示になっている場合はWindowsならF11キーで切り替えます。",
+      "steps": [
+        "別のサイトを開いて同じ倍率か確認する",
+        "Chromeの表示倍率を確認し、必要なら100%へ戻す",
+        "WindowsではCtrlキーとマイナスキーで縮小し、Macではcommandキーとマイナスキーで試す",
+        "全画面表示の場合はWindowsでF11キー、Macでcommand・control・Fキーを確認する"
+      ],
+      "causes": [
+        "ページのズーム倍率が変更されている",
+        "特定サイトだけ別の倍率が保存されている",
+        "全画面表示を拡大と取り違えている"
+      ],
+      "diagnosis": "ブラウザのツールバーやタブまで大きい場合と、Webページの中身だけが大きい場合を分けてください。WebページだけならChromeのズームが候補です。一つのサイトだけならサイト別の倍率、すべてなら既定の倍率を確かめます。全画面表示は別の切替なので独立して確認します。",
+      "caution": "OS全体の表示倍率を変更するとほかのアプリにも影響します。まずChromeのページだけで再現するかを確認してください。読みにくさを解消するためにアクセシビリティ設定を使っている場合は、元の値を控えてから変更します。",
+      "escalation": "Chromeの倍率を標準にしても表示が異常な場合は、OSとChromeの版、特定サイトだけかを記録してサポートを確認します。",
+      "source_label": "Google Chrome ヘルプ：テキストや画像のサイズを変更する",
+      "source_url": "https://support.google.com/chrome/answer/96810?co=GENIE.Platform%3DDesktop&hl=ja",
+      "related_existing": [
+        "/browser/chrome-running-slow/",
+        "/browser/chrome-page-not-loading/",
+        "/windows/second-monitor-not-detected/"
+      ],
+      "fact_check": "Googleの公式案内でWindowsとMacの拡大・縮小ショートカット、全画面表示の切替キーを照合した。"
+    }
+]
