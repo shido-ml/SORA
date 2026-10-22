@@ -1,0 +1,948 @@
+[
+  {
+    "category": "iphone",
+    "slug": "imessage-activation-stuck-iphone",
+    "topic": "iPhoneでiMessageのアクティベートが終わらない",
+    "title": "iPhoneでiMessageをアクティベートできないときの確認手順",
+    "description": "iMessageが「アクティベーション中」のまま進まないときに、通信、日時、電話番号、SMSの条件を順に確認する方法。",
+    "answer": "まずWi-Fiまたはモバイル通信、iOSの更新、日付と時刻を確認します。電話番号の有効化にはSMSが使われるため、回線が使えるかも確かめます。その後iMessageをオフにして再起動し、再度オンにします。",
+    "steps": [
+      "Wi-Fiまたはモバイル通信でWebページが開けるか確認し、設定の「一般」からiOSと日付・時刻を確認する",
+      "設定の「アプリ」→「メッセージ」→「送受信」で、使いたい電話番号とApple Accountの状態を確認する",
+      "通信事業者にSMSの送受信が可能か確認し、課金に関する表示が出た場合は内容を読んで判断する",
+      "iMessageをオフにしてiPhoneを再起動し、再度オンにして状態を確認する"
+    ],
+    "causes": [
+      "データ通信、日時設定、またはApple Accountの確認が完了していない",
+      "電話番号を確認するSMSが回線側で利用できない",
+      "アクティベーション処理が一時的に進んでいない"
+    ],
+    "diagnosis": "電話番号だけ使えずメールアドレスでは使えるのか、両方とも使えないのかを分けます。設定の「送受信」でチェックマークの状態を見て、エラー文と開始時刻を記録してください。別のWi-Fiでは進む場合は接続環境に原因を絞れます。電話番号の確認は通信事業者側の条件も関わるため、アプリの再インストールだけで判断しません。",
+    "caution": "有効化のSMSは契約によって料金がかかる場合があります。短時間に何度も切り替える前に表示を確認してください。Apple Accountからのサインアウトや端末初期化は、メッセージの保存状態を確かめずに行わないでください。",
+    "escalation": "24時間経っても電話番号にチェックが付かない場合は、表示されたエラーと回線情報を控えてAppleまたは通信事業者に相談します。",
+    "source_label": "Apple サポート：iMessageやFaceTimeをアクティベートできない場合",
+    "source_url": "https://support.apple.com/ja-jp/119859",
+    "related_existing": [
+      "/iphone/apple-account-sign-in-failed/",
+      "/iphone/verification-code-not-arriving/",
+      "/iphone/mobile-data-not-working/"
+    ],
+    "fact_check": "Apple公式資料で通信、iOS、日時、SMSの条件と、オフ・再起動・再有効化の手順を確認。課金は契約次第として記載した。",
+    "path": "/iphone/imessage-activation-stuck-iphone/",
+    "category_url": "/category/apps/",
+    "category_label": "アプリ"
+  },
+  {
+    "category": "iphone",
+    "slug": "facetime-calls-not-connecting-iphone",
+    "topic": "iPhoneでFaceTimeの発着信ができない",
+    "title": "iPhoneでFaceTime通話がつながらないときの確認手順",
+    "description": "FaceTimeの発着信ができないとき、通信速度、電話回線、アプリ設定、スクリーンタイムの制限を切り分ける。",
+    "answer": "FaceTimeが有効でも発着信できない場合は、通信の状態と、設定で使用する電話番号を先に確認します。新しい端末や複数SIMの環境では、回線の有効化とFaceTimeの連絡先設定も見直します。",
+    "steps": [
+      "Wi-Fiまたはモバイル通信で通常のWebページを開き、低速・切断がないか確認する",
+      "設定の「モバイル通信」で使用する回線がオンか、複数SIMなら目的の番号が選択されているか確認する",
+      "設定の「アプリ」→「FaceTime」でいったんオフにしてオンに戻し、使う電話番号またはメールアドレスを確認する",
+      "FaceTime設定が見つからなければスクリーンタイムの許可アプリを確認し、日時を自動設定にして再起動する"
+    ],
+    "causes": [
+      "FaceTimeで使う回線や連絡先情報が選ばれていない",
+      "通信速度が不足している、または接続が途切れている",
+      "スクリーンタイムでFaceTimeやカメラが制限されている"
+    ],
+    "diagnosis": "通話を発信できないのか、受信だけできないのか、映像だけ黒いのかを分けて記録します。相手やネットワークを変えて再現するか確認すると、回線と端末の問題を切り分けやすくなります。「アクティベート中」と表示される場合は、通話の設定よりも有効化の問題として確認してください。",
+    "caution": "FaceTimeは国・地域や通信事業者によって使えない場合があります。モバイル通信での通話は契約のデータ量を消費します。スクリーンタイムの設定を変える場合は、保護者や管理者の意図した制限を確認してください。",
+    "escalation": "回線が有効でネット接続も正常なのに発着信できない場合は、iOSの版、エラー文、対象の番号を控えてAppleに相談します。",
+    "source_label": "Apple サポート：FaceTime通話を受発信できない場合",
+    "source_url": "https://support.apple.com/ja-jp/102558",
+    "related_existing": [
+      "/iphone/mobile-data-not-working/",
+      "/iphone/no-service/",
+      "/iphone/front-camera-not-working/"
+    ],
+    "fact_check": "Apple公式資料でモバイル回線、FaceTime設定、スクリーンタイム、日時、高速通信の確認順を照合した。",
+    "path": "/iphone/facetime-calls-not-connecting-iphone/",
+    "category_url": "/category/sound/",
+    "category_label": "音・通話"
+  },
+  {
+    "category": "iphone",
+    "slug": "icloud-backup-not-completing-iphone",
+    "topic": "iPhoneのiCloudバックアップが完了しない",
+    "title": "iPhoneのiCloudバックアップが完了しないときの確認手順",
+    "description": "iCloudバックアップが失敗・停止するときに、Wi-Fi、必要容量、更新、所要時間を安全に確認する。",
+    "answer": "エラーが容量不足か、前回のバックアップ未完了かを先に分けます。iCloudストレージの空きと次回作成時のサイズを比べ、Wi-Fi接続とiOS更新を確認して再試行します。",
+    "steps": [
+      "設定でApple Account→「iCloud」→ストレージを開き、空き容量とバックアップの「次回作成時のサイズ」を比較する",
+      "Wi-Fi接続を確認し、更新がある場合は「一般」→「ソフトウェアアップデート」を確認する",
+      "別の信頼できるWi-Fiでバックアップを試し、進行が遅い場合は電源とWi-Fiにつないで状態を観察する",
+      "バックアップのボタンが灰色なら、復元中か管理プロファイルによる制限かを確認する"
+    ],
+    "causes": [
+      "次のバックアップに必要な容量よりiCloudの空きが少ない",
+      "Wi-Fiの切断やアップロード速度の不足で完了しない",
+      "復元中や管理プロファイルによりバックアップが制限されている"
+    ],
+    "diagnosis": "容量不足の警告があるか、単に長時間終わらないかで対処が異なります。「次回作成時のサイズ」の計算には時間がかかることがあるため、数値が表示されてから空き容量と比較します。バックアップの最終成功日時も控え、別のネットワークでも同じか確認してください。",
+    "caution": "古いバックアップや写真を削除する前に、ほかにコピーがあるか確認してください。iCloud写真など同期対象とバックアップ対象は同じではありません。容量を増やす有料プランは選択肢ですが、利用者の判断なしに契約しないでください。",
+    "escalation": "十分な容量と安定したWi-Fiがあっても完了しない場合は、警告文、最終成功日時、iOSの版を控えてAppleに相談します。",
+    "source_label": "Apple サポート：iCloudにバックアップできない場合",
+    "source_url": "https://support.apple.com/ja-jp/102563",
+    "related_existing": [
+      "/iphone/storage-full/",
+      "/iphone/wifi-connected-no-internet/",
+      "/iphone/app-data-not-syncing/"
+    ],
+    "fact_check": "Apple公式資料で次回バックアップのサイズ、Wi-FiとiOS、別ネットワーク、復元中・管理制限の条件を確認した。",
+    "path": "/iphone/icloud-backup-not-completing-iphone/",
+    "category_url": "/category/account/",
+    "category_label": "Apple Account"
+  },
+  {
+    "category": "iphone",
+    "slug": "apple-pay-card-not-adding-iphone",
+    "topic": "iPhoneのウォレットにApple Payのカードを追加できない",
+    "title": "Apple PayのカードをiPhoneのウォレットに追加できないときの確認手順",
+    "description": "カード追加エラーのとき、対応カード、端末設定、アカウント状態、発行元への問い合わせ先を確認する。",
+    "answer": "カード発行元がApple Payに対応しているかと、端末・地域の対応を先に確認します。iOS、パスコードまたは生体認証、Apple Accountの2ファクタ認証を確認し、カード固有の拒否は発行元へ問い合わせます。",
+    "steps": [
+      "カード発行元と利用地域がApple Payに対応しているか、カードの種類と端末を確認する",
+      "iOSを更新し、端末のパスコードまたはFace ID・Touch IDとApple Accountの2ファクタ認証を確認する",
+      "通信状態とAppleのサービス状態を確認してから、ウォレットのカード追加を一度やり直す",
+      "「カードが無効」「デバイスの制限数」などの文言を控え、カード発行元に確認する"
+    ],
+    "causes": [
+      "カード・発行元・地域・端末のいずれかが対応条件を満たさない",
+      "パスコードやApple Accountの保護設定が不足している",
+      "カード発行元の審査や登録台数の条件で拒否されている"
+    ],
+    "diagnosis": "全てのカードを追加できないのか、1枚だけ失敗するのかを分けます。前者なら端末とアカウント、後者ならカードの対応や発行元の条件を優先して調べます。画面に表示されたエラー文を正確に控えると、発行元への問い合わせで説明しやすくなります。",
+    "caution": "カード番号、セキュリティコード、認証コードを第三者や公開フォームに送らないでください。カードが却下された場合、Appleが承認を代行することはできません。セキュリティ設定を解除して追加を試す方法は案内しません。",
+    "escalation": "「カードが無効」「追加できませんでした」などカード固有のエラーは、表示文言と端末情報を持って銀行またはカード発行元に相談します。",
+    "source_label": "Apple サポート：Apple Payのカードをウォレットに追加できない場合",
+    "source_url": "https://support.apple.com/ja-jp/108792",
+    "related_existing": [
+      "/iphone/apple-account-locked/",
+      "/iphone/face-id-not-working/",
+      "/iphone/mobile-data-not-working/"
+    ],
+    "fact_check": "Apple公式資料で対応カード・地域、iOS、パスコード、2ファクタ認証、発行元へ相談するエラーを確認した。",
+    "path": "/iphone/apple-pay-card-not-adding-iphone/",
+    "category_url": "/category/account/",
+    "category_label": "Apple Account"
+  },
+  {
+    "category": "iphone",
+    "slug": "find-my-location-sharing-not-updating",
+    "topic": "iPhoneの「探す」で位置情報の共有が更新されない",
+    "title": "iPhoneの「探す」で位置情報を共有できないときの確認手順",
+    "description": "位置共有が相手に届かないとき、共有スイッチ、共有元の端末、位置情報サービス、通信を切り分ける。",
+    "answer": "「探す」の「自分」で位置情報共有がオンかと、どの端末が共有元になっているかを確認します。複数のApple製品を使う場合、共有元が現在持っているiPhoneでないことがあります。",
+    "steps": [
+      "「探す」アプリの「自分」で「自分の位置情報を共有」がオンか確認する",
+      "「共有元」に表示された端末を確認し、必要なら「このiPhoneを自分の位置情報に使用」を選ぶ",
+      "設定の「プライバシーとセキュリティ」から位置情報サービスと通信を確認する",
+      "「人を探す」で相手との共有状態と選んだ共有期間を確認する"
+    ],
+    "causes": [
+      "位置情報共有がオフになっている、または共有期間が終了した",
+      "別のApple端末が位置情報の共有元に選ばれている",
+      "端末の位置情報サービスやネットワークに問題がある"
+    ],
+    "diagnosis": "相手全員に見えないのか、特定の相手にだけ見えないのかを分けます。前者は共有元と端末側の設定、後者はその相手への共有設定や期間を先に確認します。地図に古い場所が表示される場合は、最後に更新された時刻も控えて、現在の通信状態と照らし合わせてください。",
+    "caution": "位置情報は私生活に関わる情報です。公開リンクや第三者への共有を追加する前に相手と期間を確認してください。「iPhoneを探す」自体をオフにすると紛失時の探索に影響するため、この切り分けでは無効化しません。",
+    "escalation": "共有元と権限を確認しても更新されない場合は、iOS版、共有相手の範囲、最終更新時刻を控えてAppleへ相談します。",
+    "source_label": "Apple iPhoneユーザガイド：「探す」で位置情報を共有する",
+    "source_url": "https://support.apple.com/ja-jp/guide/iphone/iph01954dc44/ios",
+    "related_existing": [
+      "/iphone/location-services-not-working/",
+      "/iphone/gps-inaccurate/",
+      "/iphone/mobile-data-not-working/"
+    ],
+    "fact_check": "Apple公式ガイドで「自分」の共有設定、共有元の切り替え、相手への共有期間の操作を確認した。",
+    "path": "/iphone/find-my-location-sharing-not-updating/",
+    "category_url": "/category/account/",
+    "category_label": "Apple Account"
+  },
+  {
+    "category": "iphone",
+    "slug": "icloud-photos-sync-paused-iphone",
+    "topic": "iPhoneのiCloud写真の同期が一時停止している",
+    "title": "iPhoneのiCloud写真が同期されないときの確認手順",
+    "description": "写真が他の端末に現れないとき、写真アプリの状態表示、Apple Account、電源とWi-Fiを確認する。",
+    "answer": "写真アプリのライブラリの状態表示を確認し、同期が停止した理由を先に読み取ります。同じApple Accountでサインインしているか、iCloud写真が有効かを確認し、電源とWi-Fiにつないで様子を見ます。",
+    "steps": [
+      "写真アプリの「コレクション」でプロフィールを開き、写真の枚数の下にあるライブラリの状態を確認する",
+      "設定でApple Account→「iCloud」→「写真」を開き、「このiPhoneを同期」の設定を確認する",
+      "ほかの端末と同じApple Accountか、共有ライブラリと個人用ライブラリの表示を取り違えていないか確認する",
+      "電源と信頼できるWi-Fiに接続し、同期の状態表示と枚数の変化を待って確認する"
+    ],
+    "causes": [
+      "iCloud写真の同期設定がオフまたは一時停止している",
+      "別のApple Accountや共有ライブラリを見ている",
+      "電源・接続条件により大量の写真の同期が進んでいない"
+    ],
+    "diagnosis": "写真がiPhoneにもないのか、iPhoneにはあるがほかの端末にないのかを分けます。写真アプリの状態表示は同期停止の理由を示すことがあるため、その文言と最後に確認した時刻を控えます。共有ライブラリへ移動した写真は個人用ライブラリに見えない場合があり、削除と早合点しないようにします。",
+    "caution": "同期状況を確かめる前にiCloud写真をオフにしたり、写真を削除したりしないでください。同期されていない写真の唯一のコピーを失うおそれがあります。別端末で表示を確認し、必要なら元画像を安全な場所に保存してから設定を変えます。",
+    "escalation": "同じアカウントと同期設定を確認しても進まない場合は、状態表示、写真枚数、iOS版を控えてAppleに相談します。",
+    "source_label": "Apple サポート：iCloud写真が同期されない場合",
+    "source_url": "https://support.apple.com/ja-jp/101559",
+    "related_existing": [
+      "/iphone/app-data-not-syncing/",
+      "/iphone/storage-full/",
+      "/iphone/wifi-connected-no-internet/"
+    ],
+    "fact_check": "Apple公式資料で写真アプリのライブラリ状態、同じApple Account、電源とWi-Fi、共有ライブラリ表示を確認した。",
+    "path": "/iphone/icloud-photos-sync-paused-iphone/",
+    "category_url": "/category/apps/",
+    "category_label": "アプリ"
+  },
+  {
+    "category": "iphone",
+    "slug": "airtag-not-showing-find-my-iphone",
+    "topic": "AirTagがiPhoneの「探す」に表示されない",
+    "title": "AirTagが「探す」に表示されないときの確認手順",
+    "description": "AirTagが持ち物一覧に見えないとき、対応iOS、Apple Account、通信と位置情報、電池を切り分ける。",
+    "answer": "まず「探す」の「持ち物を探す」と、AirTagを登録したApple Accountを確認します。AirTagや端末が一覧に出ない場合、iOSの更新とBluetooth、位置情報サービス、電池の状態を調べます。",
+    "steps": [
+      "「探す」アプリの「持ち物を探す」を開き、別のApple Accountで登録していないか確認する",
+      "iPhoneを対応する最新版のiOSに更新し、Bluetoothと位置情報サービスを確認する",
+      "AirTagが近くにあるなら電池や接続状態を確認し、一度に複数のAirTagを近づけず1個ずつ確認する",
+      "一覧にはあるが位置がない場合は、最後の位置情報の時刻と「オフライン」表示を確認する"
+    ],
+    "causes": [
+      "AirTagが別のApple Accountに登録されているか、初期設定が完了していない",
+      "対応するiOS版やBluetooth・位置情報の条件を満たしていない",
+      "AirTagの電池切れやオフラインで新しい位置を送れていない"
+    ],
+    "diagnosis": "「持ち物」の一覧に存在しない場合と、存在するが位置が更新されない場合では調べる項目が異なります。前者は登録先と初期設定、後者は電池や通信、最後の位置情報を先に確認します。近くのAirTagを探す表示がない場合も、対応するiPhoneの機種と位置情報の許可を別に確認してください。",
+    "caution": "見知らぬAirTagを自分のアカウントに追加しようとしないでください。紛失品の位置情報は遅れて反映されることがあり、表示がないだけで破損と断定できません。登録解除や初期化の前に所有者と現在の登録状態を確認します。",
+    "escalation": "登録先、対応OS、電池を確認しても一覧に出ない場合は、AirTagの世代と表示された警告を控えてAppleに相談します。",
+    "source_label": "Apple サポート：紛失したデバイスやAirTagを「探す」で探す",
+    "source_url": "https://support.apple.com/ja-jp/104978",
+    "related_existing": [
+      "/iphone/bluetooth-device-not-showing/",
+      "/iphone/location-services-not-working/",
+      "/iphone/gps-inaccurate/"
+    ],
+    "fact_check": "Apple公式資料で持ち物一覧に出ない場合のOS更新、位置がない場合の最終位置表示を確認。初期化を先に勧めない。",
+    "path": "/iphone/airtag-not-showing-find-my-iphone/",
+    "category_url": "/category/bluetooth/",
+    "category_label": "Bluetooth"
+  },
+  {
+    "category": "iphone",
+    "slug": "screen-time-passcode-reset-iphone",
+    "topic": "iPhoneでスクリーンタイムのパスコードを変更できない",
+    "title": "iPhoneのスクリーンタイムパスコードを変更できないときの確認手順",
+    "description": "スクリーンタイムのコードを忘れたとき、復旧に使うApple Accountとファミリー共有の管理者を確認する。",
+    "answer": "スクリーンタイムのパスコードは端末のロック解除コードと別です。変更画面に「パスコードをお忘れですか」が出る場合、設定時に使ったApple Accountで復旧を試します。子どもの端末なら管理する保護者側で確認します。",
+    "steps": [
+      "設定の「スクリーンタイム」で、自分の端末かファミリー共有で管理する子どもの端末かを確認する",
+      "「スクリーンタイムパスコードを変更」から復旧の案内が表示されるか確認する",
+      "復旧時はスクリーンタイム設定時に使ったApple Accountの情報を使用する",
+      "子どもの端末ならファミリー共有の管理者の端末で対象の子どもを選び、公式手順に沿って変更する"
+    ],
+    "causes": [
+      "ロック画面のパスコードとスクリーンタイムのパスコードを混同している",
+      "復旧時に設定時と異なるApple Accountを入力している",
+      "子どもの端末で、管理者側の操作が必要になっている"
+    ],
+    "diagnosis": "どの画面で止まるかを記録し、変更の入口が見つからないのか、Apple Account認証が通らないのかを分けます。ファミリー共有では誰の端末で制限を設定したかも確認します。復旧先のApple Accountは現在よく使うアカウントとは異なる場合があるため、推測で繰り返し入力しません。",
+    "caution": "スクリーンタイム制限は保護者や組織の管理設定である場合があります。許可なく回避する方法や、端末を初期化して制限を消す方法は案内しません。Apple Accountのパスワードや認証コードを第三者に渡さないでください。",
+    "escalation": "正しい管理者とApple Accountを確認しても復旧できない場合は、表示画面と端末の管理状態を控えてAppleに相談します。",
+    "source_label": "Apple サポート：スクリーンタイムのパスコードを変更する",
+    "source_url": "https://support.apple.com/ja-jp/102677",
+    "related_existing": [
+      "/iphone/apple-account-sign-in-failed/",
+      "/iphone/forgot-apple-account-password/",
+      "/iphone/cannot-delete-app/"
+    ],
+    "fact_check": "Apple公式資料で設定時に使ったApple Accountによる復旧と、子どもの端末は保護者側で管理する条件を確認した。",
+    "path": "/iphone/screen-time-passcode-reset-iphone/",
+    "category_url": "/category/system/",
+    "category_label": "本体・iOS"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-mail-cannot-send-messages",
+    "topic": "Macのメールアプリからメールを送信できない",
+    "title": "Macの「メール」で送信できないときの確認手順",
+    "description": "Macのメールが送信トレイに残るとき、接続、宛先、アカウント、送信用サーバの設定を確認する。",
+    "answer": "まずWebサイトが開けるかと、送れないメールの宛先を確認します。すべての宛先に送れない場合は「メール」のアカウント状態と送信用サーバを、特定の宛先だけならアドレスや返送通知を調べます。",
+    "steps": [
+      "MacでWebページを開いて通信を確認し、メールの「ウインドウ」から接続診断やアカウントの状態を確認する",
+      "送信トレイに残るメールの宛先を見直し、無効なアドレスが混じっていないか確認する",
+      "「メール」→「設定」→「アカウント」で対象アカウントと送信用メールサーバを確認する",
+      "サーバのホスト名や認証情報はサービス提供者の案内と照合し、誤りを確かめてから修正する"
+    ],
+    "causes": [
+      "ネットワークまたはメールサービスとの接続が切れている",
+      "無効な宛先や大きな添付ファイルで送信が止まっている",
+      "送信用サーバの選択や認証設定が正しくない"
+    ],
+    "diagnosis": "一つのアカウントだけ失敗するのか、すべてのアカウントで失敗するのかを切り分けます。送信トレイに残るか、すぐ返送メールが来るかも手掛かりです。ほかのネットワークやWebメールで送れるか確認すると、Mac側とサービス側のどちらを調べるべきか整理できます。",
+    "caution": "サーバ名やポート、認証方式を推測で変えると受信にも影響する場合があります。現在の設定を記録し、メール提供者の案内に一致する値だけ変更してください。アカウント削除前にMac内だけに残るメールがないか確認します。",
+    "escalation": "提供者の正しい送信用サーバ設定でも送れない場合は、エラー文、アカウント種別、接続診断の結果を添えて提供者に相談します。",
+    "source_label": "Apple メールユーザガイド：送信用サーバを確認する",
+    "source_url": "https://support.apple.com/ja-jp/guide/mail/mlhlp1106/mac",
+    "related_existing": [
+      "/mac/mac-wifi-connected-no-internet/",
+      "/mac/mac-app-not-responding/",
+      "/mac/icloud-drive-not-syncing-mac/"
+    ],
+    "fact_check": "Apple公式ガイドで送信用サーバの選択と設定確認を照合。無効な宛先は同ガイドの送信案内に基づく。",
+    "path": "/mac/mac-mail-cannot-send-messages/"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-screenshot-file-not-found",
+    "topic": "Macで撮ったスクリーンショットの保存先が分からない",
+    "title": "Macのスクリーンショットが見つからないときの確認手順",
+    "description": "撮影後の画像が見つからないとき、ショートカット、保存先設定、クリップボードへの保存を切り分ける。",
+    "answer": "Shift＋Command＋5でスクリーンショットのオプションを開き、「保存先」を確認します。保存先がデスクトップ以外ならその場所を探し、Controlキーを併用した撮影ならファイルではなくクリップボードに入っている可能性を確認します。",
+    "steps": [
+      "Shift＋Command＋5でスクリーンショットのツールバーを開き、「オプション」の「保存先」を読む",
+      "指定されたフォルダをFinderで開き、撮影時刻やスクリーンショットのファイル名で探す",
+      "Shift＋Command＋3で試し撮りし、画面隅のサムネイルと保存先を確認する",
+      "Controlキーを併用していた場合は、画像編集アプリなどに貼り付けられるか確認する"
+    ],
+    "causes": [
+      "保存先がデスクトップから別のフォルダやアプリに変更されている",
+      "Controlキーを併用し、画像をファイルではなくクリップボードに保存した",
+      "撮影に失敗した、またはサムネイル表示を保存完了と取り違えた"
+    ],
+    "diagnosis": "撮影直後に右下へサムネイルが出るか、Finderにファイルが増えるかを別々に確認します。「保存先」の設定は次回以降の撮影先を示すので、過去の画像も必ずそこにあるとは限りません。日時を絞って検索し、画面収録の動画とスクリーンショットのPNGを取り違えていないかも見ます。",
+    "caution": "保存先を変える前に現在の設定を控えてください。クリップボードだけに入った画像は別の内容をコピーすると失われる可能性があるため、必要な画像は貼り付けて保存します。重要な記録なら撮影後に実際のファイルを開いて確認してください。",
+    "escalation": "試し撮りでもファイルもクリップボードも確認できない場合は、使用したキー操作、保存先、macOS版を控えてAppleに相談します。",
+    "source_label": "Apple Macユーザガイド：スクリーンショットを撮影する",
+    "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mh26782/mac",
+    "related_existing": [
+      "/mac/mac-system-data-too-large/",
+      "/mac/mac-app-not-responding/",
+      "/mac/macbook-keyboard-not-working/"
+    ],
+    "fact_check": "Apple公式ガイドでShift＋Command＋5の保存先指定とスクリーンショットの操作を確認した。",
+    "path": "/mac/mac-screenshot-file-not-found/"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-printer-not-appearing-add",
+    "topic": "Macで追加したいプリンタが一覧に表示されない",
+    "title": "Macでプリンタが追加画面に表示されないときの確認手順",
+    "description": "Macにプリンタを追加できないとき、電源、同じネットワーク、共有元、IP追加の条件を確認する。",
+    "answer": "プリンタの電源とエラー表示、Macとの接続先を先に確認します。ネットワークプリンタなら同じネットワークにいるかを調べ、「プリンタとスキャナ」の追加画面に出ない場合は、機種の案内に従ってIPプリンタとして追加できるか確認します。",
+    "steps": [
+      "プリンタの電源、用紙やエラー表示、ネットワーク接続をプリンタ本体で確認する",
+      "Macがプリンタと同じWi-Fiまたはネットワークにいるか、ゲストネットワークではないか確認する",
+      "システム設定の「プリンタとスキャナ」で追加画面を開き、一覧と共有元の状態を確認する",
+      "メーカーが示すIPアドレスと対応プロトコルが分かる場合のみ、IPプリンタとしての追加を検討する"
+    ],
+    "causes": [
+      "プリンタがオフライン、エラー状態、または電源オフになっている",
+      "Macとプリンタが異なるネットワークに接続されている",
+      "共有プリンタの共有元がオフラインか、共有を停止している"
+    ],
+    "diagnosis": "USB接続ならケーブルと別ポート、ネットワーク接続なら同じネットワークかを先に分けます。ほかの端末から印刷できるかを比べると、プリンタ本体とMac側のどちらを調べるべきか明確になります。IPアドレスが確認できない場合は、推測でアドレスを入力しないでください。",
+    "caution": "会社や学校のプリンタは管理者の設定で追加が制限されることがあります。管理対象の共有設定やドライバを無断で変えないでください。プリンタの初期化はネットワーク設定を消す場合があるため、先にメーカーと管理者の案内を確認します。",
+    "escalation": "同じネットワークで本体エラーがなくても表示されない場合は、機種、接続方式、Macの版を控えてメーカーまたは管理者に相談します。",
+    "source_label": "Apple Macユーザガイド：プリンタを追加して管理する",
+    "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mh14004/mac",
+    "related_existing": [
+      "/mac/mac-wifi-not-connecting/",
+      "/mac/mac-wifi-connected-no-internet/",
+      "/peripherals/printer-offline-windows/"
+    ],
+    "fact_check": "Apple公式ガイドで電源と本体エラー、ネットワーク、共有元、一覧にない場合のIP追加を確認した。",
+    "path": "/mac/mac-printer-not-appearing-add/"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-spotlight-files-not-found",
+    "topic": "MacのSpotlightでファイルが検索結果に出ない",
+    "title": "MacのSpotlightでファイルが見つからないときの確認手順",
+    "description": "Spotlight検索に特定のファイルが出ないとき、検索語、対象場所、結果カテゴリ、除外設定を確認する。",
+    "answer": "Finderで実際のファイルがあることを確認してから、Spotlightの検索語と設定を調べます。システム設定で結果カテゴリがオフになっていないか、フォルダが検索のプライバシー対象になっていないかを確認します。",
+    "steps": [
+      "Finderで対象ファイルを開けるか、名前と保存先を確認する",
+      "Spotlightでファイル名の一部や種類を変えて検索し、検索語の誤りを除く",
+      "システム設定の「Spotlight」で、書類など必要な検索結果カテゴリが有効か確認する",
+      "「検索のプライバシー」に保存先のフォルダやディスクが追加されていないか確認する"
+    ],
+    "causes": [
+      "検索語と実際のファイル名や保存先が一致しない",
+      "該当する結果カテゴリがSpotlight設定で無効になっている",
+      "対象フォルダやディスクが検索から除外されている"
+    ],
+    "diagnosis": "全ファイルが出ないのか、特定のフォルダだけ出ないのかを分けます。Finderからは見えるのにSpotlightだけで出ない場合は、検索対象と除外設定が手掛かりになります。外付けディスクやクラウド上のファイルなら、実体がMacにあるかも確かめ、まだダウンロードされていない状態と混同しないでください。",
+    "caution": "検索のプライバシー設定は意図的に機密フォルダを除外している可能性があります。組織の端末では管理方針を確認せずに除外を解除しないでください。ファイルを移動・削除して検索結果を作ろうとせず、まず元の保存先を確認します。",
+    "escalation": "設定が正しくファイルもローカルにあるのに結果が出ない場合は、検索語と保存先、macOS版を控えてAppleに相談します。",
+    "source_label": "Apple Macユーザガイド：期待した検索結果が得られない場合",
+    "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchlp2962/mac",
+    "related_existing": [
+      "/mac/icloud-drive-not-syncing-mac/",
+      "/mac/external-drive-not-showing/",
+      "/mac/mac-system-data-too-large/"
+    ],
+    "fact_check": "Apple公式ガイドで検索語、検索対象の場所、Spotlightの結果カテゴリ、除外設定の確認順を照合した。",
+    "path": "/mac/mac-spotlight-files-not-found/"
+  },
+  {
+    "category": "windows",
+    "slug": "nearby-sharing-device-not-found-windows",
+    "topic": "Windows 11の近距離共有で相手のPCが出ない",
+    "title": "Windows 11の近距離共有で相手が表示されないときの確認手順",
+    "description": "近距離共有で送信先PCが見つからないとき、両端末の共有範囲、Bluetooth、Wi-Fiと距離を確認する。",
+    "answer": "送信側と受信側の両方で近距離共有がオンになっているか確認します。受信できる相手の範囲が「自分のデバイスのみ」ならアカウント条件を、周囲の端末ならBluetoothとWi-Fiの状態を調べます。",
+    "steps": [
+      "両方のPCで設定の「システム」→「近距離共有」を開き、受信範囲を確認する",
+      "両方のPCでBluetoothがオンか、端末同士が近くにあるかを確認する",
+      "Wi-Fiを使う場合は両方が同じネットワークに接続されているか確認する",
+      "小さなファイルを再送し、共有メニューに相手が現れるかと受信側の通知を確認する"
+    ],
+    "causes": [
+      "受信側の近距離共有がオフか、受信相手の範囲が合っていない",
+      "Bluetoothが無効、または端末間の距離・電源状態が合わない",
+      "Wi-Fiの接続やアダプターに問題がある"
+    ],
+    "diagnosis": "共有メニューに「近距離共有」自体がないのか、機能はあるが相手だけ見えないのかを分けます。後者では受信側の設定とBluetoothを優先して見ます。片方向だけ失敗するなら受信側と送信側を入れ替えて再現性を確認し、ネットワークだけの問題と決めつけないようにします。",
+    "caution": "「近くのすべてのユーザー」を選ぶとPC名などが周囲に見えることがあります。公共の場所や共有PCでは、共有範囲を広げる前にプライバシーを確認してください。ファイアウォールを無効にするような広い変更は行わず、組織端末なら管理者に相談します。",
+    "escalation": "両端末の設定と接続を確認しても見えない場合は、Windowsの版、端末名、受信範囲を控えてメーカーまたはMicrosoftへ相談します。",
+    "source_label": "Microsoft サポート：近くの共有に関する問題を修正する",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/connectivity-networking/fix-problems-with-nearby-sharing-in-windows",
+    "related_existing": [
+      "/windows/windows-bluetooth-toggle-missing/",
+      "/windows/windows-wifi-connected-no-internet/",
+      "/windows/wireless-display-not-connecting-windows-11/"
+    ],
+    "fact_check": "Microsoft公式資料で近距離共有の両端末設定、Bluetooth、同じWi-Fi、アダプターの確認を照合した。",
+    "path": "/windows/nearby-sharing-device-not-found-windows/"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-hello-fingerprint-not-recognized",
+    "topic": "Windows Helloの指紋認証でサインインできない",
+    "title": "Windows Helloで指紋が認識されないときの確認手順",
+    "description": "Windows Helloの指紋エラーで入れないとき、PINでの代替サインイン、センサー、再登録、更新を確認する。",
+    "answer": "指紋で入れないときは、まず登録済みのPINまたはパスワードで安全にサインインします。指とセンサーを清潔で乾いた状態にし、登録した指を試し、必要なら指紋を再登録します。",
+    "steps": [
+      "サインイン画面のサインインオプションからPINまたはパスワードで入る",
+      "指紋リーダーと指が清潔で乾いているか確認し、登録済みの別の指でも試す",
+      "設定の「アカウント」→「サインインオプション」→「指紋認識（Windows Hello）」で登録状態を確認する",
+      "必要なら指紋を再登録し、Windowsとデバイスのドライバー更新を確認する"
+    ],
+    "causes": [
+      "指やセンサーの汚れ・湿り気で読み取れない",
+      "登録時と異なる指や角度で認証を試している",
+      "Windowsや指紋リーダーの更新後に登録情報やドライバーに問題がある"
+    ],
+    "diagnosis": "指紋だけ失敗しPINは使えるのか、サインイン手段全体が使えないのかを分けます。後者は指紋センサー以外の問題も考えられるため、PINの回復手順へ進みます。特定の指だけ失敗するなら読み取り面と登録状態を優先して確認し、エラー文を控えてください。",
+    "caution": "指紋データを消す前に、PINまたはパスワードで確実にサインインできることを確認してください。組織の端末では生体認証の設定が管理される場合があります。セキュリティ機能の無効化やレジストリ変更を安易に試さないでください。",
+    "escalation": "複数の指を再登録しても認識しない場合は、センサーの機種、エラー文、更新履歴を控えてメーカーか管理者に相談します。",
+    "source_label": "Microsoft サポート：Windows Helloの一般的な問題",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/security/windows-hello-common-issues-and-troubleshooting-tips",
+    "related_existing": [
+      "/windows/windows-hello-face-not-working/",
+      "/windows/windows-pin-not-available/",
+      "/windows/windows-keyboard-wrong-characters/"
+    ],
+    "fact_check": "Microsoft公式資料でPIN代替、乾いたセンサー、別の指、再登録とドライバー更新を確認した。",
+    "path": "/windows/windows-hello-fingerprint-not-recognized/"
+  },
+  {
+    "category": "windows",
+    "slug": "remote-desktop-not-connecting-windows",
+    "topic": "Windowsのリモートデスクトップが接続できない",
+    "title": "Windowsのリモートデスクトップにつながらないときの確認手順",
+    "description": "接続先PCにリモートデスクトップで入れないとき、Windowsエディション、設定、PC名、通信を切り分ける。",
+    "answer": "接続先がリモートデスクトップを受けられるWindows Proかを最初に確認します。接続先でリモートデスクトップを有効にし、PC名と電源状態を確認してから、接続元でその名前を指定します。",
+    "steps": [
+      "接続先PCの「設定」→「システム」→「バージョン情報」でWindowsのエディションを確認する",
+      "接続先の「システム」→「リモートデスクトップ」が有効か、接続するユーザーに権限があるか確認する",
+      "接続先のPC名、電源、スリープ状態を確認し、接続元と到達可能なネットワークにいるか調べる",
+      "接続元の「リモートデスクトップ接続」に正しいPC名を入力し、表示されたエラーを控える"
+    ],
+    "causes": [
+      "接続先がリモート接続を受けられないエディションである",
+      "接続先で機能が無効、または接続ユーザーに権限がない",
+      "PC名が誤っているか、接続先がオフライン・スリープ中である"
+    ],
+    "diagnosis": "認証画面まで進むか、名前を解決できず止まるかで原因が違います。認証画面が出るならアカウントと権限、出ないならPC名と電源・通信を優先します。家庭外からの接続はネットワークの構成が加わるため、まず同じ管理下のネットワークで接続できるか確認します。",
+    "caution": "リモート接続のためにルーターのポートを無条件に公開したり、ファイアウォールを全面的に無効化したりしないでください。組織のPCでは管理者がアクセスを制限している場合があります。接続情報やパスワードを記事や公開フォームに記載しないでください。",
+    "escalation": "対応エディションで設定も正しいのに接続できない場合は、エラー文、接続先PC名、ネットワークの範囲を控えて管理者へ相談します。",
+    "source_label": "Microsoft サポート：リモートデスクトップの使い方",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/connectivity-networking/how-to-use-remote-desktop",
+    "related_existing": [
+      "/windows/windows-wifi-connected-no-internet/",
+      "/windows/windows-wont-wake-from-sleep/",
+      "/windows/windows-pin-not-available/"
+    ],
+    "fact_check": "Microsoft公式資料で接続先はWindows Proが必要、接続元のエディションは任意、PC名と機能設定が必要な点を確認した。",
+    "path": "/windows/remote-desktop-not-connecting-windows/"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-app-notifications-not-showing",
+    "topic": "Windows 11でアプリの通知が画面に出ない",
+    "title": "Windows 11でアプリの通知が表示されないときの確認手順",
+    "description": "通知バナーが来ないとき、システム全体、アプリ別、応答不可、通知センターの表示を切り分ける。",
+    "answer": "通知センターには残るのに画面に出ない場合、アプリの通知バナー設定を確認します。通知自体がない場合はWindows全体とアプリごとの通知、応答不可の設定を順に確認します。",
+    "steps": [
+      "設定の「システム」→「通知」でWindows全体の通知がオンか確認する",
+      "対象アプリを選び、通知の許可、バナー、通知センターへの表示を別々に確認する",
+      "「応答不可」がオンか、自動的にオンになる時間や全画面アプリの条件を確認する",
+      "実際に通知を発生させ、通知センターには残るか、音だけ出るかを記録する"
+    ],
+    "causes": [
+      "Windowsまたは対象アプリの通知がオフになっている",
+      "バナーだけ無効で通知センターには届いている",
+      "応答不可が自動的に有効になり表示を抑えている"
+    ],
+    "diagnosis": "対象アプリだけか、すべてのアプリかを分けると調べる範囲を絞れます。通知センターにあるのにポップアップしない場合はバナー設定、音だけない場合はサウンド設定を確認します。全画面アプリや指定時刻だけ起きるなら応答不可の自動ルールが手掛かりです。",
+    "caution": "ロック画面の通知内容を表示すると、他人からメッセージの内容が見える可能性があります。プライバシーを保ったまま必要なバナーだけ有効にしてください。会社や学校のPCで通知を制限する方針がある場合は変更前に管理者へ確認します。",
+    "escalation": "全体・アプリ別設定と応答不可を確認しても届かない場合は、アプリ名、通知センターでの状態、Windows版を控えて相談します。",
+    "source_label": "Microsoft サポート：Windowsの通知と応答不可",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/notifications-and-do-not-disturb-in-windows",
+    "related_existing": [
+      "/windows/windows-taskbar-not-responding/",
+      "/windows/windows-settings-not-opening/",
+      "/google/gmail-desktop-notifications-missing/"
+    ],
+    "fact_check": "Microsoft公式資料で全体・アプリ別のバナー/通知センター設定と応答不可の自動条件を確認した。",
+    "path": "/windows/windows-app-notifications-not-showing/"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-network-shared-folder-inaccessible",
+    "topic": "Windows 11で共有フォルダにアクセスできない",
+    "title": "Windows 11でネットワーク共有フォルダを開けないときの確認手順",
+    "description": "共有フォルダが開けないとき、相手PCの電源、ネットワーク探索、共有権限、入力先を切り分ける。",
+    "answer": "まず共有元のPCが起動していて同じネットワークから到達できるか確認します。エクスプローラーの「ネットワーク」で共有元が見えるかと、共有フォルダへのアクセス権があるかを別々に調べます。",
+    "steps": [
+      "共有元PCの電源、ネットワーク接続と共有フォルダ名を確認する",
+      "エクスプローラーの「ネットワーク」で共有元が表示されるかを確認する",
+      "ネットワーク探索とファイル共有の設定が必要な範囲で有効か確認する",
+      "共有フォルダの権限と接続に使うユーザーを共有元の管理者に確認する"
+    ],
+    "causes": [
+      "共有元PCがオフライン、スリープ中、または別のネットワークにいる",
+      "ネットワーク探索が無効で共有元が見えていない",
+      "フォルダの共有権限またはサインインするユーザーが合っていない"
+    ],
+    "diagnosis": "共有元そのものが一覧に出ない場合は電源と探索設定、一覧には出るがフォルダを開けない場合はアクセス権を先に確認します。エラーの『見つかりません』と『アクセスが拒否されました』は原因が異なるため文言を控えてください。共有元の別のユーザーから開けるかも切り分けに役立ちます。",
+    "caution": "共有フォルダを開くために「すべてのユーザー」に書き込み権限を与えたり、パスワード保護を無条件に外したりしないでください。組織ネットワークの共有は管理者の方針に従い、権限は必要最小限に保ちます。",
+    "escalation": "共有元が起動し権限もあるのに開けない場合は、エラー文、共有元名、ネットワークの範囲を控えて管理者へ相談します。",
+    "source_label": "Microsoft サポート：ネットワーク経由のファイル共有",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/connectivity-networking/file-sharing-over-a-network-in-windows",
+    "related_existing": [
+      "/windows/windows-wifi-connected-no-internet/",
+      "/windows/file-explorer-not-responding/",
+      "/peripherals/printer-offline-windows/"
+    ],
+    "fact_check": "Microsoft公式資料で共有元の電源、アクセス権、ネットワーク探索の確認とWindows 11の共有操作を照合した。",
+    "path": "/windows/windows-network-shared-folder-inaccessible/"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-hdr-toggle-unavailable",
+    "topic": "Windows 11でHDRをオンにできない",
+    "title": "Windows 11でHDRの切り替えが表示されないときの確認手順",
+    "description": "HDR対応ディスプレイなのに設定が出ないとき、選択中の画面、複製設定、PCと接続の対応を確認する。",
+    "answer": "HDRを使いたいディスプレイを設定で選び、PCと画面の両方がHDRに対応しているか確認します。外部HDR画面をノートPCに複製していると非対応表示になる場合があるため、「拡張」に切り替えて確認します。",
+    "steps": [
+      "設定の「システム」→「ディスプレイ」でHDR対応の外部画面を選択する",
+      "選択した画面のHDR項目と「ディスプレイの機能」に表示される対応状態を読む",
+      "ノートPCと外部画面を複製している場合は「これらのディスプレイを拡張」を選んで再確認する",
+      "PC、ディスプレイ、ケーブルと接続端子のHDR対応条件をメーカーの仕様で確認する"
+    ],
+    "causes": [
+      "HDR非対応の画面を設定画面で選択している",
+      "画面複製の構成がHDRに対応していない",
+      "PCの映像出力、ケーブル、ディスプレイのいずれかがHDR要件を満たさない"
+    ],
+    "diagnosis": "HDRのスイッチがないのか、スイッチはあるが映像が期待と違うのかを分けます。複数画面をつないでいる場合は対象の画面を選び直すだけで表示が変わることがあります。複製時に「サポートされていません」と出るなら、拡張表示で同じ画面を再確認してから機器の故障を疑います。",
+    "caution": "HDR非対応のハードウェアをソフト設定だけで対応させることはできません。ケーブルや端子の仕様は機種で異なるため、購入や交換の前にメーカーの仕様を確認してください。画面設定を変える際は作業中のウィンドウの位置に注意します。",
+    "escalation": "拡張表示でもHDR非対応と出る場合は、PC・画面・ケーブルの型番とWindowsの表示内容を控えてメーカーへ相談します。",
+    "source_label": "Microsoft サポート：WindowsのHDR設定",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/display-graphics/hdr-settings-in-windows",
+    "related_existing": [
+      "/windows/second-monitor-not-detected/",
+      "/windows/windows-auto-brightness-changing/",
+      "/windows/night-light-not-changing-color-windows/"
+    ],
+    "fact_check": "Microsoft公式資料でHDR対象画面の選択と、ノートPCの複製表示ではHDRが使えない場合の拡張表示を確認した。",
+    "path": "/windows/windows-hdr-toggle-unavailable/"
+  },
+  {
+    "category": "android",
+    "slug": "android-rcs-chat-not-connecting",
+    "topic": "AndroidのGoogleメッセージでRCSが接続中のままになる",
+    "title": "AndroidでRCSチャットが接続できないときの確認手順",
+    "description": "GoogleメッセージのRCSが接続中・再試行待ちのとき、電話番号、通信、アプリの状態を確認する。",
+    "answer": "Googleメッセージの設定でRCSチャットの状態を確認します。電話番号の確認が進まない場合は、モバイル通信とSIMの状態を見て、通信事業者により無効と表示されるなら事業者に問い合わせます。",
+    "steps": [
+      "Googleメッセージのプロフィール→「メッセージの設定」→「RCSチャット」で現在の状態と表示文を読む",
+      "SIMの電話番号とモバイル通信が使えるかを確認し、Googleメッセージを更新する",
+      "「電話番号の確認」が表示される場合は、案内に沿って番号を確認し、しばらく状態を観察する",
+      "「携帯通信会社によって無効」と表示される場合は、通信事業者の対応状況を確認する"
+    ],
+    "causes": [
+      "電話番号の確認がまだ完了していない",
+      "モバイル通信やSIMの設定と登録番号が合っていない",
+      "契約先の通信事業者がRCSを無効にしている"
+    ],
+    "diagnosis": "「接続中」と「通信会社によって無効」は同じ状態ではありません。画面の表示文、利用中のSIM、電話番号を控えて切り分けます。SMSは使えるがRCSだけ使えないのか、通常のメッセージも送れないのかも比較してください。RCSの登録が進まないときに会話履歴を消す必要はありません。",
+    "caution": "アプリのデータ削除や電話番号の登録解除を安易に行うと、会話や端末間の状態に影響する場合があります。先にメッセージのバックアップ状況を確認してください。RCSが使えない相手には通常のSMSの料金がかかる場合があるため、送信方法の表示を読みます。",
+    "escalation": "事業者による無効表示が続く場合は契約先へ、番号確認のエラーが続く場合は表示文とアプリ版を添えてGoogleの案内を確認します。",
+    "source_label": "Google メッセージ：RCSチャットをオンにできない",
+    "source_url": "https://support.google.com/messages/answer/9363493?hl=ja",
+    "related_existing": [
+      "/android/android-mobile-data-not-working/",
+      "/android/android-emergency-calls-only/",
+      "/google/google-account-verification-code-not-arriving/"
+    ],
+    "fact_check": "Google公式資料でRCS状態表示、番号確認、事業者無効時の相談先、アプリ更新の確認を照合した。",
+    "path": "/android/android-rcs-chat-not-connecting/"
+  },
+  {
+    "category": "android",
+    "slug": "android-quick-share-device-not-showing",
+    "topic": "AndroidのQuick Shareで送信先が表示されない",
+    "title": "AndroidのQuick Shareで相手の端末が見つからないときの確認手順",
+    "description": "Quick Shareで受信先が出ないとき、受信モード、公開範囲、BluetoothとWi-Fi、QR共有を確認する。",
+    "answer": "送信元と受信先の双方でWi-FiとBluetoothをオンにし、受信側がQuick Shareで見つけられる状態かを確認します。相手が一覧に出ない場合は、公式のQRコード共有を使えるか試します。",
+    "steps": [
+      "両方の端末でWi-FiとBluetoothがオンかを確認し、近くに置く",
+      "受信側でQuick Shareを開き、受信モードや公開範囲が送信元に合っているか確認する",
+      "小さな写真で送信先が表示されるか試し、受信側の承認通知を確認する",
+      "一覧に出ない場合はQuick Shareの「QRコードを使用」を選び、受信側でコードを読み取る"
+    ],
+    "causes": [
+      "受信側が検出可能な範囲に設定されていない",
+      "Wi-FiまたはBluetoothが無効、端末が離れすぎている",
+      "受信側の画面や承認待ちの状態に気づいていない"
+    ],
+    "diagnosis": "相手がまったく表示されない場合と、表示されるが転送できない場合を分けます。前者は公開範囲と無線設定、後者は受信側の承認やファイルの種類を確認します。自分の別端末には送れるのかを比べると、片方の端末だけの設定か判断しやすくなります。",
+    "caution": "受信モード中は近くの利用者に端末が見えることがあります。公共の場所では相手と端末名を確認してから承認し、送信後は必要に応じて受信モードを終了してください。見知らぬ相手からのファイルを安易に受け取らないでください。",
+    "escalation": "無線設定と受信範囲、QR共有を確認しても転送できない場合は、両端末の機種とAndroid版、表示文を控えてメーカーに相談します。",
+    "source_label": "Google Androidヘルプ：Quick Shareを使用する",
+    "source_url": "https://support.google.com/android/answer/9286773?hl=ja",
+    "related_existing": [
+      "/android/android-bluetooth-not-connecting/",
+      "/android/android-wifi-not-connecting/",
+      "/android/android-usb-file-transfer-not-working/"
+    ],
+    "fact_check": "Google公式資料でWi-FiとBluetooth、受信モード、相手が出ない場合のQR共有手順を確認した。",
+    "path": "/android/android-quick-share-device-not-showing/"
+  },
+  {
+    "category": "android",
+    "slug": "android-google-contacts-not-syncing",
+    "topic": "AndroidでGoogle連絡先が同期されない",
+    "title": "AndroidでGoogle連絡先が同期されないときの確認手順",
+    "description": "連絡先が新しい端末に出ないとき、保存先アカウント、Google連絡先の同期、ネット接続を確認する。",
+    "answer": "連絡先がGoogleアカウントに保存されているか、端末やSIMだけに保存されているかを先に確認します。Google連絡先の同期状態と使用中のアカウントを見直し、別端末やWeb版でも見えるか比べます。",
+    "steps": [
+      "連絡先アプリで表示中のアカウントと、見つからない連絡先の保存先を確認する",
+      "設定の「Google」→「すべてのサービス」→「Google コンタクトの同期」で同期状態を確認する",
+      "ネット接続とGoogleアカウントのサインイン状態を確認して、少し待って再表示する",
+      "Web版のGoogle連絡先や別端末で同じ連絡先があるか確認する"
+    ],
+    "causes": [
+      "連絡先が端末やSIMだけに保存され、Googleアカウントに同期されていない",
+      "異なるGoogleアカウントの連絡先を表示している",
+      "同期設定がオフか、ネットワーク・アカウント同期が止まっている"
+    ],
+    "diagnosis": "端末内にだけある連絡先は、同期スイッチをオンにしても自動的にGoogleアカウントへ移るとは限りません。まず連絡先の保存先を確認します。Web版にあるのに端末にないなら端末側の表示・同期、Web版にもなければ元の保存先やバックアップを調べてください。",
+    "caution": "同期を直すために連絡先アプリのデータを消したり、アカウントを削除したりする前に、端末内・SIM内の連絡先をエクスポートしてください。唯一のコピーを失う可能性があります。共有端末では別人のアカウントへ同期しないよう確認します。",
+    "escalation": "保存先と同期設定を確認しても戻らない場合は、端末とWeb版での表示差、アカウント名、最終同期時刻を控えてGoogleまたはメーカーに相談します。",
+    "source_label": "Google Androidヘルプ：アカウント同期の問題を修正する",
+    "source_url": "https://support.google.com/android/answer/9455149?hl=ja",
+    "related_existing": [
+      "/android/android-backup-not-complete/",
+      "/android/android-wifi-connected-no-internet/",
+      "/google/google-account-verification-code-not-arriving/"
+    ],
+    "fact_check": "Google公式資料でアカウント同期と連絡先の保存・エクスポートを確認。端末のみの連絡先と同期済み連絡先を区別した。",
+    "path": "/android/android-google-contacts-not-syncing/"
+  },
+  {
+    "category": "android",
+    "slug": "android-screenshot-not-found",
+    "topic": "Androidで撮ったスクリーンショットが見つからない",
+    "title": "Androidのスクリーンショットが見つからないときの確認手順",
+    "description": "Androidのスクリーンショットが保存されないように見えるとき、撮影の成否と写真アプリの保存先を確認する。",
+    "answer": "電源ボタンと音量小ボタンで試し撮りし、プレビューが出るか確認します。撮影できた場合は写真アプリや端末のファイルアプリで「Screenshots」フォルダを探し、撮影できない場合は機種の操作方法を確認します。",
+    "steps": [
+      "撮りたい画面で電源ボタンと音量小ボタンを同時に押し、プレビューや通知が出るか確認する",
+      "Googleフォトなどの写真アプリで「ライブラリ」や「コレクション」のスクリーンショットを探す",
+      "ファイルアプリで画像の保存先と撮影日時を調べ、別の画面でも試し撮りする",
+      "どの画面でも撮れない場合は端末メーカーのスクリーンショット操作を確認する"
+    ],
+    "causes": [
+      "端末固有のボタン操作と標準操作が異なる",
+      "撮影はできているが写真アプリで別のフォルダを見ている",
+      "特定のアプリや画面が撮影を制限している"
+    ],
+    "diagnosis": "撮影直後のプレビューが出るなら、保存先と表示の問題を優先して探します。プレビューが出ない場合はボタン操作と端末固有の操作を先に確認します。特定の画面だけ撮れないなら、そのアプリの保護機能の可能性があり、端末全体の故障と区別してください。",
+    "caution": "銀行アプリや認証画面などは情報保護のため撮影が制限される場合があります。制限を回避する方法は案内しません。スクリーンショットには通知や個人情報が写り込むことがあるため、共有前に内容を確認してください。",
+    "escalation": "標準画面でも撮影できず、機種の正しい操作でも改善しない場合は、機種、Android版、表示される通知を控えてメーカーに相談します。",
+    "source_label": "Google Androidヘルプ：画面の画像または動画を撮影する",
+    "source_url": "https://support.google.com/android/answer/9075928?hl=ja",
+    "related_existing": [
+      "/android/android-storage-full/",
+      "/android/android-touchscreen-not-responding/",
+      "/iphone/screenshot-not-working/"
+    ],
+    "fact_check": "Google公式資料で電源と音量小ボタン、撮影プレビュー、機種別手順への案内を確認した。",
+    "path": "/android/android-screenshot-not-found/"
+  },
+  {
+    "category": "android",
+    "slug": "android-screen-recording-no-audio",
+    "topic": "Androidの画面録画に音声が入らない",
+    "title": "Androidの画面録画で音声が記録されないときの確認手順",
+    "description": "画面録画はできるのに音声がないとき、開始前の録音選択、再生側の音量、アプリ側の制限を確認する。",
+    "answer": "画面録画を始める前に、音声を記録する設定が選ばれているか確認します。短いテスト動画を撮り、端末の再生音量と録音結果を分けて確認してください。",
+    "steps": [
+      "クイック設定からスクリーンレコーダーを開き、開始前に音声の録音を選択する",
+      "短いテスト動画を作り、ギャラリーで再生して音声トラックの有無を確認する",
+      "再生音量やBluetoothなど音の出力先を確認し、別の動画では音が聞こえるか比べる",
+      "特定のアプリだけ音が入らない場合は、アプリの録画制限や端末メーカーの仕様を確認する"
+    ],
+    "causes": [
+      "録画開始前の音声記録がオフになっている",
+      "録音はできているが再生音量や出力先が違う",
+      "対象アプリが音声の録画を制限している"
+    ],
+    "diagnosis": "自分の声が入らないのか、アプリの音だけ入らないのか、再生時に全く聞こえないのかを分けます。標準のホーム画面などで短く試し、アプリを変えると結果が変わるか確認します。端末メーカーにより選べる録音元が異なるため、画面に実際に表示される選択肢を記録してください。",
+    "caution": "通話、会議、配信などの録音は相手の同意やサービスの規約に関わります。許可なく録音しないでください。保護されたコンテンツの録画制限を回避する設定変更は案内しません。録画前に不要な通知や個人情報を隠してください。",
+    "escalation": "録音を選択しても標準画面のテストで音が入らない場合は、端末の機種、Android版、録音元の選択肢を控えてメーカーに相談します。",
+    "source_label": "Google Androidヘルプ：画面の動画を録画する",
+    "source_url": "https://support.google.com/android/answer/9075928?hl=ja",
+    "related_existing": [
+      "/android/android-microphone-not-working/",
+      "/android/android-no-sound/",
+      "/android/android-storage-full/"
+    ],
+    "fact_check": "Google公式資料で画面録画開始前に音声記録を選択できる点を確認し、機種による差を明記した。",
+    "path": "/android/android-screen-recording-no-audio/"
+  },
+  {
+    "category": "android",
+    "slug": "android-find-hub-device-not-showing",
+    "topic": "Find HubにAndroid端末が表示されない",
+    "title": "Find HubでAndroid端末が見つからないときの確認手順",
+    "description": "Find Hubの端末一覧に出ないとき、Googleアカウント、位置情報、デバイス設定、Google Playでの表示を確認する。",
+    "answer": "探したい端末と同じGoogleアカウントでFind Hubにサインインしているかを確認します。端末側のFind Hub設定と位置情報、Google Playで端末が非表示になっていないかを順に調べます。",
+    "steps": [
+      "Find Hubでサインイン中のGoogleアカウントが、探したい端末のものと同じか確認する",
+      "端末側の設定で「Google」→「すべてのサービス」→「Find Hub」の有効状態を確認する",
+      "位置情報とネットワーク、端末の電源状態を確認し、最後の位置情報の時刻を見る",
+      "Google Playのデバイス一覧でその端末が非表示に設定されていないか確認する"
+    ],
+    "causes": [
+      "Find Hubと端末で異なるGoogleアカウントを使っている",
+      "端末の探索設定や位置情報が有効でない",
+      "Google Playで端末が非表示、または端末が長くオフラインである"
+    ],
+    "diagnosis": "端末一覧に全くない場合はアカウントとGoogle Playでの表示を先に確認します。一覧にはあるが現在地がない場合は、電源・位置情報・最後の更新時刻を調べます。端末が手元にない状況では設定を直接変えられないため、表示される最後の位置情報を消さないよう慎重に確認します。",
+    "caution": "紛失端末に対する遠隔消去は元に戻せません。探索できないという理由だけで消去を選ばないでください。位置情報やアカウント情報は他人に共有せず、必要なら通信事業者や警察の案内に従ってください。",
+    "escalation": "同じアカウントで端末が表示されず設定も確認できない場合は、機種、アカウントの状況、最後の表示時刻を控えてGoogleまたはメーカーに相談します。",
+    "source_label": "Google Androidヘルプ：Find Hubに関する問題を解決する",
+    "source_url": "https://support.google.com/android/answer/14799600?hl=ja_ALL",
+    "related_existing": [
+      "/android/android-mobile-data-not-working/",
+      "/android/android-backup-not-complete/",
+      "/google/google-account-disabled/"
+    ],
+    "fact_check": "Google公式資料でFind Hubの端末・アクセサリーが見つからない場合の確認と、Google Playで非表示の端末は表示されない点を照合した。",
+    "path": "/android/android-find-hub-device-not-showing/"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-scheduled-send-not-sent",
+    "topic": "Gmailの予約送信が予定時刻に送られない",
+    "title": "Gmailの予約送信メールが送られないときの確認手順",
+    "description": "Gmailの予約送信が見当たらないとき、送信予定、タイムゾーン、送信済み、遅延を確認する。",
+    "answer": "まず「送信予定」にメールが残っているか、「送信済み」に移ったかを確認します。予約日時は設定時のタイムゾーンに基づき、指定時刻から数分遅れる場合もあるため、時刻表示を確認してから失敗と判断します。",
+    "steps": [
+      "Gmailの「送信予定」で対象メールと設定した日時・タイムゾーンを確認する",
+      "予定時刻を過ぎたら「送信済み」と「下書き」の両方を確認する",
+      "数分の遅れがあることを踏まえ、通信状態とGmailの表示を更新して再確認する",
+      "日時を変更する場合は予約をキャンセルして下書きに戻り、宛先と内容を確認して再設定する"
+    ],
+    "causes": [
+      "予約日時を別のタイムゾーンの時刻として設定した",
+      "指定時刻から数分の送信遅延を送信失敗と誤認した",
+      "予約を取り消して下書きに戻したまま再設定していない"
+    ],
+    "diagnosis": "「送信予定」にあるならまだ送信前、「送信済み」にあるならGmail側では送信済みです。どちらにもない場合は下書きやゴミ箱を確認し、予約の取り消し履歴を思い出します。相手が受け取れない問題とGmailで送信されていない問題は別なので、送信済みの有無を最初の分岐にします。",
+    "caution": "予約を解除して再送すると二重送信になる場合があります。送信済みへの移動を確かめてから操作してください。時刻を変える際は宛先、添付ファイル、タイムゾーンを再確認し、重要なメールでは相手に到達確認が必要な場合があります。",
+    "escalation": "十分待っても送信予定に残り、再設定後も同じ場合は、予約時刻、タイムゾーン、エラー表示を記録してGmailのヘルプを確認します。",
+    "source_label": "Gmailヘルプ：メールの送信日時を設定する",
+    "source_url": "https://support.google.com/mail/answer/9214606?co=GENIE.Platform%3DDesktop&hl=ja",
+    "related_existing": [
+      "/google/gmail-sent-mail-not-delivered/",
+      "/google/gmail-filter-moves-mail-to-trash/",
+      "/google/gmail-storage-full/"
+    ],
+    "fact_check": "Google公式資料で送信日時は設定時のタイムゾーンに基づき、数分遅れる場合がある点と、予定メールの確認・取消手順を確認した。",
+    "path": "/google/gmail-scheduled-send-not-sent/"
+  },
+  {
+    "category": "google",
+    "slug": "google-calendar-desktop-reminders-missing",
+    "topic": "Googleカレンダーのデスクトップ通知が表示されない",
+    "title": "Googleカレンダーの予定通知がPCに出ないときの確認手順",
+    "description": "カレンダーの通知が来ないとき、予定の通知、ブラウザ許可、デスクトップ通知、開いた状態を確認する。",
+    "answer": "予定そのものに通知が設定されているかを確かめ、Googleカレンダーとブラウザ双方の通知許可を確認します。PCではカレンダーをブラウザで開いていることも確認してください。",
+    "steps": [
+      "該当する予定を開き、通知が設定されているかと通知時刻を確認する",
+      "Googleカレンダーの設定で通知方式とデスクトップ通知の状態を確認する",
+      "ブラウザのサイト権限でcalendar.google.comの通知を許可しているか確認する",
+      "カレンダーのタブを開いた状態でテスト予定を作り、通知が出るか確認する"
+    ],
+    "causes": [
+      "予定やカレンダー側の通知設定がオフになっている",
+      "ブラウザがGoogleカレンダーからの通知をブロックしている",
+      "ブラウザでカレンダーを開いておらずデスクトップ通知が出ていない"
+    ],
+    "diagnosis": "すべての予定で出ないのか、特定の予定だけかを分けます。特定の予定だけならその予定の通知時刻を、全件ならカレンダーとブラウザの許可を見ます。PCの通知センターに残るのにバナーが出ない場合は、WindowsやMacの通知設定も別に確認してください。",
+    "caution": "通知テストのためにすべてのサイトへ一括で許可を与えないでください。必要なGoogleカレンダーだけを許可し、共有PCではロック画面に予定の内容が表示されるかを確認します。通知が来ないことだけで予定自体を削除しないでください。",
+    "escalation": "予定とブラウザの通知を確認しても出ない場合は、ブラウザ名、OS、通知の許可状態、テスト予定の時刻を控えてヘルプを確認します。",
+    "source_label": "Googleカレンダーヘルプ：通知が表示されない場合",
+    "source_url": "https://support.google.com/calendar/answer/12200012?hl=ja",
+    "related_existing": [
+      "/google/google-calendar-not-syncing/",
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/gmail-desktop-notifications-missing/"
+    ],
+    "fact_check": "Google公式資料でカレンダー通知、ブラウザ許可、デスクトップ通知、ブラウザで開いた状態を確認した。",
+    "path": "/google/google-calendar-desktop-reminders-missing/"
+  },
+  {
+    "category": "google",
+    "slug": "google-photos-shared-album-not-found",
+    "topic": "Googleフォトの共有アルバムが自分のアルバム一覧にない",
+    "title": "Googleフォトの共有アルバムが見つからないときの確認手順",
+    "description": "共有されたアルバムが一覧にないとき、招待されたアカウント、更新欄、アルバムビューへの表示を確認する。",
+    "answer": "共有されたアルバムは、自分のアルバム一覧に自動で保存されていない場合があります。招待されたGoogleアカウントで開き、「更新」から共有内容を探し、必要ならアルバムビューに表示する操作を確認します。",
+    "steps": [
+      "Googleフォトで現在のGoogleアカウントが招待先と同じか確認する",
+      "Web版またはアプリの「更新」で共有アルバムや会話の通知を探す",
+      "共有アルバムを開ける場合は、その他メニューの「アルバムビューに表示」を確認する",
+      "招待やリンクを再確認し、相手に共有先アカウントとリンク共有の状態を確認してもらう"
+    ],
+    "causes": [
+      "招待されたものと異なるGoogleアカウントを見ている",
+      "共有アルバムをアルバムビューに表示していない",
+      "相手が共有を停止したか、リンク・招待の対象が異なる"
+    ],
+    "diagnosis": "共有リンクからは開けるのにアルバム一覧にない場合は、一覧への表示設定を確認します。リンクからも開けない場合は招待されたアカウントや共有状態を確認してください。「更新」に通知があるかどうかで、そもそも招待が届いているかを切り分けられます。",
+    "caution": "共有アルバムを自分のアルバム一覧に表示しても、写真が自分のライブラリへ自動保存されるわけではありません。共有リンクを公開するとリンクを知る人が閲覧できる場合があります。アルバムから退出すると自分が追加した写真やコメントに影響するため、退出操作は慎重に行ってください。",
+    "escalation": "招待されたアカウントでも開けない場合は、相手に共有設定を確認してもらい、表示されたエラーと共有方法を控えてGoogleフォトのヘルプを参照します。",
+    "source_label": "Googleフォトヘルプ：写真や動画を共有する",
+    "source_url": "https://support.google.com/photos/answer/6131416?co=GENIE.Platform%3DDesktop&hl=ja",
+    "related_existing": [
+      "/google/google-photos-missing-photos/",
+      "/google/google-photos-backup-stuck/",
+      "/google/google-account-disabled/"
+    ],
+    "fact_check": "Google公式資料で共有アルバムが「更新」に出ること、アルバムビューへの表示は写真のライブラリ保存とは異なることを確認した。",
+    "path": "/google/google-photos-shared-album-not-found/"
+  },
+  {
+    "category": "google",
+    "slug": "google-maps-offline-map-not-downloading",
+    "topic": "Googleマップのオフライン地図をダウンロードできない",
+    "title": "Googleマップのオフライン地図が保存できないときの確認手順",
+    "description": "オフライン地図の保存が始まらないとき、対応地域、通信、保存容量、ダウンロード設定を確認する。",
+    "answer": "まずインターネットに接続した状態でGoogleマップへログインし、対象地域がオフライン地図に対応しているか確認します。保存先の空き容量とダウンロード設定を見て、範囲を小さくして再試行します。",
+    "steps": [
+      "Googleマップにログインし、通常の地図がオンラインで開けるか確認する",
+      "対象エリアの詳細から「オフラインマップをダウンロード」が表示されるか確認する",
+      "プロフィール→「オフラインマップ」で保存先とダウンロード設定を確認する",
+      "「自分の地図を選択」で範囲を調整し、空き容量を確認して再試行する"
+    ],
+    "causes": [
+      "対象の国・地域では契約や住所形式などの理由でダウンロードできない",
+      "通信設定やログイン状態がダウンロード条件に合っていない",
+      "保存先の空き容量が不足している、または指定範囲が広い"
+    ],
+    "diagnosis": "ダウンロード項目自体がない場合と、開始するが完了しない場合を分けます。前者では対象地域とアプリの画面、後者では通信・容量・保存先を確認します。別の小さなエリアを保存できるなら、端末全体の問題ではなく対象地域や範囲の条件に絞れます。",
+    "caution": "オフライン地図は保存後も更新が必要で、すべての地域で利用できるわけではありません。旅行や緊急時に使う前に実際にオフラインで開けるか試してください。SDカードに保存先を変える場合は、既存の地図を再ダウンロードする必要があります。",
+    "escalation": "対応地域で通信と容量を確認しても保存できない場合は、地域名、表示エラー、アプリ版、保存先を控えてGoogleマップのヘルプを確認します。",
+    "source_label": "Googleマップヘルプ：オフライン地図をダウンロードする",
+    "source_url": "https://support.google.com/maps/answer/6291838?co=GENIE.Platform%3DAndroid&hl=ja",
+    "related_existing": [
+      "/google/google-maps-location-inaccurate/",
+      "/android/android-storage-full/",
+      "/android/android-wifi-connected-no-internet/"
+    ],
+    "fact_check": "Google公式資料で一部地域の制限、オンラインログイン、オフラインマップの保存先、範囲の調整を確認した。",
+    "path": "/google/google-maps-offline-map-not-downloading/"
+  },
+  {
+    "category": "google",
+    "slug": "google-account-passkey-not-working",
+    "topic": "Googleアカウントのパスキーが使えない",
+    "title": "Googleアカウントでパスキーが使えないときの確認手順",
+    "description": "パスキーでログインできないとき、対応OS・ブラウザ、画面ロック、Bluetoothとキーチェーンを確認する。",
+    "answer": "パスキーが登録済みでも、端末やブラウザが対応していないと利用できません。OSとブラウザを更新し、スマートフォンの画面ロック、別のPCで使う場合のBluetooth、Apple端末のiCloudキーチェーンを確認します。",
+    "steps": [
+      "ログインに使う端末とブラウザがGoogleのパスキー要件に対応しているか確認する",
+      "スマートフォンの画面ロックと、登録したパスキーが使える端末かを確認する",
+      "スマートフォンのパスキーを別のPCで使う場合はBluetoothをオンにする",
+      "iPhone・iPad・MacならiCloudキーチェーンを確認し、シークレットモード以外でも試す"
+    ],
+    "causes": [
+      "端末またはブラウザが必要な版に達していない",
+      "画面ロック、Bluetooth、キーチェーンなどの利用条件が不足している",
+      "職場・学校のGoogle Workspaceで利用できるログイン方法が制限されている"
+    ],
+    "diagnosis": "同じ端末で使えないのか、別のPCだけで失敗するのかを分けます。後者はBluetoothや端末間の接続条件を優先します。パスキーの選択肢自体が出ない場合は、対応OS・ブラウザとアカウントの管理状態を確認し、表示された文言を控えてください。",
+    "caution": "パスキーの問題を直すためにアカウントの復旧手段を消したり、他人の端末へパスキーを登録したりしないでください。Googleによるとパスキー追加は既存の認証・復旧要素を削除しません。学校や会社のアカウントは管理者の方針を優先します。",
+    "escalation": "対応条件を満たしても選択できない場合は、OS・ブラウザの版、端末間の利用方法、表示文を控えてGoogleアカウントのヘルプを確認します。",
+    "source_label": "Googleアカウントヘルプ：パスキーでログインする",
+    "source_url": "https://support.google.com/accounts/answer/13548313?hl=ja",
+    "related_existing": [
+      "/google/google-account-verification-code-not-arriving/",
+      "/google/google-account-disabled/",
+      "/iphone/face-id-not-working/"
+    ],
+    "fact_check": "Google公式資料で対応端末・ブラウザ、画面ロック、Bluetooth、iCloudキーチェーン、Workspaceの制約を確認した。",
+    "path": "/google/google-account-passkey-not-working/"
+  },
+  {
+    "category": "google",
+    "slug": "google-drive-file-download-failed-browser",
+    "topic": "Web版Googleドライブでファイルをダウンロードできない",
+    "title": "GoogleドライブのファイルをPCに保存できないときの確認手順",
+    "description": "Driveからのダウンロードが失敗するとき、所有者の制限、ChromeのCookie例外、保存操作を確認する。",
+    "answer": "対象ファイルの所有者がダウンロードを制限していないかを確認します。Web版ドライブでサードパーティCookieをブロックしている場合は、Googleの案内に沿ってdrive.google.comだけを許可する方法を検討します。",
+    "steps": [
+      "drive.google.comで対象ファイルを右クリックし、「ダウンロード」が表示されるか確認する",
+      "共有ファイルなら所有者が閲覧者のダウンロード・コピーを禁止していないか確認する",
+      "ChromeのサードパーティCookieをブロックしている場合は、Driveだけの例外設定を確認する",
+      "別の小さな自分のファイルで同じ操作を試し、ファイル固有かブラウザ全体か切り分ける"
+    ],
+    "causes": [
+      "ファイル所有者が閲覧者のダウンロードを禁止している",
+      "ブラウザのサードパーティCookie設定がDriveの安全なダウンロード通信を妨げている",
+      "ブラウザの保存先や対象ファイル固有の問題がある"
+    ],
+    "diagnosis": "「ダウンロード」がメニューにない場合は所有者の権限制限、ボタンを押しても始まらない場合はブラウザと通信を優先します。自分が所有する別ファイルでも失敗するか比べると、共有権限と環境の問題を分けられます。エラーメッセージとファイルの共有権限を記録してください。",
+    "caution": "共有者の制限を回避してファイルを取得しようとしないでください。Cookieの設定を変える場合もすべてのサイトで許可せず、必要なDriveだけの例外に限定します。不審なファイルの警告が出たら、送信元を確認するまでダウンロードしないでください。",
+    "escalation": "所有者の許可があるのに保存できない場合は、ブラウザ名、権限、表示エラーを控えて所有者または管理者に相談します。",
+    "source_label": "Googleドライブヘルプ：ファイルをダウンロードする",
+    "source_url": "https://support.google.com/drive/answer/2423534?co=GENIE.Platform%3DDesktop&hl=ja",
+    "related_existing": [
+      "/google/google-drive-access-denied/",
+      "/google/google-drive-upload-stuck/",
+      "/browser/chrome-file-download-failed/"
+    ],
+    "fact_check": "Google公式資料で所有者のダウンロード制限、DriveのサードパーティCookie利用、サイト単位の例外設定を確認した。",
+    "path": "/google/google-drive-file-download-failed-browser/"
+  }
+]

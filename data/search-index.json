@@ -1,5 +1,155 @@
 [
   {
+    "title": "iPhoneでiMessageをアクティベートできないときの確認手順",
+    "description": "iMessageが「アクティベーション中」のまま進まないときに、通信、日時、電話番号、SMSの条件を順に確認する方法。",
+    "url": "/iphone/imessage-activation-stuck-iphone/"
+  },
+  {
+    "title": "iPhoneでFaceTime通話がつながらないときの確認手順",
+    "description": "FaceTimeの発着信ができないとき、通信速度、電話回線、アプリ設定、スクリーンタイムの制限を切り分ける。",
+    "url": "/iphone/facetime-calls-not-connecting-iphone/"
+  },
+  {
+    "title": "iPhoneのiCloudバックアップが完了しないときの確認手順",
+    "description": "iCloudバックアップが失敗・停止するときに、Wi-Fi、必要容量、更新、所要時間を安全に確認する。",
+    "url": "/iphone/icloud-backup-not-completing-iphone/"
+  },
+  {
+    "title": "Apple PayのカードをiPhoneのウォレットに追加できないときの確認手順",
+    "description": "カード追加エラーのとき、対応カード、端末設定、アカウント状態、発行元への問い合わせ先を確認する。",
+    "url": "/iphone/apple-pay-card-not-adding-iphone/"
+  },
+  {
+    "title": "iPhoneの「探す」で位置情報を共有できないときの確認手順",
+    "description": "位置共有が相手に届かないとき、共有スイッチ、共有元の端末、位置情報サービス、通信を切り分ける。",
+    "url": "/iphone/find-my-location-sharing-not-updating/"
+  },
+  {
+    "title": "iPhoneのiCloud写真が同期されないときの確認手順",
+    "description": "写真が他の端末に現れないとき、写真アプリの状態表示、Apple Account、電源とWi-Fiを確認する。",
+    "url": "/iphone/icloud-photos-sync-paused-iphone/"
+  },
+  {
+    "title": "AirTagが「探す」に表示されないときの確認手順",
+    "description": "AirTagが持ち物一覧に見えないとき、対応iOS、Apple Account、通信と位置情報、電池を切り分ける。",
+    "url": "/iphone/airtag-not-showing-find-my-iphone/"
+  },
+  {
+    "title": "iPhoneのスクリーンタイムパスコードを変更できないときの確認手順",
+    "description": "スクリーンタイムのコードを忘れたとき、復旧に使うApple Accountとファミリー共有の管理者を確認する。",
+    "url": "/iphone/screen-time-passcode-reset-iphone/"
+  },
+  {
+    "title": "Macの「メール」で送信できないときの確認手順",
+    "description": "Macのメールが送信トレイに残るとき、接続、宛先、アカウント、送信用サーバの設定を確認する。",
+    "url": "/mac/mac-mail-cannot-send-messages/"
+  },
+  {
+    "title": "Macのスクリーンショットが見つからないときの確認手順",
+    "description": "撮影後の画像が見つからないとき、ショートカット、保存先設定、クリップボードへの保存を切り分ける。",
+    "url": "/mac/mac-screenshot-file-not-found/"
+  },
+  {
+    "title": "Macでプリンタが追加画面に表示されないときの確認手順",
+    "description": "Macにプリンタを追加できないとき、電源、同じネットワーク、共有元、IP追加の条件を確認する。",
+    "url": "/mac/mac-printer-not-appearing-add/"
+  },
+  {
+    "title": "MacのSpotlightでファイルが見つからないときの確認手順",
+    "description": "Spotlight検索に特定のファイルが出ないとき、検索語、対象場所、結果カテゴリ、除外設定を確認する。",
+    "url": "/mac/mac-spotlight-files-not-found/"
+  },
+  {
+    "title": "Windows 11の近距離共有で相手が表示されないときの確認手順",
+    "description": "近距離共有で送信先PCが見つからないとき、両端末の共有範囲、Bluetooth、Wi-Fiと距離を確認する。",
+    "url": "/windows/nearby-sharing-device-not-found-windows/"
+  },
+  {
+    "title": "Windows Helloで指紋が認識されないときの確認手順",
+    "description": "Windows Helloの指紋エラーで入れないとき、PINでの代替サインイン、センサー、再登録、更新を確認する。",
+    "url": "/windows/windows-hello-fingerprint-not-recognized/"
+  },
+  {
+    "title": "Windowsのリモートデスクトップにつながらないときの確認手順",
+    "description": "接続先PCにリモートデスクトップで入れないとき、Windowsエディション、設定、PC名、通信を切り分ける。",
+    "url": "/windows/remote-desktop-not-connecting-windows/"
+  },
+  {
+    "title": "Windows 11でアプリの通知が表示されないときの確認手順",
+    "description": "通知バナーが来ないとき、システム全体、アプリ別、応答不可、通知センターの表示を切り分ける。",
+    "url": "/windows/windows-app-notifications-not-showing/"
+  },
+  {
+    "title": "Windows 11でネットワーク共有フォルダを開けないときの確認手順",
+    "description": "共有フォルダが開けないとき、相手PCの電源、ネットワーク探索、共有権限、入力先を切り分ける。",
+    "url": "/windows/windows-network-shared-folder-inaccessible/"
+  },
+  {
+    "title": "Windows 11でHDRの切り替えが表示されないときの確認手順",
+    "description": "HDR対応ディスプレイなのに設定が出ないとき、選択中の画面、複製設定、PCと接続の対応を確認する。",
+    "url": "/windows/windows-hdr-toggle-unavailable/"
+  },
+  {
+    "title": "AndroidでRCSチャットが接続できないときの確認手順",
+    "description": "GoogleメッセージのRCSが接続中・再試行待ちのとき、電話番号、通信、アプリの状態を確認する。",
+    "url": "/android/android-rcs-chat-not-connecting/"
+  },
+  {
+    "title": "AndroidのQuick Shareで相手の端末が見つからないときの確認手順",
+    "description": "Quick Shareで受信先が出ないとき、受信モード、公開範囲、BluetoothとWi-Fi、QR共有を確認する。",
+    "url": "/android/android-quick-share-device-not-showing/"
+  },
+  {
+    "title": "AndroidでGoogle連絡先が同期されないときの確認手順",
+    "description": "連絡先が新しい端末に出ないとき、保存先アカウント、Google連絡先の同期、ネット接続を確認する。",
+    "url": "/android/android-google-contacts-not-syncing/"
+  },
+  {
+    "title": "Androidのスクリーンショットが見つからないときの確認手順",
+    "description": "Androidのスクリーンショットが保存されないように見えるとき、撮影の成否と写真アプリの保存先を確認する。",
+    "url": "/android/android-screenshot-not-found/"
+  },
+  {
+    "title": "Androidの画面録画で音声が記録されないときの確認手順",
+    "description": "画面録画はできるのに音声がないとき、開始前の録音選択、再生側の音量、アプリ側の制限を確認する。",
+    "url": "/android/android-screen-recording-no-audio/"
+  },
+  {
+    "title": "Find HubでAndroid端末が見つからないときの確認手順",
+    "description": "Find Hubの端末一覧に出ないとき、Googleアカウント、位置情報、デバイス設定、Google Playでの表示を確認する。",
+    "url": "/android/android-find-hub-device-not-showing/"
+  },
+  {
+    "title": "Gmailの予約送信メールが送られないときの確認手順",
+    "description": "Gmailの予約送信が見当たらないとき、送信予定、タイムゾーン、送信済み、遅延を確認する。",
+    "url": "/google/gmail-scheduled-send-not-sent/"
+  },
+  {
+    "title": "Googleカレンダーの予定通知がPCに出ないときの確認手順",
+    "description": "カレンダーの通知が来ないとき、予定の通知、ブラウザ許可、デスクトップ通知、開いた状態を確認する。",
+    "url": "/google/google-calendar-desktop-reminders-missing/"
+  },
+  {
+    "title": "Googleフォトの共有アルバムが見つからないときの確認手順",
+    "description": "共有されたアルバムが一覧にないとき、招待されたアカウント、更新欄、アルバムビューへの表示を確認する。",
+    "url": "/google/google-photos-shared-album-not-found/"
+  },
+  {
+    "title": "Googleマップのオフライン地図が保存できないときの確認手順",
+    "description": "オフライン地図の保存が始まらないとき、対応地域、通信、保存容量、ダウンロード設定を確認する。",
+    "url": "/google/google-maps-offline-map-not-downloading/"
+  },
+  {
+    "title": "Googleアカウントでパスキーが使えないときの確認手順",
+    "description": "パスキーでログインできないとき、対応OS・ブラウザ、画面ロック、Bluetoothとキーチェーンを確認する。",
+    "url": "/google/google-account-passkey-not-working/"
+  },
+  {
+    "title": "GoogleドライブのファイルをPCに保存できないときの確認手順",
+    "description": "Driveからのダウンロードが失敗するとき、所有者の制限、ChromeのCookie例外、保存操作を確認する。",
+    "url": "/google/google-drive-file-download-failed-browser/"
+  },
+  {
     "title": "Windows 11でノートPCのタッチパッドが反応しないときの確認手順",
     "description": "Windows 11のタッチパッドだけが動かないとき、設定、外付けマウス、ドライバーの順に原因を切り分ける手順を案内します。",
     "url": "/windows/touchpad-not-working-windows-11/"

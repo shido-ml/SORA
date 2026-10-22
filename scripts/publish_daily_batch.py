@@ -71,6 +71,33 @@ def update_home(html: str, total: int, windows_count: int) -> str:
     return site.serialize_html(soup)
 
 
+def update_iphone_hub(articles: list[site.Article], by_category: dict[str, list[site.Article]], total: int) -> str:
+    soup = site.soup_from_path(site.ROOT / "iphone" / "index.html")
+    listing = soup.select_one(".article-list")
+    hero = soup.select_one(".page-hero p")
+    if listing is None or hero is None:
+        site.fail("iPhone hub structure changed")
+    existing = [node for node in listing.select(".article-card")]
+    existing_urls = {node.get("href") for node in existing}
+    fresh = [article for article in articles if article.url.startswith("/iphone/") and article.url not in existing_urls]
+    count = len(existing) + len(fresh)
+    for article in reversed(fresh):
+        listing.insert(0, BeautifulSoup(site.article_card(article, include_description=False), "html.parser").find())
+    listing["data-article-count"] = str(count)
+    hero.string = re.sub(r"全\d+件", f"全{count}件", hero.get_text(" ", strip=True), count=1)
+    if soup.title:
+        soup.title.string = re.sub(r"\d+選", f"{count}選", soup.title.get_text(), count=1)
+    for node in soup.select('meta[name="description"], meta[property="og:description"], meta[name="twitter:description"]'):
+        node["content"] = re.sub(r"\d+件", f"{count}件", str(node.get("content", "")), count=1)
+    for card in soup.select('.category-card[href^="/category/"]'):
+        category_url = site.canonical_path(str(card.get("href")))
+        small = card.select_one("small")
+        if small and category_url in by_category:
+            small.string = re.sub(r"\d+記事", f"{len(by_category[category_url])}記事", small.get_text(" ", strip=True), count=1)
+            card["data-article-count"] = str(len(by_category[category_url]))
+    return site.serialize_html(soup)
+
+
 def add_editorial_detail(rendered: str, record: dict[str, str]) -> str:
     """Keep the article-specific diagnosis and safety context in the page."""
     soup = BeautifulSoup(rendered, "html.parser")
@@ -176,6 +203,10 @@ def build(day: str, check_only: bool) -> None:
     outputs[site.ROOT / "index.html"] = update_home(
         site.build_homepage(all_articles[:8]), total, len(by_category["/category/windows/"])
     )
+    if any(article.url.startswith("/iphone/") for article in new_articles):
+        outputs[site.ROOT / "iphone" / "index.html"] = update_count(
+            update_iphone_hub(new_articles, by_category, total), total
+        )
     outputs[site.SEARCH_PATH] = json.dumps(
         [{"title": a.title, "description": a.description, "url": a.url} for a in all_articles],
         ensure_ascii=False, indent=2
@@ -194,6 +225,8 @@ def build(day: str, check_only: bool) -> None:
           for category_file in (site.ROOT / "category").glob("*/index.html")
           if f"/category/{category_file.parent.name}/" in affected_categories),
     }
+    if site.ROOT / "iphone" / "index.html" in outputs:
+        derived_pages.add(site.ROOT / "iphone" / "index.html")
     outputs[site.SITEMAP_XML_PATH] = update_sitemap_dates(sitemap_xml, derived_pages, day)
     changed = {path for path, content in outputs.items() if not path.exists() or path.read_text(encoding="utf-8") != content}
     site.validate_listing(outputs[site.ROOT / "articles" / "index.html"], total)

@@ -66,6 +66,16 @@ ALL_MODERN_ROOTS = ("iphone",) + NEW_ARTICLE_ROOTS
 
 
 CATEGORY_CONFIG: dict[str, dict[str, Any]] = {
+    "iphone": {
+        "label": "iPhone",
+        "category_url": "/category/system/",
+        "checks": [
+            "同じApple Accountの別端末でも起きるか、iPhoneだけで起きるか",
+            "Wi-Fiとモバイル通信を切り替えると症状が変わるか",
+            "iOS更新、空き容量、関連する設定変更のあとに始まったか",
+        ],
+        "safety": "サインアウトや初期化を行う前に、必要な写真・連絡先などの保存状況と復旧手段を確認してください。共有や支払いに関する設定は、本人のアカウントと端末だけで操作してください。",
+    },
     "windows": {
         "label": "Windows",
         "category_url": "/category/windows/",
@@ -370,6 +380,17 @@ def validate_plan(raw: Any, base_articles: list[Article]) -> list[dict[str, Any]
         category = text(raw_record["category"], f"{prefix}.category")
         if category not in CATEGORY_CONFIG:
             fail(f"{prefix}.category is unsupported: {category}")
+        category_url = CATEGORY_CONFIG[category]["category_url"]
+        category_label = CATEGORY_CONFIG[category]["label"]
+        if "category_url" in raw_record or "category_label" in raw_record:
+            if category != "iphone" or "category_url" not in raw_record or "category_label" not in raw_record:
+                fail(f"{prefix} may override its category only for iPhone with both fields")
+            category_url = canonical_path(text(raw_record["category_url"], f"{prefix}.category_url"))
+            if category_url not in {
+                f"/category/{path.parent.name}/" for path in (ROOT / "category").glob("*/index.html")
+            }:
+                fail(f"{prefix}.category_url does not exist: {category_url}")
+            category_label = text(raw_record["category_label"], f"{prefix}.category_label", minimum=2)
         slug = text(raw_record["slug"], f"{prefix}.slug")
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
             fail(f"{prefix}.slug is not a safe URL slug: {slug}")
@@ -412,6 +433,8 @@ def validate_plan(raw: Any, base_articles: list[Article]) -> list[dict[str, Any]
         normalized.append({
             "topic": topic,
             "category": category,
+            "category_url": category_url,
+            "category_label": category_label,
             "path": path,
             "slug": slug,
             "title": title_value,
@@ -475,8 +498,8 @@ def generated_article(record: dict[str, Any]) -> Article:
         title=record["title"],
         description=record["description"],
         summary=record["answer"],
-        label=config["label"],
-        category_url=config["category_url"],
+        label=record["category_label"],
+        category_url=record["category_url"],
         source_file=Path(record["category"]) / record["slug"] / "index.html",
         is_new=True,
     )
@@ -492,7 +515,7 @@ def select_related(
         if url != record["path"] and url not in selected_urls:
             selected_urls.append(url)
 
-    category_url = CATEGORY_CONFIG[record["category"]]["category_url"]
+    category_url = record["category_url"]
     for article in base_articles:
         if article.category_url == category_url and article.url not in selected_urls:
             selected_urls.append(article.url)
@@ -545,8 +568,8 @@ def render_article(
     canonical = absolute_url(record["path"])
     title_value = record["title"]
     description = record["description"]
-    label = config["label"]
-    category_url = config["category_url"]
+    label = record["category_label"]
+    category_url = record["category_url"]
 
     website_schema = {
         "@context": "https://schema.org",
