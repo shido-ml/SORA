@@ -1,5 +1,155 @@
 [
   {
+    "title": "iPhoneをCarPlayに接続できないときの確認手順",
+    "description": "iPhoneをCarPlayに接続できないときの確認手順。車のCarPlay対応と接続方式を確認し、有線ならケーブルとUSBポート、無線ならiPhoneのBluetooth・Wi-Fiと車側の設定を分けて調べます。",
+    "url": "/iphone/carplay-connection-not-working/"
+  },
+  {
+    "title": "iPhoneでSiriが声に反応しないときの確認手順",
+    "description": "iPhoneでSiriが声に反応しないときの確認手順。サイドボタンや文字入力ではSiriを使えるかを先に比べます。音声起動だけ失敗するならSiriの聞き取り設定を確認し、声の登録をやり直します。",
+    "url": "/iphone/siri-voice-not-responding/"
+  },
+  {
+    "title": "Apple WatchとiPhoneのペアリングが止まるときの確認手順",
+    "description": "Apple WatchとiPhoneのペアリングが止まるときの確認手順。iPhoneとApple Watchの対応条件、両方の更新・再起動を確認します。Watchの画面がペアリング途中で止まった場合は、表示状態とアクティベーションロックを確認してから公式の手順を選びます。",
+    "url": "/iphone/apple-watch-pairing-stuck/"
+  },
+  {
+    "title": "iPhoneでWi-Fi通話を有効にできないときの確認手順",
+    "description": "iPhoneでWi-Fi通話を有効にできないときの確認手順。契約先の通信事業者と回線がWi-Fi通話に対応するかを先に確認します。対応済みなら使いたいSIMを選び、Wi-Fi通話設定、iOS更新、別のWi-Fiでの結果を比べます。",
+    "url": "/iphone/wifi-calling-unavailable/"
+  },
+  {
+    "title": "ファミリー共有の購入済みアプリがiPhoneに出ないときの確認手順",
+    "description": "ファミリー共有の購入済みアプリがiPhoneに出ないときの確認手順。ファミリー共有と購入用Apple Accountが一致するか、購入アイテムの共有が有効かを確認します。対象のアプリが共有対象かどうかと、App Storeの家族の購入一覧を分けて調べます。",
+    "url": "/iphone/family-purchases-not-visible/"
+  },
+  {
+    "title": "iPhoneのメモが見つからないときの確認手順",
+    "description": "iPhoneのメモが見つからないときの確認手順。メモが削除されたと決めつけず、作成先アカウントとフォルダ、検索結果、最近削除した項目を順に調べます。別アカウントに保存したメモはiCloudだけを見ても見つかりません。",
+    "url": "/iphone/notes-missing-iphone/"
+  },
+  {
+    "title": "Macの3本指ドラッグが使えないときの確認手順",
+    "description": "Macの3本指ドラッグが使えないときの確認手順。トラックパッド自体のクリック故障と分け、アクセシビリティの『3本指のドラッグ』が有効かを確認します。macOSの版によって設定名と階層が異なります。",
+    "url": "/mac/three-finger-drag-not-working-mac/"
+  },
+  {
+    "title": "Macの画面共有で別のMacにつながらないときの確認手順",
+    "description": "Macの画面共有で別のMacにつながらないときの確認手順。接続先Macで画面共有がオンか、両方が同じネットワークにいてスリープしていないかを先に確認します。相手に接続を許可されたユーザーかも確かめます。",
+    "url": "/mac/mac-screen-sharing-connection-failed/"
+  },
+  {
+    "title": "Macのキーボードバックライトが点灯しないときの確認手順",
+    "description": "Macのキーボードバックライトが点灯しないときの確認手順。内蔵キーボードがバックライト対応かを確認し、輝度と自動調整、環境光センサー周辺の状態を調べます。明るい場所では自動で点灯しないことがあります。",
+    "url": "/mac/mac-keyboard-backlight-not-on/"
+  },
+  {
+    "title": "iPhoneの写真をMacの写真アプリに読み込めないときの確認手順",
+    "description": "iPhoneの写真をMacの写真アプリに読み込めないときの確認手順。iPhoneでiCloud写真とストレージ最適化を使っていると、オリジナルが端末内になくUSB読み込みできない場合があります。読み込めない枚数とMac側のiCloud写真設定を確認します。",
+    "url": "/mac/mac-photos-iphone-import-missing/"
+  },
+  {
+    "title": "Windowsのスマートフォン連携でAndroidを追加できないときの確認手順",
+    "description": "Windowsのスマートフォン連携でAndroidを追加できないときの確認手順。PCとAndroidのアプリ・アカウントを確認し、スマートフォン連携のQRコードを読み取った後に必要な権限まで進んだかを調べます。Bluetooth接続だけでは連携設定は完了しません。",
+    "url": "/windows/phone-link-android-pairing-failed/"
+  },
+  {
+    "title": "OneDrive個人用 Vaultを開けないときの確認手順",
+    "description": "OneDrive個人用 Vaultを開けないときの確認手順。OneDrive自体の同期ではなく、個人用 Vault のロック解除で止まっているかを確認します。選んだ本人確認方法でコードを受け取れるか、正しい個人用アカウントかを調べます。",
+    "url": "/windows/onedrive-personal-vault-cannot-unlock/"
+  },
+  {
+    "title": "Windows 11のタッチキーボードが表示されないときの確認手順",
+    "description": "Windows 11のタッチキーボードが表示されないときの確認手順。タスクバーのタッチキーボードアイコン設定を確認します。物理キーボードが接続されているときだけ隠れる設定と、常に表示する設定を分けて試します。",
+    "url": "/windows/touch-keyboard-icon-missing-windows/"
+  },
+  {
+    "title": "Windows 11でファイルの既定アプリを変更できないときの確認手順",
+    "description": "Windows 11でファイルの既定アプリを変更できないときの確認手順。ファイルの拡張子を確かめ、Windowsの『既定のアプリ』で対象アプリだけでなく拡張子ごとの関連付けを確認します。特定のファイルだけか同じ形式すべてかを分けます。",
+    "url": "/windows/default-app-filetype-not-changing/"
+  },
+  {
+    "title": "Windowsバックアップ後に新しいPCへファイルが戻らないときの確認手順",
+    "description": "Windowsバックアップ後に新しいPCへファイルが戻らないときの確認手順。Windowsバックアップの復元対象とOneDriveに保存されるファイルを分けて確認します。同じMicrosoftアカウントでサインインし、旧PCで選択したフォルダとOneDriveの同期状態を調べます。",
+    "url": "/windows/windows-backup-files-not-restored/"
+  },
+  {
+    "title": "Googleウォレットでタッチ決済できないときの確認手順",
+    "description": "Googleウォレットでタッチ決済できないときの確認手順。NFC、既定の決済アプリ、画面ロック、カード設定を順に確認し、端末の読み取り不良とカード側の拒否を分けます。",
+    "url": "/android/wallet-tap-payment-not-working/"
+  },
+  {
+    "title": "Androidからキャスト先が見つからないときの確認手順",
+    "description": "Androidからキャスト先が見つからないときの確認手順。スマートフォンとキャスト先のネットワークを照合し、Google Homeにも表示されるか確認します。映像の途切れとは別の機器発見の問題です。",
+    "url": "/android/cast-device-not-found/"
+  },
+  {
+    "title": "Androidでアプリの言語を変えても反映されないときの確認手順",
+    "description": "Androidでアプリの言語を変えても反映されないときの確認手順。対象アプリがAndroidのアプリ別言語と目的の言語に対応するかを確認し、アプリ再起動とアプリ内設定を調べます。",
+    "url": "/android/app-language-not-changing/"
+  },
+  {
+    "title": "Androidのプライベートスペースのアプリが見えないときの確認手順",
+    "description": "Androidのプライベートスペースのアプリが見えないときの確認手順。プライベートスペースのロックと非表示設定を確認し、通常の領域とは別にアプリを探します。アプリの削除とは分けて判断します。",
+    "url": "/android/private-space-apps-not-visible/"
+  },
+  {
+    "title": "ヘルスコネクトで健康データが共有されないときの確認手順",
+    "description": "ヘルスコネクトで健康データが共有されないときの確認手順。ヘルスコネクトへの書き込みと読み取りは別の権限です。データ種別と日時を比較し、記録の未保存と表示側の未取得を切り分けます。",
+    "url": "/android/health-connect-data-not-syncing/"
+  },
+  {
+    "title": "Androidのセーフモードから戻れないときの確認手順",
+    "description": "Androidのセーフモードから戻れないときの確認手順。通常は再起動でセーフモードを終了できます。戻れない場合は起動時のボタン状態と機種固有の操作を調べます。",
+    "url": "/android/safe-mode-not-exiting/"
+  },
+  {
+    "title": "Androidで未使用アプリの権限が消えたときの確認手順",
+    "description": "Androidで未使用アプリの権限が消えたときの確認手順。長く使わないアプリの権限をAndroidが自動停止することがあります。必要な権限だけを戻し、通知停止も別に確認します。",
+    "url": "/android/unused-app-permissions-removed/"
+  },
+  {
+    "title": "Googleカレンダーの予定時刻がずれるときの確認手順",
+    "description": "Googleカレンダーの予定時刻がずれるときの確認手順。カレンダー全体、端末、予定個別のタイムゾーンを比較し、予定の実際の開始時刻を確認します。単なる表示形式との違いも調べます。",
+    "url": "/google/calendar-event-time-wrong/"
+  },
+  {
+    "title": "Googleマップのナビ音声が聞こえないときの確認手順",
+    "description": "Googleマップのナビ音声が聞こえないときの確認手順。ナビ画面の音声設定、メディア音量、Bluetooth出力先を順に確認し、案内だけ聞こえないのか端末の音全体が出ないのかを分けます。",
+    "url": "/google/maps-navigation-voice-silent/"
+  },
+  {
+    "title": "Googleフォトのロックされたフォルダに写真が見えないときの確認手順",
+    "description": "Googleフォトのロックされたフォルダに写真が見えないときの確認手順。ロックされたフォルダは通常の写真一覧に表示されません。端末とアカウント、バックアップ設定を確認し、移動と削除を取り違えないよう調べます。",
+    "url": "/google/photos-locked-folder-missing/"
+  },
+  {
+    "title": "Googleドライブの共有ドライブが見えないときの確認手順",
+    "description": "Googleドライブの共有ドライブが見えないときの確認手順。共有ドライブの非表示設定、アカウント、メンバー権限を確認します。マイドライブの共有フォルダと混同せず、管理者側の制限も切り分けます。",
+    "url": "/google/shared-drive-not-visible/"
+  },
+  {
+    "title": "YouTubeで字幕を表示できないときの確認手順",
+    "description": "YouTubeで字幕を表示できないときの確認手順。まず動画に字幕が用意されているかを確認し、表示設定と翻訳言語を分けて調べます。字幕のない動画に設定だけで必ず字幕を作ることはできません。",
+    "url": "/google/youtube-subtitles-not-available/"
+  },
+  {
+    "title": "Google Meetの会議に参加できないときの確認手順",
+    "description": "Google Meetの会議に参加できないときの確認手順。リンクの有効性、使用アカウント、主催者の承認や組織設定を確認します。カメラやマイクの故障とは別の参加権限の問題です。",
+    "url": "/google/meet-cannot-join-meeting/"
+  },
+  {
+    "title": "新しいスマートフォンでGoogle認証システムのコードが見えないときの確認手順",
+    "description": "新しいスマートフォンでGoogle認証システムのコードが見えないときの確認手順。旧端末での同期・移行方法を確認し、新端末で同じGoogleアカウントを使っているか調べます。サービスごとの復旧コードも確認します。",
+    "url": "/google/authenticator-codes-missing-new-phone/"
+  },
+  {
+    "title": "Googleデータエクスポートのダウンロードが失敗するときの確認手順",
+    "description": "Googleデータエクスポートのダウンロードが失敗するときの確認手順。エクスポートの作成中かダウンロード段階かを分け、メールのリンク、保存先容量、分割アーカイブの数を確認します。元データの削除は必要ありません。",
+    "url": "/google/takeout-export-download-fails/"
+  },
+  {
     "title": "iPhoneでiMessageをアクティベートできないときの確認手順",
     "description": "iMessageが「アクティベーション中」のまま進まないときに、通信、日時、電話番号、SMSの条件を順に確認する方法。",
     "url": "/iphone/imessage-activation-stuck-iphone/"

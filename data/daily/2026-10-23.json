@@ -1,0 +1,992 @@
+[
+  {
+    "category": "iphone",
+    "slug": "carplay-connection-not-working",
+    "path": "/iphone/carplay-connection-not-working/",
+    "title": "iPhoneをCarPlayに接続できないときの確認手順",
+    "topic": "CarPlayだけが車載画面に出ない",
+    "description": "iPhoneをCarPlayに接続できないときの確認手順。車のCarPlay対応と接続方式を確認し、有線ならケーブルとUSBポート、無線ならiPhoneのBluetooth・Wi-Fiと車側の設定を分けて調べます。",
+    "answer": "車のCarPlay対応と接続方式を確認し、有線ならケーブルとUSBポート、無線ならiPhoneのBluetooth・Wi-Fiと車側の設定を分けて調べます。",
+    "steps": [
+      "車種と地域でCarPlayに対応しているか車の説明書を確認し、有線かワイヤレスか、どちらの接続で失敗するかを記録する。",
+      "有線接続なら別のデータ通信対応USBケーブルと車側の別ポートを試し、充電だけ可能なケーブルと区別する。",
+      "ワイヤレスならiPhoneでBluetoothとWi-Fiをオンにし、CarPlay用ネットワークの自動接続と車載画面のCarPlay選択を確認する。",
+      "iOSと車載システムの更新を確認し、設定のCarPlay一覧で対象車を確認する。再登録は接続情報を控えてから行う。"
+    ],
+    "causes": [
+      "車載機がCarPlayに未対応、または有線と無線の対応方式を取り違えている。",
+      "USBケーブル・ポートの不良や充電専用ケーブルでデータ通信できない。",
+      "Wi-Fi・Bluetooth・CarPlayの許可設定や車載ソフトの状態が合っていない。"
+    ],
+    "diagnosis": "充電はできてもCarPlayが出ないなら、まずデータ通信に対応したケーブルかを確かめます。別のiPhoneでも同じ車で失敗するなら車側を、同じiPhoneが別の対応車でも失敗するなら端末側を優先して調べます。運転前に停車した状態で接続を確認してください。",
+    "caution": "走行中に設定画面を操作しないでください。車載機の初期化やiPhoneのネットワーク設定リセットは、保存済み接続を失うため最後にします。車の操作方法はメーカーの説明書を優先し、対応していない方式を設定変更だけで有効にしようとしないでください。",
+    "escalation": "対応車と確認済みケーブルでも接続しなければ、車種・年式、車載ソフト版、iOS版、有線・無線の別を記録して車のメーカーまたはAppleへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/105109",
+    "source_label": "Appleサポート：CarPlayに問題がある場合",
+    "related_existing": [
+      "/iphone/bluetooth-car-not-connecting/",
+      "/iphone/bluetooth-device-not-showing/",
+      "/iphone/iphone-restarts-randomly/"
+    ],
+    "closest_existing_url": "/iphone/bluetooth-car-not-connecting/",
+    "differentiation": "既存記事は車のBluetooth通話・音楽接続。この記事はCarPlay画面の有線USBと無線CarPlayの成立条件を扱う。",
+    "fact_check": "Apple公式は有線なら別ケーブル・別USBポート、無線ならBluetoothとWi-FiおよびCarPlayネットワークの自動接続を確認するよう案内している。"
+  },
+  {
+    "category": "iphone",
+    "slug": "siri-voice-not-responding",
+    "path": "/iphone/siri-voice-not-responding/",
+    "title": "iPhoneでSiriが声に反応しないときの確認手順",
+    "topic": "Siriの音声起動だけができない",
+    "description": "iPhoneでSiriが声に反応しないときの確認手順。サイドボタンや文字入力ではSiriを使えるかを先に比べます。音声起動だけ失敗するならSiriの聞き取り設定を確認し、声の登録をやり直します。",
+    "answer": "サイドボタンや文字入力ではSiriを使えるかを先に比べます。音声起動だけ失敗するならSiriの聞き取り設定を確認し、声の登録をやり直します。",
+    "steps": [
+      "サイドボタンでSiriを起動できるか、録音アプリで声が入るかを比べ、音声起動とマイク全体の不良を分ける。",
+      "設定のSiri関連画面で『Siri』または『Hey Siri』を聞き取る設定がオンかを確認する。項目名はiOS版に合わせて読む。",
+      "聞き取りを一度オフにして再びオンにし、画面に出る音声登録の指示を静かな場所で行う。",
+      "iPhoneを上向きに置いて試し、Bluetooth機器を使っている場合は接続を外した状態でも同じか比較する。"
+    ],
+    "causes": [
+      "Siriの音声起動設定がオフ、または声の登録が合っていない。",
+      "iPhoneを伏せて置いた状態などで呼びかけの条件を満たしていない。",
+      "マイクや接続中の音声機器の問題で声を拾えていない。"
+    ],
+    "diagnosis": "ボタンでは起動できるなら、Siriのサービス自体より呼びかけの検出を優先します。録音アプリでも声が入らないならマイクの問題が近く、Siri以外のアプリにも影響するはずです。特定のヘッドフォン使用中だけ変わるかも確認してください。",
+    "caution": "Siriの設定を見直すためにApple Accountからサインアウトしたり、端末を初期化したりする必要はありません。音声登録は周囲の人の声が入りにくい場所で行い、マイクの穴を尖ったもので清掃しないでください。",
+    "escalation": "ボタン起動と音声登録を試しても反応せず、録音も失敗する場合は、使用したマイクとiOS版を記録してAppleへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/105037",
+    "source_label": "Appleサポート：iPhoneやiPadでSiriが機能しない場合",
+    "related_existing": [
+      "/iphone/microphone-not-working/",
+      "/iphone/callers-cannot-hear/",
+      "/iphone/bluetooth-earbuds-not-connecting/"
+    ],
+    "closest_existing_url": "/iphone/microphone-not-working/",
+    "differentiation": "既存記事は録音や通話を含むマイク全体の故障。この記事はSiriの呼びかけ設定と声の再登録を扱う。",
+    "fact_check": "Apple公式はSiriへの呼びかけをオフ・オンに戻して声を再登録し、なお反応しない場合は文字入力やボタン起動を試すよう案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "apple-watch-pairing-stuck",
+    "path": "/iphone/apple-watch-pairing-stuck/",
+    "title": "Apple WatchとiPhoneのペアリングが止まるときの確認手順",
+    "topic": "Apple Watchの初期ペアリングが完了しない",
+    "description": "Apple WatchとiPhoneのペアリングが止まるときの確認手順。iPhoneとApple Watchの対応条件、両方の更新・再起動を確認します。Watchの画面がペアリング途中で止まった場合は、表示状態とアクティベーションロックを確認してから公式の手順を選びます。",
+    "answer": "iPhoneとApple Watchの対応条件、両方の更新・再起動を確認します。Watchの画面がペアリング途中で止まった場合は、表示状態とアクティベーションロックを確認してから公式の手順を選びます。",
+    "steps": [
+      "iPhoneのiOSとWatchの対応、両端末の電源と近さを確認し、ペアリング画面のどこで止まるかを記録する。",
+      "iPhoneとApple Watchを通常の方法で再起動し、Wi-Fi・Bluetoothが利用できる状態で再度近づける。",
+      "既にWatchの文字盤が表示される場合は別のiPhoneとのペアリング済みか確認し、所有者不明の端末を消去しない。",
+      "ペアリング画面でAppleロゴのまま止まる場合は、Appleの対象機種向け手順を読み、必要なリセット操作とアクティベーションロックの条件を確かめる。"
+    ],
+    "causes": [
+      "iOSまたはwatchOSの対応条件・更新状態が合っていない。",
+      "Watchが以前のiPhoneとペアリングされたまま、またはアクティベーションロックが残っている。",
+      "ペアリング処理が途中で止まり、Watch側の画面操作を受け付けない。"
+    ],
+    "diagnosis": "新規購入品か中古品か、Watchに文字盤とペアリングアニメーションのどちらが出ているかで次の操作が変わります。文字盤が出るなら既に別端末に結び付いている可能性があります。Appleロゴの停止と認証要求を混同せず、画面文言を控えてください。",
+    "caution": "Apple Watchのリセットには端末内データへの影響があります。中古端末のアクティベーションロックは購入者の操作だけでは解除できないため、解除代行サービスを使わず元の所有者か販売元に確認してください。バックアップの有無を先に確かめます。",
+    "escalation": "対応条件を満たしても止まる場合は、WatchとiPhoneの機種、画面表示、前所有者の有無を控えてAppleサポートへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/111821",
+    "source_label": "Appleサポート：Apple WatchをiPhoneとペアリングできない場合",
+    "related_existing": [
+      "/iphone/bluetooth-device-not-showing/",
+      "/iphone/bluetooth-not-connecting/",
+      "/iphone/forgot-apple-account-password/"
+    ],
+    "closest_existing_url": "/iphone/bluetooth-device-not-showing/",
+    "differentiation": "既存記事は一般Bluetooth周辺機器の検出。この記事はWatch固有のペアリング状態、前所有者、アクティベーションロックを扱う。",
+    "fact_check": "Apple公式は既に文字盤が見えるWatchはペアリング済みの可能性があり、ペアリング中の停止にはWatch側リセット手順、ロックには元のApple Accountが必要と説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "wifi-calling-unavailable",
+    "path": "/iphone/wifi-calling-unavailable/",
+    "title": "iPhoneでWi-Fi通話を有効にできないときの確認手順",
+    "topic": "Wi-Fi通話の設定が出ないか通話できない",
+    "description": "iPhoneでWi-Fi通話を有効にできないときの確認手順。契約先の通信事業者と回線がWi-Fi通話に対応するかを先に確認します。対応済みなら使いたいSIMを選び、Wi-Fi通話設定、iOS更新、別のWi-Fiでの結果を比べます。",
+    "answer": "契約先の通信事業者と回線がWi-Fi通話に対応するかを先に確認します。対応済みなら使いたいSIMを選び、Wi-Fi通話設定、iOS更新、別のWi-Fiでの結果を比べます。",
+    "steps": [
+      "利用中の通信事業者と契約がWi-Fi通話に対応しているか、提供地域と対象機種を公式案内で確認する。",
+      "設定のモバイル通信から使いたい回線を選び、Wi-Fi通話がオンか確認する。複数SIMでは別回線を誤選択していないか見る。",
+      "iOSを更新し、通常の再起動後に数分待って同じ回線で通話を試す。",
+      "別の信頼できるWi-Fiに接続して比較し、通常の携帯回線通話とWi-Fi通話のどちらだけが失敗するかを控える。"
+    ],
+    "causes": [
+      "通信事業者や契約プランがWi-Fi通話を提供していない。",
+      "デュアルSIMで使いたい回線と設定対象がずれている。",
+      "Wi-Fiネットワークまたは事業者側の通話サービスに問題がある。"
+    ],
+    "diagnosis": "設定項目自体が出ないなら、まず事業者と回線の対応条件を調べます。項目はあるが通話が失敗するなら、別Wi-Fiで試してネットワーク依存か分けます。通常の携帯回線通話も失敗する場合は、端末設定より回線・SIMを先に確認します。",
+    "caution": "緊急通報をWi-Fi通話だけに頼らないでください。設定を初期化する前に契約先の案内を確認し、連絡先や保存済みWi-Fiを失う操作は最後にします。公衆Wi-Fiでは接続できても通話品質や利用条件が異なる場合があります。",
+    "escalation": "契約が対応しているのに利用できなければ、事業者名、回線、iOS版、試したWi-Fiを記録して通信事業者へ問い合わせます。",
+    "source_url": "https://support.apple.com/ja-jp/108066",
+    "source_label": "Appleサポート：Wi-Fi通話機能で電話をかける",
+    "related_existing": [
+      "/iphone/mobile-data-not-working/",
+      "/iphone/no-service/",
+      "/iphone/callers-cannot-hear/"
+    ],
+    "closest_existing_url": "/iphone/mobile-data-not-working/",
+    "differentiation": "既存記事はモバイルデータ通信全般。この記事は事業者対応とデュアルSIMを含むWi-Fi経由の音声通話に限定する。",
+    "fact_check": "Apple公式は事業者対応とソフトウェア更新を先に確認し、モバイル通信から対象回線のWi-Fi通話をオンにして別のWi-Fiで比較するよう案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "family-purchases-not-visible",
+    "path": "/iphone/family-purchases-not-visible/",
+    "title": "ファミリー共有の購入済みアプリがiPhoneに出ないときの確認手順",
+    "topic": "家族が買ったアプリやコンテンツを探せない",
+    "description": "ファミリー共有の購入済みアプリがiPhoneに出ないときの確認手順。ファミリー共有と購入用Apple Accountが一致するか、購入アイテムの共有が有効かを確認します。対象のアプリが共有対象かどうかと、App Storeの家族の購入一覧を分けて調べます。",
+    "answer": "ファミリー共有と購入用Apple Accountが一致するか、購入アイテムの共有が有効かを確認します。対象のアプリが共有対象かどうかと、App Storeの家族の購入一覧を分けて調べます。",
+    "steps": [
+      "ファミリー共有グループのメンバーと、購入時に使ったApple Accountを各自で照合する。パスワードは共有しない。",
+      "管理者と購入者の双方で『購入アイテムの共有』がオンか確認し、購入用アカウントが異なる場合は公式の画面で状態を確認する。",
+      "App Storeのプロフィールからアプリの購入一覧を開き、家族の名前を選んで対象コンテンツが出るか調べる。",
+      "対象アプリがファミリー共有に対応しているか、非表示の購入や地域差・利用条件がないか販売画面を確認する。"
+    ],
+    "causes": [
+      "ファミリー共有と『メディアと購入』に異なるApple Accountを使っている。",
+      "管理者または購入者側で購入アイテムの共有がオフになっている。",
+      "対象アイテムが共有対象外、非表示、または地域・年齢条件に合わない。"
+    ],
+    "diagnosis": "自分の購入一覧には見えるのに家族の一覧で見えない場合は共有設定を、家族の購入一覧自体が出ない場合はグループとアカウントを確認します。一つのアプリだけならその商品の共有可否を調べ、全件で見えない場合とは原因を分けてください。",
+    "caution": "家族のApple Accountのパスワードを聞いたり共有したりしないでください。グループからの脱退や購入用アカウントの切り替えは共有中のコンテンツに影響するため、購入履歴と利用条件を確かめるまで行わないでください。",
+    "escalation": "設定が一致しても対象アイテムだけ表示されない場合は、アプリ名、購入者、共有可否、画面表示を控えてAppleまたは開発元に確認します。",
+    "source_url": "https://support.apple.com/ja-jp/108911",
+    "source_label": "Appleサポート：家族が共有しているアプリやコンテンツが見つからない場合",
+    "related_existing": [
+      "/iphone/in-app-purchase-not-working/",
+      "/iphone/apple-account-sign-in-failed/",
+      "/iphone/app-missing-from-home-screen/"
+    ],
+    "closest_existing_url": "/iphone/in-app-purchase-not-working/",
+    "differentiation": "既存記事は本人のアプリ内課金が失敗する問題。この記事は家族の既購入コンテンツが共有一覧に出ない問題。",
+    "fact_check": "Apple公式はファミリー共有とメディアと購入で同じApple Accountを使い、共有設定と個別商品の共有可否を確認するよう案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "notes-missing-iphone",
+    "path": "/iphone/notes-missing-iphone/",
+    "title": "iPhoneのメモが見つからないときの確認手順",
+    "topic": "作成したメモが一覧から消えた",
+    "description": "iPhoneのメモが見つからないときの確認手順。メモが削除されたと決めつけず、作成先アカウントとフォルダ、検索結果、最近削除した項目を順に調べます。別アカウントに保存したメモはiCloudだけを見ても見つかりません。",
+    "answer": "メモが削除されたと決めつけず、作成先アカウントとフォルダ、検索結果、最近削除した項目を順に調べます。別アカウントに保存したメモはiCloudだけを見ても見つかりません。",
+    "steps": [
+      "メモアプリのフォルダ一覧を開き、iCloud、端末内、メールアカウントなど保存先ごとに対象メモを探す。",
+      "メモ内検索で題名や本文の語を探し、すべてのアカウントを表示しているか確認する。",
+      "『最近削除した項目』を確認し、残っている場合は内容を確かめてから復元する。完全削除はしない。",
+      "設定で使用中のアカウントのメモ同期が有効か確認し、Web版や他の端末で同じアカウントの表示を比べる。"
+    ],
+    "causes": [
+      "別のiCloud・メールアカウントまたは端末内フォルダに保存した。",
+      "誤って移動・削除され、最近削除した項目に残っている。",
+      "アカウント設定の変更や同期停止で当該フォルダが表示されていない。"
+    ],
+    "diagnosis": "一つだけ見つからないなら検索と最近削除した項目を優先し、フォルダ全体が消えたならアカウント設定と同期を先に確認します。他端末やiCloud.comにはあるかを比べれば、端末表示の問題と保存先の問題を分けられます。",
+    "caution": "同期されていないメモが端末内だけにある場合、アカウント削除やアプリの再インストールで失う可能性があります。見つからない状態のままサインアウト・初期化を進めず、復元できる項目を完全削除しないでください。",
+    "escalation": "どのアカウント・フォルダにもなく、最近削除した項目にもない場合は、最後に見た日時と使ったアカウントを記録してAppleまたはメール提供者に相談します。",
+    "source_url": "https://support.apple.com/ja-jp/102476",
+    "source_label": "Appleサポート：iPhoneなどでメモが見当たらない場合",
+    "related_existing": [
+      "/iphone/app-data-not-syncing/",
+      "/iphone/icloud-sign-in-loop/",
+      "/iphone/icloud-photos-sync-paused-iphone/"
+    ],
+    "closest_existing_url": "/iphone/app-data-not-syncing/",
+    "differentiation": "既存記事は一般アプリの同期不良。この記事はメモの保存先アカウント、フォルダ検索、最近削除した項目の復旧を扱う。",
+    "fact_check": "Apple公式はメモが見当たらない際にアカウント設定、最近削除した項目、検索、フォルダの順で探すよう案内している。"
+  },
+  {
+    "category": "mac",
+    "slug": "three-finger-drag-not-working-mac",
+    "path": "/mac/three-finger-drag-not-working-mac/",
+    "title": "Macの3本指ドラッグが使えないときの確認手順",
+    "topic": "3本指でウインドウや項目を動かせない",
+    "description": "Macの3本指ドラッグが使えないときの確認手順。トラックパッド自体のクリック故障と分け、アクセシビリティの『3本指のドラッグ』が有効かを確認します。macOSの版によって設定名と階層が異なります。",
+    "answer": "トラックパッド自体のクリック故障と分け、アクセシビリティの『3本指のドラッグ』が有効かを確認します。macOSの版によって設定名と階層が異なります。",
+    "steps": [
+      "通常のポインタ移動と1本指のクリックが動くか確かめ、トラックパッド全体の不良か3本指操作だけかを分ける。",
+      "システム設定のアクセシビリティからポインタコントロール、トラックパッドオプションを開く。旧macOSでは名称が異なる場合がある。",
+      "『ドラッグにトラックパッドを使用』をオンにし、ドラッグ方法で『3本指のドラッグ』を選んで設定を保存する。",
+      "Finderのウインドウを安全に動かして試し、外部トラックパッドなら接続と対応機種も確認する。"
+    ],
+    "causes": [
+      "アクセシビリティ側の3本指ドラッグ設定がオフまたは別方式になっている。",
+      "macOSの版が異なり、旧手順の設定場所を探している。",
+      "外部トラックパッドが接続されていない、または一般操作も反応しない。"
+    ],
+    "diagnosis": "ポインタ移動まで失敗するなら、ジェスチャ設定より接続や入力機器を疑います。3本指だけ動かないなら設定方式を確認します。Finderではできるが特定アプリだけで失敗する場合は、アプリ固有の操作と領域を比べてください。",
+    "caution": "入力機器が反応しない状態で設定をむやみに切り替えないでください。外部トラックパッドならマウスや内蔵トラックパッドを使える状態で確認し、操作を戻せるよう元の設定を控えておきます。初期化は不要です。",
+    "escalation": "設定が正しく、Finderでも3本指だけ反応しないなら、macOS版とトラックパッド機種を記録してAppleサポートへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/102341",
+    "source_label": "Appleサポート：Macトラックパッドで3本指のドラッグを有効にする",
+    "related_existing": [
+      "/mac/mac-touch-id-not-unlocking/",
+      "/mac/mac-bluetooth-not-connecting/",
+      "/windows/touchpad-not-working-windows-11/"
+    ],
+    "closest_existing_url": "/windows/touchpad-not-working-windows-11/",
+    "differentiation": "既存記事はWindowsのタッチパッド全体の入力不良。この記事はMacのアクセシビリティにある特定ジェスチャ設定。",
+    "fact_check": "Apple公式は3本指ドラッグをアクセシビリティのポインタコントロールにあるトラックパッドオプションから設定すると説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-screen-sharing-connection-failed",
+    "path": "/mac/mac-screen-sharing-connection-failed/",
+    "title": "Macの画面共有で別のMacにつながらないときの確認手順",
+    "topic": "画面共有アプリから相手のMacを開けない",
+    "description": "Macの画面共有で別のMacにつながらないときの確認手順。接続先Macで画面共有がオンか、両方が同じネットワークにいてスリープしていないかを先に確認します。相手に接続を許可されたユーザーかも確かめます。",
+    "answer": "接続先Macで画面共有がオンか、両方が同じネットワークにいてスリープしていないかを先に確認します。相手に接続を許可されたユーザーかも確かめます。",
+    "steps": [
+      "接続先Macのシステム設定で画面共有がオンか、画面共有の利用を許されたユーザーに自分が含まれるか確認する。",
+      "両方のMacのネットワーク名と接続状態を比較し、どちらもスリープしていない状態で試す。",
+      "接続先Macの名前またはネットワークアドレスを確認し、画面共有アプリから正しい相手を指定する。",
+      "共有相手の承認・認証画面が出るなら、本人から提供された資格情報でのみ接続し、エラー文言を記録する。"
+    ],
+    "causes": [
+      "接続先で画面共有がオフ、または利用許可に含まれていない。",
+      "両方のMacが別のネットワーク、または片方がスリープ中。",
+      "接続先の名前・アドレスや認証方法を取り違えている。"
+    ],
+    "diagnosis": "同じネットワークのほかのMacには接続できるなら対象Macの共有設定を、どのMacにも接続できないなら手元のネットワークと画面共有アプリを調べます。相手が見えるが認証で止まる場合は通信障害と決めず権限を確認します。",
+    "caution": "画面共有は相手の画面や操作にアクセスできます。許可のないMacへ接続しないでください。ファイアウォールを無差別に無効化せず、組織管理端末では管理者に設定を確認します。接続のためにパスワードを他人へ送らないでください。",
+    "escalation": "共有とネットワーク条件が合っても失敗する場合は、両MacのmacOS版、接続先の設定、エラー文言を記録して管理者かAppleへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mh14070/mac",
+    "source_label": "Apple Macユーザガイド：画面を共有できない場合",
+    "related_existing": [
+      "/mac/mac-wifi-connected-no-internet/",
+      "/mac/mac-airdrop-not-working/",
+      "/windows/remote-desktop-not-connecting-windows/"
+    ],
+    "closest_existing_url": "/windows/remote-desktop-not-connecting-windows/",
+    "differentiation": "既存記事はWindows Remote Desktopのホスト版と接続権限。この記事はmacOSの画面共有サービスと同一ネットワーク条件。",
+    "fact_check": "Apple公式は共有先の画面共有設定、両Macがスリープしていないこと、同じネットワークであることを確認するよう案内する。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-keyboard-backlight-not-on",
+    "path": "/mac/mac-keyboard-backlight-not-on/",
+    "title": "Macのキーボードバックライトが点灯しないときの確認手順",
+    "topic": "暗い場所でもキーボードが光らない",
+    "description": "Macのキーボードバックライトが点灯しないときの確認手順。内蔵キーボードがバックライト対応かを確認し、輝度と自動調整、環境光センサー周辺の状態を調べます。明るい場所では自動で点灯しないことがあります。",
+    "answer": "内蔵キーボードがバックライト対応かを確認し、輝度と自動調整、環境光センサー周辺の状態を調べます。明るい場所では自動で点灯しないことがあります。",
+    "steps": [
+      "使っているMacやキーボードがバックライト対応かを機種仕様で確認し、キー入力自体は動くか分ける。",
+      "システム設定のキーボードでバックライトの明るさと自動調整を確認し、可能なら暗い場所で再度試す。",
+      "カメラ付近の環境光センサーをケースやシールが覆っていないか確認し、ふさがっていれば安全に外す。",
+      "一定時間操作しないと消灯する設定を確認し、手動輝度調整と自動調整で結果が変わるか記録する。"
+    ],
+    "causes": [
+      "周囲が明るく、自動調整がバックライトを点灯させていない。",
+      "輝度が低い、または未使用時に消灯する時間設定が短い。",
+      "非対応キーボードの使用、環境光センサーの遮蔽、またはハードウェア不良。"
+    ],
+    "diagnosis": "暗い場所では点くなら自動調整の正常な動作かもしれません。キー入力もできない場合はバックライトだけの問題ではなくキーボード接続を調べます。内蔵と外付けのどちらか、輝度項目が表示されるかを分けて確認してください。",
+    "caution": "キーボードや画面の隙間に液体・工具を入れないでください。センサー付近のアクセサリを外すだけで確認し、システム設定を変えた場合は元に戻せるよう記録します。非対応機種ではソフトウェア操作で機能を追加できません。",
+    "escalation": "対応機種で暗所・手動最大輝度でも点灯しない場合は、機種とmacOS版、キー入力の状態を控えてAppleへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchlp2265/mac",
+    "source_label": "Apple Macユーザガイド：キーボードのバックライト",
+    "related_existing": [
+      "/mac/mac-black-screen-power-on/",
+      "/mac/mac-touch-id-not-unlocking/",
+      "/mac/mac-notifications-silent-focus/"
+    ],
+    "closest_existing_url": "/mac/mac-black-screen-power-on/",
+    "differentiation": "既存記事は画面全体が映らない問題。この記事はキー入力できる状態でのキーボード照明だけを扱う。",
+    "fact_check": "Apple公式はキーボード設定の自動調整と未使用時消灯を示し、カメラ近くの環境光センサーを覆わないよう案内する。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-photos-iphone-import-missing",
+    "path": "/mac/mac-photos-iphone-import-missing/",
+    "title": "iPhoneの写真をMacの写真アプリに読み込めないときの確認手順",
+    "topic": "USB接続で一部の写真だけMacに取り込めない",
+    "description": "iPhoneの写真をMacの写真アプリに読み込めないときの確認手順。iPhoneでiCloud写真とストレージ最適化を使っていると、オリジナルが端末内になくUSB読み込みできない場合があります。読み込めない枚数とMac側のiCloud写真設定を確認します。",
+    "answer": "iPhoneでiCloud写真とストレージ最適化を使っていると、オリジナルが端末内になくUSB読み込みできない場合があります。読み込めない枚数とMac側のiCloud写真設定を確認します。",
+    "steps": [
+      "写真アプリの読み込み画面で、すべて失敗するか一部の写真だけ警告が出るかを確認する。",
+      "iPhoneでiCloud写真と『iPhoneのストレージを最適化』がオンかを確認し、元データが端末内にあるかを判断する。",
+      "Macで同じApple AccountのiCloud写真を使う方針なら、設定と容量を確認して写真アプリで同期されるか待つ。",
+      "MacでiCloud写真を使いたくない場合は、必要な写真をiPhoneからAirDropで送れるか少数で試す。"
+    ],
+    "causes": [
+      "iPhoneの最適化により元の写真・動画がiCloudにあり端末内にない。",
+      "Mac側ではiCloud写真を使っておらず、USBから元データを取得できない。",
+      "一部の写真だけ形式や転送状態が異なるため、全件失敗と取り違えている。"
+    ],
+    "diagnosis": "USBで全件が見えないなら接続認識を確認しますが、一部だけ警告が出るならiPhoneのストレージ最適化が重要です。MacのiCloud写真をオンにするとライブラリ構成が変わるため、まずどのApple Accountとライブラリを使っているかを確認してください。",
+    "caution": "iCloud写真を急にオフにしたりiPhoneから写真を削除したりしないでください。同期写真の削除は他の端末にも反映され得ます。Macの写真ライブラリを切り替える前にバックアップと空き容量を確認し、まず少数の写真で読み込み方法を試します。",
+    "escalation": "一部の項目だけ転送できない状態が続く場合は、警告表示、iCloud写真の設定、iOS・macOS版を控えてAppleへ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/102302",
+    "source_label": "Appleサポート：写真やビデオをMacの写真に読み込めない場合",
+    "related_existing": [
+      "/iphone/icloud-photos-sync-paused-iphone/",
+      "/mac/icloud-drive-not-syncing-mac/",
+      "/iphone/airdrop-files-missing/"
+    ],
+    "closest_existing_url": "/iphone/icloud-photos-sync-paused-iphone/",
+    "differentiation": "既存記事はiPhoneとiCloudの写真同期停止。この記事は最適化で元データが端末になく、MacへのUSB読み込みが一部失敗する症状。",
+    "fact_check": "Apple公式はiPhoneでiCloud写真とストレージ最適化がオンの場合、一部の元画像が端末になくMacへの手動読み込みが失敗し得ると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "phone-link-android-pairing-failed",
+    "path": "/windows/phone-link-android-pairing-failed/",
+    "title": "Windowsのスマートフォン連携でAndroidを追加できないときの確認手順",
+    "topic": "スマートフォン連携のQR登録が完了しない",
+    "description": "Windowsのスマートフォン連携でAndroidを追加できないときの確認手順。PCとAndroidのアプリ・アカウントを確認し、スマートフォン連携のQRコードを読み取った後に必要な権限まで進んだかを調べます。Bluetooth接続だけでは連携設定は完了しません。",
+    "answer": "PCとAndroidのアプリ・アカウントを確認し、スマートフォン連携のQRコードを読み取った後に必要な権限まで進んだかを調べます。Bluetooth接続だけでは連携設定は完了しません。",
+    "steps": [
+      "PCのスマートフォン連携でAndroidを選び、使っているMicrosoftアカウントとAndroid側の『Windowsにリンク』のアカウントを照合する。",
+      "PC側に表示されたQRコードをAndroidで読み取り、案内されたアプリの初期設定と権限許可を最後まで確認する。",
+      "端末が既にMicrosoftアカウントの一覧にある場合は、既存の端末を選んで連携できるか試し、重複登録と区別する。",
+      "両端末のネット接続とアプリ更新を確認し、どの画面で止まるか、通知や権限要求が出たかを記録する。"
+    ],
+    "causes": [
+      "PCとスマートフォンで異なるMicrosoftアカウントを使っている。",
+      "QR読み取り後の『Windowsにリンク』設定や権限許可が終わっていない。",
+      "既に登録済みの端末と新規登録を取り違えている、または通信が途切れている。"
+    ],
+    "diagnosis": "QR画面が出ないならPC側の設定を、QRは読み取れるが進まないならAndroid側のアプリと権限を優先します。通知・写真・通話のどの権限が必要かは使う機能で違うため、まず基本連携が完了するかを確認してください。",
+    "caution": "ペアリングを何度も削除してやり直す前に、どちらのMicrosoftアカウントで登録したかを控えてください。会社・学校の管理端末ではポリシーで制限される場合があるため、権限を勝手に広げず管理者へ確認します。",
+    "escalation": "アカウントと接続条件が一致しても登録できなければ、PC・AndroidのOS版、アプリ版、止まった画面とエラーを記録してMicrosoftサポートへ相談します。",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/apps/phonelink/phone-link-requirements-and-setup",
+    "source_label": "Microsoftサポート：スマートフォン連携の要件と設定",
+    "related_existing": [
+      "/windows/windows-bluetooth-toggle-missing/",
+      "/android/android-usb-file-transfer-not-working/",
+      "/windows/nearby-sharing-device-not-found-windows/"
+    ],
+    "closest_existing_url": "/windows/nearby-sharing-device-not-found-windows/",
+    "differentiation": "既存記事は近距離共有で相手のPCが見えない問題。この記事はMicrosoftアカウントとQRコードでAndroidをスマートフォン連携へ登録する問題。",
+    "fact_check": "Microsoft公式はPCのスマートフォン連携からAndroidを選び、QRコードまたは既存アカウントの端末一覧を使い、Android側でWindowsにリンクの権限を付与すると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "onedrive-personal-vault-cannot-unlock",
+    "path": "/windows/onedrive-personal-vault-cannot-unlock/",
+    "title": "OneDrive個人用 Vaultを開けないときの確認手順",
+    "topic": "個人用Vaultの本人確認で止まる",
+    "description": "OneDrive個人用 Vaultを開けないときの確認手順。OneDrive自体の同期ではなく、個人用 Vault のロック解除で止まっているかを確認します。選んだ本人確認方法でコードを受け取れるか、正しい個人用アカウントかを調べます。",
+    "answer": "OneDrive自体の同期ではなく、個人用 Vault のロック解除で止まっているかを確認します。選んだ本人確認方法でコードを受け取れるか、正しい個人用アカウントかを調べます。",
+    "steps": [
+      "OneDriveで通常フォルダは開けるか、個人用 Vaultだけが開けないかを比べる。",
+      "Vaultを選択し、画面に表示された本人確認方法と宛先の末尾が自分のものか確認する。",
+      "SMS・メールなら届いたコードを公式の画面に入力し、Authenticatorを利用できる場合はアプリの通知またはコードを確認する。",
+      "自動ロックの直後か、ネット接続やアカウント切り替えの後かを記録し、Web版OneDriveでも同じか比べる。"
+    ],
+    "causes": [
+      "個人用 Vaultが自動ロックされ、再認証が必要な状態。",
+      "本人確認コードの受信先を利用できない、または別アカウントを開いている。",
+      "OneDriveの通信・サインイン状態が悪く、確認処理が完了していない。"
+    ],
+    "diagnosis": "通常のファイルにアクセスできるならOneDrive全体の同期障害ではなくVaultの本人確認へ絞れます。スマートフォンでコードが届かない場合は受信先が今も使えるかを確かめ、何度も試す前に現在の認証方法を記録してください。",
+    "caution": "本人確認コードやAuthenticatorの承認要求を他人へ伝えないでください。Vault内のファイルを確認せずにOneDriveの接続解除・再インストールを行わず、重要なローカル未同期ファイルも保護します。利用資格のないアカウントへの切り替えで解決を試みないでください。",
+    "escalation": "正しいアカウントでも認証できない場合は、選べる認証方法と表示されたエラーを控え、Microsoftアカウントの公式復旧手順またはサポートを利用します。",
+    "source_url": "https://support.microsoft.com/ja-jp/onedrive/protect-your-onedrive-files-in-personal-vault",
+    "source_label": "Microsoftサポート：OneDrive個人用 Vaultでファイルを保護する",
+    "related_existing": [
+      "/windows/onedrive-sync-pending/",
+      "/windows/bitlocker-recovery-key-prompt/",
+      "/google/google-account-verification-code-not-arriving/"
+    ],
+    "closest_existing_url": "/windows/onedrive-sync-pending/",
+    "differentiation": "既存記事はOneDriveのファイル同期停止。この記事はVaultへの二段階の本人確認と自動ロック。",
+    "fact_check": "Microsoft公式は個人用 Vaultが未使用時に自動ロックされ、解除時はSMS・メール・Authenticatorなど選択した方法で本人確認すると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "touch-keyboard-icon-missing-windows",
+    "path": "/windows/touch-keyboard-icon-missing-windows/",
+    "title": "Windows 11のタッチキーボードが表示されないときの確認手順",
+    "topic": "タスクバーにタッチキーボードのボタンがない",
+    "description": "Windows 11のタッチキーボードが表示されないときの確認手順。タスクバーのタッチキーボードアイコン設定を確認します。物理キーボードが接続されているときだけ隠れる設定と、常に表示する設定を分けて試します。",
+    "answer": "タスクバーのタッチキーボードアイコン設定を確認します。物理キーボードが接続されているときだけ隠れる設定と、常に表示する設定を分けて試します。",
+    "steps": [
+      "タッチ入力は動くか、テキスト欄をタップしてキーボードが開くかを確認する。",
+      "タスクバーを長押しまたは右クリックしてタスクバー設定を開き、システムトレイのタッチキーボード項目を探す。",
+      "表示条件を『常に』にしてアイコンが出るか確認し、必要なら『キーボードが接続されていない場合』との違いを比較する。",
+      "アイコンからタッチキーボードを開き、出ない場合はWindows更新とタブレット機種の入力設定を確認する。"
+    ],
+    "causes": [
+      "システムトレイのタッチキーボードアイコンが非表示になっている。",
+      "物理キーボード接続時だけアイコンを隠す条件が選ばれている。",
+      "タッチスクリーン自体の不調やタブレット入力設定の問題が重なっている。"
+    ],
+    "diagnosis": "指で画面を操作できるのにアイコンだけないなら、タスクバーの表示条件を優先します。テキスト欄に触れても何も反応しない場合は、タッチスクリーン自体が動くかも分けてください。外付けキーボードの接続状態で表示が変わるかを比べます。",
+    "caution": "タッチ入力が使えない状態でレジストリ変更やドライバー削除を急がないでください。物理キーボードが使える間に設定を確認し、管理端末ではタスクバーの制限があるか管理者に聞きます。設定変更前の表示条件を控えておきます。",
+    "escalation": "表示条件を『常に』にしても出ず、他のタッチ操作にも異常があれば、機種とWindows版、接続キーボードの有無を記録してメーカーへ相談します。",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/hardware/input-devices/enable-and-disable-the-touch-keyboard-in-windows",
+    "source_label": "Microsoftサポート：Windowsでタッチキーボードを有効または無効にする",
+    "related_existing": [
+      "/windows/windows-touchscreen-not-responding/",
+      "/windows/touchpad-not-working-windows-11/",
+      "/windows/windows-taskbar-not-responding/"
+    ],
+    "closest_existing_url": "/windows/windows-touchscreen-not-responding/",
+    "differentiation": "既存記事はタッチパネルの入力不良。この記事は入力はできるがタッチキーボードアイコンが出ない表示条件。",
+    "fact_check": "Microsoft公式はタスクバー設定のタッチキーボードを『常に』または『キーボードが接続されていない場合』に設定できると案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "default-app-filetype-not-changing",
+    "path": "/windows/default-app-filetype-not-changing/",
+    "title": "Windows 11でファイルの既定アプリを変更できないときの確認手順",
+    "topic": "PDFなどが意図しないアプリで開く",
+    "description": "Windows 11でファイルの既定アプリを変更できないときの確認手順。ファイルの拡張子を確かめ、Windowsの『既定のアプリ』で対象アプリだけでなく拡張子ごとの関連付けを確認します。特定のファイルだけか同じ形式すべてかを分けます。",
+    "answer": "ファイルの拡張子を確かめ、Windowsの『既定のアプリ』で対象アプリだけでなく拡張子ごとの関連付けを確認します。特定のファイルだけか同じ形式すべてかを分けます。",
+    "steps": [
+      "問題のファイルの拡張子を表示し、同じ拡張子の別ファイルでも同じアプリで開くか試す。",
+      "Windows設定の『アプリ』→『既定のアプリ』を開き、目的のアプリか拡張子を検索する。",
+      "対象形式に対応するアプリを既定として選び、同じ形式の別ファイルを開いて結果を確認する。",
+      "ブラウザ内で開く場合はブラウザ固有のPDF・ダウンロード設定とWindowsのファイル関連付けを分けて確認する。"
+    ],
+    "causes": [
+      "変更したつもりの形式と実際の拡張子が異なる。",
+      "ブラウザ内部の表示とWindowsの既定アプリを混同している。",
+      "目的のアプリが対象形式を扱えない、または管理者のポリシーが適用されている。"
+    ],
+    "diagnosis": "同じ拡張子のファイルが全部別アプリで開くなら関連付けを、一つのファイルだけ失敗するならファイル形式や破損を調べます。リンクをクリックしたときだけ違う場合はプロトコルの関連付けも確認し、拡張子の変更だけで直そうとしないでください。",
+    "caution": "拡張子を手動で書き換えてもファイル形式そのものは変わりません。未知のファイルを実行可能なアプリで開いたり、安全警告を無視したりしないでください。組織の端末では既定アプリが管理されている場合があるため、設定を回避しないでください。",
+    "escalation": "対象アプリが形式をサポートしていても保存後に設定が戻る場合は、拡張子、アプリ版、管理端末かどうかを記録して管理者またはMicrosoftへ確認します。",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/apps/change-default-apps-in-windows",
+    "source_label": "Microsoftサポート：Windowsで既定のアプリを変更する",
+    "related_existing": [
+      "/browser/chrome-pdf-not-opening/",
+      "/windows/windows-settings-not-opening/",
+      "/windows/windows-search-not-working/"
+    ],
+    "closest_existing_url": "/browser/chrome-pdf-not-opening/",
+    "differentiation": "既存記事はChrome内でPDFが表示されない問題。この記事はWindows OSの拡張子別関連付けで意図しないアプリが開く問題。",
+    "fact_check": "Microsoft公式は設定の『アプリ』から『既定のアプリ』を開き、アプリまたはファイル・リンクの種類ごとに既定を選べると案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-backup-files-not-restored",
+    "path": "/windows/windows-backup-files-not-restored/",
+    "title": "Windowsバックアップ後に新しいPCへファイルが戻らないときの確認手順",
+    "topic": "新PCでアプリや設定はあるのに文書が見つからない",
+    "description": "Windowsバックアップ後に新しいPCへファイルが戻らないときの確認手順。Windowsバックアップの復元対象とOneDriveに保存されるファイルを分けて確認します。同じMicrosoftアカウントでサインインし、旧PCで選択したフォルダとOneDriveの同期状態を調べます。",
+    "answer": "Windowsバックアップの復元対象とOneDriveに保存されるファイルを分けて確認します。同じMicrosoftアカウントでサインインし、旧PCで選択したフォルダとOneDriveの同期状態を調べます。",
+    "steps": [
+      "旧PCのWindowsバックアップでアプリ・設定・フォルダのどれを有効にしたか、利用したMicrosoftアカウントを確認する。",
+      "新PCで同じMicrosoftアカウントのOneDriveにサインインし、Web版OneDriveに文書があるかを確認する。",
+      "Webにあるファイルは新PCの同期とエクスプローラーで探し、Webにもない場合は旧PC側の元ファイルを保持したまま保存先を確認する。",
+      "復元したアプリのピンと実際に再インストールされたアプリを分け、Microsoft Store対象外は別途インストーラーが必要か確認する。"
+    ],
+    "causes": [
+      "旧PCでファイルのバックアップ対象フォルダを選んでいなかった。",
+      "新PCで別のMicrosoftアカウントにサインインしている。",
+      "Windowsバックアップのアプリピンや設定の復元を、すべてのローカルファイルの複製と取り違えている。"
+    ],
+    "diagnosis": "新PCでアプリのピンだけ戻る場合は、ファイルがOneDriveに保存されているか先に調べます。Web版OneDriveにあるなら同期表示の問題、Webにもなく旧PCにはあるなら旧PCからのバックアップ設定を確認します。新旧PCを同時に見られる間に比較してください。",
+    "caution": "旧PCの初期化や売却を急がないでください。Webと新PCで必要なファイルを実際に開いて確認するまで元データを残します。OneDriveで削除した項目は同期先にも反映され得るため、整理やアカウント解除は最後にしてください。",
+    "escalation": "旧PCにデータがあるのにバックアップ経路で見つからなければ、対象フォルダとアカウント、Web版の状態を記録してMicrosoftサポートへ相談します。",
+    "source_url": "https://support.microsoft.com/ja-jp/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup",
+    "source_label": "Microsoftサポート：Windowsバックアップを使用したバックアップと復元",
+    "related_existing": [
+      "/windows/onedrive-sync-pending/",
+      "/google/drive-for-desktop-not-syncing/",
+      "/android/android-backup-not-complete/"
+    ],
+    "closest_existing_url": "/windows/onedrive-sync-pending/",
+    "differentiation": "既存記事は現行PCでOneDrive同期が保留中の問題。この記事は新PCへのWindowsバックアップ復元範囲とアカウント照合。",
+    "fact_check": "Microsoft公式はアプリピンと設定の復元、ファイルはバックアップ時と同じMicrosoftアカウントでOneDriveにサインインして取得すると説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "wallet-tap-payment-not-working",
+    "path": "/android/wallet-tap-payment-not-working/",
+    "title": "Googleウォレットでタッチ決済できないときの確認手順",
+    "topic": "レジでスマートフォンをかざしても決済されない",
+    "description": "Googleウォレットでタッチ決済できないときの確認手順。NFC、既定の決済アプリ、画面ロック、カード設定を順に確認し、端末の読み取り不良とカード側の拒否を分けます。",
+    "answer": "NFC、既定の決済アプリ、画面ロック、カード設定を順に確認し、端末の読み取り不良とカード側の拒否を分けます。",
+    "steps": [
+      "端末のNFC対応を調べ、設定でNFCを有効にし、Googleウォレットを既定の決済アプリにします。",
+      "カードがタッチ決済に対応し、追加設定や本人確認が残っていないか確認します。",
+      "画面ロックを解除し、端末のNFCアンテナ位置を読み取り機に合わせ、別の対応店舗でも試します。",
+      "一枚のカードだけ失敗するなら発行会社へ、すべて失敗するなら端末設定と読み取り機を確認します。"
+    ],
+    "causes": [
+      "NFCが無効、または別のアプリが既定の決済アプリ。",
+      "カードの設定・認証が未完了。",
+      "アンテナと読み取り機の位置が合っていない。"
+    ],
+    "diagnosis": "全カードで複数店舗において失敗するなら端末側を先に確認します。特定カードだけならカード発行会社の利用制限、特定店舗だけなら読み取り機の状態が手掛かりです。画面のエラー文と取引履歴を記録し、読み取り失敗と決済拒否を分けてください。",
+    "caution": "カード番号や認証コードを第三者に伝えないでください。不明なまま繰り返しかざすと取引が重複する恐れがあるため履歴を確認します。端末のセキュリティ要件を外す操作は勧めません。",
+    "escalation": "全カードで読めない場合は機種名、Android版、NFC設定、表示エラーを端末メーカーへ伝えます。特定カードのみなら発行会社に相談します。",
+    "source_url": "https://support.google.com/wallet/answer/12200245?hl=ja",
+    "source_label": "Googleウォレット ヘルプ：タッチ決済の問題解決",
+    "related_existing": [
+      "/iphone/apple-pay-card-not-adding-iphone/",
+      "/android/android-fingerprint-not-working/",
+      "/android/android-mobile-data-not-working/"
+    ],
+    "closest_existing_url": "/iphone/apple-pay-card-not-adding-iphone/",
+    "differentiation": "既存記事はiPhoneのApple Payにカードを追加できない問題。本記事はAndroidのGoogleウォレットに設定済みのカードが店頭で決済できない問題。",
+    "fact_check": "Google公式のタッチ決済ヘルプでNFC、既定アプリ、カード、画面ロックを照合。"
+  },
+  {
+    "category": "android",
+    "slug": "cast-device-not-found",
+    "path": "/android/cast-device-not-found/",
+    "title": "Androidからキャスト先が見つからないときの確認手順",
+    "topic": "キャスト一覧にテレビやChromecastが表示されない",
+    "description": "Androidからキャスト先が見つからないときの確認手順。スマートフォンとキャスト先のネットワークを照合し、Google Homeにも表示されるか確認します。映像の途切れとは別の機器発見の問題です。",
+    "answer": "スマートフォンとキャスト先のネットワークを照合し、Google Homeにも表示されるか確認します。映像の途切れとは別の機器発見の問題です。",
+    "steps": [
+      "両方が同じWi-Fiに接続され、片方だけゲスト用ネットワークにいないか確認します。",
+      "キャスト先の電源とテレビ入力を見て、Google Homeアプリの機器一覧にも表示されるか確認します。",
+      "接続先を変えずにキャストアプリと機器を再起動し、一覧を開き直します。",
+      "Homeにも出なければルーターの端末間通信を調べ、特定アプリだけならアプリの対応状況を確認します。"
+    ],
+    "causes": [
+      "異なるWi-Fiまたはゲストネットワークを使用。",
+      "キャスト機器がオフライン。",
+      "アプリがキャストに非対応、またはネットワークが機器発見を制限。"
+    ],
+    "diagnosis": "Google Homeと動画アプリの両方で見えないならネットワークと機器を先に調べます。Homeでは見えるが一つのアプリだけで見えないならアプリ側が焦点です。家族の端末からは表示される場合は、スマートフォンが接続しているWi-Fi名を比較します。",
+    "caution": "ルーター設定を変更する前に現在値を控えてください。職場、学校、宿泊施設では機器同士の通信が制限されることがあります。機器の初期化は接続を切り分けてから検討します。",
+    "escalation": "同じWi-FiでもHomeに表示されないなら機器モデル、ルーター名、接続構成を持って機器メーカーへ相談します。",
+    "source_url": "https://support.google.com/chromecast/answer/7172427?co=GENIE.Platform%3DAndroid&hl=ja",
+    "source_label": "Google Cast ヘルプ：キャスト先が見つからない場合",
+    "related_existing": [
+      "/android/android-quick-share-device-not-showing/",
+      "/android/android-wifi-connected-no-internet/",
+      "/android/android-wifi-not-connecting/"
+    ],
+    "closest_existing_url": "/android/android-quick-share-device-not-showing/",
+    "differentiation": "既存記事は近くの端末とのQuick Shareによるファイル共有。本記事は同じWi-Fi内にあるテレビやCast受信機の発見を扱う。",
+    "fact_check": "Google公式のCastヘルプで同一Wi-Fi、機器の接続、アプリの再起動を照合。"
+  },
+  {
+    "category": "android",
+    "slug": "app-language-not-changing",
+    "path": "/android/app-language-not-changing/",
+    "title": "Androidでアプリの言語を変えても反映されないときの確認手順",
+    "topic": "アプリ別言語設定を変えても旧言語のまま",
+    "description": "Androidでアプリの言語を変えても反映されないときの確認手順。対象アプリがAndroidのアプリ別言語と目的の言語に対応するかを確認し、アプリ再起動とアプリ内設定を調べます。",
+    "answer": "対象アプリがAndroidのアプリ別言語と目的の言語に対応するかを確認し、アプリ再起動とアプリ内設定を調べます。",
+    "steps": [
+      "設定のアプリ別言語一覧に対象アプリがあるか確認し、提供される目的の言語を選びます。",
+      "アプリを完全に閉じて開き直し、どの表示が旧言語のままか記録します。",
+      "システムの言語一覧に目的の言語を追加し、Androidとアプリの更新を確認します。",
+      "アプリ内に独自の言語設定がある場合は選択を比較し、非対応なら開発元の案内を確認します。"
+    ],
+    "causes": [
+      "アプリが目的の言語またはアプリ別言語機能に非対応。",
+      "アプリが再起動されず古い表示を保持。",
+      "アプリ内独自設定が異なる。"
+    ],
+    "diagnosis": "一覧にアプリがない場合と、あるのに変更が反映されない場合では対処が違います。前者はアプリ側の対応が必要です。後者は再起動とアプリ内設定を調べます。一部だけ旧言語なら外部コンテンツや未翻訳箇所の可能性も記録して開発元へ伝えます。",
+    "caution": "データ削除や再インストールはログイン情報や未同期データを失うことがあります。最初の切り分けとして行わないでください。管理端末では設定が制限される場合があります。",
+    "escalation": "対応言語なのに反映されなければアプリ名と版、Android版、残る旧言語の箇所を開発元に伝えます。",
+    "source_url": "https://support.google.com/android/answer/12395118?hl=ja",
+    "source_label": "Android ヘルプ：アプリの言語を変更する",
+    "related_existing": [
+      "/android/android-app-wont-open/",
+      "/android/android-app-keeps-crashing/",
+      "/android/android-system-ui-not-responding/"
+    ],
+    "closest_existing_url": "/android/android-app-wont-open/",
+    "differentiation": "近い既存記事はAndroidアプリ自体を開けない問題。本記事は正常起動するアプリの表示言語だけが個別設定と異なる問題。",
+    "fact_check": "Google公式のアプリ別言語ヘルプで対応アプリ、再起動、目的言語をシステムに追加する手順を照合した。"
+  },
+  {
+    "category": "android",
+    "slug": "private-space-apps-not-visible",
+    "path": "/android/private-space-apps-not-visible/",
+    "title": "Androidのプライベートスペースのアプリが見えないときの確認手順",
+    "topic": "インストールしたアプリが通常の一覧に現れない",
+    "description": "Androidのプライベートスペースのアプリが見えないときの確認手順。プライベートスペースのロックと非表示設定を確認し、通常の領域とは別にアプリを探します。アプリの削除とは分けて判断します。",
+    "answer": "プライベートスペースのロックと非表示設定を確認し、通常の領域とは別にアプリを探します。アプリの削除とは分けて判断します。",
+    "steps": [
+      "アプリ一覧の下部でプライベートスペースを探し、ロック中なら解除します。",
+      "スペースが見えなければAndroid設定でロック中に隠す設定を確認します。",
+      "通常のアプリ一覧とプライベートスペース内を比較し、どちらにインストールしたか確認します。",
+      "両方にない場合は端末の対応状況とアプリのインストール履歴を調べます。"
+    ],
+    "causes": [
+      "スペースがロックされ内部アプリが隠れている。",
+      "ロック中にスペース自体を隠す設定。",
+      "通常領域と別のインストール先であることを見落としている。"
+    ],
+    "diagnosis": "解除後にアプリが見えれば、別領域に保管されていたことが分かります。スペース自体が見えなければ非表示設定と機種の対応を調べます。通知まで止まっている場合はロック中か先に確かめ、アプリが削除されたと決めつけないでください。",
+    "caution": "プライベートスペースの削除は内部アプリやデータの消失につながります。探すために削除や初期化を行わないでください。解除方法が分からなければ公式サポートに相談します。",
+    "escalation": "解除後も見えなければ機種名、Android版、インストール領域、非表示設定を端末メーカーに伝えます。",
+    "source_url": "https://support.google.com/android/answer/15341885?hl=ja",
+    "source_label": "Android ヘルプ：プライベートスペースを使用する",
+    "related_existing": [
+      "/google/google-photos-missing-photos/",
+      "/android/android-app-wont-open/",
+      "/android/android-screenshot-not-found/"
+    ],
+    "closest_existing_url": "/google/google-photos-missing-photos/",
+    "differentiation": "近い既存記事は写真がGoogleフォトで見つからない問題。本記事はAndroidの別領域であるプライベートスペース内のアプリがロック中に隠れる問題。",
+    "fact_check": "Google公式のプライベートスペースヘルプでロック、非表示、領域の分離を照合。"
+  },
+  {
+    "category": "android",
+    "slug": "health-connect-data-not-syncing",
+    "path": "/android/health-connect-data-not-syncing/",
+    "title": "ヘルスコネクトで健康データが共有されないときの確認手順",
+    "topic": "一方の健康アプリの記録が別アプリに出ない",
+    "description": "ヘルスコネクトで健康データが共有されないときの確認手順。ヘルスコネクトへの書き込みと読み取りは別の権限です。データ種別と日時を比較し、記録の未保存と表示側の未取得を切り分けます。",
+    "answer": "ヘルスコネクトへの書き込みと読み取りは別の権限です。データ種別と日時を比較し、記録の未保存と表示側の未取得を切り分けます。",
+    "steps": [
+      "ヘルスコネクトの接続済みアプリで記録元に対象データの書き込み権限があるか確認します。",
+      "表示先に同じデータ種別の読み取り権限があるか確認します。",
+      "ヘルスコネクトの対象データと記録日時を見て、記録が実際に保存されたか調べます。",
+      "保存済みなら表示先アプリの対応種別を、未保存なら元アプリの連携設定を調べます。"
+    ],
+    "causes": [
+      "記録元に書き込み権限がない。",
+      "表示先に読み取り権限がない。",
+      "アプリ間でデータ種別や集計方法が違う。"
+    ],
+    "diagnosis": "ヘルスコネクト内に記録がなければ元アプリからの保存を確認します。記録はあるのに表示先に出ないなら読み取り権限と表示先の集計条件が焦点です。歩数と運動時間など別のデータ種別を同じものとみなさず、記録日時をそろえて比較します。",
+    "caution": "健康情報は機微なデータです。サポートへ画面を送る際は個人情報を伏せてください。全データ削除やアプリ初期化は復旧可能性を確認する前に実行しないでください。",
+    "escalation": "権限を確認しても失敗するなら両アプリ名、データ種別、日時を各アプリのサポートに伝えます。",
+    "source_url": "https://support.google.com/android/answer/13770384?hl=ja",
+    "source_label": "Android ヘルプ：ヘルスコネクトでデータを管理する",
+    "related_existing": [
+      "/android/android-google-contacts-not-syncing/",
+      "/android/android-backup-not-complete/",
+      "/google/drive-for-desktop-not-syncing/"
+    ],
+    "closest_existing_url": "/android/android-google-contacts-not-syncing/",
+    "differentiation": "既存記事はGoogle連絡先の端末間同期。本記事はヘルスコネクトを介した二つの健康アプリ間のデータ種別ごとの読み書き権限。",
+    "fact_check": "Google公式のヘルスコネクトヘルプで接続済みアプリの権限とデータ種別を照合。"
+  },
+  {
+    "category": "android",
+    "slug": "safe-mode-not-exiting",
+    "path": "/android/safe-mode-not-exiting/",
+    "title": "Androidのセーフモードから戻れないときの確認手順",
+    "topic": "再起動後もセーフモード表示が残る",
+    "description": "Androidのセーフモードから戻れないときの確認手順。通常は再起動でセーフモードを終了できます。戻れない場合は起動時のボタン状態と機種固有の操作を調べます。",
+    "answer": "通常は再起動でセーフモードを終了できます。戻れない場合は起動時のボタン状態と機種固有の操作を調べます。",
+    "steps": [
+      "セーフモード表示を確認し、電源メニューから通常の再起動を行います。",
+      "起動時に音量ボタンなどが押されたままになっていないか、ケースと物理ボタンを確認します。",
+      "メーカーの説明書で機種固有のセーフモード終了方法を調べます。",
+      "通常起動に戻ったら元の不具合が残るか確認し、繰り返す場合は起動時の操作を記録します。"
+    ],
+    "causes": [
+      "再起動が完了していない。",
+      "ケースまたはボタンの固着が起動時の操作として認識。",
+      "機種固有の終了方法が必要。"
+    ],
+    "diagnosis": "再起動で戻る場合は通常の終了です。ケースを外すと戻るなら物理ボタン干渉が手掛かりです。通常起動では不具合が再発しセーフモードでは起きない場合は、後から入れたアプリの影響を別途調べます。解除問題と不具合原因の特定を分けます。",
+    "caution": "セーフモードはデータ削除ではありません。解除だけのために初期化しないでください。ボタンを無理に押し込まず、アプリ削除も原因を確認してから行ってください。",
+    "escalation": "再起動と機種の案内どおりの操作でも戻らなければ機種名とボタン状態を端末メーカーへ伝えます。",
+    "source_url": "https://support.google.com/android/answer/7665064?hl=ja",
+    "source_label": "Android ヘルプ：セーフモードで問題を調べる",
+    "related_existing": [
+      "/android/android-stuck-on-logo/",
+      "/android/android-app-keeps-crashing/",
+      "/android/android-system-ui-not-responding/"
+    ],
+    "closest_existing_url": "/android/android-stuck-on-logo/",
+    "differentiation": "既存記事は起動ロゴから進まない状態。本記事は起動が完了して操作もできるがセーフモードが解除できない状態。",
+    "fact_check": "Google公式のセーフモードヘルプで再起動による終了と端末メーカーごとに操作が違う点を照合した。"
+  },
+  {
+    "category": "android",
+    "slug": "unused-app-permissions-removed",
+    "path": "/android/unused-app-permissions-removed/",
+    "title": "Androidで未使用アプリの権限が消えたときの確認手順",
+    "topic": "久しぶりに開いたアプリが通知や位置情報を使えない",
+    "description": "Androidで未使用アプリの権限が消えたときの確認手順。長く使わないアプリの権限をAndroidが自動停止することがあります。必要な権限だけを戻し、通知停止も別に確認します。",
+    "answer": "長く使わないアプリの権限をAndroidが自動停止することがあります。必要な権限だけを戻し、通知停止も別に確認します。",
+    "steps": [
+      "設定のアプリ一覧から対象アプリを開き、未使用アプリの設定と権限を確認します。",
+      "必要な機能を使うときの権限要求を読み、必要な権限だけ再許可します。",
+      "通知が来ないなら通知設定も見て、権限停止と通知停止を区別します。",
+      "継続利用が必要なアプリだけ自動停止の除外を検討し、不要なアプリの保護は維持します。"
+    ],
+    "causes": [
+      "未使用アプリとして権限が自動停止。",
+      "通知設定が無効。",
+      "更新や再インストール後に再許可が必要。"
+    ],
+    "diagnosis": "久しぶりに開いた直後に再許可を求められるなら未使用アプリの自動停止を確認します。毎日使うアプリだけで起きるなら通常の権限やアプリ内通知設定が焦点です。権限の問題とログアウトは同じではないため、表示された要求の種類を記録します。",
+    "caution": "利便性のために全アプリの保護を一括解除しないでください。位置情報、カメラ、連絡先は用途を確かめて個別に許可します。停止期間の通知はアプリ内の履歴でも確認してください。",
+    "escalation": "権限を戻しても動かないならアプリ名、Android版、権限画面と機能を開発元へ伝えます。",
+    "source_url": "https://support.google.com/android/answer/13627979?hl=ja",
+    "source_label": "Android ヘルプ：使用していないアプリを管理する",
+    "related_existing": [
+      "/android/android-camera-permission-denied-app/",
+      "/android/android-notifications-not-arriving/",
+      "/windows/windows-camera-permission-blocked/"
+    ],
+    "closest_existing_url": "/android/android-camera-permission-denied-app/",
+    "differentiation": "既存記事は特定アプリでカメラ権限が拒否された問題。本記事は長期未使用で複数の権限と通知がAndroidに自動停止された状態。",
+    "fact_check": "Google公式の未使用アプリヘルプで権限と通知の自動停止、アプリごとの保護設定を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-event-time-wrong",
+    "path": "/google/calendar-event-time-wrong/",
+    "title": "Googleカレンダーの予定時刻がずれるときの確認手順",
+    "topic": "招待された予定が想定と違う時刻に表示される",
+    "description": "Googleカレンダーの予定時刻がずれるときの確認手順。カレンダー全体、端末、予定個別のタイムゾーンを比較し、予定の実際の開始時刻を確認します。単なる表示形式との違いも調べます。",
+    "answer": "カレンダー全体、端末、予定個別のタイムゾーンを比較し、予定の実際の開始時刻を確認します。単なる表示形式との違いも調べます。",
+    "steps": [
+      "予定の詳細を開き、開始時刻と設定されたタイムゾーンを確認します。",
+      "Googleカレンダー設定のメインのタイムゾーンと端末の日時・タイムゾーンを比較します。",
+      "旅行先や夏時間のある地域の予定なら、作成者が指定した地域名と現在地を確認します。",
+      "共有予定なら作成者に元の時刻を確認し、全員に同じ予定がどう表示されるか比較します。"
+    ],
+    "causes": [
+      "予定個別とカレンダー全体のタイムゾーンが異なる。",
+      "端末のタイムゾーンが実際の所在地と違う。",
+      "作成者が別地域の現地時刻で予定を登録した。"
+    ],
+    "diagnosis": "一つの予定だけずれるなら、その予定のタイムゾーンと作成者の入力を調べます。すべての予定が同じ時間だけずれるならカレンダーや端末のタイムゾーンが焦点です。地域名の設定と時刻表示を控え、予定を編集する前に招待者と元の開始時刻を確認します。",
+    "caution": "共有予定を無断で編集すると参加者全員の時刻に影響することがあります。重要な会議や予約は作成者へ開始時刻を確認し、単に表示を合わせるために地域設定を推測で変えないでください。",
+    "escalation": "同じ予定が端末間で異なり設定も一致している場合は、予定URL、端末時刻、地域設定を個人情報を伏せてGoogleサポートへ伝えます。",
+    "source_url": "https://support.google.com/calendar/answer/37064?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Googleカレンダー ヘルプ：タイムゾーンを変更する",
+    "related_existing": [
+      "/google/google-calendar-not-syncing/",
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-calendar-desktop-reminders-missing/"
+    ],
+    "closest_existing_url": "/google/google-calendar-not-syncing/",
+    "differentiation": "既存記事は予定の同期欠落。本記事は同じ予定が存在するがタイムゾーン変換により時刻が違って見える問題を扱う。",
+    "fact_check": "Google公式のカレンダーのタイムゾーン設定と予定個別の時刻表示に関する説明を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-navigation-voice-silent",
+    "path": "/google/maps-navigation-voice-silent/",
+    "title": "Googleマップのナビ音声が聞こえないときの確認手順",
+    "topic": "案内は表示されるが音が出ない",
+    "description": "Googleマップのナビ音声が聞こえないときの確認手順。ナビ画面の音声設定、メディア音量、Bluetooth出力先を順に確認し、案内だけ聞こえないのか端末の音全体が出ないのかを分けます。",
+    "answer": "ナビ画面の音声設定、メディア音量、Bluetooth出力先を順に確認し、案内だけ聞こえないのか端末の音全体が出ないのかを分けます。",
+    "steps": [
+      "経路案内中のスピーカーアイコンを確認し、ミュートやアラートのみになっていないか見ます。",
+      "案内が再生されるタイミングでメディア音量を上げ、マップのナビ設定で音声レベルを確認します。",
+      "車のBluetoothに接続している場合は出力先と車の音源を確認し、切断時の端末スピーカーと比較します。",
+      "別の経路でも同じ症状か確認し、マップの更新と端末再起動を試します。"
+    ],
+    "causes": [
+      "ナビ音声がミュートまたはアラートのみ。",
+      "メディア音量が低い。",
+      "音が車載Bluetoothなど別の出力先へ送られている。"
+    ],
+    "diagnosis": "画面上に案内が出ていて音だけないならナビの音声設定から調べます。Bluetooth接続中だけ聞こえないなら車側の入力先と出力設定を比較します。ほかのアプリの音も出ないなら、Googleマップ固有の問題ではなく端末の音声経路を先に調べます。",
+    "caution": "運転中に画面を操作しないでください。安全な場所に停車してから設定を確認します。ナビ案内が聞こえない間は音声だけを頼りに運転せず、標識と交通状況を優先してください。",
+    "escalation": "停車して設定を確認しても再現するなら端末機種、OS、車載機器と接続方式、ナビ設定をGoogleマップのサポートへ伝えます。",
+    "source_url": "https://support.google.com/maps/answer/11523237?co=GENIE.Platform%3DAndroid&hl=ja",
+    "source_label": "Googleマップ ヘルプ：ナビの音声案内の問題",
+    "related_existing": [
+      "/android/android-no-sound/",
+      "/google/google-maps-location-inaccurate/",
+      "/android/android-bluetooth-not-connecting/"
+    ],
+    "closest_existing_url": "/android/android-no-sound/",
+    "differentiation": "既存記事は端末全体の音が出ない問題。本記事は地図案内だけのミュート、案内音量、車載出力を扱う。",
+    "fact_check": "Google公式のナビ音声ヘルプでスピーカー設定、音量、Bluetoothの確認を照合。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-locked-folder-missing",
+    "path": "/google/photos-locked-folder-missing/",
+    "title": "Googleフォトのロックされたフォルダに写真が見えないときの確認手順",
+    "topic": "通常の写真一覧に写真が見当たらない",
+    "description": "Googleフォトのロックされたフォルダに写真が見えないときの確認手順。ロックされたフォルダは通常の写真一覧に表示されません。端末とアカウント、バックアップ設定を確認し、移動と削除を取り違えないよう調べます。",
+    "answer": "ロックされたフォルダは通常の写真一覧に表示されません。端末とアカウント、バックアップ設定を確認し、移動と削除を取り違えないよう調べます。",
+    "steps": [
+      "Googleフォトのロックされたフォルダを開き、端末の画面ロックで認証して写真があるか確認します。",
+      "写真を見た端末とGoogleアカウントが一致するか、ロックされたフォルダのバックアップ設定を確認します。",
+      "別端末では表示されない場合、元端末のフォルダ内に写真が残るか確認します。",
+      "ゴミ箱と通常の写真一覧も確認し、写真をフォルダに移動したのか削除したのか記録します。"
+    ],
+    "causes": [
+      "ロックされたフォルダ内の写真は通常の一覧から隠れる。",
+      "フォルダのバックアップが無効で別端末には存在しない。",
+      "別のGoogleアカウントまたは端末を見ている。"
+    ],
+    "diagnosis": "元の端末でフォルダ内にあれば通常の一覧に見えないのは仕様です。元端末にあるが別端末にない場合はバックアップ設定を確認します。どこにもないなら別アカウントとゴミ箱を調べ、初期化や再インストール前に端末に残るデータの有無を確かめます。",
+    "caution": "バックアップしていないフォルダの写真は端末の故障、紛失、初期化で失われるおそれがあります。写真を探す途中でGoogleフォトのデータ削除や端末初期化をしないでください。共有端末ではフォルダ内容の扱いに注意します。",
+    "escalation": "元端末とアカウントを確認しても見つからなければ移動した時期と端末、バックアップ設定をGoogleフォトのサポートに伝えます。",
+    "source_url": "https://support.google.com/photos/answer/10694388?co=GENIE.Platform%3DAndroid&hl=ja",
+    "source_label": "Googleフォト ヘルプ：ロックされたフォルダ",
+    "related_existing": [
+      "/google/google-photos-missing-photos/",
+      "/google/google-photos-backup-stuck/",
+      "/google/google-photos-shared-album-not-found/"
+    ],
+    "closest_existing_url": "/google/google-photos-missing-photos/",
+    "differentiation": "既存記事は一般的な写真の欠落。本記事はロックされたフォルダ固有の非表示と別端末へのバックアップ可否を扱う。",
+    "fact_check": "Google公式のロックされたフォルダヘルプで通常一覧からの非表示とバックアップ条件を照合。"
+  },
+  {
+    "category": "google",
+    "slug": "shared-drive-not-visible",
+    "path": "/google/shared-drive-not-visible/",
+    "title": "Googleドライブの共有ドライブが見えないときの確認手順",
+    "topic": "以前使えた共有ドライブが一覧にない",
+    "description": "Googleドライブの共有ドライブが見えないときの確認手順。共有ドライブの非表示設定、アカウント、メンバー権限を確認します。マイドライブの共有フォルダと混同せず、管理者側の制限も切り分けます。",
+    "answer": "共有ドライブの非表示設定、アカウント、メンバー権限を確認します。マイドライブの共有フォルダと混同せず、管理者側の制限も切り分けます。",
+    "steps": [
+      "Googleドライブで正しい仕事用または学校用アカウントに切り替え、共有ドライブ一覧を開きます。",
+      "非表示の共有ドライブ一覧を確認し、対象があれば再表示します。",
+      "ほかのメンバーに対象ドライブが見えるか確認し、メンバーから外れていないか管理者に尋ねます。",
+      "共有フォルダのリンクしかない場合は、それが共有ドライブではなくマイドライブ内か確認します。"
+    ],
+    "causes": [
+      "共有ドライブが非表示設定になっている。",
+      "別アカウントでサインイン。",
+      "メンバー権限または組織の設定が変更された。"
+    ],
+    "diagnosis": "非表示一覧にあれば再表示が最短です。自分だけ見えないならアカウントか権限を疑います。全員に見えない場合は組織側の状態を管理者に確認します。『共有アイテム』にある通常の共有フォルダと、共有ドライブの一覧は異なるため、対象の種類を先に確かめます。",
+    "caution": "共有ドライブ内のファイルを取り戻そうとして私用アカウントへ無断コピーしないでください。組織のデータ保持・共有規則に従い、権限変更は管理者に依頼します。",
+    "escalation": "正しいアカウントでも非表示一覧になければドライブ名と組織アカウントを管理者へ伝え、メンバー状態を確認してもらいます。",
+    "source_url": "https://support.google.com/a/users/answer/13015138?hl=ja",
+    "source_label": "Google Workspace ラーニングセンター：共有ドライブを非表示・再表示する",
+    "related_existing": [
+      "/google/google-drive-files-missing/",
+      "/google/google-drive-access-denied/",
+      "/google/drive-for-desktop-not-syncing/"
+    ],
+    "closest_existing_url": "/google/google-drive-files-missing/",
+    "differentiation": "既存記事はマイドライブなどで個別ファイルが見つからない問題。本記事はWorkspaceの共有ドライブ自体が非表示またはメンバー権限変更で一覧から消える問題。",
+    "fact_check": "Google公式の共有ドライブの非表示と再表示、メンバーが一覧を見るための手順を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-subtitles-not-available",
+    "path": "/google/youtube-subtitles-not-available/",
+    "title": "YouTubeで字幕を表示できないときの確認手順",
+    "topic": "字幕ボタンがない、または目的の言語を選べない",
+    "description": "YouTubeで字幕を表示できないときの確認手順。まず動画に字幕が用意されているかを確認し、表示設定と翻訳言語を分けて調べます。字幕のない動画に設定だけで必ず字幕を作ることはできません。",
+    "answer": "まず動画に字幕が用意されているかを確認し、表示設定と翻訳言語を分けて調べます。字幕のない動画に設定だけで必ず字幕を作ることはできません。",
+    "steps": [
+      "動画プレーヤーに字幕のCCアイコンがあるか確認し、あればオンにします。",
+      "設定の字幕メニューを開き、選べる字幕言語と自動翻訳の有無を確認します。",
+      "別の字幕付き動画では表示できるか比較し、特定動画だけの問題か調べます。",
+      "ほかの動画でも表示されない場合はアプリまたはブラウザーを更新し、字幕の表示設定を確認します。"
+    ],
+    "causes": [
+      "投稿者による字幕も自動字幕もその動画に用意されていない。",
+      "CCがオフ、または別言語が選択されている。",
+      "アプリやブラウザーの表示設定が影響。"
+    ],
+    "diagnosis": "CCアイコン自体がない動画なら字幕の提供状況が焦点です。アイコンがあるのに見えない場合は字幕のオン・オフや見た目の設定を調べます。特定言語だけがないなら、その言語の字幕が作成されているかと自動翻訳が選べるかを確認します。",
+    "caution": "自動字幕や自動翻訳は音声認識・翻訳の誤りがあり得ます。医療、法務、契約など重要な内容は字幕だけを根拠に判断せず、元の音声や正式資料を確認してください。",
+    "escalation": "複数の字幕付き動画でもCCが使えないなら利用端末、アプリ版、動画URLと表示画面をYouTubeのヘルプへ伝えます。",
+    "source_url": "https://support.google.com/youtube/answer/100078?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "YouTube ヘルプ：字幕の設定を管理する",
+    "related_existing": [
+      "/articles/gemini-notebook-youtube-summary.html",
+      "/android/android-no-sound/",
+      "/android/android-screen-recording-no-audio/"
+    ],
+    "closest_existing_url": "/articles/gemini-notebook-youtube-summary.html",
+    "differentiation": "近い既存記事は字幕のあるYouTube動画をNotebookで要約する方法。本記事はYouTubeの視聴画面で字幕が提供・表示されない場合の切り分け。",
+    "fact_check": "YouTube公式の字幕ヘルプでCC表示、選択言語、字幕が利用できない場合を照合。"
+  },
+  {
+    "category": "google",
+    "slug": "meet-cannot-join-meeting",
+    "path": "/google/meet-cannot-join-meeting/",
+    "title": "Google Meetの会議に参加できないときの確認手順",
+    "topic": "リンクを開いても参加が承認されない",
+    "description": "Google Meetの会議に参加できないときの確認手順。リンクの有効性、使用アカウント、主催者の承認や組織設定を確認します。カメラやマイクの故障とは別の参加権限の問題です。",
+    "answer": "リンクの有効性、使用アカウント、主催者の承認や組織設定を確認します。カメラやマイクの故障とは別の参加権限の問題です。",
+    "steps": [
+      "招待に記載された会議リンクと日時を確認し、別の会議コードを入力していないか調べます。",
+      "招待先のGoogleアカウントまたは組織アカウントでサインインしているか確認します。",
+      "『参加をリクエスト』後に待機しているなら主催者に承認状況と会議のアクセス設定を確認します。",
+      "組織外参加が拒否される場合は主催者または管理者に参加条件を確認し、許可された経路を使います。"
+    ],
+    "causes": [
+      "誤ったリンクや終了した会議へ参加している。",
+      "招待されたアカウントと別のアカウントで開いた。",
+      "主催者承認または組織の参加制限が必要。"
+    ],
+    "diagnosis": "同僚は参加でき自分だけ待機するなら、使用アカウントと主催者の承認が焦点です。組織外の人だけ入れない場合は会議のアクセス設定を主催者へ確認します。参加画面でカメラ映像が出ない問題と、会議室に入れない問題を混同せず、表示された文言を記録します。",
+    "caution": "組織の参加制限を避けるために無断で別アカウントを作らないでください。会議リンクを公開の場に貼ると第三者の参加を招く場合があります。アクセス設定は主催者または管理者に確認します。",
+    "escalation": "正しいアカウントとリンクでも参加できなければ表示文言、会議の主催組織、利用アカウント種別を主催者へ伝えます。",
+    "source_url": "https://support.google.com/meet/answer/10620582?hl=ja",
+    "source_label": "Google Meet ヘルプ：会議に参加するためのアクセス条件",
+    "related_existing": [
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-account-verification-code-not-arriving/",
+      "/google/google-account-disabled/"
+    ],
+    "closest_existing_url": "/google/google-calendar-invite-not-appearing/",
+    "differentiation": "既存記事はカレンダー招待が届かない問題。本記事は会議リンクがあり参加を申請してもアカウント・主催者承認により入室できない問題。",
+    "fact_check": "Google公式のMeet参加条件ヘルプで主催者承認とアカウント・組織の条件を照合。"
+  },
+  {
+    "category": "google",
+    "slug": "authenticator-codes-missing-new-phone",
+    "path": "/google/authenticator-codes-missing-new-phone/",
+    "title": "新しいスマートフォンでGoogle認証システムのコードが見えないときの確認手順",
+    "topic": "機種変更後に二段階認証の登録が出ない",
+    "description": "新しいスマートフォンでGoogle認証システムのコードが見えないときの確認手順。旧端末での同期・移行方法を確認し、新端末で同じGoogleアカウントを使っているか調べます。サービスごとの復旧コードも確認します。",
+    "answer": "旧端末での同期・移行方法を確認し、新端末で同じGoogleアカウントを使っているか調べます。サービスごとの復旧コードも確認します。",
+    "steps": [
+      "旧端末が使えるならGoogle認証システムで同期の状態と使用アカウントを確認します。",
+      "新端末で同じGoogleアカウントにサインインし、同期されたコードが表示されるか確認します。",
+      "同期していない場合は旧端末のエクスポートと新端末のインポート手順を公式案内に沿って行います。",
+      "旧端末が使えずコードもない場合は各サービスで保存済みのバックアップコードや公式のアカウント復旧手順を使います。"
+    ],
+    "causes": [
+      "旧端末でコード同期を使っていなかった。",
+      "新端末で別のGoogleアカウントを使用。",
+      "手動移行が未完了。"
+    ],
+    "diagnosis": "旧端末にコードがあり新端末にないなら同期アカウントか手動移行の状態を調べます。両端末にない場合は認証システム自体の再インストールや誤ったアカウントを確認します。各サービスの二段階認証登録は別々なので、復旧はそのサービスの本人確認手順に従います。",
+    "caution": "旧端末や認証システムを、必要なサービスすべてでログインできると確認する前に消去しないでください。QRコードやバックアップコードは認証情報です。記事や相談画面に貼らず、安全に保管してください。",
+    "escalation": "旧端末もバックアップコードもない場合は対象サービスの公式復旧窓口に、本人確認に必要な情報を安全な経路で伝えます。",
+    "source_url": "https://support.google.com/accounts/answer/1066447?co=GENIE.Platform%3DAndroid&hl=ja",
+    "source_label": "Googleアカウント ヘルプ：Google認証システムのコードを移行する",
+    "related_existing": [
+      "/google/google-account-verification-code-not-arriving/",
+      "/google/google-account-passkey-not-working/",
+      "/iphone/apple-account-sign-in-failed/"
+    ],
+    "closest_existing_url": "/google/google-account-verification-code-not-arriving/",
+    "differentiation": "既存記事はGoogleアカウントの確認コードの受信失敗。本記事は機種変更後に認証システム内の各サービスの登録コードが現れない問題。",
+    "fact_check": "Google公式の認証システムヘルプでアカウント同期、旧端末からの移行、復旧手段を照合。"
+  },
+  {
+    "category": "google",
+    "slug": "takeout-export-download-fails",
+    "path": "/google/takeout-export-download-fails/",
+    "title": "Googleデータエクスポートのダウンロードが失敗するときの確認手順",
+    "topic": "Takeoutのアーカイブを保存できない",
+    "description": "Googleデータエクスポートのダウンロードが失敗するときの確認手順。エクスポートの作成中かダウンロード段階かを分け、メールのリンク、保存先容量、分割アーカイブの数を確認します。元データの削除は必要ありません。",
+    "answer": "エクスポートの作成中かダウンロード段階かを分け、メールのリンク、保存先容量、分割アーカイブの数を確認します。元データの削除は必要ありません。",
+    "steps": [
+      "Googleデータエクスポートのメールと管理画面で、アーカイブの作成が完了しているか確認します。",
+      "ダウンロードリンクを開くアカウントが作成時と同じか、案内された有効期限内か確認します。",
+      "保存先の空き容量と通信状態を調べ、分割されたファイルがあれば一つずつ保存します。",
+      "大きなアーカイブで失敗が続く場合は対象サービスやファイルサイズを絞り、新しいエクスポートを作成します。"
+    ],
+    "causes": [
+      "アーカイブがまだ作成中、またはリンクの有効期限が過ぎている。",
+      "別アカウントでリンクを開いた。",
+      "保存先容量や通信が不足、またはアーカイブが大きすぎる。"
+    ],
+    "diagnosis": "作成完了メールがない場合はダウンロード以前の段階です。リンクを開けないならアカウントと有効期限を確認します。ダウンロードが途中で止まるなら空き容量や接続を調べ、複数ファイルに分割されていないか確認します。失敗したファイル名と時刻を残すと再試行範囲を限定できます。",
+    "caution": "エクスポートにはメールや写真など個人情報が含まれます。共有PCや公開リンクに保存せず、ダウンロード後は安全な保管場所へ移してください。元データを消してもダウンロードは改善しないため削除しないでください。",
+    "escalation": "同じアカウントで新しい小さなエクスポートも失敗するなら表示エラーと対象サービスをGoogleアカウントのサポートへ伝えます。",
+    "source_url": "https://support.google.com/accounts/answer/3024190?hl=ja",
+    "source_label": "Googleアカウント ヘルプ：Googleデータをダウンロードする",
+    "related_existing": [
+      "/google/google-drive-file-download-failed-browser/",
+      "/google/google-drive-files-missing/",
+      "/google/google-drive-upload-stuck/"
+    ],
+    "closest_existing_url": "/google/google-drive-file-download-failed-browser/",
+    "differentiation": "既存記事はGoogleドライブ内の一つのファイルのブラウザ保存失敗。本記事はTakeoutによる複数サービスのアーカイブ生成・有効期限・分割取得。",
+    "fact_check": "Google公式のデータエクスポートヘルプでアーカイブの作成とダウンロード、対象・サイズ選択を照合。"
+  }
+]
