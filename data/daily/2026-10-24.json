@@ -1,0 +1,992 @@
+[
+  {
+    "category": "browser",
+    "slug": "chrome-tabs-reload-after-switch",
+    "path": "/browser/chrome-tabs-reload-after-switch/",
+    "title": "Chromeでタブに戻るたび再読み込みされるときの確認手順",
+    "topic": "開いていたタブへ戻ると入力内容が消える",
+    "description": "開いていたタブへ戻ると入力内容が消える。Chromeのメモリセーバーで非アクティブなタブが解放されていないかを確認し、作業サイトだけを常に有効にする設定を検討します。",
+    "answer": "Chromeのメモリセーバーで非アクティブなタブが解放されていないかを確認し、作業サイトだけを常に有効にする設定を検討します。",
+    "steps": [
+      "Chromeの設定でパフォーマンスを開き、メモリセーバーの有効状態とレベルを確認します。",
+      "問題のタブを開いたまま他のタブへ移動し、戻ったときの再読み込み表示と入力内容を記録します。",
+      "必要な作業サイトだけを『常にアクティブにするサイト』へ追加して同じ操作を再試行します。",
+      "改善しない場合は端末の空きメモリと拡張機能の影響を確認し、同じサイトを別ブラウザーで比較します。"
+    ],
+    "causes": [
+      "メモリセーバーが非アクティブタブを解放している。",
+      "端末の空きメモリが不足している。",
+      "拡張機能やサイト側がタブを再読み込みしている。"
+    ],
+    "diagnosis": "Chromeのパフォーマンス設定を変えたときだけ改善するならメモリセーバーが有力です。特定サイトだけならサイト側のセッションや拡張機能も候補です。多くのタブで同時に起きる場合は端末のメモリ不足を確認します。入力途中のフォームが失われる症状と、通常のページ更新を区別して記録します。",
+    "caution": "『常にアクティブ』へ多くのサイトを追加するとメモリ消費が増えます。重要な入力は送信前に下書きを別の場所へ保存し、再読み込みが直るまで長いフォームを開いたままにしないでください。",
+    "escalation": "設定を変えても特定サイトだけ再現する場合はChrome版、対象URL、拡張機能の有無をサイト運営者に伝えます。",
+    "source_url": "https://support.google.com/chrome/answer/12929150?hl=ja",
+    "source_label": "Google Chrome ヘルプ：パフォーマンスをカスタマイズする",
+    "related_existing": [
+      "/browser/chrome-running-slow/",
+      "/browser/chrome-pdf-not-opening/",
+      "/browser/chrome-aw-snap/"
+    ],
+    "closest_existing_url": "/browser/chrome-running-slow/",
+    "differentiation": "既存記事はChrome全体の動作が遅い症状。本記事は非アクティブタブが解放され、戻った瞬間にフォームが再読み込みされる症状と除外設定を扱う。",
+    "fact_check": "Google公式のパフォーマンスヘルプでメモリセーバー、非アクティブタブ、特定サイトを常に有効にする設定を照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-one-site-muted",
+    "path": "/browser/chrome-one-site-muted/",
+    "title": "Chromeで一つのサイトだけ音が出ないときの確認手順",
+    "topic": "動画は動くが特定サイトだけ無音",
+    "description": "動画は動くが特定サイトだけ無音。タブのミュートとChromeのサイト別音声権限を確認し、端末全体の音量不良と切り分けます。",
+    "answer": "タブのミュートとChromeのサイト別音声権限を確認し、端末全体の音量不良と切り分けます。",
+    "steps": [
+      "別のサイトの動画で音が出るか確認し、対象タブがミュートされていないか見ます。",
+      "Chromeのサイト設定で対象サイトの『音声』権限を確認します。",
+      "対象サイトのプレーヤー内音量と端末の出力先を比較します。",
+      "許可を戻してページを読み込み直し、同じサイトの別動画でも音が出るか確かめます。"
+    ],
+    "causes": [
+      "タブまたはサイトがミュートされている。",
+      "サイト設定で音声がブロックされている。",
+      "動画プレーヤーの音量や出力先が異なる。"
+    ],
+    "diagnosis": "他のサイトでは音が出るなら端末のスピーカー故障を疑う前にChromeのサイト権限を調べます。対象サイトの一つの動画だけならその動画自体に音声がない可能性があります。Bluetooth接続時だけ聞こえない場合は出力先を比較します。サイト名とタブのミュート表示を残すと原因が絞れます。",
+    "caution": "サイトの音声を許可すると自動再生されるコンテンツから音が出る場合があります。広告や不審なページのために全サイトを一括許可せず、信頼できる対象だけ設定を変更してください。",
+    "escalation": "特定サイトだけ許可後も無音ならサイト名、Chrome版、再生した動画をサイト運営者へ伝えます。",
+    "source_url": "https://support.google.com/chrome/answer/9692215?hl=ja",
+    "source_label": "Google Chrome ヘルプ：音楽や動画の音声を管理する",
+    "related_existing": [
+      "/windows/windows-no-sound/",
+      "/browser/chrome-site-location-blocked/",
+      "/browser/chrome-notifications-wont-stop/"
+    ],
+    "closest_existing_url": "/windows/windows-no-sound/",
+    "differentiation": "既存記事はWindows全体の音声出力不良。本記事はChromeで他サイトの音は出るのに一つのサイトだけ無音となる権限・ミュート設定を扱う。",
+    "fact_check": "Google公式のChrome音声ヘルプでサイト別音声権限と再生操作を照合した。Windows全体の無音と同一視しない。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-embedded-signin-cookies-blocked",
+    "path": "/browser/chrome-embedded-signin-cookies-blocked/",
+    "title": "Chromeで外部ログイン後に元のサイトへ戻れないときの確認手順",
+    "topic": "外部IDで認証した直後にログイン画面へ戻る",
+    "description": "外部IDで認証した直後にログイン画面へ戻る。埋め込みログインに必要なサードパーティCookieがブロックされていないかを確認し、信頼できるサイトだけ一時的な例外を試します。",
+    "answer": "埋め込みログインに必要なサードパーティCookieがブロックされていないかを確認し、信頼できるサイトだけ一時的な例外を試します。",
+    "steps": [
+      "ログイン先と戻り先のドメインを確認し、エラー表示にCookieブロックの案内がないか見ます。",
+      "ChromeのサードパーティCookie設定で対象サイトに一時許可を出せるか確認します。",
+      "許可後に同じ正規URLからログインし、認証後に元のサービスへ戻るか試します。",
+      "別ブラウザーでも同じならサービス側の認証設定を疑い、サイトの公式サポートを確認します。"
+    ],
+    "causes": [
+      "外部認証に必要なサードパーティCookieがブロックされている。",
+      "ログイン先とサービス側で異なるアカウントを使っている。",
+      "サービスの認証セッションや戻り先設定が壊れている。"
+    ],
+    "diagnosis": "通常のページ閲覧はでき、外部IDでログインした直後だけ元のログイン画面へ戻るならCookieの制限が焦点です。ERR_TOO_MANY_REDIRECTSがページ全体に出る問題とは表示と対処が異なります。特定サービスだけか複数サービスか、Cookie許可前後で変わるかを記録します。",
+    "caution": "全サイトのサードパーティCookieを恒久的に許可する必要はありません。URLと運営元を確認し、対象サイトだけ一時的に許可してください。ログインを繰り返す前にフィッシング画面でないことを確認します。",
+    "escalation": "対象だけ一時許可しても失敗する場合はログイン先と戻り先のURL、表示文言を個人情報を伏せてサービス運営者へ伝えます。",
+    "source_url": "https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Google Chrome ヘルプ：Cookieを許可、ブロック、管理する",
+    "related_existing": [
+      "/browser/chrome-too-many-redirects/",
+      "/browser/chrome-page-translation-not-offered/",
+      "/browser/chrome-notifications-wont-stop/"
+    ],
+    "closest_existing_url": "/browser/chrome-too-many-redirects/",
+    "differentiation": "既存記事はページ全体のリダイレクトエラーと古いCookieの削除。本記事は外部認証の後に戻れず、Cookieブロックに対して対象サイトだけ許可する判断を扱う。",
+    "fact_check": "Google公式のCookieヘルプで、サードパーティCookie制限により一部サイトが機能しない場合とサイト単位の一時許可を照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-reading-mode-unavailable",
+    "path": "/browser/chrome-reading-mode-unavailable/",
+    "title": "Chromeのリーディングモードが使えないページの確認手順",
+    "topic": "読みやすい表示へ切り替える項目が出ない",
+    "description": "読みやすい表示へ切り替える項目が出ない。ChromeのリーディングモードはすべてのWebページで使えるわけではありません。対応ページかを比較し、利用できないページでは通常表示へ戻します。",
+    "answer": "ChromeのリーディングモードはすべてのWebページで使えるわけではありません。対応ページかを比較し、利用できないページでは通常表示へ戻します。",
+    "steps": [
+      "Chromeを更新し、文章が中心の別ページでリーディングモードを開けるか試します。",
+      "対象ページのメニューやサイドパネルからリーディングモードを選べるか確認します。",
+      "別ページでは開ける場合、対象ページの構造やコンテンツが対応していない可能性を確認します。",
+      "利用できないページでは通常表示のまま拡大率などを調整し、元の文章を直接確認します。"
+    ],
+    "causes": [
+      "そのページの内容がリーディングモードに対応していない。",
+      "Chrome版や端末で機能の表示位置が異なる。",
+      "ページの読み込みが完了していない。"
+    ],
+    "diagnosis": "一部のページでだけ項目が出ないなら、そのページが機能に対応していない可能性があります。どのページでも使えない場合はChromeの版と対応端末を確認します。表示内容が欠ける場合は元のページと比べ、表や画像を省いた要約表示を原本と取り違えないようにします。",
+    "caution": "リーディングモードの表示だけを根拠に契約条件、料金、医療情報を判断しないでください。表や注意書きが省かれる可能性があるため重要な箇所は通常ページで再確認します。無理に非公式の拡張機能を入れる必要はありません。",
+    "escalation": "対応するはずの複数ページで機能がないならChrome版と端末種別をChromeヘルプに伝えます。",
+    "source_url": "https://support.google.com/chrome/answer/14218344?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Google Chrome ヘルプ：リーディングモードを使う",
+    "related_existing": [
+      "/browser/chrome-page-zoom-too-large/",
+      "/browser/chrome-saved-passwords-missing/",
+      "/browser/chrome-page-translation-not-offered/"
+    ],
+    "closest_existing_url": "/browser/chrome-page-zoom-too-large/",
+    "differentiation": "既存記事はページ全体の拡大率の設定。本記事は本文抽出型のリーディングモードが特定ページで利用できない条件を扱う。",
+    "fact_check": "Google公式はリーディングモードがすべてのWebサイトで利用できないと明記する。表示方法と通常表示への戻し方を照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-protected-video-wont-play",
+    "path": "/browser/chrome-protected-video-wont-play/",
+    "title": "Chromeで購入・契約した動画だけ再生できないときの確認手順",
+    "topic": "一般動画は見られるが保護された動画だけ止まる",
+    "description": "一般動画は見られるが保護された動画だけ止まる。Chromeの保護されたコンテンツの設定を確認し、サービスの視聴権と端末・ブラウザー条件を分けて調べます。",
+    "answer": "Chromeの保護されたコンテンツの設定を確認し、サービスの視聴権と端末・ブラウザー条件を分けて調べます。",
+    "steps": [
+      "無料動画が再生できるか比較し、対象サービスに出る具体的なエラーを記録します。",
+      "Chromeのサイト設定で『保護されたコンテンツ』の許可状態を確認します。",
+      "サービスで正しい契約アカウントにログインし、公式の対応ブラウザー条件を確認します。",
+      "設定変更後にChromeを更新・再起動して試し、別の対応端末でも同じ作品だけ失敗するか比較します。"
+    ],
+    "causes": [
+      "保護されたコンテンツの識別子や再生がブロックされている。",
+      "契約・地域・端末が作品の視聴条件に合わない。",
+      "対象サービス側の一時的な再生障害。"
+    ],
+    "diagnosis": "無料動画まで再生できない場合は通信やChrome全体の再生問題です。購入・契約済み作品だけ失敗するなら保護されたコンテンツ設定や視聴権を確認します。別の対応端末でも同じ作品だけ失敗するなら、ブラウザー設定より作品・契約側の条件が手掛かりです。エラーコードは控えます。",
+    "caution": "保護技術を回避する拡張機能や非公式ソフトは使わないでください。視聴権や地域制限を勝手に解除できるわけではありません。課金済み作品で繰り返し購入せず、購入履歴を確認してからサポートへ相談します。",
+    "escalation": "正しい視聴権と対応環境でも失敗するなら作品名、エラーコード、Chrome版を動画サービスのサポートへ伝えます。",
+    "source_url": "https://support.google.com/chrome/answer/4410268?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Google Chrome ヘルプ：保護されたコンテンツの設定",
+    "related_existing": [
+      "/browser/chrome-pdf-not-opening/",
+      "/browser/chrome-site-location-blocked/",
+      "/browser/chrome-address-autofill-not-working/"
+    ],
+    "closest_existing_url": "/browser/chrome-pdf-not-opening/",
+    "differentiation": "既存記事はPDFの表示方式と破損ファイル。本記事は動画の著作権保護設定とサービスの視聴権による再生可否を扱う。",
+    "fact_check": "Google公式の保護されたコンテンツ設定で、サイトによる識別子利用と再生許可の関係を確認した。権利制限を解除できるとは書かない。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-android-desktop-site-not-shown",
+    "path": "/browser/chrome-android-desktop-site-not-shown/",
+    "title": "Android版ChromeでPC版サイトに切り替わらないときの確認手順",
+    "topic": "PC版を要求してもスマートフォン表示のまま",
+    "description": "PC版を要求してもスマートフォン表示のまま。Chromeの『PC版サイト』要求が有効かを確認し、サイト側が同じ画面を返す場合と切り分けます。",
+    "answer": "Chromeの『PC版サイト』要求が有効かを確認し、サイト側が同じ画面を返す場合と切り分けます。",
+    "steps": [
+      "対象ページを開き、Chromeメニューの『PC版サイト』がオンか確認します。",
+      "同じ端末で別のサイトを開き、PC版要求で表示が変わるか比較します。",
+      "対象サイトを再読み込みし、URLがモバイル専用ページへ転送されていないか確認します。",
+      "Chromeのサイト単位と既定のPC版設定を確認し、特定サイトだけ変わらなければサイト側の表示方式を調べます。"
+    ],
+    "causes": [
+      "PC版サイトの要求が有効になっていない。",
+      "サイトが画面幅に応じた同じデザインを返している。",
+      "モバイル専用URLへの転送やサイト側の設定。"
+    ],
+    "diagnosis": "別サイトではPC版表示に変わるならChromeの設定全体は動作しています。対象サイトが画面幅に合わせて表示を変える設計なら、PC版を要求しても見た目がほぼ同じ場合があります。URLがモバイル専用へ戻るならサイト側の転送を確認します。閲覧したい機能の有無で判断します。",
+    "caution": "PC版表示は小さい画面で操作しにくくなり、誤操作の危険があります。フォーム送信や購入手続きでは入力内容を確認してください。非公式のユーザーエージェント変更アプリを導入する前に公式表示を試します。",
+    "escalation": "特定サービスのPC専用機能が出ない場合はURLと機能名をサイト運営者へ問い合わせます。",
+    "source_url": "https://support.google.com/chrome/answer/13514529?co=GENIE.Platform%3DAndroid&hl=ja",
+    "source_label": "Google Chrome ヘルプ：モバイルでPC版サイトを表示する",
+    "related_existing": [
+      "/browser/chrome-page-zoom-too-large/",
+      "/browser/chrome-site-location-blocked/",
+      "/browser/chrome-camera-microphone-not-working/"
+    ],
+    "closest_existing_url": "/browser/chrome-page-zoom-too-large/",
+    "differentiation": "既存記事はPCやブラウザーの拡大率。本記事はAndroid版Chromeが送るPC版表示要求とサイト側の応答を切り分ける。",
+    "fact_check": "Google公式のAndroid版ChromeのPC版サイト設定で、サイト単位と既定表示の切り替えを照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-required-popup-blocked",
+    "path": "/browser/chrome-required-popup-blocked/",
+    "title": "Chromeで手続きに必要なポップアップが開かないときの確認手順",
+    "topic": "ログインや決済の別ウィンドウだけ出ない",
+    "description": "ログインや決済の別ウィンドウだけ出ない。Chromeのポップアップブロック表示を見て、信頼できる対象サイトだけ例外を許可します。不要な広告が勝手に開く問題とは対処が逆です。",
+    "answer": "Chromeのポップアップブロック表示を見て、信頼できる対象サイトだけ例外を許可します。不要な広告が勝手に開く問題とは対処が逆です。",
+    "steps": [
+      "対象サイトの正規URLを確認し、ボタンを押した際にアドレスバーへブロック表示が出るか見ます。",
+      "Chromeのサイト設定でポップアップとリダイレクトの許可状態を確認します。",
+      "信頼できるサイトだけ一時的に許可してページを開き直し、必要な窓が出るか試します。",
+      "窓が開いた後は手続き結果を確認し、不要になった例外は削除します。"
+    ],
+    "causes": [
+      "Chromeが操作に必要な別ウィンドウをブロック。",
+      "サイトが古いURLから別ページへ転送している。",
+      "ブラウザー拡張機能が窓を抑止している。"
+    ],
+    "diagnosis": "操作した直後にアドレスバーへブロック表示が出るならChromeのサイト設定を確認します。別ブラウザーでも開かない場合はサイト側の障害が考えられます。予期せず広告が開く場合は本記事の対象ではなく、許可済みサイトや拡張機能を点検します。許可前後の動きを記録してください。",
+    "caution": "正規サイトと確認できないページにポップアップを許可しないでください。銀行や決済画面に見える窓でも、URLと証明書を確かめます。全サイトを一括許可せず、作業が終われば不要な例外を解除します。",
+    "escalation": "正規サイトを許可しても開かなければ対象URL、Chrome版、操作したボタンとブロック表示を運営者へ伝えます。",
+    "source_url": "https://support.google.com/chrome/answer/95472?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Google Chrome ヘルプ：ポップアップをブロックまたは許可する",
+    "related_existing": [
+      "/browser/chrome-unwanted-popups-redirects/",
+      "/browser/chrome-camera-microphone-not-working/",
+      "/browser/chrome-sync-paused/"
+    ],
+    "closest_existing_url": "/browser/chrome-unwanted-popups-redirects/",
+    "differentiation": "既存記事は勝手に出る広告や不審な窓を止める問題。本記事は利用者が正規サイトで操作した窓がブロックされた場合の限定許可を扱う。",
+    "fact_check": "Google公式のポップアップ設定でサイト単位の許可とブロックを確認した。全サイトを無条件に許可しない方針を明記した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-offline-edit-unavailable",
+    "path": "/google/docs-offline-edit-unavailable/",
+    "title": "Googleドキュメントをオフラインで編集できないときの確認手順",
+    "topic": "接続がないと文書を開けない・編集できない",
+    "description": "接続がないと文書を開けない・編集できない。文書がオフライン利用可能に設定され、状態表示で準備完了になっているか確認します。Drive for desktopのファイル保存とは別の仕組みです。",
+    "answer": "文書がオフライン利用可能に設定され、状態表示で準備完了になっているか確認します。Drive for desktopのファイル保存とは別の仕組みです。",
+    "steps": [
+      "オンラインの状態で対象文書を開き、オフラインで使用可能に設定します。",
+      "文書名の横にある状態表示で、オフライン編集の準備が完了したか確認します。",
+      "Googleドキュメントのオフライン設定と対応ブラウザーを確認し、同じアカウントで開きます。",
+      "接続を切る前に小さなテスト文書で開閉と変更を試し、再接続後に同期されたか確認します。"
+    ],
+    "causes": [
+      "対象文書をオフライン利用可能にしていない。",
+      "オフライン用データの準備がまだ完了していない。",
+      "対応ブラウザーやアカウントの条件が合っていない。"
+    ],
+    "diagnosis": "オンラインでは編集できるが接続を切ると開けない場合は、権限よりオフライン準備の状態が焦点です。文書横の状態表示に理由が出ていないか確認します。特定文書だけならファイルの設定や容量を調べ、すべての文書ならブラウザー側のオフライン機能を調べます。再接続後の同期も確認します。",
+    "caution": "未同期の変更を残したままブラウザーデータを削除しないでください。共有端末ではオフライン保存された文書の扱いに注意します。機密文書を許可されていない端末へオフライン保存しないでください。",
+    "escalation": "準備完了表示でも開けなければ文書の状態表示、ブラウザー版、アカウント種別をWorkspace管理者またはGoogleサポートへ伝えます。",
+    "source_url": "https://support.google.com/docs/answer/6388102?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Googleドキュメント ヘルプ：オフラインで作業する",
+    "related_existing": [
+      "/google/drive-offline-file-unavailable/",
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/google-account-passkey-not-working/"
+    ],
+    "closest_existing_url": "/google/drive-offline-file-unavailable/",
+    "differentiation": "既存記事はパソコン版Driveのストリーミングファイルをオフラインで開く問題。本記事はブラウザーのGoogleドキュメントで文書のオフライン編集準備を行う問題。",
+    "fact_check": "Google公式のオフライン編集ヘルプで文書の状態表示、対象文書の準備、トラブルシューティングを照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-view-only-cannot-edit",
+    "path": "/google/docs-view-only-cannot-edit/",
+    "title": "Googleドキュメントが閲覧のみで編集できないときの確認手順",
+    "topic": "文書は開けるが編集欄に入力できない",
+    "description": "文書は開けるが編集欄に入力できない。文書の閲覧権限と編集権限を分け、正しいアカウントか、所有者が編集を許可しているかを確認します。",
+    "answer": "文書の閲覧権限と編集権限を分け、正しいアカウントか、所有者が編集を許可しているかを確認します。",
+    "steps": [
+      "文書右上の共有表示で自分が閲覧者・コメント可・編集者のどれか確認します。",
+      "共有されたメールアドレスと現在のGoogleアカウントを照合します。",
+      "編集権限がなければ所有者へ用途を添えて権限を依頼します。",
+      "編集者なのに入力できない場合は文書のサイズ、ブラウザー拡張機能、別ブラウザーでの動作を確認します。"
+    ],
+    "causes": [
+      "閲覧者またはコメント可の権限しかない。",
+      "共有先とは別のアカウントで開いた。",
+      "編集権限はあるがブラウザーや文書の状態が影響。"
+    ],
+    "diagnosis": "文書を開けても閲覧者なら編集できないのは権限どおりです。共有ファイルそのものを開けない問題と異なり、入力できる権限があるかが焦点です。編集者と表示される場合に限りブラウザーや文書の状態を調べます。複製が許されるかも所有者の設定を確認してください。",
+    "caution": "所有者の承認なしに共有制限を回避しないでください。機密文書を私用アカウントへコピーする前に組織の規則を確認します。閲覧可能だからといって編集可能とみなさず、権限変更は所有者へ依頼します。",
+    "escalation": "正しい編集者アカウントでも入力できなければ文書URL、権限表示、ブラウザー版を所有者または管理者へ伝えます。",
+    "source_url": "https://support.google.com/docs/answer/6239515?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Googleドキュメント ヘルプ：ファイルを編集できない場合",
+    "related_existing": [
+      "/google/google-drive-access-denied/",
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/google-account-passkey-not-working/"
+    ],
+    "closest_existing_url": "/google/google-drive-access-denied/",
+    "differentiation": "既存記事は共有ファイルを開く前にアクセス拒否される問題。本記事は文書を読める状態で編集だけできない閲覧者権限と入力環境を扱う。",
+    "fact_check": "Google公式のファイル編集トラブルヘルプで共有権限、利用アカウント、ブラウザー条件を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-not-accepting-responses",
+    "path": "/google/forms-not-accepting-responses/",
+    "title": "Googleフォームが回答を受け付けないときの確認手順",
+    "topic": "回答者に『受付終了』と表示される",
+    "description": "回答者に『受付終了』と表示される。フォーム所有者は回答受付のスイッチ、終了日時、回答数上限を確認します。回答者は所有者へ連絡し、終了したフォームを設定で回避しません。",
+    "answer": "フォーム所有者は回答受付のスイッチ、終了日時、回答数上限を確認します。回答者は所有者へ連絡し、終了したフォームを設定で回避しません。",
+    "steps": [
+      "回答者なら表示された終了メッセージを確認し、フォーム所有者へ受付状況を問い合わせます。",
+      "所有者なら編集画面で公開状態と『回答を受け付ける』設定を確認します。",
+      "終了日時や回答数上限が設定されていないか確認し、意図した条件と比較します。",
+      "条件を変更する場合は締切方針を決め、テスト回答で受付状態を確認して回答者へ案内します。"
+    ],
+    "causes": [
+      "所有者が回答受付を手動で停止した。",
+      "設定した終了日時に達した。",
+      "回答数上限へ到達した。"
+    ],
+    "diagnosis": "回答者全員に同じ終了表示が出るなら端末の故障よりフォーム設定が焦点です。所有者の編集画面で受付スイッチと自動終了条件を確認します。一人だけ送信できないならログイン制限や一人一回の回答設定を別に調べます。募集が終了している場合は所有者の判断を優先します。",
+    "caution": "募集期限や定員があるフォームを、回答者の都合で勝手に再開しないでください。受付を再開すると案内済みの締切と食い違う場合があります。取得した個人情報の管理方針も変えず、所有者の承認を確認します。",
+    "escalation": "所有者の設定では受付中なのに回答者全員が閉鎖表示なら公開URLと設定画面をGoogleフォームのサポートへ伝えます。",
+    "source_url": "https://support.google.com/docs/answer/139706?hl=ja",
+    "source_label": "Googleフォーム ヘルプ：回答を表示・管理する",
+    "related_existing": [
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-photos-shared-album-not-found/",
+      "/google/photos-locked-folder-missing/"
+    ],
+    "closest_existing_url": "/google/google-calendar-invite-not-appearing/",
+    "differentiation": "既存記事はカレンダー招待が自分の予定に現れない問題。本記事はGoogleフォームそのものが回答受付を停止する設定と終了条件を扱う。",
+    "fact_check": "Google公式のフォーム回答管理ヘルプで受付のオン・オフ、終了日時、回答上限を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-vacation-reply-not-sent",
+    "path": "/google/gmail-vacation-reply-not-sent/",
+    "title": "Gmailの不在通知が相手に届かないときの確認手順",
+    "topic": "自動返信を設定したのに相手に届かない",
+    "description": "自動返信を設定したのに相手に届かない。不在通知の期間と送信対象を確認します。Gmailは同じ相手へ毎回必ず自動返信する仕様ではないため、テスト条件を分けて調べます。",
+    "answer": "不在通知の期間と送信対象を確認します。Gmailは同じ相手へ毎回必ず自動返信する仕様ではないため、テスト条件を分けて調べます。",
+    "steps": [
+      "Gmail設定の不在通知がオンで開始・終了日が適切か確認します。",
+      "『連絡先にのみ送信』など送信対象の制限が有効か確認します。",
+      "別アカウントから一通だけテストし、迷惑メールや送信先の受信ルールも確認します。",
+      "同じ相手からの連続メールだけ返信されないなら公式の送信間隔条件を確認します。"
+    ],
+    "causes": [
+      "不在通知の期間外または設定が未保存。",
+      "連絡先だけに送る設定で対象外。",
+      "同じ送信者へ繰り返し自動返信しない仕様。"
+    ],
+    "diagnosis": "別の新しい送信者には届き、同じ相手からの二通目だけ届かない場合は不在通知の送信間隔を確認します。誰にも届かないなら期間、対象制限、保存状態を先に調べます。送信済みメールの通常の配信失敗とは違う機能なので、自動返信の対象条件を記録してください。",
+    "caution": "自動返信文に旅行先や不在中の住所など防犯上不要な情報を載せないでください。社外へ公開したくない連絡先を本文へ含めないようにします。全員へ送る設定へ変更する前に組織のメール方針を確認します。",
+    "escalation": "条件が揃っても初回の相手全員に届かないなら設定画面、期間、テスト日時をGoogle Workspace管理者へ伝えます。",
+    "source_url": "https://support.google.com/mail/answer/25922?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Gmail ヘルプ：不在通知を送信する",
+    "related_existing": [
+      "/google/gmail-scheduled-send-not-sent/",
+      "/google/gmail-sent-mail-not-delivered/",
+      "/google/gmail-not-receiving-email/"
+    ],
+    "closest_existing_url": "/google/gmail-scheduled-send-not-sent/",
+    "differentiation": "既存記事は手動で予約したメールが送信予定時刻に出ない問題。本記事は受信メールへの自動返信の対象条件と間隔を扱う。",
+    "fact_check": "Gmail公式の不在通知ヘルプで期間、連絡先のみ送信、同じ相手への返信条件を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-send-as-verification-missing",
+    "path": "/google/gmail-send-as-verification-missing/",
+    "title": "Gmailで別アドレスから送る設定の確認メールが見つからないときの確認手順",
+    "topic": "差出人アドレス追加の認証を完了できない",
+    "description": "差出人アドレス追加の認証を完了できない。追加先アドレスへの確認メールと迷惑メールを探し、組織アドレスなら管理者の送信設定を確認します。通常メールの未着とは分けます。",
+    "answer": "追加先アドレスへの確認メールと迷惑メールを探し、組織アドレスなら管理者の送信設定を確認します。通常メールの未着とは分けます。",
+    "steps": [
+      "Gmailの『他のメールアドレスを追加』で入力した宛先を確認します。",
+      "追加先の受信箱と迷惑メール・一括メールフォルダでGoogleからの確認メールを探します。",
+      "組織のアドレスなら管理者にエイリアスと送信許可の設定を確認します。",
+      "確認メールを再送した場合は最新のメールだけを開き、リンク先がGoogleの正規画面か確認します。"
+    ],
+    "causes": [
+      "追加先アドレスを誤入力した。",
+      "確認メールが迷惑メールなどへ分類。",
+      "組織のエイリアス設定や送信権限が未設定。"
+    ],
+    "diagnosis": "通常のメールは受け取れるのに差出人追加の確認メールだけ見当たらないなら、Googleからの特定メールと入力アドレスを確認します。仕事用アドレスの場合は受信側だけでなく管理者側のエイリアス設定も必要です。別アドレスで送れない状態と、送信済みメールが相手に届かない状態を混同しません。",
+    "caution": "確認リンクを第三者へ転送しないでください。届いたメールの送信元とURLを確認し、Google以外のサイトへパスワードを入力しないでください。仕事用の差出人アドレスを個人の判断で無断追加しないでください。",
+    "escalation": "迷惑メールにもなく正しい宛先なら追加先メールの管理者とGoogle Workspace管理者に日時とアドレスを伝えます。",
+    "source_url": "https://support.google.com/mail/answer/22370?hl=ja",
+    "source_label": "Gmail ヘルプ：別のアドレスやエイリアスから送信する",
+    "related_existing": [
+      "/google/gmail-not-receiving-email/",
+      "/google/gmail-scheduled-send-not-sent/",
+      "/google/gmail-archived-mail-not-found/"
+    ],
+    "closest_existing_url": "/google/gmail-not-receiving-email/",
+    "differentiation": "既存記事は通常メールが受信できない問題。本記事はGmailの差出人アドレス追加に必要な特定の確認メールと組織エイリアス設定。",
+    "fact_check": "Gmail公式の別アドレス送信ヘルプで確認メールの送信先、迷惑メールの確認、組織エイリアスの条件を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-saved-places-not-visible",
+    "path": "/google/maps-saved-places-not-visible/",
+    "title": "Googleマップで保存した場所やリストが見えないときの確認手順",
+    "topic": "以前保存した店が地図に出ない",
+    "description": "以前保存した店が地図に出ない。Googleマップの『保存済み』と使用アカウントを確認し、リスト内の場所と地図上のピン表示を分けて探します。",
+    "answer": "Googleマップの『保存済み』と使用アカウントを確認し、リスト内の場所と地図上のピン表示を分けて探します。",
+    "steps": [
+      "Googleマップで保存時と同じGoogleアカウントか確認します。",
+      "『保存済み』または『自分』からリストと最近保存した場所を開きます。",
+      "対象のリスト内を検索し、地図上にピンがなくてもリストに項目があるか調べます。",
+      "別端末の同じアカウントでリストを比較し、共有リストなら所有者の公開状態も確認します。"
+    ],
+    "causes": [
+      "保存時と別のGoogleアカウントを使っている。",
+      "リストを開かず地図上のピンだけを探している。",
+      "共有リストの権限や場所の情報が変わった。"
+    ],
+    "diagnosis": "リスト内にあるのに地図上で見えない場合は、保存の消失ではなく表示方法が違う可能性があります。別端末でもリスト自体が見えなければアカウントを先に照合します。特定の共有リストだけ見えないなら所有者の共有設定を調べます。位置情報が不正確な問題とは原因が異なります。",
+    "caution": "リストを探すためにアカウントやアプリデータを削除しないでください。非公開の自宅や訪問先が含まれるリストを公開リンクで共有しないよう注意します。共同編集リストでは勝手に項目を削除せず所有者に確認します。",
+    "escalation": "同じアカウントでも端末間でリストが一致しなければリスト名、保存時期、端末をGoogleマップのサポートへ伝えます。",
+    "source_url": "https://support.google.com/maps/answer/9948049?co=GENIE.Platform%3DAndroid&hl=ja",
+    "source_label": "Googleマップ ヘルプ：保存した場所とリストを探す",
+    "related_existing": [
+      "/google/google-maps-location-inaccurate/",
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/google-calendar-desktop-reminders-missing/"
+    ],
+    "closest_existing_url": "/google/google-maps-location-inaccurate/",
+    "differentiation": "既存記事は現在地の測位精度。本記事は自分が保存した地点とリストの検索・表示・アカウントの問題を扱う。",
+    "fact_check": "Google公式のマップの保存場所案内で『自分』タブ、最近保存した場所、リストの開き方を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-restricted-mode-locked",
+    "path": "/google/youtube-restricted-mode-locked/",
+    "title": "YouTubeの制限付きモードを解除できないときの確認手順",
+    "topic": "設定を変えられず動画やコメントが見えない",
+    "description": "設定を変えられず動画やコメントが見えない。制限付きモードが個人設定か学校・職場・ネットワーク管理者による設定かを確認します。管理下なら利用者だけで解除できません。",
+    "answer": "制限付きモードが個人設定か学校・職場・ネットワーク管理者による設定かを確認します。管理下なら利用者だけで解除できません。",
+    "steps": [
+      "YouTubeのプロフィールから制限付きモードの状態と変更できるか確認します。",
+      "別ブラウザーや個人の回線で同じアカウントの状態を比較します。",
+      "学校・職場の端末やネットワークなら管理者の制限があるか確認します。",
+      "個人設定だけなら公式画面で変更し、管理下なら管理者へ必要な動画の利用を相談します。"
+    ],
+    "causes": [
+      "個人が制限付きモードを有効化している。",
+      "学校・職場の管理者が端末またはアカウントへ適用。",
+      "ネットワーク管理者が接続経路へ制限を適用。"
+    ],
+    "diagnosis": "同じ端末でも別の回線では変更できるならネットワーク側の設定が手掛かりです。管理アカウントでだけ固定されるなら組織ポリシーを確認します。制限付きモードではコメントが見えない場合もあるため、字幕がない症状や再生エラーとは分けて調べます。表示された管理者の説明を記録します。",
+    "caution": "学校や職場の制限を回避する設定変更をしないでください。年齢や安全に関わる制限を解除するには管理者や保護者の判断が必要です。必要な教材や動画が見られない場合は正規の例外申請を行います。",
+    "escalation": "管理者による制限表示がある場合は組織の管理者へ対象動画URLと利用目的を伝えます。",
+    "source_url": "https://support.google.com/youtube/answer/174084?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "YouTube ヘルプ：制限付きモードをオン・オフする",
+    "related_existing": [
+      "/google/youtube-subtitles-not-available/",
+      "/google/shared-drive-not-visible/",
+      "/google/google-maps-offline-map-not-downloading/"
+    ],
+    "closest_existing_url": "/google/youtube-subtitles-not-available/",
+    "differentiation": "既存記事は動画の字幕トラックがない・表示できない問題。本記事は制限付きモードそのものを変更できず動画やコメントへのアクセスが制限される問題。",
+    "fact_check": "YouTube公式の制限付きモード案内で個人設定と管理者・ネットワークによる強制の違いを照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-protected-cell-cannot-edit",
+    "path": "/google/sheets-protected-cell-cannot-edit/",
+    "title": "Googleスプレッドシートの特定セルだけ編集できないときの確認手順",
+    "topic": "シートは開けるが一部の範囲だけ入力できない",
+    "description": "シートは開けるが一部の範囲だけ入力できない。保護されたシートや範囲の編集権限を確認します。ファイル全体の閲覧者権限と、一部セルだけの保護を切り分けます。",
+    "answer": "保護されたシートや範囲の編集権限を確認します。ファイル全体の閲覧者権限と、一部セルだけの保護を切り分けます。",
+    "steps": [
+      "同じファイルの別セルは編集できるか確認し、対象範囲を特定します。",
+      "シートの保護されたシートと範囲の表示で対象セルが含まれるか確認します。",
+      "保護を設定した所有者へ、入力が必要な範囲と用途を伝えて編集権限を依頼します。",
+      "警告のみの保護なら内容を再確認して続行し、編集禁止なら無理にコピーして置き換えないようにします。"
+    ],
+    "causes": [
+      "特定範囲が編集者を限定して保護されている。",
+      "シート全体の保護で例外セルだけ編集可。",
+      "ファイル自体が閲覧者権限。"
+    ],
+    "diagnosis": "ほかのセルは入力でき対象だけ編集できないなら、ファイル共有より範囲保護が焦点です。全セルを編集できない場合はファイル全体の共有権限を確認します。警告だけで入力可能な範囲と実際に編集が拒否される範囲も異なるため、画面に出た文言を記録してください。",
+    "caution": "保護は入力ミスを防ぐための設定です。所有者に無断で保護を外したり、数式のある範囲へ上書きしたりしないでください。共同作業中のデータをコピーして別ファイルへ移す際も共有範囲を確認します。",
+    "escalation": "編集が必要な業務セルなら対象範囲、アカウント、表示された権限を所有者または管理者へ伝えます。",
+    "source_url": "https://support.google.com/docs/answer/1218656?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Googleスプレッドシート ヘルプ：シートと範囲を保護する",
+    "related_existing": [
+      "/google/google-drive-access-denied/",
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/google-photos-shared-album-not-found/"
+    ],
+    "closest_existing_url": "/google/google-drive-access-denied/",
+    "differentiation": "既存記事はドライブのファイル自体を開けない問題。本記事はファイルの編集者でも一部セルだけ保護される範囲権限を扱う。",
+    "fact_check": "Google公式のシート・範囲保護ヘルプで警告と編集者制限の違い、保護設定の確認方法を照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-file-previous-version-not-found",
+    "path": "/google/drive-file-previous-version-not-found/",
+    "title": "Googleドライブでファイルの以前の版が見つからないときの確認手順",
+    "topic": "上書き前のPDFや画像へ戻したい",
+    "description": "上書き前のPDFや画像へ戻したい。対象がPDFなどのアップロードファイルかGoogleドキュメント形式かを確認し、それぞれの版履歴の場所を調べます。復元前に現行版を保全します。",
+    "answer": "対象がPDFなどのアップロードファイルかGoogleドキュメント形式かを確認し、それぞれの版履歴の場所を調べます。復元前に現行版を保全します。",
+    "steps": [
+      "対象ファイルの種類と所有者を確認し、Driveの詳細・アクティビティを開きます。",
+      "PDFや画像などのアップロードファイルならDriveの『版を管理』を確認します。",
+      "Googleドキュメント形式なら文書を開き、ファイルの変更履歴を確認します。",
+      "復元候補があればまず内容と日付を確認し、現行版を別途保存してから復元の影響を判断します。"
+    ],
+    "causes": [
+      "ファイル形式に対して違う版履歴画面を探している。",
+      "以前の版が保持されていない。",
+      "別ファイルや別アカウントの履歴を開いている。"
+    ],
+    "diagnosis": "Driveにファイルは存在するのに過去の内容だけ見つからないなら、紛失ファイルの検索とは別の調査です。アップロードしたPDFとGoogleドキュメント形式では履歴の入口が異なります。候補の日時、所有者、ファイル名を照合し、変更内容を確認してから戻します。復元操作の前後で現行版を比べます。",
+    "caution": "以前の版へ復元すると共同編集者の現在の内容に影響する場合があります。先に現行版を安全に保存し、共有ファイルは所有者へ相談してください。履歴がない場合に復元できると断言せず、別のバックアップも確認します。",
+    "escalation": "所有するファイルに版履歴が見えなければ種類、更新日時、所有者、共有状態をGoogleドライブのサポートへ伝えます。",
+    "source_url": "https://support.google.com/drive/answer/2409045?co=GENIE.Platform%3DDesktop&hl=ja",
+    "source_label": "Googleドライブ ヘルプ：アクティビティと版を確認する",
+    "related_existing": [
+      "/google/google-drive-files-missing/",
+      "/google/google-drive-file-download-failed-browser/",
+      "/google/google-photos-shared-album-not-found/"
+    ],
+    "closest_existing_url": "/google/google-drive-files-missing/",
+    "differentiation": "既存記事はファイル自体が見つからない問題。本記事は現在のファイルが存在する状態で過去版を探す画面と復元の影響を扱う。",
+    "fact_check": "Google公式のDrive版履歴ヘルプでアップロードファイルの版管理とアクティビティの確認手順を照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-chat-backup-fails",
+    "path": "/sns/line-chat-backup-fails/",
+    "title": "LINEのトーク履歴をバックアップできないときの確認手順",
+    "topic": "機種変更前のバックアップが完了しない",
+    "description": "機種変更前のバックアップが完了しない。端末とiCloud DriveまたはGoogleドライブの空き容量、保存先アカウントを確認し、古い端末で履歴を残したまま再試行します。",
+    "answer": "端末とiCloud DriveまたはGoogleドライブの空き容量、保存先アカウントを確認し、古い端末で履歴を残したまま再試行します。",
+    "steps": [
+      "LINEのトークバックアップ画面に出るエラーと最終成功日時を記録します。",
+      "iPhoneならiCloud Drive、AndroidならGoogleドライブと端末の空き容量を確認します。",
+      "保存先アカウントが想定どおりか確認し、安定した通信と電源で再試行します。",
+      "成功日時が更新されたことを確かめてから、機種変更や旧端末の初期化を進めます。"
+    ],
+    "causes": [
+      "端末またはクラウドの空き容量が不足。",
+      "保存先アカウントが異なる。",
+      "通信やOS・アプリの状態で処理が中断。"
+    ],
+    "diagnosis": "バックアップがまだ作成されない段階と、機種変更後にトークが見えない段階は対処が違います。端末に履歴が残るうちに最終成功日時を確認してください。容量不足の通知が出たなら端末とクラウドを別々に調べます。エラーのないまま止まるなら通信状態とアプリ版を記録します。",
+    "caution": "成功を確認する前に旧端末のLINEを削除・初期化しないでください。新端末で空のバックアップを上書きすると復旧が難しくなる場合があります。履歴には個人情報が含まれるため、非公式の復元ソフトへ渡さないでください。",
+    "escalation": "容量とアカウントが適切でも失敗するならOS、LINE版、エラー、最終成功日時をLINE公式サポートへ伝えます。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20020173&lang=ja",
+    "source_label": "LINEヘルプ：トーク履歴のバックアップ・復元で問題がある場合",
+    "related_existing": [
+      "/sns/line-chat-history-missing/",
+      "/sns/line-calls-not-working/",
+      "/sns/line-messages-not-sending/"
+    ],
+    "closest_existing_url": "/sns/line-chat-history-missing/",
+    "differentiation": "既存記事は機種変更後に失われた履歴の確認と復元。本記事は旧端末に履歴が残っている段階でバックアップ自体が失敗する原因を扱う。",
+    "fact_check": "LINE公式ヘルプで端末とGoogleドライブの容量不足、バックアップ失敗時の確認を照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-transfer-qr-scan-fails",
+    "path": "/sns/line-transfer-qr-scan-fails/",
+    "title": "LINEのかんたん引き継ぎQRコードを読み取れないときの確認手順",
+    "topic": "旧端末のQRを新端末で読み取っても進まない",
+    "description": "旧端末のQRを新端末で読み取っても進まない。QRコードの有効時間とLINE専用読み取り画面を確認します。トークバックアップの失敗とは別の、アカウント引き継ぎ入口の問題です。",
+    "answer": "QRコードの有効時間とLINE専用読み取り画面を確認します。トークバックアップの失敗とは別の、アカウント引き継ぎ入口の問題です。",
+    "steps": [
+      "旧端末と新端末の両方でLINEの引き継ぎ手順を開きます。",
+      "旧端末でQRを表示したら、有効時間内に新端末の指定された専用読み取り画面で読み取ります。",
+      "期限切れなら新しいQRを再表示し、通常のカメラアプリではなくLINEの案内どおり読み取ります。",
+      "読み取り後の認証画面を確認し、旧端末が使えない場合は公式の別の引き継ぎ方法を調べます。"
+    ],
+    "causes": [
+      "表示したQRコードの有効期限が切れた。",
+      "一般のカメラなど専用画面以外で読み取った。",
+      "旧端末のLINEが古い、または引き継ぎ条件が揃っていない。"
+    ],
+    "diagnosis": "QRを表示してしばらくしてから読むと期限切れになり得ます。すぐ読み取っても進まない場合は新端末の読み取り画面を確認します。QR自体が旧端末に出ないならアプリ版を確認します。読み取り後にトークが欠ける症状とは別の段階なので、まずアカウント引き継ぎが完了したか記録します。",
+    "caution": "QRコードはアカウントの引き継ぎに使うため他人へ画像を送らないでください。完了前に旧端末を初期化しないでください。新端末で別アカウントを新規作成すると元アカウントの復旧が複雑になる場合があります。",
+    "escalation": "期限内に専用画面でも読めない場合は両端末のOSとLINE版、出た文言をLINE公式サポートへ伝えます。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=200000346&lang=ja",
+    "source_label": "LINEヘルプ：かんたん引き継ぎQRコードの問題",
+    "related_existing": [
+      "/sns/line-chat-history-missing/",
+      "/sns/line-verification-code-not-arriving/",
+      "/sns/line-calls-not-working/"
+    ],
+    "closest_existing_url": "/sns/line-chat-history-missing/",
+    "differentiation": "既存記事は引き継ぎ後のトーク復元。本記事はQRコードを使ってアカウント引き継ぎを開始できない有効期限・読み取り画面の問題。",
+    "fact_check": "LINE公式ヘルプでQRの有効時間と専用QRコードリーダーの必要性、再表示の方法を照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-screen-share-audio-missing",
+    "path": "/sns/discord-screen-share-audio-missing/",
+    "title": "Discordの画面共有で映像だけ届き音が聞こえないときの確認手順",
+    "topic": "共有先にゲームやアプリの音声が届かない",
+    "description": "共有先にゲームやアプリの音声が届かない。画面共有の対象アプリと利用端末の音声共有対応を確認します。マイク入力の不調とは別の、共有するアプリ音声の問題です。",
+    "answer": "画面共有の対象アプリと利用端末の音声共有対応を確認します。マイク入力の不調とは別の、共有するアプリ音声の問題です。",
+    "steps": [
+      "自分には音が聞こえるか、視聴者には映像だけ届くかを確認します。",
+      "Discordで共有する対象を画面全体か特定アプリか確認し、音声共有に対応する方法を選びます。",
+      "Windows・macOS・ブラウザー・モバイルの対応条件とOS版を公式案内で照合します。",
+      "短いテスト音声で視聴者に確認してもらい、保護コンテンツなど共有できない音声は別扱いにします。"
+    ],
+    "causes": [
+      "共有方法がアプリ音声の取り込みに対応していない。",
+      "利用OSやクライアントが音声共有の条件を満たさない。",
+      "対象アプリ側が音声の共有を制限している。"
+    ],
+    "diagnosis": "通話のマイクは正常で画面の映像も届くなら、音声入力全般より画面共有の音声取り込みを確認します。特定アプリだけ無音ならそのアプリの音声出力と共有方式を比較します。ほかの視聴者にも同じなら視聴者側ではなく配信側の設定が焦点です。利用OSとクライアントを記録します。",
+    "caution": "著作権で保護された映像や音声を共有するために保護機能を回避しないでください。画面全体を共有すると通知や個人情報が映る可能性があります。共有範囲を限定し、テストで不要な情報が映らないか確認します。",
+    "escalation": "対応する環境とアプリでも無音ならOS、Discord版、共有方式、対象アプリをDiscordサポートへ伝えます。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/360040816151-Go-Live-and-Screen-Share",
+    "source_label": "Discord公式：Go Liveと画面共有",
+    "related_existing": [
+      "/sns/discord-microphone-not-working/",
+      "/sns/line-calls-not-working/",
+      "/sns/discord-rtc-connecting-stuck/"
+    ],
+    "closest_existing_url": "/sns/discord-microphone-not-working/",
+    "differentiation": "既存記事はDiscord通話で自分のマイク音声が届かない問題。本記事はマイクが正常でも共有画面のアプリ音声だけを取り込めない問題。",
+    "fact_check": "Discord公式の画面共有ガイドでクライアント別の音声共有可否と画面・アプリ共有の違いを照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-dm-cannot-send",
+    "path": "/sns/discord-dm-cannot-send/",
+    "title": "Discordで特定の相手へDMを送れないときの確認手順",
+    "topic": "送信時にClydeから配信できないと表示される",
+    "description": "送信時にClydeから配信できないと表示される。共通サーバー、友達関係、受信側のDM設定を確認します。相手のプライバシー設定は送信者が変更できません。",
+    "answer": "共通サーバー、友達関係、受信側のDM設定を確認します。相手のプライバシー設定は送信者が変更できません。",
+    "steps": [
+      "表示されたClydeのメッセージを読み、サーバー内の通常メッセージは送れるか比較します。",
+      "相手と共通サーバーがあるか、友達登録されているか確認します。",
+      "相手に無理な設定変更を求めず、共通サーバーの公開チャンネルなど許された連絡方法を確認します。",
+      "全員へのDMが送れないならアカウントの制限表示やDiscord側の状態を公式ヘルプで調べます。"
+    ],
+    "causes": [
+      "共通サーバーがなく友達でもない。",
+      "相手が友達以外からのDMを受け取らない設定。",
+      "アカウントに送信制限がある。"
+    ],
+    "diagnosis": "一人だけ送れないなら相手との関係や受信設定が中心です。複数相手へのDMとサーバーメッセージの両方が失敗するならアカウント状態や接続を調べます。Clydeの配信不可表示と通信の送信待ちを分けて記録します。相手が受信を許可していない場合は送信者側だけで解消できません。",
+    "caution": "DMを拒否している相手へ別アカウントで繰り返し送らないでください。公開チャンネルに個人情報や私的な内容を書かず、相手の意向とサーバー規則を尊重します。制限回避ツールや大量送信は使わないでください。",
+    "escalation": "全員へのDMが失敗しアカウント制限が不明な場合は表示文言と発生範囲をDiscord公式サポートへ伝えます。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/360060145013-Why-isn-t-my-DM-going-through",
+    "source_label": "Discord公式：DMが届かない理由",
+    "related_existing": [
+      "/sns/discord-rtc-connecting-stuck/",
+      "/sns/discord-microphone-not-working/",
+      "/sns/x-media-not-loading/"
+    ],
+    "closest_existing_url": "/sns/discord-rtc-connecting-stuck/",
+    "differentiation": "既存記事は音声通話のRTC接続が確立しない問題。本記事は接続できていても特定相手へのDMがプライバシー設定で拒否される問題。",
+    "fact_check": "Discord公式のDM配信失敗ヘルプで共通サーバーと受信者の友達限定設定を照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-participant-screen-share-disabled",
+    "path": "/sns/zoom-participant-screen-share-disabled/",
+    "title": "Zoomの参加者が画面共有を開始できないときの確認手順",
+    "topic": "会議には入れるが画面共有ボタンが使えない",
+    "description": "会議には入れるが画面共有ボタンが使えない。ホストの共有権限と組織の設定を確認します。参加者が端末設定だけでホストの制限を解除することはできません。",
+    "answer": "ホストの共有権限と組織の設定を確認します。参加者が端末設定だけでホストの制限を解除することはできません。",
+    "steps": [
+      "会議中にホストと参加者のどちらの立場か確認します。",
+      "ホストに参加者の画面共有を許可しているか確認してもらいます。",
+      "組織のアカウントなら管理者の画面共有設定がホスト側で変更可能か調べます。",
+      "許可後に小さいテスト画面を共有し、黒画面や音声不良など別の問題が残るか確認します。"
+    ],
+    "causes": [
+      "ホストが参加者の共有を制限。",
+      "組織管理者が機能を無効化。",
+      "会議種類や参加権限が共有を認めない。"
+    ],
+    "diagnosis": "参加者全員が共有できずホストだけできるなら会議の共有権限が焦点です。一人だけできない場合はその参加者のアプリや端末を別途調べます。共有は開始できるが真っ黒になる症状とは異なるため、ボタンが押せないのか開始後の映像が失敗するのかを記録します。",
+    "caution": "組織やホストの制限を回避するために会議URLを外部へ流さないでください。画面共有を許可してもらった後も、通知や個人情報を映さないよう共有対象を確認します。管理者設定は許可を得た担当者に依頼します。",
+    "escalation": "ホストの許可後も押せないならZoom版、会議種類、ボタンの表示、組織設定をホストと管理者へ伝えます。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0058641",
+    "source_label": "Zoom公式：参加者の画面共有を許可または制限する",
+    "related_existing": [
+      "/sns/zoom-camera-not-working/",
+      "/sns/zoom-microphone-not-working/",
+      "/sns/x-cannot-log-in/"
+    ],
+    "closest_existing_url": "/sns/zoom-camera-not-working/",
+    "differentiation": "既存記事は会議に入室した後のカメラ映像不良。本記事はホスト・管理者の権限で画面共有を開始できない問題。",
+    "fact_check": "Zoom公式の参加者画面共有ヘルプでホストと管理者の設定、参加者の権限を照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-recording-not-found",
+    "path": "/sns/zoom-recording-not-found/",
+    "title": "Zoomの会議録画が見つからないときの確認手順",
+    "topic": "録画したはずの会議が一覧やPC内にない",
+    "description": "録画したはずの会議が一覧やPC内にない。クラウド録画とPC内録画の保存先、録画を開始した人、処理中の状態を分けて確認します。画面共有の可否とは別の保存問題です。",
+    "answer": "クラウド録画とPC内録画の保存先、録画を開始した人、処理中の状態を分けて確認します。画面共有の可否とは別の保存問題です。",
+    "steps": [
+      "会議のホストと実際に録画を開始した人を確認します。",
+      "クラウド録画ならZoom Webポータルの録画一覧で会議ID、日時、処理状態を探します。",
+      "PC内録画なら録画に使った端末のZoom設定から保存先フォルダを開きます。",
+      "見つからなければクラウドのゴミ箱や変換エラーを確認し、元データを消さずに状態を記録します。"
+    ],
+    "causes": [
+      "録画を開始しておらずファイルが作成されていない。",
+      "クラウドとPC内で別の保存先を探している。",
+      "クラウド録画が処理中、またはゴミ箱にある。"
+    ],
+    "diagnosis": "Webポータルに見当たらなくてもPC内録画なら収録した端末に保存されます。クラウド録画が『処理中』なら消失と判断せず状態を確認します。会議参加者が録画を始めたつもりでも開始していなければ保存先にファイルはありません。会議ID、ホスト、録画した端末を照合し、探す場所を決めます。",
+    "caution": "録画には他の参加者の映像や発言が含まれます。所在確認のために公開フォルダへ移したり、無断で共有したりしないでください。ゴミ箱を空にする、変換途中の元ファイルを削除する操作は避けてください。",
+    "escalation": "ホストの録画一覧と収録端末の両方で見つからなければ会議ID、日時、録画種別と状態をZoomサポートへ伝えます。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0083769",
+    "source_label": "Zoom公式：見つからない会議録画を調べる",
+    "related_existing": [
+      "/sns/zoom-camera-not-working/",
+      "/sns/zoom-microphone-not-working/",
+      "/sns/x-cannot-log-in/"
+    ],
+    "closest_existing_url": "/sns/zoom-camera-not-working/",
+    "differentiation": "既存記事は会議中にカメラ映像が出ない問題。本記事は会議後に録画ファイルの保存先や処理状態を探す問題。",
+    "fact_check": "Zoom公式の録画トラブルヘルプでクラウドとPC内の保存先、処理中、ゴミ箱、録画開始の確認を照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "quick-assist-not-connecting",
+    "path": "/windows/quick-assist-not-connecting/",
+    "title": "Windowsのクイックアシストで支援相手に接続できないときの確認手順",
+    "topic": "支援コードを入力しても画面共有が始まらない",
+    "description": "支援コードを入力しても画面共有が始まらない。クイックアシストのコード、アプリの起動と更新、双方の同意画面を確認します。リモートデスクトップのホスト設定とは異なる仕組みです。",
+    "answer": "クイックアシストのコード、アプリの起動と更新、双方の同意画面を確認します。リモートデスクトップのホスト設定とは異なる仕組みです。",
+    "steps": [
+      "支援する側と受ける側でクイックアシストを開き、現在のコードを確認します。",
+      "コードの入力期限と双方のMicrosoftアカウント・サインイン状態を確認します。",
+      "受ける側に表示される共有の同意画面を確認し、接続前に相手の本人確認を行います。",
+      "アプリが開かないならWindowsとMicrosoft Storeの更新状態、必要なWebView2の状態を公式案内で調べます。"
+    ],
+    "causes": [
+      "古いまたは誤った支援コードを入力。",
+      "受ける側が共有の同意を完了していない。",
+      "クイックアシストのインストールや更新に問題。"
+    ],
+    "diagnosis": "コード入力前にアプリ自体が開かない場合と、コードを受け付けても共有が始まらない場合を分けます。前者はアプリの更新、後者は期限と双方の同意が焦点です。Windowsのリモートデスクトップで必要なホスト版やポート設定をクイックアシストへ流用せず、表示された段階と文言を記録します。",
+    "caution": "遠隔操作は画面やファイルを相手に見せます。知らない人から急に支援コードを求められても入力せず、本人確認を行ってください。金融機関やサポートを名乗る詐欺に注意し、不要な制御権限を渡さないでください。",
+    "escalation": "正規の相手とコードを確認しても接続できなければ双方のWindows版、アプリ版、エラー文をMicrosoftサポートへ伝えます。",
+    "source_url": "https://support.microsoft.com/en-us/windows/apps/troubleshoot-problems-installing-and-running-quick-assist",
+    "source_label": "Microsoftサポート：クイックアシストの実行問題を解決する",
+    "related_existing": [
+      "/windows/remote-desktop-not-connecting-windows/",
+      "/windows/windows-network-shared-folder-inaccessible/",
+      "/windows/night-light-not-changing-color-windows/"
+    ],
+    "closest_existing_url": "/windows/remote-desktop-not-connecting-windows/",
+    "differentiation": "既存記事はWindows Remote Desktopのホスト版、接続権限とネットワーク。本記事はクイックアシストの一時コード、相手の同意、アプリ起動を扱う。",
+    "fact_check": "Microsoft公式のクイックアシスト資料でアプリの更新とWebView2、コードと共有同意の手順を照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "file-history-previous-version-missing",
+    "path": "/windows/file-history-previous-version-missing/",
+    "title": "Windowsのファイル履歴に以前の版が出ないときの確認手順",
+    "topic": "上書き前のファイルを戻したいが履歴がない",
+    "description": "上書き前のファイルを戻したいが履歴がない。ファイル履歴が有効だった時期、バックアップ先、対象フォルダを確認します。Windowsバックアップで新PCへ復元する話とは別です。",
+    "answer": "ファイル履歴が有効だった時期、バックアップ先、対象フォルダを確認します。Windowsバックアップで新PCへ復元する話とは別です。",
+    "steps": [
+      "対象ファイルの元フォルダを開き、以前のバージョンとファイル履歴を確認します。",
+      "ファイル履歴のバックアップ先ドライブが現在接続され、過去に有効だったか確認します。",
+      "対象フォルダがファイル履歴の保存範囲か、ファイル名や移動履歴を確認します。",
+      "候補があれば内容をプレビューし、現行版を別名保存してから復元先を決めます。"
+    ],
+    "causes": [
+      "ファイル履歴が当時有効でなかった。",
+      "バックアップ先ドライブが接続されていない。",
+      "対象ファイルが履歴対象外または別フォルダへ移動した。"
+    ],
+    "diagnosis": "以前の版が表示されない場合、機能を今から有効にしても過去の内容は作られません。対象ファイルの保存場所と、上書き前に使っていたバックアップ先を確認します。現行ファイルは存在するのに古い版だけ必要な状態を、ファイルの完全な紛失と分けて調べます。バックアップ先の日時も照合します。",
+    "caution": "復元は現在のファイルを上書きする可能性があります。候補を確認する前に現行版を別名で保全してください。バックアップ先ドライブを初期化しないでください。履歴がない場合に復元できると断言せず別の保存先も探します。",
+    "escalation": "履歴のバックアップ先が接続されているのに候補がない場合は元のパス、日時、バックアップ先をMicrosoftサポートへ伝えます。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/backup-and-restore-with-file-history",
+    "source_label": "Microsoftサポート：ファイル履歴でバックアップ・復元する",
+    "related_existing": [
+      "/windows/windows-backup-files-not-restored/",
+      "/windows/default-app-filetype-not-changing/",
+      "/windows/remote-desktop-not-connecting-windows/"
+    ],
+    "closest_existing_url": "/windows/windows-backup-files-not-restored/",
+    "differentiation": "既存記事は新PCへのWindowsバックアップ復元範囲とOneDrive。本記事は同じPCで上書き前の一ファイルをファイル履歴から探す条件を扱う。",
+    "fact_check": "Microsoft公式のファイル履歴ヘルプで対象フォルダ、以前のバージョン、バックアップ先からの復元手順を照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "narrator-starts-at-signin",
+    "path": "/windows/narrator-starts-at-signin/",
+    "title": "Windowsでサインイン時にナレーターが自動起動するときの確認手順",
+    "topic": "ログイン画面やデスクトップで読み上げが始まる",
+    "description": "ログイン画面やデスクトップで読み上げが始まる。ナレーターのショートカットで一時停止し、サインイン前後の自動起動設定を確認します。音声出力全体の故障とは異なります。",
+    "answer": "ナレーターのショートカットで一時停止し、サインイン前後の自動起動設定を確認します。音声出力全体の故障とは異なります。",
+    "steps": [
+      "Windowsキー＋Ctrl＋Enterでナレーターの起動状態を切り替えます。",
+      "Windowsキー＋Ctrl＋Nでナレーター設定を開きます。",
+      "サインイン前とサインイン後の自動起動設定をそれぞれ確認します。",
+      "家族や利用者がアクセシビリティ機能を必要としていないか確認してから変更し、次のサインインで再現を調べます。"
+    ],
+    "causes": [
+      "サインイン前の自動起動が有効。",
+      "サインイン後の自動起動が有効。",
+      "ショートカットキーで意図せず起動した。"
+    ],
+    "diagnosis": "ログイン画面から読み上げるならサインイン前の設定を、デスクトップへ入った後だけならサインイン後の設定を確認します。一時的にショートカットで止まるが次回また始まる場合は自動起動設定が焦点です。別の画面読み上げアプリかどうかも設定画面の名称で区別します。",
+    "caution": "ナレーターは視覚支援に必要な場合があります。共有PCでは利用者に確認せず無効化しないでください。音が出ない問題を解くために無関係な音声機能を一括停止せず、設定を変更したら元に戻せるよう記録します。",
+    "escalation": "設定をオフにしても起動するならWindows版、起動する時点、表示されるアプリ名をMicrosoftサポートへ伝えます。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/narrator/chapter-7-customizing-narrator",
+    "source_label": "Microsoftサポート：ナレーターの自動起動設定",
+    "related_existing": [
+      "/windows/windows-no-sound/",
+      "/windows/remote-desktop-not-connecting-windows/",
+      "/windows/windows-hello-fingerprint-not-recognized/"
+    ],
+    "closest_existing_url": "/windows/windows-no-sound/",
+    "differentiation": "既存記事はPCの音が出ない問題。本記事は意図せず音声読み上げが始まるアクセシビリティ設定と起動時点を扱う。",
+    "fact_check": "Microsoft公式のナレーター設定ヘルプでサインイン前後の自動起動項目と停止ショートカットを照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-display-text-blurry-scaling",
+    "path": "/windows/windows-display-text-blurry-scaling/",
+    "title": "Windows 11で画面の文字やアプリがぼやけるときの確認手順",
+    "topic": "外部画面で文字の輪郭がにじむ",
+    "description": "外部画面で文字の輪郭がにじむ。ディスプレイごとの解像度と拡大率を確認し、アプリだけの表示問題か画面全体かを切り分けます。",
+    "answer": "ディスプレイごとの解像度と拡大率を確認し、アプリだけの表示問題か画面全体かを切り分けます。",
+    "steps": [
+      "設定のディスプレイで対象モニターを選び、推奨解像度と現在の解像度を比較します。",
+      "同じ画面の拡大率を確認し、推奨値と独自設定を比較します。",
+      "別アプリとWindowsの設定画面でも文字がぼやけるか確認します。",
+      "特定アプリだけならそのアプリの表示対応を確認し、モニター全体なら接続端子と画面設定を調べます。"
+    ],
+    "causes": [
+      "対象画面の解像度が推奨値ではない。",
+      "拡大率とアプリの表示対応が合わない。",
+      "外部画面の接続や画像処理が影響。"
+    ],
+    "diagnosis": "Windowsの設定画面までぼやけるならモニターの解像度や画面側の処理を先に確認します。一部アプリだけならアプリの拡大率対応が焦点です。画面がそもそも検出されない場合やモニターの解像度選択肢が足りない場合とは症状が異なるため、どの画面とアプリで発生するか記録します。",
+    "caution": "画面設定を変えるとウィンドウの位置や大きさが変わります。作業中の内容を保存してから比較してください。高解像度を無理に選ぶツールや非公式ドライバーを導入せず、モニターの仕様と推奨値を確認します。",
+    "escalation": "推奨解像度と拡大率でも画面全体がぼやける場合はモニター型番、接続方法、表示設定をメーカーへ伝えます。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/change-your-screen-resolution-and-layout-in-windows",
+    "source_label": "Microsoftサポート：画面解像度とレイアウトを変更する",
+    "related_existing": [
+      "/windows/second-monitor-not-detected/",
+      "/windows/windows-app-notifications-not-showing/",
+      "/windows/windows-auto-brightness-changing/"
+    ],
+    "closest_existing_url": "/windows/second-monitor-not-detected/",
+    "differentiation": "既存記事は二台目の画面そのものが認識されない問題。本記事は認識済みの画面で文字の輪郭がぼやける拡大率と解像度の問題。",
+    "fact_check": "Microsoft公式のディスプレイ設定ヘルプで画面ごとの解像度と拡大率、推奨値の確認方法を照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-dynamic-lock-not-locking",
+    "path": "/windows/windows-dynamic-lock-not-locking/",
+    "title": "Windowsの動的ロックで離席してもPCがロックされないときの確認手順",
+    "topic": "スマートフォンを持って離れても画面が開いたまま",
+    "description": "スマートフォンを持って離れても画面が開いたまま。動的ロックの有効化とスマートフォンのBluetoothペアリングを確認します。即時ロックの機能ではないため、手動ロックと分けて使います。",
+    "answer": "動的ロックの有効化とスマートフォンのBluetoothペアリングを確認します。即時ロックの機能ではないため、手動ロックと分けて使います。",
+    "steps": [
+      "Windowsのサインインオプションで動的ロックがオンか確認します。",
+      "対象スマートフォンがWindowsとBluetoothでペアリングされているか確認します。",
+      "接続したままではなく、スマートフォンを持って離れた後の変化を確認します。",
+      "機能が動かなくてもWindowsキー＋Lで手動ロックし、Bluetoothと端末設定を確認します。"
+    ],
+    "causes": [
+      "動的ロックが有効でない。",
+      "ペアリングが解除された、または別のスマートフォンを見ている。",
+      "Bluetoothの距離・検出が想定と異なる。"
+    ],
+    "diagnosis": "手動ロックはできるのに離席時だけロックされないならサインイン設定とペアリングを調べます。Phone Linkでスマートフォン連携できることは、動的ロックに必要なBluetoothペアリングの確認にはなりません。離れた直後ではなく一定時間後の動作として確認し、無人のPCを開放したままにしないでください。",
+    "caution": "動的ロックは即時の安全確保を保証しません。離席時はWindowsキー＋Lで手動ロックしてください。セキュリティ確保のためにペアリングや認証設定を弱めず、職場PCなら管理者の方針を優先します。",
+    "escalation": "設定とペアリングが正常でも動かない場合はWindows版、スマートフォン機種、Bluetooth状態をMicrosoftサポートへ伝えます。",
+    "source_url": "https://support.microsoft.com/en-us/accounts-billing/security/sign-in-options-in-windows",
+    "source_label": "Microsoftサポート：Windowsのサインインオプション",
+    "related_existing": [
+      "/windows/phone-link-android-pairing-failed/",
+      "/windows/remote-desktop-not-connecting-windows/",
+      "/windows/windows-network-shared-folder-inaccessible/"
+    ],
+    "closest_existing_url": "/windows/phone-link-android-pairing-failed/",
+    "differentiation": "既存記事はPhone LinkアプリへAndroidを登録できない問題。本記事は登録済みBluetoothスマートフォンの離席をWindowsロックへ利用する機能。",
+    "fact_check": "Microsoft公式のサインインオプションで動的ロックの有効化、Bluetoothペアリング、離席後の動作を照合した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "apple-watch-update-wont-start",
+    "path": "/iphone/apple-watch-update-wont-start/",
+    "title": "Apple Watchのアップデートが始まらないときの確認手順",
+    "topic": "ペアリング済みの時計で更新が止まる",
+    "description": "ペアリング済みの時計で更新が止まる。Watchの充電と空き容量、iPhoneとの接続を確認し、ダウンロード済み更新ファイルの状態を調べます。ペアリング不良とは別の更新段階です。",
+    "answer": "Watchの充電と空き容量、iPhoneとの接続を確認し、ダウンロード済み更新ファイルの状態を調べます。ペアリング不良とは別の更新段階です。",
+    "steps": [
+      "Apple Watchを充電器に置き、ペアリングしたiPhoneと近くに置きます。",
+      "Watchアプリの更新画面に出るエラーと時計の空き容量を確認します。",
+      "WatchとiPhoneを再起動して更新を再試行します。",
+      "更新が開始しない場合はApple公式の案内に従い、Watchアプリの保存領域から更新ファイルを確認します。"
+    ],
+    "causes": [
+      "充電や接続など更新条件が揃わない。",
+      "Watchの空き容量が不足。",
+      "取得済み更新ファイルに問題がある。"
+    ],
+    "diagnosis": "ペアリング自体が成立しない場合はWatchとの接続問題を先に解決します。時計は接続済みで更新だけ開始しないなら充電、容量、更新ファイルが焦点です。更新画面に出る文言と、ダウンロード前・検証中・インストール中のどの段階で止まるかを記録すると対処を限定できます。",
+    "caution": "更新中に時計の電源を無理に切らないでください。データを残すためバックアップ状態を確認し、初期化やペアリング解除は最後にします。容量を空ける際は必要な音楽や写真を消す前に再取得方法を確認します。",
+    "escalation": "公式手順でも進まなければWatchとiPhoneの機種、OS版、更新段階、エラー文をAppleサポートへ伝えます。",
+    "source_url": "https://support.apple.com/ja-jp/108926",
+    "source_label": "Appleサポート：Apple Watchをアップデートする",
+    "related_existing": [
+      "/iphone/apple-watch-pairing-stuck/",
+      "/iphone/airtag-not-showing-find-my-iphone/",
+      "/iphone/icloud-photos-sync-paused-iphone/"
+    ],
+    "closest_existing_url": "/iphone/apple-watch-pairing-stuck/",
+    "differentiation": "既存記事はWatchとiPhoneを最初にペアリングできない問題。本記事はペアリング済みの時計でソフトウェア更新だけが始まらない問題。",
+    "fact_check": "Apple公式のWatch更新手順で充電、再起動、空き容量、開始しない場合の更新ファイル確認を照合した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "guided-access-wont-end-iphone",
+    "path": "/iphone/guided-access-wont-end-iphone/",
+    "title": "iPhoneのアクセスガイドを終了できないときの確認手順",
+    "topic": "一つのアプリに固定され通常画面へ戻れない",
+    "description": "一つのアプリに固定され通常画面へ戻れない。アクセスガイドの終了操作と設定済みパスコード、Face IDまたはTouch IDを確認します。通常の画面フリーズとは異なる制限機能です。",
+    "answer": "アクセスガイドの終了操作と設定済みパスコード、Face IDまたはTouch IDを確認します。通常の画面フリーズとは異なる制限機能です。",
+    "steps": [
+      "画面が一つのアプリに固定され、アクセスガイドの表示があるか確認します。",
+      "機種に合うサイドボタンまたはホームボタンのトリプルクリックを行います。",
+      "設定時に選んだアクセスガイド用パスコード、または有効にしたFace ID・Touch IDで終了します。",
+      "コードが不明な場合は推測を繰り返さず、Appleの公式サポートへ利用状況を相談します。"
+    ],
+    "causes": [
+      "終了操作のボタンを一回しか押していない。",
+      "通常の端末ロック解除コードとアクセスガイド用コードを混同。",
+      "生体認証による終了を設定していない。"
+    ],
+    "diagnosis": "画面が反応しないように見えても一つのアプリだけ操作を制限しているなら、故障やフリーズではなくアクセスガイドの状態かもしれません。ボタンのトリプルクリック後に専用パスコードを求められるかを確認します。通常のロック画面やスクリーンタイムのパスコードとは用途が異なるため、表示文言を記録します。",
+    "caution": "知らないコードを繰り返し試したり、非公式の解除ツールを使ったりしないでください。端末初期化はデータ消失の危険があり、終了操作の最初の手段ではありません。共有端末なら設定した管理者や家族に確認します。",
+    "escalation": "正しい終了操作でも画面が変わらずコードも確認できない場合は機種、iOS版、表示画面をAppleサポートへ伝えます。",
+    "source_url": "https://support.apple.com/ja-jp/111795",
+    "source_label": "Appleサポート：アクセスガイドを使う",
+    "related_existing": [
+      "/iphone/iphone-frozen/",
+      "/iphone/icloud-photos-sync-paused-iphone/",
+      "/iphone/in-app-purchase-not-working/"
+    ],
+    "closest_existing_url": "/iphone/iphone-frozen/",
+    "differentiation": "既存記事は端末全体が固まって操作できない問題。本記事はアクセスガイドの一アプリ固定と専用の終了操作・認証を扱う。",
+    "fact_check": "Apple公式のアクセスガイド案内でトリプルクリック、専用パスコード、生体認証による終了条件を照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-print-clipped-scaled-wrong",
+    "path": "/browser/edge-print-clipped-scaled-wrong/",
+    "title": "Microsoft Edgeで印刷内容が切れる・縮小されるときの確認手順",
+    "topic": "画面では読めるのに印刷すると端が切れたり小さくなったりする",
+    "description": "画面では読めるのに印刷すると端が切れたり小さくなったりする。印刷プレビューで用紙サイズ、余白、倍率を確認し、実際の用紙に合わせて調整します。プリンターのインク不良とは異なるレイアウトの問題です。",
+    "answer": "印刷プレビューで用紙サイズ、余白、倍率を確認し、実際の用紙に合わせて調整します。プリンターのインク不良とは異なるレイアウトの問題です。",
+    "steps": [
+      "Edgeで対象ページを開き、Ctrl＋Pで印刷プレビューを表示して切れている位置を確認します。",
+      "印刷先に意図したプリンターを選び、その他の設定で実際に入れた用紙と同じ用紙サイズを選びます。",
+      "倍率を『印刷可能領域に合わせる』と『実際のサイズ』で比較し、内容が欠けない設定を選びます。",
+      "余白と縦横の向きを確認し、まず一ページだけ試し刷りして結果を比べます。"
+    ],
+    "causes": [
+      "プレビューの用紙サイズとトレイの用紙が異なる。",
+      "実際のサイズで印刷可能領域の外にはみ出している。",
+      "余白や縦横の向きが文書と合っていない。"
+    ],
+    "diagnosis": "画面のページ表示が正常で印刷プレビューから内容が欠けるなら、Edgeの印刷レイアウトと用紙設定を先に調べます。プレビューは正常なのに紙だけ違う場合はプリンター側の用紙設定とアプリの設定を比べます。特定ページだけならサイト固有の印刷用レイアウトの可能性もあります。まずプレビューと紙のどちらで症状が現れるかを記録してください。",
+    "caution": "縮小すると文字が読みにくくなる場合があります。契約書や申請書など原寸指定の文書では勝手に倍率を変えず、提出先の指定を優先してください。個人情報がある文書をオンライン変換サービスに渡さず、試し刷りは必要なページだけにします。",
+    "escalation": "用紙サイズと倍率を合わせてもプレビューが欠ける場合は、ページのURL、ブラウザー版、用紙サイズ、プレビューと印刷結果の差を記録し、サイトまたはプリンターのサポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/edge/print-in-microsoft-edge",
+    "source_label": "Microsoftサポート：Microsoft Edgeで印刷する",
+    "related_existing": [
+      "/peripherals/printer-prints-blank-pages/",
+      "/browser/edge-sync-not-working/",
+      "/browser/chrome-aw-snap/"
+    ],
+    "closest_existing_url": "/peripherals/printer-prints-blank-pages/",
+    "differentiation": "既存記事はインクやノズル等によって文字が全く印字されない症状。本記事はEdgeの印刷プレビューと用紙サイズ・倍率による切れや縮小を扱い、調整箇所と確認順序が異なる。",
+    "fact_check": "Microsoft公式のEdge印刷案内で、用紙サイズ、余白、印刷倍率、印刷可能領域に合わせる設定と実際のサイズの違いを確認した。"
+  }
+]

@@ -1,5 +1,155 @@
 [
   {
+    "title": "Chromeでタブに戻るたび再読み込みされるときの確認手順",
+    "description": "開いていたタブへ戻ると入力内容が消える。Chromeのメモリセーバーで非アクティブなタブが解放されていないかを確認し、作業サイトだけを常に有効にする設定を検討します。",
+    "url": "/browser/chrome-tabs-reload-after-switch/"
+  },
+  {
+    "title": "Chromeで一つのサイトだけ音が出ないときの確認手順",
+    "description": "動画は動くが特定サイトだけ無音。タブのミュートとChromeのサイト別音声権限を確認し、端末全体の音量不良と切り分けます。",
+    "url": "/browser/chrome-one-site-muted/"
+  },
+  {
+    "title": "Chromeで外部ログイン後に元のサイトへ戻れないときの確認手順",
+    "description": "外部IDで認証した直後にログイン画面へ戻る。埋め込みログインに必要なサードパーティCookieがブロックされていないかを確認し、信頼できるサイトだけ一時的な例外を試します。",
+    "url": "/browser/chrome-embedded-signin-cookies-blocked/"
+  },
+  {
+    "title": "Chromeのリーディングモードが使えないページの確認手順",
+    "description": "読みやすい表示へ切り替える項目が出ない。ChromeのリーディングモードはすべてのWebページで使えるわけではありません。対応ページかを比較し、利用できないページでは通常表示へ戻します。",
+    "url": "/browser/chrome-reading-mode-unavailable/"
+  },
+  {
+    "title": "Chromeで購入・契約した動画だけ再生できないときの確認手順",
+    "description": "一般動画は見られるが保護された動画だけ止まる。Chromeの保護されたコンテンツの設定を確認し、サービスの視聴権と端末・ブラウザー条件を分けて調べます。",
+    "url": "/browser/chrome-protected-video-wont-play/"
+  },
+  {
+    "title": "Android版ChromeでPC版サイトに切り替わらないときの確認手順",
+    "description": "PC版を要求してもスマートフォン表示のまま。Chromeの『PC版サイト』要求が有効かを確認し、サイト側が同じ画面を返す場合と切り分けます。",
+    "url": "/browser/chrome-android-desktop-site-not-shown/"
+  },
+  {
+    "title": "Chromeで手続きに必要なポップアップが開かないときの確認手順",
+    "description": "ログインや決済の別ウィンドウだけ出ない。Chromeのポップアップブロック表示を見て、信頼できる対象サイトだけ例外を許可します。不要な広告が勝手に開く問題とは対処が逆です。",
+    "url": "/browser/chrome-required-popup-blocked/"
+  },
+  {
+    "title": "Googleドキュメントをオフラインで編集できないときの確認手順",
+    "description": "接続がないと文書を開けない・編集できない。文書がオフライン利用可能に設定され、状態表示で準備完了になっているか確認します。Drive for desktopのファイル保存とは別の仕組みです。",
+    "url": "/google/docs-offline-edit-unavailable/"
+  },
+  {
+    "title": "Googleドキュメントが閲覧のみで編集できないときの確認手順",
+    "description": "文書は開けるが編集欄に入力できない。文書の閲覧権限と編集権限を分け、正しいアカウントか、所有者が編集を許可しているかを確認します。",
+    "url": "/google/docs-view-only-cannot-edit/"
+  },
+  {
+    "title": "Googleフォームが回答を受け付けないときの確認手順",
+    "description": "回答者に『受付終了』と表示される。フォーム所有者は回答受付のスイッチ、終了日時、回答数上限を確認します。回答者は所有者へ連絡し、終了したフォームを設定で回避しません。",
+    "url": "/google/forms-not-accepting-responses/"
+  },
+  {
+    "title": "Gmailの不在通知が相手に届かないときの確認手順",
+    "description": "自動返信を設定したのに相手に届かない。不在通知の期間と送信対象を確認します。Gmailは同じ相手へ毎回必ず自動返信する仕様ではないため、テスト条件を分けて調べます。",
+    "url": "/google/gmail-vacation-reply-not-sent/"
+  },
+  {
+    "title": "Gmailで別アドレスから送る設定の確認メールが見つからないときの確認手順",
+    "description": "差出人アドレス追加の認証を完了できない。追加先アドレスへの確認メールと迷惑メールを探し、組織アドレスなら管理者の送信設定を確認します。通常メールの未着とは分けます。",
+    "url": "/google/gmail-send-as-verification-missing/"
+  },
+  {
+    "title": "Googleマップで保存した場所やリストが見えないときの確認手順",
+    "description": "以前保存した店が地図に出ない。Googleマップの『保存済み』と使用アカウントを確認し、リスト内の場所と地図上のピン表示を分けて探します。",
+    "url": "/google/maps-saved-places-not-visible/"
+  },
+  {
+    "title": "YouTubeの制限付きモードを解除できないときの確認手順",
+    "description": "設定を変えられず動画やコメントが見えない。制限付きモードが個人設定か学校・職場・ネットワーク管理者による設定かを確認します。管理下なら利用者だけで解除できません。",
+    "url": "/google/youtube-restricted-mode-locked/"
+  },
+  {
+    "title": "Googleスプレッドシートの特定セルだけ編集できないときの確認手順",
+    "description": "シートは開けるが一部の範囲だけ入力できない。保護されたシートや範囲の編集権限を確認します。ファイル全体の閲覧者権限と、一部セルだけの保護を切り分けます。",
+    "url": "/google/sheets-protected-cell-cannot-edit/"
+  },
+  {
+    "title": "Googleドライブでファイルの以前の版が見つからないときの確認手順",
+    "description": "上書き前のPDFや画像へ戻したい。対象がPDFなどのアップロードファイルかGoogleドキュメント形式かを確認し、それぞれの版履歴の場所を調べます。復元前に現行版を保全します。",
+    "url": "/google/drive-file-previous-version-not-found/"
+  },
+  {
+    "title": "LINEのトーク履歴をバックアップできないときの確認手順",
+    "description": "機種変更前のバックアップが完了しない。端末とiCloud DriveまたはGoogleドライブの空き容量、保存先アカウントを確認し、古い端末で履歴を残したまま再試行します。",
+    "url": "/sns/line-chat-backup-fails/"
+  },
+  {
+    "title": "LINEのかんたん引き継ぎQRコードを読み取れないときの確認手順",
+    "description": "旧端末のQRを新端末で読み取っても進まない。QRコードの有効時間とLINE専用読み取り画面を確認します。トークバックアップの失敗とは別の、アカウント引き継ぎ入口の問題です。",
+    "url": "/sns/line-transfer-qr-scan-fails/"
+  },
+  {
+    "title": "Discordの画面共有で映像だけ届き音が聞こえないときの確認手順",
+    "description": "共有先にゲームやアプリの音声が届かない。画面共有の対象アプリと利用端末の音声共有対応を確認します。マイク入力の不調とは別の、共有するアプリ音声の問題です。",
+    "url": "/sns/discord-screen-share-audio-missing/"
+  },
+  {
+    "title": "Discordで特定の相手へDMを送れないときの確認手順",
+    "description": "送信時にClydeから配信できないと表示される。共通サーバー、友達関係、受信側のDM設定を確認します。相手のプライバシー設定は送信者が変更できません。",
+    "url": "/sns/discord-dm-cannot-send/"
+  },
+  {
+    "title": "Zoomの参加者が画面共有を開始できないときの確認手順",
+    "description": "会議には入れるが画面共有ボタンが使えない。ホストの共有権限と組織の設定を確認します。参加者が端末設定だけでホストの制限を解除することはできません。",
+    "url": "/sns/zoom-participant-screen-share-disabled/"
+  },
+  {
+    "title": "Zoomの会議録画が見つからないときの確認手順",
+    "description": "録画したはずの会議が一覧やPC内にない。クラウド録画とPC内録画の保存先、録画を開始した人、処理中の状態を分けて確認します。画面共有の可否とは別の保存問題です。",
+    "url": "/sns/zoom-recording-not-found/"
+  },
+  {
+    "title": "Windowsのクイックアシストで支援相手に接続できないときの確認手順",
+    "description": "支援コードを入力しても画面共有が始まらない。クイックアシストのコード、アプリの起動と更新、双方の同意画面を確認します。リモートデスクトップのホスト設定とは異なる仕組みです。",
+    "url": "/windows/quick-assist-not-connecting/"
+  },
+  {
+    "title": "Windowsのファイル履歴に以前の版が出ないときの確認手順",
+    "description": "上書き前のファイルを戻したいが履歴がない。ファイル履歴が有効だった時期、バックアップ先、対象フォルダを確認します。Windowsバックアップで新PCへ復元する話とは別です。",
+    "url": "/windows/file-history-previous-version-missing/"
+  },
+  {
+    "title": "Windowsでサインイン時にナレーターが自動起動するときの確認手順",
+    "description": "ログイン画面やデスクトップで読み上げが始まる。ナレーターのショートカットで一時停止し、サインイン前後の自動起動設定を確認します。音声出力全体の故障とは異なります。",
+    "url": "/windows/narrator-starts-at-signin/"
+  },
+  {
+    "title": "Windows 11で画面の文字やアプリがぼやけるときの確認手順",
+    "description": "外部画面で文字の輪郭がにじむ。ディスプレイごとの解像度と拡大率を確認し、アプリだけの表示問題か画面全体かを切り分けます。",
+    "url": "/windows/windows-display-text-blurry-scaling/"
+  },
+  {
+    "title": "Windowsの動的ロックで離席してもPCがロックされないときの確認手順",
+    "description": "スマートフォンを持って離れても画面が開いたまま。動的ロックの有効化とスマートフォンのBluetoothペアリングを確認します。即時ロックの機能ではないため、手動ロックと分けて使います。",
+    "url": "/windows/windows-dynamic-lock-not-locking/"
+  },
+  {
+    "title": "Apple Watchのアップデートが始まらないときの確認手順",
+    "description": "ペアリング済みの時計で更新が止まる。Watchの充電と空き容量、iPhoneとの接続を確認し、ダウンロード済み更新ファイルの状態を調べます。ペアリング不良とは別の更新段階です。",
+    "url": "/iphone/apple-watch-update-wont-start/"
+  },
+  {
+    "title": "iPhoneのアクセスガイドを終了できないときの確認手順",
+    "description": "一つのアプリに固定され通常画面へ戻れない。アクセスガイドの終了操作と設定済みパスコード、Face IDまたはTouch IDを確認します。通常の画面フリーズとは異なる制限機能です。",
+    "url": "/iphone/guided-access-wont-end-iphone/"
+  },
+  {
+    "title": "Microsoft Edgeで印刷内容が切れる・縮小されるときの確認手順",
+    "description": "画面では読めるのに印刷すると端が切れたり小さくなったりする。印刷プレビューで用紙サイズ、余白、倍率を確認し、実際の用紙に合わせて調整します。プリンターのインク不良とは異なるレイアウトの問題です。",
+    "url": "/browser/edge-print-clipped-scaled-wrong/"
+  },
+  {
     "title": "iPhoneをCarPlayに接続できないときの確認手順",
     "description": "iPhoneをCarPlayに接続できないときの確認手順。車のCarPlay対応と接続方式を確認し、有線ならケーブルとUSBポート、無線ならiPhoneのBluetooth・Wi-Fiと車側の設定を分けて調べます。",
     "url": "/iphone/carplay-connection-not-working/"
