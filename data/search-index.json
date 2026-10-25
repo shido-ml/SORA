@@ -1,5 +1,155 @@
 [
   {
+    "title": "Chromeで保存したタブグループが見えないときの確認手順",
+    "description": "作業用にまとめたタブグループが画面上から消えたように見える。タブバー上の開いたグループと、ブックマークバーの保存済みグループ、別のプロフィールを順に確認します。",
+    "url": "/browser/chrome-saved-tab-groups-not-visible/"
+  },
+  {
+    "title": "Chromeでシークレットウィンドウを開けないときの確認手順",
+    "description": "メニューのシークレットウィンドウが表示されないか選べない。通常ウィンドウは使えるか確認し、組織管理の端末やプロフィールでシークレットモードが制限されていないかを確認します。",
+    "url": "/browser/chrome-incognito-menu-disabled/"
+  },
+  {
+    "title": "Chromeの自動字幕が表示されないときの確認手順",
+    "description": "動画や音声を再生してもChromeの自動字幕が出ない。Chromeの字幕設定、再生メディア、言語設定を確認し、サイト側の字幕とブラウザーの自動字幕を区別します。",
+    "url": "/browser/chrome-live-caption-not-appearing/"
+  },
+  {
+    "title": "Googleフォームでファイルを添付できないときの確認手順",
+    "description": "回答フォームのファイルアップロード欄で送信できない。Googleアカウントへのログインと、フォーム作成者が指定したファイルの種類・サイズ・個数を確認します。",
+    "url": "/google/forms-file-upload-question-fails/"
+  },
+  {
+    "title": "Googleスプレッドシートのフィルタ表示を保存できないときの確認手順",
+    "description": "一時的に絞り込んだ表を後で同じ表示に戻せない。通常のフィルタとフィルタ表示を区別し、編集権限と『表示を保存』の操作を確認します。",
+    "url": "/google/sheets-filter-view-not-saved/"
+  },
+  {
+    "title": "Googleドライブのショートカットから元ファイルを開けないときの確認手順",
+    "description": "ドライブのショートカットは見えるがリンク先のファイルを開けない。ショートカット本体と元ファイルを区別し、元ファイルの権限、ゴミ箱、削除状態を確認します。",
+    "url": "/google/drive-shortcut-original-unavailable/"
+  },
+  {
+    "title": "Gmailの情報保護モードで確認コードを受け取れないときの確認手順",
+    "description": "情報保護モードのメールを開くためのコードが届かない。送信者が選んだSMSコードかメールコードかを確認し、受信先と期限を送信者に照合してもらいます。",
+    "url": "/google/gmail-confidential-mail-code-missing/"
+  },
+  {
+    "title": "Gmailで新規メールに署名が入らないときの確認手順",
+    "description": "署名を作ったのに新規作成または返信で自動挿入されない。使用中のアカウントと新規メール・返信それぞれの署名既定値を確認し、モバイル署名との違いを切り分けます。",
+    "url": "/google/gmail-signature-missing-new-mail/"
+  },
+  {
+    "title": "Googleカレンダーの予約ページに空き時間が出ないときの確認手順",
+    "description": "予約スケジュールを作ったのに予約可能な時間帯が表示されない。予約可能時間、最短予約受付時間、既存予定との競合を確認します。作成直後の当日枠がない場合は受付猶予が原因となることがあります。",
+    "url": "/google/calendar-booking-page-no-slots/"
+  },
+  {
+    "title": "Chromeのピクチャーインピクチャーが開かないときの確認手順",
+    "description": "動画は再生できるのに小窓にして別タブを見られない。動画の再生状態とChromeのメディア操作から小窓表示を選べるか確認します。動画そのものが再生できない問題とは区別します。",
+    "url": "/browser/chrome-picture-in-picture-not-opening/"
+  },
+  {
+    "title": "Googleドキュメントの見出しが概要に出ないときの確認手順",
+    "description": "本文に見出しを書いたのに左側のドキュメント概要に表示されない。文字を太くしただけか見出しスタイルを適用したかを確認し、概要の表示と削除済み見出しの再追加を試します。",
+    "url": "/google/docs-outline-heading-missing/"
+  },
+  {
+    "title": "YouTube動画でコメント欄が使えないときの確認手順",
+    "description": "特定の動画でコメント欄が表示されないか投稿できない。動画の公開状態と子ども向け設定、アカウントの管理状態を確認し、視聴者が変更できない制限を区別します。",
+    "url": "/google/youtube-video-comments-disabled/"
+  },
+  {
+    "title": "Windows 11でスナップレイアウトが表示されないときの確認手順",
+    "description": "最大化ボタンにカーソルを合わせてもウィンドウ配置候補が出ない。スナップ機能と最大化ボタン上のレイアウト表示設定を確認し、Windowsキー＋Zや別アプリとの比較を行います。",
+    "url": "/windows/snap-layouts-not-showing-windows/"
+  },
+  {
+    "title": "Windows 11でウィジェットのボタンが見えないときの確認手順",
+    "description": "タスクバーから天気やウィジェットの入口が消えた。タスクバーのウィジェット表示設定とWindowsキー＋Wでの起動を確認し、タスクバー全体の不具合と区別します。",
+    "url": "/windows/windows-widgets-button-missing/"
+  },
+  {
+    "title": "Windowsの音声アクセスで言語の準備が進まないときの確認手順",
+    "description": "音声アクセスを有効にしたが言語ファイルの取得や初期設定で止まる。Windows 11の音声アクセスに必要な言語ファイルとマイクの設定、接続状態を確認します。ナレーターの読み上げとは異なる機能です。",
+    "url": "/windows/voice-access-language-setup-stuck/"
+  },
+  {
+    "title": "Apple Watchに通知が届かずiPhoneにだけ出るときの確認手順",
+    "description": "ペアリング済みのWatchに通知が出ずiPhoneに表示される。iPhoneのロック状態、Watchのロックと装着状態、対象アプリの通知設定を確認します。通知は原則として両方へ同時には届きません。",
+    "url": "/iphone/apple-watch-notifications-go-to-iphone/"
+  },
+  {
+    "title": "iPhoneでライブ留守番電話が表示されないときの確認手順",
+    "description": "電話に出ないときリアルタイムの文字起こしが表示されない。電話アプリのライブ留守番電話設定と、iPhoneの電源・圏内状態を確認し、通信事業者の留守番電話との違いを整理します。",
+    "url": "/iphone/iphone-live-voicemail-not-appearing/"
+  },
+  {
+    "title": "Macの連係カメラでiPhoneが見つからないときの確認手順",
+    "description": "Macのビデオ会議アプリでiPhoneをカメラとして選べない。対応条件、iPhoneの連係カメラ設定、両端末のApple Accountと無線状態を確認します。Mac内蔵カメラの故障とは別です。",
+    "url": "/mac/mac-continuity-camera-iphone-not-detected/"
+  },
+  {
+    "title": "Macでステージマネージャをオンにできないときの確認手順",
+    "description": "ステージマネージャを切り替えてもウィンドウ整理が始まらない。デスクトップとDockの設定、ディスプレイごとの個別操作スペースを確認します。アプリが応答しない症状とは区別します。",
+    "url": "/mac/mac-stage-manager-cannot-enable/"
+  },
+  {
+    "title": "Windowsでごみ箱のアイコンだけがデスクトップにないときの確認手順",
+    "description": "デスクトップの他のアイコンは見えるがごみ箱だけ表示されない。デスクトップアイコン設定でごみ箱が非表示になっていないか確認します。削除済みファイルが消えたと判断する前に入口の表示を調べます。",
+    "url": "/windows/windows-recycle-bin-icon-missing/"
+  },
+  {
+    "title": "Windowsで開いたアプリが別の仮想デスクトップに隠れたときの確認手順",
+    "description": "起動中のはずのアプリが現在のデスクトップやタスクバーに見えない。タスクビューで複数の仮想デスクトップを確認し、現在のデスクトップだけにウィンドウを表示する設定を調べます。",
+    "url": "/windows/windows-app-hidden-on-another-desktop/"
+  },
+  {
+    "title": "Androidの仕事用アプリが灰色で開けないときの確認手順",
+    "description": "仕事用のアプリアイコンが灰色で通知も届かない。仕事用プロファイルが一時停止されていないか確認し、個人用アプリやプライベートスペースの状態と区別します。",
+    "url": "/android/android-work-apps-grayed-out/"
+  },
+  {
+    "title": "Androidのおやすみ時間モードが勝手に始まるときの確認手順",
+    "description": "夜になると画面がグレースケールや暗い表示になり通知が変わる。Digital Wellbeingのおやすみ時間モードのスケジュールと表示オプションを確認します。画面のハードウェア故障と決めつけないでください。",
+    "url": "/android/android-bedtime-mode-keeps-turning-on/"
+  },
+  {
+    "title": "Androidの時計アプリのアラームが鳴らないときの確認手順",
+    "description": "アラーム時刻になっても音が出ないか通知だけ表示される。時計アプリのアラーム設定、通知権限、サイレントモードのアラーム例外を確認します。通常の着信音やメディア音量と区別します。",
+    "url": "/android/android-clock-alarm-silent/"
+  },
+  {
+    "title": "Androidのデバイス間サービスに別端末が表示されないときの確認手順",
+    "description": "同じGoogleアカウントの別端末をデバイスグループに追加できない。対応OS、両端末のGoogleアカウント、Bluetoothとデバイスグループの設定を確認します。Quick Shareの近距離ファイル送信とは別です。",
+    "url": "/android/android-cross-device-service-device-missing/"
+  },
+  {
+    "title": "Discordの招待リンクが無効・期限切れと出るときの確認手順",
+    "description": "サーバーの招待URLを開いても参加画面に進めない。招待コードの入力ミス、期限、利用回数、サーバー側の招待停止を確認し、発行者に新しい招待を依頼します。",
+    "url": "/sns/discord-invite-link-invalid/"
+  },
+  {
+    "title": "Discordの特定チャンネルだけ投稿できないときの確認手順",
+    "description": "同じサーバーの別チャンネルには書けるが一つだけ送信欄が使えない。チャンネルごとの『メッセージを送信』権限とロールを確認し、管理者に必要な範囲の設定を相談します。",
+    "url": "/sns/discord-channel-message-permission-denied/"
+  },
+  {
+    "title": "Zoomでブレイクアウトルームの項目が出ないときの確認手順",
+    "description": "会議中に小グループへ分ける操作が見つからない。ホスト権限、Webポータルのブレイクアウトルーム設定、組織管理者のロックを確認します。参加者の画面共有権限とは別です。",
+    "url": "/sns/zoom-breakout-rooms-option-missing/"
+  },
+  {
+    "title": "LINE Keepメモの古い写真やファイルを開けないときの確認手順",
+    "description": "Keepメモの文章は残るが以前送った写真やファイルが表示・保存できない。Keepメモのトーク履歴と添付ファイルの保存期間を区別し、端末内に保存済みの原本があるか確認します。",
+    "url": "/sns/line-keep-memo-attachments-unavailable/"
+  },
+  {
+    "title": "Windowsでプリンターの印刷開始や出力が遅いときの確認手順",
+    "description": "印刷はできるが一枚出るまで長く待たされる。印刷品質、接続方式、画像の大きさを比べ、故障やキューの完全停止とは分けて調べます。",
+    "url": "/peripherals/printer-printing-very-slow-windows/"
+  },
+  {
     "title": "Chromeでタブに戻るたび再読み込みされるときの確認手順",
     "description": "開いていたタブへ戻ると入力内容が消える。Chromeのメモリセーバーで非アクティブなタブが解放されていないかを確認し、作業サイトだけを常に有効にする設定を検討します。",
     "url": "/browser/chrome-tabs-reload-after-switch/"

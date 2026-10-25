@@ -1,0 +1,992 @@
+[
+  {
+    "category": "browser",
+    "slug": "chrome-saved-tab-groups-not-visible",
+    "path": "/browser/chrome-saved-tab-groups-not-visible/",
+    "title": "Chromeで保存したタブグループが見えないときの確認手順",
+    "topic": "作業用にまとめたタブグループが画面上から消えたように見える",
+    "description": "作業用にまとめたタブグループが画面上から消えたように見える。タブバー上の開いたグループと、ブックマークバーの保存済みグループ、別のプロフィールを順に確認します。",
+    "answer": "タブバー上の開いたグループと、ブックマークバーの保存済みグループ、別のプロフィールを順に確認します。",
+    "steps": [
+      "Chromeのタブバーでグループが折りたたまれていないか、グループ名をクリックして確かめます。",
+      "ブックマークバーのタブグループ欄を開き、保存済みのグループを探します。",
+      "設定の『デザイン』でブックマークバーにタブグループを表示する設定を確認します。",
+      "別のChromeプロフィールや同じアカウントの他端末にグループがあるかを比較します。"
+    ],
+    "causes": [
+      "グループが折りたたまれている。",
+      "保存済みグループのブックマークバー表示がオフになっている。",
+      "別プロフィールで作ったグループを探している。"
+    ],
+    "diagnosis": "個別タブが再読み込みされる問題とは違い、ここではグループの一覧そのものがどこに表示されるかを調べます。現在開いているグループと保存したグループを分けて確認し、同じ名前のグループが別プロフィールにないか見ます。グループの中身が実際に削除されたと決めつけず、表示場所とアカウントを先に記録します。",
+    "caution": "グループが見えないことを理由にプロフィール削除や閲覧データの消去をしないでください。共有端末では他人のグループを開かず、必要なら管理者または本人に確認します。保存・同期状態が不明な場合は、残るタブのURLを先に控えます。",
+    "escalation": "複数の表示場所とプロフィールを確認しても戻らない場合は、Chrome版、端末、グループの保存有無、最後に見えた時点を記録してGoogleサポートを確認します。",
+    "source_url": "https://support.google.com/chrome/answer/2391819?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "Google Chromeヘルプ：タブを管理する",
+    "related_existing": [
+      "/browser/chrome-tabs-reload-after-switch/",
+      "/browser/chrome-one-site-muted/",
+      "/browser/chrome-bookmarks-missing/"
+    ],
+    "closest_existing_url": "/browser/chrome-tabs-reload-after-switch/",
+    "differentiation": "既存記事は戻ったタブの内容がメモリ管理で再読み込みされる問題。本記事は保存済みタブグループの表示場所とプロフィールを探す問題。",
+    "fact_check": "Chrome公式のタブ管理案内で保存済みグループ、ブックマークバーへの表示、折りたたみを確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-incognito-menu-disabled",
+    "path": "/browser/chrome-incognito-menu-disabled/",
+    "title": "Chromeでシークレットウィンドウを開けないときの確認手順",
+    "topic": "メニューのシークレットウィンドウが表示されないか選べない",
+    "description": "メニューのシークレットウィンドウが表示されないか選べない。通常ウィンドウは使えるか確認し、組織管理の端末やプロフィールでシークレットモードが制限されていないかを確認します。",
+    "answer": "通常ウィンドウは使えるか確認し、組織管理の端末やプロフィールでシークレットモードが制限されていないかを確認します。",
+    "steps": [
+      "通常のChromeウィンドウが開くか確かめ、メニューとCtrl＋Shift＋Nの両方で症状を確認します。",
+      "プロフィールアイコンから仕事・学校用アカウントで開いていないか確認します。",
+      "Chromeに『組織によって管理されています』と表示されるかを確かめます。",
+      "管理端末なら管理者へ利用方針を確認し、個人端末なら管理プロフィールと個人プロフィールを取り違えていないか比較します。"
+    ],
+    "causes": [
+      "組織のポリシーでシークレットモードが無効になっている。",
+      "仕事・学校用の管理プロフィールを使用している。",
+      "通常ウィンドウ自体に別の起動不良がある。"
+    ],
+    "diagnosis": "Webページが開けない症状や履歴を消したい相談とは分け、シークレットの起動入口だけが使えないかを確認します。Chromeの企業管理では管理者がシークレットモードを使用可能・無効・強制に設定できます。まず管理の有無と利用中のプロフィールを記録し、設定変更の担当者を判断します。",
+    "caution": "管理者の制限を回避するためにレジストリやポリシーファイルを変更しないでください。シークレットモードも閲覧先やネットワーク管理者からの匿名化を保証しません。共有端末では個人のアカウント設定を勝手に追加しないでください。",
+    "escalation": "個人用プロフィールでも操作が選べず、組織管理の表示もない場合は、OSとChrome版、メニューの状態を記録して公式サポートを確認します。",
+    "source_url": "https://support.google.com/chrome/a/answer/9302896?hl=en",
+    "source_label": "Chrome Enterpriseヘルプ：プライベートブラウジングを許可する",
+    "related_existing": [
+      "/browser/chrome-not-opening/",
+      "/browser/chrome-page-translation-not-offered/",
+      "/browser/chrome-required-popup-blocked/"
+    ],
+    "closest_existing_url": "/browser/chrome-not-opening/",
+    "differentiation": "既存記事はChrome全体が起動しない問題。本記事は通常の閲覧はできるのにシークレット機能だけ管理ポリシーなどで使えない問題。",
+    "fact_check": "Google公式の企業管理案内でシークレットモードの使用可・無効・強制の設定と管理者による制御を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-live-caption-not-appearing",
+    "path": "/browser/chrome-live-caption-not-appearing/",
+    "title": "Chromeの自動字幕が表示されないときの確認手順",
+    "topic": "動画や音声を再生してもChromeの自動字幕が出ない",
+    "description": "動画や音声を再生してもChromeの自動字幕が出ない。Chromeの字幕設定、再生メディア、言語設定を確認し、サイト側の字幕とブラウザーの自動字幕を区別します。",
+    "answer": "Chromeの字幕設定、再生メディア、言語設定を確認し、サイト側の字幕とブラウザーの自動字幕を区別します。",
+    "steps": [
+      "動画に実際の音声があるかを確認し、別の音声コンテンツでも字幕が出ないか比べます。",
+      "Chromeの設定でユーザー補助機能を開き、自動字幕が有効か確認します。",
+      "字幕の言語設定と、必要な言語データの準備状態を確認します。",
+      "動画サービス固有の字幕ボタンとは別に、Chromeの字幕表示領域が出るかを再確認します。"
+    ],
+    "causes": [
+      "Chromeの自動字幕がオフになっている。",
+      "対象言語や言語データの設定が合っていない。",
+      "音声がない動画やサイト固有の字幕機能と混同している。"
+    ],
+    "diagnosis": "動画サイトの字幕がないだけなのか、Chromeの自動字幕が全く表示されないのかを分けます。字幕の有無を複数の音声素材で比較し、Chrome設定の切替と言語を確認します。音が出ない症状とは異なり、音声自体が再生できるのに文字が出ない場合を対象とします。",
+    "caution": "音声の内容には個人情報が含まれることがあります。自動翻訳や外部の字幕サービスを使う前に、送信先と所属組織の規則を確認してください。字幕には誤変換があり得るため、重要な発言の証拠として原音を確認せずに利用しないでください。",
+    "escalation": "Chrome側の設定と対応言語を確認しても表示されない場合は、Chrome版、OS、再現する音声の種類を記録し、Googleの公式ヘルプを参照します。",
+    "source_url": "https://support.google.com/chrome/answer/10538231?hl=en",
+    "source_label": "Google Chromeヘルプ：字幕と翻訳を管理する",
+    "related_existing": [
+      "/browser/chrome-one-site-muted/",
+      "/browser/chrome-saved-passwords-missing/",
+      "/browser/chrome-page-translation-not-offered/"
+    ],
+    "closest_existing_url": "/browser/chrome-one-site-muted/",
+    "differentiation": "既存記事は特定サイトの音が出ない問題。本記事は音声は再生できるのにChromeの自動字幕が生成されない問題。",
+    "fact_check": "Chrome公式の字幕と翻訳の案内で自動字幕の有効化、言語設定、音声再生中の表示条件を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-file-upload-question-fails",
+    "path": "/google/forms-file-upload-question-fails/",
+    "title": "Googleフォームでファイルを添付できないときの確認手順",
+    "topic": "回答フォームのファイルアップロード欄で送信できない",
+    "description": "回答フォームのファイルアップロード欄で送信できない。Googleアカウントへのログインと、フォーム作成者が指定したファイルの種類・サイズ・個数を確認します。",
+    "answer": "Googleアカウントへのログインと、フォーム作成者が指定したファイルの種類・サイズ・個数を確認します。",
+    "steps": [
+      "フォームのアップロード欄に表示される種類、サイズ、個数の制限を読みます。",
+      "Googleアカウントでログインしているかを確認し、必要なら正しいアカウントへ切り替えます。",
+      "指定された条件に合う小さなファイル一つで試し、エラー表示を記録します。",
+      "制限が不明ならフォームの作成者に条件を確認し、同じファイルを何度も送信しないでください。"
+    ],
+    "causes": [
+      "Googleアカウントにログインしていない。",
+      "ファイルの種類・サイズ・個数が作成者の制限を超えている。",
+      "フォームの管理条件によりアップロードが利用できない。"
+    ],
+    "diagnosis": "フォーム全体の回答受付が終了した場合とは違い、回答欄は使えるのに添付欄だけ失敗するかを見ます。ログインの要否とアップロード条件はフォームによって変わります。ファイルの拡張子、サイズ、個数、表示されたエラーを控え、作成者に確認すべき条件と端末側の問題を切り分けます。",
+    "caution": "個人情報や社外秘のファイルを、添付失敗の確認のため別アカウントや非公式サイトへ送らないでください。サイズ制限を回避するための無断分割も避け、提出先が指定する安全な代替手段を確認してください。",
+    "escalation": "条件に合うファイルでもアップロードできない場合は、フォーム作成者にエラー文とファイルの種類・サイズを伝えます。管理下のフォームなら組織管理者にも相談します。",
+    "source_url": "https://support.google.com/docs/answer/15473134?hl=en",
+    "source_label": "Googleドキュメントヘルプ：フォーム回答時の一般的なエラー",
+    "related_existing": [
+      "/google/forms-not-accepting-responses/",
+      "/google/google-drive-file-download-failed-browser/",
+      "/google/google-maps-offline-map-not-downloading/"
+    ],
+    "closest_existing_url": "/google/forms-not-accepting-responses/",
+    "differentiation": "既存記事はフォーム全体が回答を受け付けない状態。本記事は回答可能なフォームのファイル添付欄だけ失敗する状態と、その制限の確認。",
+    "fact_check": "Google公式のフォーム回答エラー案内でGoogleアカウントへのログインと作成者が設定する個数・種類・サイズ制限を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-filter-view-not-saved",
+    "path": "/google/sheets-filter-view-not-saved/",
+    "title": "Googleスプレッドシートのフィルタ表示を保存できないときの確認手順",
+    "topic": "一時的に絞り込んだ表を後で同じ表示に戻せない",
+    "description": "一時的に絞り込んだ表を後で同じ表示に戻せない。通常のフィルタとフィルタ表示を区別し、編集権限と『表示を保存』の操作を確認します。",
+    "answer": "通常のフィルタとフィルタ表示を区別し、編集権限と『表示を保存』の操作を確認します。",
+    "steps": [
+      "現在の絞り込みが共有の通常フィルタか、自分用のフィルタ表示か確認します。",
+      "データからフィルタ表示を作成し、条件を設定します。",
+      "右上の『表示を保存』で名前を付け、データの表示切替から再度開けるか確認します。",
+      "閲覧権限だけの場合は一時的な表示にとどまるため、必要なら所有者へ編集権限を相談します。"
+    ],
+    "causes": [
+      "通常のフィルタをフィルタ表示と取り違えている。",
+      "一時的なフィルタ表示を保存していない。",
+      "閲覧権限で保存済み表示を作成しようとしている。"
+    ],
+    "diagnosis": "シートのセルが編集できない場合とは異なり、ここでは絞り込み条件を自分の名前付き表示として再利用できるかを調べます。Googleの案内では編集権限があれば保存でき、閲覧権限では一時的な表示を作れます。共同編集者の表示を変えないため、通常フィルタと別に確認します。",
+    "caution": "共同作業中のシートで通常のフィルタを変更すると、他の人の表示にも影響する場合があります。データの削除や並べ替えを試す前にコピーや権限を確認し、閲覧者なら無理に権限を回避せず所有者へ相談してください。",
+    "escalation": "編集権限があり保存操作後も一覧に出ない場合は、シートURL、使用した表示名、ブラウザーと権限を記録し、Googleの公式ヘルプを確認します。",
+    "source_url": "https://support.google.com/docs/answer/3540681?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "Googleドキュメントヘルプ：データの並べ替えとフィルタ",
+    "related_existing": [
+      "/google/sheets-protected-cell-cannot-edit/",
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/google-photos-shared-album-not-found/"
+    ],
+    "closest_existing_url": "/google/sheets-protected-cell-cannot-edit/",
+    "differentiation": "既存記事は保護されたセルへの入力権限。本記事はフィルタ表示の保存・再利用と閲覧権限による一時表示を扱う。",
+    "fact_check": "Google公式のフィルタ案内で保存操作、編集権限、一時的な表示、表示の切替を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-shortcut-original-unavailable",
+    "path": "/google/drive-shortcut-original-unavailable/",
+    "title": "Googleドライブのショートカットから元ファイルを開けないときの確認手順",
+    "topic": "ドライブのショートカットは見えるがリンク先のファイルを開けない",
+    "description": "ドライブのショートカットは見えるがリンク先のファイルを開けない。ショートカット本体と元ファイルを区別し、元ファイルの権限、ゴミ箱、削除状態を確認します。",
+    "answer": "ショートカット本体と元ファイルを区別し、元ファイルの権限、ゴミ箱、削除状態を確認します。",
+    "steps": [
+      "開けない項目がショートカットか元ファイルそのものかを名前とアイコンで確認します。",
+      "元ファイルの所有者に、共有権限が引き続きあるか確認します。",
+      "所有者に元ファイルがゴミ箱に入っていないか、削除されていないか確認してもらいます。",
+      "復元またはアクセス再付与後にショートカットを開き直し、必要なら新しいリンクを受け取ります。"
+    ],
+    "causes": [
+      "元ファイルへのアクセス権がなくなった。",
+      "元ファイルがゴミ箱にある。",
+      "元ファイルが削除された。"
+    ],
+    "diagnosis": "検索でファイルが見つからない問題とは違い、ショートカット自体は表示されるのに開けない状態を対象にします。Googleの公式案内ではショートカットのリンク先が権限不足、ゴミ箱、削除で壊れます。ショートカットを複製しても元ファイルの権限は戻らないため、所有者と元ファイルの状態から確認します。",
+    "caution": "元ファイルの所有者の許可なく、別アカウントで共有設定を変えたり公開リンクを作ったりしないでください。ショートカット削除は元ファイルの復元にはならず、作業場所を見失う原因になるため、先にパスと所有者を控えます。",
+    "escalation": "所有者が元ファイルを確認しても開けない場合は、ショートカットの場所、所有者、表示されたエラー文をまとめてGoogleドライブの公式サポートを確認します。",
+    "source_url": "https://support.google.com/drive/answer/9700156?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "Googleドライブヘルプ：ショートカットの修復",
+    "related_existing": [
+      "/google/google-drive-files-missing/",
+      "/google/drive-offline-file-unavailable/",
+      "/google/google-drive-file-download-failed-browser/"
+    ],
+    "closest_existing_url": "/google/google-drive-files-missing/",
+    "differentiation": "既存記事はファイル本体が検索で見つからない問題。本記事は残っているショートカットと、そのリンク先の権限・削除状態を切り分ける問題。",
+    "fact_check": "Google公式のショートカット案内で権限不足、ゴミ箱、元ファイル削除がリンク切れの条件であることを確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-confidential-mail-code-missing",
+    "path": "/google/gmail-confidential-mail-code-missing/",
+    "title": "Gmailの情報保護モードで確認コードを受け取れないときの確認手順",
+    "topic": "情報保護モードのメールを開くためのコードが届かない",
+    "description": "情報保護モードのメールを開くためのコードが届かない。送信者が選んだSMSコードかメールコードかを確認し、受信先と期限を送信者に照合してもらいます。",
+    "answer": "送信者が選んだSMSコードかメールコードかを確認し、受信先と期限を送信者に照合してもらいます。",
+    "steps": [
+      "受信画面でSMSコードの入力を求められているか、メールのコードを待っているかを確認します。",
+      "SMSの場合は送信者が指定した受信者の電話番号が正しいか、本人同士で安全な方法で確認します。",
+      "メールのコードの場合は対象メールアドレスの受信箱と迷惑メールを確認します。",
+      "メッセージの有効期限や送信者によるアクセス取り消しがないか、送信者へ確認します。"
+    ],
+    "causes": [
+      "送信者がSMS用に別の番号を登録した。",
+      "メールコードが別の受信箱や迷惑メールへ届いている。",
+      "期限切れまたは送信者がアクセスを取り消した。"
+    ],
+    "diagnosis": "通常のGmail受信エラーとは異なり、本文へアクセスするための追加確認コードが届かない状態を扱います。Googleの案内では送信時の選択でSMSかメールのコード経路が変わります。受信者がコードを要求されている画面と送信者の設定を照合し、本文の再送が必要か判断します。",
+    "caution": "確認コードを第三者へ転送しないでください。電話番号の確認を装う不審なメッセージや非公式の解除サービスに入力せず、送信者の身元を別経路で確認します。情報保護モードでも画面撮影による複製は防げないため、機密情報の扱いに注意してください。",
+    "escalation": "正しい受信先でもコードが届かない場合は、コードの送信方法、期限、受信先、エラー表示を送信者と確認し、Gmailの公式ヘルプを参照します。",
+    "source_url": "https://support.google.com/mail/answer/7674059?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "Gmailヘルプ：情報保護モードのメールを送受信する",
+    "related_existing": [
+      "/google/google-account-verification-code-not-arriving/",
+      "/google/gmail-scheduled-send-not-sent/",
+      "/google/gmail-not-receiving-email/"
+    ],
+    "closest_existing_url": "/google/google-account-verification-code-not-arriving/",
+    "differentiation": "既存記事はGoogleアカウントのログイン認証コード。本記事はGmailの特定の情報保護メールを開くために送信者が指定したSMSまたはメールコード。",
+    "fact_check": "Gmail公式の情報保護モード案内でSMSコードとメールコードの分岐、期限、アクセス取り消しを確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-signature-missing-new-mail",
+    "path": "/google/gmail-signature-missing-new-mail/",
+    "title": "Gmailで新規メールに署名が入らないときの確認手順",
+    "topic": "署名を作ったのに新規作成または返信で自動挿入されない",
+    "description": "署名を作ったのに新規作成または返信で自動挿入されない。使用中のアカウントと新規メール・返信それぞれの署名既定値を確認し、モバイル署名との違いを切り分けます。",
+    "answer": "使用中のアカウントと新規メール・返信それぞれの署名既定値を確認し、モバイル署名との違いを切り分けます。",
+    "steps": [
+      "Gmailの設定から署名一覧を開き、利用中のアカウントに署名が保存されているか確認します。",
+      "新規メール用と返信・転送用の署名既定値をそれぞれ確認します。",
+      "パソコンとスマートフォンで症状を比べ、モバイルアプリ側の署名設定を確認します。",
+      "短い新規メールと返信を下書きし、署名の挿入位置を確認してから送信せず破棄します。"
+    ],
+    "causes": [
+      "署名は作成したが既定値に選んでいない。",
+      "新規メールと返信で別の既定値を選んでいる。",
+      "スマートフォン側に別のモバイル署名が設定されている。"
+    ],
+    "diagnosis": "メール本文は送受信できるのに署名だけ入らないかを確かめます。署名はアカウントごと、新規メールと返信ごとに設定が分かれ、アプリにはモバイル署名もあります。実際に送る前の下書きで再現させれば、相手に空の試験メールを送らずに設定の違いを確認できます。",
+    "caution": "取引先への試験送信や個人情報を含む署名の公開は避けてください。画像署名が壊れている場合も、外部ホスティング先を無断で変更せず、会社のブランド・署名規則を確認します。複数アカウントで他人の署名をコピーしないでください。",
+    "escalation": "既定値を設定しても挿入されない場合は、使用アカウント、端末、新規か返信か、下書きでの表示を記録してGmail公式サポートを確認します。",
+    "source_url": "https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "Gmailヘルプ：署名を作成する",
+    "related_existing": [
+      "/google/gmail-vacation-reply-not-sent/",
+      "/google/gmail-scheduled-send-not-sent/",
+      "/google/gmail-not-receiving-email/"
+    ],
+    "closest_existing_url": "/google/gmail-vacation-reply-not-sent/",
+    "differentiation": "既存記事は不在時の自動返信。本記事は通常の新規・返信メールへ挿入する署名の既定値と端末別設定。",
+    "fact_check": "Gmail公式の署名案内で新規メール・返信の既定値とモバイルアプリ署名の違いを確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-booking-page-no-slots",
+    "path": "/google/calendar-booking-page-no-slots/",
+    "title": "Googleカレンダーの予約ページに空き時間が出ないときの確認手順",
+    "topic": "予約スケジュールを作ったのに予約可能な時間帯が表示されない",
+    "description": "予約スケジュールを作ったのに予約可能な時間帯が表示されない。予約可能時間、最短予約受付時間、既存予定との競合を確認します。作成直後の当日枠がない場合は受付猶予が原因となることがあります。",
+    "answer": "予約可能時間、最短予約受付時間、既存予定との競合を確認します。作成直後の当日枠がない場合は受付猶予が原因となることがあります。",
+    "steps": [
+      "対象の予約スケジュールと予約ページURLが正しいか確認します。",
+      "予約可能な曜日・時間帯と対象の日付範囲を確認します。",
+      "最短予約受付時間と予約可能期間を確認し、当日の枠だけが出ないのか比べます。",
+      "カレンダーの既存予定が予約可能時間を塞いでいないか確認し、別の日付で表示を試します。"
+    ],
+    "causes": [
+      "最短予約受付時間のため直近の時間帯が表示されない。",
+      "公開した予約可能時間が対象日にない。",
+      "既存予定が空き時間を塞いでいる。"
+    ],
+    "diagnosis": "イベントの時刻がずれる問題ではなく、予約ページに選べる枠そのものがない状態です。Googleの案内では予約スケジュールに最短受付時間があり、初期設定では四時間の猶予があります。作成直後に当日枠だけないなら、設定を先に確認し、既存予定や曜日設定と順に比べます。",
+    "caution": "空きを作るために既存の会議予定を無断で削除しないでください。予約受付の猶予を短くすると準備時間が減るため、受付業務の運用方針を確認します。予約ページを一般公開する場合は、表示される氏名や予定情報も確認してください。",
+    "escalation": "設定上は空きがあるのに予約ページに出ない場合は、対象日、タイムゾーン、予約スケジュールURLと設定値を記録し、Googleカレンダー公式サポートを確認します。",
+    "source_url": "https://support.google.com/calendar/answer/11423292?hl=en",
+    "source_label": "Googleカレンダーヘルプ：予約可能時間を更新する",
+    "related_existing": [
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-calendar-desktop-reminders-missing/",
+      "/google/google-calendar-not-syncing/"
+    ],
+    "closest_existing_url": "/google/google-calendar-invite-not-appearing/",
+    "differentiation": "既存記事は招待された予定がカレンダーに見えない問題。本記事は自分が公開した予約ページの空き枠が受付条件や既存予定で表示されない問題。",
+    "fact_check": "Google公式の予約可能時間案内で最短受付時間と予約可能期間、空き枠に影響する設定を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-picture-in-picture-not-opening",
+    "path": "/browser/chrome-picture-in-picture-not-opening/",
+    "title": "Chromeのピクチャーインピクチャーが開かないときの確認手順",
+    "topic": "動画は再生できるのに小窓にして別タブを見られない",
+    "description": "動画は再生できるのに小窓にして別タブを見られない。動画の再生状態とChromeのメディア操作から小窓表示を選べるか確認します。動画そのものが再生できない問題とは区別します。",
+    "answer": "動画の再生状態とChromeのメディア操作から小窓表示を選べるか確認します。動画そのものが再生できない問題とは区別します。",
+    "steps": [
+      "Chromeのタブで動画を再生し、音声と映像が通常表示されるか確認します。",
+      "右上のメディア操作を開き、対象の動画が一覧にあるか確認します。",
+      "『ピクチャーインピクチャーに切り替える』を選び、小窓が画面の端に出るか探します。",
+      "小窓が見えない場合は他のウィンドウの背後や別の画面にないか確認し、別動画でも比較します。"
+    ],
+    "causes": [
+      "動画が再生中ではなくメディア操作の対象にない。",
+      "小窓が別ウィンドウや別画面の位置にある。",
+      "対象サイトや動画が小窓表示の操作に対応していない。"
+    ],
+    "diagnosis": "契約した動画の再生自体が失敗する記事とは異なり、動画は正常に再生できるが別タブを見ながら使う小窓に切り替えられない状態です。Google公式案内では再生中にChrome右上のメディア操作から小窓へ切り替えます。まず動画の再生とメディア操作への表示を別々に確認します。",
+    "caution": "会議映像や個人情報のある動画を小窓にすると、画面共有中の別アプリにも映る場合があります。共有前に小窓の内容を確認してください。動画サービスの利用条件を回避する拡張機能を入れず、通常のChrome操作で確認します。",
+    "escalation": "複数の通常動画でもメディア操作に項目が出ない場合は、Chrome版、OS、再現する動画の種類、複数画面の有無を記録してGoogleサポートを確認します。",
+    "source_url": "https://support.google.com/chrome/answer/9692215?hl=en",
+    "source_label": "Google Chromeヘルプ：音楽と動画を操作する",
+    "related_existing": [
+      "/browser/chrome-protected-video-wont-play/",
+      "/browser/chrome-one-site-muted/",
+      "/browser/chrome-required-popup-blocked/"
+    ],
+    "closest_existing_url": "/browser/chrome-protected-video-wont-play/",
+    "differentiation": "既存記事は保護された動画そのものが再生できない問題。本記事は再生できる動画を小窓に切り替えるChromeのメディア操作と配置。",
+    "fact_check": "Google Chrome公式のメディア操作案内で再生中の動画からピクチャーインピクチャーを開く手順を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-outline-heading-missing",
+    "path": "/google/docs-outline-heading-missing/",
+    "title": "Googleドキュメントの見出しが概要に出ないときの確認手順",
+    "topic": "本文に見出しを書いたのに左側のドキュメント概要に表示されない",
+    "description": "本文に見出しを書いたのに左側のドキュメント概要に表示されない。文字を太くしただけか見出しスタイルを適用したかを確認し、概要の表示と削除済み見出しの再追加を試します。",
+    "answer": "文字を太くしただけか見出しスタイルを適用したかを確認し、概要の表示と削除済み見出しの再追加を試します。",
+    "steps": [
+      "パソコン版で『表示』からドキュメント概要を表示します。",
+      "見出しにしたい文字を選び、『標準テキスト』ではなく見出しスタイルを適用します。",
+      "その見出しが以前に概要から外されていないか確認します。",
+      "外されていた場合は文字を選択し、右クリックの『ドキュメント概要に追加』を確認します。"
+    ],
+    "causes": [
+      "概要パネルが非表示になっている。",
+      "太字や大きな文字だけで見出しスタイルを使っていない。",
+      "見出しを概要から手動で削除していた。"
+    ],
+    "diagnosis": "編集権限がない場合と違い、本文は編集できるが左側のナビゲーションに見出しが現れない状態を対象にします。ドキュメント概要は見出しスタイルに基づくため、文字サイズだけ変えた行は候補にならないことがあります。特定見出しだけない場合は手動で概要から外した履歴も確認します。",
+    "caution": "文書全体の見出し形式を一括変更すると目次や共同編集者の見え方が変わります。まず一つの見出しで確認し、共有文書では編集方針を守ってください。概要から外した項目を戻す操作と本文を削除する操作を取り違えないでください。",
+    "escalation": "スタイルと概要表示を確認しても載らない場合は、対象文書の権限、見出しのスタイル、使用端末を記録してGoogle公式ヘルプを確認します。",
+    "source_url": "https://support.google.com/docs/answer/6367684?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "Googleドキュメントヘルプ：ドキュメント概要を見る",
+    "related_existing": [
+      "/google/docs-view-only-cannot-edit/",
+      "/google/google-photos-shared-album-not-found/",
+      "/google/google-calendar-desktop-reminders-missing/"
+    ],
+    "closest_existing_url": "/google/docs-view-only-cannot-edit/",
+    "differentiation": "既存記事は文書全体の編集権限。本記事は編集可能な本文の見出しが概要ナビゲーションに反映されない問題。",
+    "fact_check": "Google公式案内で見出しスタイル、概要表示、外した見出しの再追加を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-video-comments-disabled",
+    "path": "/google/youtube-video-comments-disabled/",
+    "title": "YouTube動画でコメント欄が使えないときの確認手順",
+    "topic": "特定の動画でコメント欄が表示されないか投稿できない",
+    "description": "特定の動画でコメント欄が表示されないか投稿できない。動画の公開状態と子ども向け設定、アカウントの管理状態を確認し、視聴者が変更できない制限を区別します。",
+    "answer": "動画の公開状態と子ども向け設定、アカウントの管理状態を確認し、視聴者が変更できない制限を区別します。",
+    "steps": [
+      "同じアカウントで別の動画のコメント欄が使えるかを確認します。",
+      "対象動画が『子ども向け』として設定されているか、非公開動画かを確認します。",
+      "管理対象のアカウントを使っていないか確認します。",
+      "自分の動画ならYouTube Studioの視聴者・コメント設定を確認し、他人の動画なら投稿者の設定として扱います。"
+    ],
+    "causes": [
+      "子ども向け動画ではコメントが無効になる。",
+      "非公開動画ではコメント設定に制限がある。",
+      "管理対象アカウントに制限がある。"
+    ],
+    "diagnosis": "字幕や制限付きモードとは別に、コメント欄だけが使えない条件を調べます。YouTube公式案内では子ども向け設定、非公開動画、管理対象アカウントなどではコメント設定を変更できない場合があります。複数動画で比較し、視聴者が直せる問題か投稿者側の設定かを判定します。",
+    "caution": "子ども向け指定をコメント欄のためだけに不正確に変更しないでください。動画の対象年齢は実際の内容に合わせて設定し、他人の動画の制限を回避する手順は試さないでください。コメント投稿前に公開範囲と個人情報の有無を確認します。",
+    "escalation": "自分の動画で設定を確認しても原因が分からない場合は、動画の公開状態、視聴者設定、アカウント種別を記録してYouTube公式ヘルプを確認します。",
+    "source_url": "https://support.google.com/youtube/answer/9482556?hl=en",
+    "source_label": "YouTubeヘルプ：コメント設定を選択する",
+    "related_existing": [
+      "/google/youtube-restricted-mode-locked/",
+      "/google/youtube-subtitles-not-available/",
+      "/google/google-account-passkey-not-working/"
+    ],
+    "closest_existing_url": "/google/youtube-restricted-mode-locked/",
+    "differentiation": "既存記事は制限付きモードの切替権限。本記事は動画単位のコメント欄が子ども向け等の条件で利用できない問題。",
+    "fact_check": "YouTube公式のコメント設定案内で子ども向け、非公開動画、管理対象アカウントによる制限を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "snap-layouts-not-showing-windows",
+    "path": "/windows/snap-layouts-not-showing-windows/",
+    "title": "Windows 11でスナップレイアウトが表示されないときの確認手順",
+    "topic": "最大化ボタンにカーソルを合わせてもウィンドウ配置候補が出ない",
+    "description": "最大化ボタンにカーソルを合わせてもウィンドウ配置候補が出ない。スナップ機能と最大化ボタン上のレイアウト表示設定を確認し、Windowsキー＋Zや別アプリとの比較を行います。",
+    "answer": "スナップ機能と最大化ボタン上のレイアウト表示設定を確認し、Windowsキー＋Zや別アプリとの比較を行います。",
+    "steps": [
+      "通常のウィンドウで最大化ボタンにカーソルを合わせ、候補が出るか確認します。",
+      "Windowsキー＋Zでスナップレイアウトを開けるか試します。",
+      "設定の『システム』『マルチタスク』でスナップウィンドウがオンか確認します。",
+      "展開したスナップ設定で最大化ボタン上のレイアウト表示がオンか確認し、別アプリでも比較します。"
+    ],
+    "causes": [
+      "スナップウィンドウ全体がオフになっている。",
+      "最大化ボタンでのレイアウト表示がオフになっている。",
+      "対象アプリのウィンドウや表示サイズで候補が異なる。"
+    ],
+    "diagnosis": "二台目の画面が認識されない問題とは違い、Windowsが認識する画面の中で配置候補だけが出ない状態です。公式案内ではスナップの主スイッチと最大化ボタン上の表示は別に設定できます。キーボード操作と複数アプリで比べれば、機能全体の停止か表示方法の問題かを絞れます。",
+    "caution": "作業中のウィンドウを不用意に閉じないでください。ウィンドウ配置を試すと位置やサイズが変わるため、保存前の作業を確認します。組織管理PCでマルチタスク設定が制限されている場合は管理者へ相談してください。",
+    "escalation": "設定がオンでもどのアプリにも出ない場合は、Windows版、ディスプレイ構成、Windowsキー＋Zの結果を記録してMicrosoft公式サポートを確認します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/snap-your-windows",
+    "source_label": "Microsoftサポート：ウィンドウをスナップする",
+    "related_existing": [
+      "/windows/second-monitor-not-detected/",
+      "/windows/windows-hdr-toggle-unavailable/",
+      "/windows/windows-app-notifications-not-showing/"
+    ],
+    "closest_existing_url": "/windows/second-monitor-not-detected/",
+    "differentiation": "既存記事は外部画面そのものが認識されない問題。本記事は認識済み画面でウィンドウ配置候補が表示されない設定の問題。",
+    "fact_check": "Microsoft公式のスナップ案内でWindowsキー＋Z、主スイッチ、最大化ボタン上の表示設定を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-widgets-button-missing",
+    "path": "/windows/windows-widgets-button-missing/",
+    "title": "Windows 11でウィジェットのボタンが見えないときの確認手順",
+    "topic": "タスクバーから天気やウィジェットの入口が消えた",
+    "description": "タスクバーから天気やウィジェットの入口が消えた。タスクバーのウィジェット表示設定とWindowsキー＋Wでの起動を確認し、タスクバー全体の不具合と区別します。",
+    "answer": "タスクバーのウィジェット表示設定とWindowsキー＋Wでの起動を確認し、タスクバー全体の不具合と区別します。",
+    "steps": [
+      "タスクバーの他のボタンが正常に表示されるか確認します。",
+      "Windowsキー＋Wでウィジェットボードが開くか試します。",
+      "タスクバーの空白部分を右クリックし、タスクバー設定でウィジェットがオンか確認します。",
+      "オンにしてもボタンがない場合はサインイン状態とWindows更新状態を記録し、再表示を確認します。"
+    ],
+    "causes": [
+      "タスクバー設定でウィジェットがオフになっている。",
+      "ボタンは非表示だがショートカットからは開ける。",
+      "タスクバー全体に別の表示不良がある。"
+    ],
+    "diagnosis": "タスクバー全体が反応しない症状と違い、他のボタンは使えるのにウィジェットの入口だけ見えないかを確認します。Microsoft公式案内にはタスクバー設定で表示を切り替える操作とWindowsキー＋Wの入口があります。ボードが開くなら表示設定を中心に調べます。",
+    "caution": "ウィジェットにはニュースやアカウントに応じた情報が表示されます。共有PCでボードを開くときは個人情報が見えないか確認し、業務端末では組織の表示方針を守ってください。タスクバー全体の初期化は最初の確認には不要です。",
+    "escalation": "設定とショートカットの両方で使えない場合は、Windows版、他のタスクバーボタンの状態、表示されるエラーを記録してMicrosoftサポートを確認します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/personalization/customize-the-taskbar-in-windows",
+    "source_label": "Microsoftサポート：タスクバーをカスタマイズする",
+    "related_existing": [
+      "/windows/windows-taskbar-not-responding/",
+      "/windows/windows-bluetooth-toggle-missing/",
+      "/windows/windows-network-shared-folder-inaccessible/"
+    ],
+    "closest_existing_url": "/windows/windows-taskbar-not-responding/",
+    "differentiation": "既存記事はタスクバー全体が反応しない問題。本記事は他の操作は可能なのにウィジェットの入口だけ非表示となる設定の問題。",
+    "fact_check": "Microsoft公式のタスクバー案内でウィジェットの表示切替とWindowsキー＋Wの起動方法を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "voice-access-language-setup-stuck",
+    "path": "/windows/voice-access-language-setup-stuck/",
+    "title": "Windowsの音声アクセスで言語の準備が進まないときの確認手順",
+    "topic": "音声アクセスを有効にしたが言語ファイルの取得や初期設定で止まる",
+    "description": "音声アクセスを有効にしたが言語ファイルの取得や初期設定で止まる。Windows 11の音声アクセスに必要な言語ファイルとマイクの設定、接続状態を確認します。ナレーターの読み上げとは異なる機能です。",
+    "answer": "Windows 11の音声アクセスに必要な言語ファイルとマイクの設定、接続状態を確認します。ナレーターの読み上げとは異なる機能です。",
+    "steps": [
+      "設定の『アクセシビリティ』から音声アクセスを開き、表示される準備段階とエラーを確認します。",
+      "選択した言語が音声アクセスの対応言語に含まれるか確認します。",
+      "初回設定に必要な言語ファイルのダウンロードが完了しているか確認します。",
+      "マイクが接続されWindowsで使用を許可されているかを確認し、設定画面を開き直します。"
+    ],
+    "causes": [
+      "対応していない言語を選んでいる。",
+      "言語ファイルの取得が完了していない。",
+      "マイクの接続や許可が整っていない。"
+    ],
+    "diagnosis": "音声読み上げが勝手に始まるナレーター問題ではなく、声でPCを操作する音声アクセスの初回準備です。Microsoft公式案内では対応言語を選び言語ファイルを取得します。画面に出た段階を記録し、言語の問題、ダウンロードの問題、マイクの問題を分けて確認します。",
+    "caution": "音声操作の誤認識で別の操作が起きることがあります。重要な文書や送信画面を開いたまま試さず、マイク権限は必要な範囲に限ってください。管理端末の言語ファイル配布やネットワーク制限を勝手に変更しないでください。",
+    "escalation": "言語とマイクを確認しても取得が止まる場合は、Windows版、言語、エラー表示、接続環境を記録し管理者またはMicrosoftサポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/voice-access/set-up-voice-access",
+    "source_label": "Microsoftサポート：音声アクセスを設定する",
+    "related_existing": [
+      "/windows/narrator-starts-at-signin/",
+      "/windows/file-history-previous-version-missing/",
+      "/windows/remote-desktop-not-connecting-windows/"
+    ],
+    "closest_existing_url": "/windows/narrator-starts-at-signin/",
+    "differentiation": "既存記事は画面を読み上げるナレーターの自動起動。本記事は音声でWindowsを操作する別機能の言語ファイル初期設定。",
+    "fact_check": "Microsoft公式の音声アクセス設定案内で対応言語、初回言語ファイル取得とマイク準備を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "apple-watch-notifications-go-to-iphone",
+    "path": "/iphone/apple-watch-notifications-go-to-iphone/",
+    "title": "Apple Watchに通知が届かずiPhoneにだけ出るときの確認手順",
+    "topic": "ペアリング済みのWatchに通知が出ずiPhoneに表示される",
+    "description": "ペアリング済みのWatchに通知が出ずiPhoneに表示される。iPhoneのロック状態、Watchのロックと装着状態、対象アプリの通知設定を確認します。通知は原則として両方へ同時には届きません。",
+    "answer": "iPhoneのロック状態、Watchのロックと装着状態、対象アプリの通知設定を確認します。通知は原則として両方へ同時には届きません。",
+    "steps": [
+      "iPhoneのロックを解除した状態とロックした状態で、通知が届く先を比べます。",
+      "Apple Watchが手首に装着され、ロック解除されているか確認します。",
+      "Watchアプリで対象アプリの通知設定を確認します。",
+      "集中モードや通知を消音する設定を確認し、必要なら変更前の状態を記録してから比べます。"
+    ],
+    "causes": [
+      "iPhoneを操作中で通知がiPhone側に表示される。",
+      "Apple Watchがロックされている。",
+      "対象アプリのWatch通知がオフまたは消音されている。"
+    ],
+    "diagnosis": "ペアリングができない症状とは異なり、Watchは接続済みで通知先だけが想定と違う状態を扱います。Apple公式案内ではiPhoneがロック解除中ならiPhoneへ、ロック中でWatchがロック解除済みならWatchへ表示されるのが基本です。両方へ同時に出ないことを踏まえて状態を比べます。",
+    "caution": "通知内容には私的な情報が含まれます。共有画面や他人の手首でテストしないでください。集中モードや通知設定を一括解除すると不要な通知まで増えるため、対象アプリに限り、元の設定を控えて確認してください。",
+    "escalation": "想定されるロック状態でも対象アプリだけ届かない場合は、iOSとwatchOS、アプリ名、通知先とロック状態を記録してAppleサポートを確認します。",
+    "source_url": "https://support.apple.com/ja-jp/108369",
+    "source_label": "Appleサポート：Apple Watchの通知",
+    "related_existing": [
+      "/iphone/apple-watch-pairing-stuck/",
+      "/iphone/apple-watch-update-wont-start/",
+      "/iphone/icloud-photos-sync-paused-iphone/"
+    ],
+    "closest_existing_url": "/iphone/apple-watch-pairing-stuck/",
+    "differentiation": "既存記事はWatchとiPhoneの初回接続。本記事は接続済みの時計とiPhone間で通知がどちらに出るかという運用条件。",
+    "fact_check": "Apple公式案内でiPhoneのロック状態、Watchのロック状態、通知は通常どちらか一方に表示される点を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-live-voicemail-not-appearing",
+    "path": "/iphone/iphone-live-voicemail-not-appearing/",
+    "title": "iPhoneでライブ留守番電話が表示されないときの確認手順",
+    "topic": "電話に出ないときリアルタイムの文字起こしが表示されない",
+    "description": "電話に出ないときリアルタイムの文字起こしが表示されない。電話アプリのライブ留守番電話設定と、iPhoneの電源・圏内状態を確認し、通信事業者の留守番電話との違いを整理します。",
+    "answer": "電話アプリのライブ留守番電話設定と、iPhoneの電源・圏内状態を確認し、通信事業者の留守番電話との違いを整理します。",
+    "steps": [
+      "設定アプリの『アプリ』『電話』でライブ留守番電話が有効か確認します。",
+      "iPhoneの電源が入っていて通信圏内かを確認します。",
+      "電話アプリの留守番電話一覧と通信事業者の留守番電話に記録がないか確認します。",
+      "対象の着信時刻と発信者、表示された画面を控え、利用できる条件をAppleの案内と照らします。"
+    ],
+    "causes": [
+      "ライブ留守番電話がオフになっている。",
+      "iPhoneが電源オフまたは圏外で通信事業者側へ転送された。",
+      "文字起こし対象の通話と通常の留守番電話を混同している。"
+    ],
+    "diagnosis": "着信音が鳴らない問題とは違い、着信後にリアルタイムの文字起こしが見えない状態です。Apple公式案内ではiPhoneが電源オフまたは圏外なら、利用可能な場合は通信事業者の留守番電話へ転送されます。設定と端末の状態、保存先を分けて確認し、消えたと決めつけないようにします。",
+    "caution": "留守番電話には私的な会話が含まれます。テストのため他人の通話を録音したり内容を共有したりしないでください。通信事業者の留守番電話に切り替わっている場合の料金や保存期間は契約条件を確認してください。",
+    "escalation": "設定がオンで圏内でも表示されない場合は、iOS版、通信事業者、発生時刻、電話アプリの表示を記録しAppleまたは通信事業者へ相談します。",
+    "source_url": "https://support.apple.com/ja-jp/guide/iphone/iph3c99490e/ios",
+    "source_label": "Appleサポート：iPhoneで留守番電話を設定する",
+    "related_existing": [
+      "/iphone/ringtone-not-sounding/",
+      "/iphone/facetime-calls-not-connecting-iphone/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/ringtone-not-sounding/",
+    "differentiation": "既存記事は着信音が鳴らない症状。本記事は応答しなかった着信のライブ文字起こしと通信事業者の留守番電話の行き先。",
+    "fact_check": "Apple公式の留守番電話案内でライブ留守番電話の設定と電源オフ・圏外時の転送条件を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-continuity-camera-iphone-not-detected",
+    "path": "/mac/mac-continuity-camera-iphone-not-detected/",
+    "title": "Macの連係カメラでiPhoneが見つからないときの確認手順",
+    "topic": "Macのビデオ会議アプリでiPhoneをカメラとして選べない",
+    "description": "Macのビデオ会議アプリでiPhoneをカメラとして選べない。対応条件、iPhoneの連係カメラ設定、両端末のApple Accountと無線状態を確認します。Mac内蔵カメラの故障とは別です。",
+    "answer": "対応条件、iPhoneの連係カメラ設定、両端末のApple Accountと無線状態を確認します。Mac内蔵カメラの故障とは別です。",
+    "steps": [
+      "MacとiPhoneの対応OSと機種条件をApple公式案内で確認します。",
+      "iPhoneの『一般』『AirPlayと連係』で連係カメラがオンか確認します。",
+      "MacとiPhoneで同じApple Accountを使い、Wi-FiとBluetoothが有効か確認します。",
+      "iPhoneを近くに置き、アプリのカメラ選択欄に現れるか確認し、必要ならUSB接続で比べます。"
+    ],
+    "causes": [
+      "連係カメラの設定がオフになっている。",
+      "対応する端末・OS・アカウント条件を満たしていない。",
+      "無線接続またはアプリのカメラ選択が合っていない。"
+    ],
+    "diagnosis": "Macの内蔵カメラが映らない問題とは違い、外部カメラとして使うiPhoneが候補に現れない状態です。Apple公式案内にある対応条件、端末同士の近さ、設定、同じApple Accountを確認します。Macの別アプリでも認識されないかを見ると、アプリ固有の選択ミスか連係機能の問題かを分けられます。",
+    "caution": "ビデオ会議でカメラを試す前に映る背景や通知を確認してください。仕事用Macと個人用iPhoneの連係には組織の方針がある場合があります。認識しないことを理由にApple Accountのサインアウトや写真の削除をしないでください。",
+    "escalation": "条件を満たしても候補に出ない場合はMacとiPhoneの機種・OS、アカウント状態、無線とUSBの結果を記録してAppleサポートを確認します。",
+    "source_url": "https://support.apple.com/ja-jp/102546",
+    "source_label": "Appleサポート：連係カメラでiPhoneをWebカメラに使う",
+    "related_existing": [
+      "/mac/mac-camera-not-working/",
+      "/mac/mac-screenshot-file-not-found/",
+      "/mac/mac-spotlight-files-not-found/"
+    ],
+    "closest_existing_url": "/mac/mac-camera-not-working/",
+    "differentiation": "既存記事はMac内蔵カメラが使えない問題。本記事は別端末iPhoneをMacのカメラとして連係できない条件と接続確認。",
+    "fact_check": "Apple公式の連係カメラ案内で対応条件、iPhone側設定、同じApple Account、Wi-Fi・BluetoothとUSB接続を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-stage-manager-cannot-enable",
+    "path": "/mac/mac-stage-manager-cannot-enable/",
+    "title": "Macでステージマネージャをオンにできないときの確認手順",
+    "topic": "ステージマネージャを切り替えてもウィンドウ整理が始まらない",
+    "description": "ステージマネージャを切り替えてもウィンドウ整理が始まらない。デスクトップとDockの設定、ディスプレイごとの個別操作スペースを確認します。アプリが応答しない症状とは区別します。",
+    "answer": "デスクトップとDockの設定、ディスプレイごとの個別操作スペースを確認します。アプリが応答しない症状とは区別します。",
+    "steps": [
+      "コントロールセンターと『デスクトップとDock』でステージマネージャの状態を確認します。",
+      "オンにできない場合は『Mission Control』の『ディスプレイごとに個別の操作スペース』を確認します。",
+      "設定を変更した場合は画面の案内に沿って再ログインが必要か確認します。",
+      "別のアプリウィンドウを開き、最近のアプリ表示とウィンドウのまとまりが変わるか確認します。"
+    ],
+    "causes": [
+      "ステージマネージャ自体がオフになっている。",
+      "ディスプレイごとの個別操作スペースがオフになっている。",
+      "ウィンドウの表示位置や最近のアプリ表示を機能停止と取り違えている。"
+    ],
+    "diagnosis": "画面共有の接続やアプリのフリーズとは違い、Macのウィンドウ整理機能そのものをオンにできない状態です。Apple公式案内には、オンにできないとき『ディスプレイごとに個別の操作スペース』を有効にする手順があります。機能のスイッチとMission Control設定を順に確かめます。",
+    "caution": "ウィンドウ配置を変えると作業中のアプリが別の位置に移動します。未保存の文書を確認し、共有Macで利用者の表示設定を無断変更しないでください。設定を変えたときは元の状態を控え、必要なら戻せるようにします。",
+    "escalation": "個別操作スペースを有効にしても切り替えられない場合はmacOS版、外部画面の有無、設定画面の状態を記録してAppleサポートを確認します。",
+    "source_url": "https://support.apple.com/ja-jp/guide/mac-help/mchl534ba392/mac",
+    "source_label": "Appleサポート：Macのステージマネージャ",
+    "related_existing": [
+      "/mac/mac-app-not-responding/",
+      "/mac/mac-printer-not-appearing-add/",
+      "/mac/mac-screenshot-file-not-found/"
+    ],
+    "closest_existing_url": "/mac/mac-app-not-responding/",
+    "differentiation": "既存記事は個々のアプリが応答しない問題。本記事はMacのウィンドウ整理機能を有効化できない設定条件。",
+    "fact_check": "Apple公式のステージマネージャ案内でオンにできない場合のMission Control設定を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-recycle-bin-icon-missing",
+    "path": "/windows/windows-recycle-bin-icon-missing/",
+    "title": "Windowsでごみ箱のアイコンだけがデスクトップにないときの確認手順",
+    "topic": "デスクトップの他のアイコンは見えるがごみ箱だけ表示されない",
+    "description": "デスクトップの他のアイコンは見えるがごみ箱だけ表示されない。デスクトップアイコン設定でごみ箱が非表示になっていないか確認します。削除済みファイルが消えたと判断する前に入口の表示を調べます。",
+    "answer": "デスクトップアイコン設定でごみ箱が非表示になっていないか確認します。削除済みファイルが消えたと判断する前に入口の表示を調べます。",
+    "steps": [
+      "デスクトップの他のアイコンは表示されるか確認します。",
+      "設定の『個人用設定』『テーマ』からデスクトップアイコン設定を開きます。",
+      "『ごみ箱』のチェックを確認し、必要なら有効にして適用します。",
+      "アイコンが戻ったらごみ箱を開き、探している削除済みファイルがあるかを別に確認します。"
+    ],
+    "causes": [
+      "デスクトップアイコン設定でごみ箱がオフになっている。",
+      "全てのデスクトップアイコンが非表示になっている。",
+      "アイコンは戻ったが探しているファイルは別の場所にある。"
+    ],
+    "diagnosis": "エクスプローラー全体が応答しない場合とは違い、他のデスクトップアイコンは見えるのにごみ箱だけ欠ける状態です。Microsoft公式案内には『テーマ』からデスクトップアイコン設定でごみ箱のチェックを戻す手順があります。入口の表示と、削除済みファイルの実際の有無を分けて確認します。",
+    "caution": "ごみ箱アイコンがないだけでファイルが完全削除されたとは限りません。一方、アイコンが戻っても必要なファイルの存在は保証されません。確認前にごみ箱を空にしたり、外部の復旧ソフトを導入したりしないでください。",
+    "escalation": "設定をオンにしてもごみ箱だけ表示されない場合は、Windows版、他のアイコンの状態、デスクトップ設定の画面を記録してMicrosoftサポートを確認します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/find-the-recycle-bin-in-windows",
+    "source_label": "Microsoftサポート：Windowsでごみ箱を探す",
+    "related_existing": [
+      "/windows/windows-thumbnails-not-showing/",
+      "/windows/remote-desktop-not-connecting-windows/",
+      "/windows/touch-keyboard-icon-missing-windows/"
+    ],
+    "closest_existing_url": "/windows/windows-thumbnails-not-showing/",
+    "differentiation": "既存記事はエクスプローラー内の画像サムネイルが表示されない問題。本記事はデスクトップ上のごみ箱というシステムアイコンの表示設定。",
+    "fact_check": "Microsoft公式のごみ箱案内で他アイコンが見えるときのテーマ内デスクトップアイコン設定を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-app-hidden-on-another-desktop",
+    "path": "/windows/windows-app-hidden-on-another-desktop/",
+    "title": "Windowsで開いたアプリが別の仮想デスクトップに隠れたときの確認手順",
+    "topic": "起動中のはずのアプリが現在のデスクトップやタスクバーに見えない",
+    "description": "起動中のはずのアプリが現在のデスクトップやタスクバーに見えない。タスクビューで複数の仮想デスクトップを確認し、現在のデスクトップだけにウィンドウを表示する設定を調べます。",
+    "answer": "タスクビューで複数の仮想デスクトップを確認し、現在のデスクトップだけにウィンドウを表示する設定を調べます。",
+    "steps": [
+      "Windowsキー＋Tabを押してタスクビューと仮想デスクトップの一覧を開きます。",
+      "各デスクトップを順に選び、探しているアプリのウィンドウがあるか確認します。",
+      "設定の『システム』『マルチタスク』『デスクトップ』でタスクバーに表示するウィンドウの範囲を確認します。",
+      "必要なら現在のデスクトップへ切り替えて作業し、Alt＋Tabで他デスクトップの窓を表示する設定も確認します。"
+    ],
+    "causes": [
+      "別の仮想デスクトップにアプリの窓が開いている。",
+      "タスクバーに現在のデスクトップの窓だけを表示する設定になっている。",
+      "Alt＋Tabにも現在のデスクトップだけを表示する設定になっている。"
+    ],
+    "diagnosis": "アプリが起動しない問題や二台目のディスプレイが認識されない問題とは違い、アプリは動作中だが別の仮想デスクトップにある状態です。Microsoft公式案内ではWindowsキー＋Tabでデスクトップを切り替え、タスクバーとAlt＋Tabに他デスクトップのウィンドウを含めるか設定できます。まずタスクビュー内に実際の窓があるか見ます。",
+    "caution": "仮想デスクトップを削除する前に開いている作業と未保存の文書を確認してください。タスクバーの表示範囲を変えると、共有画面で見せたくないアプリ名が見える可能性があります。業務端末では表示設定の変更前に周囲の情報を確認します。",
+    "escalation": "タスクビューのどのデスクトップにも見つからない場合は、アプリ名、実行中の状態、タスクバー表示設定を記録してMicrosoftサポートを確認します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/configure-multiple-desktops-in-windows",
+    "source_label": "Microsoftサポート：複数のデスクトップを構成する",
+    "related_existing": [
+      "/windows/second-monitor-not-detected/",
+      "/windows/remote-desktop-not-connecting-windows/",
+      "/windows/touch-keyboard-icon-missing-windows/"
+    ],
+    "closest_existing_url": "/windows/second-monitor-not-detected/",
+    "differentiation": "既存記事は物理的な二台目の画面が認識されない問題。本記事は一台の画面内で複数の仮想デスクトップに分けたアプリの表示設定。",
+    "fact_check": "Microsoft公式の仮想デスクトップ案内でWindowsキー＋Tab、タスクバーとAlt＋Tabの表示対象を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-work-apps-grayed-out",
+    "path": "/android/android-work-apps-grayed-out/",
+    "title": "Androidの仕事用アプリが灰色で開けないときの確認手順",
+    "topic": "仕事用のアプリアイコンが灰色で通知も届かない",
+    "description": "仕事用のアプリアイコンが灰色で通知も届かない。仕事用プロファイルが一時停止されていないか確認し、個人用アプリやプライベートスペースの状態と区別します。",
+    "answer": "仕事用プロファイルが一時停止されていないか確認し、個人用アプリやプライベートスペースの状態と区別します。",
+    "steps": [
+      "アプリのアイコンに仕事用のかばんマークがあるか確認します。",
+      "アプリ一覧の『仕事用』タブを開き、仕事用プロファイルの一時停止状態を確認します。",
+      "端末のクイック設定または仕事用プロファイル設定で一時停止を解除できるか確認します。",
+      "組織が管理する端末なら、解除できない理由を管理者へ確認します。"
+    ],
+    "causes": [
+      "仕事用プロファイルを自分で一時停止した。",
+      "勤務時間外のスケジュールで仕事用アプリが一時停止した。",
+      "組織の管理方針により一時停止や利用が制限されている。"
+    ],
+    "diagnosis": "アプリ自体が削除された場合とは異なり、かばんマークの付いた仕事用アプリが灰色に見える状態です。Google公式案内では仕事用プロファイルを一時停止すると仕事用アプリと通知が使えなくなります。個人用アプリが正常なら、仕事用タブとプロファイルの状態を先に確認します。",
+    "caution": "仕事用プロファイルには所属組織の情報が含まれます。原因が不明なままプロファイルを削除したり、管理ポリシーを回避したりしないでください。勤務時間外の通知方針や端末管理の規則を確認し、必要なら管理者へ依頼します。",
+    "escalation": "一時停止を解除しても仕事用アプリだけ開けない場合は、端末機種、Android版、アイコンの状態とエラーを記録して組織管理者へ相談します。",
+    "source_url": "https://support.google.com/work/android/answer/6191949?hl=en",
+    "source_label": "Google Android Enterpriseヘルプ：仕事用プロファイル",
+    "related_existing": [
+      "/android/private-space-apps-not-visible/",
+      "/android/app-language-not-changing/",
+      "/android/android-screenshot-not-found/"
+    ],
+    "closest_existing_url": "/android/private-space-apps-not-visible/",
+    "differentiation": "既存記事は個人端末内のプライベートスペースのアプリ表示。本記事は組織管理の仕事用プロファイルが一時停止して灰色になる状態。",
+    "fact_check": "Google公式の仕事用プロファイル案内でかばんマーク、仕事用タブ、一時停止による灰色表示を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-bedtime-mode-keeps-turning-on",
+    "path": "/android/android-bedtime-mode-keeps-turning-on/",
+    "title": "Androidのおやすみ時間モードが勝手に始まるときの確認手順",
+    "topic": "夜になると画面がグレースケールや暗い表示になり通知が変わる",
+    "description": "夜になると画面がグレースケールや暗い表示になり通知が変わる。Digital Wellbeingのおやすみ時間モードのスケジュールと表示オプションを確認します。画面のハードウェア故障と決めつけないでください。",
+    "answer": "Digital Wellbeingのおやすみ時間モードのスケジュールと表示オプションを確認します。画面のハードウェア故障と決めつけないでください。",
+    "steps": [
+      "クイック設定でおやすみ時間モードが有効か確認します。",
+      "設定の『Digital Wellbeingと保護者による使用制限』からおやすみ時間モードのスケジュールを確認します。",
+      "グレースケール、画面を暗く保つ、ダークテーマの各オプションを確認します。",
+      "必要な設定だけ変更し、翌日の同じ時刻に再発するか確認します。"
+    ],
+    "causes": [
+      "おやすみ時間モードの時刻スケジュールが有効になっている。",
+      "モード内のグレースケールや画面減光が設定されている。",
+      "ダークテーマだけの変化を画面の故障と取り違えている。"
+    ],
+    "diagnosis": "常に画面が暗い問題ではなく、決まった時間にグレースケールや減光が始まるかを見ます。Google公式案内にはおやすみ時間モードのスケジュールと表示オプションがあり、モードがオンの間だけダークテーマにする設定もあります。発生時刻とクイック設定の状態を比べます。",
+    "caution": "夜間の通知制限には睡眠や緊急連絡に関わる設定があります。全ての通知設定を一括解除せず、必要な連絡先やアラームの例外を確認してください。保護者や組織の管理端末では管理者の方針を無断変更しないでください。",
+    "escalation": "スケジュールをオフにしても同時刻に変化する場合は、端末機種、Android版、発生時刻と他の表示モードを記録してメーカーの公式サポートを確認します。",
+    "source_url": "https://support.google.com/android/answer/9346420?hl=en",
+    "source_label": "Androidヘルプ：Digital Wellbeingで利用時間を管理",
+    "related_existing": [
+      "/android/android-auto-rotate-not-working/",
+      "/android/safe-mode-not-exiting/",
+      "/android/android-screenshot-not-found/"
+    ],
+    "closest_existing_url": "/android/android-auto-rotate-not-working/",
+    "differentiation": "既存記事は端末の縦横回転が変わらない問題。本記事は時刻に連動したおやすみ時間モードの画面色・暗さと通知の変化。",
+    "fact_check": "Google公式のDigital Wellbeing案内でおやすみ時間モードのグレースケール、減光、ダークテーマとスケジュールを確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-clock-alarm-silent",
+    "path": "/android/android-clock-alarm-silent/",
+    "title": "Androidの時計アプリのアラームが鳴らないときの確認手順",
+    "topic": "アラーム時刻になっても音が出ないか通知だけ表示される",
+    "description": "アラーム時刻になっても音が出ないか通知だけ表示される。時計アプリのアラーム設定、通知権限、サイレントモードのアラーム例外を確認します。通常の着信音やメディア音量と区別します。",
+    "answer": "時計アプリのアラーム設定、通知権限、サイレントモードのアラーム例外を確認します。通常の着信音やメディア音量と区別します。",
+    "steps": [
+      "時計アプリで対象のアラームがオンになり、曜日と時刻が正しいか確認します。",
+      "アラーム音とアラーム音量を確認し、数分後に鳴る試験用アラームを作ります。",
+      "時計アプリの通知が許可されているか確認します。",
+      "サイレントモードの設定でアラームが許可されるか確認し、表示された警告を記録します。"
+    ],
+    "causes": [
+      "アラームがオフ、または曜日が違っている。",
+      "アラーム音や音量が意図しない設定になっている。",
+      "時計アプリの通知やサイレントモードの設定がアラームを妨げている。"
+    ],
+    "diagnosis": "端末全体で音が出ない場合とは違い、電話や動画の音は正常で時計アプリのアラームだけ鳴らないかを確かめます。Google公式の時計アプリ案内には通知が必要な場合とサイレントモードによる警告の確認方法があります。次の重要な予定まで待たず、数分後の試験用アラームで再現を確かめます。",
+    "caution": "起床や服薬など重要な予定を一台の未検証アラームだけに頼らないでください。確認が終わるまで別の機器でも予備の通知を設定します。サイレントモード全体を解除すると不要な連絡も鳴るため、アラームの例外から確認してください。",
+    "escalation": "設定を確認しても試験用アラームが鳴らない場合は、端末機種、Android版、時計アプリ版、警告表示を記録して端末メーカーに相談します。",
+    "source_url": "https://support.google.com/android/answer/2840926?hl=en",
+    "source_label": "Androidヘルプ：アラームの設定と問題確認",
+    "related_existing": [
+      "/android/android-no-sound/",
+      "/android/android-screenshot-not-found/",
+      "/android/app-language-not-changing/"
+    ],
+    "closest_existing_url": "/android/android-no-sound/",
+    "differentiation": "既存記事は端末の音声全体が出ない症状。本記事は他の音は出るのに時計アプリのアラームだけ通知設定や例外で鳴らない問題。",
+    "fact_check": "Google公式の時計アプリ案内でアラーム音、時計の通知、サイレントモードの警告と例外を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-cross-device-service-device-missing",
+    "path": "/android/android-cross-device-service-device-missing/",
+    "title": "Androidのデバイス間サービスに別端末が表示されないときの確認手順",
+    "topic": "同じGoogleアカウントの別端末をデバイスグループに追加できない",
+    "description": "同じGoogleアカウントの別端末をデバイスグループに追加できない。対応OS、両端末のGoogleアカウント、Bluetoothとデバイスグループの設定を確認します。Quick Shareの近距離ファイル送信とは別です。",
+    "answer": "対応OS、両端末のGoogleアカウント、Bluetoothとデバイスグループの設定を確認します。Quick Shareの近距離ファイル送信とは別です。",
+    "steps": [
+      "両方の端末のAndroid版が公式の対応条件を満たすか確認します。",
+      "両端末が同じGoogleアカウントにサインインしているか確認します。",
+      "両方でBluetoothをオンにし、設定のGoogle『デバイスと共有』『デバイス間サービス』を開きます。",
+      "デバイスグループ内の一覧に相手端末があるか確認し、サービスの切替と端末再起動後に再確認します。"
+    ],
+    "causes": [
+      "端末のOSや機能の対応条件を満たしていない。",
+      "二台で別のGoogleアカウントを使っている。",
+      "Bluetoothまたはデバイス間サービスがオフになっている。"
+    ],
+    "diagnosis": "Quick Shareで一回だけファイルを送る問題とは違い、同じアカウントの端末を継続的なデバイスグループとして認識できるかを調べます。Google公式案内ではAndroid 11以降の二台、同じアカウント、Bluetoothなどの条件があります。条件を一台ずつ記録するとアカウントと端末の取り違えを防げます。",
+    "caution": "仕事用と個人用の端末を連携させる前に、組織のデータ共有方針を確認してください。対応しない端末に非公式アプリやAPKを入れて機能を強制しないでください。アカウントの削除は他の同期データにも影響するため、最初の対処にはしません。",
+    "escalation": "対応条件を満たしても表示されない場合は、二台の機種・Android版・アカウント種別・Bluetooth状態を記録しGoogleサポートを確認します。",
+    "source_url": "https://support.google.com/android/answer/14997291?hl=en",
+    "source_label": "Androidヘルプ：デバイス間サービスを使う",
+    "related_existing": [
+      "/android/android-quick-share-device-not-showing/",
+      "/android/android-find-hub-device-not-showing/",
+      "/android/android-google-contacts-not-syncing/"
+    ],
+    "closest_existing_url": "/android/android-quick-share-device-not-showing/",
+    "differentiation": "既存記事は近くの相手端末へ一時的にファイル送信するQuick Share。本記事は同じGoogleアカウントで構成する継続的なデバイスグループ。",
+    "fact_check": "Google公式のデバイス間サービス案内でAndroid 11以降、同じアカウント、Bluetoothとグループ確認を確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-invite-link-invalid",
+    "path": "/sns/discord-invite-link-invalid/",
+    "title": "Discordの招待リンクが無効・期限切れと出るときの確認手順",
+    "topic": "サーバーの招待URLを開いても参加画面に進めない",
+    "description": "サーバーの招待URLを開いても参加画面に進めない。招待コードの入力ミス、期限、利用回数、サーバー側の招待停止を確認し、発行者に新しい招待を依頼します。",
+    "answer": "招待コードの入力ミス、期限、利用回数、サーバー側の招待停止を確認し、発行者に新しい招待を依頼します。",
+    "steps": [
+      "招待リンクを発行者から受け取った原文と照合し、コードの大文字・小文字を確認します。",
+      "表示されるエラーが『期限切れ』『無効』などのどれかを記録します。",
+      "発行者へリンクの期限、利用回数、削除、サーバーでの招待停止を確認してもらいます。",
+      "必要なら発行者に新しい有効な招待リンクを作成してもらい、正規の送信経路から開きます。"
+    ],
+    "causes": [
+      "招待コードを誤入力している。",
+      "リンクの期限や利用回数に達した。",
+      "リンクが削除されたかサーバーの招待が停止された。"
+    ],
+    "diagnosis": "DiscordのDMが送れない問題とは異なり、サーバーに入る前の招待URLが使えない状態です。Discord公式案内では期限切れ、不正なコード、サーバー側の制限などでエラーが分かれます。エラーの種類を発行者へ伝え、元のリンクを繰り返し開くより発行状態の確認を優先します。",
+    "caution": "招待を装う偽URLからログイン情報や認証コードを入力しないでください。発行者を別経路で確認し、知らないサーバーへ入る前に名称と目的を確認します。招待制限を回避するため他人のアカウントを使わないでください。",
+    "escalation": "正しいリンクでも参加できない場合は、エラー文、受け取った時刻、発行者が確認した設定を記録し、Discord公式サポートを確認します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/360001556852-Invalid-Invite-Links",
+    "source_label": "Discordサポート：無効な招待リンク",
+    "related_existing": [
+      "/sns/discord-dm-cannot-send/",
+      "/sns/discord-screen-share-audio-missing/",
+      "/sns/discord-microphone-not-working/"
+    ],
+    "closest_existing_url": "/sns/discord-dm-cannot-send/",
+    "differentiation": "既存記事は既存ユーザーへのDM送信条件。本記事はサーバー参加前の招待コードの期限・有効性・発行状態。",
+    "fact_check": "Discord公式の招待エラー案内で期限切れ、コードの大文字小文字、発行者による新規招待を確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-channel-message-permission-denied",
+    "path": "/sns/discord-channel-message-permission-denied/",
+    "title": "Discordの特定チャンネルだけ投稿できないときの確認手順",
+    "topic": "同じサーバーの別チャンネルには書けるが一つだけ送信欄が使えない",
+    "description": "同じサーバーの別チャンネルには書けるが一つだけ送信欄が使えない。チャンネルごとの『メッセージを送信』権限とロールを確認し、管理者に必要な範囲の設定を相談します。",
+    "answer": "チャンネルごとの『メッセージを送信』権限とロールを確認し、管理者に必要な範囲の設定を相談します。",
+    "steps": [
+      "投稿できるチャンネルとできないチャンネルを同じサーバー内で比較します。",
+      "対象チャンネルが閲覧専用の案内用か、送信欄が表示されるか確認します。",
+      "管理者に自分のロールと対象チャンネルの『メッセージを送信』権限を確認してもらいます。",
+      "スレッドだけで投稿できない場合は通常メッセージとスレッドの権限を別々に確認してもらいます。"
+    ],
+    "causes": [
+      "対象チャンネルで送信権限がない。",
+      "ロールに対するチャンネル別の拒否設定がある。",
+      "スレッドの送信権限だけが設定されていない。"
+    ],
+    "diagnosis": "相手にDMを送れない問題とは異なり、同じサーバーのチャンネル単位で投稿できない状態です。Discord公式案内では『メッセージを送信』と『スレッドでメッセージを送信』は別の権限です。閲覧と送信の可否を管理者と照合し、利用者側の通信設定をむやみに変えないようにします。",
+    "caution": "閲覧専用チャンネルに投稿できないのは意図された運用の可能性があります。権限を得るために別アカウントを作ったり、ロールの抜け道を探したりしないでください。管理者へ目的を伝え、必要なチャンネルだけ相談します。",
+    "escalation": "管理者が送信権限を確認しても改善しない場合は、サーバー・チャンネル名、ロール、表示される案内を記録してDiscordサポートを確認します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/10543994968087-Channel-Permissions-Settings-101",
+    "source_label": "Discordサポート：チャンネル権限設定",
+    "related_existing": [
+      "/sns/discord-dm-cannot-send/",
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/discord-screen-share-audio-missing/"
+    ],
+    "closest_existing_url": "/sns/discord-dm-cannot-send/",
+    "differentiation": "既存記事は受信者のDMプライバシーや共通サーバー。本記事はサーバー内の特定チャンネルとロール別の投稿権限。",
+    "fact_check": "Discord公式のチャンネル権限案内で送信権限とスレッド送信権限が別設定であることを確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-breakout-rooms-option-missing",
+    "path": "/sns/zoom-breakout-rooms-option-missing/",
+    "title": "Zoomでブレイクアウトルームの項目が出ないときの確認手順",
+    "topic": "会議中に小グループへ分ける操作が見つからない",
+    "description": "会議中に小グループへ分ける操作が見つからない。ホスト権限、Webポータルのブレイクアウトルーム設定、組織管理者のロックを確認します。参加者の画面共有権限とは別です。",
+    "answer": "ホスト権限、Webポータルのブレイクアウトルーム設定、組織管理者のロックを確認します。参加者の画面共有権限とは別です。",
+    "steps": [
+      "会議のホストまたは共同ホストで参加しているか確認します。",
+      "Zoom Webポータルの会議設定でブレイクアウトルームが有効か確認します。",
+      "設定が灰色ならアカウントまたはグループで管理者がロックしていないか確認します。",
+      "設定変更後に新しい会議で項目が現れるか確認し、参加端末とZoom版を記録します。"
+    ],
+    "causes": [
+      "ホスト権限を持たない参加者として入っている。",
+      "会議設定でブレイクアウトルームが無効になっている。",
+      "組織の管理者が設定をロックしている。"
+    ],
+    "diagnosis": "画面共有を始められない問題ではなく、ホストが参加者を小部屋に分ける機能の入口がない状態です。Zoom公式案内ではWebポータルの会議設定で機能を有効にし、灰色で変更できない場合は上位のアカウント設定を確認します。まず役割と設定の階層を切り分けます。",
+    "caution": "組織管理者のロックを回避する設定変更はしないでください。会議中に参加者を部屋へ移す際は、参加者に説明してから行います。設定を変えた場合は他の会議にも影響する可能性があるため、組織の運用方針を確認します。",
+    "escalation": "ホストで設定が有効なのに項目が出ない場合は、アカウント種別、Zoom版、設定画面の状態、会議IDを記録してZoomサポートへ相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061583",
+    "source_label": "Zoomサポート：ブレイクアウトルームの有効化",
+    "related_existing": [
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/zoom-recording-not-found/",
+      "/sns/zoom-camera-not-working/"
+    ],
+    "closest_existing_url": "/sns/zoom-participant-screen-share-disabled/",
+    "differentiation": "既存記事は参加者の画面共有を許可する機能。本記事はホストが小部屋を作るブレイクアウトルームの有効化と管理者ロック。",
+    "fact_check": "Zoom公式のブレイクアウトルーム設定案内でWebポータルの有効化と管理者ロック時の扱いを確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-keep-memo-attachments-unavailable",
+    "path": "/sns/line-keep-memo-attachments-unavailable/",
+    "title": "LINE Keepメモの古い写真やファイルを開けないときの確認手順",
+    "topic": "Keepメモの文章は残るが以前送った写真やファイルが表示・保存できない",
+    "description": "Keepメモの文章は残るが以前送った写真やファイルが表示・保存できない。Keepメモのトーク履歴と添付ファイルの保存期間を区別し、端末内に保存済みの原本があるか確認します。",
+    "answer": "Keepメモのトーク履歴と添付ファイルの保存期間を区別し、端末内に保存済みの原本があるか確認します。",
+    "steps": [
+      "Keepメモで対象の送信時期と表示されるエラーを確認します。",
+      "同じ写真やファイルが端末の写真アプリ、ファイルアプリに保存されていないか探します。",
+      "別のトークや元の送信者に原本が残っているか、必要に応じて本人へ確認します。",
+      "今後必要な添付ファイルは端末の安全な保存先へ保存し、開けることを確認します。"
+    ],
+    "causes": [
+      "サーバー上の添付ファイルの保存期間が過ぎた。",
+      "トーク内の表示と端末への保存を同じものと考えている。",
+      "端末内の原本を別のフォルダで探している。"
+    ],
+    "diagnosis": "トーク履歴全体が消えた問題とは異なり、文章は残るのに写真・動画・ファイルの実体だけ開けない状態です。LINE公式案内ではKeepメモを含むトークの添付ファイルはサーバーに一定期間だけ保存され、期間の長さは公表されていません。期限切れの復旧を約束せず、端末に保存した原本を探します。",
+    "caution": "保存期間を断定したり、非公式の復旧アプリへLINEの認証情報を渡したりしないでください。添付ファイルに個人情報がある場合は再送を依頼する相手と送信方法を確認します。端末のバックアップを消す操作は最初に行わないでください。",
+    "escalation": "端末にも原本がなく、元の送信者も保管していない場合は、LINE公式ヘルプの保存期間に関する案内を確認し、復元できない可能性を受け入れる必要があります。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20017696",
+    "source_label": "LINEヘルプ：Keepメモについて",
+    "related_existing": [
+      "/sns/line-chat-history-missing/",
+      "/sns/line-chat-backup-fails/",
+      "/sns/instagram-post-upload-failed/"
+    ],
+    "closest_existing_url": "/sns/line-chat-history-missing/",
+    "differentiation": "既存記事はトーク履歴全体の引き継ぎ・復元。本記事はトーク文は残るがKeepメモの添付実体が期限切れで開けない問題。",
+    "fact_check": "LINE公式のKeepメモ案内で添付ファイルのサーバー保存期間が限定され、長さは公表されないことを確認した。"
+  },
+  {
+    "category": "peripherals",
+    "slug": "printer-printing-very-slow-windows",
+    "path": "/peripherals/printer-printing-very-slow-windows/",
+    "title": "Windowsでプリンターの印刷開始や出力が遅いときの確認手順",
+    "topic": "印刷はできるが一枚出るまで長く待たされる",
+    "description": "印刷はできるが一枚出るまで長く待たされる。印刷品質、接続方式、画像の大きさを比べ、故障やキューの完全停止とは分けて調べます。",
+    "answer": "印刷品質、接続方式、画像の大きさを比べ、故障やキューの完全停止とは分けて調べます。",
+    "steps": [
+      "簡単な一ページと高解像度画像を含むページの印刷時間を比べます。",
+      "プリンターの印刷設定で品質が必要以上に高くないか、用紙種類が実際の用紙と合うか確認します。",
+      "Wi-Fi接続なら可能な範囲でUSBまたは有線接続と時間を比べます。",
+      "メーカーが案内するファームウェアとドライバーの更新情報を機種別に確認します。"
+    ],
+    "causes": [
+      "印刷品質が高く処理に時間がかかっている。",
+      "無線接続の遅延が大きい。",
+      "高解像度画像など印刷ジョブが複雑である。"
+    ],
+    "diagnosis": "印刷待ちジョブが削除できない問題とは異なり、最終的には出力されるが速度だけが遅い状態を対象にします。Microsoft公式案内では印刷品質と用紙設定、無線と有線の比較、画像の複雑さを確認します。簡単な一ページを基準にすれば、文書側の処理と接続側の遅延を分けられます。",
+    "caution": "印刷品質を下げると文字や写真の仕上がりが変わります。正式な書類は必要な品質を維持し、試し刷りだけで比較してください。ファームウェア更新はメーカーの機種別手順と電源条件を確認し、業務用プリンターでは管理者へ相談します。",
+    "escalation": "簡単な文書でも複数の接続方法で遅い場合は、機種、印刷時間、用紙と品質の設定、接続方法を記録してメーカーに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/printer/troubleshoot-slow-printing-issues-in-windows",
+    "source_label": "Microsoftサポート：印刷が遅い場合の確認",
+    "related_existing": [
+      "/peripherals/printer-queue-wont-delete/",
+      "/peripherals/printer-offline-windows/",
+      "/peripherals/printer-driver-unavailable-windows/"
+    ],
+    "closest_existing_url": "/peripherals/printer-queue-wont-delete/",
+    "differentiation": "既存記事はジョブが停止しキューから削除できない問題。本記事は印刷は完了するが品質設定や接続により速度が遅い問題。",
+    "fact_check": "Microsoft公式の低速印刷案内で品質、用紙、無線と有線の比較、複雑な文書の影響を確認した。"
+  }
+]
