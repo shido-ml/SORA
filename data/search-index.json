@@ -1,5 +1,155 @@
 [
   {
+    "title": "GoogleスプレッドシートのIMPORTRANGEでアクセス許可が必要と出るとき",
+    "description": "IMPORTRANGEで別のスプレッドシートを参照すると許可待ちや参照エラーになる。参照元への権限を確認し、参照先のセルに表示される「アクセスを許可」を編集者が操作します。",
+    "url": "/google/sheets-importrange-allow-access-error/"
+  },
+  {
+    "title": "Googleフォトで「人物とペット」が表示されないとき",
+    "description": "写真は見られるのに人物ごとのグループがコレクションにない。フェイスグループの設定、地域での提供状況、グループ作成の有無を確認します。",
+    "url": "/google/photos-people-pets-section-missing/"
+  },
+  {
+    "title": "Gmailでメールのテンプレートが表示されないとき",
+    "description": "定型文を保存・挿入したいが作成画面にテンプレートの項目がない。パソコン版Gmailの詳細設定でテンプレートを有効化し、作成画面のその他メニューを確認します。",
+    "url": "/google/gmail-templates-menu-not-visible/"
+  },
+  {
+    "title": "Googleフォトでパートナー共有の写真が自分の一覧に出ないとき",
+    "description": "相手の写真はパートナー共有で見えるが自分の写真一覧には表示されない。共有画面で閲覧できる写真と自分のライブラリに保存した写真を区別します。",
+    "url": "/google/photos-partner-sharing-not-in-library/"
+  },
+  {
+    "title": "Googleドキュメントで行番号の項目が使えないとき",
+    "description": "文書に行番号を付けたいのに項目が表示されないか追加できない。文書がページ分けなし形式か確認し、必要ならページ形式へ切り替えてから行番号を設定します。",
+    "url": "/google/docs-line-numbers-unavailable-pageless/"
+  },
+  {
+    "title": "Googleカレンダーで勤務場所を設定する項目がないとき",
+    "description": "在宅・出社などの勤務場所を予定表へ入れたいが設定が見つからない。対応アカウントと組織の利用許可を確認し、カレンダー設定の勤務時間と場所を探します。",
+    "url": "/google/calendar-working-location-option-missing/"
+  },
+  {
+    "title": "Googleドライブでファイルのオーナーを変更できないとき",
+    "description": "共有設定で所有権の譲渡を選べない、または相手へ移せない。自分が現在の所有者か、譲渡先が同じ組織内かを確認します。",
+    "url": "/google/drive-transfer-ownership-unavailable/"
+  },
+  {
+    "title": "YouTubeで自分の動画のチャプターが表示されないとき",
+    "description": "投稿した動画の再生バーに章の区切りが出ない。手動のタイムスタンプ形式と自動チャプターの許可設定を分けて確認します。",
+    "url": "/google/youtube-video-chapters-not-appearing/"
+  },
+  {
+    "title": "Chromeで同じサイトの複数ファイルを続けてダウンロードできないとき",
+    "description": "一つ目は保存できるのに続くファイルの自動ダウンロードが止まる。一般的な通信失敗と区別し、対象サイトの自動ダウンロード権限を確認します。",
+    "url": "/browser/chrome-multiple-automatic-downloads-blocked/"
+  },
+  {
+    "title": "Chromeでタブを画面の端へドラッグしても分割表示にならないとき",
+    "description": "二つのタブを並べたいがタブを端へ移動しても分割表示にならない。分割表示のドラッグ操作設定を確かめ、メニューからの分割も比較します。",
+    "url": "/browser/chrome-split-view-tab-drag-disabled/"
+  },
+  {
+    "title": "Chromeのサイドパネルが希望と逆側に開くとき",
+    "description": "ブックマークや閲覧リストのパネルがいつも作業したい側と逆に表示される。Chromeのデザイン設定でサイドパネルの開く側を変更します。",
+    "url": "/browser/chrome-side-panel-opens-opposite-side/"
+  },
+  {
+    "title": "Windowsでサンドボックスの機能が表示されないとき",
+    "description": "Windowsの機能一覧やスタートにWindows Sandboxが見つからない。Windowsのエディションと仮想化の前提条件を確認します。",
+    "url": "/windows/windows-sandbox-feature-missing/"
+  },
+  {
+    "title": "Windowsの省エネ機能が予期せずオンになるとき",
+    "description": "ノートPCの画面が暗くなり省エネ表示が自動で始まる。電池残量で自動開始するしきい値と常時使用の設定を確認します。",
+    "url": "/windows/windows-energy-saver-turns-on-automatically/"
+  },
+  {
+    "title": "Windowsの画面が突然白黒や色付きになったとき",
+    "description": "アプリ全体の色が急に変わったがモニターの故障か分からない。色フィルターとキーボードショートカットが有効になっていないか確認します。",
+    "url": "/windows/windows-color-filter-accidentally-enabled/"
+  },
+  {
+    "title": "Windowsの集中セッションを開始したのにタイマーが見えないとき",
+    "description": "集中を開始したはずなのに残り時間がどこにも見えない。設定の集中機能と時計アプリの集中セッション画面を区別して確認します。",
+    "url": "/windows/windows-focus-session-timer-not-visible/"
+  },
+  {
+    "title": "Windowsの3本指タッチパッド操作が違う動きをするとき",
+    "description": "3本指でスワイプすると想定と異なる画面やアプリが開く。タッチパッド全体の故障ではなく、3本指ジェスチャーの割り当てを確認します。",
+    "url": "/windows/windows-three-finger-touchpad-gesture-wrong-action/"
+  },
+  {
+    "title": "MacとiPhoneのユニバーサルクリップボードで貼り付けできないとき",
+    "description": "一方でコピーした文字をもう一方に貼り付けられない。同じApple Account、Wi-Fi、Bluetooth、Handoffと端末間の距離を確認します。",
+    "url": "/mac/universal-clipboard-between-mac-iphone-not-working/"
+  },
+  {
+    "title": "Macのデスクトップにウィジェットが表示されないとき",
+    "description": "通知センターではウィジェットを見られるがデスクトップには出ない。デスクトップ表示とステージマネージャ中の表示設定を別々に確認します。",
+    "url": "/mac/mac-desktop-widgets-not-visible/"
+  },
+  {
+    "title": "充電中のiPhoneでスタンバイ画面が出ないとき",
+    "description": "充電器につないでも時計やウィジェットのスタンバイ表示に切り替わらない。スタンバイ設定、充電状態、横向きで置く条件を確認します。",
+    "url": "/iphone/iphone-standby-not-appearing-while-charging/"
+  },
+  {
+    "title": "iPhoneのコントロールセンターに画面収録ボタンがないとき",
+    "description": "画面の録画を始めたいがコントロールセンターに収録ボタンが見えない。コントロールセンターの編集画面で画面収録コントロールを追加します。",
+    "url": "/iphone/iphone-screen-recording-control-missing/"
+  },
+  {
+    "title": "Macのデスクトップに置いたファイルがスタックに隠れたとき",
+    "description": "デスクトップへ保存したファイルが個別のアイコンとして見つからない。デスクトップのスタック表示を開き、種類や日付ごとのグループを確認します。",
+    "url": "/mac/mac-desktop-files-hidden-in-stacks/"
+  },
+  {
+    "title": "iPhoneのカメラでテキスト認識ボタンが出ないとき",
+    "description": "カメラで書類を映しても文字を選択するテキスト認識の操作が出ない。カメラのテキスト表示設定と対応機種・言語・地域を順に確認します。",
+    "url": "/iphone/iphone-camera-live-text-button-missing/"
+  },
+  {
+    "title": "Androidで「ユーザーを追加」が見つからないとき",
+    "description": "家族用の別ユーザーを作ろうとしても設定に追加項目がない。端末の所有者アカウントか、機種が複数ユーザーに対応するか確認します。",
+    "url": "/android/android-add-user-option-missing/"
+  },
+  {
+    "title": "Androidでジェスチャーナビゲーションの切り替えが見つからないとき",
+    "description": "画面下の3ボタンとスワイプ操作を切り替えたいが設定がない。Pixelとその他の機種で設定経路が異なるため、端末に合う案内を確認します。",
+    "url": "/android/android-navigation-mode-option-missing/"
+  },
+  {
+    "title": "Androidでリンクを開く既定ブラウザーを変えられないとき",
+    "description": "Webリンクが希望しないブラウザーで開く。アプリごとの画面ではなくAndroidの既定アプリにあるブラウザー設定を確認します。",
+    "url": "/android/android-default-browser-choice-not-changing/"
+  },
+  {
+    "title": "Androidでアプリのアイコンが薄くなり開けないとき",
+    "description": "ホーム画面のアプリにアーカイブ印が付いて通常の起動ができない。無効化や仕事用プロフィールの一時停止と区別し、アーカイブされたアプリを復元します。",
+    "url": "/android/android-archived-app-icon-dimmed/"
+  },
+  {
+    "title": "Discordの通話でサウンドボードを使えないとき",
+    "description": "音声チャンネルには入れるがサウンドボードを鳴らせない。通話の接続状態と「サウンドボードを使用」権限を確認します。",
+    "url": "/sns/discord-soundboard-button-disabled/"
+  },
+  {
+    "title": "Zoomで背景をぼかす項目が表示されないとき",
+    "description": "会議の映像設定に「ぼかし」がない。Zoomアプリの設定とPCの背景ぼかし対応要件を確認します。",
+    "url": "/sns/zoom-blur-background-option-missing/"
+  },
+  {
+    "title": "PC版LINEのログイン用QRコードが期限切れになるとき",
+    "description": "パソコンのLINEに表示したQRコードをスマホで読んでもログインできない。QRコードの更新と、スマホ側のログイン承認・確認コード入力を確認します。",
+    "url": "/sns/line-pc-qr-login-code-expired/"
+  },
+  {
+    "title": "Windowsの印刷画面に両面印刷の項目がないとき",
+    "description": "片面印刷はできるのに両面印刷を選べない。プリンターの両面対応、選択した機種とドライバーの機能を確認します。",
+    "url": "/peripherals/printer-duplex-option-unavailable-windows/"
+  },
+  {
     "title": "Chromeで保存したタブグループが見えないときの確認手順",
     "description": "作業用にまとめたタブグループが画面上から消えたように見える。タブバー上の開いたグループと、ブックマークバーの保存済みグループ、別のプロフィールを順に確認します。",
     "url": "/browser/chrome-saved-tab-groups-not-visible/"

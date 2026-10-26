@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "sheets-importrange-allow-access-error",
+    "path": "/google/sheets-importrange-allow-access-error/",
+    "title": "GoogleスプレッドシートのIMPORTRANGEでアクセス許可が必要と出るとき",
+    "topic": "IMPORTRANGEで別のスプレッドシートを参照すると許可待ちや参照エラーになる",
+    "description": "IMPORTRANGEで別のスプレッドシートを参照すると許可待ちや参照エラーになる。参照元への権限を確認し、参照先のセルに表示される「アクセスを許可」を編集者が操作します。",
+    "answer": "参照元への権限を確認し、参照先のセルに表示される「アクセスを許可」を編集者が操作します。",
+    "steps": [
+      "参照元のURLを直接開き、現在のGoogleアカウントに閲覧権限があるか確かめます。",
+      "参照先シートでIMPORTRANGEの式と範囲文字列を確認し、表示されたエラーの文言を記録します。",
+      "初回の接続なら参照先セルの「アクセスを許可」を、そのシートの編集者がクリックします。",
+      "許可後も失敗するなら参照元の共有変更、削除、範囲名の変更を所有者に確認します。"
+    ],
+    "causes": [
+      "参照元に閲覧権限がない。",
+      "二つのシート間の初回接続が承認されていない。",
+      "URLまたは範囲指定が誤っている。"
+    ],
+    "diagnosis": "式の計算エラーとアクセス許可エラーは分けて扱います。まず参照元ファイルが開けるかを確かめ、次に参照先の許可ボタンの有無を見ます。許可ボタンが出ない場合は編集権限と使用中のアカウントを照合し、関数の引数だけを繰り返し書き換えて問題を隠さないようにします。",
+    "caution": "参照元が機密情報を含む場合、参照先の編集者や共有相手がデータを閲覧できる範囲を所有者と確認してください。公開設定へ切り替えて解決しようとせず、必要な共有先だけに権限を付与します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/3093340?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-protected-cell-cannot-edit/",
+      "/google/google-drive-access-denied/",
+      "/google/sheets-filter-view-not-saved/"
+    ],
+    "closest_existing_url": "/google/sheets-protected-cell-cannot-edit/",
+    "differentiation": "既存記事はセル保護で編集できない症状。本記事はIMPORTRANGEの二つのシート間のアクセス承認と参照元権限を扱う。",
+    "fact_check": "Google公式のIMPORT関数案内で初回のアクセス許可操作と、編集者が承認する条件を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-people-pets-section-missing",
+    "path": "/google/photos-people-pets-section-missing/",
+    "title": "Googleフォトで「人物とペット」が表示されないとき",
+    "topic": "写真は見られるのに人物ごとのグループがコレクションにない",
+    "description": "写真は見られるのに人物ごとのグループがコレクションにない。フェイスグループの設定、地域での提供状況、グループ作成の有無を確認します。",
+    "answer": "フェイスグループの設定、地域での提供状況、グループ作成の有無を確認します。",
+    "steps": [
+      "Googleフォトのコレクションで「人物とペット」の項目を探します。",
+      "Googleフォトの設定でフェイスグループがオフになっていないか確認します。",
+      "利用地域でこの機能が提供されているか、Googleの公式案内を確認します。",
+      "有効でも項目がない場合はグループがまだ作成されていない可能性を確認し、写真の削除はせず待ちます。"
+    ],
+    "causes": [
+      "フェイスグループが設定でオフ。",
+      "現在の地域では機能が提供されない。",
+      "人物やペットのグループがまだ作成されていない。"
+    ],
+    "diagnosis": "写真自体が消えた症状ではなく、写真はライブラリにあるのに人物ごとの分類項目が表示されない状態です。Google公式ヘルプは「人物とペット」が見つからない理由として、地域非対応、設定がオフ、グループ未作成を挙げています。この三つを順に確認します。",
+    "caution": "顔の分類は本人や家族のプライバシーに関わります。設定を有効にする前に利用者の意向を確かめ、欠けた分類を直す目的で写真を大量に削除したり、別アカウントへアップロードしたりしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/photos/answer/6128838?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-photos-missing-photos/",
+      "/google/google-photos-shared-album-not-found/",
+      "/google/google-calendar-invite-not-appearing/"
+    ],
+    "closest_existing_url": "/google/google-photos-missing-photos/",
+    "differentiation": "既存記事は写真ファイル自体が見つからない症状。本記事は写真はあるが顔の分類ビューだけがない症状。",
+    "fact_check": "Googleフォト公式ヘルプで人物とペットの項目がない場合の地域、設定、グループ未作成の三条件を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-templates-menu-not-visible",
+    "path": "/google/gmail-templates-menu-not-visible/",
+    "title": "Gmailでメールのテンプレートが表示されないとき",
+    "topic": "定型文を保存・挿入したいが作成画面にテンプレートの項目がない",
+    "description": "定型文を保存・挿入したいが作成画面にテンプレートの項目がない。パソコン版Gmailの詳細設定でテンプレートを有効化し、作成画面のその他メニューを確認します。",
+    "answer": "パソコン版Gmailの詳細設定でテンプレートを有効化し、作成画面のその他メニューを確認します。",
+    "steps": [
+      "スマートフォンアプリではなくパソコンのブラウザーでGmailを開きます。",
+      "設定から「すべての設定を表示」へ進み、「詳細」タブのテンプレートが有効か確認します。",
+      "有効に変更したら画面下部で変更を保存し、メール作成画面を開き直します。",
+      "作成画面のその他メニューからテンプレートの保存・挿入項目を探します。"
+    ],
+    "causes": [
+      "スマートフォンアプリで探している。",
+      "詳細設定のテンプレートが無効。",
+      "設定変更後の保存や作成画面の再表示が済んでいない。"
+    ],
+    "diagnosis": "署名はメール末尾へ自動挿入する別機能で、テンプレートは本文の定型文を手動で呼び出す機能です。署名設定を変更してもテンプレートの項目は現れません。まず利用端末と詳細設定を確かめ、作成画面のその他メニューで候補を見ます。",
+    "caution": "社内メールの文面をテンプレートへ保存する前に、個人情報や宛先が固定されたまま送られないか確認してください。共有端末では定型文の内容が残るため、機密情報を含む文章を安易に保存しないようにします。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/14864208?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-signature-missing-new-mail/",
+      "/google/gmail-not-receiving-email/",
+      "/google/gmail-desktop-notifications-missing/"
+    ],
+    "closest_existing_url": "/google/gmail-signature-missing-new-mail/",
+    "differentiation": "既存記事は署名の自動挿入。本記事はパソコン版だけで有効化する本文テンプレートのメニューと保存手順。",
+    "fact_check": "Gmail公式ヘルプでテンプレートはパソコン版のみ、設定の詳細タブで有効化して変更保存する手順を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-partner-sharing-not-in-library",
+    "path": "/google/photos-partner-sharing-not-in-library/",
+    "title": "Googleフォトでパートナー共有の写真が自分の一覧に出ないとき",
+    "topic": "相手の写真はパートナー共有で見えるが自分の写真一覧には表示されない",
+    "description": "相手の写真はパートナー共有で見えるが自分の写真一覧には表示されない。共有画面で閲覧できる写真と自分のライブラリに保存した写真を区別します。",
+    "answer": "共有画面で閲覧できる写真と自分のライブラリに保存した写真を区別します。",
+    "steps": [
+      "招待されたGoogleアカウントでGoogleフォトを開き、パートナー共有の相手を確認します。",
+      "共有画面では写真が見えるかを確かめ、共有自体が未設定か保存設定の問題か分けます。",
+      "設定のパートナー共有で「自分のアカウントに保存」の対象を確認します。",
+      "対象が一部の日付・人物に絞られている場合は、その条件と探している写真が合うか照合します。"
+    ],
+    "causes": [
+      "招待先とは異なるアカウントで閲覧している。",
+      "自分のアカウントへ保存する設定がオフ。",
+      "保存対象の条件に写真が含まれていない。"
+    ],
+    "diagnosis": "パートナー共有で見える写真が自動的に自分の写真一覧へすべて並ぶとは限りません。共有一覧で見えるか、保存設定が有効か、対象条件に入るかを順に確認します。相手が共有を終了した場合や写真を削除した場合も、保存済みかどうかで見え方が変わります。",
+    "caution": "相手が共有した写真の保存範囲はプライバシーに関わります。保存対象を「すべて」に変更する前に、相手との合意と自分のアカウントの公開・共有設定を確認してください。原因を探すために写真を削除しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/photos/answer/7378858?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-photos-shared-album-not-found/",
+      "/google/photos-locked-folder-missing/",
+      "/google/google-photos-missing-photos/"
+    ],
+    "closest_existing_url": "/google/google-photos-shared-album-not-found/",
+    "differentiation": "既存記事は共有アルバムそのものが見つからない症状。本記事はパートナー共有は閲覧できるが個人ライブラリに保存されない状態。",
+    "fact_check": "Googleフォト公式ヘルプでパートナー共有の閲覧場所と「自分のアカウントに保存」の条件設定を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-line-numbers-unavailable-pageless",
+    "path": "/google/docs-line-numbers-unavailable-pageless/",
+    "title": "Googleドキュメントで行番号の項目が使えないとき",
+    "topic": "文書に行番号を付けたいのに項目が表示されないか追加できない",
+    "description": "文書に行番号を付けたいのに項目が表示されないか追加できない。文書がページ分けなし形式か確認し、必要ならページ形式へ切り替えてから行番号を設定します。",
+    "answer": "文書がページ分けなし形式か確認し、必要ならページ形式へ切り替えてから行番号を設定します。",
+    "steps": [
+      "パソコン版Googleドキュメントで対象文書を開き、ページ形式かページ分けなし形式か確認します。",
+      "ページ分けなしならファイルのページ設定からページ形式に切り替える前に表示への影響を確認します。",
+      "ページ形式になったらツールの行番号の設定を開き、対象範囲と再開始の設定を確認します。",
+      "印刷プレビューで見た目を確認し、共同編集者にも形式変更が必要か相談します。"
+    ],
+    "causes": [
+      "ページ分けなし形式では行番号が使えない。",
+      "モバイル画面でパソコン向けの項目を探している。",
+      "形式変更後の印刷レイアウトを確認していない。"
+    ],
+    "diagnosis": "見出しが文書の概要へ表示されない問題とは別です。行番号はレビュー時に特定の行を指すための表示で、ページ分けなし形式では利用できません。まず文書の形式を確認し、ページ形式への変更が共同編集や図表の配置に影響しないかを見ます。",
+    "caution": "ページ形式への切り替えは余白や改ページなど文書の見た目を変える可能性があります。共同作業中の重要文書では、変更前に複製か履歴を確保し、所有者と表示要件を合わせてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/13820512?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-outline-heading-missing/",
+      "/google/docs-view-only-cannot-edit/",
+      "/google/google-account-passkey-not-working/"
+    ],
+    "closest_existing_url": "/google/docs-outline-heading-missing/",
+    "differentiation": "既存記事は見出しが概要に出ない状態。本記事は行番号機能と文書のページ形式という別の制約を扱う。",
+    "fact_check": "Googleドキュメント公式ヘルプで行番号はページ分けなし形式では利用できず、ページ形式が必要と確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-working-location-option-missing",
+    "path": "/google/calendar-working-location-option-missing/",
+    "title": "Googleカレンダーで勤務場所を設定する項目がないとき",
+    "topic": "在宅・出社などの勤務場所を予定表へ入れたいが設定が見つからない",
+    "description": "在宅・出社などの勤務場所を予定表へ入れたいが設定が見つからない。対応アカウントと組織の利用許可を確認し、カレンダー設定の勤務時間と場所を探します。",
+    "answer": "対応アカウントと組織の利用許可を確認し、カレンダー設定の勤務時間と場所を探します。",
+    "steps": [
+      "パソコン版カレンダーの設定で「勤務時間と場所」が表示されるか確認します。",
+      "対象が公式案内にある対応Workspaceプランか、勤務時間が有効かを確認します。",
+      "職場・学校アカウントで項目がない場合は管理者が機能を有効にしているか問い合わせます。",
+      "項目が使える場合は対象曜日を選び、自宅・オフィスなどの勤務場所を設定します。"
+    ],
+    "causes": [
+      "対象アカウントが対応Workspaceプランではない。",
+      "組織管理者が機能を有効にしていない。",
+      "勤務時間が未設定。"
+    ],
+    "diagnosis": "イベントの場所欄に会議室を入れる操作と、勤務日全体に勤務場所を示す設定は異なります。予定の時刻ずれや招待が届かない問題とも切り分け、設定項目自体があるかを最初に確かめます。表示されない場合は管理者設定や組織の制限が関係します。",
+    "caution": "仕事用アカウントの制限を個人アカウントで迂回して勤務場所を公開しないでください。勤務場所にはプライバシー情報が含まれ得るため、組織の共有範囲と運用ルールを確認してから設定します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/calendar/answer/18616218?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/calendar-booking-page-no-slots/",
+      "/google/google-calendar-not-syncing/",
+      "/google/google-calendar-invite-not-appearing/"
+    ],
+    "closest_existing_url": "/google/calendar-booking-page-no-slots/",
+    "differentiation": "既存記事は予約ページの空き枠が出ない症状。本記事は勤務場所機能の提供条件と管理者設定を扱う。",
+    "fact_check": "Googleカレンダー公式ヘルプで勤務場所の設定画面と、管理者が未有効の場合に項目が出ない条件を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-transfer-ownership-unavailable",
+    "path": "/google/drive-transfer-ownership-unavailable/",
+    "title": "Googleドライブでファイルのオーナーを変更できないとき",
+    "topic": "共有設定で所有権の譲渡を選べない、または相手へ移せない",
+    "description": "共有設定で所有権の譲渡を選べない、または相手へ移せない。自分が現在の所有者か、譲渡先が同じ組織内かを確認します。",
+    "answer": "自分が現在の所有者か、譲渡先が同じ組織内かを確認します。",
+    "steps": [
+      "共有ダイアログで自分が所有者か、相手が編集者として追加されているか確認します。",
+      "個人アカウントか職場・学校アカウントかを確認し、双方の組織が同じか調べます。",
+      "対象が共有ドライブ内かマイドライブ内かを確認し、所有者の扱いを区別します。",
+      "退職・異動に伴う大量移管なら、個別操作を繰り返す前に組織管理者へ相談します。"
+    ],
+    "causes": [
+      "自分がそのファイルの所有者ではない。",
+      "組織アカウントで譲渡先が組織外。",
+      "共有ドライブのファイルを個人所有のファイルと同じ扱いにしている。"
+    ],
+    "diagnosis": "編集権限を渡すことと、ファイルの所有権を譲ることは別の操作です。誰が所有者か、相手のアカウント種別、ファイルの保存先を確認してから譲渡の可否を判断します。職場・学校のアカウントでは同一組織内に譲渡先が制限されます。",
+    "caution": "譲渡すると管理・削除の権限が変わります。共有リンクを公開にして代用せず、引き継ぎ先の本人と組織管理者の手順を確認してください。重要な資料は必要に応じて保存先とアクセス権の一覧を先に控えます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/drive/answer/2494892?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-drive-access-denied/",
+      "/google/google-drive-file-download-failed-browser/",
+      "/google/google-drive-files-missing/"
+    ],
+    "closest_existing_url": "/google/google-drive-access-denied/",
+    "differentiation": "既存記事は共有ファイルを閲覧できない症状。本記事は所有者がファイルの管理権限を別人へ移すときの制約。",
+    "fact_check": "Googleドライブ公式ヘルプで組織アカウントの譲渡は組織内に限られることと管理者の一括移管案内を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-video-chapters-not-appearing",
+    "path": "/google/youtube-video-chapters-not-appearing/",
+    "title": "YouTubeで自分の動画のチャプターが表示されないとき",
+    "topic": "投稿した動画の再生バーに章の区切りが出ない",
+    "description": "投稿した動画の再生バーに章の区切りが出ない。手動のタイムスタンプ形式と自動チャプターの許可設定を分けて確認します。",
+    "answer": "手動のタイムスタンプ形式と自動チャプターの許可設定を分けて確認します。",
+    "steps": [
+      "動画説明欄に先頭00:00から始まる時刻と章名を設定したか確かめます。",
+      "各章の間隔とチャプター数がYouTubeの公式条件を満たすか確認します。",
+      "自動生成を期待する場合はYouTube Studioの動画詳細で自動チャプターの許可を確認します。",
+      "手動チャプターと自動生成のどちらを使うか決め、保存後に公開動画の再生バーで確認します。"
+    ],
+    "causes": [
+      "手動タイムスタンプの形式・数・間隔が条件を満たさない。",
+      "自動チャプターの許可がオフ。",
+      "自動生成の対象にならない動画である。"
+    ],
+    "diagnosis": "視聴者側の字幕やコメント欄の設定とは別に、投稿者が自分の動画の再生バーに章を表示させる話です。手動の章立てと自動生成を混同しないよう、説明欄の時刻表記とStudioの許可を別々に確認します。自動生成は許可しても必ず表示されるとは限りません。",
+    "caution": "説明欄の時刻を修正すると既存の案内リンクや視聴者の参照位置へ影響する場合があります。公開中の動画では変更前の説明欄を控え、保存後に各章の開始位置を実際に開いて確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/9884579?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-video-comments-disabled/",
+      "/google/youtube-subtitles-not-available/",
+      "/google/google-calendar-invite-not-appearing/"
+    ],
+    "closest_existing_url": "/google/youtube-video-comments-disabled/",
+    "differentiation": "既存記事は視聴者がコメント欄を使えない症状。本記事は投稿者が動画の再生チャプターを表示する設定と形式。",
+    "fact_check": "YouTube公式ヘルプで手動チャプターの時刻条件、自動チャプター許可と生成対象の注意を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-multiple-automatic-downloads-blocked",
+    "path": "/browser/chrome-multiple-automatic-downloads-blocked/",
+    "title": "Chromeで同じサイトの複数ファイルを続けてダウンロードできないとき",
+    "topic": "一つ目は保存できるのに続くファイルの自動ダウンロードが止まる",
+    "description": "一つ目は保存できるのに続くファイルの自動ダウンロードが止まる。一般的な通信失敗と区別し、対象サイトの自動ダウンロード権限を確認します。",
+    "answer": "一般的な通信失敗と区別し、対象サイトの自動ダウンロード権限を確認します。",
+    "steps": [
+      "まず一つずつ手動で保存できるか試し、全ファイルが失敗する症状と区別します。",
+      "Chromeの設定でプライバシーとセキュリティ、サイトの設定、追加の権限、自動ダウンロードを開きます。",
+      "対象サイトの許可状態を確認し、信頼できる配布元だけに必要な許可を設定します。",
+      "同じ操作をやり直し、続くファイルの保存確認が出るか、履歴に残るか確かめます。"
+    ],
+    "causes": [
+      "サイトの連続ダウンロード権限がブロックされている。",
+      "一括ダウンロードの確認を閉じてしまった。",
+      "サイト側の保存手順自体が変わった。"
+    ],
+    "diagnosis": "ネットワークエラーで全ファイルが失敗する場合とは異なり、最初のファイルは保存できるのに二つ目以降だけ止まる症状が対象です。Chromeにはサイトが関連ファイルを自動で続けて保存するための権限があり、この設定と配布元の安全性を別々に確認します。",
+    "caution": "不明なサイトに連続保存を許すと不要なファイルまで取得される可能性があります。すべてのサイトへ一律に許可せず、配布元と取得予定のファイル数を確認してください。警告されたファイルは実行しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/95759?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-file-download-failed/",
+      "/browser/chrome-pdf-not-opening/",
+      "/browser/chrome-site-location-blocked/"
+    ],
+    "closest_existing_url": "/browser/chrome-file-download-failed/",
+    "differentiation": "既存記事は一般のダウンロード失敗や危険警告。本記事は一つ目は成功するが後続の自動保存だけが権限で止まる状態。",
+    "fact_check": "Chrome公式ヘルプでサイト設定の追加権限にある自動ダウンロードと、連続ファイル保存の許可設定を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-split-view-tab-drag-disabled",
+    "path": "/browser/chrome-split-view-tab-drag-disabled/",
+    "title": "Chromeでタブを画面の端へドラッグしても分割表示にならないとき",
+    "topic": "二つのタブを並べたいがタブを端へ移動しても分割表示にならない",
+    "description": "二つのタブを並べたいがタブを端へ移動しても分割表示にならない。分割表示のドラッグ操作設定を確かめ、メニューからの分割も比較します。",
+    "answer": "分割表示のドラッグ操作設定を確かめ、メニューからの分割も比較します。",
+    "steps": [
+      "パソコン版Chromeで二つの通常タブを開き、現在のウィンドウ内で試します。",
+      "Chromeの設定、デザインで分割表示のドラッグ操作が有効か確認します。",
+      "タブのメニューやリンクのメニューから分割表示を開けるか比較します。",
+      "ドラッグだけが使えない場合は設定を見直し、分割表示自体がない場合はChromeの更新状態を確認します。"
+    ],
+    "causes": [
+      "端へのドラッグで分割する設定がオフ。",
+      "別のOSの画面分割とChrome内の分割表示を混同。",
+      "古いバージョンや対象外の画面で操作している。"
+    ],
+    "diagnosis": "Windowsのスナップレイアウトはアプリのウィンドウを並べる機能ですが、Chromeの分割表示は同じブラウザー内の二つのタブを並べます。右クリックなどのメニューから分割できるなら機能自体は使えるため、端へドラッグする設定と操作位置を確認します。",
+    "caution": "作業中のタブを閉じたり、保存していないフォームを再読み込みしたりしないでください。画面の並びが変わるだけの操作であることを確認し、会議画面や入力中のページでは先に内容を保存します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/16971124?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/snap-layouts-not-showing-windows/",
+      "/browser/chrome-camera-microphone-not-working/",
+      "/browser/chrome-android-desktop-site-not-shown/"
+    ],
+    "closest_existing_url": "/windows/snap-layouts-not-showing-windows/",
+    "differentiation": "既存記事はWindowsのウィンドウ配置機能。本記事はChrome内のタブ二枚を並べるドラッグ設定。",
+    "fact_check": "Chrome公式ヘルプでタブの分割表示方法と、設定のデザインから端へのドラッグを許可する項目を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-side-panel-opens-opposite-side",
+    "path": "/browser/chrome-side-panel-opens-opposite-side/",
+    "title": "Chromeのサイドパネルが希望と逆側に開くとき",
+    "topic": "ブックマークや閲覧リストのパネルがいつも作業したい側と逆に表示される",
+    "description": "ブックマークや閲覧リストのパネルがいつも作業したい側と逆に表示される。Chromeのデザイン設定でサイドパネルの開く側を変更します。",
+    "answer": "Chromeのデザイン設定でサイドパネルの開く側を変更します。",
+    "steps": [
+      "ブックマークや閲覧リストなど、サイドパネルを一つ開いて現在の位置を確認します。",
+      "Chromeの設定からデザインを開き、サイドパネルの表示位置の項目を探します。",
+      "左側または右側を選び、パネルを開き直して位置が変わったか確認します。",
+      "項目が見つからない場合はChromeの更新状態と、ブラウザー本体のパネルか拡張機能のパネルかを確認します。"
+    ],
+    "causes": [
+      "サイドパネルの位置設定が希望と異なる。",
+      "ブラウザー本体と拡張機能のパネルを混同。",
+      "更新前後でメニュー位置が変わった。"
+    ],
+    "diagnosis": "保存したブックマークが消えた症状ではなく、ブックマークは開けるのにパネルの位置だけが使いづらい状態です。Chrome公式のサイドパネル設定では、デザインから左または右の表示側を選べます。パネルの種類を確かめてから設定を変えます。",
+    "caution": "仕事や学習で画面共有している場合、パネルには履歴やブックマーク名が表示されることがあります。表示位置を変える前後に画面共有の範囲を確認し、不要な情報を映さないようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/13156494?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-bookmarks-missing/",
+      "/browser/chrome-connection-not-private/",
+      "/browser/chrome-saved-tab-groups-not-visible/"
+    ],
+    "closest_existing_url": "/browser/chrome-bookmarks-missing/",
+    "differentiation": "既存記事はブックマークの内容が見つからない問題。本記事はサイドパネル内の内容は見えるが開く左右位置が希望と異なる問題。",
+    "fact_check": "Chrome公式ヘルプでサイドパネルの位置を設定のデザインから変えられることを確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-sandbox-feature-missing",
+    "path": "/windows/windows-sandbox-feature-missing/",
+    "title": "Windowsでサンドボックスの機能が表示されないとき",
+    "topic": "Windowsの機能一覧やスタートにWindows Sandboxが見つからない",
+    "description": "Windowsの機能一覧やスタートにWindows Sandboxが見つからない。Windowsのエディションと仮想化の前提条件を確認します。",
+    "answer": "Windowsのエディションと仮想化の前提条件を確認します。",
+    "steps": [
+      "設定のシステム情報でWindows 11のエディションを確認します。",
+      "Homeの場合はSandboxの対象外かをMicrosoftの対応表で確認し、機能追加を無理に試しません。",
+      "Pro・Enterprise・Educationなら仮想化対応と有効状態、メモリなどの前提を確認します。",
+      "対応端末であればWindowsの機能からSandboxを有効にする公式手順へ進みます。"
+    ],
+    "causes": [
+      "Homeなど対象外エディションを利用している。",
+      "仮想化が使えないか有効でない。",
+      "必要なハードウェア条件を満たさない。"
+    ],
+    "diagnosis": "アプリの検索結果に出ない理由を、インストール不良だけと決めつけないことが大切です。MicrosoftはSandboxがPro、Enterprise、Educationなどで提供され、Homeでは非対応と説明しています。エディションが対応していても仮想化やメモリの条件が必要です。",
+    "caution": "非対応エディションで非公式なスクリプトやライセンス回避の手順を実行しないでください。BIOSの仮想化設定を変更する場合は機種の公式案内に従い、業務用端末では管理者に相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-app-hidden-on-another-desktop/",
+      "/windows/nearby-sharing-device-not-found-windows/",
+      "/windows/windows-thumbnails-not-showing/"
+    ],
+    "closest_existing_url": "/windows/windows-app-hidden-on-another-desktop/",
+    "differentiation": "既存記事は仮想デスクトップでアプリが見えない問題。本記事は隔離実行環境Sandboxの提供エディションと仮想化条件。",
+    "fact_check": "Microsoft公式のWindows Sandbox概要・導入手順で対象エディション、Home非対応、仮想化とハードウェア要件を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-energy-saver-turns-on-automatically",
+    "path": "/windows/windows-energy-saver-turns-on-automatically/",
+    "title": "Windowsの省エネ機能が予期せずオンになるとき",
+    "topic": "ノートPCの画面が暗くなり省エネ表示が自動で始まる",
+    "description": "ノートPCの画面が暗くなり省エネ表示が自動で始まる。電池残量で自動開始するしきい値と常時使用の設定を確認します。",
+    "answer": "電池残量で自動開始するしきい値と常時使用の設定を確認します。",
+    "steps": [
+      "設定のシステム、電源とバッテリーで現在の残量と省エネ機能の状態を確認します。",
+      "「バッテリー残量が次の値になったらオン」のしきい値を確認します。",
+      "「常に省エネ機能を使用」がオンなら、意図した設定か確認します。",
+      "電源接続時とバッテリー駆動時で表示が変わるか、設定を一つずつ比較します。"
+    ],
+    "causes": [
+      "自動開始の残量しきい値に達している。",
+      "常時使用が有効。",
+      "バッテリー駆動へ切り替わった。"
+    ],
+    "diagnosis": "画面の明るさだけが勝手に変わる既存の症状とは異なり、省エネのアイコンや設定が有効になる時点を確認します。Microsoftの案内では残量しきい値を指定でき、常時使用も設定できます。開始条件を記録すれば故障か設定動作か分けられます。",
+    "caution": "省エネを解除すると駆動時間が短くなる可能性があります。急な電源切れを避けるため、残量が少ない状態では先に電源を確保してください。会社の端末では電源ポリシーを勝手に変更しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/power-battery/battery-saving-tips-for-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-auto-brightness-changing/",
+      "/windows/narrator-starts-at-signin/",
+      "/windows/laptop-plugged-in-not-charging/"
+    ],
+    "closest_existing_url": "/windows/windows-auto-brightness-changing/",
+    "differentiation": "既存記事は画面の輝度が変わる症状。本記事は省エネモード自体が残量条件で自動的に始まる状態。",
+    "fact_check": "Microsoft公式のバッテリー節約案内で省エネの自動開始残量と常時使用の設定を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-color-filter-accidentally-enabled",
+    "path": "/windows/windows-color-filter-accidentally-enabled/",
+    "title": "Windowsの画面が突然白黒や色付きになったとき",
+    "topic": "アプリ全体の色が急に変わったがモニターの故障か分からない",
+    "description": "アプリ全体の色が急に変わったがモニターの故障か分からない。色フィルターとキーボードショートカットが有効になっていないか確認します。",
+    "answer": "色フィルターとキーボードショートカットが有効になっていないか確認します。",
+    "steps": [
+      "設定のアクセシビリティで色フィルターがオンかどうかを確認します。",
+      "色フィルターの種類がグレースケールなどに変わっていないか見ます。",
+      "ショートカットを有効にしている場合、WindowsキーとCtrlキーとCキーで切り替わるか確認します。",
+      "色フィルターをオフにしても変わらなければ、特定アプリだけか画面全体かを比較します。"
+    ],
+    "causes": [
+      "色フィルターが誤操作でオン。",
+      "ショートカットによる切り替え。",
+      "アプリやモニター側の表示設定変更。"
+    ],
+    "diagnosis": "文字がぼやける、夜間モードの色が変わらないという症状とは異なり、画面全体が白黒や特定の色調へ急に切り替わった状態です。まずWindowsのアクセシビリティ設定を確認すれば、ディスプレイの修理やドライバー変更を急ぐ前に原因を絞れます。",
+    "caution": "色フィルターを必要とする利用者が使う端末では、勝手にオフにしたままにしないでください。設定前の状態を控え、共有端末なら本人の視認性やアクセシビリティ要件を確認してから変更します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/make-windows-easier-to-see",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/night-light-not-changing-color-windows/",
+      "/windows/windows-pc-running-slow/",
+      "/windows/windows-wont-wake-from-sleep/"
+    ],
+    "closest_existing_url": "/windows/night-light-not-changing-color-windows/",
+    "differentiation": "既存記事は夜間モードをオンにしても色が変わらない症状。本記事は色フィルターが有効になり画面が白黒などに変わる症状。",
+    "fact_check": "Microsoft公式アクセシビリティ案内で色フィルターの設定場所とWindowsキー+Ctrl+Cの切替条件を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-focus-session-timer-not-visible",
+    "path": "/windows/windows-focus-session-timer-not-visible/",
+    "title": "Windowsの集中セッションを開始したのにタイマーが見えないとき",
+    "topic": "集中を開始したはずなのに残り時間がどこにも見えない",
+    "description": "集中を開始したはずなのに残り時間がどこにも見えない。設定の集中機能と時計アプリの集中セッション画面を区別して確認します。",
+    "answer": "設定の集中機能と時計アプリの集中セッション画面を区別して確認します。",
+    "steps": [
+      "設定のシステム、集中でセッション時間とタイマー表示の設定を確認します。",
+      "時計アプリを開き、集中セッションの開始画面からセッションが動いているか見ます。",
+      "通知だけが静かになっている場合は、集中セッションではなく通知の一時停止かを確認します。",
+      "時計アプリでタイマーを展開し、残り時間を表示できるか試します。"
+    ],
+    "causes": [
+      "タイマー表示オプションがオフ。",
+      "時計アプリの表示が縮小されている。",
+      "通知の一時停止と集中セッションを混同。"
+    ],
+    "diagnosis": "通知が出ない原因を調べる記事とは違い、集中セッションの時間表示が見つからない問題です。Microsoftの案内では集中を開始するとタイマーが現れ、時計アプリで全体表示できます。通知の状態だけでセッションが開始されたと判断せず、時計アプリを確認します。",
+    "caution": "会議中や作業中に通知設定を変更する前に、重要な連絡を受け取る必要がないか確認してください。共有PCでは他の人の集中設定を変更しないよう、利用中のWindowsアカウントを確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/focus-stay-on-task-without-distractions-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-app-notifications-not-showing/",
+      "/windows/remote-desktop-not-connecting-windows/",
+      "/windows/windows-wifi-connected-no-internet/"
+    ],
+    "closest_existing_url": "/windows/windows-app-notifications-not-showing/",
+    "differentiation": "既存記事はアプリ通知が届かない症状。本記事は集中セッションが始まったかと残り時間の表示場所。",
+    "fact_check": "Microsoft公式の集中機能案内で開始時のタイマーと時計アプリでの表示方法を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-three-finger-touchpad-gesture-wrong-action",
+    "path": "/windows/windows-three-finger-touchpad-gesture-wrong-action/",
+    "title": "Windowsの3本指タッチパッド操作が違う動きをするとき",
+    "topic": "3本指でスワイプすると想定と異なる画面やアプリが開く",
+    "description": "3本指でスワイプすると想定と異なる画面やアプリが開く。タッチパッド全体の故障ではなく、3本指ジェスチャーの割り当てを確認します。",
+    "answer": "タッチパッド全体の故障ではなく、3本指ジェスチャーの割り当てを確認します。",
+    "steps": [
+      "設定のBluetoothとデバイス、タッチパッドを開きます。",
+      "3本指と4本指ジェスチャーの各割り当てを確認し、意図した操作に戻します。",
+      "端末が高精度タッチパッドに対応するか、Windowsの表示を確認します。",
+      "一つずつジェスチャーを試し、特定の指の本数・方向だけが違うか比較します。"
+    ],
+    "causes": [
+      "ジェスチャーの割り当てが以前と変わった。",
+      "3本指と4本指の操作を取り違えた。",
+      "端末が一部ジェスチャーに非対応。"
+    ],
+    "diagnosis": "タッチパッドがまったく反応しない症状とは別です。ポインターは動くのに、3本指の操作で開く画面だけが期待と違う場合は、ジェスチャーの割り当てが手掛かりになります。Windowsのタッチパッド設定で現在の動作を確認します。",
+    "caution": "作業中のウィンドウが切り替わると保存していない入力を見失う場合があります。重要なフォームを保存してから試し、端末メーカー独自の設定がある場合は公式案内を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/input-devices/touch-gestures-for-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/touchpad-not-working-windows-11/",
+      "/windows/windows-display-text-blurry-scaling/",
+      "/windows/windows-security-not-opening/"
+    ],
+    "closest_existing_url": "/windows/touchpad-not-working-windows-11/",
+    "differentiation": "既存記事はタッチパッド全体が反応しない問題。本記事はポインター操作は可能だが複数指の割り当てが違う問題。",
+    "fact_check": "Microsoft公式のタッチ操作案内で3本指・4本指ジェスチャーの変更場所と高精度タッチパッドの条件を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "universal-clipboard-between-mac-iphone-not-working",
+    "path": "/mac/universal-clipboard-between-mac-iphone-not-working/",
+    "title": "MacとiPhoneのユニバーサルクリップボードで貼り付けできないとき",
+    "topic": "一方でコピーした文字をもう一方に貼り付けられない",
+    "description": "一方でコピーした文字をもう一方に貼り付けられない。同じApple Account、Wi-Fi、Bluetooth、Handoffと端末間の距離を確認します。",
+    "answer": "同じApple Account、Wi-Fi、Bluetooth、Handoffと端末間の距離を確認します。",
+    "steps": [
+      "両端末で同じApple Accountを使用しているか確認します。",
+      "MacとiPhoneのWi-Fi、Bluetooth、Handoffがオンか一つずつ確認します。",
+      "二台を近づけ、短いテキストをコピーしてすぐ貼り付けられるか試します。",
+      "一時的な不調なら両端末を再起動し、同じ条件で再試行します。"
+    ],
+    "causes": [
+      "Apple Accountが異なる。",
+      "Wi-Fi、Bluetooth、Handoffの一部がオフ。",
+      "端末が離れすぎている。"
+    ],
+    "diagnosis": "iPhoneをMacのカメラとして使う連係カメラやAirDropのファイル送信とは別です。コピーは元の端末で成功するのに別端末で貼り付けられないことを先に確認し、Appleの連係機能に共通するアカウントと通信の前提を一つずつ見ます。",
+    "caution": "パスワードや個人情報を検証用にコピーしないでください。共有端末では別の人のアカウントが使われていないか確認し、Apple Accountからのサインアウトや初期化は最初の対処として行わないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/copy-and-paste-between-devices-mchl70368996/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-continuity-camera-iphone-not-detected/",
+      "/mac/mac-screenshot-file-not-found/",
+      "/mac/iphone-not-showing-in-finder-mac/"
+    ],
+    "closest_existing_url": "/mac/mac-continuity-camera-iphone-not-detected/",
+    "differentiation": "既存記事はiPhoneをMacのカメラとして選べない症状。本記事はクリップボードの文字や画像が端末間で貼り付けられない症状。",
+    "fact_check": "AppleのMacユーザガイドでユニバーサルクリップボードの同一アカウント、Wi-Fi、Bluetooth、Handoff、近距離という条件を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-desktop-widgets-not-visible",
+    "path": "/mac/mac-desktop-widgets-not-visible/",
+    "title": "Macのデスクトップにウィジェットが表示されないとき",
+    "topic": "通知センターではウィジェットを見られるがデスクトップには出ない",
+    "description": "通知センターではウィジェットを見られるがデスクトップには出ない。デスクトップ表示とステージマネージャ中の表示設定を別々に確認します。",
+    "answer": "デスクトップ表示とステージマネージャ中の表示設定を別々に確認します。",
+    "steps": [
+      "システム設定のデスクトップとDockを開き、ウィジェットの表示設定を探します。",
+      "「デスクトップ上に表示」と「ステージマネージャで表示」を個別に確認します。",
+      "通知センターにあるウィジェットと、デスクトップに配置したウィジェットを区別します。",
+      "ウィンドウが重なっている場合はデスクトップを表示して配置場所を確認します。"
+    ],
+    "causes": [
+      "デスクトップでの表示がオフ。",
+      "ステージマネージャ中の表示だけがオフ。",
+      "ウィンドウに隠れていて配置場所を見失った。"
+    ],
+    "diagnosis": "Windowsのウィジェットボタンが見えない話ではなく、macOS上で通知センターのウィジェットは使えるのにデスクトップへ出ない状態です。Appleの設定は通常のデスクトップとステージマネージャ中で分かれているため、使用中の表示モードを確かめてから変更します。",
+    "caution": "共有画面に置いたウィジェットは予定や個人情報を表示することがあります。画面共有や録画を始める前に内容を確認し、不要なデータが見える場合はウィジェットの配置や共有範囲を見直してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/add-and-customize-widgets-mchl52be5da5/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-stage-manager-cannot-enable/",
+      "/mac/mac-printer-not-appearing-add/",
+      "/mac/airplay-device-not-showing-mac/"
+    ],
+    "closest_existing_url": "/mac/mac-stage-manager-cannot-enable/",
+    "differentiation": "既存記事はステージマネージャそのものをオンにできない。本記事は機能は動くがデスクトップのウィジェット表示設定が異なる。",
+    "fact_check": "Apple公式Macガイドでデスクトップとステージマネージャそれぞれのウィジェット表示チェック項目を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-standby-not-appearing-while-charging",
+    "path": "/iphone/iphone-standby-not-appearing-while-charging/",
+    "title": "充電中のiPhoneでスタンバイ画面が出ないとき",
+    "topic": "充電器につないでも時計やウィジェットのスタンバイ表示に切り替わらない",
+    "description": "充電器につないでも時計やウィジェットのスタンバイ表示に切り替わらない。スタンバイ設定、充電状態、横向きで置く条件を確認します。",
+    "answer": "スタンバイ設定、充電状態、横向きで置く条件を確認します。",
+    "steps": [
+      "設定アプリでスタンバイがオンになっているか確認します。",
+      "充電中であることを確認し、iPhoneを横向きに置いて画面をロックします。",
+      "画面をタップして表示されるか、置き方や充電器を変えて比較します。",
+      "通常のロック画面は表示できるか確認し、常時表示の有無とスタンバイの起動条件を分けます。"
+    ],
+    "causes": [
+      "スタンバイがオフ。",
+      "充電が始まっていない。",
+      "横向きで安定して置かれていない。"
+    ],
+    "diagnosis": "常時表示ディスプレイが機能しない問題とは違い、充電中の横向き姿勢で時計やウィジェットを表示するスタンバイ機能を扱います。Appleの案内に沿って設定、充電、置き方を順に確認し、常時表示に非対応の機種でも画面タップで表示を確かめます。",
+    "caution": "充電器やケーブルが異常発熱している場合は利用を止めてください。スタンバイを表示するために不安定な場所へ端末を立て掛けず、落下や放熱を妨げない置き方で試してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/use-standby-iph878d77632/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/always-on-display-not-working/",
+      "/iphone/5g-not-showing/",
+      "/iphone/bluetooth-not-connecting/"
+    ],
+    "closest_existing_url": "/iphone/always-on-display-not-working/",
+    "differentiation": "既存記事は通常の常時表示ディスプレイ。本記事は充電・横向き・ロックというスタンバイの起動条件。",
+    "fact_check": "Apple公式iPhoneガイドでスタンバイのオン設定、充電中の横向き配置と画面タップの案内を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-screen-recording-control-missing",
+    "path": "/iphone/iphone-screen-recording-control-missing/",
+    "title": "iPhoneのコントロールセンターに画面収録ボタンがないとき",
+    "topic": "画面の録画を始めたいがコントロールセンターに収録ボタンが見えない",
+    "description": "画面の録画を始めたいがコントロールセンターに収録ボタンが見えない。コントロールセンターの編集画面で画面収録コントロールを追加します。",
+    "answer": "コントロールセンターの編集画面で画面収録コントロールを追加します。",
+    "steps": [
+      "画面右上からコントロールセンターを開き、別ページにも収録ボタンがないか確認します。",
+      "編集画面を開いてコントロールの追加を選び、画面収録を探します。",
+      "追加したボタンを押し、3秒のカウントダウン後に録画が始まるか確認します。",
+      "音声も必要な場合だけボタンを長押しし、マイクの状態を確かめます。"
+    ],
+    "causes": [
+      "画面収録コントロールをまだ追加していない。",
+      "別のコントロールページを見ている。",
+      "録画操作とマイク録音設定を混同。"
+    ],
+    "diagnosis": "撮影済みの録画で音が入らない問題ではなく、録画を開始するボタンそのものがない症状です。Appleのガイドは、ボタンが見えなければコントロールセンターへ追加し、タップ後のカウントダウンで収録を開始すると案内しています。",
+    "caution": "録画には通知や他人の個人情報が入り得ます。会議や配信サービスの画面を録る前に許可と利用規約を確認し、テスト時は私的な情報が映らない画面で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/take-a-screen-recording-iph52f6e1987/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-screen-recording-no-audio/",
+      "/iphone/screen-does-not-turn-off/",
+      "/iphone/personal-hotspot-not-working/"
+    ],
+    "closest_existing_url": "/android/android-screen-recording-no-audio/",
+    "differentiation": "既存記事はAndroidの録画に音が入らない症状。本記事はiPhoneで画面収録ボタンが見えず録画を始められない症状。",
+    "fact_check": "Apple公式iPhoneガイドでコントロールセンターへの画面収録追加、3秒の開始待ち、マイク操作を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-desktop-files-hidden-in-stacks",
+    "path": "/mac/mac-desktop-files-hidden-in-stacks/",
+    "title": "Macのデスクトップに置いたファイルがスタックに隠れたとき",
+    "topic": "デスクトップへ保存したファイルが個別のアイコンとして見つからない",
+    "description": "デスクトップへ保存したファイルが個別のアイコンとして見つからない。デスクトップのスタック表示を開き、種類や日付ごとのグループを確認します。",
+    "answer": "デスクトップのスタック表示を開き、種類や日付ごとのグループを確認します。",
+    "steps": [
+      "Finderでデスクトップを開き、対象ファイル名で探して保存先を確認します。",
+      "デスクトップ上のスタックをクリックし、グループ内のファイルが展開されるか見ます。",
+      "表示メニューでスタックを使用する設定とグループ化の基準を確認します。",
+      "必要ならスタック表示を切り替え、ファイルを移動せずにアイコンの見え方だけ比較します。"
+    ],
+    "causes": [
+      "スタック表示で同種のファイルがまとまっている。",
+      "グループ化基準が日付やタグに変わった。",
+      "別の保存先をデスクトップと思い込んでいる。"
+    ],
+    "diagnosis": "Spotlight検索結果にファイルが出ない問題とは違い、デスクトップに保存したファイルがスタックの中へまとまったため、個別アイコンが見えない状態です。Finderで実際の保存先を確認してから表示の設定を変えれば、削除や移動をせずに切り分けられます。",
+    "caution": "見えないファイルを再作成すると同名の重複が発生します。スタックを解除する前に中身を確かめ、共有デスクトップや同期フォルダであればファイルの移動・削除をせず表示だけを変更してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/organize-files-on-your-desktop-mh35846/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-spotlight-files-not-found/",
+      "/mac/mac-screenshot-file-not-found/",
+      "/mac/mac-continuity-camera-iphone-not-detected/"
+    ],
+    "closest_existing_url": "/mac/mac-spotlight-files-not-found/",
+    "differentiation": "既存記事はSpotlightの検索対象・索引。本記事は実在するデスクトップファイルがスタック表示に収納されている状態。",
+    "fact_check": "Apple公式Macガイドでデスクトップのスタックが種類・日付・タグでファイルをまとめ、表示メニューで切り替えられることを確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-camera-live-text-button-missing",
+    "path": "/iphone/iphone-camera-live-text-button-missing/",
+    "title": "iPhoneのカメラでテキスト認識ボタンが出ないとき",
+    "topic": "カメラで書類を映しても文字を選択するテキスト認識の操作が出ない",
+    "description": "カメラで書類を映しても文字を選択するテキスト認識の操作が出ない。カメラのテキスト表示設定と対応機種・言語・地域を順に確認します。",
+    "answer": "カメラのテキスト表示設定と対応機種・言語・地域を順に確認します。",
+    "steps": [
+      "カメラを開き、明るく文字が読み取れる書類に向けてボタンの有無を確認します。",
+      "設定のカメラで「検出されたテキストを表示」がオフになっていないか確認します。",
+      "iOSの対応機種と利用言語・地域がテキスト認識の条件に入るかAppleの案内で確認します。",
+      "撮影済み写真では文字を選べるか比べ、カメラだけの問題か機能全体か分けます。"
+    ],
+    "causes": [
+      "カメラのテキスト表示がオフ。",
+      "言語・地域または機種が対象外。",
+      "暗さや文字の写り方で認識されていない。"
+    ],
+    "diagnosis": "写真が消えた、カメラが起動しないという問題ではありません。カメラ自体は動き、文字をコピーするテキスト認識のボタンだけが出ない状態です。Appleのガイドにあるカメラ設定と対応範囲を確認し、まず読みやすい印刷物で再現させます。",
+    "caution": "書類の撮影には氏名や住所などが映ることがあります。検証には公開して差し支えない文字を使い、画像を外部サービスへアップロードして認識を代用する前に情報の扱いを確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/use-live-text-iphcf0b71b0e/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/camera-not-opening/",
+      "/iphone/front-camera-not-working/",
+      "/iphone/touchscreen-not-responding/"
+    ],
+    "closest_existing_url": "/iphone/camera-not-opening/",
+    "differentiation": "既存記事はカメラが正常に撮影できない症状。本記事は撮影はできるがLive Textの文字認識ボタンだけが出ない症状。",
+    "fact_check": "Apple公式iPhoneガイドでカメラの検出テキスト表示設定と、地域・言語による提供条件を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-add-user-option-missing",
+    "path": "/android/android-add-user-option-missing/",
+    "title": "Androidで「ユーザーを追加」が見つからないとき",
+    "topic": "家族用の別ユーザーを作ろうとしても設定に追加項目がない",
+    "description": "家族用の別ユーザーを作ろうとしても設定に追加項目がない。端末の所有者アカウントか、機種が複数ユーザーに対応するか確認します。",
+    "answer": "端末の所有者アカウントか、機種が複数ユーザーに対応するか確認します。",
+    "steps": [
+      "設定アプリで「ユーザー」を検索し、システム内の複数ユーザー設定を探します。",
+      "現在の利用者が端末のメインユーザーか確認します。",
+      "「ユーザーを追加」または「ユーザーまたはプロフィールを追加」を探します。",
+      "どちらも表示されない場合は、その機種でユーザー追加に対応するかメーカーの案内を確認します。"
+    ],
+    "causes": [
+      "メインユーザー以外のプロフィールで操作している。",
+      "機種が複数ユーザーを提供しない。",
+      "設定項目の位置がメーカーによって異なる。"
+    ],
+    "diagnosis": "仕事用プロフィールのアプリが灰色になる症状や、プライベートスペースにアプリが見えない症状とは別です。これは端末を使う人ごとにユーザー領域を追加する機能で、Googleの案内では端末所有者だけが追加でき、追加項目自体がなければ非対応の可能性があります。",
+    "caution": "ユーザーの削除はその領域のデータを消す可能性があるため、追加項目を探す目的で既存ユーザーを削除しないでください。共用端末では所有者と相談し、会社・学校の管理設定を勝手に変更しないようにします。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/2865483?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-work-apps-grayed-out/",
+      "/android/android-screenshot-not-found/",
+      "/android/android-find-hub-device-not-showing/"
+    ],
+    "closest_existing_url": "/android/android-work-apps-grayed-out/",
+    "differentiation": "既存記事は仕事用プロフィールのアプリが一時停止して開けない状態。本記事は端末の別ユーザーを追加する設定・所有者条件。",
+    "fact_check": "Android公式ヘルプで端末所有者だけが追加でき、追加項目がなければ機種非対応と案内されていることを確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-navigation-mode-option-missing",
+    "path": "/android/android-navigation-mode-option-missing/",
+    "title": "Androidでジェスチャーナビゲーションの切り替えが見つからないとき",
+    "topic": "画面下の3ボタンとスワイプ操作を切り替えたいが設定がない",
+    "description": "画面下の3ボタンとスワイプ操作を切り替えたいが設定がない。Pixelとその他の機種で設定経路が異なるため、端末に合う案内を確認します。",
+    "answer": "Pixelとその他の機種で設定経路が異なるため、端末に合う案内を確認します。",
+    "steps": [
+      "設定アプリで「ナビゲーションモード」を検索します。",
+      "Pixelならシステムからナビゲーションモードを、その他の機種ならシステム・ジェスチャーを確認します。",
+      "ジェスチャーと3ボタンの選択肢があるかを見て、現在のモードを記録します。",
+      "どちらの経路にも項目がない場合は機種メーカーの案内に従います。"
+    ],
+    "causes": [
+      "Pixelと他機種で設定経路が違う。",
+      "メーカーが設定項目の名称を変えている。",
+      "端末にその切替機能がない。"
+    ],
+    "diagnosis": "タッチ画面の故障で操作ができない状態とは異なり、操作方法そのものを切り替える設定項目が見つからない問題です。GoogleのAndroidヘルプはPixelとそれ以外で設定の階層を分け、項目が見当たらなければメーカーに確認するよう案内しています。",
+    "caution": "操作モードを変更すると戻る・ホーム操作が変わります。初めて切り替える場合は新しい操作を確認し、端末を共有する人の同意を得てから変更してください。アクセシビリティ用の操作方法が必要な人にも配慮します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9079644?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-touchscreen-not-responding/",
+      "/android/android-screenshot-not-found/",
+      "/android/android-find-hub-device-not-showing/"
+    ],
+    "closest_existing_url": "/android/android-touchscreen-not-responding/",
+    "differentiation": "既存記事は画面タッチが反応しない故障の切り分け。本記事は動作はするが3ボタンとジェスチャーの設定経路が見つからない問題。",
+    "fact_check": "Android公式ヘルプでPixelと他機種のナビゲーションモード設定経路とメーカー別の相違を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-default-browser-choice-not-changing",
+    "path": "/android/android-default-browser-choice-not-changing/",
+    "title": "Androidでリンクを開く既定ブラウザーを変えられないとき",
+    "topic": "Webリンクが希望しないブラウザーで開く",
+    "description": "Webリンクが希望しないブラウザーで開く。アプリごとの画面ではなくAndroidの既定アプリにあるブラウザー設定を確認します。",
+    "answer": "アプリごとの画面ではなくAndroidの既定アプリにあるブラウザー設定を確認します。",
+    "steps": [
+      "設定のアプリから「既定のアプリ」または「標準アプリ」を開きます。",
+      "「ブラウザーアプリ」を選び、希望するブラウザーが一覧にあるか確認します。",
+      "選択後に一般のWebリンクを開き、変更が反映されたか試します。",
+      "特定アプリ内のリンクだけ違う場合は、そのアプリ内ブラウザーの設定と区別します。"
+    ],
+    "causes": [
+      "Androidの既定アプリ設定が別ブラウザーになっている。",
+      "希望するブラウザーがインストールされていない。",
+      "アプリ内ブラウザーを端末の既定ブラウザーと混同。"
+    ],
+    "diagnosis": "ChromeでPC版サイトが表示されない問題ではなく、メールやメッセージのWebリンクを押したときにどのブラウザーアプリを起動するかの問題です。端末の既定アプリ設定を確認し、特定アプリ内部だけの表示ならそのアプリの動作として分けて調べます。",
+    "caution": "既定ブラウザーを変えるとログイン状態や拡張機能の利用可否が変わります。共有端末や業務端末では使用するブラウザーの指定がないか確認し、不要なアプリの削除で解決しようとしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/14324187?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-android-desktop-site-not-shown/",
+      "/android/app-language-not-changing/",
+      "/android/android-microphone-not-working/"
+    ],
+    "closest_existing_url": "/browser/chrome-android-desktop-site-not-shown/",
+    "differentiation": "既存記事はChrome内でPC版サイトに切り替わらない問題。本記事はAndroid全体でWebリンクを開く既定ブラウザーの選択。",
+    "fact_check": "Android公式ヘルプで設定、アプリ、既定のアプリ、ブラウザーアプリの順で変更する手順を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-archived-app-icon-dimmed",
+    "path": "/android/android-archived-app-icon-dimmed/",
+    "title": "Androidでアプリのアイコンが薄くなり開けないとき",
+    "topic": "ホーム画面のアプリにアーカイブ印が付いて通常の起動ができない",
+    "description": "ホーム画面のアプリにアーカイブ印が付いて通常の起動ができない。無効化や仕事用プロフィールの一時停止と区別し、アーカイブされたアプリを復元します。",
+    "answer": "無効化や仕事用プロフィールの一時停止と区別し、アーカイブされたアプリを復元します。",
+    "steps": [
+      "薄いアイコンにアーカイブを示す印が付いているか確認します。",
+      "端末がネットに接続でき、元のアプリストアが利用できるか確認します。",
+      "対象アイコンをタップするかアプリの設定から復元を選び、ダウンロードを待ちます。",
+      "復元できない場合はアプリがストアに残っているか、容量不足がないか調べます。"
+    ],
+    "causes": [
+      "未使用アプリのアーカイブで本体部分が除かれた。",
+      "復元に必要なアプリストアが使えない。",
+      "アプリがストアから利用できなくなった。"
+    ],
+    "diagnosis": "仕事用アプリが灰色になり全体が一時停止する症状とは異なり、個別アイコンにアーカイブ印がある状態を扱います。Google Playの案内ではアーカイブされたアプリはアイコンが薄く表示され、復元にはストアと配布中のアプリが必要です。",
+    "caution": "アーカイブ印を見ずにアプリのデータを削除したり、端末を初期化したりしないでください。復元に失敗したら保存データやログイン情報を確認し、重要なアプリは提供元の公式手順を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/googleplay/answer/15523443?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/unused-app-permissions-removed/",
+      "/android/android-camera-permission-denied-app/",
+      "/android/app-language-not-changing/"
+    ],
+    "closest_existing_url": "/android/unused-app-permissions-removed/",
+    "differentiation": "既存記事は未使用アプリの権限が自動的に取り消された状態。本記事はアプリ本体がアーカイブされて再取得が必要な状態。",
+    "fact_check": "Google Play公式ヘルプでアーカイブ印と薄いアイコン、復元時にストアが必要でアプリが提供中である条件を確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-soundboard-button-disabled",
+    "path": "/sns/discord-soundboard-button-disabled/",
+    "title": "Discordの通話でサウンドボードを使えないとき",
+    "topic": "音声チャンネルには入れるがサウンドボードを鳴らせない",
+    "description": "音声チャンネルには入れるがサウンドボードを鳴らせない。通話の接続状態と「サウンドボードを使用」権限を確認します。",
+    "answer": "通話の接続状態と「サウンドボードを使用」権限を確認します。",
+    "steps": [
+      "対象サーバーの音声チャンネルへ接続し、サウンドボードのボタンが表示されるか確認します。",
+      "ほかの音声チャンネルでも同じか比較し、チャンネル固有かアカウント全体か分けます。",
+      "サーバー管理者にロールとチャンネルの「サウンドボードを使用」権限を確認してもらいます。",
+      "権限が有効ならDiscordアプリの更新状態と、対象サウンド自体が使えるかを確認します。"
+    ],
+    "causes": [
+      "利用者のロールにサウンドボード使用権限がない。",
+      "チャンネルの権限がロール設定を上書き。",
+      "アプリや特定サウンドの状態が異なる。"
+    ],
+    "diagnosis": "テキストチャンネルへ投稿できない問題とは別に、音声通話中のサウンドボードという専用機能の権限を扱います。Discord公式ガイドはロールやメンバーごとに「Use Soundboard」を許可・禁止できると案内しています。接続できるだけでは使用許可があるとは限りません。",
+    "caution": "サーバーの権限設定を無断で変更したり、別アカウントで制限を回避したりしないでください。音量や利用ルールが定められたサーバーでは、管理者の指示に従ってテストしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/12612888127767-Discord-Soundboard-Guide-Using-Adding-and-Managing-Sounds",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-channel-message-permission-denied/",
+      "/sns/discord-microphone-not-working/",
+      "/sns/discord-rtc-connecting-stuck/"
+    ],
+    "closest_existing_url": "/sns/discord-channel-message-permission-denied/",
+    "differentiation": "既存記事はテキストチャンネルへの投稿権限。本記事は通話中のサウンドボード使用という別の権限。",
+    "fact_check": "Discord公式サウンドボードガイドでロール・メンバー単位のUse Soundboard権限を確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-blur-background-option-missing",
+    "path": "/sns/zoom-blur-background-option-missing/",
+    "title": "Zoomで背景をぼかす項目が表示されないとき",
+    "topic": "会議の映像設定に「ぼかし」がない",
+    "description": "会議の映像設定に「ぼかし」がない。Zoomアプリの設定とPCの背景ぼかし対応要件を確認します。",
+    "answer": "Zoomアプリの設定とPCの背景ぼかし対応要件を確認します。",
+    "steps": [
+      "Zoomデスクトップアプリのバージョンと、映像設定で背景・エフェクトの項目を確認します。",
+      "背景ぼかしだけがないのか、バーチャル背景機能全体がないのか分けます。",
+      "Zoom公式のシステム要件で使っているOSとCPUがぼかしに対応するか確認します。",
+      "組織アカウントなら管理者の背景機能設定も確認し、対応していない場合は背景を整えるなど別の方法を使います。"
+    ],
+    "causes": [
+      "端末のCPUが背景ぼかしの要件に届かない。",
+      "アプリのバージョンや設定画面が異なる。",
+      "組織側で背景機能が制限されている。"
+    ],
+    "diagnosis": "カメラが黒く映る症状ではなく、映像は出るのに背景の「ぼかし」が選べない状態です。Zoomはグリーンスクリーンなしのぼかしに高い処理性能が必要で、対象外のCPUでは項目が出ないことがあると説明しています。画質やカメラ権限の問題と分けます。",
+    "caution": "未対応の端末で非公式プラグインを入れる前に、Zoom公式の要件を確認してください。会議中の背景変更では私物や他人の情報が映ることがあるため、テスト用会議で映像範囲を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0059090",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-camera-not-working/",
+      "/sns/zoom-breakout-rooms-option-missing/",
+      "/sns/zoom-microphone-not-working/"
+    ],
+    "closest_existing_url": "/sns/zoom-camera-not-working/",
+    "differentiation": "既存記事はカメラ映像そのものが出ない状態。本記事は映像は出るが背景ぼかしの選択肢がない状態とCPU要件。",
+    "fact_check": "Zoom公式の背景ぼかし案内でCPU要件を満たさない場合にぼかし項目が表示されないことを確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-pc-qr-login-code-expired",
+    "path": "/sns/line-pc-qr-login-code-expired/",
+    "title": "PC版LINEのログイン用QRコードが期限切れになるとき",
+    "topic": "パソコンのLINEに表示したQRコードをスマホで読んでもログインできない",
+    "description": "パソコンのLINEに表示したQRコードをスマホで読んでもログインできない。QRコードの更新と、スマホ側のログイン承認・確認コード入力を確認します。",
+    "answer": "QRコードの更新と、スマホ側のログイン承認・確認コード入力を確認します。",
+    "steps": [
+      "PC版LINEのQRコードが期限切れと表示されたら更新アイコンで新しいコードを出します。",
+      "メイン端末のLINEアプリ内のQRコードリーダーで新しいコードを読み取ります。",
+      "スマホ側でログインを承認し、必要ならPC画面の確認コードを制限時間内に入力します。",
+      "スマホ側に確認画面が出なければLINEアプリを再起動し、再度新しいコードで試します。"
+    ],
+    "causes": [
+      "表示中のQRコードが期限切れ。",
+      "スマホでログイン承認を完了していない。",
+      "確認コードの入力時間を過ぎた。"
+    ],
+    "diagnosis": "機種変更時のアカウント引き継ぎQRコードとは異なり、現在使っているアカウントでPC版LINEへログインするためのQRコードです。LINE公式ヘルプは期限切れ時のコード再生成、スマホ側のログイン操作、確認コードの入力時間を明示しています。",
+    "caution": "自分が開始していないPCログイン要求は承認しないでください。画面上の確認コードやQRコードを第三者へ送らず、共有PCで利用した後はログアウト状態を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/mac/?contentId=50001182&lang=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-transfer-qr-scan-fails/",
+      "/sns/x-cannot-log-in/",
+      "/sns/line-messages-not-sending/"
+    ],
+    "closest_existing_url": "/sns/line-transfer-qr-scan-fails/",
+    "differentiation": "既存記事は新端末へのアカウント引き継ぎQR。本記事はPC版LINEへの日常的なログインQRの期限と承認。",
+    "fact_check": "LINE公式ヘルプで期限切れQRの再生成、スマホ側のログイン承認、確認コードの3分制限を確認した。"
+  },
+  {
+    "category": "peripherals",
+    "slug": "printer-duplex-option-unavailable-windows",
+    "path": "/peripherals/printer-duplex-option-unavailable-windows/",
+    "title": "Windowsの印刷画面に両面印刷の項目がないとき",
+    "topic": "片面印刷はできるのに両面印刷を選べない",
+    "description": "片面印刷はできるのに両面印刷を選べない。プリンターの両面対応、選択した機種とドライバーの機能を確認します。",
+    "answer": "プリンターの両面対応、選択した機種とドライバーの機能を確認します。",
+    "steps": [
+      "選択中のプリンター名が実際に使う機種と一致するか確認します。",
+      "メーカーの仕様や説明書で自動両面印刷に対応する機種か確認します。",
+      "印刷画面のプリンターのプロパティと、両面印刷の項目があるか比較します。",
+      "対応機種なのに項目がない場合はメーカーの公式ドライバーと印刷設定を確認します。"
+    ],
+    "causes": [
+      "プリンターが自動両面印刷に非対応。",
+      "別のプリンターが選ばれている。",
+      "利用中のドライバーが両面機能を認識していない。"
+    ],
+    "diagnosis": "印刷が遅い、白紙が出るという症状とは別です。片面では印刷できるのに両面の設定がない場合は、故障と決めず機種の対応とドライバーの認識を調べます。Microsoftの案内では印刷画面の項目とプリンターの仕様で自動両面対応を確認できます。",
+    "caution": "非対応のプリンターで無理に紙を戻すと向きや用紙経路を誤る場合があります。手動両面印刷をする場合はメーカーの給紙手順を確認し、業務用プリンターのドライバー変更は管理者に相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-gb/word/print-on-both-sides-of-the-paper-duplex-printing-in-word",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/peripherals/printer-printing-very-slow-windows/",
+      "/peripherals/printer-queue-wont-delete/",
+      "/peripherals/scanner-not-detected-windows/"
+    ],
+    "closest_existing_url": "/peripherals/printer-printing-very-slow-windows/",
+    "differentiation": "既存記事は印刷開始や出力速度。本記事は片面印刷はできるが両面オプションが表示されない機能認識。",
+    "fact_check": "Microsoft公式の両面印刷案内でプリンターの対応確認と印刷画面で項目を探す方法を確認した。"
+  }
+]

@@ -167,6 +167,7 @@ OFFICIAL_SOURCE_HOSTS = {
     "flets.com",
     "help.instagram.com",
     "help.line.me",
+    "learn.microsoft.com",
     "support.apple.com",
     "support.discord.com",
     "support.google.com",
