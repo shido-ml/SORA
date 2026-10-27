@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailの送信取り消しがすぐ消えるとき",
+    "description": "送信直後の『元に戻す』が間に合わない。Gmailの送信取り消し期間を確認し、送信後に表示される短い猶予内で操作します。",
+    "url": "/google/gmail-undo-send-window-too-short/"
+  },
+  {
+    "title": "Googleスプレッドシートで条件付き書式が反映されないとき",
+    "description": "条件に合うセルの色だけ変わらない。適用範囲、ルールの条件、カスタム数式の参照位置を順に確認します。",
+    "url": "/google/sheets-conditional-format-not-applying/"
+  },
+  {
+    "title": "Googleフォームで解答集の設定が見つからないとき",
+    "description": "問題を作ったのに正解と配点を設定できない。フォームをテスト形式にし、採点できる質問を選んで解答集を開きます。",
+    "url": "/google/forms-answer-key-option-missing/"
+  },
+  {
+    "title": "Googleカレンダーにタスクが表示されないとき",
+    "description": "予定は見えるのに作成したタスクだけカレンダーから消えた。タスクに日付があるかと、表示欄の『タスク』が有効かを確認します。",
+    "url": "/google/calendar-dated-tasks-not-visible/"
+  },
+  {
+    "title": "Googleドライブのファイルを共有ドライブに移動できないとき",
+    "description": "ファイルを開けるのに共有ドライブへ移せない。移動元と移動先の権限、組織境界、対象ファイルの制限理由を確認します。",
+    "url": "/google/drive-move-to-shared-drive-denied/"
+  },
+  {
+    "title": "YouTubeでカスタムサムネイルの設定が出ないとき",
+    "description": "自分の動画で画像をアップロードする選択肢がない。チャンネルの確認状態と動画・Shortsの編集画面、使用端末を切り分けます。",
+    "url": "/google/youtube-custom-thumbnail-option-missing/"
+  },
+  {
+    "title": "Gmailで開封確認をリクエストできないとき",
+    "description": "メール作成画面に開封確認の項目が見つからない。個人用か仕事・学校用アカウントかを確認し、管理者の許可範囲を調べます。",
+    "url": "/google/gmail-read-receipt-option-unavailable/"
+  },
+  {
+    "title": "Googleドキュメントで提案モードが選べないとき",
+    "description": "本文は開けるが変更を提案する入口が見つからない。閲覧者・コメント可・編集者の権限を確かめ、編集モードの切り替え場所を確認します。",
+    "url": "/google/docs-suggesting-mode-option-missing/"
+  },
+  {
+    "title": "Windowsのストレージセンサーでダウンロードが削除されないとき",
+    "description": "空き容量を増やしたいのにダウンロードフォルダーが残る。ストレージセンサーの既定設定ではダウンロードは削除対象ではありません。対象と期間、実行条件を個別に確認します。",
+    "url": "/windows/storage-sense-downloads-not-cleared/"
+  },
+  {
+    "title": "Windowsの拡大鏡がサインイン時に勝手に起動するとき",
+    "description": "起動時の画面拡大だけを止めたい。拡大鏡の自動開始にはサインイン前とサインイン後の別々の設定があります。使わない側を確認します。",
+    "url": "/windows/magnifier-starts-at-signin/"
+  },
+  {
+    "title": "Windowsでダウンロードしたファイルだけプレビューできないとき",
+    "description": "エクスプローラーのプレビューで一部のファイルだけ開かない。ダウンロード元を示す情報が付いたファイルでは、安全対策によりプレビューが無効になる場合があります。出所を確認します。",
+    "url": "/windows/downloaded-file-preview-unavailable/"
+  },
+  {
+    "title": "Windowsで『このPCへのプロジェクション』を使えないとき",
+    "description": "別のPCの画面をこのPCで受信したい。受信側PCにはワイヤレスディスプレイのオプション機能と受信アプリが必要です。送信側の接続設定と分けて確認します。",
+    "url": "/windows/projecting-to-this-pc-unavailable/"
+  },
+  {
+    "title": "Windowsの動的ライティングにRGB機器が表示されないとき",
+    "description": "設定画面で照明付きキーボードなどを操作したい。Windowsの動的ライティングは対応機器だけを扱います。接続と機器対応、制御アプリの優先順位を分けて確認します。",
+    "url": "/windows/dynamic-lighting-device-not-listed/"
+  },
+  {
+    "title": "WindowsでBluetooth LE Audioの項目が出ないとき",
+    "description": "LE Audio対応イヤホンの機能をWindowsで使いたい。イヤホンだけでなくWindows PC側のBluetooth機器、ドライバー、OSがLE Audioに対応する必要があります。",
+    "url": "/windows/bluetooth-le-audio-option-missing/"
+  },
+  {
+    "title": "Macで画面の隅にポインタを置くと突然画面が変わるとき",
+    "description": "意図せず画面ロックやMission Controlなどが起動する。ホットコーナーに動作が割り当てられているか確認し、不要なら割り当てを変更します。",
+    "url": "/mac/hot-corners-activate-unexpectedly/"
+  },
+  {
+    "title": "Macでユーザ辞書の文字置換が展開されないとき",
+    "description": "登録した短い文字列を入力しても置換されない。登録内容とアプリ側の『テキストの置換』設定を別々に確認します。対応しないアプリもあります。",
+    "url": "/mac/text-replacement-not-expanding/"
+  },
+  {
+    "title": "Macでキーボードショートカットが別の動作になるとき",
+    "description": "押したキーで予定した機能ではなく別の操作が起こる。同じキーの組み合わせが別機能に割り当てられていないか、システム設定のショートカット一覧を確認します。",
+    "url": "/mac/keyboard-shortcut-conflict/"
+  },
+  {
+    "title": "iPhone写真の『重複項目』が表示されないとき",
+    "description": "写真アプリの重複整理を使おうとしても項目が見つからない。ライブラリに検出された重複がなければ『重複項目』は表示されません。まず写真アプリの表示位置を確認します。",
+    "url": "/iphone/photos-duplicates-album-missing/"
+  },
+  {
+    "title": "iPhoneを近づけてもNameDropが始まらないとき",
+    "description": "連絡先交換画面が出ない。NameDropは新しい連絡先情報の交換用です。対応機器、近づけ方、共有する場面を確認します。",
+    "url": "/iphone/namedrop-not-appearing/"
+  },
+  {
+    "title": "iPhoneのロック画面にライブアクティビティが出ないとき",
+    "description": "配達状況や進行中の活動がロック画面に見えない。対象アプリがライブアクティビティに対応し、アプリごとの設定が利用できるか確認します。普通の通知設定とは分けます。",
+    "url": "/iphone/live-activities-lock-screen-missing/"
+  },
+  {
+    "title": "AndroidでプライベートDNSを設定すると通信できないとき",
+    "description": "特定のDNSプロバイダ名を入れた後にサイトが開かない。指定したプロバイダのホスト名を確認し、まず自動設定との違いを切り分けます。",
+    "url": "/android/private-dns-provider-connection-fails/"
+  },
+  {
+    "title": "Androidで固定したアプリの画面を解除できないとき",
+    "description": "一つのアプリからホーム画面へ戻れない。アプリ固定はナビゲーション方式ごとに解除操作が異なります。方式を確認してから解除します。",
+    "url": "/android/pinned-app-will-not-unpin/"
+  },
+  {
+    "title": "Google Playのアプリが自動更新されないとき",
+    "description": "手動更新はできるのに自動では新しい版にならない。Playストア全体の自動更新条件と、個別アプリの自動更新設定を両方確認します。",
+    "url": "/android/play-store-apps-not-auto-updating/"
+  },
+  {
+    "title": "PixelカメラでQRコードのリンクが表示されないとき",
+    "description": "QRを写しても読み取り候補が出ない。カメラのスキャン候補設定とコード全体の写り方を確認し、専用のQRスキャナーとも比較します。",
+    "url": "/android/pixel-camera-qr-link-not-shown/"
+  },
+  {
+    "title": "Chromeでリーディングリストが見つからないとき",
+    "description": "保存したページを読むための一覧を開きたい。リーディングリストはサイドパネルから開けます。必要ならツールバーへ固定します。",
+    "url": "/browser/chrome-reading-list-side-panel-missing/"
+  },
+  {
+    "title": "Chromeでスペルミスの下線が出ないとき",
+    "description": "Webフォームの入力中に綴りの指摘が表示されない。Chromeの言語設定にあるスペルチェックを確認し、入力欄によって利用できない場合も分けて見ます。",
+    "url": "/browser/chrome-spell-check-underline-missing/"
+  },
+  {
+    "title": "Chromeで保存した支払い方法が候補に出ないとき",
+    "description": "決済画面のカード欄に自動入力候補が表示されない。Chromeの支払い方法保存と入力設定を確認し、サイト側の入力欄を認識できているか分けて調べます。",
+    "url": "/browser/chrome-payment-card-autofill-missing/"
+  },
+  {
+    "title": "Chromeで『漏洩したパスワード』と表示されたとき",
+    "description": "保存パスワードの警告を安全に確認して対処したい。Googleパスワードマネージャーのチェックアップで対象を確認し、警告されたサービスのパスワードを変更します。",
+    "url": "/browser/chrome-compromised-password-warning/"
+  },
+  {
+    "title": "Discordでプッシュトゥトークのキーを押しても声が届かないとき",
+    "description": "マイクは使えるのに押し話しだけ動かない。入力モードとキー割り当てを確認し、ブラウザー版とデスクトップ版の動作範囲も比較します。",
+    "url": "/sns/discord-push-to-talk-key-not-working/"
+  },
+  {
+    "title": "Zoomで自動字幕の設定が見つからないとき",
+    "description": "会議で字幕を有効にしたいが項目が見えない。アカウントやグループの設定と管理者権限を確認し、利用できる場合は会議内で字幕を開始します。",
+    "url": "/sns/zoom-automated-captions-option-missing/"
+  },
+  {
     "title": "GoogleスプレッドシートのIMPORTRANGEでアクセス許可が必要と出るとき",
     "description": "IMPORTRANGEで別のスプレッドシートを参照すると許可待ちや参照エラーになる。参照元への権限を確認し、参照先のセルに表示される「アクセスを許可」を編集者が操作します。",
     "url": "/google/sheets-importrange-allow-access-error/"

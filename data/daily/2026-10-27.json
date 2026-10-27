@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-undo-send-window-too-short",
+    "path": "/google/gmail-undo-send-window-too-short/",
+    "title": "Gmailの送信取り消しがすぐ消えるとき",
+    "topic": "送信直後の『元に戻す』が間に合わない",
+    "description": "送信直後の『元に戻す』が間に合わない。Gmailの送信取り消し期間を確認し、送信後に表示される短い猶予内で操作します。",
+    "answer": "Gmailの送信取り消し期間を確認し、送信後に表示される短い猶予内で操作します。",
+    "steps": [
+      "パソコン版Gmailで設定から『すべての設定を表示』を開きます。",
+      "『送信取り消し』の取り消し期間を5、10、20、30秒から選び、画面下の変更を保存します。",
+      "自分宛てのテストメールを送り、画面左下の『元に戻す』が表示される時間を確かめます。",
+      "猶予を過ぎたメールは送信済みを確認し、必要なら相手へ訂正メールを送ります。"
+    ],
+    "causes": [
+      "取り消し期間が短い設定のまま",
+      "送信後の通知が消えてから操作している",
+      "別の端末やGmail以外の送信画面を使っている"
+    ],
+    "diagnosis": "これは未配信や迷惑メール判定とは異なり、送信を確定する前の短い取り消し猶予の問題です。Gmailの『元に戻す』は送信済みメールを後から相手の受信箱から消す機能ではありません。表示される位置と残り時間をテスト送信で把握してから重要なメールを送ります。",
+    "caution": "期間を30秒にしても経過後は取り消せません。相手のメールを消せると誤解して機密情報を送らず、宛先と添付を送信前に確認してください。誤送信時は組織の報告手順も確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/2819488?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-sent-mail-not-delivered/",
+      "/google/gmail-scheduled-send-not-sent/",
+      "/google/gmail-storage-full/"
+    ],
+    "closest_existing_url": "/google/gmail-sent-mail-not-delivered/",
+    "differentiation": "既存記事は送信後に相手へ届かない問題。本記事は送信直後の取消操作の時間と、時間切れ後にできることを区別する。",
+    "fact_check": "Gmail公式ヘルプで送信取消期間が5・10・20・30秒であり、設定後に保存する手順を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-conditional-format-not-applying",
+    "path": "/google/sheets-conditional-format-not-applying/",
+    "title": "Googleスプレッドシートで条件付き書式が反映されないとき",
+    "topic": "条件に合うセルの色だけ変わらない",
+    "description": "条件に合うセルの色だけ変わらない。適用範囲、ルールの条件、カスタム数式の参照位置を順に確認します。",
+    "answer": "適用範囲、ルールの条件、カスタム数式の参照位置を順に確認します。",
+    "steps": [
+      "色が変わらないセルを選び、『表示形式』から条件付き書式のルールを開きます。",
+      "『範囲に適用』がそのセルを含むか、条件の値とセルの実際の値の型を比べます。",
+      "カスタム数式なら適用範囲の先頭セルを基準に相対・絶対参照を確認します。",
+      "一つのテストセルで条件を単純化し、期待どおり色が変わってから元の式に戻します。"
+    ],
+    "causes": [
+      "ルールの適用範囲から対象セルが外れている",
+      "文字列と数値など条件の比較対象が違う",
+      "カスタム数式の参照行や列がずれている"
+    ],
+    "diagnosis": "フィルタ表示の保存やセルの編集権限ではなく、値は入力できるのに条件付き書式だけが働かない状態です。色を手動で付けてごまかす前に、選択したセルにどのルールが適用されるかを確認します。数式ルールは範囲の先頭セルとの位置関係で評価します。",
+    "caution": "既存ルールを一括削除すると他のセルの表示も変わります。共有シートでは適用範囲と式を控え、テスト用の複製で確認してから最小限の修正を行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/78413?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-filter-view-not-saved/",
+      "/google/sheets-protected-cell-cannot-edit/",
+      "/google/sheets-importrange-allow-access-error/"
+    ],
+    "closest_existing_url": "/google/sheets-filter-view-not-saved/",
+    "differentiation": "既存記事は絞り込み表示の保存。本記事はセル値に応じて色を変えるルールの範囲・式の評価という別機能を扱う。",
+    "fact_check": "Googleスプレッドシート公式の条件付き書式案内で適用範囲、条件、カスタム数式と参照の設定を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-answer-key-option-missing",
+    "path": "/google/forms-answer-key-option-missing/",
+    "title": "Googleフォームで解答集の設定が見つからないとき",
+    "topic": "問題を作ったのに正解と配点を設定できない",
+    "description": "問題を作ったのに正解と配点を設定できない。フォームをテスト形式にし、採点できる質問を選んで解答集を開きます。",
+    "answer": "フォームをテスト形式にし、採点できる質問を選んで解答集を開きます。",
+    "steps": [
+      "編集権限のあるアカウントでフォームを開き、『設定』のテスト設定を確認します。",
+      "テスト形式を有効にした後、正解を付けたい質問を一つ選択します。",
+      "質問の種類を確認し、左下の『解答集』から正解と点数を設定します。",
+      "プレビューで回答者画面と採点結果を確かめ、既存回答がある場合は公開前に採点への影響を確認します。"
+    ],
+    "causes": [
+      "テスト形式が無効",
+      "フォーム全体の設定を見ていて個別質問を選んでいない",
+      "質問形式によって自動採点の扱いが違う"
+    ],
+    "diagnosis": "回答受付が止まる問題とは異なり、フォームは編集できるのに採点用の正解欄が見えない状態です。Googleフォームはテスト設定と各質問の解答集を別々に設定します。設問を選ばずに設定画面だけを探しても正解と配点の入口は見つかりません。",
+    "caution": "既に回答を集めているフォームをテストへ変更する場合、表示する点数や正解が回答者に与える影響を先に確認してください。授業や試験では複製したフォームで試してから本番を変更します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/7032287?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/forms-not-accepting-responses/",
+      "/google/google-photos-shared-album-not-found/",
+      "/google/google-photos-missing-photos/"
+    ],
+    "closest_existing_url": "/google/forms-not-accepting-responses/",
+    "differentiation": "既存記事は回答フォームが受付を止める問題。本記事は編集者側でテストの正解・配点の入口がない問題を扱う。",
+    "fact_check": "Googleフォーム公式ヘルプでテスト設定、質問選択、解答集の入口と配点の操作を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-dated-tasks-not-visible",
+    "path": "/google/calendar-dated-tasks-not-visible/",
+    "title": "Googleカレンダーにタスクが表示されないとき",
+    "topic": "予定は見えるのに作成したタスクだけカレンダーから消えた",
+    "description": "予定は見えるのに作成したタスクだけカレンダーから消えた。タスクに日付があるかと、表示欄の『タスク』が有効かを確認します。",
+    "answer": "タスクに日付があるかと、表示欄の『タスク』が有効かを確認します。",
+    "steps": [
+      "Google Tasks側で対象タスクの日付と利用アカウントを確かめます。",
+      "パソコン版カレンダーの左側『マイカレンダー』で『タスク』のチェックを確認します。",
+      "日付のあるテストタスクを作り、該当日と別の表示形式で現れるか試します。",
+      "スマホ版でも同じアカウントとタスク表示を確認し、予定全体の同期不良か表示だけの問題か分けます。"
+    ],
+    "causes": [
+      "タスクに日付が設定されていない",
+      "カレンダーのタスク表示がオフ",
+      "別のGoogleアカウントでタスクを作成した"
+    ],
+    "diagnosis": "通常の予定が同期されない問題ではなく、予定は見えているのにTasksだけが表示されない症状です。Google公式ヘルプでは日付のないタスクはカレンダーに現れず、左側のタスク表示をオンにする必要があります。作成先アカウントも分けて確認します。",
+    "caution": "タスクを削除して作り直す前にTasks側に残っているか確認してください。仕事用と個人用のアカウントを切り替えると別のリストに見えるため、既存タスクを移動する前に保存先を控えます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/calendar/answer/9901136?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-calendar-not-syncing/",
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-calendar-desktop-reminders-missing/"
+    ],
+    "closest_existing_url": "/google/google-calendar-not-syncing/",
+    "differentiation": "既存記事は通常の予定が端末間で同期しない問題。本記事はTasksの日時と表示チェックに限定した原因を調べる。",
+    "fact_check": "Googleカレンダー公式ヘルプで日付のないタスクは表示されず、マイカレンダーのTasksチェックが必要と確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-move-to-shared-drive-denied",
+    "path": "/google/drive-move-to-shared-drive-denied/",
+    "title": "Googleドライブのファイルを共有ドライブに移動できないとき",
+    "topic": "ファイルを開けるのに共有ドライブへ移せない",
+    "description": "ファイルを開けるのに共有ドライブへ移せない。移動元と移動先の権限、組織境界、対象ファイルの制限理由を確認します。",
+    "answer": "移動元と移動先の権限、組織境界、対象ファイルの制限理由を確認します。",
+    "steps": [
+      "対象が自分のマイドライブか共有されたファイルかを確認し、現在の所有者を控えます。",
+      "移動先の共有ドライブで自分に必要な権限があるか、管理者の設定も確認します。",
+      "移動時に表示された理由が権限、異なる組織、禁止されたファイル形式のどれかを記録します。",
+      "所有者や共有ドライブの管理者に、必要な範囲の移動権限または移動の代行を依頼します。"
+    ],
+    "causes": [
+      "移動元ファイルや移動先共有ドライブの権限不足",
+      "組織間の移動が制限されている",
+      "共有ドライブ側で許可されない形式や状態"
+    ],
+    "diagnosis": "ダウンロードやアップロードが遅い問題ではなく、既存ファイルを共有ドライブへ移す操作が拒否される状態です。Googleの公式案内には権限、異なる組織、禁止形式など移動不可の理由が分けて示されています。エラーの文言を残すと管理者への相談が具体的になります。",
+    "caution": "権限を回避するために勝手に複製や再アップロードをすると共有リンク、履歴、所有関係が変わる場合があります。組織のファイルなら管理者と所有者の方針を確認してから移動してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/drive/answer/13045066?co=GENIE.Platform%3DDesktop&hl=en-GB",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/drive-transfer-ownership-unavailable/",
+      "/google/drive-offline-file-unavailable/",
+      "/google/drive-shortcut-original-unavailable/"
+    ],
+    "closest_existing_url": "/google/drive-transfer-ownership-unavailable/",
+    "differentiation": "既存記事は個人間の所有権移転。本記事は共有ドライブへのファイル移動と、移動元・先の権限や組織制約を扱う。",
+    "fact_check": "Googleドライブ公式の共有ドライブ移動案内で権限不足、異なる組織、禁止形式などの理由を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-custom-thumbnail-option-missing",
+    "path": "/google/youtube-custom-thumbnail-option-missing/",
+    "title": "YouTubeでカスタムサムネイルの設定が出ないとき",
+    "topic": "自分の動画で画像をアップロードする選択肢がない",
+    "description": "自分の動画で画像をアップロードする選択肢がない。チャンネルの確認状態と動画・Shortsの編集画面、使用端末を切り分けます。",
+    "answer": "チャンネルの確認状態と動画・Shortsの編集画面、使用端末を切り分けます。",
+    "steps": [
+      "YouTube Studioで対象が通常動画かShortsかを確認します。",
+      "チャンネルが電話番号による確認を済ませているか公式の確認画面で調べます。",
+      "通常動画はStudioのコンテンツから対象動画のサムネイル欄を開きます。",
+      "Shortsならパソコン版YouTube Studioを使い、保存後は反映に時間がかかることを踏まえて再確認します。"
+    ],
+    "causes": [
+      "チャンネルの確認が未完了",
+      "Shortsをスマホ版で編集している",
+      "編集後の反映待ち、またはサムネイル制限"
+    ],
+    "diagnosis": "動画のチャプター表示や視聴者の字幕とは別の、投稿者がサムネイル画像をアップロードする問題です。YouTube公式ヘルプではチャンネル確認が必要で、Shortsのカスタムサムネイルは現在パソコン版Studioで追加すると案内されています。",
+    "caution": "制限を回避するために別チャンネルへ転載せず、警告や利用上限が表示された場合は公式の案内を確認してください。画像の権利やコミュニティガイドラインも公開前に確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/72431?co=GENIE.Platform%3DDesktop&hl=en-GB",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-video-chapters-not-appearing/",
+      "/google/youtube-video-comments-disabled/",
+      "/google/youtube-subtitles-not-available/"
+    ],
+    "closest_existing_url": "/google/youtube-video-chapters-not-appearing/",
+    "differentiation": "既存記事は再生バーのチャプター。本記事は投稿者がカスタムサムネイルを設定する資格と端末別の入口を扱う。",
+    "fact_check": "YouTube公式ヘルプで確認済みチャンネル、通常動画とShortsの編集経路、ShortsのPC要件を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-read-receipt-option-unavailable",
+    "path": "/google/gmail-read-receipt-option-unavailable/",
+    "title": "Gmailで開封確認をリクエストできないとき",
+    "topic": "メール作成画面に開封確認の項目が見つからない",
+    "description": "メール作成画面に開封確認の項目が見つからない。個人用か仕事・学校用アカウントかを確認し、管理者の許可範囲を調べます。",
+    "answer": "個人用か仕事・学校用アカウントかを確認し、管理者の許可範囲を調べます。",
+    "steps": [
+      "Gmail右上のアカウントを見て個人用か組織アカウントか確認します。",
+      "仕事・学校用ならパソコン版Gmailで新規メールのメニューに開封確認のリクエストがあるか確認します。",
+      "項目がなければ組織の管理者へ利用可否と送信先の制限を問い合わせます。",
+      "送信後も開封通知が必ず返るとは限らないため、必要な確認は相手へ直接依頼します。"
+    ],
+    "causes": [
+      "個人用Gmailにはこの機能がない",
+      "組織管理者が開封確認を制限している",
+      "受信側のメール環境や承認により確認が返らない"
+    ],
+    "diagnosis": "メールの配信失敗ではなく、送信者が開封確認を要求するメニュー自体がない状態です。Googleの公式案内ではこの機能は仕事用・学校用アカウント向けで、管理者が相手先を制限できます。要求できても実際の閲覧を確実に証明するものではありません。",
+    "caution": "開封確認がないことを未読や未配信の証拠と決めつけないでください。相手のプライバシーと組織の規則を尊重し、重要な連絡の受領確認は適切な別経路で行います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/9413651?hl=en-GB",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-sent-mail-not-delivered/",
+      "/google/gmail-archived-mail-not-found/",
+      "/google/gmail-templates-menu-not-visible/"
+    ],
+    "closest_existing_url": "/google/gmail-sent-mail-not-delivered/",
+    "differentiation": "既存記事はメールが相手へ届くかどうか。本記事は開封確認機能のアカウント種別・管理者制限と通知の限界を扱う。",
+    "fact_check": "Gmail公式ヘルプで開封確認は仕事・学校用のみで管理者が制限でき、受信側によって返らないことを確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-suggesting-mode-option-missing",
+    "path": "/google/docs-suggesting-mode-option-missing/",
+    "title": "Googleドキュメントで提案モードが選べないとき",
+    "topic": "本文は開けるが変更を提案する入口が見つからない",
+    "description": "本文は開けるが変更を提案する入口が見つからない。閲覧者・コメント可・編集者の権限を確かめ、編集モードの切り替え場所を確認します。",
+    "answer": "閲覧者・コメント可・編集者の権限を確かめ、編集モードの切り替え場所を確認します。",
+    "steps": [
+      "共有画面で自分の権限が閲覧者、コメント可、編集者のどれか確かめます。",
+      "パソコン版ドキュメント右上の編集モードのメニューで『提案』を探します。",
+      "選択した文字の右側に提案ボタンが表示されるか、別の文書でも比較します。",
+      "閲覧のみなら所有者へコメントまたは編集権限を依頼し、権限変更前に既存の提案を消さないようにします。"
+    ],
+    "causes": [
+      "閲覧者権限で提案が許可されていない",
+      "編集モードの切り替えメニューを開いていない",
+      "別アカウントやアプリ画面で操作している"
+    ],
+    "diagnosis": "文書そのものを編集できない問題と近いですが、ここでは元の文章を直接変えずレビュー用の提案を残すことが目的です。Googleの公式案内では提案はコメント可または編集可の権限で利用でき、右上の編集モードから切り替えられます。",
+    "caution": "提案の代わりに本文を直接書き換えると共同編集者のレビュー手順が変わります。重要文書では権限を勝手に拡大せず、所有者に提案で作業したい旨を伝えてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/6033474?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-view-only-cannot-edit/",
+      "/google/google-photos-missing-photos/",
+      "/google/google-photos-shared-album-not-found/"
+    ],
+    "closest_existing_url": "/google/docs-view-only-cannot-edit/",
+    "differentiation": "既存記事は本文を直接編集できない状態。本記事は原文を保持して変更提案を残す権限・モードの入口を扱う。",
+    "fact_check": "Googleドキュメント公式ヘルプで提案モードのメニューとコメント可・編集可権限の条件を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "storage-sense-downloads-not-cleared",
+    "path": "/windows/storage-sense-downloads-not-cleared/",
+    "title": "Windowsのストレージセンサーでダウンロードが削除されないとき",
+    "topic": "空き容量を増やしたいのにダウンロードフォルダーが残る",
+    "description": "空き容量を増やしたいのにダウンロードフォルダーが残る。ストレージセンサーの既定設定ではダウンロードは削除対象ではありません。対象と期間、実行条件を個別に確認します。",
+    "answer": "ストレージセンサーの既定設定ではダウンロードは削除対象ではありません。対象と期間、実行条件を個別に確認します。",
+    "steps": [
+      "設定→システム→ストレージ→ストレージセンサーを開き、有効か確認します。",
+      "『ダウンロードフォルダー内のファイルを開いていない期間』の設定を確認し、必要な期間を選びます。",
+      "実行頻度とサインイン状態を確認し、ストレージセンサーを手動実行して結果を見ます。",
+      "消えないファイルの最終アクセス時刻を確認し、不要と判断したファイルだけ個別に移動・削除します。"
+    ],
+    "causes": [
+      "既定ではダウンロードの削除が無効",
+      "設定した未使用期間がまだ経過していない",
+      "ストレージセンサーの実行条件を満たしていない"
+    ],
+    "diagnosis": "一時ファイルの掃除とダウンロードの整理は別設定です。既定では容量不足時にストレージセンサーが動いても、ダウンロードは対象に入りません。個人用設定なので別のWindowsユーザーで確認すると結果が異なります。",
+    "caution": "ダウンロードには再取得できない原本もあります。期間を短くする前に保存先とバックアップを確認してください。OneDriveの『オンラインのみ』化はクラウド上の削除とは異なるため、容量表示だけでファイル消失と判断しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/manage-drive-space-with-storage-sense",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-c-drive-space-disappearing/",
+      "/windows/windows-hello-fingerprint-not-recognized/",
+      "/windows/windows-app-notifications-not-showing/"
+    ],
+    "closest_existing_url": "/windows/windows-c-drive-space-disappearing/",
+    "differentiation": "既存記事は更新用の空き容量不足。本記事はダウンロードを消さない既定動作と未使用期間・実行条件を扱う。",
+    "fact_check": "Microsoftは既定でダウンロードを処理せず、個別に設定した場合のみ処理すると説明している。"
+  },
+  {
+    "category": "windows",
+    "slug": "magnifier-starts-at-signin",
+    "path": "/windows/magnifier-starts-at-signin/",
+    "title": "Windowsの拡大鏡がサインイン時に勝手に起動するとき",
+    "topic": "起動時の画面拡大だけを止めたい",
+    "description": "起動時の画面拡大だけを止めたい。拡大鏡の自動開始にはサインイン前とサインイン後の別々の設定があります。使わない側を確認します。",
+    "answer": "拡大鏡の自動開始にはサインイン前とサインイン後の別々の設定があります。使わない側を確認します。",
+    "steps": [
+      "Windowsキー+Escで現在の拡大鏡を終了します。",
+      "Windowsキー+Ctrl+Mで拡大鏡の設定を開きます。",
+      "詳細設定の『サインイン前に拡大鏡を開始』と『サインイン後に拡大鏡を開始』をそれぞれ確認します。",
+      "不要な方をオフにして次回サインイン時に再発するか確認します。"
+    ],
+    "causes": [
+      "サインイン後の自動開始が有効",
+      "サインイン前の自動開始が有効",
+      "Windowsキーとプラスのショートカットを意図せず押した"
+    ],
+    "diagnosis": "サインイン画面から拡大しているか、デスクトップが表示されてから拡大するかで確認する項目が違います。アプリ全体の表示倍率やブラウザーのズームだけが変わるなら、拡大鏡ではない可能性があります。まず画面全体が拡大しているか見ます。",
+    "caution": "拡大鏡は視認性のために必要な利用者もいます。共有PCでは利用者の意図を確認してから自動開始を変えてください。操作に困る場合はWindowsキー+Escで終了し、設定だけ確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-gb/accessibility/windows/magnifier/chapter-1-introducing-magnifier",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/narrator-starts-at-signin/",
+      "/windows/windows-wakes-from-sleep-immediately/",
+      "/windows/windows-pin-not-available/"
+    ],
+    "closest_existing_url": "/windows/narrator-starts-at-signin/",
+    "differentiation": "既存記事は読み上げ機能ナレーターの自動起動。本記事は拡大鏡のサインイン前後に分かれた自動開始を扱う。",
+    "fact_check": "Microsoft拡大鏡ガイドはWindowsキー+Escと両方の自動開始項目を明示する。"
+  },
+  {
+    "category": "windows",
+    "slug": "downloaded-file-preview-unavailable",
+    "path": "/windows/downloaded-file-preview-unavailable/",
+    "title": "Windowsでダウンロードしたファイルだけプレビューできないとき",
+    "topic": "エクスプローラーのプレビューで一部のファイルだけ開かない",
+    "description": "エクスプローラーのプレビューで一部のファイルだけ開かない。ダウンロード元を示す情報が付いたファイルでは、安全対策によりプレビューが無効になる場合があります。出所を確認します。",
+    "answer": "ダウンロード元を示す情報が付いたファイルでは、安全対策によりプレビューが無効になる場合があります。出所を確認します。",
+    "steps": [
+      "エクスプローラーのプレビューウィンドウ自体が有効か確認します。",
+      "ローカルで作成した同形式のファイルと、インターネットから取得したファイルの表示を比べます。",
+      "対象ファイルを右クリックしてプロパティを開き、セキュリティ上の取得元表示を確認します。",
+      "出所と安全性を確認できたファイルだけ、組織の方針に沿って開く方法を判断します。"
+    ],
+    "causes": [
+      "インターネット由来のファイルのプレビューが保護機能で抑止された",
+      "共有先のファイルに同様の取得元情報がある",
+      "プレビュー対応形式またはプレビューウィンドウの設定が異なる"
+    ],
+    "diagnosis": "すべてのファイルで出ないならウィンドウ設定を先に見ます。ダウンロード分だけ出ないなら、2025年のWindowsセキュリティ変更で導入されたプレビュー制限と一致するか確認します。ファイルが壊れていると断定せず、別の安全な閲覧方法も検討します。",
+    "caution": "『ブロック解除』を一括適用しないでください。悪意のあるファイルのプレビューが危険になり得るため、出所が不明な添付・ダウンロードは開かず、組織の管理者や送信元に確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/servicing/os/windows/docs/2025/10/file-explorer-automatically-disables-the-preview-feature-for-files-downloaded-from-the-internet",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/file-explorer-not-responding/",
+      "/windows/default-app-filetype-not-changing/",
+      "/windows/windows-start-menu-not-opening/"
+    ],
+    "closest_existing_url": "/windows/file-explorer-not-responding/",
+    "differentiation": "既存記事はエクスプローラー全体の応答停止。本記事は取得元情報に応じてダウンロードファイルだけプレビューが抑止される仕様を扱う。",
+    "fact_check": "Microsoftの2025年10月の案内はインターネット取得ファイルのプレビュー無効化を安全対策として説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "projecting-to-this-pc-unavailable",
+    "path": "/windows/projecting-to-this-pc-unavailable/",
+    "title": "Windowsで『このPCへのプロジェクション』を使えないとき",
+    "topic": "別のPCの画面をこのPCで受信したい",
+    "description": "別のPCの画面をこのPCで受信したい。受信側PCにはワイヤレスディスプレイのオプション機能と受信アプリが必要です。送信側の接続設定と分けて確認します。",
+    "answer": "受信側PCにはワイヤレスディスプレイのオプション機能と受信アプリが必要です。送信側の接続設定と分けて確認します。",
+    "steps": [
+      "受信するPCで設定→システム→このPCへのプロジェクションを開きます。",
+      "案内に従ってオプション機能のワイヤレスディスプレイを追加します。",
+      "Windows 11 22H2以降はワイヤレスディスプレイアプリを起動し、それより前の対象版では接続アプリを確認します。",
+      "送信側PCでWindowsキー+Kを押し、受信PCが候補に出るか確認します。"
+    ],
+    "causes": [
+      "受信側のオプション機能が未導入",
+      "受信アプリが起動していない",
+      "受信側のWi-Fiや対応条件が整っていない"
+    ],
+    "diagnosis": "テレビへ送る操作と、このPCで他のPCの映像を受ける操作は役割が逆です。送信側から候補が見えない時はまず受信側のオプション機能・アプリ・Wi-Fiを確認し、次に送信側のWindowsキー+Kで再検索します。",
+    "caution": "機器や組織の管理設定によって機能が使えない場合があります。非公式のドライバーや設定変更で無理に有効化せず、必要ならPCメーカーまたは管理者に対応状況を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/screen-mirroring-and-projecting-to-your-pc-or-wireless-display",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/wireless-display-not-connecting-windows-11/",
+      "/windows/windows-focus-session-timer-not-visible/",
+      "/windows/windows-pin-not-available/"
+    ],
+    "closest_existing_url": "/windows/wireless-display-not-connecting-windows-11/",
+    "differentiation": "既存記事は送信側からワイヤレス画面に接続できない問題。本記事はPCを受信先にする機能の導入と起動を扱う。",
+    "fact_check": "Microsoftは受信PCにワイヤレスディスプレイを追加し受信アプリを起動する手順を示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "dynamic-lighting-device-not-listed",
+    "path": "/windows/dynamic-lighting-device-not-listed/",
+    "title": "Windowsの動的ライティングにRGB機器が表示されないとき",
+    "topic": "設定画面で照明付きキーボードなどを操作したい",
+    "description": "設定画面で照明付きキーボードなどを操作したい。Windowsの動的ライティングは対応機器だけを扱います。接続と機器対応、制御アプリの優先順位を分けて確認します。",
+    "answer": "Windowsの動的ライティングは対応機器だけを扱います。接続と機器対応、制御アプリの優先順位を分けて確認します。",
+    "steps": [
+      "設定→個人用設定→動的ライティングを開き、機能の表示と接続機器の一覧を確認します。",
+      "対象機器を接続し直し、メーカーがWindows動的ライティング対応を明記しているか製品仕様を確認します。",
+      "一覧に現れる場合は機器ごとの設定と背景照明制御の優先順位を確認します。",
+      "表示されない場合はWindowsと機器の更新を確認し、メーカーの案内に沿って問い合わせます。"
+    ],
+    "causes": [
+      "機器が動的ライティングに対応していない",
+      "接続が認識されていない",
+      "別の照明制御アプリが優先されている"
+    ],
+    "diagnosis": "メーカーアプリで色を変えられることと、Windowsの動的ライティングに列挙されることは同義ではありません。一覧にない場合と、一覧にはあるが設定が反映されない場合を分けると、対応機器の問題か制御順位の問題か判断しやすくなります。",
+    "caution": "光らないだけで入力機器が使えている場合、ドライバーを無理に削除しないでください。メーカー専用機能が必要な機器もあるため、仕様を確認してから照明アプリの設定を変えます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/input-devices/control-dynamic-lighting-devices-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/peripherals/bluetooth-keyboard-not-working-windows/",
+      "/windows/usb-device-not-recognized/",
+      "/windows/touch-keyboard-icon-missing-windows/"
+    ],
+    "closest_existing_url": "/peripherals/bluetooth-keyboard-not-working-windows/",
+    "differentiation": "既存記事はBluetoothキーボードの入力不良。本記事は入力できるRGB機器をWindowsの照明制御画面へ表示する条件を扱う。",
+    "fact_check": "Microsoft公式案内は対応機器の一覧とアプリ優先順位を動的ライティングの設定として説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "bluetooth-le-audio-option-missing",
+    "path": "/windows/bluetooth-le-audio-option-missing/",
+    "title": "WindowsでBluetooth LE Audioの項目が出ないとき",
+    "topic": "LE Audio対応イヤホンの機能をWindowsで使いたい",
+    "description": "LE Audio対応イヤホンの機能をWindowsで使いたい。イヤホンだけでなくWindows PC側のBluetooth機器、ドライバー、OSがLE Audioに対応する必要があります。",
+    "answer": "イヤホンだけでなくWindows PC側のBluetooth機器、ドライバー、OSがLE Audioに対応する必要があります。",
+    "steps": [
+      "設定→Bluetoothとデバイス→デバイスを開き、LE Audioに関する項目があるか確認します。",
+      "WindowsのバージョンとPCメーカーのLE Audio対応情報を確認します。",
+      "Windows Updateとメーカー提供のBluetoothドライバー更新を確認します。",
+      "両側の対応が確認できた後でイヤホンを再接続し、利用できる機能を確認します。"
+    ],
+    "causes": [
+      "PC側のBluetoothハードウェアがLE Audio非対応",
+      "必要なドライバーまたはWindowsの対応が不足",
+      "イヤホン側だけLE Audio対応でPC側が従来方式"
+    ],
+    "diagnosis": "Bluetoothで音が出ることとLE Audioが使えることは別です。Microsoftの判定方法に沿って設定画面のLE Audio項目を確認し、無ければOS版、Bluetooth部品、ドライバーの各条件をメーカー資料と照合します。",
+    "caution": "設定項目をレジストリや非公式ドライバーで無理に出すことは避けてください。通常のBluetooth音声が使えている場合は、LE Audioに非対応でも故障とは限りません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/bluetooth/check-if-a-windows-11-device-supports-bluetooth-low-energy-audio",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/peripherals/windows-bluetooth-headphones-no-sound/",
+      "/windows/windows-bluetooth-toggle-missing/",
+      "/windows/windows-dynamic-lock-not-locking/"
+    ],
+    "closest_existing_url": "/peripherals/windows-bluetooth-headphones-no-sound/",
+    "differentiation": "既存記事は接続済みヘッドホンの音が出ない問題。本記事は新しい音声方式LE Audioの設定項目が現れるためのPC側対応条件を扱う。",
+    "fact_check": "MicrosoftはLE Audio利用にWindows・Bluetoothハードウェア・ドライバーの対応が必要と説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "hot-corners-activate-unexpectedly",
+    "path": "/mac/hot-corners-activate-unexpectedly/",
+    "title": "Macで画面の隅にポインタを置くと突然画面が変わるとき",
+    "topic": "意図せず画面ロックやMission Controlなどが起動する",
+    "description": "意図せず画面ロックやMission Controlなどが起動する。ホットコーナーに動作が割り当てられているか確認し、不要なら割り当てを変更します。",
+    "answer": "ホットコーナーに動作が割り当てられているか確認し、不要なら割り当てを変更します。",
+    "steps": [
+      "どの画面の隅にポインタを動かすと、どの動作が起きるか記録します。",
+      "システム設定→デスクトップとDock→ホットコーナーを開きます。",
+      "該当の隅に設定された動作を確認し、不要なら『－』に変更します。",
+      "誤作動を防ぎつつ使いたい場合は修飾キーを押した時だけ起動する設定を検討します。"
+    ],
+    "causes": [
+      "画面の隅にホットコーナー動作が割り当てられている",
+      "複数の隅に似た動作がある",
+      "外部ディスプレイ使用時に隅へポインタが到達しやすい"
+    ],
+    "diagnosis": "隅に触れた瞬間に毎回同じ動作なら、アプリの不具合よりホットコーナーの割り当てを先に見ます。どの隅に何が割り当てられているかを確認し、画面ロック、通知センター、Mission Controlなど起きる動作と一致するか照合します。",
+    "caution": "共有Macでは他の利用者が意図的に設定した操作かもしれません。すべての隅を無効にせず、自分に不要な箇所だけ調整してください。作業中のアプリやデータを消す必要はありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/perform-quick-actions-with-hot-corners-mchlp3000/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-stage-manager-cannot-enable/",
+      "/mac/mac-black-screen-power-on/",
+      "/mac/mac-printer-not-appearing-add/"
+    ],
+    "closest_existing_url": "/mac/mac-stage-manager-cannot-enable/",
+    "differentiation": "既存記事はステージマネージャを有効化できない症状。本記事はポインタを隅へ置いた時のホットコーナー割り当てを扱う。",
+    "fact_check": "AppleのMacガイドはデスクトップとDockのホットコーナー設定と修飾キーを説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "text-replacement-not-expanding",
+    "path": "/mac/text-replacement-not-expanding/",
+    "title": "Macでユーザ辞書の文字置換が展開されないとき",
+    "topic": "登録した短い文字列を入力しても置換されない",
+    "description": "登録した短い文字列を入力しても置換されない。登録内容とアプリ側の『テキストの置換』設定を別々に確認します。対応しないアプリもあります。",
+    "answer": "登録内容とアプリ側の『テキストの置換』設定を別々に確認します。対応しないアプリもあります。",
+    "steps": [
+      "システム設定→キーボード→テキストの置換で、置換前と置換後の登録を確認します。",
+      "標準のテキスト編集アプリなど対応するアプリで、登録文字列を入力して動作を比べます。",
+      "該当アプリの編集→自動置換で『テキストの置換』にチェックがあるか確認します。",
+      "日本語入力を使う場合は入力ソースのユーザ辞書側の登録も確認します。"
+    ],
+    "causes": [
+      "置換文字列が登録されていないか誤登録",
+      "アプリ側でテキストの置換が無効",
+      "使用中のアプリが置換機能に対応していない"
+    ],
+    "diagnosis": "すべてのアプリで動かない場合と、一つのアプリだけで動かない場合を分けます。Appleはアプリごとに『編集→自動置換→テキストの置換』の有効化を案内し、全アプリで利用できるとはしていません。日本語入力の登録位置も確認します。",
+    "caution": "重要な定型文が失われたと思って登録を一括削除しないでください。入力元アプリの対応状況やチェック状態を確認してから変更し、置換前後の文字列を控えて作業します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/replace-text-punctuation-documents-mac-mh35735/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/macbook-keyboard-not-working/",
+      "/mac/external-drive-not-showing/",
+      "/mac/mac-airdrop-not-working/"
+    ],
+    "closest_existing_url": "/mac/macbook-keyboard-not-working/",
+    "differentiation": "既存記事はキーボード入力自体の不良。本記事は入力できるが特定の登録語句だけ展開されない設定とアプリ互換性を扱う。",
+    "fact_check": "AppleのMacガイドはキーボード設定の登録とアプリ側の自動置換、非対応アプリがある点を明記する。"
+  },
+  {
+    "category": "mac",
+    "slug": "keyboard-shortcut-conflict",
+    "path": "/mac/keyboard-shortcut-conflict/",
+    "title": "Macでキーボードショートカットが別の動作になるとき",
+    "topic": "押したキーで予定した機能ではなく別の操作が起こる",
+    "description": "押したキーで予定した機能ではなく別の操作が起こる。同じキーの組み合わせが別機能に割り当てられていないか、システム設定のショートカット一覧を確認します。",
+    "answer": "同じキーの組み合わせが別機能に割り当てられていないか、システム設定のショートカット一覧を確認します。",
+    "steps": [
+      "起こしたい操作と、実際に起きる操作、押したキーの組み合わせを控えます。",
+      "システム設定→キーボード→キーボードショートカットを開きます。",
+      "該当する項目の割り当てを確認し、衝突する方のショートカットを変更します。",
+      "対象アプリを開いた状態と閉じた状態で同じキーを試し、アプリ固有の割り当てとも比較します。"
+    ],
+    "causes": [
+      "システムの別機能と同じキーが割り当てられた",
+      "アプリ固有のショートカットが優先された",
+      "キー配列や修飾キーの認識が想定と違う"
+    ],
+    "diagnosis": "特定アプリだけで誤動作するか、デスクトップ全体で誤動作するかで調べる場所が変わります。システムの一覧で同じ組み合わせが重複しているか確認し、アプリだけならそのアプリのメニューに表示されたショートカットを確認します。",
+    "caution": "複数の割り当てを一度に変更すると原因が追えません。一つずつ変更前のキーを記録してください。アクセシビリティ用ショートカットを利用している共有Macでは、使う人に確認してから調整します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/change-a-conflicting-keyboard-shortcut-on-mac-mchlp2864/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-screenshot-file-not-found/",
+      "/mac/mac-keyboard-backlight-not-on/",
+      "/mac/macbook-keyboard-not-working/"
+    ],
+    "closest_existing_url": "/mac/mac-screenshot-file-not-found/",
+    "differentiation": "既存記事は撮影後のスクリーンショット保存先。本記事はキー入力の割り当て競合で別の操作が起きる原因を扱う。",
+    "fact_check": "AppleのMacガイドはキーボードショートカット設定で競合する割り当てを変更する方法を案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "photos-duplicates-album-missing",
+    "path": "/iphone/photos-duplicates-album-missing/",
+    "title": "iPhone写真の『重複項目』が表示されないとき",
+    "topic": "写真アプリの重複整理を使おうとしても項目が見つからない",
+    "description": "写真アプリの重複整理を使おうとしても項目が見つからない。ライブラリに検出された重複がなければ『重複項目』は表示されません。まず写真アプリの表示位置を確認します。",
+    "answer": "ライブラリに検出された重複がなければ『重複項目』は表示されません。まず写真アプリの表示位置を確認します。",
+    "steps": [
+      "写真アプリを開き、コレクションを選びます。",
+      "ユーティリティ内に『重複項目』があるか確認します。",
+      "項目がない場合は、写真と動画に検出済みの重複がない可能性を考えます。",
+      "個別の写真を目視で確認し、似た写真と完全な重複を混同していないか判断します。"
+    ],
+    "causes": [
+      "検出された重複写真・動画が存在しない",
+      "写真アプリ内で別のコレクションを見ている",
+      "似た構図の写真を重複として認識すると想定している"
+    ],
+    "diagnosis": "Appleは重複がライブラリにない場合、このコレクション自体を表示しないと説明しています。項目がないだけで写真が失われたとは言えません。写真アプリのコレクション→ユーティリティという順路と、整理したい対象が本当に重複かを確認します。",
+    "caution": "重複を無理に作成して表示を試す必要はありません。結合操作は写真の整理結果に影響するため、どの写真が残るか確認してから実行してください。大切な写真は事前に保管状態を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/merge-duplicate-photos-and-videos-iph1978d9c23/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/icloud-photos-sync-paused-iphone/",
+      "/iphone/app-data-not-syncing/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/icloud-photos-sync-paused-iphone/",
+    "differentiation": "既存記事はiCloud写真の同期停止。本記事はライブラリに重複が検出されない時に項目を表示しない写真アプリの仕様を扱う。",
+    "fact_check": "AppleのiPhoneガイドは重複がない場合『重複項目』コレクションが現れないと明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "namedrop-not-appearing",
+    "path": "/iphone/namedrop-not-appearing/",
+    "title": "iPhoneを近づけてもNameDropが始まらないとき",
+    "topic": "連絡先交換画面が出ない",
+    "description": "連絡先交換画面が出ない。NameDropは新しい連絡先情報の交換用です。対応機器、近づけ方、共有する場面を確認します。",
+    "answer": "NameDropは新しい連絡先情報の交換用です。対応機器、近づけ方、共有する場面を確認します。",
+    "steps": [
+      "相手がNameDropに対応するiPhoneまたは対象Apple Watchか確認します。",
+      "自分のiPhoneの画面を相手の機器の上部へ数センチまで近づけます。",
+      "両方の画面にNameDropが現れるまで位置を保ちます。",
+      "画面が出たら『共有』か『受信のみ』を選び、交換後は連絡先を確認します。"
+    ],
+    "causes": [
+      "機器を十分に近づけていない",
+      "相手側が対象機器ではない",
+      "既存連絡先の更新にもNameDropを使えると考えている"
+    ],
+    "diagnosis": "NameDropは一般的な写真のAirDropと目的が異なります。Appleは既存連絡先の更新には使えず、新しい連絡先情報の交換に使うと説明しています。画面が出ない時は相手機器と位置を先に確認し、更新目的なら別の方法を使います。",
+    "caution": "表示された共有内容を確認せず送信しないでください。相手に渡す連絡先項目は交換画面で確認し、意図しない個人情報が含まれるなら『受信のみ』を選ぶか操作を中止します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/namedrop-iphone-share-contact-info-iph1b6c664b7/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/airdrop-person-not-showing/",
+      "/iphone/screen-not-rotating/",
+      "/iphone/airdrop-not-working/"
+    ],
+    "closest_existing_url": "/iphone/airdrop-person-not-showing/",
+    "differentiation": "既存記事はAirDropで相手が見つからないファイル共有。本記事は近接時の連絡先交換画面と新規連絡先に限る用途を扱う。",
+    "fact_check": "AppleのiPhoneガイドは近づける位置、対応するApple Watch、既存連絡先の更新不可を明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "live-activities-lock-screen-missing",
+    "path": "/iphone/live-activities-lock-screen-missing/",
+    "title": "iPhoneのロック画面にライブアクティビティが出ないとき",
+    "topic": "配達状況や進行中の活動がロック画面に見えない",
+    "description": "配達状況や進行中の活動がロック画面に見えない。対象アプリがライブアクティビティに対応し、アプリごとの設定が利用できるか確認します。普通の通知設定とは分けます。",
+    "answer": "対象アプリがライブアクティビティに対応し、アプリごとの設定が利用できるか確認します。普通の通知設定とは分けます。",
+    "steps": [
+      "対象アプリで追跡中の配達や再生など、継続中の活動があるか確認します。",
+      "設定→アプリ→対象アプリ→ライブアクティビティを開けるか確認します。",
+      "項目があれば利用設定を確認し、対象活動をもう一度開始します。",
+      "別の対応アプリでも表示を比較し、アプリ固有の問題か切り分けます。"
+    ],
+    "causes": [
+      "アプリがライブアクティビティに対応していない",
+      "対象アプリの設定が無効",
+      "追跡対象の活動が終了している"
+    ],
+    "diagnosis": "ロック画面の普通の通知とライブアクティビティは表示の仕組みが異なります。Appleはアプリごとの設定場所を示す一方、すべてのアプリに設定があるわけではないと説明しています。項目がない場合は対応状況を確認します。",
+    "caution": "アプリが機能に対応しない場合、端末の設定だけで表示は作れません。注文情報や位置などがロック画面に出ることもあるため、共有端末では表示内容とプライバシーを確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/access-features-from-the-lock-screen-iphcd5c65ccf/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/lock-screen-notifications-hidden/",
+      "/iphone/screen-does-not-turn-off/",
+      "/iphone/iphone-screen-recording-control-missing/"
+    ],
+    "closest_existing_url": "/iphone/lock-screen-notifications-hidden/",
+    "differentiation": "既存記事は一般通知のプレビュー非表示。本記事は継続中の活動表示とアプリ別のライブアクティビティ対応・設定を扱う。",
+    "fact_check": "AppleのiPhoneガイドは設定→アプリ→ライブアクティビティと、非対応アプリには項目がない点を明記する。"
+  },
+  {
+    "category": "android",
+    "slug": "private-dns-provider-connection-fails",
+    "path": "/android/private-dns-provider-connection-fails/",
+    "title": "AndroidでプライベートDNSを設定すると通信できないとき",
+    "topic": "特定のDNSプロバイダ名を入れた後にサイトが開かない",
+    "description": "特定のDNSプロバイダ名を入れた後にサイトが開かない。指定したプロバイダのホスト名を確認し、まず自動設定との違いを切り分けます。",
+    "answer": "指定したプロバイダのホスト名を確認し、まず自動設定との違いを切り分けます。",
+    "steps": [
+      "設定→ネットワークとインターネット→プライベートDNSを開きます。",
+      "現在の『プライベートDNSプロバイダのホスト名』を記録します。",
+      "一時的に『自動』へ変更し、同じWi-Fiとモバイル回線で通信を比較します。",
+      "自動設定で改善したらホスト名とプロバイダの案内を確認し、必要な場合だけ正しい名前で再設定します。"
+    ],
+    "causes": [
+      "指定したホスト名が誤っている",
+      "指定先のDNSサービスに接続できない",
+      "ネットワーク側が指定したDNS接続を制限している"
+    ],
+    "diagnosis": "Wi-Fiそのものが切れているのか、名前解決だけが失敗しているのかを分けます。GoogleはプライベートDNSの選択肢としてオフ・自動・プロバイダ名を案内し、既定の利用を推奨しています。自動に戻した時だけ改善するなら指定先を重点確認します。",
+    "caution": "『オフ』を常用の解決策にしないでください。GoogleはプライベートDNSの利用を推奨しています。また、この機能で保護されるのはDNSの問い合わせと応答であり、通信全体の安全を保証するものではありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9654714?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-wifi-connected-no-internet/",
+      "/android/android-rcs-chat-not-connecting/",
+      "/android/android-mobile-data-not-working/"
+    ],
+    "closest_existing_url": "/android/android-wifi-connected-no-internet/",
+    "differentiation": "既存記事はWi-Fiに接続しても全般的に通信できない問題。本記事は手動指定したプライベートDNS名と自動設定の差だけを切り分ける。",
+    "fact_check": "Android公式ヘルプはプライベートDNSの3設定と、既定で有効にする推奨を記載する。"
+  },
+  {
+    "category": "android",
+    "slug": "pinned-app-will-not-unpin",
+    "path": "/android/pinned-app-will-not-unpin/",
+    "title": "Androidで固定したアプリの画面を解除できないとき",
+    "topic": "一つのアプリからホーム画面へ戻れない",
+    "description": "一つのアプリからホーム画面へ戻れない。アプリ固定はナビゲーション方式ごとに解除操作が異なります。方式を確認してから解除します。",
+    "answer": "アプリ固定はナビゲーション方式ごとに解除操作が異なります。方式を確認してから解除します。",
+    "steps": [
+      "画面下部がジェスチャー、2ボタン、3ボタンのどのナビゲーションか確認します。",
+      "ジェスチャー方式なら下から上へスワイプして長押しします。",
+      "2ボタンは戻るとホーム、3ボタンは戻ると概要の各ボタンを同時に長押しします。",
+      "求められた場合は端末のPIN・パターン・パスワードを入力して解除します。"
+    ],
+    "causes": [
+      "使っているナビゲーション方式と違う解除操作を試している",
+      "アプリ固定後に端末の認証が必要",
+      "画面固定を端末全体のフリーズと誤認している"
+    ],
+    "diagnosis": "他のアプリだけ開けないが固定中のアプリは操作できるなら、端末全体の故障より画面固定を疑います。Googleの解除案内はナビゲーション方式別に異なり、端末認証が設定されている場合は解除時に認証が求められます。",
+    "caution": "端末のPINを忘れた場合に非公式の解除手順で保護を回避しないでください。共有端末や管理端末では所有者・管理者に確認します。初期化はデータ消失の恐れがあり、この症状だけで行う操作ではありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9455138?hl=en-GB",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/safe-mode-not-exiting/",
+      "/android/android-archived-app-icon-dimmed/",
+      "/android/android-screen-recording-no-audio/"
+    ],
+    "closest_existing_url": "/android/safe-mode-not-exiting/",
+    "differentiation": "既存記事は端末がセーフモードから戻らない症状。本記事は画面固定により一つのアプリから移動できない状態と方式別解除操作を扱う。",
+    "fact_check": "Android公式ヘルプはジェスチャー・2ボタン・3ボタン別の解除操作と端末認証を説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "play-store-apps-not-auto-updating",
+    "path": "/android/play-store-apps-not-auto-updating/",
+    "title": "Google Playのアプリが自動更新されないとき",
+    "topic": "手動更新はできるのに自動では新しい版にならない",
+    "description": "手動更新はできるのに自動では新しい版にならない。Playストア全体の自動更新条件と、個別アプリの自動更新設定を両方確認します。",
+    "answer": "Playストア全体の自動更新条件と、個別アプリの自動更新設定を両方確認します。",
+    "steps": [
+      "Playストアのプロフィール→設定→ネットワーク設定→アプリの自動更新を開きます。",
+      "Wi-Fiのみ、モバイルデータも使用、更新しない、の選択と現在の通信環境を比べます。",
+      "特定アプリだけならアプリの詳細画面のメニューで『自動更新を有効にする』を確認します。",
+      "アカウントのログインエラーと、手動更新が可能かを確認します。"
+    ],
+    "causes": [
+      "全体設定が『自動更新しない』になっている",
+      "Wi-Fiのみ設定だがWi-Fiに接続していない",
+      "個別アプリの自動更新が無効、またはアカウントにログインエラーがある"
+    ],
+    "diagnosis": "新規アプリのダウンロードが保留される症状とは別です。手動更新はできるのに自動だけ動かない場合、全体のネットワーク方針、対象アプリの詳細設定、サインイン状態の順に調べると原因を絞れます。更新可能なアプリがあるかも確認します。",
+    "caution": "モバイルデータでの自動更新は通信量が増える場合があります。家族・会社の回線制限を確認してから変更してください。重要なセキュリティ更新は設定によらず配信される場合があるとGoogleは案内しています。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/googleplay/answer/113412?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/google-play-download-pending/",
+      "/android/android-google-contacts-not-syncing/",
+      "/android/android-screen-recording-no-audio/"
+    ],
+    "closest_existing_url": "/android/google-play-download-pending/",
+    "differentiation": "既存記事は新規ダウンロードの保留。本記事は更新できるアプリが自動更新だけされない時の全体・個別設定と回線条件を扱う。",
+    "fact_check": "Google Playヘルプは全体のネットワーク別設定、個別アプリ設定、ログインエラーの影響を列記する。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-camera-qr-link-not-shown",
+    "path": "/android/pixel-camera-qr-link-not-shown/",
+    "title": "PixelカメラでQRコードのリンクが表示されないとき",
+    "topic": "QRを写しても読み取り候補が出ない",
+    "description": "QRを写しても読み取り候補が出ない。カメラのスキャン候補設定とコード全体の写り方を確認し、専用のQRスキャナーとも比較します。",
+    "answer": "カメラのスキャン候補設定とコード全体の写り方を確認し、専用のQRスキャナーとも比較します。",
+    "steps": [
+      "Pixelのカメラを開き、設定→その他の設定→カメラのスキャン候補を有効にします。",
+      "QRコードの四辺が画面に入る距離で、ピントを合わせて少し待ちます。",
+      "照明、反射、レンズの汚れを確認します。写真を撮る操作は不要です。",
+      "クイック設定の『QRコードをスキャン』でも同じコードを試し、カメラ側との違いを確認します。"
+    ],
+    "causes": [
+      "カメラのスキャン候補が無効",
+      "コードの一部が画面外かピントが合っていない",
+      "印刷の反射やレンズの汚れで読み取れない"
+    ],
+    "diagnosis": "カメラの映像は正常でも、QRリンクが表示されない場合はスキャン候補の設定が原因になり得ます。Googleはカメラ以外にクイック設定のQRスキャナーも案内します。両方で同じコードが読めないならコードの状態も確認します。",
+    "caution": "読み取れたURLを無条件に開かないでください。QRコードの貼り替えや偽サイトの可能性があるため、表示されたリンク先のドメインを確認し、ログイン情報の入力前に公式サイトか確かめます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/16561572?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-camera-black-screen/",
+      "/android/android-sd-card-not-detected/",
+      "/android/android-clock-alarm-silent/"
+    ],
+    "closest_existing_url": "/android/android-camera-black-screen/",
+    "differentiation": "既存記事はカメラ映像自体が真っ黒になる問題。本記事は映像が見えるのにQRリンク候補だけ現れない設定と撮影条件を扱う。",
+    "fact_check": "Pixel公式ヘルプはスキャン候補、コード全体の表示、クイック設定スキャナーを案内する。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-reading-list-side-panel-missing",
+    "path": "/browser/chrome-reading-list-side-panel-missing/",
+    "title": "Chromeでリーディングリストが見つからないとき",
+    "topic": "保存したページを読むための一覧を開きたい",
+    "description": "保存したページを読むための一覧を開きたい。リーディングリストはサイドパネルから開けます。必要ならツールバーへ固定します。",
+    "answer": "リーディングリストはサイドパネルから開けます。必要ならツールバーへ固定します。",
+    "steps": [
+      "Chromeのメニューから『ブックマークとリスト』を開きます。",
+      "『リーディングリスト』→『リーディングリストを表示』を選びます。",
+      "開いたサイドパネルで必要なら『ツールバーに固定』を選びます。",
+      "別のChromeプロフィールを使っている場合は保存した時と同じプロフィールか確認します。"
+    ],
+    "causes": [
+      "サイドパネルのボタンがツールバーに固定されていない",
+      "リーディングモードとリーディングリストを混同している",
+      "別のプロフィールで保存したページを探している"
+    ],
+    "diagnosis": "ページの表示を読みやすくする『リーディングモード』と、後で読むページを保存する『リーディングリスト』は別機能です。Googleの案内にあるメニュー経路からパネルを開き、ボタンが見えないだけなのか保存項目がないのかを分けます。",
+    "caution": "閲覧履歴やブックマークを削除してもボタン表示の問題は解決しません。保存したページが見つからない場合はプロフィールを確認し、同期設定や保存データの変更は内容を控えてから行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/13156494?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-reading-mode-unavailable/",
+      "/browser/chrome-bookmarks-missing/",
+      "/browser/chrome-unwanted-popups-redirects/"
+    ],
+    "closest_existing_url": "/browser/chrome-reading-mode-unavailable/",
+    "differentiation": "既存記事は本文表示を変えるリーディングモード。本記事は後で読むページの保存先であるリーディングリストの開き方を扱う。",
+    "fact_check": "Google Chromeヘルプはリーディングリストをサイドパネルで開きツールバーに固定する経路を示す。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-spell-check-underline-missing",
+    "path": "/browser/chrome-spell-check-underline-missing/",
+    "title": "Chromeでスペルミスの下線が出ないとき",
+    "topic": "Webフォームの入力中に綴りの指摘が表示されない",
+    "description": "Webフォームの入力中に綴りの指摘が表示されない。Chromeの言語設定にあるスペルチェックを確認し、入力欄によって利用できない場合も分けて見ます。",
+    "answer": "Chromeの言語設定にあるスペルチェックを確認し、入力欄によって利用できない場合も分けて見ます。",
+    "steps": [
+      "PC版Chromeのメニュー→設定→言語を開きます。",
+      "『スペルチェック』でWebページ入力時の誤字チェックがオンか確認します。",
+      "一般的なテキスト入力欄で明らかな綴り違いを試し、対象ページとの違いを確認します。",
+      "対象言語と入力欄の種類を確かめ、特定サイトだけならサイト側の仕様も確認します。"
+    ],
+    "causes": [
+      "Chromeのスペルチェックがオフ",
+      "入力言語とチェック対象の言語が異なる",
+      "対象サイトの入力欄が標準のテキスト欄と異なる"
+    ],
+    "diagnosis": "下線がどのページでも出ないならChromeの言語設定から確認します。一つのフォームだけなら、そのページの入力欄や入力言語が関係する可能性があります。Chromeの機能はWebページに入力する文字のスペルチェックとして案内されています。",
+    "caution": "業務上の文章や個人情報を検査のために外部のテストサイトへ貼らないでください。スペルチェックは内容の正確さを保証しないので、送信前に氏名、住所、重要な文面は自分でも確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/12027911?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-address-autofill-not-working/",
+      "/browser/chrome-page-translation-not-offered/",
+      "/browser/chrome-saved-passwords-missing/"
+    ],
+    "closest_existing_url": "/browser/chrome-address-autofill-not-working/",
+    "differentiation": "既存記事は住所フォームの自動入力。本記事はWebページ入力時のスペルチェック設定と下線表示を扱う。",
+    "fact_check": "Chrome公式ヘルプは設定→言語のスペルチェックでWebページ入力時の誤字確認を切り替えると記載する。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-payment-card-autofill-missing",
+    "path": "/browser/chrome-payment-card-autofill-missing/",
+    "title": "Chromeで保存した支払い方法が候補に出ないとき",
+    "topic": "決済画面のカード欄に自動入力候補が表示されない",
+    "description": "決済画面のカード欄に自動入力候補が表示されない。Chromeの支払い方法保存と入力設定を確認し、サイト側の入力欄を認識できているか分けて調べます。",
+    "answer": "Chromeの支払い方法保存と入力設定を確認し、サイト側の入力欄を認識できているか分けて調べます。",
+    "steps": [
+      "Chromeの設定→自動入力とパスワード→お支払い方法を開きます。",
+      "『お支払い方法を保存して入力する』が有効か確認します。",
+      "保存先がGoogleウォレットかChromeかを確認し、編集が必要なら該当の管理画面で行います。",
+      "対象の支払い欄で候補が出るか試し、別サイトとの差を確認します。"
+    ],
+    "causes": [
+      "支払い方法の保存と入力がオフ",
+      "確認中のプロフィールには支払い情報がない",
+      "サイトの入力欄をChromeが適切な支払い欄と認識できない"
+    ],
+    "diagnosis": "保存情報が見えるのに特定サイトで候補が出ない時、カード情報の消失ではなくChromeが入力欄を検出できていない可能性があります。Googleは候補がない場合に正しいフィールドを検出できないケースを明記しており、設定とサイト側を切り分けます。",
+    "caution": "カード番号や認証コードを問い合わせフォームや共有画面に載せないでください。見覚えのない決済サイトで自動入力を試さず、ドメインと接続の安全性を確認します。保存データの削除は復元可能性を確認してから行います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/16598463?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-address-autofill-not-working/",
+      "/browser/chrome-saved-passwords-missing/",
+      "/browser/chrome-page-translation-not-offered/"
+    ],
+    "closest_existing_url": "/browser/chrome-address-autofill-not-working/",
+    "differentiation": "既存記事は住所データの自動入力。本記事は支払い方法の保存先、決済欄の検出、カード候補の表示を扱う。",
+    "fact_check": "Chromeヘルプは支払い方法の設定経路と、候補がない場合のサイト側フィールド検出問題を示す。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-compromised-password-warning",
+    "path": "/browser/chrome-compromised-password-warning/",
+    "title": "Chromeで『漏洩したパスワード』と表示されたとき",
+    "topic": "保存パスワードの警告を安全に確認して対処したい",
+    "description": "保存パスワードの警告を安全に確認して対処したい。Googleパスワードマネージャーのチェックアップで対象を確認し、警告されたサービスのパスワードを変更します。",
+    "answer": "Googleパスワードマネージャーのチェックアップで対象を確認し、警告されたサービスのパスワードを変更します。",
+    "steps": [
+      "通知内の不審なリンクではなく、Chromeのメニュー→パスワードと自動入力→Googleパスワードマネージャーを開きます。",
+      "『チェックアップ』で漏洩、使い回し、弱いパスワードのどの警告か確認します。",
+      "漏洩した組み合わせを使うサービスの公式サイトでパスワードを変更します。",
+      "同じパスワードを別サービスでも使っていたら、各サービスで別々の強いパスワードに変えます。"
+    ],
+    "causes": [
+      "漏洩した認証情報との一致が検出された",
+      "複数サービスで同じパスワードを使っている",
+      "弱いパスワードがチェックアップに表示されている"
+    ],
+    "diagnosis": "警告の種類を見ずに全アカウントが侵害されたと断定しません。Googleのチェックアップは漏洩・使い回し・弱いパスワードを分けて表示します。漏洩と表示された組み合わせは、該当サービスの公式画面から優先して変更します。",
+    "caution": "メールやポップアップの偽警告からログインしないでください。パスワードを共有したり、変更コードを他人へ伝えたりしないでください。変更後は利用できる多要素認証とログイン履歴も確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/9457609?co=GENIE.Platform%3DDesktop&hl=en-GB",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-saved-passwords-missing/",
+      "/browser/chrome-connection-not-private/",
+      "/browser/chrome-page-translation-not-offered/"
+    ],
+    "closest_existing_url": "/browser/chrome-saved-passwords-missing/",
+    "differentiation": "既存記事は保存パスワードが見つからない問題。本記事は存在するパスワードに安全性警告が出た時の確認と変更を扱う。",
+    "fact_check": "Google Chromeヘルプはチェックアップの3分類と漏洩した組み合わせの速やかな変更を案内する。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-push-to-talk-key-not-working",
+    "path": "/sns/discord-push-to-talk-key-not-working/",
+    "title": "Discordでプッシュトゥトークのキーを押しても声が届かないとき",
+    "topic": "マイクは使えるのに押し話しだけ動かない",
+    "description": "マイクは使えるのに押し話しだけ動かない。入力モードとキー割り当てを確認し、ブラウザー版とデスクトップ版の動作範囲も比較します。",
+    "answer": "入力モードとキー割り当てを確認し、ブラウザー版とデスクトップ版の動作範囲も比較します。",
+    "steps": [
+      "Discordのユーザー設定→音声・ビデオ→入力モードを開き、『プッシュトゥトーク』が選ばれているか確認します。",
+      "割り当てられたキーを確認し、意図したキーでテストします。",
+      "ブラウザー版ならDiscordのタブを前面にして試します。",
+      "別アプリを操作中も使う必要があれば、デスクトップ版の利用とキー競合を確認します。"
+    ],
+    "causes": [
+      "入力モードが音声検出になっている",
+      "プッシュトゥトークのキー割り当てが想定と違う",
+      "ブラウザー版でタブがアクティブではない"
+    ],
+    "diagnosis": "音声検出なら話せるのに押し話しだけ失敗する場合、マイク権限より入力モードとキーの動作を先に見ます。Discordの公式案内はブラウザー版のプッシュトゥトークがウィンドウにフォーカスがある時に限られると説明しています。",
+    "caution": "公開ボイスチャンネルで試す前に、テスト先でマイクのオンオフ状態を確かめてください。キーの競合があってもOS全体の権限を無闇に広げず、入力モードとアプリの違いから切り分けます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/211376518-Voice-Input-Modes-101-Push-to-Talk-Voice-Activated",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-microphone-not-working/",
+      "/sns/discord-screen-share-audio-missing/",
+      "/sns/discord-soundboard-button-disabled/"
+    ],
+    "closest_existing_url": "/sns/discord-microphone-not-working/",
+    "differentiation": "既存記事はマイク入力全般の不具合。本記事は音声入力可能でも押し話しキーだけ効かない入力モードとブラウザーフォーカスを扱う。",
+    "fact_check": "Discord公式ガイドは入力モードとブラウザー版プッシュトゥトークのフォーカス制限を説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-automated-captions-option-missing",
+    "path": "/sns/zoom-automated-captions-option-missing/",
+    "title": "Zoomで自動字幕の設定が見つからないとき",
+    "topic": "会議で字幕を有効にしたいが項目が見えない",
+    "description": "会議で字幕を有効にしたいが項目が見えない。アカウントやグループの設定と管理者権限を確認し、利用できる場合は会議内で字幕を開始します。",
+    "answer": "アカウントやグループの設定と管理者権限を確認し、利用できる場合は会議内で字幕を開始します。",
+    "steps": [
+      "ZoomのWebポータルで自動字幕の設定が見えるか確認します。",
+      "組織アカウントなら所有者・管理者にアカウントとグループの設定状態を確認します。",
+      "設定が使える場合は、対象言語と会議で字幕を有効にできる役割を確認します。",
+      "設定自体が表示されない場合はZoomの案内に沿い、アカウント管理者を通じてサポート窓口へ確認します。"
+    ],
+    "causes": [
+      "アカウントやグループで自動字幕が無効",
+      "管理者によって設定がロックされている",
+      "アカウントに自動字幕の設定が提供されていない"
+    ],
+    "diagnosis": "会議参加者の字幕ボタンが見えない症状と、Webポータルに設定項目自体がない症状を分けます。Zoomはアカウント所有者や管理者が全体・グループの設定を管理でき、設定がポータルに出ないアカウントもあると説明しています。",
+    "caution": "字幕は聞き取り補助であり誤変換があり得ます。医療・法律など正確な記録が必要な場面で字幕だけに依存しないでください。管理者権限や有料契約を新たに取得して解決しようとせず、既存の管理者へ相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0058810",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-breakout-rooms-option-missing/",
+      "/sns/zoom-blur-background-option-missing/",
+      "/sns/zoom-recording-not-found/"
+    ],
+    "closest_existing_url": "/sns/zoom-breakout-rooms-option-missing/",
+    "differentiation": "既存記事はブレイクアウトルームの設定。本記事は自動字幕のアカウント・グループ制御、表示されない場合の確認先、言語設定を扱う。",
+    "fact_check": "Zoom公式サポートは管理者による自動字幕の有効化と、設定自体がないアカウントがある点を案内する。"
+  }
+]
