@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailで同じ相手のメールが会話にまとまらないとき",
+    "description": "返信が別々の行に並び経緯を追いにくい。Gmailの『スレッド表示』設定を確認し、件名や参加者が異なるメールとは分けて判断します。",
+    "url": "/google/gmail-conversation-view-not-grouping/"
+  },
+  {
+    "title": "Gmailで委任された受信トレイを開けないとき",
+    "description": "委任を受けたのに相手のメールボックスが一覧にない。招待の承認とアカウント切り替えを確認し、組織による委任制限や反映待ちも分けて調べます。",
+    "url": "/google/gmail-delegated-inbox-not-accessible/"
+  },
+  {
+    "title": "スプレッドシートのピボット表に追加行が出ないとき",
+    "description": "元の表へ行を追加したのに集計が増えない。ピボット表の参照範囲に追加行が含まれるか確認します。フィルタ条件も別に見ます。",
+    "url": "/google/sheets-pivot-new-rows-not-included/"
+  },
+  {
+    "title": "スプレッドシートのプルダウンに入力が拒否されるとき",
+    "description": "候補にない値を入力するとエラーになる。セルのデータ入力規則で、候補以外を拒否する設定か、警告だけ表示する設定かを確認します。",
+    "url": "/google/sheets-dropdown-entry-rejected/"
+  },
+  {
+    "title": "Googleドキュメントで貼り付けたグラフが更新されないとき",
+    "description": "元のスプレッドシートを変えても文書内の図が古い。貼り付け時に元シートとのリンクが残っているかを確認し、リンク済みなら更新操作を行います。",
+    "url": "/google/docs-linked-chart-update-missing/"
+  },
+  {
+    "title": "Googleスライドで音声が共有相手に再生されないとき",
+    "description": "自分は聞けるが閲覧者だけ音声を開けない。スライドに挿入した音声ファイルの保存先と共有権限を、スライド本体とは別に確認します。",
+    "url": "/google/slides-audio-unavailable-to-viewers/"
+  },
+  {
+    "title": "Googleドライブで『承認』の項目が見つからないとき",
+    "description": "ファイルの確認依頼を出したいが承認メニューがない。承認機能の対象アカウントかを確認し、ドライブのファイルメニューと文書内の入口を探します。",
+    "url": "/google/drive-approvals-option-missing/"
+  },
+  {
+    "title": "YouTube配信アーカイブのチャットリプレイが消えたとき",
+    "description": "配信後の動画でライブチャットを再生できない。配信アーカイブでリプレイを有効にしたかと、動画エディタで編集したかを分けて確認します。",
+    "url": "/google/youtube-live-chat-replay-missing-after-edit/"
+  },
+  {
+    "title": "MacのFinderサイドバーにタグが表示されないとき",
+    "description": "付けたタグからファイルを探したいのに一覧にない。Finderのタグ表示設定で、サイドバーへ表示するタグが選ばれているか確認します。",
+    "url": "/mac/finder-tags-missing-sidebar/"
+  },
+  {
+    "title": "Macのメールで振り分けルールが動かないとき",
+    "description": "新着メールが指定したメールボックスへ移動しない。ルールが有効か、条件と実行順が意図どおりかを確認します。過去のメールへの適用とは区別します。",
+    "url": "/mac/mail-rule-not-running/"
+  },
+  {
+    "title": "MacのSafariで作成したプロファイルが見えないとき",
+    "description": "仕事用と個人用の閲覧環境を切り替えられない。Safariの設定にプロファイルが登録されているか確認し、ウィンドウを開いた時のプロファイルも見ます。",
+    "url": "/mac/safari-profiles-not-visible/"
+  },
+  {
+    "title": "Macでディスプレイのカラープロファイルが見つからないとき",
+    "description": "画面の色を調整したいが同じ設定項目がない。機種やディスプレイによって通常のカラープロファイルではなく参照モードを使う場合があります。",
+    "url": "/mac/display-color-profile-option-missing/"
+  },
+  {
+    "title": "iPhoneの連絡先ポスターが相手に表示されないとき",
+    "description": "自分の写真と名前を設定したのに共有されない。マイカードの『名前と写真の共有』と、共有相手の条件を確認します。NameDropとは別の機能です。",
+    "url": "/iphone/contact-poster-not-shared/"
+  },
+  {
+    "title": "iPhoneでiCloud共有写真ライブラリに参加できないとき",
+    "description": "招待を受けたが共有ライブラリを使えない。iCloud写真が有効か、招待経路と参加済みライブラリの有無を確認します。共有アルバムとは別です。",
+    "url": "/iphone/icloud-shared-photo-library-invite-not-working/"
+  },
+  {
+    "title": "iPhoneのアクションボタンを押しても何も起きないとき",
+    "description": "設定したはずの操作が起動しない。対応モデルか、割り当てた機能に追加の選択が必要かを確認します。押し方と設定を分けて見ます。",
+    "url": "/iphone/action-button-does-nothing/"
+  },
+  {
+    "title": "iPhoneのボイスメモで文字起こしが表示されないとき",
+    "description": "録音は再生できるがテキストが見つからない。対応するiPhone・言語・地域と、録音中または録音後の文字起こし画面を確認します。",
+    "url": "/iphone/voice-memos-transcript-unavailable/"
+  },
+  {
+    "title": "Windowsで『ファイル履歴のドライブを再接続してください』と出るとき",
+    "description": "バックアップ先をつないでいるのに保存停止の警告が消えない。以前指定したバックアップ用ドライブを確かめ、同じドライブを安全に再接続してからファイル履歴の状態を確認します。",
+    "url": "/windows/file-history-drive-reconnect-warning/"
+  },
+  {
+    "title": "Windowsの夜間モードのスイッチがグレーで押せないとき",
+    "description": "夜間モードをオンにする前に設定自体が選べない。表示環境とグラフィック機能を確認し、夜間モードの切り替えが利用可能かを見分けます。",
+    "url": "/windows/night-light-toggle-unavailable/"
+  },
+  {
+    "title": "Windowsでデバイスの暗号化が設定に出ないとき",
+    "description": "設定のプライバシーとセキュリティで暗号化項目を探せない。管理者アカウントかどうかを確認し、システム情報に表示される暗号化の対応状況を読み取ります。",
+    "url": "/windows/device-encryption-option-missing/"
+  },
+  {
+    "title": "Windows Helloで指紋認証の設定が選べないとき",
+    "description": "サインインオプションに指紋の設定ボタンが出ない。指紋リーダーの有無とWindows Helloの設定画面を確認し、登録前の利用条件を切り分けます。",
+    "url": "/windows/hello-fingerprint-setup-missing/"
+  },
+  {
+    "title": "Windowsのロック画面のSpotlight画像が切り替わらないとき",
+    "description": "毎日違う画像を期待しているが同じ背景のまま。ロック画面の背景がWindows Spotlightになっているか確認し、画像またはスライドショー指定と区別します。",
+    "url": "/windows/lock-screen-spotlight-not-changing/"
+  },
+  {
+    "title": "Windowsでマイク使用中の表示が突然出るとき",
+    "description": "通話をしていないのにタスクバーでマイク利用を示す。プライバシー設定の最近の利用と実行中アプリを確認し、許可したアプリの動作か見分けます。",
+    "url": "/windows/microphone-indicator-unexpected/"
+  },
+  {
+    "title": "Pixelの『この曲なに？』で周囲の曲が表示されないとき",
+    "description": "近くで音楽が流れていてもロック画面に曲名が出ない。PixelのNow Playingアプリで機能が有効か確認し、履歴と手動検索を使って認識状況を分けます。",
+    "url": "/android/pixel-now-playing-not-identifying/"
+  },
+  {
+    "title": "Androidの通知履歴に消した通知が出ないとき",
+    "description": "通知を閉じた後で履歴を開いても見つからない。端末が通知履歴に対応するかを確かめ、有効化した後の通知を対象に表示を確認します。",
+    "url": "/android/notification-history-empty/"
+  },
+  {
+    "title": "Androidで盗難検出ロックの設定が見つからないとき",
+    "description": "盗難対策を有効にしたいが項目が表示されない。Androidのバージョン、画面ロック、端末の対応範囲を確認して利用可能な盗難対策を選びます。",
+    "url": "/android/theft-detection-lock-option-missing/"
+  },
+  {
+    "title": "Pixelのバッテリーシェアが途中で止まるとき",
+    "description": "背面に置いたイヤホンを充電していたが転送が切れる。Pixel側のバッテリー残量と停止するしきい値、受電機器の位置を確認します。",
+    "url": "/android/pixel-battery-share-stops-early/"
+  },
+  {
+    "title": "Firefoxで一部サイトのボタンや動画だけ動かないとき",
+    "description": "ページは開くが機能の一部だけ失敗する。Firefoxの盾アイコンから強化型トラッキング防止の影響をサイト単位で確かめます。",
+    "url": "/browser/firefox-tracking-protection-breaks-site/"
+  },
+  {
+    "title": "Edgeでお気に入りバーが見えなくなったとき",
+    "description": "保存したサイトをすぐ開くためのバーだけが消えた。お気に入りが消えたかを確認し、バーの表示設定を『常に表示』に変更します。",
+    "url": "/browser/edge-favorites-bar-hidden/"
+  },
+  {
+    "title": "DiscordのPC版でボイスメッセージ送信ボタンがないとき",
+    "description": "音声を録って非同期で送りたいがボタンが見当たらない。送信に対応する端末を確認し、PC版の通話マイク設定と混同しないようにします。",
+    "url": "/sns/discord-voice-message-send-missing-desktop/"
+  },
+  {
+    "title": "Zoom会議のチャットでファイル送信が見つからないとき",
+    "description": "会議中に資料を渡したいがファイルの項目が出ない。会議のファイル転送設定と管理者の制限を確認し、主催者に安全な共有方法を相談します。",
+    "url": "/sns/zoom-meeting-file-transfer-missing/"
+  },
+  {
     "title": "Gmailの送信取り消しがすぐ消えるとき",
     "description": "送信直後の『元に戻す』が間に合わない。Gmailの送信取り消し期間を確認し、送信後に表示される短い猶予内で操作します。",
     "url": "/google/gmail-undo-send-window-too-short/"

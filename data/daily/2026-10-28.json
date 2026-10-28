@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-conversation-view-not-grouping",
+    "path": "/google/gmail-conversation-view-not-grouping/",
+    "title": "Gmailで同じ相手のメールが会話にまとまらないとき",
+    "topic": "返信が別々の行に並び経緯を追いにくい",
+    "description": "返信が別々の行に並び経緯を追いにくい。Gmailの『スレッド表示』設定を確認し、件名や参加者が異なるメールとは分けて判断します。",
+    "answer": "Gmailの『スレッド表示』設定を確認し、件名や参加者が異なるメールとは分けて判断します。",
+    "steps": [
+      "PC版Gmailの設定→すべての設定を表示を開きます。",
+      "『スレッド表示』を探し、必要ならオンにして変更を保存します。",
+      "同じ件名で返信が続いたメールを開き、複数のメッセージが一つの会話に入るか見ます。",
+      "別のアカウントやGmailアプリで違う表示なら、それぞれの設定と会話の件名を確認します。"
+    ],
+    "causes": [
+      "スレッド表示がオフ",
+      "返信ではなく新規メールとして送られた",
+      "件名や参加者の違いで別会話になっている"
+    ],
+    "diagnosis": "メールが届かない問題と表示上のグループ化は異なります。まず同じメールが受信トレイに存在するか確認し、存在するのに別々に並ぶ時だけスレッド表示を調べます。Gmail公式の設定画面でオン・オフを切り替えられます。",
+    "caution": "既存メールを削除したり転送したりする必要はありません。共有アカウントや業務メールで表示を変える前には、他の利用者が会話単位で確認しているかを考慮し、変更後に目的のメールを探せるか確かめます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/5900?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-filter-moves-mail-to-trash/",
+      "/google/gmail-scheduled-send-not-sent/",
+      "/google/gmail-sent-mail-not-delivered/"
+    ],
+    "closest_existing_url": "/google/gmail-filter-moves-mail-to-trash/",
+    "differentiation": "既存記事はフィルタがメールをゴミ箱へ動かす問題。本記事は受信済みメールの返信を画面上で会話にまとめる表示設定を扱う。",
+    "fact_check": "Gmail公式ヘルプは設定のスレッド表示をオン・オフにして保存する手順を案内する。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-delegated-inbox-not-accessible",
+    "path": "/google/gmail-delegated-inbox-not-accessible/",
+    "title": "Gmailで委任された受信トレイを開けないとき",
+    "topic": "委任を受けたのに相手のメールボックスが一覧にない",
+    "description": "委任を受けたのに相手のメールボックスが一覧にない。招待の承認とアカウント切り替えを確認し、組織による委任制限や反映待ちも分けて調べます。",
+    "answer": "招待の承認とアカウント切り替えを確認し、組織による委任制限や反映待ちも分けて調べます。",
+    "steps": [
+      "委任元から届いた招待メールを確認し、有効期限内に承認したか確かめます。",
+      "Gmailのプロフィールからアカウント切り替えを開き、『委任』と表示された受信トレイを探します。",
+      "古いブックマーク経由ならアカウント切り替えから開き直します。",
+      "組織アカウントで設定自体が使えない場合は、管理者に委任の許可状態を確認します。"
+    ],
+    "causes": [
+      "招待が未承認または期限切れ",
+      "別のGoogleアカウントでGmailを開いている",
+      "組織の委任設定や反映待ちで利用できない"
+    ],
+    "diagnosis": "別名義でメールを送る『送信元アドレス』と、委任された受信トレイへのアクセスは別機能です。Googleは招待が一週間で失効し、受諾後の利用開始に時間がかかる場合があると説明します。招待、切り替え先、経過時間を順に確認します。",
+    "caution": "委任は相手のメールを読み、送信や削除もできる権限です。パスワードを共有して解決しようとせず、委任元の同意と組織方針を確認してください。知らない委任が見つかった場合はアカウントの安全確認を優先します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/138350?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-send-as-verification-missing/",
+      "/google/gmail-not-receiving-email/",
+      "/google/gmail-confidential-mail-code-missing/"
+    ],
+    "closest_existing_url": "/google/gmail-send-as-verification-missing/",
+    "differentiation": "既存記事は送信元アドレス追加の確認メール。本記事は別アカウントの受信トレイへの委任アクセスと招待承認を扱う。",
+    "fact_check": "Gmail公式ヘルプは招待の期限、プロフィールからの切り替え、委任の反映時間と組織制限を説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-pivot-new-rows-not-included",
+    "path": "/google/sheets-pivot-new-rows-not-included/",
+    "title": "スプレッドシートのピボット表に追加行が出ないとき",
+    "topic": "元の表へ行を追加したのに集計が増えない",
+    "description": "元の表へ行を追加したのに集計が増えない。ピボット表の参照範囲に追加行が含まれるか確認します。フィルタ条件も別に見ます。",
+    "answer": "ピボット表の参照範囲に追加行が含まれるか確認します。フィルタ条件も別に見ます。",
+    "steps": [
+      "ピボット表の下にある編集ボタンからピボットテーブルエディタを開きます。",
+      "『データ範囲を選択』で元データの範囲と追加行の位置を比べます。",
+      "追加行が範囲外なら、必要な行を含む範囲へ変更します。",
+      "値によるフィルタがある場合は新しい値が除外されていないか確認します。"
+    ],
+    "causes": [
+      "新しい行が参照範囲の外",
+      "値フィルタが新項目を除外",
+      "追加したつもりのセルが別シートや別表にある"
+    ],
+    "diagnosis": "Googleは参照元のセルが変更されればピボット表は更新されると説明しています。したがって手動の『更新』ボタンだけを探す前に、追加行が参照範囲へ入っているかとフィルタで隠れていないかを区別します。元表の行番号も控えます。",
+    "caution": "集計値を直接書き換えると元データとの関係が崩れます。範囲を広げる時は無関係な表や見出しを混ぜず、変更前の範囲を控えておきます。共有シートでは他の利用者の集計への影響も確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/1272900?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-conditional-format-not-applying/",
+      "/google/sheets-filter-view-not-saved/",
+      "/google/sheets-protected-cell-cannot-edit/"
+    ],
+    "closest_existing_url": "/google/sheets-conditional-format-not-applying/",
+    "differentiation": "既存記事はセルの色が条件付き書式で変わらない問題。本記事は追加行がピボット集計の参照範囲に入らない問題を扱う。",
+    "fact_check": "Sheets公式ヘルプは参照範囲の変更手順と、参照元セル変更時の自動更新を記載する。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-dropdown-entry-rejected",
+    "path": "/google/sheets-dropdown-entry-rejected/",
+    "title": "スプレッドシートのプルダウンに入力が拒否されるとき",
+    "topic": "候補にない値を入力するとエラーになる",
+    "description": "候補にない値を入力するとエラーになる。セルのデータ入力規則で、候補以外を拒否する設定か、警告だけ表示する設定かを確認します。",
+    "answer": "セルのデータ入力規則で、候補以外を拒否する設定か、警告だけ表示する設定かを確認します。",
+    "steps": [
+      "該当セルを選び、データ→データの入力規則でルールを開きます。",
+      "プルダウンの候補が直接入力か範囲参照かを確認します。",
+      "候補へ追加したい値なら、ルールの候補または参照元の範囲を更新します。",
+      "例外的な入力を許す必要がある場合だけ、詳細オプションの無効データを『警告を表示』へ変えます。"
+    ],
+    "causes": [
+      "候補外の値を拒否する規則が設定済み",
+      "候補範囲が新しい値まで伸びていない",
+      "入力した値と候補に空白などの違いがある"
+    ],
+    "diagnosis": "セルを編集できない権限問題と、値を入れると入力規則が拒否する問題は異なります。入力規則パネルで条件と候補の元を確かめると、候補を追加すべきか、警告へ変えるべきか判断できます。複数セルに同じ規則が適用されている場合は対象範囲も確認します。",
+    "caution": "入力規則を無条件に解除すると集計用データが不揃いになります。共有シートでは入力規則の目的を確認し、候補の追加で対応できるならその方法を優先してください。変更前のルール内容を記録します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/186103?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-protected-cell-cannot-edit/",
+      "/google/sheets-importrange-allow-access-error/",
+      "/google/sheets-conditional-format-not-applying/"
+    ],
+    "closest_existing_url": "/google/sheets-protected-cell-cannot-edit/",
+    "differentiation": "既存記事はセル保護によって編集権限がない状態。本記事は編集可能なセルへの値が入力規則で拒否される条件を扱う。",
+    "fact_check": "Sheets公式ヘルプは候補範囲、無効データの拒否と警告表示の切り替えを案内する。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-linked-chart-update-missing",
+    "path": "/google/docs-linked-chart-update-missing/",
+    "title": "Googleドキュメントで貼り付けたグラフが更新されないとき",
+    "topic": "元のスプレッドシートを変えても文書内の図が古い",
+    "description": "元のスプレッドシートを変えても文書内の図が古い。貼り付け時に元シートとのリンクが残っているかを確認し、リンク済みなら更新操作を行います。",
+    "answer": "貼り付け時に元シートとのリンクが残っているかを確認し、リンク済みなら更新操作を行います。",
+    "steps": [
+      "ドキュメント内のグラフをクリックし、『更新』または『すべて更新』の表示を確認します。",
+      "表示があれば更新し、元のスプレッドシートの値と比べます。",
+      "更新が出なければ貼り付け時に『スプレッドシートにリンク』を選んだか確認します。",
+      "リンクなしなら、必要なアクセス権を確認したうえで元データからリンク付きで貼り直すか判断します。"
+    ],
+    "causes": [
+      "リンクなしで貼り付けた",
+      "リンク済みだが更新操作をしていない",
+      "すでに最新のため更新ボタンが表示されない"
+    ],
+    "diagnosis": "Googleは『更新』が見えない場合、元ファイルとリンクしていないか既に最新である可能性を示しています。元シートの数値、文書内の数値、リンクの有無を順に確認し、単なる表示遅延と決めつけないことが重要です。",
+    "caution": "リンク付きで貼り直す前に既存の図の配置や書式を控えてください。共有文書で元のシートへの権限がない人がいる場合、リンク先が見えるか確認し、権限を無差別に広げないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/7009814?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-outline-heading-missing/",
+      "/google/docs-line-numbers-unavailable-pageless/",
+      "/google/sheets-conditional-format-not-applying/"
+    ],
+    "closest_existing_url": "/google/docs-outline-heading-missing/",
+    "differentiation": "既存記事は見出しスタイル不足でアウトラインに項目がない問題。本記事は外部シートとリンクしたグラフの更新状態を扱う。",
+    "fact_check": "Docs公式ヘルプはリンクした図の更新操作と、更新ボタンがない二つの理由を明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "slides-audio-unavailable-to-viewers",
+    "path": "/google/slides-audio-unavailable-to-viewers/",
+    "title": "Googleスライドで音声が共有相手に再生されないとき",
+    "topic": "自分は聞けるが閲覧者だけ音声を開けない",
+    "description": "自分は聞けるが閲覧者だけ音声を開けない。スライドに挿入した音声ファイルの保存先と共有権限を、スライド本体とは別に確認します。",
+    "answer": "スライドに挿入した音声ファイルの保存先と共有権限を、スライド本体とは別に確認します。",
+    "steps": [
+      "PC版Googleスライドで音声が挿入されたスライドを開きます。",
+      "音声の元ファイルがGoogleドライブにあるか確認します。",
+      "共有相手のアカウントで音声ファイルにアクセスできるか、共有ダイアログの権限を確認します。",
+      "必要な相手だけに音声ファイルの閲覧権限を付与し、相手側で再生を再確認します。"
+    ],
+    "causes": [
+      "スライド本体だけ共有し音声ファイルは共有していない",
+      "相手が違うGoogleアカウントで閲覧",
+      "音声ファイルのアクセス権が組織設定で制限されている"
+    ],
+    "diagnosis": "スライドに画像が見えていても、埋め込んだ音声ファイルは別のドライブ項目です。Googleの案内は音声や動画を含むプレゼンテーションでアクセス確認を促します。自分だけ再生できる場合はファイル権限を先に調べます。",
+    "caution": "機密音声を『リンクを知っている全員』に公開して解決しないでください。元ファイルの共有範囲を必要最小限に保ち、授業や会議の記録なら主催者・所有者の許可も確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/97447?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-screen-share-audio-missing/",
+      "/google/photos-partner-sharing-not-in-library/",
+      "/google/sheets-protected-cell-cannot-edit/"
+    ],
+    "closest_existing_url": "/sns/discord-screen-share-audio-missing/",
+    "differentiation": "既存記事はDiscord画面共有のシステム音声。本記事はGoogleスライドに挿入した別ファイルの閲覧権限を扱う。",
+    "fact_check": "Googleスライド公式ヘルプは音声挿入と、閲覧者に対する音声・動画ファイルのアクセス確認を説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-approvals-option-missing",
+    "path": "/google/drive-approvals-option-missing/",
+    "title": "Googleドライブで『承認』の項目が見つからないとき",
+    "topic": "ファイルの確認依頼を出したいが承認メニューがない",
+    "description": "ファイルの確認依頼を出したいが承認メニューがない。承認機能の対象アカウントかを確認し、ドライブのファイルメニューと文書内の入口を探します。",
+    "answer": "承認機能の対象アカウントかを確認し、ドライブのファイルメニューと文書内の入口を探します。",
+    "steps": [
+      "現在のGoogleアカウントが個人用か、組織・学校用か確認します。",
+      "管理者に利用中のWorkspaceエディションと承認機能の利用可否を確認します。",
+      "ドライブの対象ファイルを右クリックし『承認』の項目があるか確認します。",
+      "ドキュメント形式ならファイルメニューから承認を探し、利用できない場合は組織で認められた別の確認方法を相談します。"
+    ],
+    "causes": [
+      "個人用Gmailアカウントを利用している",
+      "対応外のWorkspaceエディションを利用している",
+      "ファイル内とドライブ一覧で入口を見落としている"
+    ],
+    "diagnosis": "Google公式ヘルプはファイル承認機能をEnterpriseとGoogle Workspace for Education Plusに限定し、個人用Gmailや標準のWorkspaceでは利用できないと明記しています。メニューが見えない場合はまず契約区分を確認し、利用できるアカウントで対象ファイルの入口を調べます。",
+    "caution": "承認のためだけに新たな有料契約や権限変更をしないでください。組織のファイルは管理者が認める方法で確認を依頼します。承認中の文書をロック・解除すると編集や承認状態に影響するので、診断だけなら触れないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/drive/answer/9387535?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/drive-transfer-ownership-unavailable/",
+      "/google/google-drive-files-missing/",
+      "/google/drive-file-previous-version-not-found/"
+    ],
+    "closest_existing_url": "/google/drive-transfer-ownership-unavailable/",
+    "differentiation": "既存記事はファイルの所有者変更権限。本記事はドライブの承認ワークフローのエディション制限とメニューの入口。",
+    "fact_check": "Googleドライブヘルプは承認機能の対象エディションとドライブ一覧・Docsの承認メニューを記載する。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-live-chat-replay-missing-after-edit",
+    "path": "/google/youtube-live-chat-replay-missing-after-edit/",
+    "title": "YouTube配信アーカイブのチャットリプレイが消えたとき",
+    "topic": "配信後の動画でライブチャットを再生できない",
+    "description": "配信後の動画でライブチャットを再生できない。配信アーカイブでリプレイを有効にしたかと、動画エディタで編集したかを分けて確認します。",
+    "answer": "配信アーカイブでリプレイを有効にしたかと、動画エディタで編集したかを分けて確認します。",
+    "steps": [
+      "YouTube Studioで対象のライブ配信アーカイブを開きます。",
+      "カスタマイズ欄にあるチャットリプレイの設定を確認します。",
+      "配信後に動画エディタでトリミングなどを行ったか履歴を確認します。",
+      "編集済み配信なら公式仕様としてリプレイが利用できないことを踏まえ、今後の配信の運用を見直します。"
+    ],
+    "causes": [
+      "チャットリプレイがオフ",
+      "アーカイブを動画エディタで編集した",
+      "子ども向け設定などでライブチャット自体が無効"
+    ],
+    "diagnosis": "通常動画のコメント欄と、ライブ配信中のチャットを後で再生する機能は別です。YouTubeは動画エディタで編集したライブ配信ではチャットリプレイが使えないと明記しています。設定オフとの違いを確認します。",
+    "caution": "編集を取り消す目的で元動画を削除しないでください。リプレイやコメントが大切な配信では、編集前に結果を確認し、必要なら公式のアーカイブ運用を検討します。チャット参加者の発言の扱いにも注意します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/15268877?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-video-comments-disabled/",
+      "/google/youtube-video-chapters-not-appearing/",
+      "/google/youtube-custom-thumbnail-option-missing/"
+    ],
+    "closest_existing_url": "/google/youtube-video-comments-disabled/",
+    "differentiation": "既存記事は通常動画のコメントが無効。本記事はライブ配信後のチャット再生と、動画エディタ編集によるリプレイ消失を扱う。",
+    "fact_check": "YouTube公式ヘルプは編集済みライブ配信にチャットリプレイが残らないことを明記する。"
+  },
+  {
+    "category": "mac",
+    "slug": "finder-tags-missing-sidebar",
+    "path": "/mac/finder-tags-missing-sidebar/",
+    "title": "MacのFinderサイドバーにタグが表示されないとき",
+    "topic": "付けたタグからファイルを探したいのに一覧にない",
+    "description": "付けたタグからファイルを探したいのに一覧にない。Finderのタグ表示設定で、サイドバーへ表示するタグが選ばれているか確認します。",
+    "answer": "Finderのタグ表示設定で、サイドバーへ表示するタグが選ばれているか確認します。",
+    "steps": [
+      "Finderを開き、Finder→設定→タグを選びます。",
+      "探しているタグが存在し、サイドバーに表示する設定になっているか確認します。",
+      "対象ファイルを選択してそのタグが実際に付いているか確かめます。",
+      "サイドバーで見つからない場合はFinderの検索でもタグ名を探し、表示だけの問題か分けます。"
+    ],
+    "causes": [
+      "タグのサイドバー表示がオフ",
+      "ファイルにタグが付いていない",
+      "別名のタグや別のFinderウィンドウを見ている"
+    ],
+    "diagnosis": "ファイルが消えた問題と、整理用のタグがサイドバーに見えない問題は違います。AppleはFinder設定のタグ画面で表示するタグを選ぶと案内しています。タグの存在、対象ファイルの付与状態、サイドバー表示の順に確認します。",
+    "caution": "タグを一括削除すると他のファイルの整理にも影響します。まず表示だけを直し、タグ名の変更や統合は同じタグを使う他のファイルを確認してから行ってください。共有フォルダーは権限も確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/tag-files-and-folders-mchlp15236/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-desktop-files-hidden-in-stacks/",
+      "/mac/external-drive-not-showing/",
+      "/mac/iphone-not-showing-in-finder-mac/"
+    ],
+    "closest_existing_url": "/mac/mac-desktop-files-hidden-in-stacks/",
+    "differentiation": "既存記事はデスクトップのスタックでファイルが隠れる問題。本記事はFinderのタグ一覧の表示設定とタグ付与を扱う。",
+    "fact_check": "AppleのMacガイドはFinder→設定→タグでサイドバーへ表示するタグを選ぶと記載する。"
+  },
+  {
+    "category": "mac",
+    "slug": "mail-rule-not-running",
+    "path": "/mac/mail-rule-not-running/",
+    "title": "Macのメールで振り分けルールが動かないとき",
+    "topic": "新着メールが指定したメールボックスへ移動しない",
+    "description": "新着メールが指定したメールボックスへ移動しない。ルールが有効か、条件と実行順が意図どおりかを確認します。過去のメールへの適用とは区別します。",
+    "answer": "ルールが有効か、条件と実行順が意図どおりかを確認します。過去のメールへの適用とは区別します。",
+    "steps": [
+      "メールアプリでメール→設定→ルールを開きます。",
+      "対象ルールのチェックが付いているか、差出人などの条件と移動先を確認します。",
+      "複数ルールがある場合は一覧の順番を確認し、先に処理されるルールがないか見ます。",
+      "新しいテストメールで結果を確かめ、過去のメールの整理が必要なら別途適用方法を確認します。"
+    ],
+    "causes": [
+      "ルールのチェックが外れている",
+      "条件が届いたメールと一致しない",
+      "別ルールの順序や移動先設定が影響している"
+    ],
+    "diagnosis": "Appleはメールのルール一覧でチェックを外すと保持したまま停止し、一覧の順序で適用すると説明します。新着だけ不一致なのか、受信済みの古いメールが動かないことを問題にしているのかを区別し、条件と順番を確認します。",
+    "caution": "移動や削除のルールを試す際は重要メールが失われないよう、まず少数のテストで確認してください。共有メールボックスなら他の利用者の分類も変わる可能性があります。大量の既存メールへ一括適用する前に結果を確かめます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mail/change-rules-settings-cpmlprefrules/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-mail-cannot-send-messages/",
+      "/mac/mac-microphone-not-working/",
+      "/mac/icloud-drive-not-syncing-mac/"
+    ],
+    "closest_existing_url": "/mac/mac-mail-cannot-send-messages/",
+    "differentiation": "既存記事はMacメールから送信できない問題。本記事は受信後の自動振り分け条件、有効状態、ルール順序を扱う。",
+    "fact_check": "Apple Mailガイドはルールのチェックで有効状態を切り替え、一覧の順番で適用すると説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "safari-profiles-not-visible",
+    "path": "/mac/safari-profiles-not-visible/",
+    "title": "MacのSafariで作成したプロファイルが見えないとき",
+    "topic": "仕事用と個人用の閲覧環境を切り替えられない",
+    "description": "仕事用と個人用の閲覧環境を切り替えられない。Safariの設定にプロファイルが登録されているか確認し、ウィンドウを開いた時のプロファイルも見ます。",
+    "answer": "Safariの設定にプロファイルが登録されているか確認し、ウィンドウを開いた時のプロファイルも見ます。",
+    "steps": [
+      "Safari→設定→プロファイルを開き、目的のプロファイルが一覧にあるか確認します。",
+      "初回なら『プロファイルを使い始める』から作成したか確認します。",
+      "メニューから対象プロファイルの新規ウィンドウを開き、表示色やお気に入りを比べます。",
+      "別のMacや別ユーザーで探している場合は、Safariの利用者と同期状態を確認します。"
+    ],
+    "causes": [
+      "プロファイルの作成が完了していない",
+      "別プロファイルのウィンドウを開いている",
+      "別のMac利用者や端末で作成したプロファイルを探している"
+    ],
+    "diagnosis": "Webページが開かない通信障害と、Safari内の閲覧プロファイルが見つからない問題は分けます。AppleはSafari設定のプロファイル画面から作成と管理を行うと案内しています。登録があるか、どのウィンドウで開いているかを確認します。",
+    "caution": "プロファイルの削除は履歴やサイトデータの整理に影響する場合があります。表示を直すために既存プロファイルを消さず、名前・色・お気に入りフォルダーを控えてから変更してください。共有Macでは利用者も確かめます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/safari/create-profiles-ibrwf3a9e7d6/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/safari-pages-not-loading-mac/",
+      "/mac/mac-spotlight-files-not-found/",
+      "/mac/icloud-drive-not-syncing-mac/"
+    ],
+    "closest_existing_url": "/mac/safari-pages-not-loading-mac/",
+    "differentiation": "既存記事はSafariでページが読み込めない問題。本記事は閲覧プロファイルの作成状態と切り替えを扱う。",
+    "fact_check": "Apple SafariガイドはSafari→設定→プロファイルで作成し、初回は利用開始操作があると説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "display-color-profile-option-missing",
+    "path": "/mac/display-color-profile-option-missing/",
+    "title": "Macでディスプレイのカラープロファイルが見つからないとき",
+    "topic": "画面の色を調整したいが同じ設定項目がない",
+    "description": "画面の色を調整したいが同じ設定項目がない。機種やディスプレイによって通常のカラープロファイルではなく参照モードを使う場合があります。",
+    "answer": "機種やディスプレイによって通常のカラープロファイルではなく参照モードを使う場合があります。",
+    "steps": [
+      "システム設定→ディスプレイを開き、対象の画面を選択します。",
+      "『カラープロファイル』のメニューがあるか確認します。",
+      "メニューがない対象モデルならAppleの案内する参照モードの設定を確認します。",
+      "標準の推奨状態と比較し、外部ディスプレイならその製品の色設定も確認します。"
+    ],
+    "causes": [
+      "対象モデルが参照モードを使う",
+      "別のディスプレイを選んでいる",
+      "外部画面固有の設定やプロファイルの扱いが異なる"
+    ],
+    "diagnosis": "Appleは通常、ディスプレイ向けの推奨プロファイルを自動選択すると説明しています。一部のMacやApple製ディスプレイでは参照モードを使うため、同じメニューがなくても故障と断定できません。対象モデルと選択中の画面を照合します。",
+    "caution": "色に関する仕事では、適当なプロファイルへ切り替えると表示や印刷結果が変わります。現在の設定を記録し、校正済み環境なら管理者や制作担当者に確認してください。非公式のプロファイルを無断で導入しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/change-your-displays-color-profile-mchlf3ddc60d/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/night-light-not-changing-color-windows/",
+      "/mac/mac-spotlight-files-not-found/",
+      "/mac/mac-desktop-files-hidden-in-stacks/"
+    ],
+    "closest_existing_url": "/windows/night-light-not-changing-color-windows/",
+    "differentiation": "既存記事はWindowsの夜間色調整が効かない問題。本記事はMac機種別のカラープロファイルと参照モードの設定場所を扱う。",
+    "fact_check": "Apple Macガイドは推奨プロファイルの自動選択と、参照モードを使うモデルの例外を記載する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "contact-poster-not-shared",
+    "path": "/iphone/contact-poster-not-shared/",
+    "title": "iPhoneの連絡先ポスターが相手に表示されないとき",
+    "topic": "自分の写真と名前を設定したのに共有されない",
+    "description": "自分の写真と名前を設定したのに共有されない。マイカードの『名前と写真の共有』と、共有相手の条件を確認します。NameDropとは別の機能です。",
+    "answer": "マイカードの『名前と写真の共有』と、共有相手の条件を確認します。NameDropとは別の機能です。",
+    "steps": [
+      "連絡先アプリでマイカードを開き、編集から連絡先の写真とポスターを確認します。",
+      "『名前と写真の共有』が有効か確認します。",
+      "共有方法が『連絡先のみ』か『毎回確認』かを見て、対象相手との関係を確認します。",
+      "相手へ表示する内容を確認し、必要なら共有設定を調整して次のやり取りで確かめます。"
+    ],
+    "causes": [
+      "名前と写真の共有がオフ",
+      "共有設定が連絡先のみで相手が対象外",
+      "毎回確認を選び共有を承認していない"
+    ],
+    "diagnosis": "iPhoneを近づけて新しい連絡先を交換するNameDropと、通話やメッセージ相手へ連絡先ポスターを共有する設定は異なります。Appleはマイカードで共有のオン・オフと自動共有先を選ぶ手順を示しています。",
+    "caution": "写真と名前は個人情報です。表示されないからといって全員への共有に切り替える前に、公開したい相手と画像を確認してください。仕事用の端末なら組織の連絡先ポリシーも確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/add-your-contact-info-iph18b749db1/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/namedrop-not-appearing/",
+      "/iphone/keyboard-not-appearing/",
+      "/iphone/always-on-display-not-working/"
+    ],
+    "closest_existing_url": "/iphone/namedrop-not-appearing/",
+    "differentiation": "既存記事は端末を近づけて連絡先を交換するNameDrop。本記事はマイカードの写真・ポスターの継続的な共有設定を扱う。",
+    "fact_check": "Apple iPhoneガイドはマイカードの名前と写真の共有、および連絡先のみ・毎回確認の選択を説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "icloud-shared-photo-library-invite-not-working",
+    "path": "/iphone/icloud-shared-photo-library-invite-not-working/",
+    "title": "iPhoneでiCloud共有写真ライブラリに参加できないとき",
+    "topic": "招待を受けたが共有ライブラリを使えない",
+    "description": "招待を受けたが共有ライブラリを使えない。iCloud写真が有効か、招待経路と参加済みライブラリの有無を確認します。共有アルバムとは別です。",
+    "answer": "iCloud写真が有効か、招待経路と参加済みライブラリの有無を確認します。共有アルバムとは別です。",
+    "steps": [
+      "設定→自分の名前→iCloud→写真で『このiPhoneを同期』が有効か確認します。",
+      "主催者から届いた招待を開き『はじめる』の操作へ進めるか確認します。",
+      "写真アプリのコレクションから自分のアカウントを開き、共有ライブラリへの参加状態を確認します。",
+      "既に別の共有ライブラリへ参加していないか確認し、必要なら主催者へ招待の状態を尋ねます。"
+    ],
+    "causes": [
+      "iCloud写真の同期がオフ",
+      "招待をまだ開いていない",
+      "既に別の共有写真ライブラリに参加している"
+    ],
+    "diagnosis": "Appleは共有写真ライブラリには一度に一つしか参加できず、利用前にiCloud写真を有効にする必要があると説明します。通常の共有アルバムが見えることだけでは参加条件を満たしたとは言えません。招待、同期、一つの制限を順に確認します。",
+    "caution": "共有ライブラリへ追加した写真は個人ライブラリから移り、参加者が閲覧・編集・削除できます。参加できないからといって既存ライブラリを削除せず、写真の保存状態と主催者の意図を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/set-up-or-join-an-icloud-shared-photo-library-iph28ac9ea81/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/icloud-photos-sync-paused-iphone/",
+      "/iphone/cannot-delete-app/",
+      "/iphone/icloud-backup-not-completing-iphone/"
+    ],
+    "closest_existing_url": "/iphone/icloud-photos-sync-paused-iphone/",
+    "differentiation": "既存記事は個人のiCloud写真同期停止。本記事は招待から共有写真ライブラリへ参加する条件と一ライブラリ制限を扱う。",
+    "fact_check": "Apple iPhoneガイドはiCloud写真の事前有効化、招待による参加、一度に一つの共有ライブラリという条件を示す。"
+  },
+  {
+    "category": "iphone",
+    "slug": "action-button-does-nothing",
+    "path": "/iphone/action-button-does-nothing/",
+    "title": "iPhoneのアクションボタンを押しても何も起きないとき",
+    "topic": "設定したはずの操作が起動しない",
+    "description": "設定したはずの操作が起動しない。対応モデルか、割り当てた機能に追加の選択が必要かを確認します。押し方と設定を分けて見ます。",
+    "answer": "対応モデルか、割り当てた機能に追加の選択が必要かを確認します。押し方と設定を分けて見ます。",
+    "steps": [
+      "自分のiPhoneがアクションボタン搭載モデルか確認します。",
+      "設定→アクションボタンを開き、選んだ機能の名前を確認します。",
+      "『コントロール』『ショートカット』『アクセシビリティ』を選んだ場合、下のボタンから具体的な項目を指定します。",
+      "設定後にボタンを長押しし、選んだ機能が動くか確認します。"
+    ],
+    "causes": [
+      "対応モデルではない",
+      "機能名だけ選んで具体的な操作を指定していない",
+      "短く押しており長押しの操作になっていない"
+    ],
+    "diagnosis": "カメラの画面上にあるボタンの不具合と、本体側面のアクションボタンは別です。Appleはコントロール、ショートカット、アクセシビリティを選んだ場合、追加で具体的な操作を選ばないと何も起きないと説明しています。",
+    "caution": "ショートカットを割り当てる時は、実行内容を確認せず他人のショートカットを追加しないでください。仕事用端末では機能が管理されている可能性もあるため、設定変更前に管理者へ確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/use-and-customize-the-action-button-iphe89d61d66/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/iphone-camera-live-text-button-missing/",
+      "/iphone/camera-not-opening/",
+      "/iphone/touchscreen-not-responding/"
+    ],
+    "closest_existing_url": "/iphone/iphone-camera-live-text-button-missing/",
+    "differentiation": "既存記事はカメラ画面のテキスト認識ボタン。本記事は本体側面のアクションボタンの機能割り当てと長押しを扱う。",
+    "fact_check": "Apple iPhoneガイドは3種類の割り当てに追加選択が必要で、未指定なら動作しないと明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "voice-memos-transcript-unavailable",
+    "path": "/iphone/voice-memos-transcript-unavailable/",
+    "title": "iPhoneのボイスメモで文字起こしが表示されないとき",
+    "topic": "録音は再生できるがテキストが見つからない",
+    "description": "録音は再生できるがテキストが見つからない。対応するiPhone・言語・地域と、録音中または録音後の文字起こし画面を確認します。",
+    "answer": "対応するiPhone・言語・地域と、録音中または録音後の文字起こし画面を確認します。",
+    "steps": [
+      "ボイスメモで対象の録音を開き、その他のメニューから『文字起こしを表示』を探します。",
+      "録音中なら波形を上へスワイプし、文字起こしのボタンを確認します。",
+      "iPhoneのモデルと録音言語がAppleの対応条件に入るか確認します。",
+      "対応条件を満たす別の短い録音で試し、特定録音だけの問題か分けます。"
+    ],
+    "causes": [
+      "iPhoneの機種が非対応",
+      "録音言語や地域が対象外",
+      "録音中と録音後で操作場所を取り違えている"
+    ],
+    "diagnosis": "音声ファイルが再生できることと文字起こしが利用できることは別です。AppleはiPhone 12以降、指定言語、対応地域という条件を示します。録音後はその他メニュー、録音中は波形内の文字起こし表示を確認します。",
+    "caution": "文字起こしには聞き違いがあり得るため、議事録や重要な発言は元音声と照合してください。録音の共有には相手の同意や組織のルールが関係する場合があります。確認のために機密録音を外部サービスへ送らないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/iphone-live-voicemail-not-appearing/",
+      "/iphone/photos-duplicates-album-missing/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/iphone-live-voicemail-not-appearing/",
+    "differentiation": "既存記事は電話の留守番メッセージをライブ表示する機能。本記事はボイスメモで録音した音声の文字起こし表示を扱う。",
+    "fact_check": "Apple iPhoneガイドはボイスメモ文字起こしの対応機種・言語・地域と表示経路を示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "file-history-drive-reconnect-warning",
+    "path": "/windows/file-history-drive-reconnect-warning/",
+    "title": "Windowsで『ファイル履歴のドライブを再接続してください』と出るとき",
+    "topic": "バックアップ先をつないでいるのに保存停止の警告が消えない",
+    "description": "バックアップ先をつないでいるのに保存停止の警告が消えない。以前指定したバックアップ用ドライブを確かめ、同じドライブを安全に再接続してからファイル履歴の状態を確認します。",
+    "answer": "以前指定したバックアップ用ドライブを確かめ、同じドライブを安全に再接続してからファイル履歴の状態を確認します。",
+    "steps": [
+      "ファイル履歴に使っていた外付けドライブまたはネットワーク先を確認します。",
+      "外付けドライブならケーブルと電源を確認し、エクスプローラーで開けるか調べます。",
+      "コントロールパネルのファイル履歴で保存先と実行状態を確認し、元のドライブを再接続します。",
+      "再接続後に新しいバックアップが作られるか確認し、古い履歴を別途残します。"
+    ],
+    "causes": [
+      "以前のバックアップ先が外されている",
+      "接続先のドライブ文字やネットワーク場所が変わった",
+      "バックアップ先にアクセスできない"
+    ],
+    "diagnosis": "警告が示すのはバックアップ先への接続であり、上書き前のファイルを探す画面とは別です。Microsoftはドライブの再接続を案内しています。まず保存先を特定し、同じドライブが開けるかと、ファイル履歴が再開したかを順に確認します。",
+    "caution": "バックアップ用ドライブを初期化したり既存の履歴を消したりしないでください。新しい保存先に切り替える前に、旧ドライブに必要な世代が残っているか確認します。共有先なら管理者に接続権限を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/reconnect-your-file-history-drive-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/file-history-previous-version-missing/",
+      "/windows/windows-c-drive-space-disappearing/",
+      "/windows/windows-backup-files-not-restored/"
+    ],
+    "closest_existing_url": "/windows/file-history-previous-version-missing/",
+    "differentiation": "既存記事は過去の版が一覧にない場合の復元可否を扱う。本記事はバックアップ先の接続警告と今後の保存再開を扱う。",
+    "fact_check": "Microsoftサポートはファイル履歴ドライブの再接続とバックアップ継続を案内している。"
+  },
+  {
+    "category": "windows",
+    "slug": "night-light-toggle-unavailable",
+    "path": "/windows/night-light-toggle-unavailable/",
+    "title": "Windowsの夜間モードのスイッチがグレーで押せないとき",
+    "topic": "夜間モードをオンにする前に設定自体が選べない",
+    "description": "夜間モードをオンにする前に設定自体が選べない。表示環境とグラフィック機能を確認し、夜間モードの切り替えが利用可能かを見分けます。",
+    "answer": "表示環境とグラフィック機能を確認し、夜間モードの切り替えが利用可能かを見分けます。",
+    "steps": [
+      "設定のシステムからディスプレイを開き、夜間モードのスイッチが選べるか確認します。",
+      "内蔵画面と外部画面で表示が異なるか、接続状態を変えずに見比べます。",
+      "Windows UpdateとPCメーカーが案内する表示ドライバーの更新状況を確認します。",
+      "管理端末なら表示設定を制限する方針がないか管理者に確認します。"
+    ],
+    "causes": [
+      "表示ドライバーまたは接続環境で機能が利用できない",
+      "選択中の画面と設定対象が異なる",
+      "組織管理の設定で変更できない"
+    ],
+    "diagnosis": "スイッチが押せない場合は、オンでも色が変わらない場合と入口が異なります。Microsoftの表示と色の設定案内を基準に、まず利用できる画面と表示ドライバーを確認します。設定を有効にできてから色の強度や時刻指定を調べます。",
+    "caution": "ドライバーを不明な配布サイトから入れたり、レジストリを一括変更したりしないでください。会社や学校のPCでは設定変更を試す前に管理者へ確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/change-display-brightness-and-color-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/night-light-not-changing-color-windows/",
+      "/windows/wifi-option-missing-windows-11/",
+      "/windows/remote-desktop-not-connecting-windows/"
+    ],
+    "closest_existing_url": "/windows/night-light-not-changing-color-windows/",
+    "differentiation": "既存記事はオンにできるのに色が変わらない症状。本記事はスイッチ自体が無効でオンに進めない症状。既存本文にグレー表示の診断はない。",
+    "fact_check": "Microsoftサポートの夜間モードの表示設定とディスプレイ関連の案内を参照した。"
+  },
+  {
+    "category": "windows",
+    "slug": "device-encryption-option-missing",
+    "path": "/windows/device-encryption-option-missing/",
+    "title": "Windowsでデバイスの暗号化が設定に出ないとき",
+    "topic": "設定のプライバシーとセキュリティで暗号化項目を探せない",
+    "description": "設定のプライバシーとセキュリティで暗号化項目を探せない。管理者アカウントかどうかを確認し、システム情報に表示される暗号化の対応状況を読み取ります。",
+    "answer": "管理者アカウントかどうかを確認し、システム情報に表示される暗号化の対応状況を読み取ります。",
+    "steps": [
+      "設定のプライバシーとセキュリティに『デバイスの暗号化』があるか確認します。",
+      "現在のWindowsアカウントが管理者か標準ユーザーか確認します。",
+      "スタートで『システム情報』を探して管理者として開き、デバイス暗号化サポートの表示を読みます。",
+      "TPMやWinREなどの不足条件が示されたら記録し、メーカーまたは管理者の案内を確認します。"
+    ],
+    "causes": [
+      "標準ユーザーでサインインしている",
+      "端末が暗号化の前提条件を満たしていない",
+      "TPMや回復環境などの構成に不足がある"
+    ],
+    "diagnosis": "Microsoftは項目が表示されない理由として端末非対応または標準ユーザーを挙げています。システム情報にはTPM、WinRE、PCR7などの判定理由が出ることがあります。項目を強制表示するより、表示された不足条件を確認する方が安全です。",
+    "caution": "暗号化設定の変更前に回復キーの保管先を確認してください。BIOSやTPMを理由なく初期化するとアクセスできなくなるおそれがあります。組織の端末では管理者に相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/security/encryption/device-encryption-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-security-not-opening/",
+      "/windows/windows-no-sound/",
+      "/windows/bluetooth-le-audio-option-missing/"
+    ],
+    "closest_existing_url": "/windows/windows-security-not-opening/",
+    "differentiation": "既存のWindowsセキュリティ記事は保護アプリが開けない問題。本記事はデバイス暗号化の表示要件とシステム情報の判定に限る。",
+    "fact_check": "Microsoftサポートに標準ユーザー・端末要件とシステム情報での確認手順が明記されている。"
+  },
+  {
+    "category": "windows",
+    "slug": "hello-fingerprint-setup-missing",
+    "path": "/windows/hello-fingerprint-setup-missing/",
+    "title": "Windows Helloで指紋認証の設定が選べないとき",
+    "topic": "サインインオプションに指紋の設定ボタンが出ない",
+    "description": "サインインオプションに指紋の設定ボタンが出ない。指紋リーダーの有無とWindows Helloの設定画面を確認し、登録前の利用条件を切り分けます。",
+    "answer": "指紋リーダーの有無とWindows Helloの設定画面を確認し、登録前の利用条件を切り分けます。",
+    "steps": [
+      "設定のアカウントからサインインオプションを開き、指紋認識の項目を確認します。",
+      "PCに指紋リーダーが内蔵されているか、外付けなら対応機器が接続されているか確かめます。",
+      "機器メーカーの案内に従い、Windowsとセンサーの更新状況を確認します。",
+      "指紋を登録できない場合はPINなど既存のサインイン方法を維持し、管理者またはメーカーへ相談します。"
+    ],
+    "causes": [
+      "指紋リーダーを備えていない",
+      "外付けリーダーが接続または認識されていない",
+      "組織のサインイン方針で設定できない"
+    ],
+    "diagnosis": "MicrosoftはWindows Helloの指紋認識には指紋リーダーが必要と明記しています。登録済みの指が認識されない症状とは異なるため、最初に機器と設定項目の有無を確認します。認識後にセットアップボタンから登録できるか判断します。",
+    "caution": "使えるサインイン方法を確認する前にPINを削除しないでください。外付けセンサーを買う前にHello対応をメーカー情報で確認します。管理端末ではポリシーを変更せず管理者に相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/security/configure-windows-hello",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-hello-fingerprint-not-recognized/",
+      "/windows/windows-hello-face-not-working/",
+      "/windows/windows-no-sound/"
+    ],
+    "closest_existing_url": "/windows/windows-hello-fingerprint-not-recognized/",
+    "differentiation": "既存記事は登録済み指紋で解除できない問題。本記事は指紋登録の入口自体がない場合の対応機器と設定条件。",
+    "fact_check": "Microsoftサポートは指紋認識に対応リーダーが必要で、設定のサインインオプションから登録すると案内している。"
+  },
+  {
+    "category": "windows",
+    "slug": "lock-screen-spotlight-not-changing",
+    "path": "/windows/lock-screen-spotlight-not-changing/",
+    "title": "Windowsのロック画面のSpotlight画像が切り替わらないとき",
+    "topic": "毎日違う画像を期待しているが同じ背景のまま",
+    "description": "毎日違う画像を期待しているが同じ背景のまま。ロック画面の背景がWindows Spotlightになっているか確認し、画像またはスライドショー指定と区別します。",
+    "answer": "ロック画面の背景がWindows Spotlightになっているか確認し、画像またはスライドショー指定と区別します。",
+    "steps": [
+      "設定の個人用設定からロック画面を開きます。",
+      "背景の選択がWindows Spotlight、画像、スライドショーのどれか確認します。",
+      "固定画像ならWindows Spotlightを選び、ロック画面で表示が変わるか時間を置いて確認します。",
+      "組織端末で選択できない場合はポリシーの有無を管理者に確認します。"
+    ],
+    "causes": [
+      "背景が固定の画像に設定されている",
+      "スライドショーとSpotlightを取り違えている",
+      "管理端末の個人用設定が制限されている"
+    ],
+    "diagnosis": "Microsoftのロック画面案内では、Windows Spotlightは新しい画像を表示する選択肢で、画像は一枚を指定する選択肢です。まず背景の種類を読み、固定画像にしていたなら設定を変えてから経過を見ます。直ちに必ず画像が変わるとは断定しません。",
+    "caution": "画像の切り替わりを理由に個人用設定全体を初期化しないでください。学校や会社の端末では管理ポリシーが優先される可能性があります。背景に個人写真を使う場合は表示場所に注意します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/personalization/customize-the-lock-screen-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-spotlight-files-not-found/",
+      "/windows/night-light-not-changing-color-windows/",
+      "/windows/windows-pin-not-available/"
+    ],
+    "closest_existing_url": "/mac/mac-spotlight-files-not-found/",
+    "differentiation": "既存のSpotlight記事はMacのファイル検索。本記事はWindowsのロック画面背景の選択と画像更新で、目的も設定箇所も異なる。",
+    "fact_check": "Microsoftサポートはロック画面の背景にWindows Spotlight、画像、スライドショーを区別して掲載している。"
+  },
+  {
+    "category": "windows",
+    "slug": "microphone-indicator-unexpected",
+    "path": "/windows/microphone-indicator-unexpected/",
+    "title": "Windowsでマイク使用中の表示が突然出るとき",
+    "topic": "通話をしていないのにタスクバーでマイク利用を示す",
+    "description": "通話をしていないのにタスクバーでマイク利用を示す。プライバシー設定の最近の利用と実行中アプリを確認し、許可したアプリの動作か見分けます。",
+    "answer": "プライバシー設定の最近の利用と実行中アプリを確認し、許可したアプリの動作か見分けます。",
+    "steps": [
+      "設定のプライバシーとセキュリティからマイクを開き、アクセスが許可されたアプリを確認します。",
+      "最近利用したアプリの表示と、現在開いている会議・録音・ブラウザーのタブを照合します。",
+      "不要なアプリだけマイクアクセスをオフにし、必要な通話や録音が使えるか確認します。",
+      "知らないアプリが繰り返し使うならアプリ名と時刻を記録し、Windowsセキュリティで確認します。"
+    ],
+    "causes": [
+      "会議や録音アプリが背景で動いている",
+      "ブラウザーのサイトにマイクを許可している",
+      "不要なアプリがマイクアクセスを持っている"
+    ],
+    "diagnosis": "マイクが使えない問題と、意図せず使われているように見える問題は対応が逆です。Microsoftのプライバシー画面にはアクセス許可と利用状況の確認手段があります。表示されたアプリと実際の作業を照合してから個別に権限を変えます。",
+    "caution": "マイクアクセスを全アプリで一括停止すると必要な通話もできなくなります。不審なアプリを判断する前に表示時刻とアプリ名を記録し、組織端末なら管理者へ相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/privacy/windows-camera-microphone-and-privacy",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-microphone-not-working/",
+      "/windows/touch-keyboard-icon-missing-windows/",
+      "/windows/windows-taskbar-not-responding/"
+    ],
+    "closest_existing_url": "/windows/windows-microphone-not-working/",
+    "differentiation": "既存記事は声が入らない場合の入力・許可確認。本記事は予期しない使用表示と権限監査を扱う。",
+    "fact_check": "Microsoftサポートはマイクアクセスの許可管理と使用中の通知について案内している。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-now-playing-not-identifying",
+    "path": "/android/pixel-now-playing-not-identifying/",
+    "title": "Pixelの『この曲なに？』で周囲の曲が表示されないとき",
+    "topic": "近くで音楽が流れていてもロック画面に曲名が出ない",
+    "description": "近くで音楽が流れていてもロック画面に曲名が出ない。PixelのNow Playingアプリで機能が有効か確認し、履歴と手動検索を使って認識状況を分けます。",
+    "answer": "PixelのNow Playingアプリで機能が有効か確認し、履歴と手動検索を使って認識状況を分けます。",
+    "steps": [
+      "Now Playingアプリの設定で機能が有効か確認します。",
+      "曲が流れている場所でロック画面とNow Playingの履歴を確認します。",
+      "自動認識されない場合はアプリの曲検索を試し、認識の違いを確認します。",
+      "アプリの更新と権限を確認し、使い始めた直後なら案内された準備時間を置きます。"
+    ],
+    "causes": [
+      "Now Playingが無効になっている",
+      "端末上の曲データベースで認識できない",
+      "アプリ導入直後で利用開始の準備中"
+    ],
+    "diagnosis": "GoogleによるとPixelは端末上のライブラリで周囲の曲を認識し、Now Playingアプリを導入した直後は利用開始まで最大24時間かかることがあります。履歴に曲が残るか、手動検索だけ成功するかを比べ、マイク故障と決めつけないでください。",
+    "caution": "認識できない一曲だけで端末を初期化しないでください。手動検索や拡張機能の一部では音声指紋がGoogleへ送られるため、プライバシー設定とアプリ権限を確認してから利用します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/7535326?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-microphone-not-working/",
+      "/android/pixel-camera-qr-link-not-shown/",
+      "/android/android-usb-file-transfer-not-working/"
+    ],
+    "closest_existing_url": "/android/android-microphone-not-working/",
+    "differentiation": "既存記事は通話や録音でマイクが働かない症状。本記事はPixel固有の周辺楽曲の識別機能と履歴・手動検索。",
+    "fact_check": "PixelヘルプはNow Playingの有効化、履歴、手動検索と初回導入後の待機時間を説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "notification-history-empty",
+    "path": "/android/notification-history-empty/",
+    "title": "Androidの通知履歴に消した通知が出ないとき",
+    "topic": "通知を閉じた後で履歴を開いても見つからない",
+    "description": "通知を閉じた後で履歴を開いても見つからない。端末が通知履歴に対応するかを確かめ、有効化した後の通知を対象に表示を確認します。",
+    "answer": "端末が通知履歴に対応するかを確かめ、有効化した後の通知を対象に表示を確認します。",
+    "steps": [
+      "設定から通知を開き、通知履歴の項目があるか調べます。",
+      "項目があれば通知履歴をオンにし、設定した時刻を記録します。",
+      "その後に届いた通知を閉じ、最近消去した通知と過去24時間の欄を確認します。",
+      "特定アプリだけなければ、現在の通知設定でそのアプリが通知を送っているか確かめます。"
+    ],
+    "causes": [
+      "端末が通知履歴に対応していない",
+      "履歴がオフの時点で通知を消している",
+      "対象アプリから通知自体が届いていない"
+    ],
+    "diagnosis": "Googleは一部端末に通知履歴がないこと、設定の場所が端末ごとに異なることを明記しています。今から履歴をオンにしても過去に消した通知が必ず戻るとは考えず、設定後に届いた通知で検証します。通知が届かない問題とは順序が違います。",
+    "caution": "通知履歴にはメッセージの一部などが残る場合があります。共有端末では表示内容を確認し、必要な範囲で使ってください。履歴を復元しようとしてアプリのデータを削除しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9079661?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-notifications-not-arriving/",
+      "/android/android-quick-share-device-not-showing/",
+      "/android/android-screenshot-not-found/"
+    ],
+    "closest_existing_url": "/android/android-notifications-not-arriving/",
+    "differentiation": "既存記事は通知そのものが届かない問題。本記事は届いて消した通知を履歴で探すための端末対応と有効化の時点。",
+    "fact_check": "Androidヘルプは一部端末に履歴がないことと最近消去した通知・過去24時間の欄を説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "theft-detection-lock-option-missing",
+    "path": "/android/theft-detection-lock-option-missing/",
+    "title": "Androidで盗難検出ロックの設定が見つからないとき",
+    "topic": "盗難対策を有効にしたいが項目が表示されない",
+    "description": "盗難対策を有効にしたいが項目が表示されない。Androidのバージョン、画面ロック、端末の対応範囲を確認して利用可能な盗難対策を選びます。",
+    "answer": "Androidのバージョン、画面ロック、端末の対応範囲を確認して利用可能な盗難対策を選びます。",
+    "steps": [
+      "設定でGoogleの盗難対策または盗難防止の項目を探します。",
+      "Androidのバージョンと端末の種類を確認します。",
+      "画面ロックが設定されているか確認し、必要なら安全な方法を選びます。",
+      "項目がない場合はメーカーの対応情報を確認し、利用できる端末保護機能を確認します。"
+    ],
+    "causes": [
+      "端末やAndroidのバージョンが対応条件外",
+      "Android Goやタブレットなど対象外の機器",
+      "画面ロックが未設定"
+    ],
+    "diagnosis": "Googleは盗難対策の一部にAndroid 10以上が必要で、Android Go・タブレット・ウェアラブルは対象外、機種差もあると説明しています。まず端末の対応条件を調べ、項目がないことを設定故障と決めつけないでください。",
+    "caution": "画面ロックの設定は忘れない方法を選んでください。端末を初期化したり不明なアプリを入れたりして項目を出そうとしないでください。盗難時の備えはアカウントの回復方法も合わせて確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/15146908?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-fingerprint-not-working/",
+      "/android/android-add-user-option-missing/",
+      "/android/android-screenshot-not-found/"
+    ],
+    "closest_existing_url": "/android/android-fingerprint-not-working/",
+    "differentiation": "既存記事は指紋で解除できない認証トラブル。本記事は盗難検出ロック機能の提供条件と設定項目の有無。",
+    "fact_check": "Androidヘルプは盗難対策の対応バージョン、対象外端末、画面ロックの条件を列挙する。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-battery-share-stops-early",
+    "path": "/android/pixel-battery-share-stops-early/",
+    "title": "Pixelのバッテリーシェアが途中で止まるとき",
+    "topic": "背面に置いたイヤホンを充電していたが転送が切れる",
+    "description": "背面に置いたイヤホンを充電していたが転送が切れる。Pixel側のバッテリー残量と停止するしきい値、受電機器の位置を確認します。",
+    "answer": "Pixel側のバッテリー残量と停止するしきい値、受電機器の位置を確認します。",
+    "steps": [
+      "設定のバッテリーからバッテリーシェアを開き、機能がオンか確認します。",
+      "共有を停止するPixelの残量しきい値と現在の残量を比較します。",
+      "Qi対応の受電機器をPixel背面の適切な位置に置き直し、ケースや異物の影響を確認します。",
+      "Pixelの残量がしきい値を下回るなら、先に本体を充電してから再試行します。"
+    ],
+    "causes": [
+      "Pixelの残量が設定した停止しきい値以下",
+      "受電機器がQiに非対応または位置がずれている",
+      "ケースや異物で背面の接触が妨げられている"
+    ],
+    "diagnosis": "Googleはバッテリーシェアを停止する残量を10%から50%で設定でき、その残量を下回ると共有できないと説明します。充電が途中で切れる場合は故障と決める前に、現在残量としきい値を比較します。通常の有線充電が止まる症状とは異なります。",
+    "caution": "端末が熱い場合は無理に充電を続けず冷ましてください。Qi非対応機器を背面に置いても充電できません。金属類やカードを間に挟まず、対応機種とアクセサリの仕様を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/10107702?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-not-charging/",
+      "/android/android-battery-drains-fast/",
+      "/android/pixel-camera-qr-link-not-shown/"
+    ],
+    "closest_existing_url": "/android/android-not-charging/",
+    "differentiation": "既存記事はAndroid本体の充電不良。本記事はPixelから別機器へ給電するバッテリーシェアの停止条件。",
+    "fact_check": "Pixelヘルプはバッテリーシェアの停止残量を10%から50%で設定できると明記する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-tracking-protection-breaks-site",
+    "path": "/browser/firefox-tracking-protection-breaks-site/",
+    "title": "Firefoxで一部サイトのボタンや動画だけ動かないとき",
+    "topic": "ページは開くが機能の一部だけ失敗する",
+    "description": "ページは開くが機能の一部だけ失敗する。Firefoxの盾アイコンから強化型トラッキング防止の影響をサイト単位で確かめます。",
+    "answer": "Firefoxの盾アイコンから強化型トラッキング防止の影響をサイト単位で確かめます。",
+    "steps": [
+      "問題のサイトをFirefoxで開き、アドレスバーの盾アイコンの状態を確認します。",
+      "サイトの信頼性を確認したうえで、そのサイトだけ保護を一時的にオフにして機能を比べます。",
+      "変化がなければ保護を元に戻し、拡張機能やサイト側の問題を別に調べます。",
+      "オフで動くならサイトの必要性を判断し、恒久的な例外にするか慎重に決めます。"
+    ],
+    "causes": [
+      "強化型トラッキング防止が必要なサイト要素も遮断",
+      "サイト側の読み込み不良",
+      "別の拡張機能が機能を妨げている"
+    ],
+    "diagnosis": "Mozillaは保護によってサイトが壊れる場合に盾アイコンからそのサイトだけ保護をオフにして確認する方法を案内しています。ページ全体の接続障害とは異なり、ボタンや動画など一部だけ失敗するときに比較すると原因を絞れます。",
+    "caution": "信頼できないサイトで保護を解除しないでください。サイト単位の例外でも追跡要素が動く可能性があるため、診断後は必要に応じて保護を戻します。全サイト一括で無効にしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-embedded-signin-cookies-blocked/",
+      "/browser/chrome-one-site-muted/",
+      "/browser/chrome-unwanted-popups-redirects/"
+    ],
+    "closest_existing_url": "/browser/chrome-embedded-signin-cookies-blocked/",
+    "differentiation": "既存記事はChromeで埋め込みログインのCookieが止まる症状。本記事はFirefoxの盾アイコンでサイト機能全般の破損を診断する手順。",
+    "fact_check": "Mozilla公式ヘルプはサイトごとに強化型トラッキング防止を切り替えて動作を確かめる手順を説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-favorites-bar-hidden",
+    "path": "/browser/edge-favorites-bar-hidden/",
+    "title": "Edgeでお気に入りバーが見えなくなったとき",
+    "topic": "保存したサイトをすぐ開くためのバーだけが消えた",
+    "description": "保存したサイトをすぐ開くためのバーだけが消えた。お気に入りが消えたかを確認し、バーの表示設定を『常に表示』に変更します。",
+    "answer": "お気に入りが消えたかを確認し、バーの表示設定を『常に表示』に変更します。",
+    "steps": [
+      "Edgeのお気に入りメニューを開き、保存済みの項目が残っているか確認します。",
+      "設定の外観からお気に入りバーの表示設定を探します。",
+      "『常に表示』『新しいタブのみ』『表示しない』の違いを確認し、必要なら常に表示へ変更します。",
+      "バーが戻っても項目がない場合はお気に入りバー以外のフォルダーに保存していないか調べます。"
+    ],
+    "causes": [
+      "表示設定が『表示しない』になった",
+      "新しいタブだけ表示する設定になっている",
+      "お気に入りを別フォルダーに保存している"
+    ],
+    "diagnosis": "MicrosoftはEdgeのお気に入りバーの表示方法を外観設定で選べると案内しています。お気に入りメニューに項目があればデータ消失ではなく表示だけの可能性があります。同期不良を疑う前に、バーと保存先フォルダーを分けて確認します。",
+    "caution": "お気に入りが見えないだけで同期を解除したりブラウザーのデータを消したりしないでください。仕事用PCでは表示方針が管理されている場合があるため、その場合は管理者へ確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/microsoft-edge/see-your-favorites-bar-in-microsoft-edge-566736f8-a11d-52e2-4f6f-7a713e1750d2",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/edge-sync-not-working/",
+      "/browser/chrome-reading-list-side-panel-missing/",
+      "/browser/chrome-bookmarks-missing/"
+    ],
+    "closest_existing_url": "/browser/edge-sync-not-working/",
+    "differentiation": "既存記事は端末間でお気に入りなどが同期しない問題。本記事は保存済みのお気に入りバーの表示設定。",
+    "fact_check": "MicrosoftサポートはEdgeのお気に入りバーを外観の設定から表示する方法を示している。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-voice-message-send-missing-desktop",
+    "path": "/sns/discord-voice-message-send-missing-desktop/",
+    "title": "DiscordのPC版でボイスメッセージ送信ボタンがないとき",
+    "topic": "音声を録って非同期で送りたいがボタンが見当たらない",
+    "description": "音声を録って非同期で送りたいがボタンが見当たらない。送信に対応する端末を確認し、PC版の通話マイク設定と混同しないようにします。",
+    "answer": "送信に対応する端末を確認し、PC版の通話マイク設定と混同しないようにします。",
+    "steps": [
+      "今使っているDiscordがPCアプリ・Web版か、スマートフォンアプリか確認します。",
+      "PC版では受信したボイスメッセージを再生できるか確かめます。",
+      "ボイスメッセージを送る必要があれば、対応するスマートフォンアプリのDMまたは許可されたサーバーを開きます。",
+      "スマートフォンでも送信できない場合はチャンネル権限とアプリのマイク権限を確認します。"
+    ],
+    "causes": [
+      "PC版またはWeb版を利用している",
+      "送信先でボイスメッセージが許可されていない",
+      "スマートフォン側のマイク権限がない"
+    ],
+    "diagnosis": "Discord公式ヘルプはボイスメッセージの送信をモバイル限定、再生を各プラットフォームで可能と説明しています。PCでボタンがないことをマイク故障と判断せず、使用端末と送信先を確認してください。ライブ通話の音声とは別機能です。",
+    "caution": "音声には周囲の会話が入る可能性があります。送信前に宛先と内容を確認し、仕事や学校の情報を含む場合は共有方針に従ってください。権限を広げて送る必要はありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/13091096725527-Voice-Messages",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-push-to-talk-key-not-working/",
+      "/sns/discord-soundboard-button-disabled/",
+      "/sns/discord-channel-message-permission-denied/"
+    ],
+    "closest_existing_url": "/sns/discord-push-to-talk-key-not-working/",
+    "differentiation": "既存記事はライブ通話のプッシュトゥトーク操作。本記事は録音して送るボイスメッセージの対応端末と送信権限。",
+    "fact_check": "Discord公式ヘルプは送信はモバイル限定、視聴は各プラットフォームと明記する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-meeting-file-transfer-missing",
+    "path": "/sns/zoom-meeting-file-transfer-missing/",
+    "title": "Zoom会議のチャットでファイル送信が見つからないとき",
+    "topic": "会議中に資料を渡したいがファイルの項目が出ない",
+    "description": "会議中に資料を渡したいがファイルの項目が出ない。会議のファイル転送設定と管理者の制限を確認し、主催者に安全な共有方法を相談します。",
+    "answer": "会議のファイル転送設定と管理者の制限を確認し、主催者に安全な共有方法を相談します。",
+    "steps": [
+      "Zoom会議中のチャットを開き、ファイル送信の項目があるか確認します。",
+      "自分のZoom Webポータルで会議内ファイル転送の設定が利用できるか確認します。",
+      "設定が無効またはロックされている場合はアカウント所有者・管理者へ状況を伝えます。",
+      "急ぎの資料共有は主催者が認める別の安全な共有方法を使い、受信者の範囲を確認します。"
+    ],
+    "causes": [
+      "会議内ファイル転送が無効",
+      "アカウントまたはグループ管理者が設定をロック",
+      "会議チャットと別の共有機能を混同している"
+    ],
+    "diagnosis": "Zoom公式案内は会議内ファイル転送をアカウント、グループ、ユーザーの各階層で設定できると説明します。画面共有の権限とは別です。項目がない場合はまず会議チャットとポータル設定を確認し、ロックされていれば管理者へ相談します。",
+    "caution": "機密資料を送るために管理者の制限を回避しないでください。別の共有方法を使う場合も参加者全員へ公開されないか宛先を確認し、組織の取り扱い方針に従います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0058822",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/zoom-automated-captions-option-missing/",
+      "/sns/zoom-breakout-rooms-option-missing/"
+    ],
+    "closest_existing_url": "/sns/zoom-participant-screen-share-disabled/",
+    "differentiation": "既存記事は参加者の画面共有権限。本記事は会議チャットのファイル転送設定と管理階層で、送信経路が異なる。",
+    "fact_check": "Zoom公式ヘルプは会議内ファイル転送の有効化をアカウント・グループ・ユーザーの階層別に案内する。"
+  }
+]

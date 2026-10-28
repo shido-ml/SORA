@@ -172,6 +172,7 @@ OFFICIAL_SOURCE_HOSTS = {
     "support.discord.com",
     "support.google.com",
     "support.microsoft.com",
+    "support.mozilla.org",
     "support.tiktok.com",
     "support.zoom.com",
     "www.aterm.jp",
