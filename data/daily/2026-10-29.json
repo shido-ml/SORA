@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-label-hidden-sidebar",
+    "path": "/google/gmail-label-hidden-sidebar/",
+    "title": "Gmailでラベルが左側の一覧に出ないとき",
+    "topic": "付けたラベルを左メニューから探せない",
+    "description": "付けたラベルを左メニューから探せない。ラベル自体が消えたのか、ラベル一覧で非表示になっているだけかを切り分けます。",
+    "answer": "ラベル自体が消えたのか、ラベル一覧で非表示になっているだけかを切り分けます。",
+    "steps": [
+      "PC版Gmailで設定から『すべての設定を表示』を開きます。",
+      "『ラベル』タブで対象ラベルを探し、ラベルリストの『表示』を選びます。",
+      "左側の『もっと見る』も開き、折りたたまれた一覧にないか調べます。",
+      "対象のメールを開いてラベルが残っているか確認し、ラベル自体の削除と区別します。"
+    ],
+    "causes": [
+      "ラベルリストで非表示に設定",
+      "左側の一覧が折りたたまれている",
+      "別のGoogleアカウントを開いている"
+    ],
+    "diagnosis": "ラベルが一覧に見えなくても、付けたメールが削除されたとは限りません。まず同じアカウントでメールのラベル表示を確認し、ラベル設定に名前が残る場合だけ表示設定を変えます。設定に名前がない場合は別アカウントやラベルの削除を調べます。",
+    "caution": "メールやラベルを作り直す前に設定を確認してください。共有のメール運用ではラベルの表示方法を変えると作業手順に影響することがあるため、変更前の状態を控え、必要なラベルだけを表示します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/118708?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-archived-mail-not-found/",
+      "/google/gmail-not-receiving-email/",
+      "/google/gmail-desktop-notifications-missing/"
+    ],
+    "closest_existing_url": "/google/gmail-archived-mail-not-found/",
+    "differentiation": "既存記事はアーカイブ後のメールの保存場所を探す。本記事はメールが存在していても左側でラベル名が見えない表示設定を扱う。",
+    "fact_check": "Gmail公式の『Show or hide labels』にあるラベル一覧の表示・非表示手順を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-slicer-does-not-filter-chart",
+    "path": "/google/sheets-slicer-does-not-filter-chart/",
+    "title": "スプレッドシートのスライサーでグラフが絞られないとき",
+    "topic": "スライサーを動かしても目標のグラフやピボット表が変わらない",
+    "description": "スライサーを動かしても目標のグラフやピボット表が変わらない。対象グラフとスライサーのデータセット・列・範囲を確認します。",
+    "answer": "対象グラフとスライサーのデータセット・列・範囲を確認します。",
+    "steps": [
+      "PC版Sheetsで絞りたいグラフまたはピボット表を選択します。",
+      "『データ』からスライサーを追加し、右側で絞り込みに使う列を指定します。",
+      "スライサーの条件や値を切り替え、同じデータセットを使うグラフだけが変わるか見ます。",
+      "複数スライサーを使う場合は元データの範囲をそろえ、数式セルは別に確認します。"
+    ],
+    "causes": [
+      "グラフとスライサーが別のデータセットを参照",
+      "スライサーに違う列や値を指定",
+      "数式の結果にも効くと誤解している"
+    ],
+    "diagnosis": "スライサーは同じデータセットを使うグラフやピボット表に適用されます。一方、同じ表の値を参照する数式には適用されません。グラフだけ動かないときは参照範囲を、数式だけ動かないときは機能の対象外であることを先に確かめます。",
+    "caution": "共有シートでスライサーの選択を既定値として保存すると他の閲覧者の初期表示に影響します。いきなり元データを消さず、対象のグラフと参照範囲を控えたうえで条件を試してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/9245556?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-pivot-new-rows-not-included/",
+      "/google/docs-linked-chart-update-missing/",
+      "/google/sheets-conditional-format-not-applying/"
+    ],
+    "closest_existing_url": "/google/sheets-pivot-new-rows-not-included/",
+    "differentiation": "既存記事は新しい行がピボット表の集計範囲に入らない問題。本記事はスライサーが既存グラフ・ピボットを絞らない対象範囲と機能の違いを扱う。",
+    "fact_check": "Sheets公式はスライサーが同じデータセットのグラフとピボット表に適用され、数式には適用されないと明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "slides-speaker-notes-not-visible",
+    "path": "/google/slides-speaker-notes-not-visible/",
+    "title": "Googleスライドで発表者メモが本番中に見えないとき",
+    "topic": "スライドに書いたメモを発表画面で確認できない",
+    "description": "スライドに書いたメモを発表画面で確認できない。通常のスライド表示と発表者ビューを区別して開き、発表者メモのタブを確認します。",
+    "answer": "通常のスライド表示と発表者ビューを区別して開き、発表者メモのタブを確認します。",
+    "steps": [
+      "PC版Googleスライドで、編集画面のメモ欄に内容が入っているか確認します。",
+      "『スライドショー』横の下向き矢印を開き、『発表者ビュー』を選びます。",
+      "発表者ビューの『発表者メモ』タブを開き、メモが表示されるか確認します。",
+      "画面共有中なら相手に見せるウィンドウと手元の発表者ビューを分けて確認します。"
+    ],
+    "causes": [
+      "通常のスライドショーだけを開いている",
+      "発表者ビューのメモタブを開いていない",
+      "見ているスライドとメモを入力したスライドが違う"
+    ],
+    "diagnosis": "発表者メモはスライド上に埋め込まれた本文ではありません。編集画面にメモが残っているかを先に確かめ、残っていれば発表者ビューのタブを確認します。メモそのものが空なら表示モードを変えても現れません。発表中のスライド番号も照合します。",
+    "caution": "画面共有する前に共有対象のウィンドウを確認してください。手元用メモに個人情報や公開予定のない内容がある場合、画面全体を共有すると相手に見える可能性があります。発表前に短いテストを行います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/1696787?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/slides-audio-unavailable-to-viewers/",
+      "/google/google-account-passkey-not-working/",
+      "/google/google-maps-offline-map-not-downloading/"
+    ],
+    "closest_existing_url": "/google/slides-audio-unavailable-to-viewers/",
+    "differentiation": "既存記事はスライドに挿入した音声ファイルの閲覧権限。本記事は発表者用メモを表示するビューの選択を扱う。",
+    "fact_check": "Googleスライド公式の発表者ビューの開始方法と発表者メモタブの開き方を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-edit-response-link-unavailable",
+    "path": "/google/forms-edit-response-link-unavailable/",
+    "title": "Googleフォームで送信後に回答を編集できないとき",
+    "topic": "提出済みの回答を直すリンクが見つからない",
+    "description": "提出済みの回答を直すリンクが見つからない。フォーム所有者の回答編集設定と回答者に表示されるリンクを確認します。",
+    "answer": "フォーム所有者の回答編集設定と回答者に表示されるリンクを確認します。",
+    "steps": [
+      "回答者は送信完了画面や控えのメールに編集リンクがあるか確認します。",
+      "所有者はフォームの『設定』から『回答』を開き、『回答の編集を許可』の状態を確認します。",
+      "設定が有効ならテスト回答で送信後の編集リンクを確認します。",
+      "設定が無効で提出済みの回答を直せない場合は、所有者へ修正方法を問い合わせます。"
+    ],
+    "causes": [
+      "所有者が回答の編集を許可していない",
+      "送信完了画面を閉じてリンクを控えていない",
+      "別のフォームやアカウントの回答を探している"
+    ],
+    "diagnosis": "回答者の端末に編集ボタンが出ないとき、まず編集を許可するかはフォームの所有者側の設定で決まることを確認します。回答受付が停止している問題とは異なり、既に送信した回答の再編集可否を調べます。送信後の画面と控えの有無を分けて記録します。",
+    "caution": "回答を修正するために無断で二重送信すると集計が重複します。試験回答は所有者の確認用フォームで行い、本人確認や提出期限があるフォームでは正式な修正方法を所有者に尋ねてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/2839588?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/forms-not-accepting-responses/",
+      "/google/forms-answer-key-option-missing/",
+      "/google/forms-file-upload-question-fails/"
+    ],
+    "closest_existing_url": "/google/forms-not-accepting-responses/",
+    "differentiation": "既存記事は新規回答の受付停止。本記事は提出後の回答編集権限と編集リンクを扱う。",
+    "fact_check": "Googleフォーム公式の『Allow response editing』設定と回答者の再編集の案内を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-voice-typing-not-working",
+    "path": "/google/docs-voice-typing-not-working/",
+    "title": "Googleドキュメントで音声入力が使えないとき",
+    "topic": "マイクを押しても文書に言葉が入らない",
+    "description": "マイクを押しても文書に言葉が入らない。対応ブラウザ、文書の編集権限、マイクの許可を順に確かめます。",
+    "answer": "対応ブラウザ、文書の編集権限、マイクの許可を順に確かめます。",
+    "steps": [
+      "PCで編集できるGoogleドキュメントを開き、『ツール』の『音声入力』を探します。",
+      "対応するブラウザで開き、音声入力のマイクを押します。",
+      "ブラウザにマイク許可が求められたら正しいマイクを許可し、入力デバイスを確認します。",
+      "短い文を話して入力されるか試し、言語の選択が発話言語と一致するか確認します。"
+    ],
+    "causes": [
+      "ブラウザまたは環境が音声入力に対応しない",
+      "サイトへのマイク許可が拒否されている",
+      "入力言語やマイクデバイスの選択が違う"
+    ],
+    "diagnosis": "音声入力のメニューがない状態と、メニューはあるが音を拾わない状態を分けます。前者は利用環境と編集画面を、後者はブラウザのマイク権限・OS側の入力デバイス・言語を確認します。別のアプリで録音できるかも切り分けに使えます。",
+    "caution": "機密文書で音声入力を試す際は周囲に内容を聞かれない場所を選びます。仕事や学校の管理端末でマイクが制限されている場合は設定を勝手に解除せず、管理者に利用可否を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/4492226?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-suggesting-mode-option-missing/",
+      "/google/docs-line-numbers-unavailable-pageless/",
+      "/google/docs-view-only-cannot-edit/"
+    ],
+    "closest_existing_url": "/google/docs-suggesting-mode-option-missing/",
+    "differentiation": "既存記事は提案モードの編集権限。本記事は音声入力の環境とマイク入力を扱う。",
+    "fact_check": "Googleドキュメント公式の『Type with your voice』にあるツール、マイク許可、言語の手順を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-shared-album-cannot-add",
+    "path": "/google/photos-shared-album-cannot-add/",
+    "title": "Googleフォトの共有アルバムに写真を追加できないとき",
+    "topic": "アルバムは見られるのに自分の写真を入れられない",
+    "description": "アルバムは見られるのに自分の写真を入れられない。アルバム所有者の共同編集設定と参加したGoogleアカウントを確認します。",
+    "answer": "アルバム所有者の共同編集設定と参加したGoogleアカウントを確認します。",
+    "steps": [
+      "対象の共有アルバムを開き、自分が参加済みかを確認します。",
+      "所有者にアルバムの共有設定で『共同編集』が有効か確認してもらいます。",
+      "共同編集が有効なら正しいアカウントで追加操作を試します。",
+      "追加できない場合は所有者に権限の状態を伝え、必要なら招待を確認してもらいます。"
+    ],
+    "causes": [
+      "所有者が共同編集を無効にしている",
+      "参加していないアカウントでアルバムを開いている",
+      "アルバムの閲覧権限と追加権限を同じものと考えている"
+    ],
+    "diagnosis": "共有リンクから写真が見えることと、写真を共同で追加できることは別です。対象アルバムの所有者が共同編集を許可しているかを確認し、参加者のアカウントも照合します。アルバム自体が見つからない場合は別の原因を調べます。",
+    "caution": "所有者の同意なく共有リンクを広めたり、別のアルバムに個人写真を入れて試したりしないでください。共同編集を許可すると参加者が写真を追加できるため、共有範囲を所有者と確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/photos/answer/9789702?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-photos-shared-album-not-found/",
+      "/google/photos-partner-sharing-not-in-library/",
+      "/google/photos-people-pets-section-missing/"
+    ],
+    "closest_existing_url": "/google/google-photos-shared-album-not-found/",
+    "differentiation": "既存記事は共有アルバムを開けない問題。本記事は開けるアルバムへの写真追加権限を扱う。",
+    "fact_check": "Googleフォト公式の共有アルバムの共同編集設定と参加者の追加操作を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "slides-recording-button-unavailable",
+    "path": "/google/slides-recording-button-unavailable/",
+    "title": "Googleスライドの録画ボタンが出ないとき",
+    "topic": "発表を動画として録画する操作が見つからない",
+    "description": "発表を動画として録画する操作が見つからない。ブラウザ、アカウントの対象範囲、編集権限を先に確認します。",
+    "answer": "ブラウザ、アカウントの対象範囲、編集権限を先に確認します。",
+    "steps": [
+      "PC版GoogleスライドをChromeまたはEdgeで開きます。",
+      "録画したいファイルの編集権限があるか確認します。",
+      "画面右上の『録画』から新しい録画を作れるか確かめます。",
+      "ボタンがない場合は職場・学校アカウントの対象機能か、管理者に利用可否を確認します。"
+    ],
+    "causes": [
+      "録画に非対応のブラウザで開いている",
+      "スライドへの編集権限がない",
+      "利用中の職場・学校アカウントが機能対象外"
+    ],
+    "diagnosis": "録画の作成はChromeとEdgeに限られますが、完成した録画の閲覧や共有は他のブラウザでもできます。録画ボタンがない場合はまず作成側の条件を調べ、過去の録画を再生できない問題とは区別します。ファイルの編集権限も別途確認します。",
+    "caution": "職場や学校の制限を避けるために個人アカウントへ資料を移さないでください。録画には参加者の声や顔、機密の画面が入る場合があるため、許可と共有範囲を確認してから作成します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/14221290?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/slides-audio-unavailable-to-viewers/",
+      "/google/google-photos-shared-album-not-found/",
+      "/google/google-drive-files-missing/"
+    ],
+    "closest_existing_url": "/google/slides-audio-unavailable-to-viewers/",
+    "differentiation": "既存記事は挿入音声の閲覧権限。本記事はスライド自体を動画に録画する機能の提供条件を扱う。",
+    "fact_check": "Googleスライド公式は録画作成をChrome/Edge、編集権限、対象となる職場・学校アカウントに限ると明記する。"
+  },
+  {
+    "category": "mac",
+    "slug": "stage-manager-recent-apps-hidden",
+    "path": "/mac/stage-manager-recent-apps-hidden/",
+    "title": "Macのステージマネージャで最近のアプリが見えないとき",
+    "topic": "ステージマネージャは使えるのに左側の最近のアプリが並ばない",
+    "description": "ステージマネージャは使えるのに左側の最近のアプリが並ばない。ステージマネージャの有効化と最近のアプリの表示設定を分けて確認します。",
+    "answer": "ステージマネージャの有効化と最近のアプリの表示設定を分けて確認します。",
+    "steps": [
+      "Macでステージマネージャが有効かを確認します。",
+      "システム設定の『デスクトップとDock』でステージマネージャのカスタマイズを開きます。",
+      "『最近使ったアプリケーションを表示』の設定を確認し、必要なら有効にします。",
+      "非表示の設定のままなら画面左端へポインタを動かし、一時的にアプリが現れるか試します。"
+    ],
+    "causes": [
+      "最近のアプリの常時表示がオフ",
+      "左端の一覧が一時的に隠れている",
+      "ステージマネージャ自体が無効"
+    ],
+    "diagnosis": "ステージマネージャをオンにできない問題と、オンの状態で最近のアプリの列が見えない問題を分けます。ウィンドウの切り替えが機能しているなら表示設定を先に調べ、左端にポインタを寄せたときだけ現れるか確認します。",
+    "caution": "共有画面や複数ディスプレイでは見ている画面を確認してください。すべてのウィンドウを閉じたりデスクトップのファイルを消したりする必要はありません。作業中のウィンドウを保存してから表示設定だけを試します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/use-stage-manager-mchl534ba392/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-stage-manager-cannot-enable/",
+      "/mac/mac-desktop-widgets-not-visible/",
+      "/mac/mac-app-not-responding/"
+    ],
+    "closest_existing_url": "/mac/mac-stage-manager-cannot-enable/",
+    "differentiation": "既存記事はステージマネージャを有効にできない問題。本記事は有効化済みで最近のアプリの列だけ見えない設定を扱う。",
+    "fact_check": "AppleのMacユーザガイドは最近のアプリの表示設定と左端へのポインタ移動による一時表示を説明している。"
+  },
+  {
+    "category": "mac",
+    "slug": "safari-private-browsing-keeps-locking",
+    "path": "/mac/safari-private-browsing-keeps-locking/",
+    "title": "MacのSafariでプライベートウインドウが毎回ロックされるとき",
+    "topic": "プライベートブラウズへ戻るたびに認証を求められる",
+    "description": "プライベートブラウズへ戻るたびに認証を求められる。Safariのプライベートブラウズのロック機能と、そのプライバシー設定を確認します。",
+    "answer": "Safariのプライベートブラウズのロック機能と、そのプライバシー設定を確認します。",
+    "steps": [
+      "Safariでロックされるのがプライベートウインドウだけか確認します。",
+      "Safariの『設定』から『プライバシー』を開きます。",
+      "ロックしたタブの表示にパスワードまたはTouch IDを要求する設定を確認します。",
+      "設定を変える場合は一度閉じて開き直し、画面ロック後の動作を確かめます。"
+    ],
+    "causes": [
+      "プライベートブラウズのロック設定が有効",
+      "MacをロックしてからSafariへ戻っている",
+      "非操作時間の経過でプライベートウインドウがロックされた"
+    ],
+    "diagnosis": "通常のSafariページの読み込み失敗と、プライベートウインドウだけに出る認証画面は別です。後者ならSafariのプライバシー機能が意図どおり動いている可能性があります。どの操作後にロックされたかを記録し、設定と照合します。",
+    "caution": "ロックを解除する設定にすると周囲の人にプライベートタブが見られやすくなります。共用Macでは安易に無効化せず、必要な場合だけ正規のパスワードまたはTouch IDで開いてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/safari/lock-private-browsing-windows-safari-mac-ibrw84e82d72/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/safari-profiles-not-visible/",
+      "/mac/safari-pages-not-loading-mac/",
+      "/mac/mac-desktop-widgets-not-visible/"
+    ],
+    "closest_existing_url": "/mac/safari-profiles-not-visible/",
+    "differentiation": "既存記事はSafariのプロファイルを見つける問題。本記事はプライベートブラウズのウインドウロックと認証を扱う。",
+    "fact_check": "AppleのSafariガイドで非操作やMacのロック後のプライベートブラウズのロックと設定項目を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-split-view-option-missing",
+    "path": "/mac/mac-split-view-option-missing/",
+    "title": "MacでSplit Viewにアプリを並べられないとき",
+    "topic": "ウインドウを左右に並べる選択肢が出ない",
+    "description": "ウインドウを左右に並べる選択肢が出ない。ウインドウの緑ボタン、対象アプリの対応、開いている画面を順に確認します。",
+    "answer": "ウインドウの緑ボタン、対象アプリの対応、開いている画面を順に確認します。",
+    "steps": [
+      "並べたいアプリのウインドウを開き、左上の緑色のボタンにポインタを置きます。",
+      "全画面やタイル表示に関するメニューから、画面の左右どちらかに配置する操作を探します。",
+      "残りの側に表示できる別のウインドウを選びます。",
+      "対象アプリで選択肢がない場合は別のアプリで試し、アプリ側のウインドウ対応を切り分けます。"
+    ],
+    "causes": [
+      "選んだアプリがSplit Viewに対応していない",
+      "ウインドウではなく特殊なダイアログを操作している",
+      "全画面表示の操作と左右配置を取り違えている"
+    ],
+    "diagnosis": "Split Viewは対応する二つのアプリのウインドウを一つの作業画面に並べる機能です。すべての小窓を配置できるわけではないため、緑ボタンの選択肢が出る標準的なアプリで先に試します。ステージマネージャの最近のアプリ表示とは機能が違います。",
+    "caution": "作業中の文書を保存してから表示を切り替えてください。ウインドウを閉じる、アプリを削除する、ディスプレイ設定を一括変更すると原因の切り分けが難しくなります。まず対象ウインドウだけで操作を試します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/use-apps-in-split-view-mchl4fbe2921/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-stage-manager-cannot-enable/",
+      "/mac/mac-spotlight-files-not-found/",
+      "/mac/safari-profiles-not-visible/"
+    ],
+    "closest_existing_url": "/mac/mac-stage-manager-cannot-enable/",
+    "differentiation": "既存記事は別のウインドウ管理機能であるステージマネージャの有効化。本記事は二つのアプリを左右に配置するSplit Viewの条件を扱う。",
+    "fact_check": "AppleのMacユーザガイドにある緑ボタンからのSplit View開始と対応ウインドウ選択の説明を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "messages-check-in-option-missing",
+    "path": "/iphone/messages-check-in-option-missing/",
+    "title": "iPhoneのメッセージで『到着確認』が出ないとき",
+    "topic": "家族に到着を知らせるチェックインを作成できない",
+    "description": "家族に到着を知らせるチェックインを作成できない。送信者と受信者のiOS、メッセージの操作場所、会話相手を確認します。",
+    "answer": "送信者と受信者のiOS、メッセージの操作場所、会話相手を確認します。",
+    "steps": [
+      "送信側と受信側のiPhoneが機能に対応するiOS 17以降か確認します。",
+      "メッセージで対象の相手との会話を開き、入力欄横の『＋』を押します。",
+      "『その他』にある『到着確認』を探し、予定や共有内容を確認してから送ります。",
+      "出ない場合は双方のiOSと会話相手を記録し、Appleの案内と照合します。"
+    ],
+    "causes": [
+      "送信側または受信側のiOSが対応版より古い",
+      "メッセージの追加メニューを開いていない",
+      "機能に対応しない会話やアカウントを選んでいる"
+    ],
+    "diagnosis": "到着確認は相手に現在地を常時共有する『探す』の設定とは異なり、予定した到着の確認を送るメッセージ機能です。表示されないときは位置情報の精度だけを疑う前に、両側のiOSとメッセージの追加メニューを確認します。",
+    "caution": "到着確認には予定どおり着けなかったときの位置や端末情報の共有設定があります。送信前に共有する情報の範囲を読み、相手の同意と安全を確認してください。緊急連絡の唯一の手段として頼らないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/use-check-in-iphc143bb7e9/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/find-my-location-sharing-not-updating/",
+      "/iphone/personal-hotspot-not-working/",
+      "/iphone/in-app-purchase-not-working/"
+    ],
+    "closest_existing_url": "/iphone/find-my-location-sharing-not-updating/",
+    "differentiation": "既存記事は『探す』の継続的な位置共有の更新。本記事はメッセージの到着確認の作成条件と追加メニューを扱う。",
+    "fact_check": "AppleのiPhoneガイドで到着確認に両側のiOS 17以降が必要なことと、メッセージの＋メニューから開始する手順を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "health-medication-follow-up-reminder-missing",
+    "path": "/iphone/health-medication-follow-up-reminder-missing/",
+    "title": "iPhoneのヘルスケアで服薬の再通知が来ないとき",
+    "topic": "服薬を記録しなかった後のフォローアップ通知が出ない",
+    "description": "服薬を記録しなかった後のフォローアップ通知が出ない。薬のスケジュールとフォローアップリマインダーの設定を分けて確認します。",
+    "answer": "薬のスケジュールとフォローアップリマインダーの設定を分けて確認します。",
+    "steps": [
+      "ヘルスケアアプリで『服薬』を開き、対象の薬と予定時刻を確認します。",
+      "『オプション』にあるフォローアップリマインダーが有効か確認します。",
+      "対象の薬について重要な通知の設定がある場合は、必要性と許可状態を確認します。",
+      "予定後に記録がない場合の通知と、通常の服薬リマインダーを区別して確認します。"
+    ],
+    "causes": [
+      "フォローアップリマインダーがオフ",
+      "薬の予定が実際の時刻と異なる",
+      "通知設定や端末側の集中モードで見落としている"
+    ],
+    "diagnosis": "フォローアップは予定時刻の通知と同じものではなく、予定から一定時間たっても服薬が記録されていない場合の再通知です。まず薬のスケジュールと記録状態を見て、通常通知は来るのに再通知だけないのかを分けます。",
+    "caution": "通知が来ないことを理由に薬を二重に飲んだり、服用量や時刻を自己判断で変えたりしないでください。服薬したか不明なときは処方時の指示を確認し、医師や薬剤師に相談してください。アプリの通知は医療指示の代わりになりません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/track-your-medications-iph811670c81/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/notifications-not-arriving/",
+      "/iphone/icloud-backup-not-completing-iphone/",
+      "/iphone/cannot-update-app/"
+    ],
+    "closest_existing_url": "/iphone/notifications-not-arriving/",
+    "differentiation": "既存記事はiPhone通知全般が届かない問題。本記事はヘルスケアの服薬予定と未記録後のフォローアップ通知の条件を扱う。",
+    "fact_check": "AppleのiPhoneガイドで服薬フォローアップの設定と、予定時刻の30分後に未記録なら通知する仕様を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-calls-on-mac-not-ringing",
+    "path": "/iphone/iphone-calls-on-mac-not-ringing/",
+    "title": "iPhoneへの電話がMacやiPadに鳴らないとき",
+    "topic": "iPhoneでは着信するのに近くのApple端末に出ない",
+    "description": "iPhoneでは着信するのに近くのApple端末に出ない。iPhoneの『ほかのデバイスでの通話』と端末間の接続条件を確認します。",
+    "answer": "iPhoneの『ほかのデバイスでの通話』と端末間の接続条件を確認します。",
+    "steps": [
+      "iPhoneの設定で『電話』から『ほかのデバイスでの通話』を開きます。",
+      "通話を許可する設定と、対象のMacまたはiPadの選択状態を確認します。",
+      "両端末が同じApple AccountとWi-Fiを使い、近くにあるか確認します。",
+      "iPhoneへ着信テストを行い、対象端末だけに症状が出るか調べます。"
+    ],
+    "causes": [
+      "ほかのデバイスでの通話がオフ",
+      "対象端末が許可リストに入っていない",
+      "Apple AccountやWi-Fi、端末間距離の条件を満たさない"
+    ],
+    "diagnosis": "iPhoneには着信するなら回線そのものは使えている可能性があります。MacやiPadへ着信を中継する設定を調べ、iPhoneのWi-Fi通話を通信事業者経由で有効にする問題とは分けます。片方だけ鳴らない場合は対象端末の選択を確認します。",
+    "caution": "共有Macで通話を許可すると着信情報が周囲に見えることがあります。仕事用と個人用のApple Accountを混ぜて合わせないでください。設定を変える前に対象端末と利用者を確認し、プライバシーに配慮します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/phone-calls-text-messages-ipad-mac-iphf90f372f0/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/wifi-calling-unavailable/",
+      "/iphone/icloud-photos-sync-paused-iphone/",
+      "/iphone/apple-pay-card-not-adding-iphone/"
+    ],
+    "closest_existing_url": "/iphone/wifi-calling-unavailable/",
+    "differentiation": "既存記事は通信事業者のWi-Fi通話が使えない問題。本記事はiPhoneの携帯着信を近くのMacやiPadへ中継する連係を扱う。",
+    "fact_check": "AppleのiPhoneガイドで同じApple Account、同じWi-Fi、近距離、ほかのデバイスでの通話設定を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "focus-status-not-shared-messages",
+    "path": "/iphone/focus-status-not-shared-messages/",
+    "title": "iPhoneで集中モードの状況が相手に表示されないとき",
+    "topic": "通知を止めていることがメッセージの相手に伝わらない",
+    "description": "通知を止めていることがメッセージの相手に伝わらない。集中モード状況の共有設定と対象モードの有効化を別々に確認します。",
+    "answer": "集中モード状況の共有設定と対象モードの有効化を別々に確認します。",
+    "steps": [
+      "iPhoneの設定で『集中モード』を開きます。",
+      "『集中モード状況』から共有が有効か確認します。",
+      "状況を共有したい集中モードを選び、実際にそのモードをオンにします。",
+      "相手とのメッセージ会話で表示を確認し、通知が来ない問題とは分けます。"
+    ],
+    "causes": [
+      "集中モード状況の共有がオフ",
+      "対象の集中モードでは共有がオフ",
+      "集中モード自体が有効になっていない"
+    ],
+    "diagnosis": "集中モードの状況共有は、自分に通知が届くかどうかの設定ではありません。相手に『通知を受け取らない』状態を示す機能です。自分の通知が止まらないのか、相手への状態表示だけがないのかを先に区別します。対象の会話と時間帯も照合します。",
+    "caution": "状況共有をオンにすると相手に通知を消音していることが伝わりますが、集中モードの名前や詳細まですべて共有するわけではありません。仕事の連絡方法や緊急時の連絡手段を先に確認してから設定します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/allow-or-silence-notifications-for-a-focus-iph21d43af5b/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/lock-screen-notifications-hidden/",
+      "/iphone/contact-poster-not-shared/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/lock-screen-notifications-hidden/",
+    "differentiation": "既存記事は自分のロック画面に通知が出ない問題。本記事はメッセージ相手へ集中モード状況を共有する設定を扱う。",
+    "fact_check": "AppleのiPhoneガイドで集中モード状況の共有スイッチとモードごとの選択を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "safari-shared-with-you-links-missing",
+    "path": "/iphone/safari-shared-with-you-links-missing/",
+    "title": "iPhoneのSafariに『あなたと共有』のリンクが出ないとき",
+    "topic": "メッセージでもらったWebリンクがSafariの開始ページに並ばない",
+    "description": "メッセージでもらったWebリンクがSafariの開始ページに並ばない。メッセージ側の共有設定とSafariの開始ページ表示を確認します。",
+    "answer": "メッセージ側の共有設定とSafariの開始ページ表示を確認します。",
+    "steps": [
+      "送信者が連絡先に登録され、メッセージで対象リンクを受け取っているか確認します。",
+      "設定の『メッセージ』にある『あなたと共有』でSafariを有効にします。",
+      "Safariの開始ページを編集し、共有リンクの表示項目を確認します。",
+      "メッセージの会話からリンク自体は開けるか確かめ、Safariの表示だけの問題か分けます。"
+    ],
+    "causes": [
+      "メッセージ側でSafariへの共有がオフ",
+      "Safariの開始ページで表示項目が無効",
+      "送信者が連絡先に登録されていない"
+    ],
+    "diagnosis": "Safariでリンク先が読み込めないことと、受け取ったリンクが開始ページの『あなたと共有』に一覧表示されないことは別です。まずメッセージ本文にリンクが残るかを見て、残っていれば二つの共有・表示設定を調べます。",
+    "caution": "設定を試すために知らない送信者を安易に連絡先へ登録しないでください。共有リンクの中身が安全か確かめ、仕事や学校の端末で共有機能が管理されている場合は管理者の方針を優先します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/find-links-shared-with-you-iph25424a81d/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/safari-pages-not-loading-mac/",
+      "/iphone/no-sound/",
+      "/iphone/microphone-not-working/"
+    ],
+    "closest_existing_url": "/mac/safari-pages-not-loading-mac/",
+    "differentiation": "既存記事はMacのSafariでページが読み込めない問題。本記事はiPhoneのSafari開始ページへのメッセージ由来リンクの表示設定を扱う。",
+    "fact_check": "AppleのiPhoneガイドで連絡先の送信者、メッセージの『あなたと共有』、Safariの開始ページの設定を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "system-tray-icon-in-overflow",
+    "path": "/windows/system-tray-icon-in-overflow/",
+    "title": "Windowsで通知領域のアプリアイコンが見えないとき",
+    "topic": "起動中のアプリの小さなアイコンがタスクバー右端にない",
+    "description": "起動中のアプリの小さなアイコンがタスクバー右端にない。通知領域の隠れたアイコンとアプリの起動状態を分けて確認します。",
+    "answer": "通知領域の隠れたアイコンとアプリの起動状態を分けて確認します。",
+    "steps": [
+      "タスクバー右端の隠れたアイコンを開く矢印を押します。",
+      "対象アプリのアイコンがあれば、常時見せたい場合は通知領域へドラッグします。",
+      "矢印の中にもなければアプリが起動しているか確認します。",
+      "タスクバー設定でシステムトレイの項目を確認し、必要なものだけ表示します。"
+    ],
+    "causes": [
+      "アイコンがオーバーフロー内へ隠れている",
+      "対象アプリが終了している",
+      "システムトレイの表示設定がオフ"
+    ],
+    "diagnosis": "タスクバー全体が反応しない症状と、通知領域の特定アイコンだけ見えない症状は異なります。まずオーバーフローにあるか確認し、そこにあれば表示位置を移します。アプリのウインドウ自体が起動していないならアプリ側を調べます。",
+    "caution": "見えないアイコンを直すためにタスクバーを強制終了したりシステム設定を一括リセットしたりしないでください。セキュリティ製品の状態はアイコンの有無だけで判断せず、アプリ本体で確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/personalization/customize-the-taskbar-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-taskbar-not-responding/",
+      "/windows/windows-app-hidden-on-another-desktop/",
+      "/windows/windows-widgets-button-missing/"
+    ],
+    "closest_existing_url": "/windows/windows-taskbar-not-responding/",
+    "differentiation": "既存記事はタスクバー全体の操作不能。本記事は動作中アプリの通知領域アイコンの表示場所を扱う。",
+    "fact_check": "Microsoftのタスクバー公式案内にある隠れたアイコンと通知領域へのドラッグによる表示変更を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "recovery-drive-usb-not-selected",
+    "path": "/windows/recovery-drive-usb-not-selected/",
+    "title": "Windowsの回復ドライブでUSBを選べないとき",
+    "topic": "回復ドライブ作成画面に使いたいUSBメモリが出ない",
+    "description": "回復ドライブ作成画面に使いたいUSBメモリが出ない。USBの認識と回復ドライブ作成画面の対象条件を確認します。",
+    "answer": "USBの認識と回復ドライブ作成画面の対象条件を確認します。",
+    "steps": [
+      "USBメモリに必要なファイルがあれば別の場所へ退避します。",
+      "エクスプローラーでUSBが認識され、容量が十分かを確認します。",
+      "Windowsの『回復ドライブ』を開き、システムファイルのバックアップを含めるか選んで次へ進みます。",
+      "候補に出るUSBの容量と名前を照合し、別のドライブを誤って選ばないようにします。"
+    ],
+    "causes": [
+      "USBがWindowsに認識されていない",
+      "選んだ作成条件に容量が足りない",
+      "回復ドライブ画面で別の記憶装置を見ている"
+    ],
+    "diagnosis": "回復ドライブはWindowsの修復や再インストールに備える起動用USBであり、個人ファイルを保存するファイル履歴とは用途が違います。エクスプローラーにUSBが見えないなら接続を、見えるのに候補にないなら容量と作成条件を確認します。",
+    "caution": "回復ドライブの作成では選択したUSB上の内容が消去されます。型番や容量だけで決めず、目的のUSBか必ず確認してください。個人ファイルのバックアップは別途必要で、回復ドライブだけでは写真や文書を復元できません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/recovery-drive",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/file-history-drive-reconnect-warning/",
+      "/windows/usb-device-not-recognized/",
+      "/windows/windows-no-sound/"
+    ],
+    "closest_existing_url": "/windows/file-history-drive-reconnect-warning/",
+    "differentiation": "既存記事はファイル履歴の保存先ドライブの再接続警告。本記事はWindows回復ドライブを作る際にUSBを選択する作業を扱う。",
+    "fact_check": "Microsoftの回復ドライブ公式案内で作成手順と選択したUSBの全内容が消える注意を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "automatic-file-download-app-blocked",
+    "path": "/windows/automatic-file-download-app-blocked/",
+    "title": "Windowsでクラウド上のファイルをアプリが自動取得できないとき",
+    "topic": "オンライン専用ファイルを開くアプリのダウンロードが止まる",
+    "description": "オンライン専用ファイルを開くアプリのダウンロードが止まる。Windowsの『自動ファイルダウンロード』でそのアプリをブロックしたか確認します。",
+    "answer": "Windowsの『自動ファイルダウンロード』でそのアプリをブロックしたか確認します。",
+    "steps": [
+      "問題がオンライン専用ファイルを開くときだけ起きるか確認します。",
+      "以前のWindows通知で『ダウンロードをキャンセル』から『アプリをブロック』を選んでいないか振り返ります。",
+      "Windows設定の『自動ファイルダウンロード』でブロックを確認し、信頼できるアプリだけ解除します。",
+      "対象のファイルを再び開き、アプリが必要なファイルを取得できるか確認します。"
+    ],
+    "causes": [
+      "通知から対象アプリをブロックした",
+      "オンライン専用ファイルが端末に未取得",
+      "同期サービス自体の通信問題をブロックと取り違えている"
+    ],
+    "diagnosis": "OneDriveなどの同期保留と、特定アプリがオンライン専用ファイルを要求した際のWindowsブロックは異なります。同期が正常でも一つのアプリだけ取得できないならブロック設定を確認し、全アプリで失敗するならクラウド側の同期を調べます。",
+    "caution": "信頼できないアプリのブロックを無条件で解除しないでください。解除するとそのアプリがオンライン専用ファイルを自動取得できるようになります。ファイルの機密性とアプリの提供元を確認してから変更します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/automatic-file-download-notifications-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/onedrive-sync-pending/",
+      "/windows/downloaded-file-preview-unavailable/",
+      "/windows/windows-update-stuck/"
+    ],
+    "closest_existing_url": "/windows/onedrive-sync-pending/",
+    "differentiation": "既存記事はOneDriveの同期が終わらない問題。本記事はWindowsが特定アプリのオンライン専用ファイル取得をブロックした状態を扱う。",
+    "fact_check": "Microsoft公式は『Cancel download > Block app』で将来の自動取得を遮断し、設定から解除できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-studio-effects-missing",
+    "path": "/windows/windows-studio-effects-missing/",
+    "title": "Windows Studio Effectsの項目が出ないとき",
+    "topic": "ビデオ会議用のカメラ・マイク効果を設定できない",
+    "description": "ビデオ会議用のカメラ・マイク効果を設定できない。PCの対応ハードウェアとWindowsの設定画面を先に確認します。",
+    "answer": "PCの対応ハードウェアとWindowsの設定画面を先に確認します。",
+    "steps": [
+      "Windowsの設定でカメラや音声の効果項目を探します。",
+      "PCメーカーの仕様でWindows Studio Effectsに対応するNPUがあるか確認します。",
+      "クイック設定に該当の効果が表示されるか確認します。",
+      "会議アプリ側の背景効果だけ見える場合は、OS側の機能と混同しないようにします。"
+    ],
+    "causes": [
+      "PCのNPUが対象機能に対応していない",
+      "Windowsやデバイスドライバーの提供状況が異なる",
+      "会議アプリ独自の効果とWindows側の効果を取り違えている"
+    ],
+    "diagnosis": "Windows Studio Effectsは対応PCのNPUを使うOSの効果です。Zoomなどのアプリに背景ぼかしがあることだけでは対応の証拠になりません。まず機種の仕様とWindowsの設定を確認し、対応機種なのに項目がない場合だけ更新状態を調べます。",
+    "caution": "効果を出すために出所不明のドライバーやレジストリ変更を試さないでください。管理された職場のPCでは提供条件やポリシーも関係するため、機種情報と設定画面を控えて管理者またはメーカーに相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/ai/ai-features/windows-studio-effects",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-blur-background-option-missing/",
+      "/windows/bluetooth-le-audio-option-missing/",
+      "/windows/windows-no-sound/"
+    ],
+    "closest_existing_url": "/sns/zoom-blur-background-option-missing/",
+    "differentiation": "既存記事はZoomアプリ内の背景ぼかし設定。本記事はWindows OS側のNPUを使うStudio Effectsの利用条件を扱う。",
+    "fact_check": "Microsoft公式のStudio Effects案内で対応ハードウェアとカメラ・音声効果の設定場所を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-power-mode-option-missing",
+    "path": "/windows/windows-power-mode-option-missing/",
+    "title": "Windowsで電源モードを変更できないとき",
+    "topic": "設定の電源モードが見つからないか選択できない",
+    "description": "設定の電源モードが見つからないか選択できない。機種が提供する電源設定と現在の電源接続状態を確認し、管理方法を切り分けます。",
+    "answer": "機種が提供する電源設定と現在の電源接続状態を確認し、管理方法を切り分けます。",
+    "steps": [
+      "Windows設定の『システム』から『電源とバッテリー』を開きます。",
+      "『電源モード』の表示と選択肢を確認します。",
+      "メーカー独自の電源管理アプリや管理者の設定があるか確認します。",
+      "バッテリー駆動時と電源接続時の両方で表示を比較し、機種のサポート情報を調べます。"
+    ],
+    "causes": [
+      "PCやWindowsの構成によって選択肢が異なる",
+      "メーカーの電源管理が優先されている",
+      "組織の管理設定が変更を制限している"
+    ],
+    "diagnosis": "電池の消耗が速い症状と、設定画面の電源モードを選べない症状は別です。後者ではまず項目の有無と電源接続状態を記録し、機種がどの管理方法を採るか確認します。電源モードだけを変えてもバッテリーの故障は診断できません。",
+    "caution": "電源モードを出すために管理ポリシーやメーカー製ユーティリティを削除しないでください。仕事用PCでは管理者に、個人のPCではメーカーの手順に従い、変更前の設定を控えてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/power-battery/power-settings-in-windows-11",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/laptop-plugged-in-not-charging/",
+      "/windows/windows-screenshot-file-not-found/",
+      "/windows/windows-sandbox-feature-missing/"
+    ],
+    "closest_existing_url": "/windows/laptop-plugged-in-not-charging/",
+    "differentiation": "既存記事はAC接続時に充電されない症状。本記事はWindowsの動作・省電力バランスを選ぶ電源モードの表示と管理を扱う。",
+    "fact_check": "MicrosoftのWindows 11電源設定案内で電源とバッテリーから電源モードを選ぶ経路を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "phone-link-mobile-device-missing-start",
+    "path": "/windows/phone-link-mobile-device-missing-start/",
+    "title": "Windowsのスタートメニューにスマホの欄が出ないとき",
+    "topic": "スマートフォン連携は使えるのにスタート画面で端末情報が見えない",
+    "description": "スマートフォン連携は使えるのにスタート画面で端末情報が見えない。Phone Linkの接続とスタートメニューの表示スイッチを分けて確認します。",
+    "answer": "Phone Linkの接続とスタートメニューの表示スイッチを分けて確認します。",
+    "steps": [
+      "スマートフォン連携アプリで端末が接続済みか確認します。",
+      "Windows設定の『個人用設定』から『スタート』を開きます。",
+      "『スタートにモバイルデバイスを表示』の設定を確認します。",
+      "オンにした後にスタートメニューを開き、対応端末の情報が出るか確認します。"
+    ],
+    "causes": [
+      "スタートのモバイルデバイス表示がオフ",
+      "Phone Linkの接続が完了していない",
+      "Windowsの版や端末側の対応条件を満たしていない"
+    ],
+    "diagnosis": "スマートフォン連携アプリでは通知や写真が見られるのに、スタートメニューの横に端末情報がないなら表示スイッチを先に調べます。端末のペアリングそのものが失敗している場合は別の問題です。設定後も出ないときは対応条件を確認します。",
+    "caution": "ペアリングをやり直す前に現在の接続状態を記録してください。共有PCで端末情報をスタートに表示すると通知内容などが周囲から見える可能性があるため、表示の必要性とプライバシーを確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/apps/phonelink/mobile-device-in-start-menu",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/phone-link-android-pairing-failed/",
+      "/windows/windows-focus-session-timer-not-visible/",
+      "/windows/windows-start-menu-not-opening/"
+    ],
+    "closest_existing_url": "/windows/phone-link-android-pairing-failed/",
+    "differentiation": "既存記事はAndroid端末とのペアリング失敗。本記事は接続済み端末をWindowsスタートメニューに表示する設定を扱う。",
+    "fact_check": "Microsoft公式の『Mobile device in Start Menu』で個人用設定からの表示スイッチとPhone Linkの条件を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-at-a-glance-weather-missing",
+    "path": "/android/pixel-at-a-glance-weather-missing/",
+    "title": "Pixelの『スナップショット』に天気が出ないとき",
+    "topic": "ホーム画面の日付は見えるのに天気の情報がない",
+    "description": "ホーム画面の日付は見えるのに天気の情報がない。スナップショット全体と天気項目の表示設定を分けて確認します。",
+    "answer": "スナップショット全体と天気項目の表示設定を分けて確認します。",
+    "steps": [
+      "Pixelのホーム画面で日付を長押しし、スナップショットの設定を開きます。",
+      "『スナップショットを使用』が有効か確認します。",
+      "カスタマイズの天気に関する項目が有効か確認します。",
+      "天気アプリや位置情報の表示を確かめ、対応する国・言語の条件も確認します。"
+    ],
+    "causes": [
+      "スナップショット全体がオフ",
+      "天気の項目だけ無効",
+      "位置情報や地域・言語条件によって情報が出ない"
+    ],
+    "diagnosis": "日付だけが残っていてもスナップショット全体が有効とは限りません。まず日付の長押しから機能のオン・オフを確認し、次に天気だけの表示設定を見ます。他のカードは出るのに天気だけない場合は個別項目を優先します。",
+    "caution": "位置情報の許可を広げる前に現在の設定を確認してください。ロック画面に天気を表示することは居場所に関する情報を周囲に見せる場合があります。共有端末では表示範囲を考慮します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/14884067?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/pixel-now-playing-not-identifying/",
+      "/android/android-screenshot-not-found/",
+      "/android/pixel-camera-qr-link-not-shown/"
+    ],
+    "closest_existing_url": "/android/pixel-now-playing-not-identifying/",
+    "differentiation": "既存記事は周囲の曲を識別するNow Playingの動作。本記事はホーム画面のスナップショットに出る天気カードの表示設定を扱う。",
+    "fact_check": "GoogleのPixel公式ヘルプで日付の長押しからスナップショットを開き、個別項目を切り替える説明を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "play-protect-device-not-certified",
+    "path": "/android/play-protect-device-not-certified/",
+    "title": "Google Playで『端末は認証されていません』と出るとき",
+    "topic": "Playストアの端末認証が未認証と表示される",
+    "description": "Playストアの端末認証が未認証と表示される。Play Protectのスキャン設定と端末の認証状態を区別して確認します。",
+    "answer": "Play Protectのスキャン設定と端末の認証状態を区別して確認します。",
+    "steps": [
+      "Playストアでプロフィールから設定を開き、端末認証の表示を確認します。",
+      "端末の製造元と機種を確認し、正規のソフトウェアが入っているか調べます。",
+      "端末のシステム更新が利用可能なら製造元の案内に沿って確認します。",
+      "正規端末なのに未認証なら、表示内容を控えて製造元またはGoogleのサポートへ相談します。"
+    ],
+    "causes": [
+      "端末がGoogleの認証要件を満たしていない",
+      "改変されたシステムが入っている",
+      "認証表示とPlay Protectのマルウェア検査を混同している"
+    ],
+    "diagnosis": "端末認証はPlay Protectによるアプリ検査のオン・オフとは別の状態です。検査を止めても認証が得られるわけではありません。Playストアの設定にある認証表示を確認し、端末の出所とシステムの状態を調べます。",
+    "caution": "認証を得るために出所不明のAPKや非公式ファームウェアを導入しないでください。セキュリティや決済機能へ影響する場合があります。販売店や製造元のサポートに機種と表示を伝えます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/googleplay/answer/7165974?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/google-play-services-keeps-stopping/",
+      "/android/google-play-download-pending/",
+      "/android/play-store-apps-not-auto-updating/"
+    ],
+    "closest_existing_url": "/android/google-play-services-keeps-stopping/",
+    "differentiation": "既存記事はGoogle Play開発者サービスの強制終了。本記事は端末の認証状態とPlay Protectスキャンの違いを扱う。",
+    "fact_check": "Google Play公式の端末認証案内で認証状態の確認方法と未認証端末の扱いを確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-screenshots-not-restored-new-phone",
+    "path": "/android/pixel-screenshots-not-restored-new-phone/",
+    "title": "機種変更後にPixel Screenshotsの内容が戻らないとき",
+    "topic": "新しいPixelのScreenshotsアプリに以前の記録がない",
+    "description": "新しいPixelのScreenshotsアプリに以前の記録がない。通常の画像ファイルとScreenshotsアプリのデータ移行を分けて確認します。",
+    "answer": "通常の画像ファイルとScreenshotsアプリのデータ移行を分けて確認します。",
+    "steps": [
+      "旧端末が残っているか、Pixel Screenshotsアプリで内容が見えるか確認します。",
+      "新端末でPixel Screenshotsに対応する機種・地域・言語を確認します。",
+      "Googleの案内に沿い、旧端末から新端末への端末間のデータ移行を確認します。",
+      "写真アプリには画像があるのにScreenshotsの整理情報だけない場合は、アプリデータの復元手順をサポートへ確認します。"
+    ],
+    "causes": [
+      "端末間の移行をせずクラウド復元だけを期待した",
+      "新端末がScreenshotsアプリの対象外",
+      "画像ファイルとアプリ内の整理・検索データを混同している"
+    ],
+    "diagnosis": "Googleの案内ではPixel Screenshotsのバックアップと復元は端末間方式だけに対応します。Googleフォトで画像が見えることは、Screenshotsアプリの整理情報まで復元された証拠になりません。旧端末を初期化する前に両者を確認します。",
+    "caution": "旧端末の初期化や下取り前にデータの移行結果を確かめてください。端末内のスクリーンショットには個人情報が含まれるため、非公式の移行アプリに一括で渡さないでください。復元できない場合は公式サポートに相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/15312581?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-screenshot-not-found/",
+      "/android/pixel-now-playing-not-identifying/",
+      "/android/android-navigation-mode-option-missing/"
+    ],
+    "closest_existing_url": "/android/android-screenshot-not-found/",
+    "differentiation": "既存記事は撮影直後のスクリーンショット画像の保存先。本記事は機種変更時のPixel Screenshotsアプリデータの復元方式を扱う。",
+    "fact_check": "Pixel公式ヘルプの『Screenshots not restored』は端末間のバックアップと復元のみ対応すると明記する。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-home-button-not-visible",
+    "path": "/browser/edge-home-button-not-visible/",
+    "title": "Microsoft Edgeのホームボタンが見えないとき",
+    "topic": "ツールバーから家の形のボタンが消えた",
+    "description": "ツールバーから家の形のボタンが消えた。起動時のページ設定とホームボタンの表示設定を区別します。",
+    "answer": "起動時のページ設定とホームボタンの表示設定を区別します。",
+    "steps": [
+      "Edgeの設定を開き、『スタート、ホーム、新しいタブ』へ進みます。",
+      "『ツールバーにホームボタンを表示』の設定を確認します。",
+      "必要ならオンにして、ボタンを押したときに開くページを選びます。",
+      "ツールバーに家の形のボタンが戻るか確認します。"
+    ],
+    "causes": [
+      "ホームボタンの表示がオフ",
+      "起動時に開くページの設定をホームボタンと取り違えている",
+      "ツールバーの別のアイコンを探している"
+    ],
+    "diagnosis": "Edgeのホームボタンは、ブラウザ起動時に開くページやお気に入りバーとは別の設定です。家の形のボタンだけないなら表示スイッチを確認します。ボタンはあるが開く先が意図と違う場合は、その下にあるページの設定を調べます。",
+    "caution": "ホームに設定するURLを入力するときは正規のアドレスを確認してください。知らないサイトに勝手に変わっている場合は拡張機能や管理ポリシーを確認し、機密情報を入力する前に安全性を確かめます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/microsoft-edge/change-your-browser-home-page-a531e1b8-ed54-d057-0262-cc5983a065c6",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/edge-favorites-bar-hidden/",
+      "/browser/edge-sync-not-working/",
+      "/browser/chrome-bookmarks-missing/"
+    ],
+    "closest_existing_url": "/browser/edge-favorites-bar-hidden/",
+    "differentiation": "既存記事はお気に入りバーの表示。本記事はホームページへ移動する家の形のボタンをツールバーに出す設定を扱う。",
+    "fact_check": "Microsoft Edge公式ヘルプの『Show home button on the toolbar』とホームページ指定の手順を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-new-tab-cards-hidden",
+    "path": "/browser/chrome-new-tab-cards-hidden/",
+    "title": "Chromeの新しいタブにおすすめカードが出ないとき",
+    "topic": "新しいタブのカード欄が見えなくなった",
+    "description": "新しいタブのカード欄が見えなくなった。新しいタブのカスタマイズでカードの表示設定を確認します。",
+    "answer": "新しいタブのカスタマイズでカードの表示設定を確認します。",
+    "steps": [
+      "PC版Chromeで新しいタブを開きます。",
+      "画面下部の『Chromeをカスタマイズ』を開きます。",
+      "『カード』の項目から表示するカードを確認します。",
+      "必要なカードを有効にし、新しいタブを開き直して表示を確かめます。"
+    ],
+    "causes": [
+      "新しいタブのカード表示が無効",
+      "対象のカードだけオフ",
+      "カードとブックマークやタブグループの一覧を混同している"
+    ],
+    "diagnosis": "新しいタブのカードは提案や作業を再開するための表示であり、保存済みブックマークそのものではありません。ブックマークが残っていてカードだけ出ないなら、新しいタブのカスタマイズを先に確認します。カードの種類は環境で異なります。",
+    "caution": "カードを再表示しても過去の閲覧内容がすべて復元されるわけではありません。共有PCでは提案の内容が他人に見える可能性があるため、表示するカードを選ぶ前にプライバシーを確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/11032183?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-saved-tab-groups-not-visible/",
+      "/browser/chrome-one-site-muted/",
+      "/browser/chrome-payment-card-autofill-missing/"
+    ],
+    "closest_existing_url": "/browser/chrome-saved-tab-groups-not-visible/",
+    "differentiation": "既存記事は保存したタブグループが見えない問題。本記事は新しいタブの提案カードの表示設定を扱う。",
+    "fact_check": "Google Chrome公式ヘルプの新しいタブをカスタマイズする手順でカードのオン・オフを確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-message-requests-tab-missing",
+    "path": "/sns/discord-message-requests-tab-missing/",
+    "title": "Discordの『メッセージリクエスト』が見えないとき",
+    "topic": "知らない人からのDMを確認する欄がない",
+    "description": "知らない人からのDMを確認する欄がない。保留中のリクエストの有無と、受信・迷惑メッセージの設定を確認します。",
+    "answer": "保留中のリクエストの有無と、受信・迷惑メッセージの設定を確認します。",
+    "steps": [
+      "PCではDiscordのホーム、モバイルではDM画面を開きます。",
+      "保留中のリクエストがあるか通知バッジを確認します。",
+      "リクエスト画面があれば迷惑メッセージのタブも確認します。",
+      "ない場合はユーザー設定の『コンテンツとソーシャル』やサーバー設定で受信条件を確認します。"
+    ],
+    "causes": [
+      "保留中のリクエストが一件もない",
+      "成人アカウントでメッセージリクエストをオフにしている",
+      "相手のDMが通常の会話または迷惑メッセージへ分類された"
+    ],
+    "diagnosis": "Discord公式は保留中のリクエストが一件以上ある場合だけタブを表示すると説明します。タブがないことだけでメッセージの消失とは言えません。まず通常のDM、通知バッジ、受信設定を見て、送信側の問題と区別します。",
+    "caution": "無視したリクエストは通常の画面から取り戻せないと公式は案内しています。知らない相手のリンクや添付ファイルを開かず、未成年のアカウントでは保護設定を無理に変えないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/7924992471191-Message-Requests",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-dm-cannot-send/",
+      "/sns/discord-voice-message-send-missing-desktop/",
+      "/sns/discord-channel-message-permission-denied/"
+    ],
+    "closest_existing_url": "/sns/discord-dm-cannot-send/",
+    "differentiation": "既存記事は自分のDMを相手に送れない問題。本記事は受信側のメッセージリクエストのタブと分類条件を扱う。",
+    "fact_check": "Discord公式は保留中のリクエストがあるときだけタブが表示され、迷惑メッセージは別タブに入ると説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-meeting-chat-button-missing",
+    "path": "/sns/zoom-meeting-chat-button-missing/",
+    "title": "Zoomミーティングでチャットボタンが見えないとき",
+    "topic": "会議中に参加者へチャットを送る操作が出ない",
+    "description": "会議中に参加者へチャットを送る操作が出ない。アカウントの会議チャット設定と、開催者の会議内制限を確認します。",
+    "answer": "アカウントの会議チャット設定と、開催者の会議内制限を確認します。",
+    "steps": [
+      "会議画面のツールバーや『詳細』メニューにチャットがないか確認します。",
+      "開催者へ、その会議で参加者のチャットを許可しているか確認します。",
+      "自分が管理者ならZoom Webポータルのミーティング内チャット設定を確認します。",
+      "組織で項目がロックされている場合は管理者に可否を確認します。"
+    ],
+    "causes": [
+      "会議チャットがアカウント単位で無効",
+      "開催者がその会議のチャットを制限",
+      "画面幅のためボタンが詳細メニュー内にある"
+    ],
+    "diagnosis": "ファイル転送のボタンがない症状と、チャット欄そのものがない症状は別です。会議中のツールバーを確認し、開催者にその会議だけの制限を尋ねます。どの会議でもないならアカウントや組織の設定を確認します。参加者と開催者で見え方を比べます。",
+    "caution": "開催者や組織がチャットを制限している場合は、参加者側で勝手に解除できません。重要な連絡は開催者が指定した別の経路を使い、設定を変える前に会議の記録や参加者のプライバシーを考慮します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060343",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-meeting-file-transfer-missing/",
+      "/sns/zoom-camera-not-working/",
+      "/sns/zoom-breakout-rooms-option-missing/"
+    ],
+    "closest_existing_url": "/sns/zoom-meeting-file-transfer-missing/",
+    "differentiation": "既存記事はチャット内のファイル転送機能。本記事はミーティングのチャット機能そのものが見えない状態を扱う。",
+    "fact_check": "Zoom公式の会議チャット設定案内で全体設定が無効だとチャットボタンが隠れることを確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-event-details-visible-to-others",
+    "path": "/google/calendar-event-details-visible-to-others/",
+    "title": "Googleカレンダーの予定の詳細を共有相手に隠したいとき",
+    "topic": "共有カレンダーで予定名や内容を見せず時間だけ確保したい",
+    "description": "共有カレンダーで予定名や内容を見せず時間だけ確保したい。対象の予定の公開範囲を確認し、必要な予定だけ『非公開』に設定します。",
+    "answer": "対象の予定の公開範囲を確認し、必要な予定だけ『非公開』に設定します。",
+    "steps": [
+      "PC版Googleカレンダーで対象の予定を開き、編集画面へ進みます。",
+      "公開範囲を確認し、詳細を隠したい予定だけ『非公開』を選びます。",
+      "保存後、共有相手が予定をどう見られるか、権限の違う相手で確認します。",
+      "カレンダー全体の共有権限も確認し、公開設定が意図と合うか見直します。"
+    ],
+    "causes": [
+      "予定ごとの公開範囲が『公開』または既定値",
+      "カレンダー全体の共有権限が想定より広い",
+      "編集した予定と共有された予定が違う"
+    ],
+    "diagnosis": "自分のカレンダーに予定が表示されない同期問題ではなく、他の人から予定の詳細がどう見えるかという公開範囲の問題です。まず対象予定の公開範囲を確かめ、共有カレンダー全体の設定と組み合わせて確認します。権限を持つ相手には見え方が異なる場合があります。",
+    "caution": "『非公開』の指定だけで予定の存在そのものやすべての情報を完全に隠せるとは限りません。機密の予定を入れる前にカレンダーの共有範囲と相手の権限を確認し、必要なら別の非共有カレンダーを使います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/calendar/answer/34580?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-calendar-desktop-reminders-missing/",
+      "/google/google-calendar-not-syncing/"
+    ],
+    "closest_existing_url": "/google/google-calendar-invite-not-appearing/",
+    "differentiation": "既存記事は会議への招待が自分の予定に現れない問題。本記事は共有相手から見える予定詳細の公開範囲を扱う。",
+    "fact_check": "Googleカレンダー公式の予定公開範囲の説明で『Default visibility』『Public』『Private』の切り替え手順を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-vpn-by-google-unavailable",
+    "path": "/android/pixel-vpn-by-google-unavailable/",
+    "title": "Pixelの『VPN by Google』が使えないとき",
+    "topic": "PixelのVPN項目がないか接続できない",
+    "description": "PixelのVPN項目がないか接続できない。対応機種、アカウント、地域、端末の状態を順に確認します。",
+    "answer": "対応機種、アカウント、地域、端末の状態を順に確認します。",
+    "steps": [
+      "Pixelの機種がPixel 7以降または対象のPixel Tabletか確認します。",
+      "設定の『ネットワークとインターネット』から『VPN』『VPN by Google』を探します。",
+      "インターネット接続とGoogleアカウントの種類、利用地域を公式の対象条件と照合します。",
+      "対応機種でも使えない場合はセキュリティ更新、管理者の制限、端末の改変状態を確認します。"
+    ],
+    "causes": [
+      "機種または地域が提供対象外",
+      "監督対象や組織管理のアカウントで利用不可",
+      "端末の更新不足・root化・ブートローダー解除などの条件"
+    ],
+    "diagnosis": "VPN by GoogleはPixel向けの特定サービスであり、AndroidのプライベートDNSとは別です。DNSだけ設定してもVPNは有効になりません。まず対象機種と地域を確認し、項目があるのに接続できない場合はアカウントと端末の状態を調べます。",
+    "caution": "VPNを使うために組織の管理制限や保護者の設定を回避しないでください。公式はVPNが地域制限の回避用ではないと案内しています。root化や非公式ソフトの導入を解決策として試さず、管理者またはGoogleに相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/2819573?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/private-dns-provider-connection-fails/",
+      "/android/android-rcs-chat-not-connecting/",
+      "/android/android-google-contacts-not-syncing/"
+    ],
+    "closest_existing_url": "/android/private-dns-provider-connection-fails/",
+    "differentiation": "既存記事はプライベートDNSの指定先による通信障害。本記事はPixel専用のVPN機能の利用条件と接続不可を扱う。",
+    "fact_check": "Pixel公式ヘルプはPixel 7以降とPixel Tablet、対象地域、アカウント、端末の更新・改変状態を条件として記載する。"
+  }
+]

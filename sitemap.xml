@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sora-navi-jp.com/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/articles.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/about.html</loc>
@@ -22,15 +22,15 @@
   </url>
   <url>
     <loc>https://sora-navi-jp.com/iphone/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/categories/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/articles/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/about/</loc>
@@ -90,19 +90,19 @@
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/system/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/windows/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/mac/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/android/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/internet-wifi/</loc>
@@ -110,19 +110,139 @@
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/browser/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/google-services/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/social-communication/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/peripherals/</loc>
     <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/gmail-label-hidden-sidebar/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/sheets-slicer-does-not-filter-chart/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/slides-speaker-notes-not-visible/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/forms-edit-response-link-unavailable/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/docs-voice-typing-not-working/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/photos-shared-album-cannot-add/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/slides-recording-button-unavailable/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/mac/stage-manager-recent-apps-hidden/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/mac/safari-private-browsing-keeps-locking/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/mac/mac-split-view-option-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/messages-check-in-option-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/health-medication-follow-up-reminder-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/iphone-calls-on-mac-not-ringing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/focus-status-not-shared-messages/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/safari-shared-with-you-links-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/system-tray-icon-in-overflow/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/recovery-drive-usb-not-selected/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/automatic-file-download-app-blocked/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/windows-studio-effects-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/windows-power-mode-option-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/phone-link-mobile-device-missing-start/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/pixel-at-a-glance-weather-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/play-protect-device-not-certified/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/pixel-screenshots-not-restored-new-phone/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/browser/edge-home-button-not-visible/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/browser/chrome-new-tab-cards-hidden/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/sns/discord-message-requests-tab-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/sns/zoom-meeting-chat-button-missing/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/calendar-event-details-visible-to-others/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/pixel-vpn-by-google-unavailable/</loc>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/google/gmail-conversation-view-not-grouping/</loc>

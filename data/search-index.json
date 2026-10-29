@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailでラベルが左側の一覧に出ないとき",
+    "description": "付けたラベルを左メニューから探せない。ラベル自体が消えたのか、ラベル一覧で非表示になっているだけかを切り分けます。",
+    "url": "/google/gmail-label-hidden-sidebar/"
+  },
+  {
+    "title": "スプレッドシートのスライサーでグラフが絞られないとき",
+    "description": "スライサーを動かしても目標のグラフやピボット表が変わらない。対象グラフとスライサーのデータセット・列・範囲を確認します。",
+    "url": "/google/sheets-slicer-does-not-filter-chart/"
+  },
+  {
+    "title": "Googleスライドで発表者メモが本番中に見えないとき",
+    "description": "スライドに書いたメモを発表画面で確認できない。通常のスライド表示と発表者ビューを区別して開き、発表者メモのタブを確認します。",
+    "url": "/google/slides-speaker-notes-not-visible/"
+  },
+  {
+    "title": "Googleフォームで送信後に回答を編集できないとき",
+    "description": "提出済みの回答を直すリンクが見つからない。フォーム所有者の回答編集設定と回答者に表示されるリンクを確認します。",
+    "url": "/google/forms-edit-response-link-unavailable/"
+  },
+  {
+    "title": "Googleドキュメントで音声入力が使えないとき",
+    "description": "マイクを押しても文書に言葉が入らない。対応ブラウザ、文書の編集権限、マイクの許可を順に確かめます。",
+    "url": "/google/docs-voice-typing-not-working/"
+  },
+  {
+    "title": "Googleフォトの共有アルバムに写真を追加できないとき",
+    "description": "アルバムは見られるのに自分の写真を入れられない。アルバム所有者の共同編集設定と参加したGoogleアカウントを確認します。",
+    "url": "/google/photos-shared-album-cannot-add/"
+  },
+  {
+    "title": "Googleスライドの録画ボタンが出ないとき",
+    "description": "発表を動画として録画する操作が見つからない。ブラウザ、アカウントの対象範囲、編集権限を先に確認します。",
+    "url": "/google/slides-recording-button-unavailable/"
+  },
+  {
+    "title": "Macのステージマネージャで最近のアプリが見えないとき",
+    "description": "ステージマネージャは使えるのに左側の最近のアプリが並ばない。ステージマネージャの有効化と最近のアプリの表示設定を分けて確認します。",
+    "url": "/mac/stage-manager-recent-apps-hidden/"
+  },
+  {
+    "title": "MacのSafariでプライベートウインドウが毎回ロックされるとき",
+    "description": "プライベートブラウズへ戻るたびに認証を求められる。Safariのプライベートブラウズのロック機能と、そのプライバシー設定を確認します。",
+    "url": "/mac/safari-private-browsing-keeps-locking/"
+  },
+  {
+    "title": "MacでSplit Viewにアプリを並べられないとき",
+    "description": "ウインドウを左右に並べる選択肢が出ない。ウインドウの緑ボタン、対象アプリの対応、開いている画面を順に確認します。",
+    "url": "/mac/mac-split-view-option-missing/"
+  },
+  {
+    "title": "iPhoneのメッセージで『到着確認』が出ないとき",
+    "description": "家族に到着を知らせるチェックインを作成できない。送信者と受信者のiOS、メッセージの操作場所、会話相手を確認します。",
+    "url": "/iphone/messages-check-in-option-missing/"
+  },
+  {
+    "title": "iPhoneのヘルスケアで服薬の再通知が来ないとき",
+    "description": "服薬を記録しなかった後のフォローアップ通知が出ない。薬のスケジュールとフォローアップリマインダーの設定を分けて確認します。",
+    "url": "/iphone/health-medication-follow-up-reminder-missing/"
+  },
+  {
+    "title": "iPhoneへの電話がMacやiPadに鳴らないとき",
+    "description": "iPhoneでは着信するのに近くのApple端末に出ない。iPhoneの『ほかのデバイスでの通話』と端末間の接続条件を確認します。",
+    "url": "/iphone/iphone-calls-on-mac-not-ringing/"
+  },
+  {
+    "title": "iPhoneで集中モードの状況が相手に表示されないとき",
+    "description": "通知を止めていることがメッセージの相手に伝わらない。集中モード状況の共有設定と対象モードの有効化を別々に確認します。",
+    "url": "/iphone/focus-status-not-shared-messages/"
+  },
+  {
+    "title": "iPhoneのSafariに『あなたと共有』のリンクが出ないとき",
+    "description": "メッセージでもらったWebリンクがSafariの開始ページに並ばない。メッセージ側の共有設定とSafariの開始ページ表示を確認します。",
+    "url": "/iphone/safari-shared-with-you-links-missing/"
+  },
+  {
+    "title": "Windowsで通知領域のアプリアイコンが見えないとき",
+    "description": "起動中のアプリの小さなアイコンがタスクバー右端にない。通知領域の隠れたアイコンとアプリの起動状態を分けて確認します。",
+    "url": "/windows/system-tray-icon-in-overflow/"
+  },
+  {
+    "title": "Windowsの回復ドライブでUSBを選べないとき",
+    "description": "回復ドライブ作成画面に使いたいUSBメモリが出ない。USBの認識と回復ドライブ作成画面の対象条件を確認します。",
+    "url": "/windows/recovery-drive-usb-not-selected/"
+  },
+  {
+    "title": "Windowsでクラウド上のファイルをアプリが自動取得できないとき",
+    "description": "オンライン専用ファイルを開くアプリのダウンロードが止まる。Windowsの『自動ファイルダウンロード』でそのアプリをブロックしたか確認します。",
+    "url": "/windows/automatic-file-download-app-blocked/"
+  },
+  {
+    "title": "Windows Studio Effectsの項目が出ないとき",
+    "description": "ビデオ会議用のカメラ・マイク効果を設定できない。PCの対応ハードウェアとWindowsの設定画面を先に確認します。",
+    "url": "/windows/windows-studio-effects-missing/"
+  },
+  {
+    "title": "Windowsで電源モードを変更できないとき",
+    "description": "設定の電源モードが見つからないか選択できない。機種が提供する電源設定と現在の電源接続状態を確認し、管理方法を切り分けます。",
+    "url": "/windows/windows-power-mode-option-missing/"
+  },
+  {
+    "title": "Windowsのスタートメニューにスマホの欄が出ないとき",
+    "description": "スマートフォン連携は使えるのにスタート画面で端末情報が見えない。Phone Linkの接続とスタートメニューの表示スイッチを分けて確認します。",
+    "url": "/windows/phone-link-mobile-device-missing-start/"
+  },
+  {
+    "title": "Pixelの『スナップショット』に天気が出ないとき",
+    "description": "ホーム画面の日付は見えるのに天気の情報がない。スナップショット全体と天気項目の表示設定を分けて確認します。",
+    "url": "/android/pixel-at-a-glance-weather-missing/"
+  },
+  {
+    "title": "Google Playで『端末は認証されていません』と出るとき",
+    "description": "Playストアの端末認証が未認証と表示される。Play Protectのスキャン設定と端末の認証状態を区別して確認します。",
+    "url": "/android/play-protect-device-not-certified/"
+  },
+  {
+    "title": "機種変更後にPixel Screenshotsの内容が戻らないとき",
+    "description": "新しいPixelのScreenshotsアプリに以前の記録がない。通常の画像ファイルとScreenshotsアプリのデータ移行を分けて確認します。",
+    "url": "/android/pixel-screenshots-not-restored-new-phone/"
+  },
+  {
+    "title": "Microsoft Edgeのホームボタンが見えないとき",
+    "description": "ツールバーから家の形のボタンが消えた。起動時のページ設定とホームボタンの表示設定を区別します。",
+    "url": "/browser/edge-home-button-not-visible/"
+  },
+  {
+    "title": "Chromeの新しいタブにおすすめカードが出ないとき",
+    "description": "新しいタブのカード欄が見えなくなった。新しいタブのカスタマイズでカードの表示設定を確認します。",
+    "url": "/browser/chrome-new-tab-cards-hidden/"
+  },
+  {
+    "title": "Discordの『メッセージリクエスト』が見えないとき",
+    "description": "知らない人からのDMを確認する欄がない。保留中のリクエストの有無と、受信・迷惑メッセージの設定を確認します。",
+    "url": "/sns/discord-message-requests-tab-missing/"
+  },
+  {
+    "title": "Zoomミーティングでチャットボタンが見えないとき",
+    "description": "会議中に参加者へチャットを送る操作が出ない。アカウントの会議チャット設定と、開催者の会議内制限を確認します。",
+    "url": "/sns/zoom-meeting-chat-button-missing/"
+  },
+  {
+    "title": "Googleカレンダーの予定の詳細を共有相手に隠したいとき",
+    "description": "共有カレンダーで予定名や内容を見せず時間だけ確保したい。対象の予定の公開範囲を確認し、必要な予定だけ『非公開』に設定します。",
+    "url": "/google/calendar-event-details-visible-to-others/"
+  },
+  {
+    "title": "Pixelの『VPN by Google』が使えないとき",
+    "description": "PixelのVPN項目がないか接続できない。対応機種、アカウント、地域、端末の状態を順に確認します。",
+    "url": "/android/pixel-vpn-by-google-unavailable/"
+  },
+  {
     "title": "Gmailで同じ相手のメールが会話にまとまらないとき",
     "description": "返信が別々の行に並び経緯を追いにくい。Gmailの『スレッド表示』設定を確認し、件名や参加者が異なるメールとは分けて判断します。",
     "url": "/google/gmail-conversation-view-not-grouping/"
