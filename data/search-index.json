@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailでメール本文の画像が表示されないとき",
+    "description": "メール内の外部画像が空白や読み込み待ちになる。画像表示の設定と送信元への信頼を確認し、添付ファイルの問題と分けます。",
+    "url": "/google/gmail-external-images-not-shown/"
+  },
+  {
+    "title": "Googleドライブでファイルのプレビューを開けないとき",
+    "description": "保存済みファイルをブラウザ内で確認しようとすると表示されない。ファイル形式のプレビュー対応とブラウザの読み込み問題を切り分けます。",
+    "url": "/google/drive-file-preview-unavailable/"
+  },
+  {
+    "title": "Googleドキュメントで数式ツールバーが見えないとき",
+    "description": "数式を入力したいのにギリシャ文字などの操作欄がない。数式を挿入してカーソルを置き、ツールバーの表示設定を確認します。",
+    "url": "/google/docs-equation-toolbar-hidden/"
+  },
+  {
+    "title": "Googleフォームの回答控えメールが届かないとき",
+    "description": "送信後に自分の回答内容のコピーを受け取れない。メールアドレスの収集と回答のコピー送信設定を確認します。",
+    "url": "/google/forms-response-receipt-not-sent/"
+  },
+  {
+    "title": "Googleカレンダーの予定に参加者を追加できないとき",
+    "description": "招待された予定に別の参加者を招待する操作が使えない。予定の主催者が設定した『ゲストが他のゲストを招待』する権限を確認します。",
+    "url": "/google/calendar-guest-cannot-invite-others/"
+  },
+  {
+    "title": "Androidのスプレッドシートで名前付き範囲を編集できないとき",
+    "description": "スマホで範囲名を開いても編集操作が見つからない。Androidアプリの機能範囲を確認し、編集はPC版で行います。",
+    "url": "/google/sheets-named-range-cannot-edit-android/"
+  },
+  {
+    "title": "YouTubeでコメントを固定できないとき",
+    "description": "自分の動画のコメントを上部に固定する項目がない。チャンネルの高度な機能へのアクセスと動画のコメント状態を確認します。",
+    "url": "/google/youtube-pin-comment-option-missing/"
+  },
+  {
+    "title": "Googleマップのオフライン地図が更新されないとき",
+    "description": "保存済みの地域の地図が古いままになる。保存済み地図の期限と自動更新の条件を確認し、必要なら手動更新します。",
+    "url": "/google/maps-offline-map-not-updating/"
+  },
+  {
+    "title": "iPhoneのAppプライバシーレポートに履歴が出ないとき",
+    "description": "アプリの権限利用を確認したいのにレポートが空欄。レポートの有効化時点と対象期間を確認し、権限自体の設定と分けます。",
+    "url": "/iphone/app-privacy-report-empty/"
+  },
+  {
+    "title": "Apple Payで意図しないカードが最初に選ばれるとき",
+    "description": "ウォレットで支払うたび別のカードが先に出る。Walletのカード順と支払前の選択操作を確認し、既定の一枚を選び直します。",
+    "url": "/iphone/apple-pay-wrong-default-card/"
+  },
+  {
+    "title": "iPhoneのLive Photosでループなどの効果が出ないとき",
+    "description": "写真を開いてもループやバウンスを選べない。撮影形式と写真アプリのLive Photo操作を区別します。",
+    "url": "/iphone/live-photo-effects-missing/"
+  },
+  {
+    "title": "Time Machineで特定のファイルだけバックアップされないとき",
+    "description": "バックアップは成功するが一部のフォルダが履歴にない。除外リストと保存場所を調べ、バックアップ全体の失敗と分けます。",
+    "url": "/mac/time-machine-one-file-missing/"
+  },
+  {
+    "title": "Apple WatchでMacのロックを解除できないとき",
+    "description": "パスワードでは入れるがWatchの自動解除が働かない。対応条件、同じApple Account、Wi-FiとBluetoothを順番に確認します。",
+    "url": "/mac/apple-watch-auto-unlock-not-working/"
+  },
+  {
+    "title": "iPhoneの背面タップが反応しないとき",
+    "description": "背面を二回または三回たたいても割り当てた操作が動かない。アクセシビリティの割当と叩く回数を確認し、簡単な操作で検出を試します。",
+    "url": "/iphone/back-tap-not-responding/"
+  },
+  {
+    "title": "MacのiPhoneミラーリングが接続できないとき",
+    "description": "MacからiPhoneの画面を操作しようとしても開始できない。OSと機種の対応、同一アカウント、近接条件を順に確認します。",
+    "url": "/mac/iphone-mirroring-cannot-connect/"
+  },
+  {
+    "title": "iPhoneで着信転送の設定が見つからないとき",
+    "description": "電話の設定に転送項目がない、または転送先を保存できない。通信事業者の対応と回線、モバイル圏内を確認してから転送先を設定します。",
+    "url": "/iphone/call-forwarding-option-missing/"
+  },
+  {
+    "title": "WindowsのSmart App Controlをオンにできないとき",
+    "description": "Windowsセキュリティで保護を有効にしたいが操作が使えない。現行の設定画面と管理状態、更新状況を調べ、再有効化の可否を判断します。",
+    "url": "/windows/smart-app-control-off-cannot-enable/"
+  },
+  {
+    "title": "Windows Recallでスナップショットが保存されないとき",
+    "description": "Recallを開いても最近の画面履歴が増えない。対応PCと保存スイッチ、一時停止状態を確認して記録条件を切り分けます。",
+    "url": "/windows/recall-snapshots-not-saving/"
+  },
+  {
+    "title": "WindowsのフォトでiCloudの写真が見えないとき",
+    "description": "iPhoneの写真がPC版フォトのiCloud欄に現れない。フォトとiCloud for Windowsの連携を調べます。",
+    "url": "/windows/photos-icloud-library-not-visible/"
+  },
+  {
+    "title": "Windowsで保護フォルダーにファイルを保存できないとき",
+    "description": "特定のアプリだけドキュメントなどへの書き込みが拒否される。ランサムウェア対策のブロック履歴とアプリの信頼性を調べます。",
+    "url": "/windows/controlled-folder-access-blocks-save/"
+  },
+  {
+    "title": "Windowsの近距離共有で受信したファイルが見つからないとき",
+    "description": "共有は完了したがPC上の保存場所が分からない。受信ファイルの保存先設定を確認し、受信時刻と名前でフォルダーを探します。",
+    "url": "/windows/nearby-sharing-received-file-missing/"
+  },
+  {
+    "title": "Windowsで動的リフレッシュレートを選べないとき",
+    "description": "画面設定に動的リフレッシュレートのスイッチがない。表示装置の対応と現在のディスプレイ選択を調べ、固定の更新頻度と分けます。",
+    "url": "/windows/dynamic-refresh-rate-toggle-missing/"
+  },
+  {
+    "title": "Pixelで『かこって検索』が使えないとき",
+    "description": "画面を長押ししても画像や文字を囲む検索が始まらない。端末の対応、機能設定、画面検索の権限を確認し、起動操作を試します。",
+    "url": "/android/circle-to-search-unavailable/"
+  },
+  {
+    "title": "Pixel Screenshotsで検索バーが出ないとき",
+    "description": "スクリーンショットは見えるがアプリ内検索が使えない。AI検索の設定とモデルのダウンロード状態を確認して、画像一覧と分けます。",
+    "url": "/android/pixel-screenshots-search-bar-missing/"
+  },
+  {
+    "title": "機種変更後にGoogleウォレットの交通カードが見えないとき",
+    "description": "新しいスマホで交通カードや残高が利用できない。カードの種類ごとの移行方法と旧端末の状態を確認し、発行元の条件を調べます。",
+    "url": "/android/wallet-transit-pass-missing-new-phone/"
+  },
+  {
+    "title": "Androidでアクセシビリティの制限付き設定を変更できないとき",
+    "description": "アプリの設定をオンにしたいが制限付きと表示される。アプリの入手元と権限リスクを確認し、信頼できる場合だけ操作します。",
+    "url": "/android/restricted-setting-accessibility-disabled/"
+  },
+  {
+    "title": "Chromeでダウンロード時に保存先を聞かれないとき",
+    "description": "ファイルは保存されるが『名前を付けて保存』の画面が出ない。ダウンロード設定で毎回保存先を確認する項目を調べ、テストファイルで試します。",
+    "url": "/browser/chrome-save-as-dialog-not-shown/"
+  },
+  {
+    "title": "Firefoxでコンテナーのアイコンが見つからないとき",
+    "description": "アカウント別タブを使いたいがツールバーに操作ボタンがない。拡張機能の有無と拡張機能メニュー内の表示を確認し、ボタンの場所を調べます。",
+    "url": "/browser/firefox-containers-icon-missing/"
+  },
+  {
+    "title": "LINEでKeepメモのトークが見つからないとき",
+    "description": "自分だけのメモ用トークが一覧に出ない。LINEの版とKeepメモの対応状況を確認し、公式ストアから更新します。",
+    "url": "/sns/line-keep-memo-chat-missing/"
+  },
+  {
+    "title": "Discordで参加したサーバーのチャンネルが一覧にないとき",
+    "description": "閲覧できるはずのチャンネルがサイドバーに表示されない。コミュニティのオンボーディングで選んだチャンネル一覧を確認します。",
+    "url": "/sns/discord-onboarding-channel-hidden/"
+  },
+  {
     "title": "Gmailでラベルが左側の一覧に出ないとき",
     "description": "付けたラベルを左メニューから探せない。ラベル自体が消えたのか、ラベル一覧で非表示になっているだけかを切り分けます。",
     "url": "/google/gmail-label-hidden-sidebar/"

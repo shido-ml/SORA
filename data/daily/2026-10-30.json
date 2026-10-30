@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-external-images-not-shown",
+    "path": "/google/gmail-external-images-not-shown/",
+    "title": "Gmailでメール本文の画像が表示されないとき",
+    "topic": "メール内の外部画像が空白や読み込み待ちになる",
+    "description": "メール内の外部画像が空白や読み込み待ちになる。画像表示の設定と送信元への信頼を確認し、添付ファイルの問題と分けます。",
+    "answer": "画像表示の設定と送信元への信頼を確認し、添付ファイルの問題と分けます。",
+    "steps": [
+      "PC版Gmailで対象メールの『画像を表示』があるか確認します。",
+      "設定から『すべての設定を表示』を開き、『画像』の項目を調べます。",
+      "『外部画像を表示する前に確認』なら、信頼できる送信元のメールだけ個別に表示します。",
+      "別のメールでも画像が出ない場合は接続状態とブラウザ側の読み込みを確認します。"
+    ],
+    "causes": [
+      "外部画像を表示前に確認する設定",
+      "送信元や画像の配信先が利用できない",
+      "メール本文の画像と添付ファイルを混同している"
+    ],
+    "diagnosis": "Gmailの外部画像は本文の表示設定に左右されます。まず画像が付いたメールの本文だけで起きるのか、添付ファイル自体を開けないのかを分けます。前者ならGmailの『画像』設定を確認し、特定の送信者だけなら配信元の問題も考えます。",
+    "caution": "知らない送信者の画像を無条件で表示しないでください。外部画像を読み込むと送信者側のサーバーへアクセスする場合があります。仕事のメールや不審な請求メールでは内容と送信元を確かめてから表示します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/145919?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-attachment-upload-failed/",
+      "/google/gmail-templates-menu-not-visible/",
+      "/google/gmail-scheduled-send-not-sent/"
+    ],
+    "closest_existing_url": "/google/gmail-attachment-upload-failed/",
+    "differentiation": "既存記事は送信時に添付ファイルをアップロードできない問題。本記事は受信メール本文の外部画像の表示設定を扱う。",
+    "fact_check": "Gmail公式の『Turn images on or off』で画像を常時表示する設定と表示前に確認する設定を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-file-preview-unavailable",
+    "path": "/google/drive-file-preview-unavailable/",
+    "title": "Googleドライブでファイルのプレビューを開けないとき",
+    "topic": "保存済みファイルをブラウザ内で確認しようとすると表示されない",
+    "description": "保存済みファイルをブラウザ内で確認しようとすると表示されない。ファイル形式のプレビュー対応とブラウザの読み込み問題を切り分けます。",
+    "answer": "ファイル形式のプレビュー対応とブラウザの読み込み問題を切り分けます。",
+    "steps": [
+      "対象ファイルの形式と拡張子を確認します。",
+      "Googleドライブ公式のプレビュー対応形式に含まれるかを調べます。",
+      "対応形式なら別の小さいファイルもプレビューし、ブラウザと通信の問題を分けます。",
+      "非対応形式なら所有者が許可する範囲で適切なアプリを使い、原本の変換前にコピーを確保します。"
+    ],
+    "causes": [
+      "ファイル形式がドライブの標準プレビュー対象外",
+      "ファイルが大きいか読み込みに失敗",
+      "ダウンロード権限とプレビュー機能を混同している"
+    ],
+    "diagnosis": "Googleドライブには保存できても標準プレビューできない形式があります。まず形式の対応表を確認し、対応形式だけで表示できないなら別ファイルとの比較で一時的なブラウザ障害を調べます。PCへのダウンロードができない問題とは権限と対処が異なります。",
+    "caution": "プレビューできないファイルを開くため、出所不明の変換サイトへ機密ファイルをアップロードしないでください。共有ファイルでは所有者の閲覧・ダウンロード権限を守り、形式変換が必要なら原本を保持します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/drive/answer/37603?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-drive-file-download-failed-browser/",
+      "/google/drive-move-to-shared-drive-denied/",
+      "/google/drive-shortcut-original-unavailable/"
+    ],
+    "closest_existing_url": "/google/google-drive-file-download-failed-browser/",
+    "differentiation": "既存記事はファイルをPCへダウンロードする権限やブラウザ設定。本記事はドライブ内での標準プレビューに対応する形式を調べる。",
+    "fact_check": "Googleドライブ公式の対応ファイル形式一覧で保存可能な形式と標準プレビュー可能な形式の違いを確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-equation-toolbar-hidden",
+    "path": "/google/docs-equation-toolbar-hidden/",
+    "title": "Googleドキュメントで数式ツールバーが見えないとき",
+    "topic": "数式を入力したいのにギリシャ文字などの操作欄がない",
+    "description": "数式を入力したいのにギリシャ文字などの操作欄がない。数式を挿入してカーソルを置き、ツールバーの表示設定を確認します。",
+    "answer": "数式を挿入してカーソルを置き、ツールバーの表示設定を確認します。",
+    "steps": [
+      "PC版Googleドキュメントで編集できる文書を開きます。",
+      "『挿入』『記号』『数式』から数式欄を作ります。",
+      "数式内にカーソルを置き、記号のメニューが現れるか確認します。",
+      "常時表示したい場合は『表示』メニューの数式ツールバー表示を確認します。"
+    ],
+    "causes": [
+      "数式欄の外にカーソルがある",
+      "数式ツールバーの表示設定がオフ",
+      "スマホアプリでPC版の数式編集を探している"
+    ],
+    "diagnosis": "数式ツールバーは通常の文書本文に常に出るものではなく、数式欄の中にカーソルがあると表示されます。まず『数式を挿入』ができるかを確認し、挿入できるのに記号が見えない場合だけ表示メニューを調べます。記号を入力できるかも試します。",
+    "caution": "閲覧権限の文書では数式を追加できません。所有者に編集権限を求める前に、必要な変更の範囲を伝えてください。スマホで同じ編集画面を探し続けず、PC版の対応手順を使います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/160749?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-view-only-cannot-edit/",
+      "/google/docs-voice-typing-not-working/",
+      "/google/docs-line-numbers-unavailable-pageless/"
+    ],
+    "closest_existing_url": "/google/docs-view-only-cannot-edit/",
+    "differentiation": "既存記事は文書全体の編集権限。本記事は編集可能な文書で数式記号の専用ツールバーを表示する操作を扱う。",
+    "fact_check": "Googleドキュメント公式は数式の挿入経路と、数式内でツールバーが表示される条件を説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-response-receipt-not-sent",
+    "path": "/google/forms-response-receipt-not-sent/",
+    "title": "Googleフォームの回答控えメールが届かないとき",
+    "topic": "送信後に自分の回答内容のコピーを受け取れない",
+    "description": "送信後に自分の回答内容のコピーを受け取れない。メールアドレスの収集と回答のコピー送信設定を確認します。",
+    "answer": "メールアドレスの収集と回答のコピー送信設定を確認します。",
+    "steps": [
+      "回答者は入力したメールアドレスと迷惑メール・別アカウントの受信箱を確認します。",
+      "所有者はフォームの設定で回答者のメールアドレスを収集しているか確認します。",
+      "回答のコピー送信を常時行うか、回答者の希望で行うかを確認します。",
+      "自分でテスト回答を送り、控えが届く条件と送信後の画面を確かめます。"
+    ],
+    "causes": [
+      "フォームがメールアドレスを収集していない",
+      "回答のコピー送信が無効または希望制",
+      "回答者が異なるメールアドレスを使った"
+    ],
+    "diagnosis": "フォームの回答が記録されたかと、回答控えがメールで届くかは別です。所有者側でメールアドレスを収集しているかを先に調べ、控え送信の設定を確認します。回答者だけで送信設定を変更することはできません。送信先も確認します。",
+    "caution": "控えが届かないからといって同じ正式回答を繰り返し送らないでください。テストは所有者の管理下で行い、本人確認や個人情報を含む回答は転送先のメールアドレスをよく確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/139706?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/forms-edit-response-link-unavailable/",
+      "/google/photos-shared-album-cannot-add/",
+      "/google/forms-file-upload-question-fails/"
+    ],
+    "closest_existing_url": "/google/forms-edit-response-link-unavailable/",
+    "differentiation": "既存記事は送信済み回答を再編集するリンク。本記事は回答内容のコピーをメールで受け取る設定と宛先を扱う。",
+    "fact_check": "Googleフォーム公式の回答管理案内でメールアドレス収集と回答控え送信の条件を確認した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-guest-cannot-invite-others",
+    "path": "/google/calendar-guest-cannot-invite-others/",
+    "title": "Googleカレンダーの予定に参加者を追加できないとき",
+    "topic": "招待された予定に別の参加者を招待する操作が使えない",
+    "description": "招待された予定に別の参加者を招待する操作が使えない。予定の主催者が設定した『ゲストが他のゲストを招待』する権限を確認します。",
+    "answer": "予定の主催者が設定した『ゲストが他のゲストを招待』する権限を確認します。",
+    "steps": [
+      "PC版Googleカレンダーで対象の予定を開き、誰が主催者か確認します。",
+      "自分が主催者なら編集画面の『ゲストができること』を確認します。",
+      "『他のゲストを招待』がオフなら、追加の要否を主催者に相談します。",
+      "予定の共有リンクがある場合は公開範囲を確認し、意図しない参加を防ぎます。"
+    ],
+    "causes": [
+      "主催者がゲストの再招待を許可していない",
+      "招待メールと予定の編集権限を混同している",
+      "自分が主催者ではない予定を編集しようとしている"
+    ],
+    "diagnosis": "自分に招待予定が表示されない問題ではなく、見えている予定に新たな人を加える権限の問題です。ゲスト側で権限を変えることはできません。主催者が許可するか、主催者本人が追加する方法を確認します。予定ごとの設定を見ます。",
+    "caution": "会議の参加者を本人の同意なく増やさないでください。共有リンクを使う場合は予定詳細や参加者リストが見える可能性があります。機密の予定では主催者の判断と組織の共有方針を優先します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/calendar/answer/37161?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-calendar-invite-not-appearing/",
+      "/google/google-calendar-not-syncing/",
+      "/google/google-calendar-desktop-reminders-missing/"
+    ],
+    "closest_existing_url": "/google/google-calendar-invite-not-appearing/",
+    "differentiation": "既存記事は自分が受けた招待予定の表示。本記事は既に参加できる予定へ新たなゲストを招く権限を扱う。",
+    "fact_check": "Googleカレンダー公式は主催者が『Guests can invite others』を予定ごとに設定できると案内する。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-named-range-cannot-edit-android",
+    "path": "/google/sheets-named-range-cannot-edit-android/",
+    "title": "Androidのスプレッドシートで名前付き範囲を編集できないとき",
+    "topic": "スマホで範囲名を開いても編集操作が見つからない",
+    "description": "スマホで範囲名を開いても編集操作が見つからない。Androidアプリの機能範囲を確認し、編集はPC版で行います。",
+    "answer": "Androidアプリの機能範囲を確認し、編集はPC版で行います。",
+    "steps": [
+      "Android版Googleスプレッドシートで対象ファイルを開きます。",
+      "メニューの『名前付き範囲』で既存の範囲名が見えるか確認します。",
+      "名前や参照範囲を変更する場合はPCのブラウザで同じファイルを開きます。",
+      "PC版の『データ』『名前付き範囲』から編集し、数式への影響を確認します。"
+    ],
+    "causes": [
+      "Androidアプリでは名前付き範囲の追加・編集に非対応",
+      "閲覧用画面でPC版の操作を探している",
+      "別のGoogleアカウントでファイルを開いている"
+    ],
+    "diagnosis": "Androidアプリで名前付き範囲を表示できても、作成や編集はできないとGoogleは案内しています。入力欄が見つからないのは故障とは限りません。PC版で編集できるか確認し、通常セルの編集権限がない場合は所有者へ相談します。",
+    "caution": "名前付き範囲を削除すると参照する数式に影響する可能性があります。共同編集のシートでは変更する名前と参照セルを先に記録し、別名を勝手に作って既存の数式を壊さないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/63175?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-protected-cell-cannot-edit/",
+      "/google/sheets-slicer-does-not-filter-chart/",
+      "/google/sheets-conditional-format-not-applying/"
+    ],
+    "closest_existing_url": "/google/sheets-protected-cell-cannot-edit/",
+    "differentiation": "既存記事は保護されたセルへの編集権限。本記事はAndroidアプリで名前付き範囲の編集機能自体が提供されない制限を扱う。",
+    "fact_check": "Google Sheets公式はAndroidアプリで名前付き範囲の閲覧はできるが追加・編集はできないと明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-pin-comment-option-missing",
+    "path": "/google/youtube-pin-comment-option-missing/",
+    "title": "YouTubeでコメントを固定できないとき",
+    "topic": "自分の動画のコメントを上部に固定する項目がない",
+    "description": "自分の動画のコメントを上部に固定する項目がない。チャンネルの高度な機能へのアクセスと動画のコメント状態を確認します。",
+    "answer": "チャンネルの高度な機能へのアクセスと動画のコメント状態を確認します。",
+    "steps": [
+      "自分のチャンネルの動画でコメント欄が有効か確認します。",
+      "YouTube Studioでチャンネルの機能利用資格を確認します。",
+      "高度な機能が使える状態かを確認し、反映に時間がかかる場合は待ちます。",
+      "対象コメントのメニューから『固定』を探し、別動画でも同じか調べます。"
+    ],
+    "causes": [
+      "チャンネルの高度な機能が未開放",
+      "設定反映まで時間がかかっている",
+      "自分が管理しない動画のコメントを操作している"
+    ],
+    "diagnosis": "コメント欄そのものが無効な問題と、コメント欄は使えるが固定機能だけない問題を分けます。後者ではYouTube公式が求める高度な機能の利用資格を調べます。機能をオンにしても反映まで最大24時間かかる場合があります。",
+    "caution": "固定するために他人の本人確認書類を借りたり、非公式の有料代行へチャンネルの認証情報を渡したりしないでください。コメントに外部リンクが含まれる場合は掲載内容とリンク先を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/6000964?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-video-comments-disabled/",
+      "/google/youtube-custom-thumbnail-option-missing/",
+      "/google/youtube-video-chapters-not-appearing/"
+    ],
+    "closest_existing_url": "/google/youtube-video-comments-disabled/",
+    "differentiation": "既存記事はコメント欄全体の利用可否。本記事は利用中のコメントを動画上部に固定する高度な機能の資格を扱う。",
+    "fact_check": "YouTube公式はコメント固定に高度な機能の利用資格が必要で、反映に最大24時間かかる場合があると案内する。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-offline-map-not-updating",
+    "path": "/google/maps-offline-map-not-updating/",
+    "title": "Googleマップのオフライン地図が更新されないとき",
+    "topic": "保存済みの地域の地図が古いままになる",
+    "description": "保存済みの地域の地図が古いままになる。保存済み地図の期限と自動更新の条件を確認し、必要なら手動更新します。",
+    "answer": "保存済み地図の期限と自動更新の条件を確認し、必要なら手動更新します。",
+    "steps": [
+      "Googleマップでプロフィールから『オフラインマップ』を開きます。",
+      "対象地域の地図が残っているか、期限が近いかを確認します。",
+      "Wi-Fi接続と自動更新設定を確認し、対象地図の『更新』を試します。",
+      "空き容量と更新後の日付を確認し、ダウンロード自体の失敗と区別します。"
+    ],
+    "causes": [
+      "地図の期限が近いが自動更新の条件を満たさない",
+      "Wi-Fiまたは空き容量が不足",
+      "そもそも対象地域を保存していない"
+    ],
+    "diagnosis": "新しい地域をオフライン地図として保存できない問題と、既存の地域地図が期限を迎えて更新されない問題は異なります。Googleマップは期限が近くWi-Fiにつながると自動更新を試みます。まず対象地域が保存済みか確認します。",
+    "caution": "旅行前に古い地図だけを頼りにしないでください。オフライン地図には地域や経路の制限があります。出発前に更新日時と目的地の範囲を確認し、通信が使える場所で必要な情報を控えます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/maps/answer/6291838?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/docs-linked-chart-update-missing/",
+      "/google/maps-saved-places-not-visible/"
+    ],
+    "closest_existing_url": "/google/google-maps-offline-map-not-downloading/",
+    "differentiation": "既存記事は地図を新規保存できない問題。本記事は保存済み地図の期限と更新条件を扱う。",
+    "fact_check": "Googleマップ公式は期限が15日以内でWi-Fi接続時に自動更新を試み、手動更新も可能と説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "app-privacy-report-empty",
+    "path": "/iphone/app-privacy-report-empty/",
+    "title": "iPhoneのAppプライバシーレポートに履歴が出ないとき",
+    "topic": "アプリの権限利用を確認したいのにレポートが空欄",
+    "description": "アプリの権限利用を確認したいのにレポートが空欄。レポートの有効化時点と対象期間を確認し、権限自体の設定と分けます。",
+    "answer": "レポートの有効化時点と対象期間を確認し、権限自体の設定と分けます。",
+    "steps": [
+      "設定の『プライバシーとセキュリティ』で『Appプライバシーレポート』を開きます。",
+      "レポートがオフなら内容を読んでからオンにします。",
+      "オンにしてから実際に使ったアプリについて、後でアクセス履歴が表示されるか確認します。",
+      "位置情報や写真など個別の許可は同じプライバシー設定から別途確認します。"
+    ],
+    "causes": [
+      "レポートをまだオンにしていない",
+      "有効化後に対象アプリを利用していない",
+      "権限の許可一覧と利用履歴を同じ表示だと思っている"
+    ],
+    "diagnosis": "Appプライバシーレポートは過去の権限許可を一覧するだけの画面ではなく、オンにしてからのアプリの利用状況を見る機能です。空欄なら有効化日時とその後の利用を先に確認します。特定のアプリだけ記録されない場合は、そのアプリが対象権限やネットワークを使ったかも切り分けます。",
+    "caution": "レポートを有効にしただけでアプリの権限が制限されるわけではありません。過去に何を閲覧したかを空欄から推測しないでください。権限を取り消す際は必要な機能が使えなくなる可能性を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/control-access-to-information-in-apps-iph251e92810/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/lock-screen-notifications-hidden/",
+      "/iphone/iphone-calls-on-mac-not-ringing/",
+      "/iphone/icloud-photos-sync-paused-iphone/"
+    ],
+    "closest_existing_url": "/iphone/lock-screen-notifications-hidden/",
+    "differentiation": "既存記事はロック画面通知の表示範囲。本記事はアプリが許可した情報へアクセスした履歴の収集開始と読み方を扱う。",
+    "fact_check": "AppleのiPhoneユーザガイドでAppプライバシーレポートの表示先と有効化後の記録を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "apple-pay-wrong-default-card",
+    "path": "/iphone/apple-pay-wrong-default-card/",
+    "title": "Apple Payで意図しないカードが最初に選ばれるとき",
+    "topic": "ウォレットで支払うたび別のカードが先に出る",
+    "description": "ウォレットで支払うたび別のカードが先に出る。Walletのカード順と支払前の選択操作を確認し、既定の一枚を選び直します。",
+    "answer": "Walletのカード順と支払前の選択操作を確認し、既定の一枚を選び直します。",
+    "steps": [
+      "Walletで支払いに使うカードを表示し、登録済みか確かめます。",
+      "既定にしたいクレジット・デビットカードをカードの束の一番前へドラッグします。",
+      "次回の支払画面で表示されるカード名と末尾番号を目視で確かめます。",
+      "一時的に別のカードを使う場合は認証前にカードをタップして選び直します。"
+    ],
+    "causes": [
+      "カードの並び順が期待と違う",
+      "支払時に別カードへ手動で切り替えた",
+      "交通系カードなど別の支払方法を既定カードと混同している"
+    ],
+    "diagnosis": "既定の支払カードはWalletのカードの束で前に置いたカードで決まります。先頭カードだけを直す問題と、カード自体を追加できない問題を分けます。実店舗の支払直前は画面のカード名と番号を確認し、表示だけから利用履歴を決めつけないでください。",
+    "caution": "カードを削除して再登録する前に並び順を確認します。カードの削除は交通系カードや発行元アプリの再設定に影響する場合があります。決済時には金額とカードを認証前に確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/set-up-cards-and-passes-iph9b7f53382/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/apple-pay-card-not-adding-iphone/",
+      "/iphone/verification-code-not-arriving/",
+      "/iphone/iphone-calls-on-mac-not-ringing/"
+    ],
+    "closest_existing_url": "/iphone/apple-pay-card-not-adding-iphone/",
+    "differentiation": "既存記事はカードの新規登録失敗。本記事は登録済みの複数カードから既定で提示される一枚の選択を扱う。",
+    "fact_check": "Apple公式はクレジット・デビットカードを束の先頭へドラッグすると既定の支払カードになると案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "live-photo-effects-missing",
+    "path": "/iphone/live-photo-effects-missing/",
+    "title": "iPhoneのLive Photosでループなどの効果が出ないとき",
+    "topic": "写真を開いてもループやバウンスを選べない",
+    "description": "写真を開いてもループやバウンスを選べない。撮影形式と写真アプリのLive Photo操作を区別します。",
+    "answer": "撮影形式と写真アプリのLive Photo操作を区別します。",
+    "steps": [
+      "写真アプリで対象を開き、Live Photoの表示があるか確認します。",
+      "静止画や動画なら元のLive Photoを探し、撮影時の設定を確認します。",
+      "Live Photoなら画面上部のLiveメニューを開き、ループ・バウンスなどを確認します。",
+      "共有や編集の後だけ効果が消えたなら、元のLive Photoを複製して比較します。"
+    ],
+    "causes": [
+      "対象が通常の静止画である",
+      "共有先でLive Photoとして保持されなかった",
+      "効果メニューとは別の編集画面を開いている"
+    ],
+    "diagnosis": "効果はどの写真にも付くフィルターではなくLive Photoの連続した画像を使います。まず対象データがLive Photoか確認します。撮影直後の原本では選べるのに共有されたコピーだけで選べない場合は、転送形式を調べると原因を絞れます。",
+    "caution": "原本を削除したり上書き保存したりする前にコピーを確保してください。共有先で静止画に変わった場合、元にない動きからLive Photoを復元することはできません。古い写真を加工しても撮影時の動きは増えません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/edit-live-photos-iphd8dbb3291/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/photos-duplicates-album-missing/",
+      "/iphone/photos-deleted-storage-not-reduced/",
+      "/iphone/iphone-camera-live-text-button-missing/"
+    ],
+    "closest_existing_url": "/iphone/photos-duplicates-album-missing/",
+    "differentiation": "既存記事は重複写真アルバムの表示条件。本記事は個々のLive Photoの撮影形式と動きの効果メニューを扱う。",
+    "fact_check": "Apple公式のLive Photos編集ガイドで対応する効果と写真アプリ内の操作を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "time-machine-one-file-missing",
+    "path": "/mac/time-machine-one-file-missing/",
+    "title": "Time Machineで特定のファイルだけバックアップされないとき",
+    "topic": "バックアップは成功するが一部のフォルダが履歴にない",
+    "description": "バックアップは成功するが一部のフォルダが履歴にない。除外リストと保存場所を調べ、バックアップ全体の失敗と分けます。",
+    "answer": "除外リストと保存場所を調べ、バックアップ全体の失敗と分けます。",
+    "steps": [
+      "システム設定の『一般』『Time Machine』を開きます。",
+      "『オプション』のバックアップ対象から除外する項目に該当フォルダがないか確認します。",
+      "対象ファイルの実際の保存先と外部ディスクの接続状況を確認します。",
+      "除外が原因なら必要な項目だけ除外リストから外し、次回バックアップ後に履歴を確認します。"
+    ],
+    "causes": [
+      "フォルダが除外リストに登録されている",
+      "ファイルが接続されていない外部ボリュームにある",
+      "バックアップ開始前のファイルを過去の履歴に探している"
+    ],
+    "diagnosis": "バックアップ自体が完了しているなら、特定のファイルが含まれない理由を先に調べます。Time Machineのオプションにはバックアップから除外する項目があり、保存場所の移動後に古いパスを探すと見つからないこともあります。対象ファイルの現在のパスを控えて比較します。",
+    "caution": "重要ファイルが履歴にないと分かった時点で、次回の自動バックアップを待つだけでなく別の安全な場所にコピーを確保してください。除外設定を変更しても過去の日付のバックアップに後からファイルは追加されません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/time-machine-settings-mh14037/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/time-machine-backup-failed/",
+      "/mac/mac-system-data-too-large/",
+      "/mac/mac-spotlight-files-not-found/"
+    ],
+    "closest_existing_url": "/mac/time-machine-backup-failed/",
+    "differentiation": "既存記事はバックアップ処理全体のエラー。本記事は正常終了したバックアップに特定項目が含まれない除外設定を扱う。",
+    "fact_check": "Apple公式のTime Machine設定ガイドで除外項目を管理できることを確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "apple-watch-auto-unlock-not-working",
+    "path": "/mac/apple-watch-auto-unlock-not-working/",
+    "title": "Apple WatchでMacのロックを解除できないとき",
+    "topic": "パスワードでは入れるがWatchの自動解除が働かない",
+    "description": "パスワードでは入れるがWatchの自動解除が働かない。対応条件、同じApple Account、Wi-FiとBluetoothを順番に確認します。",
+    "answer": "対応条件、同じApple Account、Wi-FiとBluetoothを順番に確認します。",
+    "steps": [
+      "Macのシステム設定でTouch IDとパスワード、またはログインパスワード設定のApple Watchによる解除を確認します。",
+      "MacとWatchが同じApple Accountで利用され、二要素認証がオンか確認します。",
+      "MacのWi-FiとBluetooth、Watchのパスコードと装着時のロック解除状態を確認します。",
+      "Macを一度パスワードでログインしてからロックし、Watchを装着した状態で再試行します。"
+    ],
+    "causes": [
+      "自動解除の設定がオフ",
+      "Wi-Fi・Bluetoothまたは二要素認証の条件が不足",
+      "Watchが手首から外されロック状態"
+    ],
+    "diagnosis": "Apple Watchによる自動解除はMacのTouch IDとは別の連携機能です。設定スイッチだけでなく対応機種、同じアカウント、二要素認証、無線状態を確認します。再起動直後などパスワードが必要な場面は通常のログインと分けて判断してください。",
+    "caution": "Macのログインパスワードを無効化して回避しないでください。Watchを紛失した場合はアカウントとデバイスの保護を優先します。企業管理Macでは設定が制限される場合があるため管理者に確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/unlock-your-mac-with-apple-watch-mchl4f800a42/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-touch-id-not-unlocking/",
+      "/mac/mac-wifi-not-connecting/",
+      "/mac/mac-camera-not-working/"
+    ],
+    "closest_existing_url": "/mac/mac-touch-id-not-unlocking/",
+    "differentiation": "既存記事はMac本体の指紋認証。本記事はWatchとMacの無線・アカウント連携による自動解除を扱う。",
+    "fact_check": "Apple公式のAuto UnlockガイドにあるWi-Fi、Bluetooth、二要素認証などの条件を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "back-tap-not-responding",
+    "path": "/iphone/back-tap-not-responding/",
+    "title": "iPhoneの背面タップが反応しないとき",
+    "topic": "背面を二回または三回たたいても割り当てた操作が動かない",
+    "description": "背面を二回または三回たたいても割り当てた操作が動かない。アクセシビリティの割当と叩く回数を確認し、簡単な操作で検出を試します。",
+    "answer": "アクセシビリティの割当と叩く回数を確認し、簡単な操作で検出を試します。",
+    "steps": [
+      "設定の『アクセシビリティ』『タッチ』『背面タップ』を開きます。",
+      "ダブルタップとトリプルタップのうち使う方に操作が割り当てられているか確かめます。",
+      "画面が点灯した状態で、背面を選んだ回数だけ明確にタップします。",
+      "別の単純な操作を一時的に割り当て、元のショートカット固有の問題か切り分けます。"
+    ],
+    "causes": [
+      "使用するタップ回数に操作が未設定",
+      "二回と三回の割当を取り違えている",
+      "割り当てたショートカット側で操作が失敗"
+    ],
+    "diagnosis": "背面タップは物理的なActionボタンではなく、アクセシビリティのタッチ操作です。反応しないときは設定した回数と割当先を見比べます。別の操作なら動く場合は検出ではなく、呼び出したショートカットやアプリの状態を調べます。",
+    "caution": "危険なショートカットや決済操作を試験用に割り当てないでください。ケースを外して試す場合は落下を防げる場所で行います。端末の故障と断定する前に設定と割当先の違いを確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/back-tap-iphaa57e7885/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/action-button-does-nothing/",
+      "/iphone/touchscreen-not-responding/",
+      "/iphone/microphone-not-working/"
+    ],
+    "closest_existing_url": "/iphone/action-button-does-nothing/",
+    "differentiation": "既存記事は側面の物理Actionボタン。本記事は背面の二回・三回タップ検出とアクセシビリティ割当を扱う。",
+    "fact_check": "Apple公式の背面タップ案内で設定経路、ダブル・トリプルタップへのアクション割当を確認した。"
+  },
+  {
+    "category": "mac",
+    "slug": "iphone-mirroring-cannot-connect",
+    "path": "/mac/iphone-mirroring-cannot-connect/",
+    "title": "MacのiPhoneミラーリングが接続できないとき",
+    "topic": "MacからiPhoneの画面を操作しようとしても開始できない",
+    "description": "MacからiPhoneの画面を操作しようとしても開始できない。OSと機種の対応、同一アカウント、近接条件を順に確認します。",
+    "answer": "OSと機種の対応、同一アカウント、近接条件を順に確認します。",
+    "steps": [
+      "MacとiPhoneがiPhoneミラーリングの対応OS・機種か公式条件で確認します。",
+      "両方で同じApple Accountにサインインし、二要素認証が有効か確認します。",
+      "Wi-FiとBluetoothをオンにして端末を近くに置き、iPhoneをロック状態にします。",
+      "MacでiPhoneミラーリングを開き、表示された認証や初期設定を完了します。"
+    ],
+    "causes": [
+      "MacまたはiPhoneが対応条件を満たさない",
+      "Apple Accountや二要素認証の条件が一致しない",
+      "iPhoneが使用中または無線接続条件を満たさない"
+    ],
+    "diagnosis": "iPhoneをMacのカメラとして使う連係カメラとは異なり、iPhoneミラーリングはMac上でiPhoneの画面とアプリを操作する機能です。対応OSと端末の組合せを最初に確認し、条件を満たす場合だけ同じアカウントや無線状態を切り分けます。",
+    "caution": "他人のMacで自分のiPhoneの画面を不用意に開かないでください。仕事用の管理端末では組織の制限があり得ます。アカウント変更や端末初期化を接続トラブルの初手にしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/control-your-iphone-from-your-mac-mchl444d53a6/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-continuity-camera-iphone-not-detected/",
+      "/mac/mac-photos-iphone-import-missing/",
+      "/mac/mac-printer-not-appearing-add/"
+    ],
+    "closest_existing_url": "/mac/mac-continuity-camera-iphone-not-detected/",
+    "differentiation": "既存記事はiPhoneをMacのカメラとして認識させる問題。本記事はiPhone画面の遠隔操作という別機能の対応条件を扱う。",
+    "fact_check": "Apple公式のiPhoneミラーリングガイドで対応条件、同一アカウント、近接した無線接続を確認した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "call-forwarding-option-missing",
+    "path": "/iphone/call-forwarding-option-missing/",
+    "title": "iPhoneで着信転送の設定が見つからないとき",
+    "topic": "電話の設定に転送項目がない、または転送先を保存できない",
+    "description": "電話の設定に転送項目がない、または転送先を保存できない。通信事業者の対応と回線、モバイル圏内を確認してから転送先を設定します。",
+    "answer": "通信事業者の対応と回線、モバイル圏内を確認してから転送先を設定します。",
+    "steps": [
+      "設定の『アプリ』『電話』『着信転送』を探します。",
+      "デュアルSIMなら設定したい回線を選びます。",
+      "通信事業者の着信転送サービスが契約回線で利用できるか確認します。",
+      "転送先を設定するときはモバイル通信の圏内で行い、短い試験着信で動作を確かめます。"
+    ],
+    "causes": [
+      "事業者や契約が端末内の転送設定に非対応",
+      "デュアルSIMの別回線を見ている",
+      "圏外で転送設定を行っている"
+    ],
+    "diagnosis": "着信転送は端末の表示だけで完結せず、通信事業者と利用中の回線に依存します。項目が出ない場合は回線のサービス対応を先に確認します。項目はあるが転送が始まらない場合は圏内で設定し、転送先番号と試験着信を確認します。",
+    "caution": "転送先の番号を誤ると他人に着信内容が伝わる可能性があります。事業者によって転送時の料金や条件が異なるため、設定前に契約内容を確認してください。知らない番号への転送を求める案内には従わないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/set-up-call-forwarding-iph7405291c4/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/wifi-calling-unavailable/",
+      "/iphone/voice-memos-transcript-unavailable/",
+      "/iphone/photos-duplicates-album-missing/"
+    ],
+    "closest_existing_url": "/iphone/wifi-calling-unavailable/",
+    "differentiation": "既存記事はWi-Fiを使った通話機能。本記事は受信した着信を別番号へ転送する通信事業者の機能を扱う。",
+    "fact_check": "Apple公式の着信転送ガイドでデュアルSIMの回線選択と設定時のモバイル圏内条件を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "smart-app-control-off-cannot-enable",
+    "path": "/windows/smart-app-control-off-cannot-enable/",
+    "title": "WindowsのSmart App Controlをオンにできないとき",
+    "topic": "Windowsセキュリティで保護を有効にしたいが操作が使えない",
+    "description": "Windowsセキュリティで保護を有効にしたいが操作が使えない。現行の設定画面と管理状態、更新状況を調べ、再有効化の可否を判断します。",
+    "answer": "現行の設定画面と管理状態、更新状況を調べ、再有効化の可否を判断します。",
+    "steps": [
+      "Windowsセキュリティの『アプリとブラウザーコントロール』『Smart App Controlの設定』を開きます。",
+      "現在の状態とWindows Updateの適用状況を確認します。",
+      "会社や学校の管理PC、開発者モード、Sモードの有無を調べます。",
+      "オンにできる場合は設定を変更し、信頼できるアプリの動作を確認します。管理PCなら管理者へ相談します。"
+    ],
+    "causes": [
+      "デバイス管理や開発者モードの条件",
+      "Windowsの更新前で再有効化の操作が表示されない",
+      "Sモードまたは診断データの設定条件"
+    ],
+    "diagnosis": "Smart App Controlは不明なアプリの実行を評価するWindowsの保護です。過去の案内には再有効化に初期化が必要とありますが、最近のWindows更新ではセキュリティアプリから再有効化できる場合があります。画面の状態と更新状況を最初に確認し、PCを初期化する前に管理要件を調べます。",
+    "caution": "保護が働かない原因を調べるために出所不明の実行ファイルを起動しないでください。初期化はデータ損失を伴うので、この問題だけを理由に安易に実行しません。会社の管理ポリシーを無断で変えないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-sandbox-feature-missing/",
+      "/windows/windows-security-not-opening/",
+      "/windows/windows-pin-not-available/"
+    ],
+    "closest_existing_url": "/windows/windows-sandbox-feature-missing/",
+    "differentiation": "既存記事はWindows Sandboxという隔離実行機能。本記事はSmart App Controlの有効化条件と新しい再有効化経路を扱う。",
+    "fact_check": "MicrosoftのFAQは管理、開発者モード、Sモード等と最近の更新による再有効化を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "recall-snapshots-not-saving",
+    "path": "/windows/recall-snapshots-not-saving/",
+    "title": "Windows Recallでスナップショットが保存されないとき",
+    "topic": "Recallを開いても最近の画面履歴が増えない",
+    "description": "Recallを開いても最近の画面履歴が増えない。対応PCと保存スイッチ、一時停止状態を確認して記録条件を切り分けます。",
+    "answer": "対応PCと保存スイッチ、一時停止状態を確認して記録条件を切り分けます。",
+    "steps": [
+      "PCがRecallに対応するCopilot+ PCか確認します。",
+      "設定の『プライバシーとセキュリティ』『Recallとスナップショット』で保存がオンか確認します。",
+      "タスクトレイのRecallアイコンで一時停止中か調べます。",
+      "Windows Helloで設定変更を承認し、保存を許可した後の画面だけで新しい履歴を確認します。"
+    ],
+    "causes": [
+      "対応するCopilot+ PCではない",
+      "保存がオフまたは一時停止中",
+      "保存開始前の画面を履歴に探している"
+    ],
+    "diagnosis": "Recallは対応PCでユーザーが保存に同意した後の画面を記録します。まず機種要件と保存状態を分けて確認します。保存が停止していた期間は後から自動補完されません。設定変更にWindows Helloの確認が必要な場合は本人の認証で進めます。",
+    "caution": "スナップショットには画面上の個人情報や仕事の内容が含まれ得ます。保存をオンにする前にプライバシー設定と除外対象を確認してください。履歴を得るために会社の管理制限や本人認証を回避しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/privacy/privacy-and-control-over-your-recall-experience",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-screenshot-file-not-found/",
+      "/windows/clipboard-history-not-showing-windows-11/",
+      "/windows/windows-hello-face-not-working/"
+    ],
+    "closest_existing_url": "/windows/windows-screenshot-file-not-found/",
+    "differentiation": "既存記事は手動で撮ったスクリーンショットの保存先。本記事は対応PCのRecallが継続記録するスナップショットの同意と停止状態を扱う。",
+    "fact_check": "Microsoft公式のRecallプライバシー案内で保存スイッチ、一時停止、Windows Hello認証を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "photos-icloud-library-not-visible",
+    "path": "/windows/photos-icloud-library-not-visible/",
+    "title": "WindowsのフォトでiCloudの写真が見えないとき",
+    "topic": "iPhoneの写真がPC版フォトのiCloud欄に現れない",
+    "description": "iPhoneの写真がPC版フォトのiCloud欄に現れない。フォトとiCloud for Windowsの連携を調べます。",
+    "answer": "フォトとiCloud for Windowsの連携を調べます。",
+    "steps": [
+      "Microsoftフォトを開き、左側にiCloudの項目があるか確認します。",
+      "iCloud for Windowsがインストールされ、正しいApple Accountにサインインしているか確認します。",
+      "iCloud for Windowsで写真の同期が有効か確認し、同期の進行を待ちます。",
+      "フォトのiCloud欄とiCloud for Windows側の写真を比べ、どちらまで届いているか分けます。"
+    ],
+    "causes": [
+      "iCloud for Windowsの写真同期がオフ",
+      "別のApple Accountでサインインしている",
+      "従来のフォトアプリを使いiCloud連携画面がない"
+    ],
+    "diagnosis": "PCのフォトに写真が見えない理由は、iPhone側のiCloud写真同期と、Windows上の連携設定のどちらにもあります。まずiCloud for Windowsで写真が見えるか調べます。見えるのにフォトだけ空ならアプリの版や連携を確認します。iPhone側も空なら端末の同期状態を別に調べます。",
+    "caution": "同期確認中にiPhoneやiCloudから原本を削除しないでください。写真をPCに一括移動する前にコピーの保存先と空き容量を確かめます。会社のPCではアカウントの追加が制限される場合があります。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/apps/photos/manage-photos-and-videos-with-microsoft-photos-app",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-screenshot-file-not-found/",
+      "/windows/phone-link-mobile-device-missing-start/",
+      "/windows/windows-hello-face-not-working/"
+    ],
+    "closest_existing_url": "/windows/windows-screenshot-file-not-found/",
+    "differentiation": "既存記事はWindowsで撮影したスクリーンショットの保存場所。本記事はiCloud for WindowsとMicrosoftフォトのクラウド写真連携を扱う。",
+    "fact_check": "Microsoft公式フォト案内でiCloud連携とフォト内の写真管理機能を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "controlled-folder-access-blocks-save",
+    "path": "/windows/controlled-folder-access-blocks-save/",
+    "title": "Windowsで保護フォルダーにファイルを保存できないとき",
+    "topic": "特定のアプリだけドキュメントなどへの書き込みが拒否される",
+    "description": "特定のアプリだけドキュメントなどへの書き込みが拒否される。ランサムウェア対策のブロック履歴とアプリの信頼性を調べます。",
+    "answer": "ランサムウェア対策のブロック履歴とアプリの信頼性を調べます。",
+    "steps": [
+      "Windowsセキュリティの『ウイルスと脅威の防止』からランサムウェア防止を開きます。",
+      "『コントロールされたフォルダーアクセス』の状態と保護の履歴を確認します。",
+      "拒否されたアプリの発行元と実行ファイルを確かめ、安全だと確認できる場合だけ許可アプリに追加します。",
+      "同じファイルを保存し直し、失敗が続く場合は権限やディスク空き容量も調べます。"
+    ],
+    "causes": [
+      "保護フォルダーアクセスが未承認アプリを遮断",
+      "保存先の通常の権限が不足",
+      "ディスクやクラウド同期先に別の保存障害"
+    ],
+    "diagnosis": "保存失敗が保護されたフォルダーだけで起きるなら、Windowsセキュリティのブロック履歴を見ます。履歴に対象アプリがあれば保護機能が原因と絞れます。履歴がなければフォルダー権限や容量など別原因を調べ、対策全体を無効化しないで済む方法を選びます。",
+    "caution": "不明なアプリを許可リストに追加すると保護が弱まります。発行元と入手元を確認できない場合は許可しないでください。ランサムウェア対策を一括でオフにする案内や、管理者権限の無差別付与は避けます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-network-shared-folder-inaccessible/",
+      "/windows/automatic-file-download-app-blocked/",
+      "/windows/default-app-filetype-not-changing/"
+    ],
+    "closest_existing_url": "/windows/windows-network-shared-folder-inaccessible/",
+    "differentiation": "既存記事はネットワーク共有先へ接続できない問題。本記事はローカル保護フォルダーへのアプリの書き込みをセキュリティ機能が遮断する問題を扱う。",
+    "fact_check": "Microsoft公式は保護フォルダーアクセスが信頼されないアプリの変更を遮断し、個別許可を管理できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "nearby-sharing-received-file-missing",
+    "path": "/windows/nearby-sharing-received-file-missing/",
+    "title": "Windowsの近距離共有で受信したファイルが見つからないとき",
+    "topic": "共有は完了したがPC上の保存場所が分からない",
+    "description": "共有は完了したがPC上の保存場所が分からない。受信ファイルの保存先設定を確認し、受信時刻と名前でフォルダーを探します。",
+    "answer": "受信ファイルの保存先設定を確認し、受信時刻と名前でフォルダーを探します。",
+    "steps": [
+      "設定の『システム』『近距離共有』を開きます。",
+      "『受信したファイルの保存先』のフォルダーを確認します。",
+      "そのフォルダーをエクスプローラーで開き、受信時刻とファイル名で探します。",
+      "必要なら『変更』で今後の保存先を選び、少量のテストファイルで保存場所を確認します。"
+    ],
+    "causes": [
+      "保存先を既定のダウンロードから変更している",
+      "ファイル名や受信時刻の見当違い",
+      "共有リンクと実ファイルの受信を混同している"
+    ],
+    "diagnosis": "相手端末が見つからない場合と、転送完了後のファイルの保存先が分からない場合は異なります。転送が完了しているならBluetoothの再設定より保存先を先に確認します。設定で『受信したファイルの保存先』を読み、実際のフォルダーと照合します。",
+    "caution": "ファイルを探すために近距離共有の公開範囲を『近くのすべてのユーザー』へ広げる必要はありません。機密ファイルのテスト転送は避け、受信先のPCが本人のものか確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/share-things-with-nearby-devices-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/nearby-sharing-device-not-found-windows/",
+      "/windows/windows-screenshot-file-not-found/",
+      "/windows/windows-sandbox-feature-missing/"
+    ],
+    "closest_existing_url": "/windows/nearby-sharing-device-not-found-windows/",
+    "differentiation": "既存記事は転送前に相手のPCを検出できない症状。本記事は受信成功後にローカル保存先を探す問題を扱う。",
+    "fact_check": "Microsoft公式の近距離共有案内で受信ファイルの保存先と変更手順を確認した。"
+  },
+  {
+    "category": "windows",
+    "slug": "dynamic-refresh-rate-toggle-missing",
+    "path": "/windows/dynamic-refresh-rate-toggle-missing/",
+    "title": "Windowsで動的リフレッシュレートを選べないとき",
+    "topic": "画面設定に動的リフレッシュレートのスイッチがない",
+    "description": "画面設定に動的リフレッシュレートのスイッチがない。表示装置の対応と現在のディスプレイ選択を調べ、固定の更新頻度と分けます。",
+    "answer": "表示装置の対応と現在のディスプレイ選択を調べ、固定の更新頻度と分けます。",
+    "steps": [
+      "設定の『システム』『ディスプレイ』『ディスプレイの詳細設定』を開きます。",
+      "外部モニターがある場合は対象の画面を正しく選びます。",
+      "動的リフレッシュレートのスイッチの有無を確認します。",
+      "見つからない場合はPCと画面の対応仕様、Windowsと表示ドライバーの更新状況を確認します。"
+    ],
+    "causes": [
+      "画面またはハードウェアが動的リフレッシュレートに非対応",
+      "別のディスプレイの設定を見ている",
+      "通常の固定リフレッシュレート選択と混同している"
+    ],
+    "diagnosis": "固定の60Hzや120Hzを選ぶ項目があっても、動的リフレッシュレートに対応するとは限りません。Microsoftは対応ハードウェアでのみ機能をオンにできると説明します。画面を選び直してもスイッチがなければ仕様を確認し、別の表示設定の不具合と切り分けます。",
+    "caution": "対応していない画面で非公式のドライバーやツールを入れて機能を強制しないでください。表示が不安定になる可能性があります。更新前にはPCメーカーの対応情報を確認し、仕事用端末では管理者の方針に従います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/change-the-refresh-rate-on-your-monitor-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-hdr-toggle-unavailable/",
+      "/windows/night-light-toggle-unavailable/",
+      "/windows/recovery-drive-usb-not-selected/"
+    ],
+    "closest_existing_url": "/windows/windows-hdr-toggle-unavailable/",
+    "differentiation": "既存記事はHDRの有効化条件。本記事は画面の更新頻度を自動で変えるDRRのハードウェア条件を扱う。",
+    "fact_check": "Microsoft公式の更新頻度ガイドで動的リフレッシュレートの設定先と対応ハードウェアのみ有効にできる条件を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "circle-to-search-unavailable",
+    "path": "/android/circle-to-search-unavailable/",
+    "title": "Pixelで『かこって検索』が使えないとき",
+    "topic": "画面を長押ししても画像や文字を囲む検索が始まらない",
+    "description": "画面を長押ししても画像や文字を囲む検索が始まらない。端末の対応、機能設定、画面検索の権限を確認し、起動操作を試します。",
+    "answer": "端末の対応、機能設定、画面検索の権限を確認し、起動操作を試します。",
+    "steps": [
+      "Pixelが『かこって検索』の対応機種かGoogleの案内で確認します。",
+      "設定で『かこって検索』を検索し、機能がオンか確かめます。",
+      "ジェスチャーや三つボタンのナビゲーションで、正しい起動操作を試します。",
+      "『画面検索を利用できません』と出る場合はGoogleアプリと画面検索の権限設定を確認します。"
+    ],
+    "causes": [
+      "非対応機種や利用条件",
+      "機能がオフまたは起動操作の違い",
+      "画面検索に必要な権限不足"
+    ],
+    "diagnosis": "ナビゲーション方式を切り替える問題ではなく、表示中の画像や文字を選んで検索する機能の問題です。Googleのヘルプは対応端末と権限を条件に挙げています。長押しで何も起きない場合と『画面検索を利用できません』と出る場合を分け、機能設定と権限を確認します。",
+    "caution": "画面に銀行情報や個人情報がある状態で検索しないでください。非対応端末で見知らぬアプリに画面閲覧権限を与えて代用する前に、その提供元と情報の扱いを確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/14508957?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-navigation-mode-option-missing/",
+      "/android/pixel-vpn-by-google-unavailable/",
+      "/android/pixel-now-playing-not-identifying/"
+    ],
+    "closest_existing_url": "/android/android-navigation-mode-option-missing/",
+    "differentiation": "既存記事はジェスチャーと三つボタンのナビゲーション切替。本記事は画面内の対象を囲んで検索する機能の対応と権限を扱う。",
+    "fact_check": "Google Pixel公式のCircle to Searchガイドで機能設定と画面検索エラー時の権限確認を確認した。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-screenshots-search-bar-missing",
+    "path": "/android/pixel-screenshots-search-bar-missing/",
+    "title": "Pixel Screenshotsで検索バーが出ないとき",
+    "topic": "スクリーンショットは見えるがアプリ内検索が使えない",
+    "description": "スクリーンショットは見えるがアプリ内検索が使えない。AI検索の設定とモデルのダウンロード状態を確認して、画像一覧と分けます。",
+    "answer": "AI検索の設定とモデルのダウンロード状態を確認して、画像一覧と分けます。",
+    "steps": [
+      "Pixel Screenshotsアプリで画像一覧が表示されるか確認します。",
+      "アプリの設定で『スクリーンショットをAIで検索』がオンか確認します。",
+      "モデルのダウンロード中という表示があればWi-Fiと空き容量を確認して完了を待ちます。",
+      "完了後に検索バーが現れるか確かめ、通常の画像一覧との違いを記録します。"
+    ],
+    "causes": [
+      "AI検索機能がオフ",
+      "必要なモデルがダウンロード中",
+      "アプリ内の画像一覧とAI検索機能を混同している"
+    ],
+    "diagnosis": "画像の保存先が消えた問題とは異なり、一覧は残って検索バーだけがない症状です。GoogleはAI機能が無効かモデルの取得中なら検索バーが見えないことがあると説明します。画像が表示されるかを先に確認し、検索設定と取得状態を調べます。",
+    "caution": "検索を直す目的でスクリーンショットを削除したりアプリデータを消したりしないでください。画像には個人情報が含まれ得ます。モデル取得のために不明な外部アプリを入れる必要はありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/15312581?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/pixel-screenshots-not-restored-new-phone/",
+      "/android/android-screenshot-not-found/",
+      "/android/pixel-at-a-glance-weather-missing/"
+    ],
+    "closest_existing_url": "/android/pixel-screenshots-not-restored-new-phone/",
+    "differentiation": "既存記事は機種変更後に画像やコレクション自体が戻らない問題。本記事は画像がある状態でAI検索バーだけが表示されない条件を扱う。",
+    "fact_check": "Google公式Pixel Screenshots案内はAI機能がオフ、またはモデル取得中なら検索バーが見えないと明記する。"
+  },
+  {
+    "category": "android",
+    "slug": "wallet-transit-pass-missing-new-phone",
+    "path": "/android/wallet-transit-pass-missing-new-phone/",
+    "title": "機種変更後にGoogleウォレットの交通カードが見えないとき",
+    "topic": "新しいスマホで交通カードや残高が利用できない",
+    "description": "新しいスマホで交通カードや残高が利用できない。カードの種類ごとの移行方法と旧端末の状態を確認し、発行元の条件を調べます。",
+    "answer": "カードの種類ごとの移行方法と旧端末の状態を確認し、発行元の条件を調べます。",
+    "steps": [
+      "旧端末のGoogleウォレットで交通カードが残っているか確認します。",
+      "対象カードのメニューに『別のデバイスにカードを移動』があるか確認します。",
+      "移動できる場合は旧端末で手続きを行い、新端末のウォレットでカードを有効化します。",
+      "移動項目がないカードは交通事業者の案内やウォレットの復元方法を確認します。"
+    ],
+    "causes": [
+      "交通カードが自動で新端末へ複製されると思っている",
+      "カードや地域ごとに移行方法が異なる",
+      "旧端末側でカードの移動が未完了"
+    ],
+    "diagnosis": "タッチ決済ができない症状とは異なり、交通カードの情報が新端末にない状態を扱います。Googleは一部の交通カードを旧端末から直接移動できると案内します。全カードを同じ方法で移せるわけではないため、カードのメニューと発行元の条件を確認します。",
+    "caution": "残高が見えない段階で旧端末を初期化しないでください。カードによって移行や払い戻しの条件が異なります。二重発行や残高消失を避けるため、発行元の手順を確認するまでカードを削除しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/wallet/answer/12059518?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/wallet-tap-payment-not-working/",
+      "/android/pixel-vpn-by-google-unavailable/",
+      "/android/android-google-contacts-not-syncing/"
+    ],
+    "closest_existing_url": "/android/wallet-tap-payment-not-working/",
+    "differentiation": "既存記事は登録済みウォレットカードの店頭タッチ決済失敗。本記事は機種変更時の交通カード移行と残高の引継ぎを扱う。",
+    "fact_check": "Googleウォレット公式は対応交通カードで旧端末の『Move card to another device』と新端末の有効化を案内する。"
+  },
+  {
+    "category": "android",
+    "slug": "restricted-setting-accessibility-disabled",
+    "path": "/android/restricted-setting-accessibility-disabled/",
+    "title": "Androidでアクセシビリティの制限付き設定を変更できないとき",
+    "topic": "アプリの設定をオンにしたいが制限付きと表示される",
+    "description": "アプリの設定をオンにしたいが制限付きと表示される。アプリの入手元と権限リスクを確認し、信頼できる場合だけ操作します。",
+    "answer": "アプリの入手元と権限リスクを確認し、信頼できる場合だけ操作します。",
+    "steps": [
+      "対象アプリがどこから入手されたか、開発元を確認します。",
+      "設定の『アプリ』から対象アプリの情報を開きます。",
+      "制限付き設定を許可する必要性と、アプリが要求するアクセシビリティ権限を確認します。",
+      "提供元を信頼できる場合に限り、アプリ情報のメニューから制限付き設定の許可を検討します。"
+    ],
+    "causes": [
+      "Androidが危険な権限の変更を制限している",
+      "アプリの入手元や開発元を確認できない",
+      "通常のカメラ権限と特別なアクセシビリティ権限を混同している"
+    ],
+    "diagnosis": "Androidの制限付き設定は、特に外部から入れたアプリへ機密性の高い権限を与える際の保護です。操作できないこと自体が故障とは限りません。アプリが要求する権限の目的と入手元を確認し、安全性を説明できない場合は許可せず代替手段を探します。",
+    "caution": "アクセシビリティ権限は画面の内容や操作に関わるため、見知らぬアプリには与えないでください。Googleも信頼できる開発元以外への制限解除を勧めていません。本人確認のためと称する不審な指示に従わないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/12623953?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-camera-permission-denied-app/",
+      "/android/app-language-not-changing/",
+      "/android/android-emergency-calls-only/"
+    ],
+    "closest_existing_url": "/android/android-camera-permission-denied-app/",
+    "differentiation": "既存記事は一般のカメラ権限。本記事はAndroidが特別な設定を保護する仕組みとアクセシビリティ権限の判断を扱う。",
+    "fact_check": "Android公式の制限付き設定案内で許可操作と、信頼できる開発元以外には勧めない注意を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-save-as-dialog-not-shown",
+    "path": "/browser/chrome-save-as-dialog-not-shown/",
+    "title": "Chromeでダウンロード時に保存先を聞かれないとき",
+    "topic": "ファイルは保存されるが『名前を付けて保存』の画面が出ない",
+    "description": "ファイルは保存されるが『名前を付けて保存』の画面が出ない。ダウンロード設定で毎回保存先を確認する項目を調べ、テストファイルで試します。",
+    "answer": "ダウンロード設定で毎回保存先を確認する項目を調べ、テストファイルで試します。",
+    "steps": [
+      "Chromeの設定を開き『ダウンロード』へ進みます。",
+      "現在の保存先フォルダーと『ダウンロード前に各ファイルの保存場所を確認する』の状態を確認します。",
+      "毎回選びたい場合はその設定をオンにします。",
+      "小さな安全なファイルでダウンロードし、保存先選択が表示されるか確かめます。"
+    ],
+    "causes": [
+      "保存先確認の設定がオフ",
+      "既定のダウンロードフォルダーへ自動保存されている",
+      "ファイルを保存できない不具合と保存先選択を混同している"
+    ],
+    "diagnosis": "Chromeのダウンロードが成功しているなら通信障害より保存先の設定を確認します。Chromeには既定の場所へ保存する方法と、毎回場所を尋ねる方法があります。設定を変えた後に安全なテストファイルで選択画面を確認し、既存のダウンロード先も把握します。",
+    "caution": "不審なダウンロードを検証に使わないでください。保存先を変えても以前のファイルは自動で移動しません。共有PCでは個人情報を含むファイルが意図しないフォルダーに残っていないか確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/95759?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-file-download-failed/",
+      "/browser/chrome-pdf-not-opening/",
+      "/browser/chrome-multiple-automatic-downloads-blocked/"
+    ],
+    "closest_existing_url": "/browser/chrome-file-download-failed/",
+    "differentiation": "既存記事はファイルがダウンロードできない症状。本記事は成功したファイルの保存先を毎回選べるかという設定を扱う。",
+    "fact_check": "Chrome公式のダウンロード案内で保存場所の設定と毎回保存先を尋ねる選択肢を確認した。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-containers-icon-missing",
+    "path": "/browser/firefox-containers-icon-missing/",
+    "title": "Firefoxでコンテナーのアイコンが見つからないとき",
+    "topic": "アカウント別タブを使いたいがツールバーに操作ボタンがない",
+    "description": "アカウント別タブを使いたいがツールバーに操作ボタンがない。拡張機能の有無と拡張機能メニュー内の表示を確認し、ボタンの場所を調べます。",
+    "answer": "拡張機能の有無と拡張機能メニュー内の表示を確認し、ボタンの場所を調べます。",
+    "steps": [
+      "Firefoxのアドオン管理でMulti-Account Containersが有効か確認します。",
+      "ツールバーにアイコンがなければ拡張機能ボタンを開きます。",
+      "拡張機能メニュー内のContainersアイコンを探し、そこからコンテナーを開きます。",
+      "コンテナーが開けない場合はアドオンの有効状態とFirefoxの画面を見比べます。"
+    ],
+    "causes": [
+      "アイコンが拡張機能メニューの中に入っている",
+      "Multi-Account Containersが無効",
+      "通常のプライベートブラウジングとコンテナータブを混同している"
+    ],
+    "diagnosis": "コンテナーはサイトごとのログイン状態を分ける機能で、トラッキング防止の設定とは異なります。Mozillaの案内ではツールバーにアイコンがない場合、拡張機能ボタンから開けます。まずアドオンが有効かを確かめ、次にボタンの位置を調べます。",
+    "caution": "仕事用と個人用のアカウントを分けている場合、コンテナーの削除やサイト割当変更は意図しないログアウトにつながります。表示確認のためだけに保存済みサイトデータを消さないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/containers",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/firefox-tracking-protection-breaks-site/",
+      "/browser/chrome-reading-list-side-panel-missing/",
+      "/browser/edge-home-button-not-visible/"
+    ],
+    "closest_existing_url": "/browser/firefox-tracking-protection-breaks-site/",
+    "differentiation": "既存記事は追跡防止がサイト表示を壊す問題。本記事はMulti-Account Containersの操作アイコンの位置とアドオン状態を扱う。",
+    "fact_check": "Mozilla公式のContainers案内でアイコンがツールバーになければ拡張機能ボタン内を見る手順を確認した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-keep-memo-chat-missing",
+    "path": "/sns/line-keep-memo-chat-missing/",
+    "title": "LINEでKeepメモのトークが見つからないとき",
+    "topic": "自分だけのメモ用トークが一覧に出ない",
+    "description": "自分だけのメモ用トークが一覧に出ない。LINEの版とKeepメモの対応状況を確認し、公式ストアから更新します。",
+    "answer": "LINEの版とKeepメモの対応状況を確認し、公式ストアから更新します。",
+    "steps": [
+      "LINEアプリのトーク一覧でKeepメモを検索します。",
+      "使っているLINEの版を確認し、公式ストアから最新版へ更新します。",
+      "更新後にトーク一覧を再度探します。",
+      "サブ端末で利用している場合はその端末で対応しているかLINE公式の案内を確認します。"
+    ],
+    "causes": [
+      "古いLINEアプリを利用",
+      "トーク一覧で別名の通常トークを探している",
+      "LINE for Chromeなど対応外のサブ端末を利用"
+    ],
+    "diagnosis": "LINEはKeepメモのトークが見えない場合にアプリの更新を案内しています。Keepメモは自分専用で、通常のトークと違って削除や複製ができません。まず更新状況と利用端末を確認し、古い添付ファイルの閲覧問題とは分けて考えます。",
+    "caution": "Keepメモが見えないからといってLINEのアカウントを削除したり、トーク履歴を無計画に消したりしないでください。機種変更を伴う操作をする前にバックアップの状態を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20017696",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-keep-memo-attachments-unavailable/",
+      "/sns/line-messages-not-sending/",
+      "/sns/zoom-recording-not-found/"
+    ],
+    "closest_existing_url": "/sns/line-keep-memo-attachments-unavailable/",
+    "differentiation": "既存記事はKeepメモ内に保存した添付が開けない問題。本記事はKeepメモのトーク自体の表示とアプリ版・対応端末を扱う。",
+    "fact_check": "LINE公式ヘルプはKeepメモが見えない場合の更新、削除不可、Chromeサブ端末の非対応を説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-onboarding-channel-hidden",
+    "path": "/sns/discord-onboarding-channel-hidden/",
+    "title": "Discordで参加したサーバーのチャンネルが一覧にないとき",
+    "topic": "閲覧できるはずのチャンネルがサイドバーに表示されない",
+    "description": "閲覧できるはずのチャンネルがサイドバーに表示されない。コミュニティのオンボーディングで選んだチャンネル一覧を確認します。",
+    "answer": "コミュニティのオンボーディングで選んだチャンネル一覧を確認します。",
+    "steps": [
+      "対象サーバーの『チャンネルとロール』を開きます。",
+      "『チャンネルを探す』で目的のチャンネルがあるか調べます。",
+      "閲覧できるチャンネルなら一覧へ追加します。",
+      "見つからない、または権限エラーが出る場合はサーバー管理者にロールと公開範囲を確認します。"
+    ],
+    "causes": [
+      "オンボーディングでチャンネルを一覧に追加していない",
+      "チャンネルとロールの表示を見落としている",
+      "実際にはロールで閲覧が制限されている"
+    ],
+    "diagnosis": "Discordのコミュニティサーバーでは、存在するチャンネルが全員の一覧へ自動表示されるとは限りません。公式は『チャンネルとロール』の『チャンネルを探す』から追加できると案内します。そこに表示される場合は一覧設定、表示されない場合は権限を分けて調べます。",
+    "caution": "閲覧権限のないチャンネルを非公式ツールで表示しようとしないでください。チャンネルを追加できても、投稿権限があるとは限りません。機密チャンネルの内容は管理者の公開方針を守ります。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/11074987197975-Community-Onboarding-FAQ",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-channel-message-permission-denied/",
+      "/sns/discord-dm-cannot-send/",
+      "/sns/discord-soundboard-button-disabled/"
+    ],
+    "closest_existing_url": "/sns/discord-channel-message-permission-denied/",
+    "differentiation": "既存記事は見えているチャンネルで投稿できない権限問題。本記事は閲覧可能なチャンネルをオンボーディング後の一覧に追加する方法を扱う。",
+    "fact_check": "Discord公式のCommunity Onboarding FAQでBrowse Channelsから見つけて一覧へ追加する手順を確認した。"
+  }
+]
