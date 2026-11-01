@@ -1,5 +1,155 @@
 [
   {
+    "title": "Googleドライブでフォルダーが灰色になって開けないとき",
+    "description": "共有ドライブなどで一部のフォルダーだけ灰色表示される。制限付きアクセスの対象かを確認します。 同じ共有ドライブのほかのフォルダーを開けるか比較します。",
+    "url": "/google/drive-limited-access-folder-gray/"
+  },
+  {
+    "title": "Google Chatでフォローしたスレッドの更新印が出ないとき",
+    "description": "スペースのスレッドをフォローしたのに青い更新印が見えない。スペースのミュートとスレッドのフォロー状態を分けます。 ChatまたはGmailのChatで対象スペースを開き、スレッドをフォロー中か確認します。",
+    "url": "/google/chat-followed-thread-blue-dot-missing/"
+  },
+  {
+    "title": "Google Tasksでサブタスク付きタスクを繰り返しにできないとき",
+    "description": "日付を付けても繰り返しの選択が使えない。サブタスクと繰り返しの併用制限を確認します。 Google Tasksで対象タスクを開き、サブタスクが含まれているか確認します。",
+    "url": "/google/tasks-repeat-unavailable-with-subtasks/"
+  },
+  {
+    "title": "Googleドキュメントの公開Webページに編集が反映されないとき",
+    "description": "元の文書は更新したのに公開URLでは古い内容のまま。Web公開の自動再公開設定を確認します。 元のGoogleドキュメントに編集内容が保存されているか確認します。",
+    "url": "/google/docs-published-page-not-refreshing/"
+  },
+  {
+    "title": "Macのディスプレイ追加にiPadが出ずSidecarを使えないとき",
+    "description": "iPadをMacの二台目の画面として選べない。Sidecarの機種条件と接続条件を確認します。 Macの「システム設定」→「ディスプレイ」で「ディスプレイを追加」を開きます。",
+    "url": "/mac/sidecar-ipad-not-offered-display/"
+  },
+  {
+    "title": "MacのポインタがiPadへ移動しないとき",
+    "description": "iPadにMacのキーボードとマウスを使いたいが画面の端で止まる。ユニバーサルコントロールの接続と画面配置を確認します。 Macのディスプレイ設定の詳細で、近くのMacやiPadへポインタとキーボードを移す設定を確認します。",
+    "url": "/mac/universal-control-pointer-not-crossing-ipad/"
+  },
+  {
+    "title": "iPhoneのジャーナルに記録の提案が出ないとき",
+    "description": "ジャーナルは書けるのに写真や行動に基づく候補が出ない。提案カテゴリとアプリ内の表示設定を確認します。 設定の「プライバシーとセキュリティ」→「ジャーナルの提案」を開きます。",
+    "url": "/iphone/journal-suggestions-not-showing/"
+  },
+  {
+    "title": "iCloudプライベートリレーが特定のWi-Fiで使えないとき",
+    "description": "自宅では動くのに職場や公共Wi-Fiで互換性の警告が出る。ネットワーク固有の制限と他の接続を比べます。 警告が出るWi-Fiとモバイル通信で、同じサイトの接続を比較します。",
+    "url": "/iphone/private-relay-network-incompatible/"
+  },
+  {
+    "title": "AirPodsのパーソナライズした空間オーディオを設定できないとき",
+    "description": "空間オーディオは見えるが耳や頭の個人プロファイル作成へ進めない。対応イヤホンとTrueDepthカメラ付きiPhoneの条件を確認します。",
+    "url": "/iphone/airpods-personalized-spatial-audio-setup-missing/"
+  },
+  {
+    "title": "iPhoneのメッセージで投票が見えないとき",
+    "description": "会話の参加者はメッセージを読めるのに投票を開始・回答できない。iMessageと参加者のOS条件を確認します。 対象の会話がiMessageか、SMSやRCSかを確認します。",
+    "url": "/iphone/imessage-poll-not-visible/"
+  },
+  {
+    "title": "Windowsの音声入力で現在の言語は使えないと表示されたとき",
+    "description": "マイクは動くのに音声入力だけ言語エラーで開始できない。入力言語と音声入力の対応言語を確認します。 Win+Hで音声入力を開き、表示されるエラー文言を記録します。",
+    "url": "/windows/voice-typing-current-language-unavailable/"
+  },
+  {
+    "title": "Windowsのパスキー一覧に保存したはずの鍵がないとき",
+    "description": "設定のパスキー一覧にログイン用の鍵が見つからない。端末保存と同期型パスキープロバイダーを分けます。 Windowsの「設定」→「アカウント」→「パスキー」を開き、端末保存の鍵を確認します。",
+    "url": "/windows/windows-passkey-list-missing-synced-key/"
+  },
+  {
+    "title": "Smart App Controlが特定アプリをブロックしたとき",
+    "description": "Windowsで一つのアプリが信頼されていないと表示され起動しない。個別の許可例外がない仕様を踏まえて提供元を確認します。 ブロック画面のアプリ名、入手元、表示された理由を記録します。",
+    "url": "/windows/smart-app-control-one-app-blocked/"
+  },
+  {
+    "title": "Windowsで既定のプリンターが勝手に切り替わるとき",
+    "description": "前に使ったプリンターへ既定が変わり毎回選び直す。Windowsが最後に使ったプリンターを既定にする設定を確認します。",
+    "url": "/windows/default-printer-keeps-switching/"
+  },
+  {
+    "title": "クイックアシストで画面は見えるが操作できないとき",
+    "description": "接続後に支援者が相手のPCを操作できない。閲覧と完全操作の許可が別であることを確認します。 クイックアシストが接続済みで相手の画面が見えているか確認します。",
+    "url": "/windows/quick-assist-view-only-no-control/"
+  },
+  {
+    "title": "Androidで特定の会話だけバブル表示されないとき",
+    "description": "通知は届くが会話の小窓が画面上に浮かばない。アプリ全体と会話ごとのバブル許可を確認します。 設定の通知またはバブル設定で、アプリがバブルを表示できるか確認します。",
+    "url": "/android/android-chat-bubble-not-appearing/"
+  },
+  {
+    "title": "Googleメッセージで予約送信の操作が見つからないとき",
+    "description": "文章は書けるのに送信日時を指定する画面が出ない。送信ボタンの長押しとAndroidの対応条件を確認します。",
+    "url": "/android/google-messages-scheduled-send-option-missing/"
+  },
+  {
+    "title": "Androidの乗り物酔い軽減の表示が見つからないとき",
+    "description": "車の同乗中に使うモーションアシストの設定がない。Android版とGoogle Play開発者サービスの条件を確認します。",
+    "url": "/android/android-motion-assist-option-missing/"
+  },
+  {
+    "title": "Pixelの電話で「代わりに待ってて」が出ないとき",
+    "description": "窓口への発信中に保留待機を任せるボタンが見つからない。発信先の保留状態、Pixel機種と言語・地域条件を確認します。",
+    "url": "/android/pixel-hold-for-me-not-offered/"
+  },
+  {
+    "title": "FirefoxでPDFに書いた注釈が保存したファイルにないとき",
+    "description": "ブラウザー上では線やコメントが見えるが後で開くと消えている。注釈付きのコピーをダウンロードしたか確認します。 FirefoxのPDFビューアーで対象PDFを開き、注釈が画面上に残っているか確認します。",
+    "url": "/browser/firefox-pdf-annotations-not-in-saved-file/"
+  },
+  {
+    "title": "Firefoxの安全なDNSが職場ネットワークでオフになるとき",
+    "description": "家庭では使えるDNS over HTTPSが管理ネットワークで無効になる。組織のDNSポリシーとFirefoxの保護レベルを確認します。",
+    "url": "/browser/firefox-secure-dns-off-managed-network/"
+  },
+  {
+    "title": "Edgeで「Internet Explorerモードで再読み込み」が見つからないとき",
+    "description": "旧システムのWebサイトを開く必要があるがメニューにIEモードがない。Edge版と個人・組織管理端末の設定を分けます。 Edgeのバージョンと端末が組織管理か確認します。",
+    "url": "/browser/edge-ie-mode-reload-missing/"
+  },
+  {
+    "title": "Firefoxで特定サイトの動画だけ自動再生しないとき",
+    "description": "動画は手動再生できるがページを開いた直後には動かない。サイト別の自動再生権限と全体設定を確認します。 Firefoxの設定で自動再生の全体設定を確認します。",
+    "url": "/browser/firefox-site-autoplay-exception-not-working/"
+  },
+  {
+    "title": "Teamsの共有チャネルに社外の人を追加できないとき",
+    "description": "共有チャネルの所有者なのに相手のメールが候補に出ない。共有チャネルの種類と組織間の接続設定を確認します。 対象が標準・プライベートではなく共有チャネルか確認します。",
+    "url": "/sns/teams-shared-channel-external-person-missing/"
+  },
+  {
+    "title": "Teams会議の文字起こしボタンに鍵が付き開始できないとき",
+    "description": "会議に参加中だが文字起こし開始が灰色になっている。鍵アイコンの説明から役割と組織ポリシーを特定します。 会議の文字起こし開始ボタンにカーソルを合わせ、鍵の説明文を読みます。",
+    "url": "/sns/teams-transcription-button-locked/"
+  },
+  {
+    "title": "Discordでサーバーごとのアバターを変更できないとき",
+    "description": "通常のプロフィール画像は変えられるがサーバー別の画像設定がない。サーバー別プロフィールの利用条件と編集画面を確認します。",
+    "url": "/sns/discord-per-server-avatar-option-missing/"
+  },
+  {
+    "title": "Zoom会議で言語通訳の設定が見つからないとき",
+    "description": "主催する会議で通訳者と別音声チャンネルを指定できない。Webポータルの通訳設定と管理者の固定を確認します。 ZoomのWebポータルで「設定」→「ミーティング」を開きます。",
+    "url": "/sns/zoom-language-interpretation-unavailable/"
+  },
+  {
+    "title": "Googleデータエクスポートに直近の変更が入っていないとき",
+    "description": "Takeoutの書き出しは完了したのに、直前に変更した写真やDriveの共有設定が見当たらない症状。エクスポートを依頼した時刻と、対象データを変更した時刻を比べます。",
+    "url": "/google/takeout-recent-changes-not-in-archive/"
+  },
+  {
+    "title": "YouTubeのアカウント切り替えにブランドチャンネルが出ないとき",
+    "description": "以前使っていたブランドアカウントのチャンネルがYouTubeの切り替え一覧に表示されない症状。ログイン中のGoogleアカウントとブランドアカウントの管理権限を照合します。",
+    "url": "/google/youtube-brand-channel-missing-switcher/"
+  },
+  {
+    "title": "Outlookで送信済みメールの取り消しが見つからないとき",
+    "description": "送信後のOutlookメールを回収したいが、取り消しの操作が表示されない症状。同じ組織のMicrosoft 365職場・学校アカウントかを確認します。",
+    "url": "/windows/outlook-message-recall-option-missing/"
+  },
+  {
     "title": "Gmailでメールに絵文字リアクションを付けられないとき",
     "description": "返信欄にリアクション操作が出ない、または選べない。アカウントとメールの宛先条件を確認し、通常の返信機能とは分けます。",
     "url": "/google/gmail-emoji-reaction-unavailable/"
