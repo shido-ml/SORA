@@ -140,6 +140,16 @@
     "url": "/sns/line-group-album-new-album-fails/"
   },
   {
+    "title": "Google Keepのリマインダー通知が来ないとき",
+    "description": "Keepのメモに時刻を設定したのに通知だけが届かない症状。同じ予定がGoogle ToDoリストやカレンダーに表示されるかを先に確認し、通知を担当するアプリと権限を調べます。",
+    "url": "/google/keep-reminder-notification-missing/"
+  },
+  {
+    "title": "iPhoneでiCloudプライベートリレー利用中に特定サイトが開けないとき",
+    "description": "ほかのサイトは開けるが特定のWebサイトだけプライベートリレー利用時に表示やサインインが失敗する症状。サイト側のIPアドレス確認との相性を調べ、必要なら対象サイトまたはネットワークだけで一時的に切り分けます。",
+    "url": "/iphone/icloud-private-relay-one-site-unavailable/"
+  },
+  {
     "title": "Googleドライブでフォルダーが灰色になって開けないとき",
     "description": "共有ドライブなどで一部のフォルダーだけ灰色表示される。制限付きアクセスの対象かを確認します。 同じ共有ドライブのほかのフォルダーを開けるか比較します。",
     "url": "/google/drive-limited-access-folder-gray/"

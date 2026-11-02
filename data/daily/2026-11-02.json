@@ -922,5 +922,71 @@
     "closest_existing_url": "/sns/line-keep-memo-attachments-unavailable/",
     "differentiation": "既存記事はKeepメモの古い添付データ。本記事はグループ共有アルバムの作成条件と件数・同名制限を扱う。",
     "fact_check": "LINE公式のアルバム作成ヘルプは同一トークで同名不可、100アルバム/トーク、1,000件/アルバム、300件/アップロード等の上限を示す。"
+  },
+  {
+    "category": "google",
+    "slug": "keep-reminder-notification-missing",
+    "path": "/google/keep-reminder-notification-missing/",
+    "title": "Google Keepのリマインダー通知が来ないとき",
+    "topic": "Keepのメモに時刻を設定したのに通知だけが届かない症状",
+    "description": "Keepのメモに時刻を設定したのに通知だけが届かない症状。同じ予定がGoogle ToDoリストやカレンダーに表示されるかを先に確認し、通知を担当するアプリと権限を調べます。",
+    "answer": "同じ予定がGoogle ToDoリストやカレンダーに表示されるかを先に確認し、通知を担当するアプリと権限を調べます。",
+    "steps": [
+      "Keepで対象メモを開き、リマインダーの日時と繰り返し設定を確認します。",
+      "同じGoogleアカウントのToDoリストとカレンダーでその予定が見えるかを確認します。",
+      "公式案内の通知優先順位に沿って、ToDoリストまたはカレンダーの通知設定と端末側の通知許可を確認します。",
+      "数分後の新しいテスト用リマインダーを1件作り、どのアプリから通知が届くかを比べます。"
+    ],
+    "causes": [
+      "Keepで設定した時刻や日付が意図と違う。",
+      "KeepではなくToDoリストまたはカレンダーが通知を担当している。",
+      "通知を担当するアプリの通知許可や集中モードで表示が抑えられている。"
+    ],
+    "diagnosis": "メモが消えた問題ではなく、メモとリマインダーは存在するのに時刻になっても知らせが来ない問題です。Googleの公式ヘルプは、KeepのリマインダーをToDoリスト・カレンダー・Keepで確認できることと、複数アプリがある場合は通知元に優先順位があることを説明しています。対象メモ、予定の表示先、端末の通知権限を順に照合すれば、予定の保存失敗と通知経路の違いを分けられます。",
+    "caution": "同じリマインダーを各アプリで繰り返し作成すると通知や予定が重複します。既存のメモを削除せず、テスト用の予定だけを使って切り分けてください。職場・学校アカウントや管理端末では通知設定が制限される場合があるため、管理者に確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/keep/answer/3187168?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-calendar-desktop-reminders-missing/",
+      "/google/takeout-recent-changes-not-in-archive/",
+      "/google/calendar-dated-tasks-not-visible/"
+    ],
+    "closest_existing_url": "/google/google-calendar-desktop-reminders-missing/",
+    "differentiation": "既存記事はGoogleカレンダーの予定通知がPCに出ない問題。この記事はKeepメモに付いたリマインダーの保存状態と、ToDoリスト・カレンダー・Keep間の通知担当を切り分ける。",
+    "fact_check": "Google Keep公式ヘルプは、KeepのリマインダーがToDoリスト・カレンダー・Keepで確認でき、複数アプリがある場合の通知元にはToDoリスト、カレンダーの優先順位があると明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "icloud-private-relay-one-site-unavailable",
+    "path": "/iphone/icloud-private-relay-one-site-unavailable/",
+    "title": "iPhoneでiCloudプライベートリレー利用中に特定サイトが開けないとき",
+    "topic": "ほかのサイトは開けるが特定のWebサイトだけプライベートリレー利用時に表示やサインインが失敗する症状",
+    "description": "ほかのサイトは開けるが特定のWebサイトだけプライベートリレー利用時に表示やサインインが失敗する症状。サイト側のIPアドレス確認との相性を調べ、必要なら対象サイトまたはネットワークだけで一時的に切り分けます。",
+    "answer": "サイト側のIPアドレス確認との相性を調べ、必要なら対象サイトまたはネットワークだけで一時的に切り分けます。",
+    "steps": [
+      "同じiPhoneで別サイトが開くか、問題のサイトを別のネットワークでも開けるかを比べます。",
+      "iCloud+のプライベートリレーが有効か、Wi-Fiまたはモバイル通信の『IPアドレスのトラッキングを制限』を確認します。",
+      "Safariでサイトに互換性の問題がある場合、Appleの案内に従い対象サイトで一時的にIPアドレスを表示して動作を確認します。",
+      "ネットワーク自体との相性なら、対象のWi-Fiまたはモバイル回線だけで『IPアドレスのトラッキングを制限』を切り替えて比較します。"
+    ],
+    "causes": [
+      "サイトがIPアドレスによる位置・不正利用判定を行い、プライベートリレーと相性が悪い。",
+      "利用中のWi-Fiや通信事業者のネットワークがプライベートリレーに対応していない。",
+      "サイト全体の障害やアカウント問題で、プライベートリレーと無関係に失敗している。"
+    ],
+    "diagnosis": "公衆Wi-Fiのログイン画面が出ない問題や、インターネット全体につながらない問題とは異なります。ほかのサイトが正常で、同じサイトの動作がプライベートリレーの条件で変わる場合に限って、サイト単位・ネットワーク単位の設定を比較します。Apple公式案内には、サイト側がIPアドレスを確認する場合の対象サイトでの一時的な表示方法と、ネットワークが対応しない場合の設定方法があります。切り替えても変わらなければ、サイト障害やログイン問題を確認します。",
+    "caution": "プライベートリレーを切ると、その通信ではIPアドレス保護が弱まります。切り分けのために必要な範囲と時間に限り、利用後は元の設定へ戻してください。金融機関や職場のサイトでIPアドレス制限がある場合は、保護を外す前に公式サポートや管理者の案内を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/102022",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/public-wifi-login-not-appearing/",
+      "/iphone/private-relay-network-incompatible/",
+      "/iphone/icloud-backup-not-completing-iphone/"
+    ],
+    "closest_existing_url": "/iphone/public-wifi-login-not-appearing/",
+    "differentiation": "既存記事は公衆Wi-Fiの認証ページが出ない問題。この記事はインターネット接続と他サイトは正常な状態で、プライベートリレー利用時だけ特定サイトが開けない現象を対象にする。",
+    "fact_check": "Appleの公式サポートは、プライベートリレーに対応しないサイトやネットワークでは、対象サイトのIPアドレス表示または対象ネットワークの『IPアドレスのトラッキングを制限』で切り分ける方法を案内する。"
   }
 ]

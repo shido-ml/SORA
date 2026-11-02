@@ -58,6 +58,8 @@ https://sora-navi-jp.com/sns/teams-attendance-report-missing-after-meeting/
 https://sora-navi-jp.com/sns/zoom-computer-recording-conversion-fails/
 https://sora-navi-jp.com/sns/discord-scheduled-event-create-disabled/
 https://sora-navi-jp.com/sns/line-group-album-new-album-fails/
+https://sora-navi-jp.com/google/keep-reminder-notification-missing/
+https://sora-navi-jp.com/iphone/icloud-private-relay-one-site-unavailable/
 https://sora-navi-jp.com/google/drive-limited-access-folder-gray/
 https://sora-navi-jp.com/google/chat-followed-thread-blue-dot-missing/
 https://sora-navi-jp.com/google/tasks-repeat-unavailable-with-subtasks/
