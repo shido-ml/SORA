@@ -1,5 +1,145 @@
 [
   {
+    "title": "Gmailでメール差し込みの項目が出ないとき",
+    "description": "Gmailの新規メールで複数宛先向けのメール差し込みを有効にできない症状。対象のWorkspaceプランと新規メールの宛先欄を確認します。",
+    "url": "/google/gmail-mail-merge-option-missing/"
+  },
+  {
+    "title": "Googleフォームで回答を入力しても形式エラーになるとき",
+    "description": "フォームは受付中なのに特定設問だけ回答の検証エラーで送信できない症状。設問ごとの回答の検証ルールと表示されたエラーを照合します。",
+    "url": "/google/forms-response-validation-rejects-answer/"
+  },
+  {
+    "title": "Google Meetで質問と回答の機能が見つからないとき",
+    "description": "Meetの会議で参加者がQ&Aを開けない、または主催者が有効化できない症状。対象Workspaceプランと主催者の質問許可を分けて確認します。",
+    "url": "/google/meet-qa-option-unavailable/"
+  },
+  {
+    "title": "YouTubeでチャンネルの『メンバーになる』が表示されないとき",
+    "description": "視聴中のチャンネルでメンバーシップ加入ボタンを見つけられない症状。動画ページとチャンネルのホームを比較し、提供条件を確認します。",
+    "url": "/google/youtube-channel-join-button-missing/"
+  },
+  {
+    "title": "Googleフォトで『写真に聞く』編集が使えないとき",
+    "description": "写真編集画面にAsk Photosを使った編集機能が出ない症状。個人アカウント、年齢、写真と端末の対応条件を確認します。",
+    "url": "/google/photos-ask-photos-edit-unavailable/"
+  },
+  {
+    "title": "iPhoneでライブスピーチを使えないとき",
+    "description": "文字を入力して通話や対面で読み上げるライブスピーチの設定・起動ができない症状。アクセシビリティ設定と選んだ言語を確認します。 設定の『アクセシビリティ』から『ライブスピーチ』の項目を探します。",
+    "url": "/iphone/iphone-live-speech-option-unavailable/"
+  },
+  {
+    "title": "iPhoneの通話中に録音ボタンが出ないとき",
+    "description": "電話アプリの通話中に通話録音を開始する操作が見えない症状。電話アプリでの一対一通話と地域の提供条件を確認します。 iPhoneの電話アプリで一対一の通話中か、別の通話アプリかを確認します。",
+    "url": "/iphone/iphone-call-recording-button-missing/"
+  },
+  {
+    "title": "MacのTime Machineにバックアップディスクが出ないとき",
+    "description": "Time Machineの保存先選択画面で接続した外部・ネットワークディスクを選べない症状。ディスク接続・共有の状態と対応する保存先かを確認します。",
+    "url": "/mac/time-machine-backup-disk-not-found/"
+  },
+  {
+    "title": "MacをAirPlayの受信先に設定できないとき",
+    "description": "別のApple端末からMacへ映像や音を送るためのAirPlay受信設定が見つからない症状。対応Macと管理端末かどうかを確認します。 Macの『システム設定』→『一般』→『AirDropと連係』でAirPlayレシーバーを探します。",
+    "url": "/mac/mac-airplay-receiver-option-missing/"
+  },
+  {
+    "title": "Macで再ログイン後にアプリのウインドウが勝手に開くとき",
+    "description": "Macへログインするたび閉じたはずのアプリやウインドウが再び表示される症状。ログイン項目とアプリ固有の再開設定を分けて確認します。 現象がMacへログインした直後か、アプリを起動した時かを分けます。",
+    "url": "/mac/mac-app-windows-reopen-after-login/"
+  },
+  {
+    "title": "iPhoneのミュージックの触覚が特定の曲で使えないとき",
+    "description": "音楽は再生できるが触覚のアイコンが利用不可となり振動しない症状。機能の設定と曲ごとの触覚対応を分けて確認します。 『設定』→『アクセシビリティ』→『ミュージックの触覚』がオンか確認します。",
+    "url": "/iphone/iphone-music-haptics-unavailable-song/"
+  },
+  {
+    "title": "Windowsのライブキャプションで言語の準備が進まないとき",
+    "description": "ライブキャプション初回起動後に音声認識用の言語ファイルを取得できない症状。初回の同意と端末内言語ファイルの取得を確認します。 Win+Ctrl+Lまたは『設定』→『アクセシビリティ』→『キャプション』から起動します。",
+    "url": "/windows/windows-live-captions-language-download-stuck/"
+  },
+  {
+    "title": "Windowsのフォーカス中も一部の通知が出るとき",
+    "description": "フォーカスセッション中なのに特定アプリの通知や音が届く症状。応答不要の通知と優先通知の例外設定を確認します。 『設定』→『システム』→『通知』で『応答不可』の現在の状態を確認します。",
+    "url": "/windows/windows-focus-notifications-still-show/"
+  },
+  {
+    "title": "Microsoft Storeで購入したアプリが見つからないとき",
+    "description": "購入済みのアプリを別のWindows PCで再インストールしたいが一覧に見えない症状。購入時のMicrosoftアカウントと注文履歴を確認します。",
+    "url": "/windows/microsoft-store-purchased-app-not-found/"
+  },
+  {
+    "title": "タスクマネージャーの効率モードが灰色で切り替えられないとき",
+    "description": "特定のプロセスで効率モードのボタンが無効になっている症状。プロセスのグループと個別プロセスの違いを確認します。 タスクマネージャーの『プロセス』で対象がグループ表示か個別項目か確認します。",
+    "url": "/windows/task-manager-efficiency-mode-grayed/"
+  },
+  {
+    "title": "従来版Outlookの検索で最近のメールだけ出ないとき",
+    "description": "受信箱で開ける新しいメールが検索結果に現れない症状。検索範囲とWindowsの検索インデックス状態を確認します。",
+    "url": "/windows/classic-outlook-search-misses-recent-mail/"
+  },
+  {
+    "title": "Androidで通知が続くと音とポップアップだけ弱くなるとき",
+    "description": "短時間に多くの通知が来たときだけ音や画面表示が抑えられる症状。通知のクールダウン設定と例外を確認します。 通知履歴またはアプリで通知自体が届いているか確認します。",
+    "url": "/android/android-notification-cooldown-quiets-alerts/"
+  },
+  {
+    "title": "Androidの本人確認でPINでは先へ進めないとき",
+    "description": "信頼できる場所の外で重要な設定変更時に生体認証だけを要求される症状。盗難対策の本人確認がオンかと現在地の扱いを確認します。 『設定』→『Google』→『すべてのサービス』→『盗難保護』で本人確認の状態を確認します。",
+    "url": "/android/android-identity-check-pin-not-accepted/"
+  },
+  {
+    "title": "Pixelで画面を見ているのに表示が消えるとき",
+    "description": "Pixelの画面注視をオンにしても読書中などに画面がタイムアウトする症状。画面注視の設定と周囲の明るさを確認します。 Pixelの『設定』→『ディスプレイとタップ』→『画面消灯』で画面注視を確認します。",
+    "url": "/android/pixel-screen-attention-not-keeping-display-on/"
+  },
+  {
+    "title": "Google Playプロテクトが特定アプリの導入を止めたとき",
+    "description": "一つのアプリだけが危険の警告でインストールを止められる症状。警告文と入手元を確認し、安全性を優先して判断します。 表示されたPlayプロテクトの警告文と対象アプリ名・入手元を記録します。",
+    "url": "/android/play-protect-blocks-one-app-install/"
+  },
+  {
+    "title": "Firefoxで『安全なサイトを利用できません』と出るとき",
+    "description": "HTTPだけのサイトでFirefoxのHTTPS-Onlyモードが接続を止める症状。URLとHTTPS-Onlyの例外設定を安全に確認します。",
+    "url": "/browser/firefox-https-only-secure-site-unavailable/"
+  },
+  {
+    "title": "Firefoxで他の端末のタブが見えないとき",
+    "description": "同じMozillaアカウントなのに別端末で開いたタブを一覧から探せない症状。各端末の同期と『開いているタブ』の選択を確認します。 両方の端末が同じMozillaアカウントで同期中か確認します。",
+    "url": "/browser/firefox-synced-tabs-other-device-missing/"
+  },
+  {
+    "title": "ChromeでWebページをアプリとしてインストールできないとき",
+    "description": "サイトのアプリ化アイコンがアドレスバーに出ない、または操作が見つからない症状。アイコンの有無とChromeメニューの別経路を確認します。",
+    "url": "/browser/chrome-install-page-as-app-option-missing/"
+  },
+  {
+    "title": "EdgeのWebサイトから社内機器に接続できないとき",
+    "description": "Webページは開くが同じLAN上の機器やサーバーへの要求だけ許可を求められる症状。サイトごとのローカルネットワーク許可と管理ポリシーを確認します。",
+    "url": "/browser/edge-site-local-network-access-blocked/"
+  },
+  {
+    "title": "Teams会議の出席レポートが終了後に見つからないとき",
+    "description": "会議を主催したのに参加者の出席CSVを取得できない症状。会議形式、主催者の役割とレポート設定を確認します。 対象会議の主催者または共同主催者か、会議形式が通常会議・チャネル会議・ウェビナーのどれか確認します。",
+    "url": "/sns/teams-attendance-report-missing-after-meeting/"
+  },
+  {
+    "title": "ZoomのPC内録画が変換エラーで動画にならないとき",
+    "description": "録画データは端末にあるが会議終了後のMP4変換だけが失敗する症状。空き容量と元の録画ファイルを保持して変換手順を確認します。",
+    "url": "/sns/zoom-computer-recording-conversion-fails/"
+  },
+  {
+    "title": "Discordでサーバーの予定イベントを作成できないとき",
+    "description": "予定イベントの作成が一つのサーバーやチャンネルで許可されない症状。サーバーとチャンネル双方のイベント権限を確認します。 対象サーバーの予定イベント画面で作成操作が表示されるか確認します。",
+    "url": "/sns/discord-scheduled-event-create-disabled/"
+  },
+  {
+    "title": "LINEグループで新しいアルバムを作れないとき",
+    "description": "トークは使えるがグループのアルバムを新規作成できない症状。同名アルバムと作成数・アップロード上限を確認します。 対象トークがグループまたは友だちとのトークか、Keepメモではないか確認します。",
+    "url": "/sns/line-group-album-new-album-fails/"
+  },
+  {
     "title": "Googleドライブでフォルダーが灰色になって開けないとき",
     "description": "共有ドライブなどで一部のフォルダーだけ灰色表示される。制限付きアクセスの対象かを確認します。 同じ共有ドライブのほかのフォルダーを開けるか比較します。",
     "url": "/google/drive-limited-access-folder-gray/"

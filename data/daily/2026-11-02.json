@@ -1,0 +1,926 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-mail-merge-option-missing",
+    "path": "/google/gmail-mail-merge-option-missing/",
+    "title": "Gmailでメール差し込みの項目が出ないとき",
+    "topic": "Gmailの新規メールで複数宛先向けのメール差し込みを有効にできない症状",
+    "description": "Gmailの新規メールで複数宛先向けのメール差し込みを有効にできない症状。対象のWorkspaceプランと新規メールの宛先欄を確認します。",
+    "answer": "対象のWorkspaceプランと新規メールの宛先欄を確認します。",
+    "steps": [
+      "パソコン版Gmailで新しいメールを作り、宛先欄の右側にメール差し込みがあるか確認します。",
+      "ログイン中のアカウントが公式案内の対象Workspaceプランか管理者に確認します。",
+      "返信・転送・予約送信・情報保護モード・プレーンテキストでない新規メールで比較します。",
+      "利用可能な場合は少人数の宛先と差し込みタグを下書きで確認し、送信前に宛先と内容を再点検します。"
+    ],
+    "causes": [
+      "対象外の個人アカウントまたはWorkspaceプランを使用している。",
+      "返信や予約送信など差し込みと併用できない形式を開いている。",
+      "宛先欄ではなく通常の書式ツール内を探している。"
+    ],
+    "diagnosis": "同じ文面を送るテンプレートと、受信者ごとにタグを置換して個別メールを作る差し込みは目的が違います。宛先欄の操作自体が見えないのか、表示されるが特定の下書きで使えないのかを分けてください。後者は返信や予約送信など公式に併用できない形式が原因になり得ます。",
+    "caution": "大量送信の前に宛先の同意と組織の送信規則を確認してください。差し込みを使っても誤った列の個人情報を送る危険があります。テストでは外部の実在宛先を使わず、プラン変更や有料契約をこの手順のためだけに進めないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/12921167?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-templates-menu-not-visible/",
+      "/google/gmail-not-receiving-email/",
+      "/google/gmail-read-receipt-option-unavailable/"
+    ],
+    "closest_existing_url": "/google/gmail-templates-menu-not-visible/",
+    "differentiation": "既存記事は同じ定型文を再利用するテンプレート。本記事は対象プランが限定される宛先別の差し込みと併用不可の送信形式を扱う。",
+    "fact_check": "Gmail公式ヘルプは対象Workspaceプラン、宛先欄のメール差し込み操作、返信・転送・予約送信・情報保護モード・プレーンテキストとの併用制限を明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-response-validation-rejects-answer",
+    "path": "/google/forms-response-validation-rejects-answer/",
+    "title": "Googleフォームで回答を入力しても形式エラーになるとき",
+    "topic": "フォームは受付中なのに特定設問だけ回答の検証エラーで送信できない症状",
+    "description": "フォームは受付中なのに特定設問だけ回答の検証エラーで送信できない症状。設問ごとの回答の検証ルールと表示されたエラーを照合します。",
+    "answer": "設問ごとの回答の検証ルールと表示されたエラーを照合します。",
+    "steps": [
+      "回答者はエラーの出る設問と表示文を記録し、ほかの設問は進めるか確認します。",
+      "フォーム作成者はその設問の種類とメニューにある『回答の検証』を確認します。",
+      "数値範囲、文字数、正規表現、チェック数など設定した条件と入力例を比較します。",
+      "必要なら作成者が意図した条件か見直し、公開前のプレビューで有効・無効の両方の入力を試します。"
+    ],
+    "causes": [
+      "回答の検証で数値や文字数の範囲が狭すぎる。",
+      "正規表現やメール形式の条件と入力内容が一致しない。",
+      "チェックボックスの選択数やグリッドの必須回答条件に達していない。"
+    ],
+    "diagnosis": "フォーム全体で『回答を受け付けていません』と出る状態とは違い、一つの設問に入力してもエラーが出る問題です。Googleフォームでは設問の種類ごとに設定できる検証ルールが異なります。回答者は条件を勝手に回避せず、作成者はプレビューで再現させて誤設定か意図した制限か判断します。",
+    "caution": "回答者のメールアドレスや個人情報を公開コメントへ貼らないでください。作成者は検証を全面解除する前に、収集目的に必要な条件かを確認します。応募・申請の締切がある場合は入力画面のエラーを控え、管理者に正規の連絡経路で相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/3378864?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/forms-not-accepting-responses/",
+      "/google/forms-edit-response-link-unavailable/",
+      "/google/forms-file-upload-question-fails/"
+    ],
+    "closest_existing_url": "/google/forms-not-accepting-responses/",
+    "differentiation": "既存記事はフォーム全体の受付停止。本記事は受付中の個別設問で検証条件により送信を拒否される問題を扱う。",
+    "fact_check": "Googleフォーム公式の回答検証ヘルプは設問種類別に数値、文字、長さ、正規表現、チェック数などの条件とカスタムエラー文を説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "meet-qa-option-unavailable",
+    "path": "/google/meet-qa-option-unavailable/",
+    "title": "Google Meetで質問と回答の機能が見つからないとき",
+    "topic": "Meetの会議で参加者がQ&Aを開けない、または主催者が有効化できない症状",
+    "description": "Meetの会議で参加者がQ&Aを開けない、または主催者が有効化できない症状。対象Workspaceプランと主催者の質問許可を分けて確認します。",
+    "answer": "対象Workspaceプランと主催者の質問許可を分けて確認します。",
+    "steps": [
+      "会議の『会議ツール』にQ&Aがあるか、参加者と主催者の画面で比較します。",
+      "主催者は『主催者用ボタン』の会議アクティビティで質問の許可を確認します。",
+      "組織アカウントなら管理者に利用可能なWorkspaceエディションと機能の有効化状態を確認します。",
+      "教育アカウントやライブ配信では主催者が質問設定を別途確認し、会議内で短い試験質問を行います。"
+    ],
+    "causes": [
+      "利用するWorkspaceエディションがQ&A対象外である。",
+      "組織管理者または会議の主催者が質問を無効にしている。",
+      "参加者と主催者で表示される管理操作を取り違えている。"
+    ],
+    "diagnosis": "録画ボタンがない問題とは異なり、会議中に質問を投稿・管理する機能だけが見えない状況です。公式案内は対象エディションと管理者の設定を分けて示しています。参加者側に管理ボタンがないことを故障とせず、主催者が質問許可を確認し、それでも表示されない場合はプランと組織設定を確認します。",
+    "caution": "主催者の許可や学校・職場の管理設定を参加者が迂回しないでください。匿名の質問も内容はGoogleへ送られると公式に案内されています。機密情報や個人情報をテスト質問に書かず、会議後の質問レポートの共有範囲にも注意してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/meet/answer/10146000?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/meet-recording-button-unavailable/",
+      "/google/meet-cannot-join-meeting/",
+      "/google/forms-edit-response-link-unavailable/"
+    ],
+    "closest_existing_url": "/google/meet-recording-button-unavailable/",
+    "differentiation": "既存記事は会議を録画する機能。本記事は会議内の質問投稿・主催者の承認と対象プランを扱う。",
+    "fact_check": "Meet公式ヘルプはQ&A対象Workspaceエディション、管理者による有効化、教育アカウントの主催者設定、質問の投稿とレポートを明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-channel-join-button-missing",
+    "path": "/google/youtube-channel-join-button-missing/",
+    "title": "YouTubeでチャンネルの『メンバーになる』が表示されないとき",
+    "topic": "視聴中のチャンネルでメンバーシップ加入ボタンを見つけられない症状",
+    "description": "視聴中のチャンネルでメンバーシップ加入ボタンを見つけられない症状。動画ページとチャンネルのホームを比較し、提供条件を確認します。",
+    "answer": "動画ページとチャンネルのホームを比較し、提供条件を確認します。",
+    "steps": [
+      "対象チャンネルのホームと動画視聴ページの両方で加入ボタンを確認します。",
+      "別の対応端末やパソコンのブラウザで同じチャンネルを開いて比較します。",
+      "クリエイターがメンバーシップを有効にしているか、地域で利用できるか公式案内を確認します。",
+      "子ども向け動画や一部の権利処理された音楽動画など、加入ボタンが出ないページ条件を確認します。"
+    ],
+    "causes": [
+      "クリエイター側がメンバーシップを提供していない、または一時停止中。",
+      "視聴者・クリエイターの地域や利用プラットフォームが対象外である。",
+      "子ども向けなど、視聴中の動画ページが加入ボタンの対象外である。"
+    ],
+    "diagnosis": "動画のコメントや字幕が使えない問題とは異なり、有料メンバーシップに加入する入口の表示条件を扱います。公式ヘルプではチャンネル側の有効化、国・地域、端末、動画の属性でボタンの有無が変わります。ホームにはあるが特定の動画にだけない場合と、チャンネル全体でない場合を分けると判断しやすくなります。",
+    "caution": "加入のために非公式サイトへ支払い情報を入れないでください。ボタンがないことを技術的な故障と決めつけて有料契約を新たに始める必要はありません。子ども向け指定などクリエイターの設定を視聴者が変更することもできません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/6304294?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-video-comments-disabled/",
+      "/google/youtube-brand-channel-missing-switcher/",
+      "/google/youtube-video-chapters-not-appearing/"
+    ],
+    "closest_existing_url": "/google/youtube-video-comments-disabled/",
+    "differentiation": "既存記事はコメント欄の利用可否。本記事はチャンネルの有料加入ボタンがページ・地域・端末条件で見えない問題を扱う。",
+    "fact_check": "YouTube公式の加入ヘルプは地域、端末、クリエイターの提供状態を列挙し、子ども向け等の動画で加入ボタンが出ないことを説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-ask-photos-edit-unavailable",
+    "path": "/google/photos-ask-photos-edit-unavailable/",
+    "title": "Googleフォトで『写真に聞く』編集が使えないとき",
+    "topic": "写真編集画面にAsk Photosを使った編集機能が出ない症状",
+    "description": "写真編集画面にAsk Photosを使った編集機能が出ない症状。個人アカウント、年齢、写真と端末の対応条件を確認します。",
+    "answer": "個人アカウント、年齢、写真と端末の対応条件を確認します。",
+    "steps": [
+      "Googleフォトの編集画面で同じアカウントの別の写真にも機能があるか確認します。",
+      "仕事・学校アカウントではなく対象の個人Googleアカウントで利用しているか確認します。",
+      "公式ヘルプの年齢条件、提供地域、端末とアプリの必要条件を確認します。",
+      "機能が使える写真と使えない写真を比較し、編集ツールのダウンロードが必要なら空き容量と通信を確認します。"
+    ],
+    "causes": [
+      "仕事・学校アカウントまたは対象外の年齢・地域である。",
+      "端末やアプリが対象機能の要件を満たさない。",
+      "写真の種類や編集ツールの未ダウンロードで選択肢が異なる。"
+    ],
+    "diagnosis": "人物とペットの分類や写真のバックアップとは異なり、編集画面で生成AIへの指示を使えるかが焦点です。Googleの公式案内では利用者の年齢、個人アカウント、地域と端末の条件があります。すべての写真で同じツールが表示されるとは限らないため、アカウント条件と写真固有の可否を順番に分けて確認します。",
+    "caution": "対象外アカウントを別人の個人アカウントへ移して編集しないでください。写真には人物や位置などの私的情報が含まれます。利用条件を確認せず課金やアカウントの変更を進めず、元画像を保持してから編集結果を保存してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/photos/answer/6128850?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/photos-people-pets-section-missing/",
+      "/google/google-account-passkey-not-working/",
+      "/google/photos-partner-sharing-not-in-library/"
+    ],
+    "closest_existing_url": "/google/photos-people-pets-section-missing/",
+    "differentiation": "既存記事は人物分類の表示。本記事は写真ごとの生成編集ツールの年齢・アカウント・端末条件を扱う。",
+    "fact_check": "Googleフォト公式の編集ヘルプはAsk Photos編集に18歳以上と個人Googleアカウントが必要で、職場・学校アカウントは対象外と説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-live-speech-option-unavailable",
+    "path": "/iphone/iphone-live-speech-option-unavailable/",
+    "title": "iPhoneでライブスピーチを使えないとき",
+    "topic": "文字を入力して通話や対面で読み上げるライブスピーチの設定・起動ができない症状",
+    "description": "文字を入力して通話や対面で読み上げるライブスピーチの設定・起動ができない症状。アクセシビリティ設定と選んだ言語を確認します。 設定の『アクセシビリティ』から『ライブスピーチ』の項目を探します。",
+    "answer": "アクセシビリティ設定と選んだ言語を確認します。 設定の『アクセシビリティ』から『ライブスピーチ』の項目を探します。",
+    "steps": [
+      "設定の『アクセシビリティ』から『ライブスピーチ』の項目を探します。",
+      "項目を有効にし、使いたい読み上げ音声と言語が選べるか確認します。",
+      "電話・FaceTime・対面のうちどの場面で起動できないかを分けます。",
+      "対応する言語とOSの条件をAppleの案内で確認し、サイドボタンのショートカット設定も調べます。"
+    ],
+    "causes": [
+      "ライブスピーチの設定がオフ、または起動方法を取り違えている。",
+      "選んだ音声や言語が機能の提供対象外である。",
+      "通話アプリ側の音声経路と本体の読み上げ操作を混同している。"
+    ],
+    "diagnosis": "Siriが音声指示を聞き取らない症状と逆で、こちらは入力した文字をiPhoneに発話させる支援機能です。設定項目自体がないのか、機能は開くが特定言語の音声が使えないのか、通話中だけ相手に届かないのかを分けます。Appleは言語によって提供が異なると明記しています。",
+    "caution": "声を出しにくい人の連絡手段として使う場合、緊急通報に頼り切る前に自分の端末で事前に練習してください。個人の声の作成など別機能を設定する必要があると決めつけず、録音や音声データの共有には本人の意思を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/type-to-speak-iphcf92d2d9b/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/siri-voice-not-responding/",
+      "/iphone/icloud-shared-photo-library-invite-not-working/",
+      "/iphone/copy-paste-not-working/"
+    ],
+    "closest_existing_url": "/iphone/siri-voice-not-responding/",
+    "differentiation": "既存記事はSiriが話しかけを認識しない問題。本記事は入力文字を相手に読み上げるアクセシビリティ機能を扱う。",
+    "fact_check": "Appleのライブスピーチ公式ガイドは設定の場所、入力文字の読み上げと対応言語が限られることを説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-call-recording-button-missing",
+    "path": "/iphone/iphone-call-recording-button-missing/",
+    "title": "iPhoneの通話中に録音ボタンが出ないとき",
+    "topic": "電話アプリの通話中に通話録音を開始する操作が見えない症状",
+    "description": "電話アプリの通話中に通話録音を開始する操作が見えない症状。電話アプリでの一対一通話と地域の提供条件を確認します。 iPhoneの電話アプリで一対一の通話中か、別の通話アプリかを確認します。",
+    "answer": "電話アプリでの一対一通話と地域の提供条件を確認します。 iPhoneの電話アプリで一対一の通話中か、別の通話アプリかを確認します。",
+    "steps": [
+      "iPhoneの電話アプリで一対一の通話中か、別の通話アプリかを確認します。",
+      "通話画面の『その他』から『通話録音』が表示されるか確認します。",
+      "iOSのバージョンと言語・国や地域の提供状況をAppleの公式案内で照合します。",
+      "利用可能な場合は相手に録音の意図を伝え、双方に音声通知が流れる仕様を理解してから操作します。"
+    ],
+    "causes": [
+      "住んでいる国・地域でAppleの通話録音が提供されていない。",
+      "電話アプリ以外の通話や一対一以外の状況で探している。",
+      "通話の文字起こしと録音そのものの対応条件を混同している。"
+    ],
+    "diagnosis": "ライブ留守番電話やボイスメモの録音ではなく、通話中の相手との会話を電話アプリで録音する機能です。Appleは提供地域を限定し、文字起こしには別の言語条件があると説明します。録音ボタンがない原因と、録音はできたが文字起こしが出ない原因を分けてください。",
+    "caution": "録音は相手の同意と地域の法令・組織ルールを確認してから行ってください。Appleの機能は双方に録音の音声通知を流します。通知を避けるための非公式アプリ導入や、相手に知らせない録音方法を案内するものではありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/record-and-transcribe-a-call-iph57c6590e9/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/iphone-live-voicemail-not-appearing/",
+      "/iphone/iphone-camera-live-text-button-missing/",
+      "/iphone/live-photo-effects-missing/"
+    ],
+    "closest_existing_url": "/iphone/iphone-live-voicemail-not-appearing/",
+    "differentiation": "既存記事は着信相手の留守番電話をその場で読む機能。本記事は進行中の通話を相手への通知付きで録音する機能を扱う。",
+    "fact_check": "Appleの通話録音公式ガイドは電話アプリの一対一通話、国・地域の制限、通話中の操作、双方への音声通知、文字起こしの別条件を説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "time-machine-backup-disk-not-found",
+    "path": "/mac/time-machine-backup-disk-not-found/",
+    "title": "MacのTime Machineにバックアップディスクが出ないとき",
+    "topic": "Time Machineの保存先選択画面で接続した外部・ネットワークディスクを選べない症状",
+    "description": "Time Machineの保存先選択画面で接続した外部・ネットワークディスクを選べない症状。ディスク接続・共有の状態と対応する保存先かを確認します。",
+    "answer": "ディスク接続・共有の状態と対応する保存先かを確認します。",
+    "steps": [
+      "外付けディスクならFinderに表示されるか、ケーブルと電源を確認します。",
+      "ネットワークディスクならMacと保存先が同じネットワークで見えるか確認します。",
+      "『システム設定』→『一般』→『Time Machine』でバックアップディスク追加の候補を確認します。",
+      "保存先にパスワードが必要な場合は正しい資格情報を確認し、対応するディスク種別か公式案内と照合します。"
+    ],
+    "causes": [
+      "外部ディスクの電源・ケーブル・接続に問題がある。",
+      "ネットワーク保存先が到達不能か、認証情報が違う。",
+      "Time Machineの対応保存先として認識されていない。"
+    ],
+    "diagnosis": "Time Machineで特定ファイルだけ保存されない問題とは異なり、バックアップ開始前に保存先自体が候補に現れない状態です。まずFinderでもディスクが見えないのか、Finderには見えるがTime Machineだけ選べないのかを分けます。Appleは物理接続、ネットワーク接続、パスワードを確認するよう案内しています。",
+    "caution": "バックアップが見えないからといってディスクを初期化しないでください。すでに入っているバックアップや他のファイルが消えます。ディスクの修復や設定変更の前に別の保存先があるか確認し、共有ディスクなら管理者へ相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/if-time-machine-cant-find-your-backup-disk-mh15141/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/time-machine-one-file-missing/",
+      "/mac/time-machine-backup-failed/",
+      "/mac/mac-system-data-too-large/"
+    ],
+    "closest_existing_url": "/mac/time-machine-one-file-missing/",
+    "differentiation": "既存記事はバックアップ済みと考えた一つのファイルがない問題。本記事は保存先ディスクを選択できない接続段階を扱う。",
+    "fact_check": "AppleのTime Machineディスクが見つからない場合の公式案内はディスクのケーブル、ネットワーク接続、パスワードを確認するよう示す。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-airplay-receiver-option-missing",
+    "path": "/mac/mac-airplay-receiver-option-missing/",
+    "title": "MacをAirPlayの受信先に設定できないとき",
+    "topic": "別のApple端末からMacへ映像や音を送るためのAirPlay受信設定が見つからない症状",
+    "description": "別のApple端末からMacへ映像や音を送るためのAirPlay受信設定が見つからない症状。対応Macと管理端末かどうかを確認します。 Macの『システム設定』→『一般』→『AirDropと連係』でAirPlayレシーバーを探します。",
+    "answer": "対応Macと管理端末かどうかを確認します。 Macの『システム設定』→『一般』→『AirDropと連係』でAirPlayレシーバーを探します。",
+    "steps": [
+      "Macの『システム設定』→『一般』→『AirDropと連係』でAirPlayレシーバーを探します。",
+      "Macの機種とmacOSの版が受信機能の対象かAppleの条件を確認します。",
+      "職場や学校の管理端末ならMDMで受信機能が制限されていないか管理者へ尋ねます。",
+      "設定が使える場合は受信を許可する相手の範囲を選び、同じネットワークの自分の端末で確認します。"
+    ],
+    "causes": [
+      "MacまたはmacOSがAirPlay受信の対応条件を満たさない。",
+      "組織管理のMDM設定でAirPlayレシーバーが非表示・使用不可。",
+      "画面共有の設定をAirPlay受信の設定と取り違えている。"
+    ],
+    "diagnosis": "Macの画面を別のMacに共有する設定と、MacをAirPlayの受信機にする設定は方向が逆です。受信設定自体が見えないなら、送信元端末の再起動より先にMacの対応条件と管理状態を確認します。Appleは対応MacのmacOS 12以降で利用でき、MDM管理下では使えない場合があると説明します。",
+    "caution": "職場の管理プロファイルを外して機能を使おうとしないでください。受信を『すべての人』に広げる前に、周囲の端末から接続できる範囲とプライバシーを確認します。会議室など共有環境では管理者の定めた設定を守ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/change-airdrop-continuity-settings-mchl6a407f99/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-screen-sharing-connection-failed/",
+      "/mac/mac-continuity-camera-iphone-not-detected/",
+      "/mac/airplay-device-not-showing-mac/"
+    ],
+    "closest_existing_url": "/mac/mac-screen-sharing-connection-failed/",
+    "differentiation": "既存記事はMac同士の画面共有接続。本記事はMacをAirPlay映像・音声の受信先にする設定とMDM制限を扱う。",
+    "fact_check": "AppleのAirDropと連係設定の公式ガイドはAirPlay受信、macOS 12以降の対応条件、MDM管理端末で非表示になる可能性を明記する。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-app-windows-reopen-after-login",
+    "path": "/mac/mac-app-windows-reopen-after-login/",
+    "title": "Macで再ログイン後にアプリのウインドウが勝手に開くとき",
+    "topic": "Macへログインするたび閉じたはずのアプリやウインドウが再び表示される症状",
+    "description": "Macへログインするたび閉じたはずのアプリやウインドウが再び表示される症状。ログイン項目とアプリ固有の再開設定を分けて確認します。 現象がMacへログインした直後か、アプリを起動した時かを分けます。",
+    "answer": "ログイン項目とアプリ固有の再開設定を分けて確認します。 現象がMacへログインした直後か、アプリを起動した時かを分けます。",
+    "steps": [
+      "現象がMacへログインした直後か、アプリを起動した時かを分けます。",
+      "『システム設定』のログイン項目で対象アプリが自動起動に登録されていないか確認します。",
+      "対象アプリの設定で前回のウインドウを再開する項目がないか確認します。",
+      "Macを再起動・再ログインする際のウインドウ再表示オプションを確認し、変更後に一回だけ動作を試します。"
+    ],
+    "causes": [
+      "対象アプリがログイン項目に登録されている。",
+      "アプリ自身が前回のウインドウを復元する設定になっている。",
+      "再ログイン時にウインドウを開き直す選択をしている。"
+    ],
+    "diagnosis": "アプリが勝手に立ち上がるのか、手動で開いたアプリが前回のウインドウを復元するのかを最初に区別します。Appleはログイン項目だけでなく、アプリ独自の設定やログイン時の再開を確認するよう案内しています。不要な項目だけを見直せば、必要な常駐アプリまで停止せずに済みます。",
+    "caution": "仕事で必要な同期・セキュリティアプリを名前だけでログイン項目から外さないでください。変更前の設定を控え、管理端末では管理者の方針に従います。未保存の文書がある場合は再起動前に保存し、症状確認のために強制終了を繰り返さないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/102318",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/stage-manager-recent-apps-hidden/",
+      "/mac/mac-split-view-option-missing/",
+      "/mac/safari-private-browsing-keeps-locking/"
+    ],
+    "closest_existing_url": "/mac/stage-manager-recent-apps-hidden/",
+    "differentiation": "既存記事はステージマネージャの表示。本記事はログインやアプリ起動時のウインドウ再開設定を扱う。",
+    "fact_check": "Apple公式のウインドウ再表示の案内はアプリの独自設定、ログイン項目、ログイン時に前回のウインドウを開き直す設定を確認するよう説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-music-haptics-unavailable-song",
+    "path": "/iphone/iphone-music-haptics-unavailable-song/",
+    "title": "iPhoneのミュージックの触覚が特定の曲で使えないとき",
+    "topic": "音楽は再生できるが触覚のアイコンが利用不可となり振動しない症状",
+    "description": "音楽は再生できるが触覚のアイコンが利用不可となり振動しない症状。機能の設定と曲ごとの触覚対応を分けて確認します。 『設定』→『アクセシビリティ』→『ミュージックの触覚』がオンか確認します。",
+    "answer": "機能の設定と曲ごとの触覚対応を分けて確認します。 『設定』→『アクセシビリティ』→『ミュージックの触覚』がオンか確認します。",
+    "steps": [
+      "『設定』→『アクセシビリティ』→『ミュージックの触覚』がオンか確認します。",
+      "コントロールセンターの再生カードに触覚アイコンがあるか確認します。",
+      "対応するApple Musicなどで別の曲を再生し、曲ごとの利用可否を比較します。",
+      "iPhoneの対応機種とWi-Fiまたはモバイル通信の接続をAppleの案内と照合します。"
+    ],
+    "causes": [
+      "対象曲に触覚トラックが提供されていない。",
+      "ミュージックの触覚がオフ、または曲の再生画面で停止されている。",
+      "対応端末・アプリ・通信条件を満たしていない。"
+    ],
+    "diagnosis": "音が出ない問題やBluetooth接続とは別で、楽曲のリズムに合わせた触覚表現の可否を確認します。Appleは特定の曲で利用不可のアイコンが表示されると説明しています。機能全体が働かないのか、一曲だけ非対応なのかを比較し、曲自体に触覚トラックがない場合は端末の故障と判断しません。",
+    "caution": "振動がない状態を端末の故障と決めつけて初期化しないでください。強い触覚が負担になる人は設定で強さを調整できます。音楽アプリの契約や購入をこの症状の解決前に進めず、利用中の曲・端末・アプリの対応状況を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-sa/guide/iphone/iphff2ceeb16/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/no-sound/",
+      "/iphone/voice-memos-transcript-unavailable/",
+      "/iphone/live-activities-lock-screen-missing/"
+    ],
+    "closest_existing_url": "/iphone/no-sound/",
+    "differentiation": "既存記事はiPhoneから音が出ない症状。本記事は音楽の再生は可能でも曲ごとの触覚トラックが使えない状態を扱う。",
+    "fact_check": "Appleのミュージックの触覚ガイドは設定経路、曲ごとの利用不可アイコン、対応iPhone・アプリ・通信条件を明記する。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-live-captions-language-download-stuck",
+    "path": "/windows/windows-live-captions-language-download-stuck/",
+    "title": "Windowsのライブキャプションで言語の準備が進まないとき",
+    "topic": "ライブキャプション初回起動後に音声認識用の言語ファイルを取得できない症状",
+    "description": "ライブキャプション初回起動後に音声認識用の言語ファイルを取得できない症状。初回の同意と端末内言語ファイルの取得を確認します。 Win+Ctrl+Lまたは『設定』→『アクセシビリティ』→『キャプション』から起動します。",
+    "answer": "初回の同意と端末内言語ファイルの取得を確認します。 Win+Ctrl+Lまたは『設定』→『アクセシビリティ』→『キャプション』から起動します。",
+    "steps": [
+      "Win+Ctrl+Lまたは『設定』→『アクセシビリティ』→『キャプション』から起動します。",
+      "初回に音声データを端末で処理する同意画面と、言語ファイルの取得表示を確認します。",
+      "選択言語が一覧にない場合は利用可能な別言語で設定できるか確認します。",
+      "通信とWindows更新の状態を確認し、組織端末なら言語ファイルの取得が制限されていないか管理者に尋ねます。"
+    ],
+    "causes": [
+      "初回の音声処理への同意が完了していない。",
+      "選択した言語の音声認識ファイルを取得できていない。",
+      "組織の通信制限または端末の更新状態が取得を妨げている。"
+    ],
+    "diagnosis": "Win+Hの音声入力は話した言葉を文字として入力する機能ですが、ライブキャプションは再生中の音声を画面に字幕表示します。初回だけ端末内の音声認識用言語ファイルが必要です。設定スイッチが見つからない場合と、起動後にダウンロードが止まる場合を分けて確認します。",
+    "caution": "字幕は聞き取りを助けますが完全な記録として頼らず、重要な会話は内容を確認してください。組織端末の通信・言語ポリシーを無断で変更しないでください。取得を急いで非公式の言語パックを入れず、公式の更新経路を使います。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/use-live-captions-to-better-understand-audio",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/voice-typing-current-language-unavailable/",
+      "/windows/voice-access-language-setup-stuck/",
+      "/windows/automatic-file-download-app-blocked/"
+    ],
+    "closest_existing_url": "/windows/voice-typing-current-language-unavailable/",
+    "differentiation": "既存記事はWin+Hで話して文字を入力する症状。本記事は再生音声に字幕を付ける初回の言語ファイル取得を扱う。",
+    "fact_check": "Microsoftのライブキャプション公式案内はWin+Ctrl+L、設定経路、初回の音声処理同意、端末内認識用の言語ファイル取得を示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-focus-notifications-still-show",
+    "path": "/windows/windows-focus-notifications-still-show/",
+    "title": "Windowsのフォーカス中も一部の通知が出るとき",
+    "topic": "フォーカスセッション中なのに特定アプリの通知や音が届く症状",
+    "description": "フォーカスセッション中なのに特定アプリの通知や音が届く症状。応答不要の通知と優先通知の例外設定を確認します。 『設定』→『システム』→『通知』で『応答不可』の現在の状態を確認します。",
+    "answer": "応答不要の通知と優先通知の例外設定を確認します。 『設定』→『システム』→『通知』で『応答不可』の現在の状態を確認します。",
+    "steps": [
+      "『設定』→『システム』→『通知』で『応答不可』の現在の状態を確認します。",
+      "フォーカスセッションを開始し、応答不可が自動で有効になるか比べます。",
+      "『優先通知を設定』に対象アプリや連絡先が登録されていないか確認します。",
+      "対象アプリ固有の通知設定とWindowsの通知センターの記録を照合します。"
+    ],
+    "causes": [
+      "優先通知の例外で対象アプリの通知が許可されている。",
+      "フォーカスが終わり、応答不可が解除されている。",
+      "Windows通知ではなくアプリ自身が独自に音や画面表示を出している。"
+    ],
+    "diagnosis": "通知が一切届かない一般障害とは違い、静かにしたい時間に一部だけ表示される状態です。Microsoftはフォーカス開始時に応答不可が自動でオンになり、優先通知で例外を許可できると案内しています。通知センターには抑制された通知も残るため、表示されたアプリと許可リストを比較します。",
+    "caution": "緊急連絡や仕事上必須の通知を一括で無効にする前に、優先通知の用途を確認してください。フォーカスを試すために会議中の通知設定を広く変えず、変更した例外だけを記録して戻せるようにします。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/make-it-easier-to-focus-on-tasks",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-app-notifications-not-showing/",
+      "/windows/windows-focus-session-timer-not-visible/",
+      "/windows/windows-no-sound/"
+    ],
+    "closest_existing_url": "/windows/windows-app-notifications-not-showing/",
+    "differentiation": "既存記事は必要な通知が出ない問題。本記事はフォーカス中に出る例外と応答不可の動作を扱う。",
+    "fact_check": "Microsoftの集中支援案内は応答不可の設定、優先通知例外、抑制された通知が通知センターに残ることを示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "microsoft-store-purchased-app-not-found",
+    "path": "/windows/microsoft-store-purchased-app-not-found/",
+    "title": "Microsoft Storeで購入したアプリが見つからないとき",
+    "topic": "購入済みのアプリを別のWindows PCで再インストールしたいが一覧に見えない症状",
+    "description": "購入済みのアプリを別のWindows PCで再インストールしたいが一覧に見えない症状。購入時のMicrosoftアカウントと注文履歴を確認します。",
+    "answer": "購入時のMicrosoftアカウントと注文履歴を確認します。",
+    "steps": [
+      "Microsoft Storeにサインインしている個人または職場アカウントを確認します。",
+      "購入時に使ったアカウントのMicrosoft注文履歴を開き、対象商品を探します。",
+      "商品が別の機器で利用できるか、対象PCとの互換性と地域を確認します。",
+      "履歴にある場合は公式のインストール案内に進み、見つからなければ購入証明と注文番号を用意してサポートへ相談します。"
+    ],
+    "causes": [
+      "購入に使ったものと別のMicrosoftアカウントを見ている。",
+      "アプリが対象のPCやOSに対応せずストア表示が異なる。",
+      "商品がアプリではなく別経路のデジタル製品として注文履歴に記載されている。"
+    ],
+    "diagnosis": "Microsoft Storeのダウンロードが途中で止まる問題とは異なり、購入履歴またはライブラリで権利を見つけられない段階を扱います。Microsoftは購入したソフトウェアのダウンロードを注文履歴で確認するよう案内しています。アプリが別のPCに表示されない場合は互換性も確認し、再購入する前にアカウントを照合します。",
+    "caution": "見つからないという理由だけで同じ商品を再購入しないでください。注文番号や請求書には個人情報があるため公開掲示板へ載せず、公式のサポート窓口だけに提示します。職場購入のライセンスは組織の管理者に確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-gb/accounts-billing/find-and-install-your-microsoft-downloads-from-microsoft-store",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/microsoft-store-download-stuck/",
+      "/windows/outlook-message-recall-option-missing/",
+      "/windows/windows-passkey-list-missing-synced-key/"
+    ],
+    "closest_existing_url": "/windows/microsoft-store-download-stuck/",
+    "differentiation": "既存記事は取得中のダウンロード停止。本記事は購入権利とアカウント・機器互換性の確認を扱う。",
+    "fact_check": "Microsoft公式の購入済みダウンロード案内は購入時のMicrosoftアカウントで注文履歴を確認し、商品からインストールする手順を示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "task-manager-efficiency-mode-grayed",
+    "path": "/windows/task-manager-efficiency-mode-grayed/",
+    "title": "タスクマネージャーの効率モードが灰色で切り替えられないとき",
+    "topic": "特定のプロセスで効率モードのボタンが無効になっている症状",
+    "description": "特定のプロセスで効率モードのボタンが無効になっている症状。プロセスのグループと個別プロセスの違いを確認します。 タスクマネージャーの『プロセス』で対象がグループ表示か個別項目か確認します。",
+    "answer": "プロセスのグループと個別プロセスの違いを確認します。 タスクマネージャーの『プロセス』で対象がグループ表示か個別項目か確認します。",
+    "steps": [
+      "タスクマネージャーの『プロセス』で対象がグループ表示か個別項目か確認します。",
+      "グループを展開し、個別の子プロセスで効率モードを変更できるか確認します。",
+      "Windows Explorerのようなグループでは切り替えられない仕様を公式案内と照合します。",
+      "動作が遅い目的で変更したい場合は対象プロセスを特定し、必要な作業への影響を考えてから調整します。"
+    ],
+    "causes": [
+      "選択したものが効率モードを変更できないプロセスグループである。",
+      "個別の子プロセスではなく親のグループを選んでいる。",
+      "システムまたは管理対象プロセスで手動変更を認めない。"
+    ],
+    "diagnosis": "PC全体が重い問題と、特定プロセスで効率モードの操作だけが灰色になる問題を分けます。Microsoftの案内では多くのプロセスグループはオン・オフを切り替えられず、展開した個別項目では変更できる例があります。灰色のボタンを無理に有効化する方法は探さず、選択中の階層を確認します。",
+    "caution": "システムプロセスを強制終了したり、管理者権限を得るためにセキュリティ設定を変えたりしないでください。効率モードを無闇に切ると消費電力や発熱が増える場合があります。作業中のアプリの保存状態を確認してから動作を比較します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/edge/learn-about-performance-features-in-microsoft-edge",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-app-hidden-on-another-desktop/",
+      "/windows/touch-keyboard-icon-missing-windows/",
+      "/windows/downloaded-file-preview-unavailable/"
+    ],
+    "closest_existing_url": "/windows/windows-app-hidden-on-another-desktop/",
+    "differentiation": "既存記事はアプリが別の仮想デスクトップへ隠れる問題。本記事はタスクマネージャーのグループ階層と効率モードの変更可否を扱う。",
+    "fact_check": "MicrosoftのEdge性能機能に関する公式案内はWindowsタスクマネージャーで多くのプロセスグループの効率モードを切り替えられず、灰色表示になると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "classic-outlook-search-misses-recent-mail",
+    "path": "/windows/classic-outlook-search-misses-recent-mail/",
+    "title": "従来版Outlookの検索で最近のメールだけ出ないとき",
+    "topic": "受信箱で開ける新しいメールが検索結果に現れない症状",
+    "description": "受信箱で開ける新しいメールが検索結果に現れない症状。検索範囲とWindowsの検索インデックス状態を確認します。",
+    "answer": "検索範囲とWindowsの検索インデックス状態を確認します。",
+    "steps": [
+      "対象メールを受信箱で直接開けるか確認し、実際に保存されていることを確かめます。",
+      "従来版Outlookの検索範囲が現在のフォルダー・現在のメールボックス・すべてのメールボックスのどれか確認します。",
+      "Windowsの『インデックスのオプション』でMicrosoft Outlookが対象になっているか調べます。",
+      "インデックスの構築が完了していない場合は待ち、必要な場合だけ公式の再構築手順を検討します。"
+    ],
+    "causes": [
+      "検索範囲が別フォルダーや一つのメールボックスに限定されている。",
+      "Windows検索のインデックスにOutlookが含まれていない。",
+      "インデックス作成が途中で最近のメールをまだ取り込んでいない。"
+    ],
+    "diagnosis": "オフライン時にメール本文を開けない問題ではなく、手動では見えるメールが従来版Outlookの検索だけに出ない問題です。Microsoftは検索範囲とWindowsのインデックスを別々に確認するよう案内しています。最初からインデックスを作り直すと時間がかかるため、対象メールの存在と範囲を先に確認します。",
+    "caution": "検索結果にないことを削除済みと決めつけてメールを移動・消去しないでください。インデックス再構築は結果が揃うまで時間がかかります。職場アカウントの検索設定やポリシーを自己判断で変更せず、管理者に状態を伝えてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/outlook/fix-search-issues-by-rebuilding-your-instant-search-catalog",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/new-outlook-offline-mail-missing/",
+      "/windows/outlook-message-recall-option-missing/",
+      "/windows/photos-icloud-library-not-visible/"
+    ],
+    "closest_existing_url": "/windows/new-outlook-offline-mail-missing/",
+    "differentiation": "既存記事は新しいOutlookでオフラインのメールを開けない問題。本記事は従来版Outlookで保存済みの最近のメールを検索インデックスが見つけない問題を扱う。",
+    "fact_check": "Microsoftの従来版Outlook検索修復ガイドは検索対象範囲、インデックス対象にOutlookが含まれるか、構築未完了と再構築の順を示す。"
+  },
+  {
+    "category": "android",
+    "slug": "android-notification-cooldown-quiets-alerts",
+    "path": "/android/android-notification-cooldown-quiets-alerts/",
+    "title": "Androidで通知が続くと音とポップアップだけ弱くなるとき",
+    "topic": "短時間に多くの通知が来たときだけ音や画面表示が抑えられる症状",
+    "description": "短時間に多くの通知が来たときだけ音や画面表示が抑えられる症状。通知のクールダウン設定と例外を確認します。 通知履歴またはアプリで通知自体が届いているか確認します。",
+    "answer": "通知のクールダウン設定と例外を確認します。 通知履歴またはアプリで通知自体が届いているか確認します。",
+    "steps": [
+      "通知履歴またはアプリで通知自体が届いているか確認します。",
+      "『設定』→『通知』の全般にある『通知のクールダウン』を確認します。",
+      "短時間の連続通知と一件だけの通知で音・ポップアップの違いを比較します。",
+      "通話、アラーム、優先会話、緊急警報には例外があることを確認してから設定を調整します。"
+    ],
+    "causes": [
+      "通知のクールダウンが連続した通知の音を抑えている。",
+      "通知は届いているがポップアップだけ一時的に最小化されている。",
+      "アプリ固有のサイレント通知設定とクールダウンを混同している。"
+    ],
+    "diagnosis": "通知そのものが届かない一般障害とは違い、記録は残るが連続したときの音やポップアップだけが弱くなる問題です。Googleは短時間に通知が集中した際に中断を減らすクールダウン機能を説明しています。通常の一件と連続時を比べ、アプリの通知許可を無闇に変えず原因を絞ります。",
+    "caution": "通知音を強くする前に会議中や就寝中の設定との関係を確認してください。緊急警報や通話など公式に例外がある通知と通常通知を同じものとして扱わず、仕事や医療に必要な連絡手段は別経路でも確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9079661?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-notifications-not-arriving/",
+      "/android/android-not-receiving-calls/",
+      "/android/android-chat-bubble-not-appearing/"
+    ],
+    "closest_existing_url": "/android/android-notifications-not-arriving/",
+    "differentiation": "既存記事は通知が届かない・遅延する症状。本記事は届いた連続通知の音とポップアップを抑える仕様を扱う。",
+    "fact_check": "Android公式通知ヘルプは通知のクールダウンの設定経路、短時間の通知集中時に音とポップアップを最小化する動作、通話・アラーム等の例外を示す。"
+  },
+  {
+    "category": "android",
+    "slug": "android-identity-check-pin-not-accepted",
+    "path": "/android/android-identity-check-pin-not-accepted/",
+    "title": "Androidの本人確認でPINでは先へ進めないとき",
+    "topic": "信頼できる場所の外で重要な設定変更時に生体認証だけを要求される症状",
+    "description": "信頼できる場所の外で重要な設定変更時に生体認証だけを要求される症状。盗難対策の本人確認がオンかと現在地の扱いを確認します。 『設定』→『Google』→『すべてのサービス』→『盗難保護』で本人確認の状態を確認します。",
+    "answer": "盗難対策の本人確認がオンかと現在地の扱いを確認します。 『設定』→『Google』→『すべてのサービス』→『盗難保護』で本人確認の状態を確認します。",
+    "steps": [
+      "『設定』→『Google』→『すべてのサービス』→『盗難保護』で本人確認の状態を確認します。",
+      "操作中の場所が登録した信頼できる場所の外か確認します。",
+      "指紋または顔認証が登録済みで正常に使えるか、画面ロックとは分けて確認します。",
+      "認証に失敗する場合はGoogleの正式な本人確認・復旧案内を確認し、組織端末なら管理者へ相談します。"
+    ],
+    "causes": [
+      "本人確認が有効で信頼できる場所の外にいる。",
+      "要求される指紋・顔認証の登録または認識に問題がある。",
+      "通常の画面ロックのPIN入力と重要操作の追加認証を混同した。"
+    ],
+    "diagnosis": "盗難検出ロックを有効にできない問題ではなく、すでに利用中の端末で重要な操作をする際の認証方式がPINに切り替わらない問題です。Googleは信頼できる場所の外では生体認証を厳格に要求し、PIN・パターン・パスワードに代えられないと説明します。場所と操作の種類を先に確認します。",
+    "caution": "端末の保護を迂回するために盗難対策を無効化したり、信頼できる場所を安易に広げたりしないでください。認証情報を第三者へ渡さず、端末の所有者本人が公式の復旧経路を使います。機密情報を扱う職場端末では管理者の方針を優先します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/15146908?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/theft-detection-lock-option-missing/",
+      "/android/restricted-setting-accessibility-disabled/",
+      "/android/android-screen-recording-no-audio/"
+    ],
+    "closest_existing_url": "/android/theft-detection-lock-option-missing/",
+    "differentiation": "既存記事は盗難検出ロックの設定項目がない問題。本記事は本人確認が有効な状態で信頼できる場所以外の重要操作にPINを使えない仕様を扱う。",
+    "fact_check": "GoogleのAndroid盗難対策ヘルプは本人確認の生体認証、信頼できる場所の外ではPIN等へ代替できないこと、対象となる重要操作を説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-screen-attention-not-keeping-display-on",
+    "path": "/android/pixel-screen-attention-not-keeping-display-on/",
+    "title": "Pixelで画面を見ているのに表示が消えるとき",
+    "topic": "Pixelの画面注視をオンにしても読書中などに画面がタイムアウトする症状",
+    "description": "Pixelの画面注視をオンにしても読書中などに画面がタイムアウトする症状。画面注視の設定と周囲の明るさを確認します。 Pixelの『設定』→『ディスプレイとタップ』→『画面消灯』で画面注視を確認します。",
+    "answer": "画面注視の設定と周囲の明るさを確認します。 Pixelの『設定』→『ディスプレイとタップ』→『画面消灯』で画面注視を確認します。",
+    "steps": [
+      "Pixelの『設定』→『ディスプレイとタップ』→『画面消灯』で画面注視を確認します。",
+      "端末が画面注視の対応機種か、Pixel公式の条件を確認します。",
+      "明るい場所と暗い場所、顔がカメラに見える持ち方で動作を比較します。",
+      "画面消灯時間と省電力設定を控え、注視を使わないときの通常の消灯動作も確認します。"
+    ],
+    "causes": [
+      "画面注視がオフ、または端末が対応していない。",
+      "暗い場所や端末の角度により顔を認識しにくい。",
+      "画面消灯時間の設定と注視機能の動作を取り違えている。"
+    ],
+    "diagnosis": "自動回転が効かない問題とは別で、静止した画面を読んでいる間に消灯を遅らせる機能の切り分けです。GoogleはPixel 4以降の画面注視について、明るいが直射日光ではない場所で働きやすいと案内しています。機種、設定、照明条件を一つずつ変えて比較します。",
+    "caution": "画面を消さないために消灯時間を無制限に長くすると電池消費や画面の覗き見が増えます。公共の場で機密情報を開いたままにせず、検証後は必要な画面ロック時間へ戻してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/6111557?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-auto-rotate-not-working/",
+      "/android/pixel-at-a-glance-weather-missing/",
+      "/android/circle-to-search-unavailable/"
+    ],
+    "closest_existing_url": "/android/android-auto-rotate-not-working/",
+    "differentiation": "既存記事は端末の傾きによる縦横回転。本記事は顔を見ている間の画面消灯を遅らせる画面注視を扱う。",
+    "fact_check": "Pixel公式の画面設定ヘルプは画面注視がPixel 4以降で提供され、適度に明るく直射日光のない場所で動きやすいと説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "play-protect-blocks-one-app-install",
+    "path": "/android/play-protect-blocks-one-app-install/",
+    "title": "Google Playプロテクトが特定アプリの導入を止めたとき",
+    "topic": "一つのアプリだけが危険の警告でインストールを止められる症状",
+    "description": "一つのアプリだけが危険の警告でインストールを止められる症状。警告文と入手元を確認し、安全性を優先して判断します。 表示されたPlayプロテクトの警告文と対象アプリ名・入手元を記録します。",
+    "answer": "警告文と入手元を確認し、安全性を優先して判断します。 表示されたPlayプロテクトの警告文と対象アプリ名・入手元を記録します。",
+    "steps": [
+      "表示されたPlayプロテクトの警告文と対象アプリ名・入手元を記録します。",
+      "Google Play内の正規提供元と開発元の案内に、同じアプリがあるか確認します。",
+      "PlayストアのプロフィールからPlayプロテクトを開き、端末の検査結果を確認します。",
+      "誤判定と考える場合も保護を切らず、開発元の公式窓口やGoogleの異議申し立て経路を確認します。"
+    ],
+    "causes": [
+      "アプリが有害または望ましくない動作と判定された。",
+      "未検証の配布元が機密性の高い権限を要求している。",
+      "別のアプリや偽の配布ページを正規版と取り違えている。"
+    ],
+    "diagnosis": "一般的なダウンロード失敗とは異なり、Googleの安全検査が明示的に導入を止めた状態です。公式案内ではPlayプロテクトがPlay外のアプリも調べ、危険なアプリを警告・無効化・削除したり、未検証で敏感な権限を使うアプリを止めたりします。原因を確かめるまでは回避しないでください。",
+    "caution": "警告を突破するためにPlayプロテクトを無効化したり、同じAPKを別サイトから探したりしないでください。金融情報や連絡先への権限を求めるアプリは特に慎重に扱い、必要な業務アプリなら組織の管理者と提供元へ確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/2812853?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-app-wont-open/",
+      "/android/play-store-apps-not-auto-updating/",
+      "/android/google-play-download-pending/"
+    ],
+    "closest_existing_url": "/android/android-app-wont-open/",
+    "differentiation": "既存記事は導入済みアプリが起動しない一般障害。本記事は導入前に安全検査が一つのアプリを止めた警告と正規の相談経路を扱う。",
+    "fact_check": "GoogleのPlayプロテクト公式ヘルプはPlay内外アプリの検査、危険アプリの警告・無効化・削除、未検証の敏感な権限を使うアプリの導入防止を説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-https-only-secure-site-unavailable",
+    "path": "/browser/firefox-https-only-secure-site-unavailable/",
+    "title": "Firefoxで『安全なサイトを利用できません』と出るとき",
+    "topic": "HTTPだけのサイトでFirefoxのHTTPS-Onlyモードが接続を止める症状",
+    "description": "HTTPだけのサイトでFirefoxのHTTPS-Onlyモードが接続を止める症状。URLとHTTPS-Onlyの例外設定を安全に確認します。",
+    "answer": "URLとHTTPS-Onlyの例外設定を安全に確認します。",
+    "steps": [
+      "アドレスバーのURLがhttpかhttpsか、警告の正確な文言を確認します。",
+      "Firefoxの『プライバシーとセキュリティ』でHTTPS-Onlyモードの設定を確認します。",
+      "対象サイトに正規のhttps版が提供されているか、提供元の案内を確認します。",
+      "HTTPしかない場合はサイトの信頼性と送信する情報を考え、必要なときだけ対象サイトの例外を検討します。"
+    ],
+    "causes": [
+      "対象サイトがHTTPSに対応していない。",
+      "FirefoxのHTTPS-OnlyモードがHTTPへの接続を止めた。",
+      "安全な代替URLを確認せず古いHTTPリンクを使っている。"
+    ],
+    "diagnosis": "一般的なネットワーク不通や証明書期限切れとは異なり、FirefoxがHTTPをHTTPSへアップグレードしようとして対象サイトに安全な版がない場合の専用画面です。Mozillaは『Secure Site Not Available』をHTTPS-Onlyモードの結果として説明しています。まず正規のHTTPS版がないか調べます。",
+    "caution": "警告を無視して個人情報やパスワードをHTTPサイトへ入力しないでください。例外を設ける場合は提供元を確かめ、必要な範囲に限定します。職場や学校のサイトでは管理者にHTTPS対応を相談し、全体の保護を無効にしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/https-only-prefs",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-connection-not-private/",
+      "/browser/firefox-secure-dns-off-managed-network/",
+      "/browser/firefox-site-autoplay-exception-not-working/"
+    ],
+    "closest_existing_url": "/browser/chrome-connection-not-private/",
+    "differentiation": "既存記事はChromeの証明書・接続警告。本記事はFirefoxがHTTP専用サイトをHTTPS-Onlyモードで止める固有の画面と例外を扱う。",
+    "fact_check": "Mozilla公式のHTTPS-Onlyモード案内はHTTPS版がないHTTPサイトで『Secure Site Not Available』が出ることとサイト単位の例外管理を説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-synced-tabs-other-device-missing",
+    "path": "/browser/firefox-synced-tabs-other-device-missing/",
+    "title": "Firefoxで他の端末のタブが見えないとき",
+    "topic": "同じMozillaアカウントなのに別端末で開いたタブを一覧から探せない症状",
+    "description": "同じMozillaアカウントなのに別端末で開いたタブを一覧から探せない症状。各端末の同期と『開いているタブ』の選択を確認します。 両方の端末が同じMozillaアカウントで同期中か確認します。",
+    "answer": "各端末の同期と『開いているタブ』の選択を確認します。 両方の端末が同じMozillaアカウントで同期中か確認します。",
+    "steps": [
+      "両方の端末が同じMozillaアカウントで同期中か確認します。",
+      "同期設定で『開いているタブ』が対象に選ばれているか調べます。",
+      "FirefoxのサイドバーまたはFirefox Viewの『他の端末のタブ』を開きます。",
+      "送信元端末でタブが実際に開いていることを確認し、同期を更新してから比較します。"
+    ],
+    "causes": [
+      "送信元と受信先で別のMozillaアカウントを使っている。",
+      "同期項目から『開いているタブ』が外れている。",
+      "ブックマーク画面を探しており、専用のタブ表示画面を開いていない。"
+    ],
+    "diagnosis": "ブックマークが消えた問題ではなく、今開いているタブを別端末で再開する機能の問題です。Mozillaは両端末の同期設定で『Open tabs』を有効にし、サイドバーやFirefox Viewから確認するよう案内しています。アカウント・同期項目・表示場所を順に分けます。",
+    "caution": "同期を直すためにFirefoxのプロファイルや履歴を削除しないでください。共有端末にサインインすると開いているタブの情報が見える場合があります。確認後は共有端末のアカウント状態とプライバシーを点検してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/view-synced-tabs-other-devices",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-saved-tab-groups-not-visible/",
+      "/browser/firefox-containers-icon-missing/",
+      "/browser/firefox-pdf-annotations-not-in-saved-file/"
+    ],
+    "closest_existing_url": "/browser/chrome-saved-tab-groups-not-visible/",
+    "differentiation": "既存記事はChrome内で保存したタブグループ。本記事はFirefoxの別端末で現在開いているタブの同期と表示を扱う。",
+    "fact_check": "Mozilla公式の同期タブ案内は全端末の同期設定、Open tabsの選択、サイドバーとFirefox Viewでの表示経路を説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-install-page-as-app-option-missing",
+    "path": "/browser/chrome-install-page-as-app-option-missing/",
+    "title": "ChromeでWebページをアプリとしてインストールできないとき",
+    "topic": "サイトのアプリ化アイコンがアドレスバーに出ない、または操作が見つからない症状",
+    "description": "サイトのアプリ化アイコンがアドレスバーに出ない、または操作が見つからない症状。アイコンの有無とChromeメニューの別経路を確認します。",
+    "answer": "アイコンの有無とChromeメニューの別経路を確認します。",
+    "steps": [
+      "パソコン版Chromeで対象のWebサイトを開き、アドレスバーのインストールアイコンを確認します。",
+      "アイコンがない場合はChromeのメニューから『キャスト、保存、共有』→『ページをアプリとしてインストール』を探します。",
+      "インストール後はchrome://appsで対象のWebアプリがあるか確認します。",
+      "管理対象の端末で項目がない場合はブラウザ版と組織のアプリ導入方針を確認します。"
+    ],
+    "causes": [
+      "対象サイトが専用のインストールアイコンを表示する条件を満たしていない。",
+      "アイコンだけを探し、メニューの『ページをアプリとしてインストール』を見落とした。",
+      "管理端末の制限やChromeの版によって表示が異なる。"
+    ],
+    "diagnosis": "デスクトップのショートカットを作るだけの操作やChrome自体のインストール失敗とは異なります。Google公式案内ではサイトによってアドレスバーにアイコンが出る場合もありますが、メニューからWebページをアプリとして導入する経路もあります。アイコンがないだけで利用不可と断定しません。",
+    "caution": "不審なサイトを『アプリ』にして通知や常駐を許可しないでください。インストール前にサイトの正規URLと提供元を確認します。仕事用端末では組織の許可が必要な場合があるため、制限を回避する拡張機能を入れないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/9658361?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-reading-mode-unavailable/",
+      "/browser/chrome-reading-list-side-panel-missing/",
+      "/browser/firefox-translate-icon-missing/"
+    ],
+    "closest_existing_url": "/browser/chrome-reading-mode-unavailable/",
+    "differentiation": "既存記事は文章だけを読むリーディングモード。本記事はWebページを独立したアプリとして起動するインストール経路を扱う。",
+    "fact_check": "Chrome公式のWebアプリ利用ガイドはアドレスバーのインストールアイコンが一部サイトに出ること、メニューの『Install page as app』とchrome://appsを説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-site-local-network-access-blocked",
+    "path": "/browser/edge-site-local-network-access-blocked/",
+    "title": "EdgeのWebサイトから社内機器に接続できないとき",
+    "topic": "Webページは開くが同じLAN上の機器やサーバーへの要求だけ許可を求められる症状",
+    "description": "Webページは開くが同じLAN上の機器やサーバーへの要求だけ許可を求められる症状。サイトごとのローカルネットワーク許可と管理ポリシーを確認します。",
+    "answer": "サイトごとのローカルネットワーク許可と管理ポリシーを確認します。",
+    "steps": [
+      "Edgeで対象の正規サイトを開き、ローカルネットワークへのアクセス確認が出るか記録します。",
+      "『設定』→『プライバシー、検索、サービス』→『サイトのアクセス許可』でローカルネットワークの許可を確認します。",
+      "別の正規サイトでは同じ機器へアクセスできるか比べ、サイト単位の問題かを確認します。",
+      "管理端末で設定が固定される場合はポリシーを変更せず、URLと機器の用途を管理者に伝えます。"
+    ],
+    "causes": [
+      "対象サイトへのローカルネットワーク許可を拒否した。",
+      "ブラウザがアクセス前の確認を要求している。",
+      "組織ポリシーが全体または特定URLのLAN要求を制限している。"
+    ],
+    "diagnosis": "ページ全体が開けない症状とは違い、Webサイトから社内プリンターやローカルサーバーへ送る要求だけが制限される状態です。MicrosoftはEdgeのローカルネットワークアクセスをサイトごとの権限として説明し、組織管理者のポリシーが優先されることを示します。表示された許可要求の相手を確認して判断します。",
+    "caution": "知らないWebサイトへLAN内機器のアクセスを許可しないでください。家庭や職場の内部アドレスをサイトへ見せる可能性があります。管理ポリシーやブラウザの保護機能を無断で解除せず、必要な正規サイトだけを管理者と確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/edge/control-a-website-s-access-to-the-local-network-in-microsoft-edge",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/edge-sync-not-working/",
+      "/browser/edge-ie-mode-reload-missing/",
+      "/browser/safari-extension-not-running-one-site/"
+    ],
+    "closest_existing_url": "/browser/edge-sync-not-working/",
+    "differentiation": "既存記事はお気に入り・パスワードのアカウント同期。本記事はWebサイトからLAN内機器へのアクセス許可と管理ポリシーを扱う。",
+    "fact_check": "MicrosoftのEdgeローカルネットワークアクセス案内はサイトからLANへの要求に許可が必要なこと、サイト別設定の経路、管理者の許可・禁止ポリシーを示す。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-attendance-report-missing-after-meeting",
+    "path": "/sns/teams-attendance-report-missing-after-meeting/",
+    "title": "Teams会議の出席レポートが終了後に見つからないとき",
+    "topic": "会議を主催したのに参加者の出席CSVを取得できない症状",
+    "description": "会議を主催したのに参加者の出席CSVを取得できない症状。会議形式、主催者の役割とレポート設定を確認します。 対象会議の主催者または共同主催者か、会議形式が通常会議・チャネル会議・ウェビナーのどれか確認します。",
+    "answer": "会議形式、主催者の役割とレポート設定を確認します。 対象会議の主催者または共同主催者か、会議形式が通常会議・チャネル会議・ウェビナーのどれか確認します。",
+    "steps": [
+      "対象会議の主催者または共同主催者か、会議形式が通常会議・チャネル会議・ウェビナーのどれか確認します。",
+      "会議終了から数分待ち、会議チャットの『出席』タブを開きます。",
+      "会議オプションの『出席レポートを許可』が有効だったか確認します。",
+      "インスタントのチャネル会議など公式に対象外の形式ではないか確かめ、必要なら管理者へ相談します。"
+    ],
+    "causes": [
+      "会議オプションで出席レポートが無効だった。",
+      "出席タブを見る権限のない参加者アカウントで開いている。",
+      "インスタントのチャネル会議などレポート対象外の形式である。"
+    ],
+    "diagnosis": "文字起こしや録画の保存とは異なり、会議の参加者と滞在時間を記録するCSVの所在です。Microsoftは通常会議の主催者と共同主催者が終了後約5分でチャット内の出席タブから確認できると案内します。一方でインスタントのチャネル会議には対応せず、形式と役割の違いを先に分けます。",
+    "caution": "出席レポートには参加者の氏名や参加時間が含まれます。取得できても公開チャンネルや外部へ無断共有せず、組織の保存期間と個人情報の規則に従ってください。参加者の同意設定を無視した名簿作成は避けます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/manage-meeting-attendance-reports-in-microsoft-teams",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-transcription-button-locked/",
+      "/sns/zoom-polls-button-missing-host/",
+      "/sns/zoom-meeting-file-transfer-missing/"
+    ],
+    "closest_existing_url": "/sns/teams-transcription-button-locked/",
+    "differentiation": "既存記事は会議の発言を文字起こしする権限。本記事は会議後の参加者CSVと会議形式による提供可否を扱う。",
+    "fact_check": "MicrosoftのTeams出席レポート公式案内は終了後約5分の出席タブ、主催者・共同主催者、出席レポートの許可、インスタントチャネル会議の非対応を説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-computer-recording-conversion-fails",
+    "path": "/sns/zoom-computer-recording-conversion-fails/",
+    "title": "ZoomのPC内録画が変換エラーで動画にならないとき",
+    "topic": "録画データは端末にあるが会議終了後のMP4変換だけが失敗する症状",
+    "description": "録画データは端末にあるが会議終了後のMP4変換だけが失敗する症状。空き容量と元の録画ファイルを保持して変換手順を確認します。",
+    "answer": "空き容量と元の録画ファイルを保持して変換手順を確認します。",
+    "steps": [
+      "Zoomデスクトップアプリの録画一覧で対象のPC内録画と変換状態を確認します。",
+      "保存先ドライブの空き容量と録画フォルダーのパスに問題がないか確認します。",
+      "元の録画ファイル名を変えず、Zoomアプリの『変換』操作を試します。",
+      "変換中はPCをスリープ・終了せず、失敗文言と元ファイルを保存して公式サポートへ相談します。"
+    ],
+    "causes": [
+      "変換に必要なディスク容量が不足している。",
+      "録画の保存先パスに問題がある。",
+      "変換中の終了・スリープや元ファイルの改名で処理が中断した。"
+    ],
+    "diagnosis": "会議録画そのものがどこにも見つからない問題とは違い、double_click_to_convert.zoomなどの元データはあるのにMP4へ変換できない状態です。Zoomは容量不足、保存先、変換中の電源断やファイル名変更を原因として挙げます。元データを残したままアプリの変換操作から確認します。",
+    "caution": "元の.zoomファイルを削除・改名して再試行しないでください。録画には参加者の映像と会話が含まれるため外部の変換サイトへアップロードせず、保存先を変更するときもアクセス権を確認してください。会議の録画同意を守ります。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061761",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-recording-not-found/",
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/zoom-language-interpretation-unavailable/"
+    ],
+    "closest_existing_url": "/sns/zoom-recording-not-found/",
+    "differentiation": "既存記事はクラウドかPC内かを含む録画ファイルの所在。本記事は発見済みのPC内録画がMP4へ変換できない原因と復旧手順を扱う。",
+    "fact_check": "ZoomのPC内録画トラブル公式案内は容量不足、無効な保存先、変換中の電源断・ファイル名変更、デスクトップアプリでの再変換を説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-scheduled-event-create-disabled",
+    "path": "/sns/discord-scheduled-event-create-disabled/",
+    "title": "Discordでサーバーの予定イベントを作成できないとき",
+    "topic": "予定イベントの作成が一つのサーバーやチャンネルで許可されない症状",
+    "description": "予定イベントの作成が一つのサーバーやチャンネルで許可されない症状。サーバーとチャンネル双方のイベント権限を確認します。 対象サーバーの予定イベント画面で作成操作が表示されるか確認します。",
+    "answer": "サーバーとチャンネル双方のイベント権限を確認します。 対象サーバーの予定イベント画面で作成操作が表示されるか確認します。",
+    "steps": [
+      "対象サーバーの予定イベント画面で作成操作が表示されるか確認します。",
+      "自分のロールに『イベントを作成』の権限があるかサーバー管理者へ確認します。",
+      "イベントを行う特定チャンネルの権限で作成・管理が制限されていないか管理者に調べてもらいます。",
+      "許可される場所でだけ短い試験イベントを作り、日時とチャンネルを確認してから公開します。"
+    ],
+    "causes": [
+      "サーバーのロールにイベント作成権限がない。",
+      "特定チャンネルまたはカテゴリで作成権限が制限されている。",
+      "作成と管理の権限を混同し、編集できないイベントを作成不可と判断した。"
+    ],
+    "diagnosis": "招待リンクが無効な問題やチャンネルにメッセージを投稿できない問題とは別です。Discord公式はイベントの作成・管理権限がサーバー単位だけでなく、チャンネルとカテゴリでも設定できると説明します。どのサーバー・チャンネルで再現するかを分け、利用者側で権限を回避しないでください。",
+    "caution": "権限がないまま別アカウントを使ってイベントを作らないでください。イベントには参加者や開催場所が表示されるため、公開範囲を管理者と確認します。ロールの変更は他の機能にも影響するので、必要な範囲を管理者が判断してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/4409494125719-Scheduled-Events",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-channel-message-permission-denied/",
+      "/sns/discord-onboarding-channel-hidden/",
+      "/sns/discord-per-server-avatar-option-missing/"
+    ],
+    "closest_existing_url": "/sns/discord-channel-message-permission-denied/",
+    "differentiation": "既存記事は通常メッセージ投稿の許可。本記事は予定イベントの作成・管理権限をサーバーとチャンネルで照合する。",
+    "fact_check": "Discord公式の予定イベント案内はCreate EventとManage Eventの権限がサーバー、チャンネル、カテゴリの各階層にあることを説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-group-album-new-album-fails",
+    "path": "/sns/line-group-album-new-album-fails/",
+    "title": "LINEグループで新しいアルバムを作れないとき",
+    "topic": "トークは使えるがグループのアルバムを新規作成できない症状",
+    "description": "トークは使えるがグループのアルバムを新規作成できない症状。同名アルバムと作成数・アップロード上限を確認します。 対象トークがグループまたは友だちとのトークか、Keepメモではないか確認します。",
+    "answer": "同名アルバムと作成数・アップロード上限を確認します。 対象トークがグループまたは友だちとのトークか、Keepメモではないか確認します。",
+    "steps": [
+      "対象トークがグループまたは友だちとのトークか、Keepメモではないか確認します。",
+      "同じトーク内に同じ名前のアルバムがないか、アルバム数を確認します。",
+      "一度に追加する写真・動画の数と、アルバム内の合計数が公式上限以内か確かめます。",
+      "名前や追加数を調整して少数の写真で試し、エラーが続く場合は表示文とアプリ版をLINE公式サポートへ伝えます。"
+    ],
+    "causes": [
+      "同じトークに同名のアルバムが既に存在する。",
+      "一つのトークで作れるアルバム数またはアルバム内の件数上限に達した。",
+      "一度に追加する写真・動画の数が上限を超えている。"
+    ],
+    "diagnosis": "Keepメモに古い添付ファイルが見えない症状とは別で、グループで新しい共有アルバムを作るときの制限を扱います。LINE公式は同名不可、トーク内のアルバム数、アルバム内の合計件数、一度のアップロード数を具体的に定めています。作成画面のエラーと上限のどれに当たるか確認します。",
+    "caution": "整理のために既存アルバムを先に削除しないでください。ほかの参加者の写真も消える可能性があります。個人の写真を別サービスへ無断で移さず、グループの共有範囲と写真の公開意図を確認します。月間のアップロード上限もあるため一度に大量再試行しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20000248",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-keep-memo-attachments-unavailable/",
+      "/sns/line-keep-memo-chat-missing/",
+      "/sns/line-transfer-qr-scan-fails/"
+    ],
+    "closest_existing_url": "/sns/line-keep-memo-attachments-unavailable/",
+    "differentiation": "既存記事はKeepメモの古い添付データ。本記事はグループ共有アルバムの作成条件と件数・同名制限を扱う。",
+    "fact_check": "LINE公式のアルバム作成ヘルプは同一トークで同名不可、100アルバム/トーク、1,000件/アルバム、300件/アップロード等の上限を示す。"
+  }
+]
