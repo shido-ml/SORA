@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "keep-shared-note-collaborator-cannot-edit",
+    "path": "/google/keep-shared-note-collaborator-cannot-edit/",
+    "title": "Google Keepの共有メモを相手が編集できないとき",
+    "topic": "共有したKeepメモを相手が閲覧できても変更できない、または共同編集者に表示されない症状",
+    "description": "共有したKeepメモを相手が閲覧できても変更できない、または共同編集者に表示されない症状。送ったメモと相手のGoogleアカウントを照合し、共同編集者への追加状態を確認します。",
+    "answer": "送ったメモと相手のGoogleアカウントを照合し、共同編集者への追加状態を確認します。",
+    "steps": [
+      "メモを開いて共同編集者一覧に相手の正しいメールアドレスがあるか確認する",
+      "相手に招待先と同じGoogleアカウントでKeepを開いてもらう",
+      "相手側でそのメモを開き、本文編集とラベル変更のどちらができないか分ける",
+      "必要なら所有者が共同編集者を正しいアドレスで追加し直す"
+    ],
+    "causes": [
+      "別のGoogleアカウントでメモを開いている",
+      "共同編集者ではなく別アプリ経由のコピーを送っている",
+      "相手のアドレスが共同編集者一覧に登録されていない"
+    ],
+    "diagnosis": "Google Keepで共同編集者として共有したメモと、メモの内容を別アプリへ送ったコピーは異なります。公式ヘルプでは共同編集者は本文、リスト、画像、描画などを編集でき、ラベルや色などは各自の表示に関わります。本文の編集可否と個人用の整理設定を分けて確認すると、権限不足と表示の思い違いを切り分けられます。",
+    "caution": "共有メモには住所や連絡先などの個人情報が含まれることがあります。共同編集者を追加する前にアドレスを再確認し、意図しない相手に共有した場合は所有者の正規操作で外してください。共同編集のためにアカウントのパスワードを共有しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/keep/answer/6101196?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/keep-reminder-notification-missing/",
+      "/google/forms-edit-response-link-unavailable/",
+      "/google/drive-transfer-ownership-unavailable/"
+    ],
+    "closest_existing_url": "/google/keep-reminder-notification-missing/",
+    "differentiation": "既存記事はKeepメモの通知元と時刻。本記事はメモ本文の共同編集者と招待先アカウントの確認を扱う。",
+    "fact_check": "Google Keep公式ヘルプは共同編集者を追加してメモ本文やリスト等を編集できることと、色やラベルが個人用の扱いであることを案内する。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-timeline-unavailable-on-computer",
+    "path": "/google/maps-timeline-unavailable-on-computer/",
+    "title": "パソコン版Googleマップでタイムラインが開けないとき",
+    "topic": "以前パソコンで見ていた移動履歴のタイムラインがWeb版マップにない症状",
+    "description": "以前パソコンで見ていた移動履歴のタイムラインがWeb版マップにない症状。端末保存への変更を確認し、同じアカウントのスマートフォン版マップで調べます。",
+    "answer": "端末保存への変更を確認し、同じアカウントのスマートフォン版マップで調べます。",
+    "steps": [
+      "パソコン版のタイムラインが出ないのか、スマートフォン版でも履歴がないのか分ける",
+      "スマートフォンのGoogleマップでプロフィールからタイムラインを開く",
+      "正しいアカウントとタイムラインの保存設定を確認する",
+      "端末変更前なら公式のバックアップと読み込みの案内を確認する"
+    ],
+    "causes": [
+      "パソコン版マップでは端末由来のタイムラインが表示されない仕様になった",
+      "別のGoogleアカウントの端末を見ている",
+      "タイムラインがオフまたは自動削除設定の対象になっている"
+    ],
+    "diagnosis": "地図や保存した場所が消えた問題とは違い、タイムラインは訪問と経路の履歴です。Googleは端末にあるデータから表示する方式のため、パソコン版マップではタイムラインを利用できないと明記しています。スマートフォンでも見えなければアカウント、保存設定、バックアップの有無を確認し、PC表示の復旧だけを探し続けないようにします。",
+    "caution": "タイムラインには訪問先など機微な位置情報が含まれます。調査のために第三者の端末や共有アカウントへ履歴を書き出さないでください。自動削除やバックアップを変更する前に保存範囲とプライバシーへの影響を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/maps/answer/6258979?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/maps-saved-places-not-visible/",
+      "/google/maps-offline-map-not-updating/",
+      "/google/google-maps-offline-map-not-downloading/"
+    ],
+    "closest_existing_url": "/google/maps-saved-places-not-visible/",
+    "differentiation": "既存記事は保存した場所やリストの表示。本記事は移動履歴のタイムラインがPCでは利用できない仕様と端末上の確認を扱う。",
+    "fact_check": "Googleマップ公式ヘルプはタイムラインのデータが端末から表示されるためパソコン版マップで使えず、アプリで確認すると明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "hide-my-email-forwarding-not-arriving",
+    "path": "/iphone/hide-my-email-forwarding-not-arriving/",
+    "title": "iPhoneの『メールを非公開』宛ての転送メールが届かないとき",
+    "topic": "メールを非公開で作ったアドレスへの連絡が普段の受信箱に転送されない症状",
+    "description": "メールを非公開で作ったアドレスへの連絡が普段の受信箱に転送されない症状。対象アドレスが有効か、転送先として選んだ実際のメールアドレスを確認します。",
+    "answer": "対象アドレスが有効か、転送先として選んだ実際のメールアドレスを確認します。",
+    "steps": [
+      "設定でApple AccountのiCloudから『メールを非公開』を開く",
+      "相手に伝えた非公開アドレスが停止・無効化されていないか確認する",
+      "『転送先』が現在使っている受信アドレスか確認する",
+      "受信先の迷惑メール・フィルタを見てから送信元に再送を依頼する"
+    ],
+    "causes": [
+      "非公開アドレスを無効化して転送が止まった",
+      "転送先が別の登録済みメールアドレスになっている",
+      "転送先の迷惑メールや受信フィルタに振り分けられている"
+    ],
+    "diagnosis": "iCloudメール全体の受信障害ではなく、特定のランダムアドレスへの連絡だけが届かない状態です。Appleの案内では『メールを非公開』の各アドレスは転送先を持ち、無効化したアドレスは転送しません。相手に伝えたアドレスと転送先を確認し、通常のメールも受信できないのか分けて調べます。",
+    "caution": "届かない確認のために非公開アドレスを公開掲示板へ載せないでください。転送先を変えるとほかの非公開アドレスにも影響する場合があります。iCloud+の契約を新たに申し込む前に、現在の設定と公式の利用条件を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/105078",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/icloud-sign-in-loop/",
+      "/iphone/text-message-forwarding-mac-missing/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/icloud-sign-in-loop/",
+    "differentiation": "既存記事はApple Accountのサインイン要求。本記事は作成済み非公開メールアドレスの有効状態と転送先を調べる。",
+    "fact_check": "Apple公式サポートは『メールを非公開』の転送先をiCloud設定で選べることと、無効化したアドレスでは転送されないことを説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "lockdown-mode-website-content-missing",
+    "path": "/iphone/lockdown-mode-website-content-missing/",
+    "title": "iPhoneのロックダウンモードで特定サイトの機能が使えないとき",
+    "topic": "ロックダウンモード中に一部サイトの表示や機能だけが制限される症状",
+    "description": "ロックダウンモード中に一部サイトの表示や機能だけが制限される症状。安全機能の意図した制限かを確認し、必要なら信頼できる対象サイトだけを個別設定します。",
+    "answer": "安全機能の意図した制限かを確認し、必要なら信頼できる対象サイトだけを個別設定します。",
+    "steps": [
+      "設定の『プライバシーとセキュリティ』でロックダウンモードの状態を確認する",
+      "問題のサイトがほかの信頼できる端末でどう見えるか比較する",
+      "Safariで対象サイトのロックダウンモードの例外設定を確認する",
+      "例外を使う必要があるならサイトの正規ドメインを確認して限定的に設定する"
+    ],
+    "causes": [
+      "ロックダウンモードがWeb技術の一部を制限している",
+      "サイトが安全機能と相性の悪い機能に依存している",
+      "サイト自体の障害や通信問題で表示されていない"
+    ],
+    "diagnosis": "通常のSafariの読み込み失敗と異なり、ロックダウンモードでは攻撃面を減らすため意図的に一部Web機能が制限されます。Appleは対象Webサイトを個別に除外する方法を案内します。まず制限による表示差かを確かめ、必要性とサイトの信頼性が確認できた場合だけ例外を検討してください。",
+    "caution": "ロックダウンモードの例外はそのサイトへの保護を弱めます。警告が出たからといって端末全体の保護を無条件で切らず、偽サイトではないことを確認してください。高い脅威に備えて有効化している場合は管理者や支援者へ相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/105120",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/stolen-device-protection-setting-missing/",
+      "/iphone/location-services-not-working/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/stolen-device-protection-setting-missing/",
+    "differentiation": "既存記事は盗難デバイスの保護の設定項目。本記事は別の高度な安全機能であるロックダウンモードがWeb機能に与える影響を扱う。",
+    "fact_check": "Apple公式サポートはロックダウンモードで一部Web技術が制限され、Safariの特定サイトを例外として設定できると説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "freeform-board-missing-other-device",
+    "path": "/iphone/freeform-board-missing-other-device/",
+    "title": "Freeformのボードが別のApple製デバイスに出ないとき",
+    "topic": "iPhoneで作ったFreeformボードが別端末の一覧に表示されない症状",
+    "description": "iPhoneで作ったFreeformボードが別端末の一覧に表示されない症状。同じApple Accountと各端末のFreeform用iCloud設定を確認します。",
+    "answer": "同じApple Accountと各端末のFreeform用iCloud設定を確認します。",
+    "steps": [
+      "元のiPhoneにボードが残っていることを確認する",
+      "両端末が同じApple Accountでサインインしているか確かめる",
+      "各端末のiCloud設定でFreeformが有効か確認する",
+      "iCloud Driveの同期状態と通信を見て、ボードが表示されるまで元端末から削除しない"
+    ],
+    "causes": [
+      "端末ごとにFreeformのiCloud同期が無効である",
+      "別のApple Accountでボード一覧を見ている",
+      "同期がまだ完了していない、またはiCloud Driveが使えない"
+    ],
+    "diagnosis": "共有招待が届かない問題ではなく、自分のボードが自分の別端末に出ない状態です。Appleの案内ではFreeformのiCloud設定を端末ごとに有効にすると同じボードへアクセスできます。元端末にデータがあるかを先に確認し、同期元を保全したままアカウントと設定を比べます。",
+    "caution": "ボードを早く表示するために元端末のアプリを削除したり、iCloudをサインアウトしたりしないでください。未同期のボードが端末にだけある場合、復元できない恐れがあります。共有ボードには他者の情報が含まれるため診断用に公開しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-ca/guide/icloud/mmd1b86048ac/icloud",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/icloud-shared-photo-library-invite-not-working/",
+      "/iphone/iphone-calls-on-mac-not-ringing/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/icloud-shared-photo-library-invite-not-working/",
+    "differentiation": "既存記事は共有写真ライブラリの招待。本記事は自分のFreeformボードを自分の別端末へ同期する設定を扱う。",
+    "fact_check": "Apple公式ヘルプは端末ごとにiCloudのFreeformを有効にし、同じボードを複数端末で利用する手順を説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "filevault-turn-on-unavailable",
+    "path": "/mac/filevault-turn-on-unavailable/",
+    "title": "MacでFileVaultを有効にできないとき",
+    "topic": "Macのディスク暗号化を有効にする操作が許可されない、または進められない症状",
+    "description": "Macのディスク暗号化を有効にする操作が許可されない、または進められない症状。管理権限と組織管理の状態を確認し、回復キーの扱いを決めてから進めます。",
+    "answer": "管理権限と組織管理の状態を確認し、回復キーの扱いを決めてから進めます。",
+    "steps": [
+      "システム設定の『プライバシーとセキュリティ』でFileVaultの状態を確認する",
+      "現在のMacユーザーに管理権限があるか確認する",
+      "職場管理のMacなら管理者にSecure Tokenや配布ポリシーの状態を確認してもらう",
+      "有効化が可能になったら回復キーの保存先を決め、公式の画面手順で実行する"
+    ],
+    "causes": [
+      "現在のユーザーに必要な権限がない",
+      "組織管理のFileVault設定やSecure Tokenの割り当てが未完了である",
+      "回復キーの設定手順が未完了である"
+    ],
+    "diagnosis": "Time Machineのバックアップ失敗ではなく、Mac内蔵ディスクを暗号化するFileVaultの有効化そのものが進まない問題です。Appleの導入資料は管理対象MacでSecure TokenやBootstrap Tokenを使って有効化を管理すると説明します。個人所有か管理対象かを先に分け、権限問題を無理に端末初期化で解決しようとしないことが重要です。",
+    "caution": "FileVaultの回復キーを失うとデータへアクセスできなくなる恐れがあります。キーをこの記事のコメントやチャットに貼らず、Appleと組織の案内に従って安全に保管してください。管理端末の設定やトークンを独断で変更しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/security/managing-filevault-sec8447f5049/web",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/time-machine-backup-failed/",
+      "/mac/external-drive-not-showing/",
+      "/mac/mac-stage-manager-cannot-enable/"
+    ],
+    "closest_existing_url": "/mac/time-machine-backup-failed/",
+    "differentiation": "既存記事は外部バックアップの作成失敗。本記事は内蔵ディスクの暗号化を有効化する権限と回復キーを扱う。",
+    "fact_check": "AppleのFileVault管理資料は管理対象MacでSecure TokenとBootstrap Tokenが有効化に関係することを説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-screen-distance-option-missing",
+    "path": "/iphone/iphone-screen-distance-option-missing/",
+    "title": "iPhoneで『画面との距離』が使えないとき",
+    "topic": "スクリーンタイムに画面との距離がない、または近づけても案内が出ない症状",
+    "description": "スクリーンタイムに画面との距離がない、または近づけても案内が出ない症状。TrueDepthカメラ搭載機種か、iOSの対応版か、機能をオンにしたか確認します。",
+    "answer": "TrueDepthカメラ搭載機種か、iOSの対応版か、機能をオンにしたか確認します。",
+    "steps": [
+      "iPhoneの機種とiOS版を確認する",
+      "Face IDに使うTrueDepthカメラがある機種か確認する",
+      "設定のスクリーンタイムから『画面との距離』を有効にする",
+      "短時間近づけただけで判断せず、通常の使用時に案内が出るか確認する"
+    ],
+    "causes": [
+      "TrueDepthカメラ非搭載のiPhoneである",
+      "iOS 17より前の版を使っている",
+      "スクリーンタイム内で機能がオフになっている"
+    ],
+    "diagnosis": "画面拡大表示や明るさの問題ではなく、端末との距離を知らせるスクリーンタイム機能です。AppleはTrueDepthカメラを備えたiOS 17以降の機種が対象で、一定時間近すぎると検出すると説明します。対応外の端末なら設定を探し続けても表示されません。対象機種でも瞬間的に近づけただけで警告が出るとは限りません。",
+    "caution": "視力や健康状態を診断する機能ではありません。警告の有無だけで適切な使用距離を断定しないでください。カメラの故障が疑われる場合も非公式修理や初期化を急がず、Appleの診断窓口へ相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/105007",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/screen-zoomed-in/",
+      "/iphone/facetime-calls-not-connecting-iphone/",
+      "/iphone/iphone-screen-recording-control-missing/"
+    ],
+    "closest_existing_url": "/iphone/screen-zoomed-in/",
+    "differentiation": "既存記事は表示が拡大した症状。本記事はTrueDepthカメラを使う画面距離の警告機能の対象条件を扱う。",
+    "fact_check": "Apple公式サポートは『画面との距離』がTrueDepthカメラ搭載機種のiOS 17以降で利用できると明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "iphone-live-text-photo-button-missing",
+    "path": "/iphone/iphone-live-text-photo-button-missing/",
+    "title": "iPhoneの写真で文字の認識ボタンが出ないとき",
+    "topic": "写真内の文字を選択するLive Textのボタンが出ない症状",
+    "description": "写真内の文字を選択するLive Textのボタンが出ない症状。対応する言語と設定、対象画像の文字の見え方を確認します。",
+    "answer": "対応する言語と設定、対象画像の文字の見え方を確認します。",
+    "steps": [
+      "設定の『一般』から『言語と地域』を開きLive Textが有効か確認する",
+      "写真アプリで文字が鮮明な別の写真を開いて比較する",
+      "動画なら文字が映るフレームで一時停止する",
+      "対応する地域・言語とiOSの条件をAppleの案内で確認する"
+    ],
+    "causes": [
+      "Live Textの設定がオフである",
+      "画像がぼやけていて文字として認識しにくい",
+      "言語や地域が機能の対応範囲外である"
+    ],
+    "diagnosis": "カメラ全体が使えない状態ではなく、既存の写真や動画から文字を選択できない症状です。Appleの説明ではLive Textの設定と対応言語・地域が関係し、動画では文字のある場面で一時停止して操作します。鮮明な別画像で再現するかを比べれば、特定画像の認識失敗と機能自体の設定を分けられます。",
+    "caution": "写真に含まれる住所、証明書、連絡先などの文字を診断のために公開しないでください。誤認識した文字をそのまま支払いや申請に使わず原本と照合します。言語・地域設定を変える前に他のアプリへの影響を確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-ie/guide/iphone/iph37fdd714b/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/iphone-live-speech-option-unavailable/",
+      "/iphone/visual-look-up-icon-missing/",
+      "/iphone/iphone-camera-live-text-button-missing/"
+    ],
+    "closest_existing_url": "/iphone/iphone-live-speech-option-unavailable/",
+    "differentiation": "既存記事は入力した文字を読み上げるライブスピーチ。本記事は写真・動画から文字を認識するLive Textを扱う。",
+    "fact_check": "AppleのiPhoneユーザーガイドはLive Textの設定場所、対応地域・言語の注意、写真と一時停止した動画での操作を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "memory-integrity-incompatible-driver",
+    "path": "/windows/memory-integrity-incompatible-driver/",
+    "title": "Windowsでメモリ整合性をオンにできないとき",
+    "topic": "Windowsセキュリティが互換性のないドライバーを示しメモリ整合性を有効化できない症状",
+    "description": "Windowsセキュリティが互換性のないドライバーを示しメモリ整合性を有効化できない症状。表示されたドライバーの提供元を確認し、対応版があるか調べます。",
+    "answer": "表示されたドライバーの提供元を確認し、対応版があるか調べます。",
+    "steps": [
+      "Windowsセキュリティの『デバイスセキュリティ』からコア分離の詳細を開く",
+      "互換性がないと表示されるドライバー名と機器を記録する",
+      "Windows Updateと機器メーカーの正規サポートで対応ドライバーを確認する",
+      "更新がない場合はその機器やアプリが必要か管理者・メーカーに相談する"
+    ],
+    "causes": [
+      "古いドライバーがメモリ整合性と互換性がない",
+      "仮想化に必要なハードウェア設定が有効でない",
+      "管理端末の設定が制限されている"
+    ],
+    "diagnosis": "アプリ一つがSmart App Controlにブロックされる問題とは異なり、OSのコア分離機能自体がオンにならない状態です。Microsoftは互換性のないドライバーが有効化を妨げる場合、機器メーカーの対応版を確認するよう案内しています。表示されたドライバーと機器を特定してから更新し、必要な機器を無計画に削除しないことが重要です。",
+    "caution": "保護を無効にすることを安易な解決策にしないでください。非公式ドライバー配布サイトを使わず、更新や削除の前に対象機器とBitLocker回復キー、必要なファイルのバックアップを確認します。職場PCでは管理者に相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/security/windows-security/device-security-in-the-windows-security-app",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/smart-app-control-one-app-blocked/",
+      "/windows/smart-app-control-off-cannot-enable/",
+      "/windows/windows-security-not-opening/"
+    ],
+    "closest_existing_url": "/windows/smart-app-control-one-app-blocked/",
+    "differentiation": "既存記事は一つのアプリの実行ブロック。本記事はメモリ整合性をオンにできないドライバー互換性を扱う。",
+    "fact_check": "Microsoft公式ヘルプはメモリ整合性と互換性のないドライバーの表示、メーカーによる更新、仮想化要件を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-spatial-sound-option-unavailable",
+    "path": "/windows/windows-spatial-sound-option-unavailable/",
+    "title": "Windowsで空間オーディオを選べないとき",
+    "topic": "ヘッドホンでWindows Sonicなどの空間オーディオ設定が見つからない症状",
+    "description": "ヘッドホンでWindows Sonicなどの空間オーディオ設定が見つからない症状。再生中の出力機器を特定し、その機器のサウンド設定を開きます。",
+    "answer": "再生中の出力機器を特定し、その機器のサウンド設定を開きます。",
+    "steps": [
+      "設定の『システム』から『サウンド』を開く",
+      "実際に音が出ているヘッドホンや再生デバイスを出力一覧で選ぶ",
+      "その機器のプロパティで『空間オーディオ』とWindows Sonicの選択肢を確認する",
+      "別の出力機器と比較し、機器のドライバーとWindowsの更新状態を確認する"
+    ],
+    "causes": [
+      "選択している出力機器が目的のヘッドホンと違う",
+      "機器・ドライバーが空間オーディオを提供していない",
+      "アプリ側の音声設定とWindowsの出力先が一致していない"
+    ],
+    "diagnosis": "Windowsから音が一切出ない問題ではなく、通常の音は聞こえるのに空間オーディオの選択肢だけがない状態です。Microsoftの案内は再生デバイスのプロパティからWindows Sonic for Headphonesを選ぶ手順です。まず実際の出力先を特定し、機器を変えた場合に項目が現れるかを見ることでOS全体と機器固有の問題を分けます。",
+    "caution": "有料の音響アプリを購入する前に、無料のWindows Sonicと機器の対応状況を確認してください。ドライバーを非公式サイトから入れず、音量を上げすぎた状態でテストしないでください。難聴予防のため小さい音量から比べます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/drivers/how-to-turn-on-spatial-sound-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-no-sound/",
+      "/windows/windows-sandbox-feature-missing/",
+      "/windows/windows-power-mode-option-missing/"
+    ],
+    "closest_existing_url": "/windows/windows-no-sound/",
+    "differentiation": "既存記事は音が出ない症状。本記事は再生可能な出力機器で空間オーディオの選択肢がない状態を扱う。",
+    "fact_check": "Microsoft公式サポートはサウンド設定で再生デバイスを選び、そのプロパティからWindows Sonic for Headphonesを指定する手順を示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-clipboard-not-syncing-between-pcs",
+    "path": "/windows/windows-clipboard-not-syncing-between-pcs/",
+    "title": "Windowsのクリップボードが別PCに同期しないとき",
+    "topic": "Win+Vの履歴は見えるのにコピーしたテキストが別のWindows PCへ届かない症状",
+    "description": "Win+Vの履歴は見えるのにコピーしたテキストが別のWindows PCへ届かない症状。両端末の同期設定とサインイン中のアカウントを確認します。",
+    "answer": "両端末の同期設定とサインイン中のアカウントを確認します。",
+    "steps": [
+      "両方のPCでWin+Vを押しローカル履歴が有効か確かめる",
+      "設定の『システム』から『クリップボード』を開きデバイス間同期を確認する",
+      "両端末が同じMicrosoftアカウントまたは職場アカウントか照合する",
+      "小さなテキストで自動同期を試し、管理端末ならポリシーを管理者に確認する"
+    ],
+    "causes": [
+      "デバイス間の同期がオフである",
+      "別のMicrosoftアカウントでサインインしている",
+      "職場のポリシーが同期を制限している"
+    ],
+    "diagnosis": "既存のWin+V履歴が表示されない問題と違い、この問題は片方の端末内ではコピー履歴を使えても別PCに届きません。Microsoftは同期が各端末の設定と同じアカウントに結び付くと説明します。まず単純な文字列で試し、ローカル履歴とクラウド同期を別の段階として確認してください。",
+    "caution": "パスワード、認証コード、機密情報を同期テストに使わないでください。クリップボードには意図せず個人情報が残る場合があります。共有PCや管理PCでは同期を有効にする前に利用規則を確認し、不要ならテスト後にオフへ戻してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/apps/using-the-clipboard",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/clipboard-history-not-showing-windows-11/",
+      "/windows/microsoft-store-purchased-app-not-found/",
+      "/windows/remote-desktop-not-connecting-windows/"
+    ],
+    "closest_existing_url": "/windows/clipboard-history-not-showing-windows-11/",
+    "differentiation": "既存記事は同じPCでWin+V履歴が出ない問題。本記事は履歴が使える状態で別PCへ同期されない問題を扱う。",
+    "fact_check": "Microsoft公式ヘルプはクリップボードのデバイス間同期設定、同じMicrosoftまたは職場アカウントが必要なことを説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "snipping-tool-record-button-missing",
+    "path": "/windows/snipping-tool-record-button-missing/",
+    "title": "Windowsの切り取りツールに画面録画ボタンがないとき",
+    "topic": "スクリーンショットは撮れるのに切り取りツールから動画を記録できない症状",
+    "description": "スクリーンショットは撮れるのに切り取りツールから動画を記録できない症状。Windowsの版と切り取りツールの画面を確認し、録画機能の入口を調べます。",
+    "answer": "Windowsの版と切り取りツールの画面を確認し、録画機能の入口を調べます。",
+    "steps": [
+      "スタートから切り取りツールを単独で開き録画ボタンを探す",
+      "WindowsキーとShiftとRを押し録画領域の選択が出るか確認する",
+      "Windows 11かどうかと切り取りツールの更新状態を確認する",
+      "利用できる場合は短い画面だけを試し録画ファイルの保存を確認する"
+    ],
+    "causes": [
+      "Windows 10など切り取りツールの録画機能がない環境である",
+      "スクリーンショット用ショートカットだけを開いている",
+      "切り取りツールの更新が必要である"
+    ],
+    "diagnosis": "Clipchampの書き出しが止まる問題ではなく、録画を始めるボタンやショートカットが使えない段階です。Microsoftの案内では切り取りツールを開き『録画』から『新規』を選ぶか、WindowsキーとShiftとRで開始します。Windows 11での録画機能と、Windows 10での別手段を分けて確認します。",
+    "caution": "画面録画には通知、パスワード、個人情報が映ることがあります。テストでは機密画面を閉じ、保存先を確認してから共有してください。非公式の録画アプリを急いで導入する前にWindowsと公式アプリの対応状況を調べます。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/apps/use-snipping-tool-to-capture-screenshots",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/clipchamp-export-freezes-same-point/",
+      "/windows/windows-screenshot-file-not-found/",
+      "/windows/windows-touchscreen-not-responding/"
+    ],
+    "closest_existing_url": "/windows/clipchamp-export-freezes-same-point/",
+    "differentiation": "既存記事は編集済み動画の書き出し停止。本記事は切り取りツールで録画を開始する入口がない問題を扱う。",
+    "fact_check": "Microsoft公式ヘルプは切り取りツールの録画ボタンとWindowsキー＋Shift＋Rの操作を案内し、Windows 11の録画機能を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-mobile-hotspot-no-internet",
+    "path": "/windows/windows-mobile-hotspot-no-internet/",
+    "title": "Windowsのモバイルホットスポットに接続できるのにネットが使えないとき",
+    "topic": "PCのホットスポットには子端末がつながるがWebを開けない症状",
+    "description": "PCのホットスポットには子端末がつながるがWebを開けない症状。共有元のインターネット接続と共有先の方式を確認します。 Windows PC自体がWebへ接続できるか先に確認する",
+    "answer": "共有元のインターネット接続と共有先の方式を確認します。 Windows PC自体がWebへ接続できるか先に確認する",
+    "steps": [
+      "Windows PC自体がWebへ接続できるか先に確認する",
+      "設定の『ネットワークとインターネット』からモバイルホットスポットを開く",
+      "『インターネット接続を共有する元』が実際に通信できる回線か確認する",
+      "Wi-FiとBluetoothの共有方式を確かめ、子端末を再接続して比べる"
+    ],
+    "causes": [
+      "PC側の元回線がインターネットに接続していない",
+      "共有元に使えない別のネットワークを選んでいる",
+      "子端末はWi-Fiへ接続したがホットスポット側の通信が通っていない"
+    ],
+    "diagnosis": "AndroidやiPhoneのテザリング障害とは異なり、Windows PCが親機になって通信を共有する場面です。Microsoftの設定画面には『共有する元』と『共有方法』が別にあります。子端末のWi-Fi接続アイコンだけで正常と判断せず、PC自体の通信、元回線、子端末のWeb表示を順に比較すると原因を絞れます。",
+    "caution": "従量制回線を共有する場合は通信量と契約条件を確認してください。職場や施設のネットワークを管理者の許可なく再共有しないでください。設定を調べるためにファイアウォール全体を無効化せず、必要ならネットワーク管理者に相談します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/connectivity-networking/use-your-windows-device-as-a-mobile-hotspot",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-hotspot-connected-no-internet/",
+      "/windows/windows-wifi-connected-no-internet/",
+      "/windows/windows-network-shared-folder-inaccessible/"
+    ],
+    "closest_existing_url": "/android/android-hotspot-connected-no-internet/",
+    "differentiation": "既存記事はAndroidスマホが親機のテザリング。本記事はWindows PC側の共有元回線と共有方式を調べる。",
+    "fact_check": "Microsoft公式ヘルプはWindowsのモバイルホットスポットで共有元の回線とWi-FiまたはBluetoothの共有方法を選ぶ手順を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powertoys-remap-not-working-admin-app",
+    "path": "/windows/powertoys-remap-not-working-admin-app/",
+    "title": "PowerToysのキー割り当てが管理者アプリだけ効かないとき",
+    "topic": "通常アプリでは再割り当てが動くのに管理者権限のウインドウだけ元のキーになる症状",
+    "description": "通常アプリでは再割り当てが動くのに管理者権限のウインドウだけ元のキーになる症状。PowerToysと対象アプリの実行権限の違いを確認します。",
+    "answer": "PowerToysと対象アプリの実行権限の違いを確認します。",
+    "steps": [
+      "通常のメモ帳と管理者権限のアプリで同じキーを試す",
+      "PowerToysが起動しKeyboard Managerが有効か確認する",
+      "対象アプリが管理者として実行されているか確認する",
+      "必要性と権限を理解した場合のみ管理者に相談してPowerToys側の実行権限を合わせる"
+    ],
+    "causes": [
+      "対象アプリだけが管理者権限で動いている",
+      "PowerToysが背景で停止している",
+      "別のキーボードフックやOS予約ショートカットと競合している"
+    ],
+    "diagnosis": "一般的なキーボード故障ではなく、同じ再割り当てが通常アプリで働き管理者アプリだけで失敗する状態です。MicrosoftのPowerToys資料は権限差があるとKeyboard Managerのリマップが効かず、PowerToys自体の起動と機能の有効化も必要と説明します。アプリの権限を比べてから競合を疑うと不要な設定変更を避けられます。",
+    "caution": "PowerToysを常時管理者として実行すると操作できる範囲が広がります。職場PCでは権限を上げず管理者へ相談してください。Windowsキー＋LなどOS予約ショートカットを無理に変更しないでください。設定の変更前に元の割り当てを記録します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/keyboard-shortcut-conflict/",
+      "/windows/windows-three-finger-touchpad-gesture-wrong-action/",
+      "/windows/default-app-filetype-not-changing/"
+    ],
+    "closest_existing_url": "/mac/keyboard-shortcut-conflict/",
+    "differentiation": "既存記事はMacのショートカット競合。本記事はWindows PowerToysのKeyboard Managerが管理者アプリに届かない権限差を扱う。",
+    "fact_check": "Microsoft PowerToys公式資料は再割り当てにはPowerToysの常駐とKeyboard Managerの有効化が必要で、管理者アプリとの権限差があると効かないと説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "unknown-tracker-alerts-not-showing",
+    "path": "/android/unknown-tracker-alerts-not-showing/",
+    "title": "Androidで不明なトラッカーの警告が出ないとき",
+    "topic": "持ち物の近くに追跡タグがあるのに不明なトラッカーの通知がない症状",
+    "description": "持ち物の近くに追跡タグがあるのに不明なトラッカーの通知がない症状。対応OSと警告設定を確認し、必要なら公式の手動スキャンを使います。",
+    "answer": "対応OSと警告設定を確認し、必要なら公式の手動スキャンを使います。",
+    "steps": [
+      "Androidの版が公式の対象である6以降か確認する",
+      "設定の『安全性と緊急情報』から不明なトラッカー警告が有効か確認する",
+      "警告画面にある手動スキャンで周囲を確認する",
+      "不審なタグが見つかった場合は公式の安全手順に沿って情報を記録する"
+    ],
+    "causes": [
+      "警告設定がオフになっている",
+      "対応OSや追跡タグの条件を満たしていない",
+      "タグが所有者と離れて自分と移動するという自動警告の条件に達していない"
+    ],
+    "diagnosis": "端末の盗難検出ロックとは異なり、他人の追跡タグが自分と一緒に移動していないかを知らせる機能です。Googleは自動通知にタグの対応状況と移動条件があると説明し、手動スキャンも用意しています。警告がないだけで安全と断定せず、心配な場合は設定と手動スキャンを確認します。",
+    "caution": "実際に身の危険を感じる場合は安全な場所へ移動し、地域の警察や支援先へ相談してください。タグを見つけても証拠を記録する前に壊したり、所有者を自分で探しに行ったりしないでください。位置情報のスクリーンショットを公開しないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/13658562?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/theft-detection-lock-option-missing/",
+      "/android/notification-history-empty/",
+      "/android/android-mobile-data-not-working/"
+    ],
+    "closest_existing_url": "/android/theft-detection-lock-option-missing/",
+    "differentiation": "既存記事はスマホ本体を奪われた際の盗難検出ロック。本記事は持ち物の追跡タグを検知する別機能を扱う。",
+    "fact_check": "Google Android公式ヘルプはAndroid 6以降の不明なトラッカー警告、自動警告の条件、手動スキャンの方法を説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "android-quick-share-receive-not-appearing",
+    "path": "/android/android-quick-share-receive-not-appearing/",
+    "title": "Androidのクイック共有で受信の通知が出ないとき",
+    "topic": "相手がクイック共有で送ろうとしても自分のスマホに受信のポップアップが出ない症状",
+    "description": "相手がクイック共有で送ろうとしても自分のスマホに受信のポップアップが出ない症状。受信モード、公開範囲、相手側の送信先を順に確認します。 クイック設定または設定からクイック共有画面を開く",
+    "answer": "受信モード、公開範囲、相手側の送信先を順に確認します。 クイック設定または設定からクイック共有画面を開く",
+    "steps": [
+      "クイック設定または設定からクイック共有画面を開く",
+      "『受信』モードとデバイスの公開範囲を確認する",
+      "近くに置いた相手の送信画面で自分の端末名が表示されるか確かめる",
+      "受信ポップアップが出れば送信元と内容を確認して承諾する"
+    ],
+    "causes": [
+      "受信モードが開かれておらず公開範囲が狭い",
+      "相手が別の端末を送信先に選んでいる",
+      "近距離通信や接続条件が整っていない"
+    ],
+    "diagnosis": "Windowsの近距離共有やAndroidのデバイス間サービスとは異なる、Androidクイック共有の受信画面の問題です。Googleの案内では受信モードを開くと近くの端末から見えるようになり、送信要求に対する承諾ポップアップが表示されます。送信側に自分の端末が見えない段階と、見えるが通知が出ない段階を分けます。",
+    "caution": "受信モード中は近くの他人から端末が見える場合があります。受信するファイルと送信者を確認し、不要なときは受信画面を閉じて公開範囲を戻してください。知らない相手の要求を承諾したり、個人情報を含むファイルを試験送信したりしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/15728591?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-cross-device-service-device-missing/",
+      "/android/notification-history-empty/",
+      "/android/android-quick-share-device-not-showing/"
+    ],
+    "closest_existing_url": "/android/android-cross-device-service-device-missing/",
+    "differentiation": "既存記事は同一アカウントのデバイス間サービスに別端末が出ない問題。本記事は近くの相手からのクイック共有受信要求を扱う。",
+    "fact_check": "Googleのクイック共有公式ヘルプは受信モードで周囲の端末から可視になり、送信者と内容を確認して承諾する手順を案内する。"
+  },
+  {
+    "category": "android",
+    "slug": "google-play-parental-pin-forgotten",
+    "path": "/android/google-play-parental-pin-forgotten/",
+    "title": "Google Playの保護者による使用制限PINを忘れたとき",
+    "topic": "自分で設定したGoogle Playのコンテンツ制限PINを思い出せず設定を変更できない症状",
+    "description": "自分で設定したGoogle Playのコンテンツ制限PINを思い出せず設定を変更できない症状。端末内Google PlayのPINとFamily Linkの管理を区別して確認します。",
+    "answer": "端末内Google PlayのPINとFamily Linkの管理を区別して確認します。",
+    "steps": [
+      "PINを求めている画面がGoogle Playのコンテンツ制限かFamily Linkか確認する",
+      "自分が設定した端末内の制限ならGoogle公式の『PINを忘れた場合』を確認する",
+      "Playストアのアプリデータを消す前に現在の制限設定を記録する",
+      "正規の端末管理者が再設定した後、年齢制限と購入制限を元の意図に合わせて設定し直す"
+    ],
+    "causes": [
+      "端末内のPlayコンテンツ制限PINを忘れた",
+      "Family Linkの保護者設定と端末内PINを混同している",
+      "アプリデータの消去後に制限の再設定が必要になっている"
+    ],
+    "diagnosis": "アプリのダウンロード保留やインストール障害ではなく、Playストア内のコンテンツ制限の管理用PINの問題です。Googleは端末内PINを忘れた場合、Playストアのアプリデータを消すと制限とPINがリセットされると案内しています。ただしこれはFamily Linkの管理を解除する方法ではありません。どちらの管理方式かを先に確認します。",
+    "caution": "子どもが保護者の許可なく制限を外すための手順として使わないでください。管理者や保護者本人が操作し、リセット後は保護設定を必ず再設定します。アプリデータを消す前に端末のほかのPlay設定への影響を公式説明で確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/googleplay/answer/1075738?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/google-play-download-pending/",
+      "/android/play-store-apps-not-auto-updating/",
+      "/android/android-find-hub-device-not-showing/"
+    ],
+    "closest_existing_url": "/android/google-play-download-pending/",
+    "differentiation": "既存記事はアプリ取得の保留。本記事はGoogle Playの端末内コンテンツ制限PINの再設定とFamily Linkとの区別を扱う。",
+    "fact_check": "Google Play公式ヘルプは忘れた端末内の保護者による使用制限PINをPlayストアのアプリデータ消去でリセットし、制限を再設定するよう案内する。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-adaptive-charging-not-activating",
+    "path": "/android/pixel-adaptive-charging-not-activating/",
+    "title": "Pixelでアダプティブ充電が働かないとき",
+    "topic": "充電の最適化を設定しても通常の速さで満充電になり、アダプティブ充電が表示されない症状",
+    "description": "充電の最適化を設定しても通常の速さで満充電になり、アダプティブ充電が表示されない症状。充電の最適化設定と普段の充電習慣の学習状態を確認します。",
+    "answer": "充電の最適化設定と普段の充電習慣の学習状態を確認します。",
+    "steps": [
+      "Pixelの設定でバッテリーの『充電の最適化』を開く",
+      "アダプティブ充電が選ばれているか確認する",
+      "最近の端末初期設定や旅行で充電時刻が変わっていないか振り返る",
+      "約2週間の学習期間を考慮して同じ充電習慣で表示を観察する"
+    ],
+    "causes": [
+      "充電の最適化がオフまたは別の方式になっている",
+      "充電習慣の学習がまだ終わっていない",
+      "旅行などで充電時刻が普段と異なり自動調整が働かない"
+    ],
+    "diagnosis": "バッテリーシェアの途中停止や充電できない故障とは異なり、充電自体は進むが満充電のタイミング調整が働かない状態です。Google公式ヘルプは学習に約14日かかり、習慣が変わると有効にならない場合があると説明します。設定と経過日数を見て、すぐ故障や電池劣化と決めつけないことが大切です。",
+    "caution": "充電器やケーブルが熱くなる、膨張するなど物理的な異常があれば使用をやめ公式サポートへ相談してください。最適化を確かめるために意図的な過充電や完全放電を繰り返さないでください。設定名は機種とAndroid版で異なる場合があります。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelphone/answer/17412942?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/pixel-battery-share-stops-early/",
+      "/android/pixel-camera-qr-link-not-shown/",
+      "/android/circle-to-search-unavailable/"
+    ],
+    "closest_existing_url": "/android/pixel-battery-share-stops-early/",
+    "differentiation": "既存記事はPixelから他機器へ給電するバッテリーシェア。本記事はPixel自身の充電時刻を調整するアダプティブ充電を扱う。",
+    "fact_check": "Google Pixel公式ヘルプはアダプティブ充電の設定場所、習慣の学習に約14日必要なこと、習慣が変わると働かない場合を説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-vertical-tabs-option-disabled",
+    "path": "/browser/edge-vertical-tabs-option-disabled/",
+    "title": "Edgeで縦型タブに切り替えられないとき",
+    "topic": "Microsoft Edgeの縦型タブの項目が使えない、または管理されていますと表示される症状",
+    "description": "Microsoft Edgeの縦型タブの項目が使えない、または管理されていますと表示される症状。ブラウザーの表示設定と組織のポリシーを分けて確認します。",
+    "answer": "ブラウザーの表示設定と組織のポリシーを分けて確認します。",
+    "steps": [
+      "Edgeのタブ領域にあるタブ操作メニューから縦型タブへの切り替えを探す",
+      "設定の外観で縦型タブに関する項目を確認する",
+      "個人端末か組織管理端末か確認し『管理されています』の表示を記録する",
+      "管理端末なら管理者にVerticalTabsAllowedポリシーの状態を確認する"
+    ],
+    "causes": [
+      "タブの操作メニューを見つけていない",
+      "Edgeの外観設定で縦型タブが非表示になっている",
+      "組織のVerticalTabsAllowedポリシーで使用を制限されている"
+    ],
+    "diagnosis": "ホームボタンやお気に入りバーが見えない問題とは異なり、Edgeのタブを上部から側面へ切り替える機能です。Microsoftのポリシー資料では管理者が縦型タブの利用を制御できます。個人用の表示設定で隠れているだけか、組織管理の制限かを見分け、管理端末で制限を回避する変更は行いません。",
+    "caution": "職場のポリシーを解除する目的でレジストリや設定ファイルを勝手に編集しないでください。縦型タブが利用できなくても開いているページの内容は残ります。ブラウザーの再設定やプロファイル削除の前にタブと同期状態を確認します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/verticaltabsallowed",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/edge-home-button-not-visible/",
+      "/browser/edge-sync-not-working/",
+      "/browser/edge-print-clipped-scaled-wrong/"
+    ],
+    "closest_existing_url": "/browser/edge-home-button-not-visible/",
+    "differentiation": "既存記事はホームボタンの表示。本記事は縦型タブの切り替え可否と組織ポリシーを調べる。",
+    "fact_check": "Microsoft Edge公式ポリシー資料はVerticalTabsAllowedの設定によりユーザーの縦型タブ利用を制御できると説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-reader-view-button-missing",
+    "path": "/browser/firefox-reader-view-button-missing/",
+    "title": "Firefoxでリーダービューのボタンが出ないとき",
+    "topic": "Firefoxで特定のWebページだけ読みやすい表示への切り替えボタンが見つからない症状",
+    "description": "Firefoxで特定のWebページだけ読みやすい表示への切り替えボタンが見つからない症状。そのページがリーダービューの対象か、別の本文ページと比べます。",
+    "answer": "そのページがリーダービューの対象か、別の本文ページと比べます。",
+    "steps": [
+      "記事本文がある別のWebページをFirefoxで開いてボタンが出るか比べる",
+      "対象ページのアドレスバーにリーダービューのアイコンがあるか見る",
+      "メニューバーの『表示』からリーダービューに入れるか試す",
+      "ページ構成が非対応なら印刷用表示などサイトが用意する正規の閲覧方法を使う"
+    ],
+    "causes": [
+      "そのページをFirefoxがリーダービューに対応する記事と判定していない",
+      "ログイン画面や動的ページで本文を抽出できない",
+      "アドレスバーの表示だけを探しメニューの入口を見落としている"
+    ],
+    "diagnosis": "Firefoxの翻訳ボタンやPDF機能とは異なり、記事本文を簡略表示するリーダービューの入口です。Mozillaの公式説明では対象のページでのみアイコンが表示され、メニューバーからも利用できます。別の記事ページで表示できるならFirefox全体の故障ではなく対象ページの構造による可能性が高いため、設定の初期化を急ぎません。",
+    "caution": "リーダービューが出ないページを読むために正体不明の拡張機能を入れないでください。ログインが必要な本文を外部の変換サイトへ貼ると内容や認証情報が漏れる恐れがあります。元サイトの利用規約と安全性を守って閲覧してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/firefox-translate-icon-missing/",
+      "/browser/firefox-pip-control-not-visible/",
+      "/browser/firefox-containers-icon-missing/"
+    ],
+    "closest_existing_url": "/browser/firefox-translate-icon-missing/",
+    "differentiation": "既存記事はFirefoxの翻訳機能の表示。本記事はページ構造に応じて提供されるリーダービューの可否を扱う。",
+    "fact_check": "Mozilla公式ヘルプはリーダービューが利用できるページでアドレスバーにアイコンが現れ、表示メニューからも開けると説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "chrome-tab-search-button-missing",
+    "path": "/browser/chrome-tab-search-button-missing/",
+    "title": "Chromeでタブ検索ボタンが見えないとき",
+    "topic": "開いているタブを探すChromeのタブ検索アイコンだけが見つからない症状",
+    "description": "開いているタブを探すChromeのタブ検索アイコンだけが見つからない症状。タブ検索の固定状態とキーボードからの起動を確認します。 パソコン版Chromeのタブバーでタブ検索アイコンの位置を確認する",
+    "answer": "タブ検索の固定状態とキーボードからの起動を確認します。 パソコン版Chromeのタブバーでタブ検索アイコンの位置を確認する",
+    "steps": [
+      "パソコン版Chromeのタブバーでタブ検索アイコンの位置を確認する",
+      "WindowsならCtrl＋Shift＋A、MacならCommand＋Shift＋Aを押す",
+      "ショートカットで開くならタブバーで固定が外れていないか確認する",
+      "表示された一覧で既存のタブを検索し新規タブ作成と混同していないか確かめる"
+    ],
+    "causes": [
+      "タブ検索アイコンの固定が外れている",
+      "タブグループや新しいタブのボタンと見分けがついていない",
+      "モバイル版とパソコン版の操作を混同している"
+    ],
+    "diagnosis": "保存済みタブグループが消えた問題ではなく、現在開いているタブを横断検索するボタンの場所の問題です。Google公式ヘルプはタブ検索をタブバーから開く方法と、固定を外せること、WindowsとMacのショートカットを示しています。ショートカットで機能が開くならタブのデータは失われていません。",
+    "caution": "タブ検索を直すためにタブを一括で閉じたりプロファイルを消したりしないでください。仕事用の多くのタブを開いている場合は保存状態を確認し、ショートカットだけで使えるなら急いで設定を変更する必要はありません。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chrome/answer/2391819?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-saved-tab-groups-not-visible/",
+      "/browser/chrome-install-page-as-app-option-missing/",
+      "/browser/firefox-synced-tabs-other-device-missing/"
+    ],
+    "closest_existing_url": "/browser/chrome-saved-tab-groups-not-visible/",
+    "differentiation": "既存記事は保存したタブグループが見えない問題。本記事は開いているタブを探す検索ボタンの固定状態を扱う。",
+    "fact_check": "Google Chrome公式ヘルプはタブ検索の固定解除、WindowsのCtrl＋Shift＋AとMacのCommand＋Shift＋Aを案内する。"
+  },
+  {
+    "category": "browser",
+    "slug": "safari-hide-distracting-items-missing",
+    "path": "/browser/safari-hide-distracting-items-missing/",
+    "title": "Safariで『気をそらす項目を非表示』が見つからないとき",
+    "topic": "iPhoneのSafariでページ内の一部表示を隠すメニューが見つからない症状",
+    "description": "iPhoneのSafariでページ内の一部表示を隠すメニューが見つからない症状。iOSの対応版とSafariのページメニューを確認します。",
+    "answer": "iOSの対応版とSafariのページメニューを確認します。",
+    "steps": [
+      "iPhoneのiOS版が18以降か確認する",
+      "Safariで対象のWebページを開きアドレスバー横のページメニューを開く",
+      "『気をそらす項目を非表示』を選び隠せる対象を選択する",
+      "別サイトでも項目がないならSafariの版と管理制限を確認する"
+    ],
+    "causes": [
+      "iOS 18より前の端末を使用している",
+      "Safariのページメニューではなく共有メニューを探している",
+      "サイトや管理設定によって操作できる項目が異なる"
+    ],
+    "diagnosis": "Safari拡張機能が一つのサイトで動かない問題ではなく、Safari標準のページ表示整理機能です。AppleはiPhoneではiOS 18以降が必要と案内し、ページメニューから隠す項目を選ぶ手順を示します。OS版とメニューの入口を先に確認すれば、更新対象外の端末で存在しない項目を探し続けずに済みます。",
+    "caution": "この機能はサイト上の情報を削除するものではありません。重要な通知、利用規約、購入条件まで隠して判断しないでください。機能を使うためだけに非公式のSafari改造アプリを導入せず、OS更新前にはバックアップを確認してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-asia/120682",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/safari-extension-not-running-one-site/",
+      "/browser/chrome-install-page-as-app-option-missing/",
+      "/browser/firefox-containers-icon-missing/"
+    ],
+    "closest_existing_url": "/browser/safari-extension-not-running-one-site/",
+    "differentiation": "既存記事は導入したSafari拡張機能の動作。本記事はiOS 18以降のSafari標準のページ項目非表示メニューを扱う。",
+    "fact_check": "Apple公式サポートはiPhoneでiOS 18以降を必要とし、Safariのページメニューから『気をそらす項目を非表示』を選ぶと説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-annotation-request-not-working",
+    "path": "/sns/teams-annotation-request-not-working/",
+    "title": "Teams会議で画面共有に注釈を付けられないとき",
+    "topic": "Teams会議の共有画面に書き込みたいが注釈が開始できない、または承認待ちになる症状",
+    "description": "Teams会議の共有画面に書き込みたいが注釈が開始できない、または承認待ちになる症状。発表者が共有を始めているかと、注釈の許可状態を分けて確認します。",
+    "answer": "発表者が共有を始めているかと、注釈の許可状態を分けて確認します。",
+    "steps": [
+      "画面共有中か確認し、単なるチャット画面ではなく共有画面を開く",
+      "自分が発表者なら共有画面の上端にポインターを移し、表示されたツールバーの『注釈』を選ぶ",
+      "参加者なら会議コントロールの『注釈』から『要求』を選び、発表者の承認を待つ",
+      "発表者側で注釈アクセスを本人のみに制限していないか確認し、必要なら会議の発表者に相談する"
+    ],
+    "causes": [
+      "共有が始まっておらず注釈の対象画面がない",
+      "発表者用のツールバーと参加者用の要求操作を取り違えている",
+      "発表者が参加者の注釈を制限している、または要求が未承認"
+    ],
+    "diagnosis": "Teamsの通常のチャット投稿やホワイトボードへの招待ではなく、いま共有している画面に線や文字を重ねる機能の問題です。Microsoftの案内では発表者は共有画面上端の注釈ボタンを使い、他の参加者は会議コントロールから要求を送り、発表者が承認すると描画できます。操作する役割と承認状態を先に確かめます。",
+    "caution": "注釈には共有中の画面が他の参加者に見えることを前提にします。機密資料や個人情報が映っていないか発表者に確認してください。承認を得るために別アカウントへ切り替えたり、組織の会議ポリシーを独断で変更したりしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings-events/use-annotation-while-sharing-your-screen-in-microsoft-teams",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/teams-transcription-button-locked/",
+      "/sns/teams-attendance-report-missing-after-meeting/"
+    ],
+    "closest_existing_url": "/sns/zoom-participant-screen-share-disabled/",
+    "differentiation": "既存記事はZoomで参加者が画面共有を開始する権限を扱う。本記事はTeamsで既に共有中の画面へ参加者が注釈を重ねる要求・承認を扱う。",
+    "fact_check": "Microsoft公式は発表者の共有画面ツールバーに注釈があり、参加者は会議コントロールから要求して発表者の承認後に注釈できると説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-server-insights-missing",
+    "path": "/sns/discord-server-insights-missing/",
+    "title": "Discordのサーバーインサイトが表示されないとき",
+    "topic": "Discordのサーバー統計を見ようとしてもServer Insightsの項目や閲覧権限が見つからない症状",
+    "description": "Discordのサーバー統計を見ようとしてもServer Insightsの項目や閲覧権限が見つからない症状。コミュニティサーバーの条件と閲覧権限を確認します。 統計を見たいサーバーがコミュニティサーバーとして設定されているか管理者に確認する",
+    "answer": "コミュニティサーバーの条件と閲覧権限を確認します。 統計を見たいサーバーがコミュニティサーバーとして設定されているか管理者に確認する",
+    "steps": [
+      "統計を見たいサーバーがコミュニティサーバーとして設定されているか管理者に確認する",
+      "サーバーの参加人数が公式案内に示される500人超の条件を満たすか確認する",
+      "自分のロールに『View Server Insights』の権限があるかサーバー管理者に確認する",
+      "条件を満たすのに表示されない場合は管理画面の場所を再確認し、必要ならDiscord公式サポートに状況を伝える"
+    ],
+    "causes": [
+      "通常のサーバーでコミュニティサーバーの対象になっていない",
+      "500人超という対象規模に達していない",
+      "閲覧するロールにView Server Insightsの権限がない"
+    ],
+    "diagnosis": "投稿やイベントが作れることと、サーバー全体の成長・定着の統計を閲覧できることは別です。Discord公式はServer Insightsを500人超のコミュニティサーバーの管理者向け機能として説明し、閲覧には専用権限を設けています。まず対象サーバーの種類、人数、ロールをこの順に切り分けます。",
+    "caution": "閲覧権限がない場合に他人の管理者アカウントを使うのは避けてください。統計にはコミュニティの活動状況が含まれます。ロールやサーバー設定の変更は管理者の判断に任せ、公開範囲や運営方針を確認してから共有してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/360032807371-Server-Insights-FAQ",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-scheduled-event-create-disabled/",
+      "/sns/discord-onboarding-channel-hidden/",
+      "/sns/discord-dm-cannot-send/"
+    ],
+    "closest_existing_url": "/sns/discord-scheduled-event-create-disabled/",
+    "differentiation": "既存記事は予定イベントの作成権限。本記事はコミュニティ規模の要件と統計閲覧専用権限を照合する。",
+    "fact_check": "Discord公式は500人超のCommunity Serverの運営者向けにView Server Insights権限を説明している。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-group-call-screen-share-missing",
+    "path": "/sns/line-group-call-screen-share-missing/",
+    "title": "LINEのグループ通話で画面共有ができないとき",
+    "topic": "LINEグループの音声・ビデオ通話で画面共有のボタンが見つからない、または開始できない症状",
+    "description": "LINEグループの音声・ビデオ通話で画面共有のボタンが見つからない、または開始できない症状。通話の種類、共有中の人、端末の許可を順に確認します。 まず個人同士の通話かグループ通話かを確かめ、グループ通話画面のアクティビティから画面共有を探す",
+    "answer": "通話の種類、共有中の人、端末の許可を順に確認します。 まず個人同士の通話かグループ通話かを確かめ、グループ通話画面のアクティビティから画面共有を探す",
+    "steps": [
+      "まず個人同士の通話かグループ通話かを確かめ、グループ通話画面のアクティビティから画面共有を探す",
+      "他の参加者が既に画面や動画を共有している場合は終了を待つ",
+      "AndroidではLINEの『他のアプリの上に表示』の許可を確認し、端末が出す画面収録の許可を判断する",
+      "一度通話画面に戻って共有状態を確認し、開始できない場合はアプリ更新と公式ヘルプを確認する"
+    ],
+    "causes": [
+      "1対1の通話とグループ通話で画面構成を取り違えている",
+      "他の参加者が既に画面や動画を共有している",
+      "Android端末でLINEに必要な表示権限が許可されていない"
+    ],
+    "diagnosis": "LINEの音声が聞こえない問題ではなく、端末画面を相手に見せる機能の問題です。LINE公式はグループ通話画面のアクティビティから画面共有を開始する手順、他の人が画面や動画を共有中は使えない制限、Androidの表示権限を案内しています。ボタンがない場合と開始で止まる場合を区別します。",
+    "caution": "画面共有では通知や個人情報、他のアプリの内容も見える可能性があります。開始前に不要な画面を閉じ、共有を終えるときはLINEで停止状態を確認してください。権限の許可範囲は端末の表示を読んで判断し、不要になれば見直してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20000273",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-calls-not-working/",
+      "/sns/line-group-album-new-album-fails/",
+      "/sns/zoom-automated-captions-option-missing/"
+    ],
+    "closest_existing_url": "/sns/line-calls-not-working/",
+    "differentiation": "既存記事は通話の接続や音声。本記事はグループ通話中の画面共有の同時使用制限とAndroidの表示権限を扱う。",
+    "fact_check": "LINE公式はグループ通話の画面共有操作、同時共有不可、Androidの『他のアプリの上に表示』権限を案内する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-ai-meeting-summary-option-missing",
+    "path": "/sns/zoom-ai-meeting-summary-option-missing/",
+    "title": "Zoom会議でAI要約の項目が見つからないとき",
+    "topic": "Zoomの会議でMeeting summary with AIを開始する項目が見えない、または灰色で使えない症状",
+    "description": "Zoomの会議でMeeting summary with AIを開始する項目が見えない、または灰色で使えない症状。ホスト権限とアカウント・グループの設定を切り分けます。 参加者かホスト・共同ホストかを確認し、会議中のAIアイコンから要約の項目を探す",
+    "answer": "ホスト権限とアカウント・グループの設定を切り分けます。 参加者かホスト・共同ホストかを確認し、会議中のAIアイコンから要約の項目を探す",
+    "steps": [
+      "参加者かホスト・共同ホストかを確認し、会議中のAIアイコンから要約の項目を探す",
+      "ホストはZoomウェブポータルの設定でMeeting summary with AIが有効か確認する",
+      "設定が灰色または会議ツールバーで非表示なら、アカウント・グループ管理者による制限かを確認する",
+      "ブレイクアウトルーム内では要約を開始できない点を確認し、機能が必要なら既存契約の管理者に相談する"
+    ],
+    "causes": [
+      "参加者がホスト・共同ホストの開始操作を探している",
+      "個人設定が無効、または組織の管理者によりロックされている",
+      "ブレイクアウトルーム内で非対応の操作を試している"
+    ],
+    "diagnosis": "Zoomの自動字幕や通常の録画とは目的が異なる、会議内容のAI要約の開始可否です。Zoom公式は開始・停止をホストと共同ホストに限定し、アカウントやグループ設定で無効・非表示にもできると説明しています。ブレイクアウトルームでは要約は利用できないため、会議内の場所も確かめます。",
+    "caution": "要約には会議で話した内容が処理・共有されます。参加者の意向と組織の利用方針を確認してから使ってください。管理者ロックを回避したり、許可なく別アカウントで開始したりしないでください。契約変更を前提にせず既存設定の範囲で判断します。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057960",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-automated-captions-option-missing/",
+      "/sns/zoom-language-interpretation-unavailable/",
+      "/sns/zoom-recording-not-found/"
+    ],
+    "closest_existing_url": "/sns/zoom-automated-captions-option-missing/",
+    "differentiation": "既存記事はリアルタイム自動字幕の設定。本記事は会議のAI要約のホスト操作、組織設定、ブレイクアウトでの非対応を扱う。",
+    "fact_check": "Zoom公式はアカウント・グループ・個人のMeeting summary with AI設定とロックを説明し、別の公式使用案内はホスト・共同ホストのみの開始とブレイクアウト非対応を示す。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-compared-changes-not-in-original",
+    "path": "/google/docs-compared-changes-not-in-original/",
+    "title": "Googleドキュメントの比較結果が元の文書に出ないとき",
+    "topic": "二つの文書を比較したのに元文書に差分や変更履歴が表示されない症状",
+    "description": "二つの文書を比較したのに元文書に差分や変更履歴が表示されない症状。比較で作られる第三の文書を開き、提案として表示された差分を確認します。",
+    "answer": "比較で作られる第三の文書を開き、提案として表示された差分を確認します。",
+    "steps": [
+      "パソコン版で比較の基準にした元文書を開き、ツールの『文書を比較』を実行したか確かめる",
+      "比較対象として選んだ別文書と、比較時に指定した変更者名を確認する",
+      "比較完了時に新しいタブで開く第三の文書を探し、差分が提案として付いているか確認する",
+      "必要な変更だけを比較結果から元文書へ反映し、共同編集者と変更内容を確認する"
+    ],
+    "causes": [
+      "比較は元文書を書き換えず第三の文書を作る仕様を知らず元文書だけ見ている",
+      "新しいタブが開いても気付かず比較結果を見失っている",
+      "比較対象の選択を誤り期待した差分がない"
+    ],
+    "diagnosis": "Googleドキュメントの通常の版履歴や目次更新の問題ではありません。Google公式によると文書比較は二つの文書の差分を提案として記した第三のGoogleドキュメントを作ります。元文書に差分が直接描かれると期待すると見つからないため、新しい結果文書と対象の組み合わせを照合します。",
+    "caution": "比較結果の提案を一括で受け入れる前に、共同編集者が加えた内容を確認してください。差分を共有すると文書内の情報も共有されます。元文書や比較対象を削除せず、必要な変更だけ選んで反映してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/18512262?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-table-of-contents-not-updating/",
+      "/google/docs-published-page-not-refreshing/",
+      "/google/docs-outline-heading-missing/"
+    ],
+    "closest_existing_url": "/google/docs-table-of-contents-not-updating/",
+    "differentiation": "既存記事は同一文書の見出しと目次の更新。本記事は別々の文書を比較した際に結果が第三の文書へ出る仕様を扱う。",
+    "fact_check": "Google公式は二つの文書を比較すると差分を提案として示す第三のGoogleドキュメントを生成すると説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "sheets-checkbox-custom-value-unexpected",
+    "path": "/google/sheets-checkbox-custom-value-unexpected/",
+    "title": "スプレッドシートのチェックボックスで値が想定と違うとき",
+    "topic": "Googleスプレッドシートでチェックを付けたセルがTRUE/FALSEではなく別の文字列になり、式の結果が合わない症状",
+    "description": "Googleスプレッドシートでチェックを付けたセルがTRUE/FALSEではなく別の文字列になり、式の結果が合わない症状。チェックボックスのカスタム値と、それを参照する数式の条件を照合します。",
+    "answer": "チェックボックスのカスタム値と、それを参照する数式の条件を照合します。",
+    "steps": [
+      "問題のセルを選び、データのデータの入力規則を開いて条件が『チェックボックス』か確認する",
+      "チェック時と未チェック時のカスタム値が設定されているか確認する",
+      "参照する数式がTRUE/FALSEを期待するか、カスタムの文字列を期待するか確認する",
+      "共有シートでは所有者に相談し、入力規則と数式のどちらを変更すべきか決めてから小範囲で試す"
+    ],
+    "causes": [
+      "チェックボックスに既定の真偽値ではなく独自の文字列が設定されている",
+      "数式やフィルターがカスタム値ではなくTRUE/FALSEだけを条件にしている",
+      "隣接セルと入力規則が異なり同じ表示でも値が違う"
+    ],
+    "diagnosis": "セルをクリックできない保護権限の問題ではありません。チェック操作自体はできるのに、計算やフィルターに渡る値が想定と違う問題です。Google公式はチェックボックスにチェック時・未チェック時のカスタム値を指定できると案内しています。まず入力規則を読み、数式の条件と一致するか確認します。",
+    "caution": "共同作業のシートで入力規則を一列まとめて変更すると、集計式や連携先に影響することがあります。変更前の値と式を控え、所有者に相談してください。保護された範囲を回避して編集したり、既存データを一括削除したりしないでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/7684717?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-dropdown-entry-rejected/",
+      "/google/sheets-conditional-format-not-applying/",
+      "/google/sheets-importrange-allow-access-error/"
+    ],
+    "closest_existing_url": "/google/sheets-dropdown-entry-rejected/",
+    "differentiation": "既存記事はプルダウンに入力が拒否される症状。本記事はチェックボックスで入力できるが内部のカスタム値と数式条件が一致しない症状。",
+    "fact_check": "Google公式はチェックボックスにチェック時と未チェック時のカスタムセル値を設定できると説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-featured-memories-missing",
+    "path": "/google/photos-featured-memories-missing/",
+    "title": "Googleフォトの思い出が写真一覧の上に出ないとき",
+    "topic": "写真自体は残っているのにGoogleフォトの思い出カルーセルだけが表示されない症状",
+    "description": "写真自体は残っているのにGoogleフォトの思い出カルーセルだけが表示されない症状。思い出の表示種類と非表示にした人・日付を確認します。 パソコン版Googleフォトで写真一覧の写真自体が残っているかを先に確認する",
+    "answer": "思い出の表示種類と非表示にした人・日付を確認します。 パソコン版Googleフォトで写真一覧の写真自体が残っているかを先に確認する",
+    "steps": [
+      "パソコン版Googleフォトで写真一覧の写真自体が残っているかを先に確認する",
+      "設定の『思い出』で時期別やテーマ別の思い出が選択されているか確認する",
+      "表示したい写真の日付や人物を非表示にしていないか『日付を非表示』『顔を非表示』を確認する",
+      "設定を変えた場合は反映に時間がかかることを踏まえ、写真一覧とカルーセルを別々に確認する"
+    ],
+    "causes": [
+      "思い出の表示種類がすべてオフになっている",
+      "該当する日付が非表示に設定されている",
+      "人物やペットの非表示設定で候補が表示対象から外れている"
+    ],
+    "diagnosis": "写真がバックアップから消えた問題や、似た写真がスタックにまとまらない問題ではありません。Google公式は少なくとも一種類の思い出を選ぶと写真グリッド上にカルーセルを表示し、特定の日付や顔を非表示にできると説明します。写真本体の有無と、思い出だけの表示設定を分けます。",
+    "caution": "思い出には過去の写真や共有写真が予期せず現れることがあります。非表示設定を変える前に、見たくない人物や日付を表示させない意図がなかったか確認してください。非表示の解除は写真の削除や復元ではなく、表示対象の変更です。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/photos/answer/9454489?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/photos-people-pets-section-missing/",
+      "/google/photos-partner-sharing-not-in-library/",
+      "/google/youtube-brand-channel-missing-switcher/"
+    ],
+    "closest_existing_url": "/google/photos-people-pets-section-missing/",
+    "differentiation": "既存記事は人物とペットの分類欄が見えない症状。本記事は写真一覧上部の思い出カルーセルの種類と非表示の日付・顔を扱う。",
+    "fact_check": "Google公式は時期別・テーマ別の思い出を少なくとも一つ選ぶとカルーセルが表示され、日付や顔を非表示にできると説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "gmail-multiple-inboxes-section-empty",
+    "path": "/google/gmail-multiple-inboxes-section-empty/",
+    "title": "Gmailのマルチ受信トレイが空欄になるとき",
+    "topic": "Gmailでマルチ受信トレイを有効にしたが追加した区画にメールが表示されない症状",
+    "description": "Gmailでマルチ受信トレイを有効にしたが追加した区画にメールが表示されない症状。追加区画の検索条件と対象メールが一致するか確認します。 パソコン版Gmailの設定で受信トレイの種類が『マルチ受信トレイ』か確認する",
+    "answer": "追加区画の検索条件と対象メールが一致するか確認します。 パソコン版Gmailの設定で受信トレイの種類が『マルチ受信トレイ』か確認する",
+    "steps": [
+      "パソコン版Gmailの設定で受信トレイの種類が『マルチ受信トレイ』か確認する",
+      "『カスタマイズ』を開き、空欄の区画に設定した検索条件を読む",
+      "その検索条件をGmailの検索欄でも実行し、対象メールが実際にヒットするか確認する",
+      "スター付きメールなら公式例の is:starred など条件を使い、必要な区画だけ修正して表示を確かめる"
+    ],
+    "causes": [
+      "追加区画の検索条件が対象メールに一致していない",
+      "受信トレイの種類を変更したつもりでもマルチ受信トレイ以外になっている",
+      "スターやラベルなど検索対象の状態を想定と違えている"
+    ],
+    "diagnosis": "メールが送られていない、またはGmailに届かない問題ではなく、既存メールの追加表示区画だけが空の問題です。Google公式はマルチ受信トレイの各区画を検索条件で構成すると説明し、スター付きには is:starred を例示しています。検索欄でも同じ条件を試すと、表示設定かメール自体かを分けられます。",
+    "caution": "検索条件を変更してもメールそのものは削除されません。ただしラベルやスターの付け替えは他の表示やフィルターにも影響します。まず条件を読むだけにし、共有アカウントでは表示区画の変更について利用者と相談してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/9694882?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-label-hidden-sidebar/",
+      "/google/gmail-external-images-not-shown/",
+      "/google/gmail-templates-menu-not-visible/"
+    ],
+    "closest_existing_url": "/google/gmail-label-hidden-sidebar/",
+    "differentiation": "既存記事は左サイドバーのラベル表示。本記事はマルチ受信トレイの検索条件で構成する追加区画が空になる症状。",
+    "fact_check": "Google公式はPCのGmailでマルチ受信トレイを選び、区画ごとに検索条件を入力できると説明し、is:starredを例示する。"
+  }
+]

@@ -1,5 +1,155 @@
 [
   {
+    "title": "Google Keepの共有メモを相手が編集できないとき",
+    "description": "共有したKeepメモを相手が閲覧できても変更できない、または共同編集者に表示されない症状。送ったメモと相手のGoogleアカウントを照合し、共同編集者への追加状態を確認します。",
+    "url": "/google/keep-shared-note-collaborator-cannot-edit/"
+  },
+  {
+    "title": "パソコン版Googleマップでタイムラインが開けないとき",
+    "description": "以前パソコンで見ていた移動履歴のタイムラインがWeb版マップにない症状。端末保存への変更を確認し、同じアカウントのスマートフォン版マップで調べます。",
+    "url": "/google/maps-timeline-unavailable-on-computer/"
+  },
+  {
+    "title": "iPhoneの『メールを非公開』宛ての転送メールが届かないとき",
+    "description": "メールを非公開で作ったアドレスへの連絡が普段の受信箱に転送されない症状。対象アドレスが有効か、転送先として選んだ実際のメールアドレスを確認します。",
+    "url": "/iphone/hide-my-email-forwarding-not-arriving/"
+  },
+  {
+    "title": "iPhoneのロックダウンモードで特定サイトの機能が使えないとき",
+    "description": "ロックダウンモード中に一部サイトの表示や機能だけが制限される症状。安全機能の意図した制限かを確認し、必要なら信頼できる対象サイトだけを個別設定します。",
+    "url": "/iphone/lockdown-mode-website-content-missing/"
+  },
+  {
+    "title": "Freeformのボードが別のApple製デバイスに出ないとき",
+    "description": "iPhoneで作ったFreeformボードが別端末の一覧に表示されない症状。同じApple Accountと各端末のFreeform用iCloud設定を確認します。",
+    "url": "/iphone/freeform-board-missing-other-device/"
+  },
+  {
+    "title": "MacでFileVaultを有効にできないとき",
+    "description": "Macのディスク暗号化を有効にする操作が許可されない、または進められない症状。管理権限と組織管理の状態を確認し、回復キーの扱いを決めてから進めます。",
+    "url": "/mac/filevault-turn-on-unavailable/"
+  },
+  {
+    "title": "iPhoneで『画面との距離』が使えないとき",
+    "description": "スクリーンタイムに画面との距離がない、または近づけても案内が出ない症状。TrueDepthカメラ搭載機種か、iOSの対応版か、機能をオンにしたか確認します。",
+    "url": "/iphone/iphone-screen-distance-option-missing/"
+  },
+  {
+    "title": "iPhoneの写真で文字の認識ボタンが出ないとき",
+    "description": "写真内の文字を選択するLive Textのボタンが出ない症状。対応する言語と設定、対象画像の文字の見え方を確認します。",
+    "url": "/iphone/iphone-live-text-photo-button-missing/"
+  },
+  {
+    "title": "Windowsでメモリ整合性をオンにできないとき",
+    "description": "Windowsセキュリティが互換性のないドライバーを示しメモリ整合性を有効化できない症状。表示されたドライバーの提供元を確認し、対応版があるか調べます。",
+    "url": "/windows/memory-integrity-incompatible-driver/"
+  },
+  {
+    "title": "Windowsで空間オーディオを選べないとき",
+    "description": "ヘッドホンでWindows Sonicなどの空間オーディオ設定が見つからない症状。再生中の出力機器を特定し、その機器のサウンド設定を開きます。",
+    "url": "/windows/windows-spatial-sound-option-unavailable/"
+  },
+  {
+    "title": "Windowsのクリップボードが別PCに同期しないとき",
+    "description": "Win+Vの履歴は見えるのにコピーしたテキストが別のWindows PCへ届かない症状。両端末の同期設定とサインイン中のアカウントを確認します。",
+    "url": "/windows/windows-clipboard-not-syncing-between-pcs/"
+  },
+  {
+    "title": "Windowsの切り取りツールに画面録画ボタンがないとき",
+    "description": "スクリーンショットは撮れるのに切り取りツールから動画を記録できない症状。Windowsの版と切り取りツールの画面を確認し、録画機能の入口を調べます。",
+    "url": "/windows/snipping-tool-record-button-missing/"
+  },
+  {
+    "title": "Windowsのモバイルホットスポットに接続できるのにネットが使えないとき",
+    "description": "PCのホットスポットには子端末がつながるがWebを開けない症状。共有元のインターネット接続と共有先の方式を確認します。 Windows PC自体がWebへ接続できるか先に確認する",
+    "url": "/windows/windows-mobile-hotspot-no-internet/"
+  },
+  {
+    "title": "PowerToysのキー割り当てが管理者アプリだけ効かないとき",
+    "description": "通常アプリでは再割り当てが動くのに管理者権限のウインドウだけ元のキーになる症状。PowerToysと対象アプリの実行権限の違いを確認します。",
+    "url": "/windows/powertoys-remap-not-working-admin-app/"
+  },
+  {
+    "title": "Androidで不明なトラッカーの警告が出ないとき",
+    "description": "持ち物の近くに追跡タグがあるのに不明なトラッカーの通知がない症状。対応OSと警告設定を確認し、必要なら公式の手動スキャンを使います。",
+    "url": "/android/unknown-tracker-alerts-not-showing/"
+  },
+  {
+    "title": "Androidのクイック共有で受信の通知が出ないとき",
+    "description": "相手がクイック共有で送ろうとしても自分のスマホに受信のポップアップが出ない症状。受信モード、公開範囲、相手側の送信先を順に確認します。 クイック設定または設定からクイック共有画面を開く",
+    "url": "/android/android-quick-share-receive-not-appearing/"
+  },
+  {
+    "title": "Google Playの保護者による使用制限PINを忘れたとき",
+    "description": "自分で設定したGoogle Playのコンテンツ制限PINを思い出せず設定を変更できない症状。端末内Google PlayのPINとFamily Linkの管理を区別して確認します。",
+    "url": "/android/google-play-parental-pin-forgotten/"
+  },
+  {
+    "title": "Pixelでアダプティブ充電が働かないとき",
+    "description": "充電の最適化を設定しても通常の速さで満充電になり、アダプティブ充電が表示されない症状。充電の最適化設定と普段の充電習慣の学習状態を確認します。",
+    "url": "/android/pixel-adaptive-charging-not-activating/"
+  },
+  {
+    "title": "Edgeで縦型タブに切り替えられないとき",
+    "description": "Microsoft Edgeの縦型タブの項目が使えない、または管理されていますと表示される症状。ブラウザーの表示設定と組織のポリシーを分けて確認します。",
+    "url": "/browser/edge-vertical-tabs-option-disabled/"
+  },
+  {
+    "title": "Firefoxでリーダービューのボタンが出ないとき",
+    "description": "Firefoxで特定のWebページだけ読みやすい表示への切り替えボタンが見つからない症状。そのページがリーダービューの対象か、別の本文ページと比べます。",
+    "url": "/browser/firefox-reader-view-button-missing/"
+  },
+  {
+    "title": "Chromeでタブ検索ボタンが見えないとき",
+    "description": "開いているタブを探すChromeのタブ検索アイコンだけが見つからない症状。タブ検索の固定状態とキーボードからの起動を確認します。 パソコン版Chromeのタブバーでタブ検索アイコンの位置を確認する",
+    "url": "/browser/chrome-tab-search-button-missing/"
+  },
+  {
+    "title": "Safariで『気をそらす項目を非表示』が見つからないとき",
+    "description": "iPhoneのSafariでページ内の一部表示を隠すメニューが見つからない症状。iOSの対応版とSafariのページメニューを確認します。",
+    "url": "/browser/safari-hide-distracting-items-missing/"
+  },
+  {
+    "title": "Teams会議で画面共有に注釈を付けられないとき",
+    "description": "Teams会議の共有画面に書き込みたいが注釈が開始できない、または承認待ちになる症状。発表者が共有を始めているかと、注釈の許可状態を分けて確認します。",
+    "url": "/sns/teams-annotation-request-not-working/"
+  },
+  {
+    "title": "Discordのサーバーインサイトが表示されないとき",
+    "description": "Discordのサーバー統計を見ようとしてもServer Insightsの項目や閲覧権限が見つからない症状。コミュニティサーバーの条件と閲覧権限を確認します。 統計を見たいサーバーがコミュニティサーバーとして設定されているか管理者に確認する",
+    "url": "/sns/discord-server-insights-missing/"
+  },
+  {
+    "title": "LINEのグループ通話で画面共有ができないとき",
+    "description": "LINEグループの音声・ビデオ通話で画面共有のボタンが見つからない、または開始できない症状。通話の種類、共有中の人、端末の許可を順に確認します。 まず個人同士の通話かグループ通話かを確かめ、グループ通話画面のアクティビティから画面共有を探す",
+    "url": "/sns/line-group-call-screen-share-missing/"
+  },
+  {
+    "title": "Zoom会議でAI要約の項目が見つからないとき",
+    "description": "Zoomの会議でMeeting summary with AIを開始する項目が見えない、または灰色で使えない症状。ホスト権限とアカウント・グループの設定を切り分けます。 参加者かホスト・共同ホストかを確認し、会議中のAIアイコンから要約の項目を探す",
+    "url": "/sns/zoom-ai-meeting-summary-option-missing/"
+  },
+  {
+    "title": "Googleドキュメントの比較結果が元の文書に出ないとき",
+    "description": "二つの文書を比較したのに元文書に差分や変更履歴が表示されない症状。比較で作られる第三の文書を開き、提案として表示された差分を確認します。",
+    "url": "/google/docs-compared-changes-not-in-original/"
+  },
+  {
+    "title": "スプレッドシートのチェックボックスで値が想定と違うとき",
+    "description": "Googleスプレッドシートでチェックを付けたセルがTRUE/FALSEではなく別の文字列になり、式の結果が合わない症状。チェックボックスのカスタム値と、それを参照する数式の条件を照合します。",
+    "url": "/google/sheets-checkbox-custom-value-unexpected/"
+  },
+  {
+    "title": "Googleフォトの思い出が写真一覧の上に出ないとき",
+    "description": "写真自体は残っているのにGoogleフォトの思い出カルーセルだけが表示されない症状。思い出の表示種類と非表示にした人・日付を確認します。 パソコン版Googleフォトで写真一覧の写真自体が残っているかを先に確認する",
+    "url": "/google/photos-featured-memories-missing/"
+  },
+  {
+    "title": "Gmailのマルチ受信トレイが空欄になるとき",
+    "description": "Gmailでマルチ受信トレイを有効にしたが追加した区画にメールが表示されない症状。追加区画の検索条件と対象メールが一致するか確認します。 パソコン版Gmailの設定で受信トレイの種類が『マルチ受信トレイ』か確認する",
+    "url": "/google/gmail-multiple-inboxes-section-empty/"
+  },
+  {
     "title": "Gmailでメール差し込みの項目が出ないとき",
     "description": "Gmailの新規メールで複数宛先向けのメール差し込みを有効にできない症状。対象のWorkspaceプランと新規メールの宛先欄を確認します。",
     "url": "/google/gmail-mail-merge-option-missing/"
