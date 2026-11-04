@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sora-navi-jp.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/articles.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/about.html</loc>
@@ -22,15 +22,15 @@
   </url>
   <url>
     <loc>https://sora-navi-jp.com/iphone/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/categories/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/articles/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/about/</loc>
@@ -90,19 +90,19 @@
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/system/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/windows/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/mac/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/android/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/internet-wifi/</loc>
@@ -110,19 +110,139 @@
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/browser/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/google-services/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/social-communication/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/category/peripherals/</loc>
     <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/gmail-offline-messages-not-synced/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/docs-person-chip-no-document-access/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/calendar-secondary-time-zone-hidden/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/forms-owner-new-response-email-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/youtube-private-playlist-link-not-viewable/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/google/sheets-array-result-blocked-by-existing-cell/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/mac/mac-live-captions-option-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/iphone-built-in-app-cannot-hide/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/iphone-focus-not-syncing-other-devices/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/apple-watch-double-tap-unavailable/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/mac/mac-handoff-app-not-appearing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/phone-link-android-sms-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/clipchamp-screen-record-tab-audio-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/windows-file-extensions-hidden/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/windows-input-language-icon-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/narrator-natural-voice-download-fails/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/windows/windows-update-pause-unavailable/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/android-auto-car-display-not-starting/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/android-emergency-sos-starts-accidentally/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/browser/edge-read-aloud-control-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/browser/safari-private-browsing-lock-option-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/browser/chrome-site-search-shortcut-inactive/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/browser/firefox-pdf-opens-instead-of-saving/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/sns/discord-mfa-backup-code-option-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/sns/zoom-webinar-registration-email-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/sns/teams-shifts-schedule-not-visible/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/sns/line-location-share-option-missing-ios/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/iphone/iphone-voice-isolation-phone-call-missing/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/pixel-recorder-transcript-wrong-language/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://sora-navi-jp.com/android/pixel-data-saver-app-background-blocked/</loc>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://sora-navi-jp.com/google/keep-shared-note-collaborator-cannot-edit/</loc>

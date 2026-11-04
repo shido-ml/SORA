@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailのオフライン閲覧で古いメールが出ないとき",
+    "description": "PC版Gmailのオフライン機能は有効だが古いメールを開けない症状。同期する日数とChromeの稼働状態、端末容量を確認します。",
+    "url": "/google/gmail-offline-messages-not-synced/"
+  },
+  {
+    "title": "Googleドキュメントで名前をチップに入れても相手が開けないとき",
+    "description": "文書に相手の名前をスマートチップとして挿入したのに相手が文書を開けない症状。人物チップと文書共有の権限は別なので共有設定を確認します。",
+    "url": "/google/docs-person-chip-no-document-access/"
+  },
+  {
+    "title": "Googleカレンダーに第2タイムゾーンが表示されないとき",
+    "description": "PC版カレンダーで別の地域の時刻目盛りを見たいのに左側に出ない症状。主タイムゾーンと追加タイムゾーンの表示設定を分けて確認します。",
+    "url": "/google/calendar-secondary-time-zone-hidden/"
+  },
+  {
+    "title": "Googleフォームで新しい回答の通知メールが来ないとき",
+    "description": "回答はフォームに記録されているが管理者宛ての新着回答通知が届かない症状。回答者への控えメールと管理者の新着通知を区別します。 フォームの『回答』タブで新しい回答が実際に保存されたか確認する",
+    "url": "/google/forms-owner-new-response-email-missing/"
+  },
+  {
+    "title": "YouTubeの再生リストを共有しても相手が開けないとき",
+    "description": "自分は開ける再生リストのURLを相手に送ったが相手には表示されない症状。再生リスト自体の公開設定と個々の動画の公開設定を確認します。",
+    "url": "/google/youtube-private-playlist-link-not-viewable/"
+  },
+  {
+    "title": "スプレッドシートで配列数式の結果が展開しないとき",
+    "description": "一つの数式から複数セルに広がる結果が出ず、隣接セルに既存データがある症状。結果が広がる範囲と既存セルの内容を確認します。 数式がARRAYFORMULAや複数セルを返す関数か確認し、結果が何行何列に広がる想定か見積もる",
+    "url": "/google/sheets-array-result-blocked-by-existing-cell/"
+  },
+  {
+    "title": "Macにライブキャプションの設定が見つからないとき",
+    "description": "Macで音声の字幕を表示したいがアクセシビリティにライブキャプションがない症状。Appleシリコン搭載かと利用地域・言語を先に確認します。",
+    "url": "/mac/mac-live-captions-option-missing/"
+  },
+  {
+    "title": "iPhoneの標準アプリを非表示にできないとき",
+    "description": "ホーム画面で標準アプリを長押ししても『非表示』を選べない症状。アプリをロックする操作と非表示にする操作の対象を分けます。",
+    "url": "/iphone/iphone-built-in-app-cannot-hide/"
+  },
+  {
+    "title": "iPhoneの集中モードがMacやiPadに連動しないとき",
+    "description": "iPhoneで集中モードをオンにしても同じ人の別のApple製端末が切り替わらない症状。同じApple Accountと『デバイス間で共有』を確認します。",
+    "url": "/iphone/iphone-focus-not-syncing-other-devices/"
+  },
+  {
+    "title": "Apple Watchのダブルタップが反応しないとき",
+    "description": "対応するApple Watchで指を二回合わせても操作が始まらない症状。時計のロック、低電力モード、睡眠集中モードと装着状態を確認します。",
+    "url": "/iphone/apple-watch-double-tap-unavailable/"
+  },
+  {
+    "title": "MacのDockにiPhoneのHandoffアプリが出ないとき",
+    "description": "iPhoneで開いている対応アプリをMacで続けたいがDockに引き継ぎアイコンが出ない症状。同じアカウントとWi-Fi・Bluetooth・Handoff設定を確認します。",
+    "url": "/mac/mac-handoff-app-not-appearing/"
+  },
+  {
+    "title": "スマートフォン連携にAndroidのSMSだけ出ないとき",
+    "description": "Windowsのスマートフォン連携はつながるがSMSやMMSだけ表示されない症状。メッセージ権限とSMSの種類を確認します。 PCのスマートフォン連携で設定から『機能』『メッセージ』の表示許可を確認する",
+    "url": "/windows/phone-link-android-sms-missing/"
+  },
+  {
+    "title": "Clipchampの画面録画にタブの音が入らないとき",
+    "description": "Clipchampで画面は録れたのにブラウザーの音声が録画に含まれない症状。録画対象をブラウザータブにし、音声共有を有効にします。 Clipchampの画面録画を開始し、ブラウザーが出す共有対象の選択画面を確認する",
+    "url": "/windows/clipchamp-screen-record-tab-audio-missing/"
+  },
+  {
+    "title": "Windowsでファイル名の拡張子が見えないとき",
+    "description": "エクスプローラーで同名のファイルを区別したいが末尾の拡張子が隠れている症状。エクスプローラーの表示設定で拡張子を表示します。 対象ファイルをエクスプローラーで開き、種類欄やプロパティで形式を確認する",
+    "url": "/windows/windows-file-extensions-hidden/"
+  },
+  {
+    "title": "Windowsのタスクバーに入力言語アイコンが出ないとき",
+    "description": "日本語と英語を切り替えたいがタスクバーに入力言語の表示がない症状。従来の言語バーと新しい入力インジケーターの関係を確認します。",
+    "url": "/windows/windows-input-language-icon-missing/"
+  },
+  {
+    "title": "Windowsナレーターの自然な音声を追加できないとき",
+    "description": "ナレーターで自然な音声をダウンロードしようとして失敗する症状。接続とMicrosoft Storeの取得可否を分けて確認します。",
+    "url": "/windows/narrator-natural-voice-download-fails/"
+  },
+  {
+    "title": "Windows Updateの一時停止を延長できないとき",
+    "description": "更新の一時停止カレンダーで希望日を選べない、または延長できない症状。一時停止期間の上限と更新の再開状態を確認します。 設定のWindows Updateで現在の一時停止終了日を確認する",
+    "url": "/windows/windows-update-pause-unavailable/"
+  },
+  {
+    "title": "Android Autoが車の画面で起動しないとき",
+    "description": "スマートフォンを車につないでも車載画面にAndroid Autoが表示されない症状。車の対応、USBケーブル、車載機側の設定を分けます。 車とスマートフォンがAndroid Autoに対応し、車がその接続方式に対応するか確認する",
+    "url": "/android/android-auto-car-display-not-starting/"
+  },
+  {
+    "title": "Androidの緊急SOSが誤操作で始まるとき",
+    "description": "電源ボタンの連続押しで意図せず緊急SOSのカウントダウンが始まる症状。開始操作を確認し、確認ステップの追加を検討します。 設定の『安全性と緊急情報』から『緊急SOS』を開き現在の開始方法を確認する",
+    "url": "/android/android-emergency-sos-starts-accidentally/"
+  },
+  {
+    "title": "Edgeでページの読み上げ操作が見つからないとき",
+    "description": "Webページを音声で読みたいがEdgeの画面に読み上げボタンが見えない症状。閲覧モードのツールバーとその他メニューを確認します。 Edgeで文字があるWebページを開き、アドレスバーの閲覧モードまたはF9を試す",
+    "url": "/browser/edge-read-aloud-control-missing/"
+  },
+  {
+    "title": "iPhoneのSafariでプライベートブラウズのロック設定がないとき",
+    "description": "プライベートタブをFace IDで保護したいが設定場所が見つからない症状。プライベートブラウズへの入り方とロック設定を分けます。 Safariのタブ一覧からプライベートタブグループへ移れるか確認する",
+    "url": "/browser/safari-private-browsing-lock-option-missing/"
+  },
+  {
+    "title": "Chromeのサイト内検索ショートカットが使えないとき",
+    "description": "Chromeのアドレスバーに登録したキーワードを入力しても特定サイトの検索へ切り替わらない症状。ショートカットが無効リストへ移っていないか確認します。 PC版Chromeの設定から検索エンジンとサイト内検索ショートカットの管理画面を開く",
+    "url": "/browser/chrome-site-search-shortcut-inactive/"
+  },
+  {
+    "title": "FirefoxでPDFが保存されず開いてしまうとき",
+    "description": "PDFのリンクを押すとFirefox内で開き、想定した保存先で見つからない症状。PDF形式のダウンロード時アクションを確認します。 Firefoxの設定から『一般』『ファイルとプログラム』のアプリケーション一覧を開く",
+    "url": "/browser/firefox-pdf-opens-instead-of-saving/"
+  },
+  {
+    "title": "Discordで二要素認証のバックアップコードを選べないとき",
+    "description": "Discordへログインするときバックアップコードの選択肢がなく認証を完了できない症状。使える別の認証方法とコードの利用状況を確認します。 Discordのログイン画面で『別の方法で確認』に相当する操作を探す",
+    "url": "/sns/discord-mfa-backup-code-option-missing/"
+  },
+  {
+    "title": "Zoomウェビナーの登録確認メールが届かないとき",
+    "description": "ウェビナーへ登録したのに参加用リンクを記した確認メールが見つからない症状。登録の承認状態と主催者からの再送を確認します。 登録時のメールアドレスと迷惑メール・プロモーションの受信箱を確認する",
+    "url": "/sns/zoom-webinar-registration-email-missing/"
+  },
+  {
+    "title": "TeamsのShiftsで自分の勤務予定が見えないとき",
+    "description": "TeamsのShiftsを開いても勤務シフトが自分の一覧に表示されない症状。アプリの場所と管理者が予定を公開したかを確認します。 Teamsのアプリ一覧でShiftsを探し、モバイルなら下部バーを上へ広げて表示する",
+    "url": "/sns/teams-shifts-schedule-not-visible/"
+  },
+  {
+    "title": "iPhone版LINEで位置情報を送る項目が見つからないとき",
+    "description": "LINEのトークで現在地や指定場所を相手に送りたいが『位置情報』が出ない症状。トークの追加メニューとLINEの更新状況を確認します。 送信したい相手とのトークを開き、入力欄の横の追加ボタンを確認する",
+    "url": "/sns/line-location-share-option-missing-ios/"
+  },
+  {
+    "title": "iPhoneの電話中に声を分離が選べないとき",
+    "description": "通話の雑音を抑えたいのにコントロールセンターで声を分離を選べない症状。通話の種類、iOSの版、対応機種を分けて確認します。 電話アプリの通話中にコントロールセンターを開き、電話のコントロール内のマイクモードを探す",
+    "url": "/iphone/iphone-voice-isolation-phone-call-missing/"
+  },
+  {
+    "title": "Pixelレコーダーの文字起こしが別の言語になるとき",
+    "description": "Pixelの録音は残るが文字起こしの言語が意図したものと違う症状。レコーダーの文字起こし言語と録音中の主な言語を確認します。",
+    "url": "/android/pixel-recorder-transcript-wrong-language/"
+  },
+  {
+    "title": "Pixelでデータセーバー中に特定アプリだけ通信しないとき",
+    "description": "モバイル通信は使えるのにデータセーバー中だけ一つのアプリがバックグラウンド更新しない症状。データセーバーの制限とそのアプリの例外設定を確認します。",
+    "url": "/android/pixel-data-saver-app-background-blocked/"
+  },
+  {
     "title": "Google Keepの共有メモを相手が編集できないとき",
     "description": "共有したKeepメモを相手が閲覧できても変更できない、または共同編集者に表示されない症状。送ったメモと相手のGoogleアカウントを照合し、共同編集者への追加状態を確認します。",
     "url": "/google/keep-shared-note-collaborator-cannot-edit/"
