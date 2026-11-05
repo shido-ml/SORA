@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailのフィルタを作っても過去のメールが変わらないとき",
+    "description": "新しいメールにはラベルが付くのに古い一致メールには付かない症状。既存の会話にも適用する選択と検索条件を確認します。 PC版Gmailの検索オプションで送信者や件名など条件を入力して検索結果を先に確認する",
+    "url": "/google/gmail-filter-old-mail-unchanged/"
+  },
+  {
+    "title": "Googleカレンダーで不在予定の作成項目が出ないとき",
+    "description": "予定作成には通常の予定があるのに不在予定を選べない症状。仕事用・学校用アカウントと管理者の提供設定を確認します。",
+    "url": "/google/calendar-out-of-office-option-missing/"
+  },
+  {
+    "title": "Googleドキュメントで変更履歴を開けないとき",
+    "description": "共有文書は読めるのに過去の版を確認する操作が使えない症状。編集権限の有無と版の統合を確認します。 PCのdocs.google.comで対象の元文書を開く",
+    "url": "/google/docs-version-history-view-only/"
+  },
+  {
+    "title": "YouTubeに投稿した動画でHD画質を選べないとき",
+    "description": "アップロードは終わったのに再生メニューが低画質だけの症状。元動画の画質と高画質処理の完了を分けて確認します。 YouTube Studioで対象動画の処理状況とアップロード完了を確認する",
+    "url": "/google/youtube-upload-hd-quality-pending/"
+  },
+  {
+    "title": "Googleマップで有料道路を避ける設定が効かないとき",
+    "description": "車の経路を調べたのに有料道路を通る案内が残る症状。移動手段と現在の経路オプションを確認します。 出発地と目的地を入れ、移動手段が自動車になっているか確認する",
+    "url": "/google/maps-avoid-tolls-route-not-applied/"
+  },
+  {
+    "title": "iPhoneのメッセージで『あとで送信』が出ないとき",
+    "description": "送信時刻を予約したいのに追加メニューに項目がない症状。iMessageの会話かどうかと予約可能な期間を確認します。",
+    "url": "/iphone/imessage-send-later-option-missing/"
+  },
+  {
+    "title": "iPhoneの共有パスワードグループの招待が見つからないとき",
+    "description": "家族から共有を受けたのにパスワードアプリにグループが出ない症状。招待の場所、連絡先、対応OSとApple Accountを確認します。",
+    "url": "/iphone/passwords-shared-group-invitation-missing/"
+  },
+  {
+    "title": "MacのSafariで特定サイトの通知が届かないとき",
+    "description": "Webサイトの通知を許可したつもりでもMacの右上に出ない症状。Safari側の許可とmacOS側の通知設定を別々に確認します。",
+    "url": "/mac/safari-website-notifications-missing/"
+  },
+  {
+    "title": "iPhoneの交通系カードでエクスプレス設定が違うとき",
+    "description": "改札で想定したカードではないカードが選ばれる症状。通常の支払い用標準カードと交通用エクスプレスカードを分けます。",
+    "url": "/iphone/japan-transit-express-card-wrong/"
+  },
+  {
+    "title": "WindowsでSwift Pairの接続通知が出ないとき",
+    "description": "近くにBluetooth機器を置いても簡単接続の通知が出ない症状。機器の対応と検出可能状態、Windows側の通知設定を確認します。",
+    "url": "/windows/swift-pair-notification-missing/"
+  },
+  {
+    "title": "OneDriveの個人用Vaultがすぐロックされるとき",
+    "description": "作業中の個人用Vaultが短時間で閉じて再認証を求められる症状。自動ロック時間と利用端末ごとの設定を確認します。 OneDriveの個人用Vaultだけがロックされるか確認する",
+    "url": "/windows/onedrive-personal-vault-locks-too-soon/"
+  },
+  {
+    "title": "Windowsのタスクバー時計に秒が表示されないとき",
+    "description": "時計には時刻が出るのに秒が表示されない症状。タスクバーの時計設定と電力消費の注意を確認します。 タスクバーの時計が通常どおり表示されるか確認する",
+    "url": "/windows/windows-taskbar-clock-seconds-hidden/"
+  },
+  {
+    "title": "OneDriveで『ショートカットを同期できません』と出るとき",
+    "description": "共有フォルダーのショートカットだけが同期エラーになる症状。親と子の重複ショートカットを探して安全に除きます。 OneDriveのエラーがショートカット同期に限定されるか確認する",
+    "url": "/windows/onedrive-unable-to-sync-shortcut/"
+  },
+  {
+    "title": "Windowsで文字を大きくしてもアイコンが変わらないとき",
+    "description": "アクセシビリティで文字サイズを上げてもアプリやアイコンが小さいままの症状。文字だけの拡大と画面全体の拡大を区別します。 設定のアクセシビリティで文字サイズの値を確認する",
+    "url": "/windows/windows-text-size-icons-unchanged/"
+  },
+  {
+    "title": "Androidの通知にスヌーズのボタンが出ないとき",
+    "description": "通知を後で再表示したいのにスヌーズ操作が見つからない症状。通知スヌーズの許可と通知の展開を確認します。 設定の通知で『通知のスヌーズを許可』を確認する",
+    "url": "/android/android-notification-snooze-button-missing/"
+  },
+  {
+    "title": "Googleメッセージで会話が一覧から消えたとき",
+    "description": "削除した覚えがない会話がホームの一覧に出ない症状。アーカイブと削除済み会話を区別して確認します。 Googleメッセージのプロフィールメニューからアーカイブ済みを開く",
+    "url": "/android/google-messages-archived-chat-missing/"
+  },
+  {
+    "title": "Androidで音声文字変換アプリが見つからないとき",
+    "description": "周囲の会話を文字で読みたいが音声文字変換の項目がない症状。Pixel内蔵版とそれ以外の端末のアプリ導入経路を確認します。",
+    "url": "/android/android-live-transcribe-app-missing/"
+  },
+  {
+    "title": "Firefox更新後に拡張機能が無効になったとき",
+    "description": "拡張機能一覧に検証されていないという表示が出て動かない症状。署名と互換性の状態を確認します。 アドオンマネージャーで該当拡張の無効理由を確認する",
+    "url": "/browser/firefox-unsigned-addon-disabled/"
+  },
+  {
+    "title": "Edgeの非アクティブなタブがスリープしないとき",
+    "description": "しばらく使っていないタブも薄くならずメモリ使用が続く症状。スリープ設定、例外サイト、タブ内の動作を確認します。 Edgeのシステムとパフォーマンス設定でタブを自動的にスリープさせる機能を確認する",
+    "url": "/browser/edge-sleeping-tab-not-sleeping/"
+  },
+  {
+    "title": "MacのSafariでダウンロードしたファイルが見つからないとき",
+    "description": "完了表示の後にFinderのダウンロードフォルダーでファイルが見えない症状。Safariの保存先とダウンロード一覧の違いを確認します。",
+    "url": "/browser/safari-mac-download-file-not-found/"
+  },
+  {
+    "title": "Discordのアーカイブ済みスレッドに返信できないとき",
+    "description": "スレッドは読めるのに書き込みや再開の操作が使えない症状。通常のアーカイブと管理者によるロックを分けます。 スレッドがアーカイブ済みか、ロック付きでアーカイブされたか表示を確認する",
+    "url": "/sns/discord-archived-thread-reply-locked/"
+  },
+  {
+    "title": "ZoomウェビナーでQ&Aの項目が出ないとき",
+    "description": "主催者がウェビナーを設定しても質疑応答の選択肢が見つからない症状。ウェビナー設定と組織アカウントの制限を確認します。 ZoomのWebポータルで対象ウェビナーの編集画面を開く",
+    "url": "/sns/zoom-webinar-qa-option-missing/"
+  },
+  {
+    "title": "Teamsの会議後にチャット履歴を開けないとき",
+    "description": "会議中は話せたのに終了後の会議チャットが表示されない症状。招待・参加方法と会議チャットの設定を確認します。 主催者から直接招待された会議か、転送された予定から参加したか確認する",
+    "url": "/sns/teams-meeting-chat-after-meeting-inaccessible/"
+  },
+  {
+    "title": "LINEの『すべてのアルバム』から写真が消えたとき",
+    "description": "トーク内では見えたアルバムが一覧から見えなくなった症状。グループ参加状態と一覧の表示対象を確認します。 アルバムを作ったトークまたはグループ名を確認する",
+    "url": "/sns/line-all-albums-missing-after-leaving-group/"
+  },
+  {
+    "title": "LINEの引き継ぎ後に購入済みスタンプが見えないとき",
+    "description": "機種変更後に所有していたスタンプや着せかえが一覧から消えた症状。購入したアカウントと再ダウンロードを確認します。 引き継いだLINEアカウントが以前の購入アカウントと同じか確認する",
+    "url": "/sns/line-stickers-missing-after-transfer/"
+  },
+  {
+    "title": "Googleドライブで共有相手のアクセス期限を設定できないとき",
+    "description": "共有設定を開いても相手のアクセス期限を追加する項目が出ない症状。アカウント種別、相手の役割、対象がファイルかフォルダかを確認します。",
+    "url": "/google/drive-shared-access-expiration-missing/"
+  },
+  {
+    "title": "Firefoxでページのスクリーンショット操作が見つからないとき",
+    "description": "Webページを保存したいのにFirefoxの撮影ボタンが見えない症状。右クリック、キーボード、ツールバーの三つの公式操作を確認します。",
+    "url": "/browser/firefox-screenshot-button-missing/"
+  },
+  {
+    "title": "Macのスマートフォルダに新しいファイルが出ないとき",
+    "description": "Finderのスマートフォルダに条件に合うはずの新規ファイルが表示されない症状。保存した検索条件と検索対象を確認します。 Finderで対象のスマートフォルダを開く",
+    "url": "/mac/finder-smart-folder-new-files-missing/"
+  },
+  {
+    "title": "Pixelの集合写真でベストテイクが出ないとき",
+    "description": "複数枚撮った写真で表情を選びたいのに編集候補が見つからない症状。対応機種と似た構図の写真、Googleフォトの編集画面を確認します。",
+    "url": "/android/pixel-best-take-option-missing/"
+  },
+  {
+    "title": "Windowsでマウスポインターの残像が出るとき",
+    "description": "マウスを動かすたびに軌跡が残り画面が見づらい症状。ポインター軌跡とタッチ操作の視覚効果を区別します。 設定のアクセシビリティからマウスポインターとタッチを開く",
+    "url": "/windows/windows-mouse-pointer-trails-unexpected/"
+  },
+  {
     "title": "Gmailのオフライン閲覧で古いメールが出ないとき",
     "description": "PC版Gmailのオフライン機能は有効だが古いメールを開けない症状。同期する日数とChromeの稼働状態、端末容量を確認します。",
     "url": "/google/gmail-offline-messages-not-synced/"

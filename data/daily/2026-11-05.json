@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-filter-old-mail-unchanged",
+    "path": "/google/gmail-filter-old-mail-unchanged/",
+    "title": "Gmailのフィルタを作っても過去のメールが変わらないとき",
+    "topic": "新しいメールにはラベルが付くのに古い一致メールには付かない症状",
+    "description": "新しいメールにはラベルが付くのに古い一致メールには付かない症状。既存の会話にも適用する選択と検索条件を確認します。 PC版Gmailの検索オプションで送信者や件名など条件を入力して検索結果を先に確認する",
+    "answer": "既存の会話にも適用する選択と検索条件を確認します。 PC版Gmailの検索オプションで送信者や件名など条件を入力して検索結果を先に確認する",
+    "steps": [
+      "PC版Gmailの検索オプションで送信者や件名など条件を入力して検索結果を先に確認する",
+      "フィルタを作成し、条件に一致する既存の会話にも適用する選択肢を確認する",
+      "ラベル付けやアーカイブなど実行内容を選び、対象の既存メールで結果を見る",
+      "一部だけ変わらない場合は検索条件とスレッド内のメールの違いを見直す"
+    ],
+    "causes": [
+      "新着メールだけに適用して既存会話を選んでいない",
+      "検索条件が古いメールには一致しない",
+      "会話表示と個別メールの違いを見落としている"
+    ],
+    "diagnosis": "新しいメールにはラベルが付くのに古い一致メールには付かない症状。既存記事は誤ったフィルタで新着がゴミ箱へ移る問題。本記事は作成済みフィルタが過去の一致メールへ遡及しない理由と一括適用を扱う。Googleはフィルタ作成時に一致する既存の会話にも適用する選択肢を案内している。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "検索が広すぎると意図しない古いメールまで整理されます。削除を含む操作は対象件数を確認してから行ってください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/90559?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-filter-moves-mail-to-trash/",
+      "/google/gmail-not-receiving-email/",
+      "/google/gmail-offline-messages-not-synced/"
+    ],
+    "closest_existing_url": "/google/gmail-filter-moves-mail-to-trash/",
+    "differentiation": "既存記事は誤ったフィルタで新着がゴミ箱へ移る問題。本記事は作成済みフィルタが過去の一致メールへ遡及しない理由と一括適用を扱う",
+    "fact_check": "Googleはフィルタ作成時に一致する既存の会話にも適用する選択肢を案内している。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-out-of-office-option-missing",
+    "path": "/google/calendar-out-of-office-option-missing/",
+    "title": "Googleカレンダーで不在予定の作成項目が出ないとき",
+    "topic": "予定作成には通常の予定があるのに不在予定を選べない症状",
+    "description": "予定作成には通常の予定があるのに不在予定を選べない症状。仕事用・学校用アカウントと管理者の提供設定を確認します。",
+    "answer": "仕事用・学校用アカウントと管理者の提供設定を確認します。",
+    "steps": [
+      "PC版Googleカレンダーを開き、右上のログインアカウントを確認する",
+      "左上の作成メニューに『不在』があるか調べる",
+      "仕事用・学校用アカウントなら勤務時間の機能が管理者に有効化されているか確認する",
+      "項目がない場合は通常の予定を一時的な不在表示に使うか、管理者に提供条件を相談する"
+    ],
+    "causes": [
+      "個人アカウントで職場向けの不在機能を探している",
+      "組織管理者が勤務時間関連の機能を有効にしていない",
+      "別のGoogleアカウントのカレンダーを開いている"
+    ],
+    "diagnosis": "予定作成には通常の予定があるのに不在予定を選べない症状。既存記事は勤務場所を表示する設定。本記事は会議を自動辞退する不在予定の作成メニューと対象アカウントを扱う。Googleは仕事用・学校用アカウントの勤務時間と不在予定を案内し、組織の設定により利用できない場合があると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "不在予定を有効にすると招待が自動辞退され得ます。既存の会議や共有先への影響を先に確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/calendar/answer/7638168?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/calendar-working-location-option-missing/",
+      "/google/calendar-dated-tasks-not-visible/",
+      "/google/google-calendar-desktop-reminders-missing/"
+    ],
+    "closest_existing_url": "/google/calendar-working-location-option-missing/",
+    "differentiation": "既存記事は勤務場所を表示する設定。本記事は会議を自動辞退する不在予定の作成メニューと対象アカウントを扱う",
+    "fact_check": "Googleは仕事用・学校用アカウントの勤務時間と不在予定を案内し、組織の設定により利用できない場合があると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "docs-version-history-view-only",
+    "path": "/google/docs-version-history-view-only/",
+    "title": "Googleドキュメントで変更履歴を開けないとき",
+    "topic": "共有文書は読めるのに過去の版を確認する操作が使えない症状",
+    "description": "共有文書は読めるのに過去の版を確認する操作が使えない症状。編集権限の有無と版の統合を確認します。 PCのdocs.google.comで対象の元文書を開く",
+    "answer": "編集権限の有無と版の統合を確認します。 PCのdocs.google.comで対象の元文書を開く",
+    "steps": [
+      "PCのdocs.google.comで対象の元文書を開く",
+      "共有画面で自分が閲覧者か編集者か確認する",
+      "編集者ならファイルの版の履歴を開き、折りたたまれた版を展開する",
+      "閲覧者なら所有者に必要な過去版の確認または正規の権限付与を依頼する"
+    ],
+    "causes": [
+      "閲覧のみの権限で版の履歴を探している",
+      "コピーした別ファイルの履歴を見ている",
+      "古い変更がまとめられ個別版として見えていない"
+    ],
+    "diagnosis": "共有文書は読めるのに過去の版を確認する操作が使えない症状。既存記事は本文を編集できない理由。本記事は閲覧権限でも本文は読めるが版の履歴は編集権限が必要という別の操作を扱う。Googleは過去の版を閲覧するには文書の編集権限が必要で、変更がまとめられる場合もあると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "編集権限は内容変更も可能にします。履歴確認だけのために権限を広げる前に所有者と範囲を相談してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/190843?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-view-only-cannot-edit/",
+      "/google/docs-person-chip-no-document-access/",
+      "/google/docs-compared-changes-not-in-original/"
+    ],
+    "closest_existing_url": "/google/docs-view-only-cannot-edit/",
+    "differentiation": "既存記事は本文を編集できない理由。本記事は閲覧権限でも本文は読めるが版の履歴は編集権限が必要という別の操作を扱う",
+    "fact_check": "Googleは過去の版を閲覧するには文書の編集権限が必要で、変更がまとめられる場合もあると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-upload-hd-quality-pending",
+    "path": "/google/youtube-upload-hd-quality-pending/",
+    "title": "YouTubeに投稿した動画でHD画質を選べないとき",
+    "topic": "アップロードは終わったのに再生メニューが低画質だけの症状",
+    "description": "アップロードは終わったのに再生メニューが低画質だけの症状。元動画の画質と高画質処理の完了を分けて確認します。 YouTube Studioで対象動画の処理状況とアップロード完了を確認する",
+    "answer": "元動画の画質と高画質処理の完了を分けて確認します。 YouTube Studioで対象動画の処理状況とアップロード完了を確認する",
+    "steps": [
+      "YouTube Studioで対象動画の処理状況とアップロード完了を確認する",
+      "元ファイルの解像度とフレームレートを確認する",
+      "公開直後ならHDや4Kの処理が終わるまで待って再生メニューを確認する",
+      "処理完了後も高画質がない場合は別の端末やブラウザーでも比較し元動画の仕様を確認する"
+    ],
+    "causes": [
+      "標準画質の処理だけ先に終わっている",
+      "元動画自体が低解像度で高画質版が作れない",
+      "再生端末やブラウザーの対応形式が異なる"
+    ],
+    "diagnosis": "アップロードは終わったのに再生メニューが低画質だけの症状。既存記事は章区切りの表示。本記事は投稿直後の画質処理と元ファイルの解像度を扱う。YouTubeは高解像度や高フレームレートの処理に時間がかかり、処理時間は形式・長さ・画質・混雑に左右されると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "重要な公開ではHD版が完成したことを確認してから案内してください。低画質ファイルを待つだけで高画質にはできません。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/71674?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-video-chapters-not-appearing/",
+      "/google/youtube-custom-thumbnail-option-missing/",
+      "/google/youtube-private-playlist-link-not-viewable/"
+    ],
+    "closest_existing_url": "/google/youtube-video-chapters-not-appearing/",
+    "differentiation": "既存記事は章区切りの表示。本記事は投稿直後の画質処理と元ファイルの解像度を扱う",
+    "fact_check": "YouTubeは高解像度や高フレームレートの処理に時間がかかり、処理時間は形式・長さ・画質・混雑に左右されると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-avoid-tolls-route-not-applied",
+    "path": "/google/maps-avoid-tolls-route-not-applied/",
+    "title": "Googleマップで有料道路を避ける設定が効かないとき",
+    "topic": "車の経路を調べたのに有料道路を通る案内が残る症状",
+    "description": "車の経路を調べたのに有料道路を通る案内が残る症状。移動手段と現在の経路オプションを確認します。 出発地と目的地を入れ、移動手段が自動車になっているか確認する",
+    "answer": "移動手段と現在の経路オプションを確認します。 出発地と目的地を入れ、移動手段が自動車になっているか確認する",
+    "steps": [
+      "出発地と目的地を入れ、移動手段が自動車になっているか確認する",
+      "経路のオプションで有料道路を避ける設定を選ぶ",
+      "表示された複数の候補と経路概要を比較する",
+      "案内開始後も目的の回避条件と道路標識を確認し、安全に停車してから経路を変更する"
+    ],
+    "causes": [
+      "徒歩や公共交通など別の移動手段の案内を見ている",
+      "経路オプションが別の検索に引き継がれていない",
+      "地域の道路情報や経路候補が限られている"
+    ],
+    "diagnosis": "車の経路を調べたのに有料道路を通る案内が残る症状。既存記事は音声案内が聞こえない問題。本記事は経路計算時に有料道路回避を指定し候補を比較する操作を扱う。Googleは車の経路検索でオプションから有料道路や高速道路を避ける設定を選べると案内している。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "地図情報と実際の規制が違う場合は現地の標識を優先し、運転中に端末を操作しないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/maps/answer/144339?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/maps-navigation-voice-silent/",
+      "/google/maps-location-sharing-unavailable/",
+      "/google/keep-reminder-notification-missing/"
+    ],
+    "closest_existing_url": "/google/maps-navigation-voice-silent/",
+    "differentiation": "既存記事は音声案内が聞こえない問題。本記事は経路計算時に有料道路回避を指定し候補を比較する操作を扱う",
+    "fact_check": "Googleは車の経路検索でオプションから有料道路や高速道路を避ける設定を選べると案内している。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "imessage-send-later-option-missing",
+    "path": "/iphone/imessage-send-later-option-missing/",
+    "title": "iPhoneのメッセージで『あとで送信』が出ないとき",
+    "topic": "送信時刻を予約したいのに追加メニューに項目がない症状",
+    "description": "送信時刻を予約したいのに追加メニューに項目がない症状。iMessageの会話かどうかと予約可能な期間を確認します。",
+    "answer": "iMessageの会話かどうかと予約可能な期間を確認します。",
+    "steps": [
+      "メッセージアプリで相手との吹き出しがiMessageの会話か確認する",
+      "入力欄横の追加ボタンを開き『あとで送信』を探す",
+      "送信予定が14日以内か確認して時刻を選ぶ",
+      "既に予約した内容は会話の下部に表示される場合があるため、編集前に予約済みメッセージを確認する"
+    ],
+    "causes": [
+      "SMSやMMSの会話でiMessage用の機能を探している",
+      "追加メニューを開かず通常の送信ボタンを見ている",
+      "予約可能な14日より先の日付を選ぼうとしている"
+    ],
+    "diagnosis": "送信時刻を予約したいのに追加メニューに項目がない症状。既存記事は目的地到着を相手に知らせるチェックイン。本記事はiMessageの文章を後日の指定時刻に送信する操作と期限を扱う。Appleは『あとで送信』をiMessageで使い、最大14日先まで予約できると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "予約した文面は送信前に編集・削除できますが、重要な連絡は時刻と宛先を確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/schedule-text-messages-to-send-later-iph5ae9a7be6/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/messages-check-in-option-missing/",
+      "/iphone/safari-shared-with-you-links-missing/",
+      "/iphone/app-privacy-report-empty/"
+    ],
+    "closest_existing_url": "/iphone/messages-check-in-option-missing/",
+    "differentiation": "既存記事は目的地到着を相手に知らせるチェックイン。本記事はiMessageの文章を後日の指定時刻に送信する操作と期限を扱う",
+    "fact_check": "Appleは『あとで送信』をiMessageで使い、最大14日先まで予約できると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "passwords-shared-group-invitation-missing",
+    "path": "/iphone/passwords-shared-group-invitation-missing/",
+    "title": "iPhoneの共有パスワードグループの招待が見つからないとき",
+    "topic": "家族から共有を受けたのにパスワードアプリにグループが出ない症状",
+    "description": "家族から共有を受けたのにパスワードアプリにグループが出ない症状。招待の場所、連絡先、対応OSとApple Accountを確認します。",
+    "answer": "招待の場所、連絡先、対応OSとApple Accountを確認します。",
+    "steps": [
+      "iPhoneのパスワードアプリを開き、グループの招待欄を探す",
+      "招待した人に自分の連絡先が正しく登録されているか確認してもらう",
+      "双方の端末が共有グループ対応のOS版か確認する",
+      "招待元が正しい相手だと確認したうえで招待を承認し、共有する認証情報を見直す"
+    ],
+    "causes": [
+      "招待通知だけを探しパスワードアプリの招待欄を見ていない",
+      "連絡先情報が招待先と一致していない",
+      "端末のOSが共有パスワードグループに対応していない"
+    ],
+    "diagnosis": "家族から共有を受けたのにパスワードアプリにグループが出ない症状。既存記事はロックしたメモの共同編集。本記事はパスワードアプリの共有グループへの招待と対応端末を扱う。Appleは招待をパスワードアプリのグループ招待から確認でき、参加には連絡先と対応OSが必要と説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "知らない相手からの招待は承認しないでください。共有後の資格情報はグループ内の人が利用できます。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/iphone/share-passwords-iphe6b2b7043/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/locked-note-collaboration-unavailable/",
+      "/iphone/live-photo-effects-missing/",
+      "/iphone/iphone-call-recording-button-missing/"
+    ],
+    "closest_existing_url": "/iphone/locked-note-collaboration-unavailable/",
+    "differentiation": "既存記事はロックしたメモの共同編集。本記事はパスワードアプリの共有グループへの招待と対応端末を扱う",
+    "fact_check": "Appleは招待をパスワードアプリのグループ招待から確認でき、参加には連絡先と対応OSが必要と説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "mac",
+    "slug": "safari-website-notifications-missing",
+    "path": "/mac/safari-website-notifications-missing/",
+    "title": "MacのSafariで特定サイトの通知が届かないとき",
+    "topic": "Webサイトの通知を許可したつもりでもMacの右上に出ない症状",
+    "description": "Webサイトの通知を許可したつもりでもMacの右上に出ない症状。Safari側の許可とmacOS側の通知設定を別々に確認します。",
+    "answer": "Safari側の許可とmacOS側の通知設定を別々に確認します。",
+    "steps": [
+      "Safariの設定でWebサイトの通知許可が対象サイトにあるか確かめる",
+      "macOSのシステム設定で通知を開き、対象サイトの通知許可を確認する",
+      "通知スタイルと集中モードの状態を比較する",
+      "サイトが実際に通知を送る条件を確認し、同じサイトの新しい通知で再確認する"
+    ],
+    "causes": [
+      "Safariでサイトの通知要求を拒否している",
+      "macOSの通知設定でそのWebサイトをオフにしている",
+      "集中モードやサイト側の配信条件で表示されていない"
+    ],
+    "diagnosis": "Webサイトの通知を許可したつもりでもMacの右上に出ない症状。既存記事はSafariのプロファイル表示。本記事はサイト単位のプッシュ通知をSafariとmacOSの二段階で許可する問題を扱う。AppleはSafariのWebサイト通知権限とmacOSのアプリ通知設定を別々に変更できると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "不要なサイト通知を一括で許可せず、送信元の信頼性と表示内容を確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/safari/customize-website-notifications-sfri40734/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/safari-profiles-not-visible/",
+      "/mac/safari-pages-not-loading-mac/",
+      "/mac/safari-private-browsing-keeps-locking/"
+    ],
+    "closest_existing_url": "/mac/safari-profiles-not-visible/",
+    "differentiation": "既存記事はSafariのプロファイル表示。本記事はサイト単位のプッシュ通知をSafariとmacOSの二段階で許可する問題を扱う",
+    "fact_check": "AppleはSafariのWebサイト通知権限とmacOSのアプリ通知設定を別々に変更できると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "iphone",
+    "slug": "japan-transit-express-card-wrong",
+    "path": "/iphone/japan-transit-express-card-wrong/",
+    "title": "iPhoneの交通系カードでエクスプレス設定が違うとき",
+    "topic": "改札で想定したカードではないカードが選ばれる症状",
+    "description": "改札で想定したカードではないカードが選ばれる症状。通常の支払い用標準カードと交通用エクスプレスカードを分けます。",
+    "answer": "通常の支払い用標準カードと交通用エクスプレスカードを分けます。",
+    "steps": [
+      "ウォレットに登録された交通系カードの種類と残高を確認する",
+      "対象カードの詳細からエクスプレスカード設定を開く",
+      "交通用に使うカードを一枚だけ選び、Apple Watch側の設定とも区別する",
+      "改札での結果を確認し、反応しない場合はカードの提供元と端末の状態を確認する"
+    ],
+    "causes": [
+      "支払い用の標準カードとエクスプレスカードを混同している",
+      "別の交通系カードがエクスプレスに指定されている",
+      "iPhoneとApple Watchで別々の設定を使っている"
+    ],
+    "diagnosis": "改札で想定したカードではないカードが選ばれる症状。既存記事は店舗支払いで最初に出る標準カード。本記事は日本の交通系カードを認証なしでタッチするエクスプレス設定を扱う。Appleは日本の交通系カードのエクスプレス設定は同時に一枚のみで、複数カードを追加した場合は選び直せると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "改札付近で操作を繰り返さず安全な場所で設定を確認し、残高や定期券の条件も確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/108772",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/apple-pay-wrong-default-card/",
+      "/iphone/lockdown-mode-website-content-missing/",
+      "/iphone/keyboard-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/apple-pay-wrong-default-card/",
+    "differentiation": "既存記事は店舗支払いで最初に出る標準カード。本記事は日本の交通系カードを認証なしでタッチするエクスプレス設定を扱う",
+    "fact_check": "Appleは日本の交通系カードのエクスプレス設定は同時に一枚のみで、複数カードを追加した場合は選び直せると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "swift-pair-notification-missing",
+    "path": "/windows/swift-pair-notification-missing/",
+    "title": "WindowsでSwift Pairの接続通知が出ないとき",
+    "topic": "近くにBluetooth機器を置いても簡単接続の通知が出ない症状",
+    "description": "近くにBluetooth機器を置いても簡単接続の通知が出ない症状。機器の対応と検出可能状態、Windows側の通知設定を確認します。",
+    "answer": "機器の対応と検出可能状態、Windows側の通知設定を確認します。",
+    "steps": [
+      "Bluetooth機器がSwift Pair対応か製品案内で確認する",
+      "機器をペアリングモードにしてPCの近くに置く",
+      "WindowsのBluetoothとデバイス設定でSwift Pair接続通知を表示する設定を確認する",
+      "通知が出なければ通常のBluetooth機器追加から検出できるか比較する"
+    ],
+    "causes": [
+      "機器がSwift Pairに対応していない",
+      "機器がペアリングモードに入っていない",
+      "Windows側でSwift Pairの通知表示がオフ"
+    ],
+    "diagnosis": "近くにBluetooth機器を置いても簡単接続の通知が出ない症状。既存記事はBluetooth LE Audioの対応項目。本記事は通常の接続はできるのに近接時のSwift Pair通知だけが出ない条件を扱う。Microsoftは対応機器が近くで検出可能なときSwift Pair通知を表示し、Windows側に通知設定があると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "見覚えのない接続通知を承認せず、機器名と所有者を確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/hardware/bluetooth/pair-a-bluetooth-device-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/bluetooth-le-audio-option-missing/",
+      "/windows/nearby-sharing-device-not-found-windows/",
+      "/windows/windows-bluetooth-toggle-missing/"
+    ],
+    "closest_existing_url": "/windows/bluetooth-le-audio-option-missing/",
+    "differentiation": "既存記事はBluetooth LE Audioの対応項目。本記事は通常の接続はできるのに近接時のSwift Pair通知だけが出ない条件を扱う",
+    "fact_check": "Microsoftは対応機器が近くで検出可能なときSwift Pair通知を表示し、Windows側に通知設定があると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "onedrive-personal-vault-locks-too-soon",
+    "path": "/windows/onedrive-personal-vault-locks-too-soon/",
+    "title": "OneDriveの個人用Vaultがすぐロックされるとき",
+    "topic": "作業中の個人用Vaultが短時間で閉じて再認証を求められる症状",
+    "description": "作業中の個人用Vaultが短時間で閉じて再認証を求められる症状。自動ロック時間と利用端末ごとの設定を確認します。 OneDriveの個人用Vaultだけがロックされるか確認する",
+    "answer": "自動ロック時間と利用端末ごとの設定を確認します。 OneDriveの個人用Vaultだけがロックされるか確認する",
+    "steps": [
+      "OneDriveの個人用Vaultだけがロックされるか確認する",
+      "WindowsのOneDrive設定でアカウントの個人用Vaultのロック待ち時間を確認する",
+      "スマホ版ならOneDriveの設定で自動ロックまたは非操作時間を確認する",
+      "長い時間を選ぶ場合は端末の画面ロックや共有環境の安全性も見直す"
+    ],
+    "causes": [
+      "個人用Vaultの自動ロックが短い時間に設定されている",
+      "Windowsとスマホで別々のロック時間を使っている",
+      "端末の画面ロックとVaultの再認証を混同している"
+    ],
+    "diagnosis": "作業中の個人用Vaultが短時間で閉じて再認証を求められる症状。既存記事はVaultに入れない認証失敗。本記事は開けた後に安全機能で自動的に再ロックされる時間を扱う。MicrosoftはPCとモバイルの個人用Vaultの自動ロック時間を設定から変更できると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "ロック時間を延ばすと離席中の閲覧リスクが増えます。共有PCでは短い設定を維持してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/onedrive/protect-your-onedrive-files-in-personal-vault",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/onedrive-personal-vault-cannot-unlock/",
+      "/windows/onedrive-sync-pending/",
+      "/windows/windows-backup-files-not-restored/"
+    ],
+    "closest_existing_url": "/windows/onedrive-personal-vault-cannot-unlock/",
+    "differentiation": "既存記事はVaultに入れない認証失敗。本記事は開けた後に安全機能で自動的に再ロックされる時間を扱う",
+    "fact_check": "MicrosoftはPCとモバイルの個人用Vaultの自動ロック時間を設定から変更できると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-taskbar-clock-seconds-hidden",
+    "path": "/windows/windows-taskbar-clock-seconds-hidden/",
+    "title": "Windowsのタスクバー時計に秒が表示されないとき",
+    "topic": "時計には時刻が出るのに秒が表示されない症状",
+    "description": "時計には時刻が出るのに秒が表示されない症状。タスクバーの時計設定と電力消費の注意を確認します。 タスクバーの時計が通常どおり表示されるか確認する",
+    "answer": "タスクバーの時計設定と電力消費の注意を確認します。 タスクバーの時計が通常どおり表示されるか確認する",
+    "steps": [
+      "タスクバーの時計が通常どおり表示されるか確認する",
+      "タスクバーを右クリックしてタスクバー設定を開く",
+      "タスクバーの動作にあるシステムトレイの時計に秒を表示する選択肢を確認する",
+      "設定を変えた後に時計を見直し、選択肢がない場合はWindowsの版と更新状態を確認する"
+    ],
+    "causes": [
+      "秒表示の選択肢をオンにしていない",
+      "タスクバー時計と時計アプリの表示を混同している",
+      "利用中のWindows版や管理設定で選択肢が異なる"
+    ],
+    "diagnosis": "時計には時刻が出るのに秒が表示されない症状。既存記事はロック画面の画像更新。本記事はタスクバー時計の秒表示という表示設定を扱う。Microsoftはタスクバーの動作で秒表示を選べ、電力消費が増えると注記している。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "秒表示は電力消費が増える場合があります。ノートPCでは必要性を考えて設定してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/personalization/customize-the-taskbar-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/lock-screen-spotlight-not-changing/",
+      "/windows/windows-input-language-icon-missing/",
+      "/windows/touch-keyboard-icon-missing-windows/"
+    ],
+    "closest_existing_url": "/windows/lock-screen-spotlight-not-changing/",
+    "differentiation": "既存記事はロック画面の画像更新。本記事はタスクバー時計の秒表示という表示設定を扱う",
+    "fact_check": "Microsoftはタスクバーの動作で秒表示を選べ、電力消費が増えると注記している。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "onedrive-unable-to-sync-shortcut",
+    "path": "/windows/onedrive-unable-to-sync-shortcut/",
+    "title": "OneDriveで『ショートカットを同期できません』と出るとき",
+    "topic": "共有フォルダーのショートカットだけが同期エラーになる症状",
+    "description": "共有フォルダーのショートカットだけが同期エラーになる症状。親と子の重複ショートカットを探して安全に除きます。 OneDriveのエラーがショートカット同期に限定されるか確認する",
+    "answer": "親と子の重複ショートカットを探して安全に除きます。 OneDriveのエラーがショートカット同期に限定されるか確認する",
+    "steps": [
+      "OneDriveのエラーがショートカット同期に限定されるか確認する",
+      "共有フォルダーの親と子にショートカットが重複していないか調べる",
+      "Microsoftの案内に従い子フォルダー側の『ショートカットを削除』を使う",
+      "同期状態を再確認し、見つからなければOneDriveのWeb画面でもショートカットを探す"
+    ],
+    "causes": [
+      "親フォルダーの中に子フォルダーへのショートカットを移した",
+      "同じ共有範囲の親子ショートカットが重複している",
+      "ショートカットと実体フォルダーを取り違えている"
+    ],
+    "diagnosis": "共有フォルダーのショートカットだけが同期エラーになる症状。既存記事はファイルオンデマンドが起動しない症状。本記事は共有フォルダーの親子ショートカット重複による専用エラーを扱う。Microsoftは親フォルダー内の子フォルダーショートカットを削除し、元フォルダーやファイルは削除しないよう案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "『削除』ではなく『ショートカットを削除』を選び、共有元の実体を消さないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/onedrive/onedrive-sync-app-error-unable-to-sync-shortcut",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/onedrive-files-on-demand-wont-start/",
+      "/windows/onedrive-sync-pending/",
+      "/windows/windows-backup-files-not-restored/"
+    ],
+    "closest_existing_url": "/windows/onedrive-files-on-demand-wont-start/",
+    "differentiation": "既存記事はファイルオンデマンドが起動しない症状。本記事は共有フォルダーの親子ショートカット重複による専用エラーを扱う",
+    "fact_check": "Microsoftは親フォルダー内の子フォルダーショートカットを削除し、元フォルダーやファイルは削除しないよう案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-text-size-icons-unchanged",
+    "path": "/windows/windows-text-size-icons-unchanged/",
+    "title": "Windowsで文字を大きくしてもアイコンが変わらないとき",
+    "topic": "アクセシビリティで文字サイズを上げてもアプリやアイコンが小さいままの症状",
+    "description": "アクセシビリティで文字サイズを上げてもアプリやアイコンが小さいままの症状。文字だけの拡大と画面全体の拡大を区別します。 設定のアクセシビリティで文字サイズの値を確認する",
+    "answer": "文字だけの拡大と画面全体の拡大を区別します。 設定のアクセシビリティで文字サイズの値を確認する",
+    "steps": [
+      "設定のアクセシビリティで文字サイズの値を確認する",
+      "文字だけが変わるかエクスプローラーと設定画面で比べる",
+      "アプリやアイコンも大きくしたい場合はシステムのディスプレイ設定で拡大縮小を確認する",
+      "複数の画面がある場合は各ディスプレイで表示を比べる"
+    ],
+    "causes": [
+      "文字サイズ設定を画面全体の倍率だと考えている",
+      "拡大縮小が元の値のまま",
+      "外部ディスプレイ側に別の倍率が設定されている"
+    ],
+    "diagnosis": "アクセシビリティで文字サイズを上げてもアプリやアイコンが小さいままの症状。既存記事は倍率変更後の文字のぼやけ。本記事は文字サイズだけを変えたためアイコンとアプリの大きさが変わらない仕組みを扱う。Microsoftは文字サイズが文字のみを拡大し、ディスプレイの拡大縮小は文字・アプリ・アイコン全体を変えると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "倍率を急に大きくすると画面内の表示範囲が減ります。作業中のウィンドウを保存してから調整してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/make-windows-easier-to-see",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-display-text-blurry-scaling/",
+      "/windows/system-tray-icon-in-overflow/",
+      "/windows/night-light-not-changing-color-windows/"
+    ],
+    "closest_existing_url": "/windows/windows-display-text-blurry-scaling/",
+    "differentiation": "既存記事は倍率変更後の文字のぼやけ。本記事は文字サイズだけを変えたためアイコンとアプリの大きさが変わらない仕組みを扱う",
+    "fact_check": "Microsoftは文字サイズが文字のみを拡大し、ディスプレイの拡大縮小は文字・アプリ・アイコン全体を変えると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-notification-snooze-button-missing",
+    "path": "/android/android-notification-snooze-button-missing/",
+    "title": "Androidの通知にスヌーズのボタンが出ないとき",
+    "topic": "通知を後で再表示したいのにスヌーズ操作が見つからない症状",
+    "description": "通知を後で再表示したいのにスヌーズ操作が見つからない症状。通知スヌーズの許可と通知の展開を確認します。 設定の通知で『通知のスヌーズを許可』を確認する",
+    "answer": "通知スヌーズの許可と通知の展開を確認します。 設定の通知で『通知のスヌーズを許可』を確認する",
+    "steps": [
+      "設定の通知で『通知のスヌーズを許可』を確認する",
+      "対象の通知を展開して下矢印やスヌーズ操作を探す",
+      "別アプリの通知でも同じ操作が出るか比較する",
+      "端末メーカーで画面が違う場合はその端末の公式案内と照合する"
+    ],
+    "causes": [
+      "端末全体で通知スヌーズがオフ",
+      "通知を展開せず簡略表示だけを見ている",
+      "メーカーやOS版によって操作位置が違う"
+    ],
+    "diagnosis": "通知を後で再表示したいのにスヌーズ操作が見つからない症状。既存記事は通知そのものが届かない問題。本記事は届いた通知を後で再表示するスヌーズ操作を扱う。Googleは設定で通知のスヌーズを許可し、通知を展開してスヌーズできると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "重要な警報や認証通知を安易に延期せず、必要な通知はすぐ確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9079661?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-notifications-not-arriving/",
+      "/android/notification-history-empty/",
+      "/android/google-messages-scheduled-send-option-missing/"
+    ],
+    "closest_existing_url": "/android/android-notifications-not-arriving/",
+    "differentiation": "既存記事は通知そのものが届かない問題。本記事は届いた通知を後で再表示するスヌーズ操作を扱う",
+    "fact_check": "Googleは設定で通知のスヌーズを許可し、通知を展開してスヌーズできると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "android",
+    "slug": "google-messages-archived-chat-missing",
+    "path": "/android/google-messages-archived-chat-missing/",
+    "title": "Googleメッセージで会話が一覧から消えたとき",
+    "topic": "削除した覚えがない会話がホームの一覧に出ない症状",
+    "description": "削除した覚えがない会話がホームの一覧に出ない症状。アーカイブと削除済み会話を区別して確認します。 Googleメッセージのプロフィールメニューからアーカイブ済みを開く",
+    "answer": "アーカイブと削除済み会話を区別して確認します。 Googleメッセージのプロフィールメニューからアーカイブ済みを開く",
+    "steps": [
+      "Googleメッセージのプロフィールメニューからアーカイブ済みを開く",
+      "対象の会話があれば内容と相手を確認する",
+      "ホームへ戻す場合は会話を選んでアーカイブ解除する",
+      "見つからなければゴミ箱や別のSMSアプリを確認し、削除とアーカイブの違いを整理する"
+    ],
+    "causes": [
+      "会話を誤ってアーカイブした",
+      "ホーム一覧だけを検索している",
+      "別のメッセージアプリやゴミ箱にある"
+    ],
+    "diagnosis": "削除した覚えがない会話がホームの一覧に出ない症状。既存記事はRCSの通信接続失敗。本記事は既に保存された会話がホーム一覧から消えたときのアーカイブ解除を扱う。Googleはアーカイブ済み会話を専用一覧から選び、アーカイブ解除でホームへ戻せると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "削除済み会話と判断して初期化やアプリデータ削除を急がないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/messages/answer/7028817?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-rcs-chat-not-connecting/",
+      "/android/google-messages-scheduled-send-option-missing/",
+      "/android/android-find-hub-device-not-showing/"
+    ],
+    "closest_existing_url": "/android/android-rcs-chat-not-connecting/",
+    "differentiation": "既存記事はRCSの通信接続失敗。本記事は既に保存された会話がホーム一覧から消えたときのアーカイブ解除を扱う",
+    "fact_check": "Googleはアーカイブ済み会話を専用一覧から選び、アーカイブ解除でホームへ戻せると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "android",
+    "slug": "android-live-transcribe-app-missing",
+    "path": "/android/android-live-transcribe-app-missing/",
+    "title": "Androidで音声文字変換アプリが見つからないとき",
+    "topic": "周囲の会話を文字で読みたいが音声文字変換の項目がない症状",
+    "description": "周囲の会話を文字で読みたいが音声文字変換の項目がない症状。Pixel内蔵版とそれ以外の端末のアプリ導入経路を確認します。",
+    "answer": "Pixel内蔵版とそれ以外の端末のアプリ導入経路を確認します。",
+    "steps": [
+      "端末がPixelか別メーカーか確認する",
+      "設定のユーザー補助で音声文字変換を検索する",
+      "Pixel以外で項目がなければGoogle Playの公式アプリを確認する",
+      "アプリのマイク権限を本人の許可で有効にし、短い会話で文字化を試す"
+    ],
+    "causes": [
+      "Pixel以外の端末でアプリをまだ導入していない",
+      "ライブキャプションと音声文字変換を混同している",
+      "マイク権限が許可されていない"
+    ],
+    "diagnosis": "周囲の会話を文字で読みたいが音声文字変換の項目がない症状。既存記事は保存済みPixelレコーダーの録音を文字にする言語問題。本記事は周囲の会話をリアルタイムに文字で見る別アプリの導入とマイク権限を扱う。GoogleはPixel以外では音声文字変換アプリが見つからなければPlayから入手し、マイク権限を許可すると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "周囲の人の発言を扱う際は本人の同意とプライバシーに配慮してください。文字起こしには誤認識があります。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/accessibility/android/answer/9158064?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/pixel-recorder-transcript-wrong-language/",
+      "/android/theft-detection-lock-option-missing/",
+      "/android/android-add-user-option-missing/"
+    ],
+    "closest_existing_url": "/android/pixel-recorder-transcript-wrong-language/",
+    "differentiation": "既存記事は保存済みPixelレコーダーの録音を文字にする言語問題。本記事は周囲の会話をリアルタイムに文字で見る別アプリの導入とマイク権限を扱う",
+    "fact_check": "GoogleはPixel以外では音声文字変換アプリが見つからなければPlayから入手し、マイク権限を許可すると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-unsigned-addon-disabled",
+    "path": "/browser/firefox-unsigned-addon-disabled/",
+    "title": "Firefox更新後に拡張機能が無効になったとき",
+    "topic": "拡張機能一覧に検証されていないという表示が出て動かない症状",
+    "description": "拡張機能一覧に検証されていないという表示が出て動かない症状。署名と互換性の状態を確認します。 アドオンマネージャーで該当拡張の無効理由を確認する",
+    "answer": "署名と互換性の状態を確認します。 アドオンマネージャーで該当拡張の無効理由を確認する",
+    "steps": [
+      "アドオンマネージャーで該当拡張の無効理由を確認する",
+      "Firefoxの更新と拡張機能の更新がないか調べる",
+      "署名済みの新版が公式Firefox Add-onsにあるか確認する",
+      "入手できない場合は開発元の正規案内を確認し、信頼できる代替を検討する"
+    ],
+    "causes": [
+      "拡張機能がMozillaの署名を受けていない",
+      "Firefoxの更新後に旧版が非互換になった",
+      "公式アドオンストア以外の古い配布物を使っている"
+    ],
+    "diagnosis": "拡張機能一覧に検証されていないという表示が出て動かない症状。既存記事はContainersのボタン表示。本記事は未署名または非互換として拡張機能そのものが無効化される状態を扱う。Mozillaは未署名の拡張を自動で無効にし、署名済み新版があれば公式アドオンサイトから再導入するよう案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "署名検証を無効にする非公式な設定や出所不明の拡張を導入しないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/firefox-containers-icon-missing/",
+      "/browser/chrome-extensions-not-working/",
+      "/browser/firefox-reader-view-button-missing/"
+    ],
+    "closest_existing_url": "/browser/firefox-containers-icon-missing/",
+    "differentiation": "既存記事はContainersのボタン表示。本記事は未署名または非互換として拡張機能そのものが無効化される状態を扱う",
+    "fact_check": "Mozillaは未署名の拡張を自動で無効にし、署名済み新版があれば公式アドオンサイトから再導入するよう案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-sleeping-tab-not-sleeping",
+    "path": "/browser/edge-sleeping-tab-not-sleeping/",
+    "title": "Edgeの非アクティブなタブがスリープしないとき",
+    "topic": "しばらく使っていないタブも薄くならずメモリ使用が続く症状",
+    "description": "しばらく使っていないタブも薄くならずメモリ使用が続く症状。スリープ設定、例外サイト、タブ内の動作を確認します。 Edgeのシステムとパフォーマンス設定でタブを自動的にスリープさせる機能を確認する",
+    "answer": "スリープ設定、例外サイト、タブ内の動作を確認します。 Edgeのシステムとパフォーマンス設定でタブを自動的にスリープさせる機能を確認する",
+    "steps": [
+      "Edgeのシステムとパフォーマンス設定でタブを自動的にスリープさせる機能を確認する",
+      "スリープまでの時間を確認し十分に待ったか比べる",
+      "常にアクティブにするサイト一覧に対象がないか確認する",
+      "音声再生・画面共有・カメラ利用などスリープを妨げる動作を止めたテスト用タブと比較する"
+    ],
+    "causes": [
+      "自動スリープがオフまたは設定した待ち時間が長い",
+      "対象サイトが例外一覧に登録されている",
+      "音声やカメラなどの活動でスリープ対象外になっている"
+    ],
+    "diagnosis": "しばらく使っていないタブも薄くならずメモリ使用が続く症状。既存記事はページの読み上げボタン。本記事はEdgeのメモリ節約でタブが休止する条件と例外を扱う。Microsoftは再生中の音声やカメラ利用、例外サイトなどはタブのスリープを妨げると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "通話や配信中のタブを無理に休止させると動作が止まるため、活動中のタブはそのままにしてください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/edge/learn-about-performance-features-in-microsoft-edge",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/edge-read-aloud-control-missing/",
+      "/browser/chrome-tabs-reload-after-switch/",
+      "/browser/edge-vertical-tabs-option-disabled/"
+    ],
+    "closest_existing_url": "/browser/edge-read-aloud-control-missing/",
+    "differentiation": "既存記事はページの読み上げボタン。本記事はEdgeのメモリ節約でタブが休止する条件と例外を扱う",
+    "fact_check": "Microsoftは再生中の音声やカメラ利用、例外サイトなどはタブのスリープを妨げると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "safari-mac-download-file-not-found",
+    "path": "/browser/safari-mac-download-file-not-found/",
+    "title": "MacのSafariでダウンロードしたファイルが見つからないとき",
+    "topic": "完了表示の後にFinderのダウンロードフォルダーでファイルが見えない症状",
+    "description": "完了表示の後にFinderのダウンロードフォルダーでファイルが見えない症状。Safariの保存先とダウンロード一覧の違いを確認します。",
+    "answer": "Safariの保存先とダウンロード一覧の違いを確認します。",
+    "steps": [
+      "Safari右上のダウンロード一覧を開き対象ファイルを探す",
+      "ファイル横の虫眼鏡でFinder上の場所を開く",
+      "Safariの設定の一般でファイルのダウンロード先を確認する",
+      "一覧から消えている場合は一覧の自動消去設定と実際の保存ファイルを別々に確認する"
+    ],
+    "causes": [
+      "Safariの保存先がダウンロードフォルダー以外に変更された",
+      "一覧から表示が消えただけでファイルは残っている",
+      "保存後にファイルを移動したため一覧から場所を開けない"
+    ],
+    "diagnosis": "完了表示の後にFinderのダウンロードフォルダーでファイルが見えない症状。既存記事はiPhoneのプライベートタブの認証設定。本記事はMac版Safariのダウンロード先と履歴一覧の違いを扱う。AppleはSafariの一般設定で保存先とダウンロード一覧の消去時期を別々に選べると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "インターネットから入手した実行ファイルは送信元を確認し、心当たりがなければ開かないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-gb/guide/safari/sfri40598/27.0/mac/27",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/safari-private-browsing-lock-option-missing/",
+      "/browser/safari-hide-distracting-items-missing/",
+      "/browser/firefox-pdf-opens-instead-of-saving/"
+    ],
+    "closest_existing_url": "/browser/safari-private-browsing-lock-option-missing/",
+    "differentiation": "既存記事はiPhoneのプライベートタブの認証設定。本記事はMac版Safariのダウンロード先と履歴一覧の違いを扱う",
+    "fact_check": "AppleはSafariの一般設定で保存先とダウンロード一覧の消去時期を別々に選べると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-archived-thread-reply-locked",
+    "path": "/sns/discord-archived-thread-reply-locked/",
+    "title": "Discordのアーカイブ済みスレッドに返信できないとき",
+    "topic": "スレッドは読めるのに書き込みや再開の操作が使えない症状",
+    "description": "スレッドは読めるのに書き込みや再開の操作が使えない症状。通常のアーカイブと管理者によるロックを分けます。 スレッドがアーカイブ済みか、ロック付きでアーカイブされたか表示を確認する",
+    "answer": "通常のアーカイブと管理者によるロックを分けます。 スレッドがアーカイブ済みか、ロック付きでアーカイブされたか表示を確認する",
+    "steps": [
+      "スレッドがアーカイブ済みか、ロック付きでアーカイブされたか表示を確認する",
+      "自分の権限でスレッドを再開できるか試す",
+      "管理者がロックした場合は管理者またはモデレーターに再開を相談する",
+      "新しい話題なら許可されたチャンネルで別スレッドを作れるか確認する"
+    ],
+    "causes": [
+      "非アクティブでスレッドがアーカイブされた",
+      "管理者がロックしてメンバーの再開を止めている",
+      "そのチャンネルでスレッド投稿の権限がない"
+    ],
+    "diagnosis": "スレッドは読めるのに書き込みや再開の操作が使えない症状。既存記事はフォーラム投稿時の必須タグ。本記事は投稿済みスレッドがアーカイブまたはロックされ返信できない問題を扱う。Discordはモデレーターがアーカイブ時にスレッドをロックでき、ロックしたスレッドは管理者側の再開が必要と説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "権限を迂回して別アカウントで投稿せず、管理者に目的を伝えてください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/4404809613847-Threads-Moderation-FAQ",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-forum-required-tag-post-fails/",
+      "/sns/discord-scheduled-event-create-disabled/",
+      "/sns/discord-mfa-backup-code-option-missing/"
+    ],
+    "closest_existing_url": "/sns/discord-forum-required-tag-post-fails/",
+    "differentiation": "既存記事はフォーラム投稿時の必須タグ。本記事は投稿済みスレッドがアーカイブまたはロックされ返信できない問題を扱う",
+    "fact_check": "Discordはモデレーターがアーカイブ時にスレッドをロックでき、ロックしたスレッドは管理者側の再開が必要と説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-webinar-qa-option-missing",
+    "path": "/sns/zoom-webinar-qa-option-missing/",
+    "title": "ZoomウェビナーでQ&Aの項目が出ないとき",
+    "topic": "主催者がウェビナーを設定しても質疑応答の選択肢が見つからない症状",
+    "description": "主催者がウェビナーを設定しても質疑応答の選択肢が見つからない症状。ウェビナー設定と組織アカウントの制限を確認します。 ZoomのWebポータルで対象ウェビナーの編集画面を開く",
+    "answer": "ウェビナー設定と組織アカウントの制限を確認します。 ZoomのWebポータルで対象ウェビナーの編集画面を開く",
+    "steps": [
+      "ZoomのWebポータルで対象ウェビナーの編集画面を開く",
+      "ウェビナーオプションにQ&Aがあるか確認する",
+      "個人のウェビナー設定でQ&Aの有効状態を見る",
+      "項目がない・灰色なら管理者のアカウントまたはグループ設定を確認してもらう"
+    ],
+    "causes": [
+      "ウェビナーオプションのQ&Aを有効にしていない",
+      "アカウントレベルでQ&Aが無効",
+      "グループまたは管理者が変更をロックしている"
+    ],
+    "diagnosis": "主催者がウェビナーを設定しても質疑応答の選択肢が見つからない症状。既存記事は会議中の投票ボタン。本記事はウェビナーのQ&A機能を事前に設定する項目と管理者制限を扱う。Zoomはウェビナー作成時のQ&A設定を案内し、項目がなければアカウントで無効化されていると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "参加者の質問には個人情報が含まれ得ます。公開範囲と保存設定を主催者が確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0064380",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-polls-button-missing-host/",
+      "/sns/zoom-meeting-file-transfer-missing/",
+      "/sns/zoom-webinar-registration-email-missing/"
+    ],
+    "closest_existing_url": "/sns/zoom-polls-button-missing-host/",
+    "differentiation": "既存記事は会議中の投票ボタン。本記事はウェビナーのQ&A機能を事前に設定する項目と管理者制限を扱う",
+    "fact_check": "Zoomはウェビナー作成時のQ&A設定を案内し、項目がなければアカウントで無効化されていると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-meeting-chat-after-meeting-inaccessible",
+    "path": "/sns/teams-meeting-chat-after-meeting-inaccessible/",
+    "title": "Teamsの会議後にチャット履歴を開けないとき",
+    "topic": "会議中は話せたのに終了後の会議チャットが表示されない症状",
+    "description": "会議中は話せたのに終了後の会議チャットが表示されない症状。招待・参加方法と会議チャットの設定を確認します。 主催者から直接招待された会議か、転送された予定から参加したか確認する",
+    "answer": "招待・参加方法と会議チャットの設定を確認します。 主催者から直接招待された会議か、転送された予定から参加したか確認する",
+    "steps": [
+      "主催者から直接招待された会議か、転送された予定から参加したか確認する",
+      "同じ職場アカウントで会議一覧またはチャット一覧を開く",
+      "主催者に会議オプションでチャット可能な時間と参加者設定を確認してもらう",
+      "外部・匿名参加や手動追加の場合は履歴へのアクセス条件を主催者へ相談する"
+    ],
+    "causes": [
+      "外部または匿名参加で終了後のアクセスがない",
+      "招待を転送された、または会議中に手動追加された",
+      "主催者が会議後チャットを制限した"
+    ],
+    "diagnosis": "会議中は話せたのに終了後の会議チャットが表示されない症状。既存記事は出席者CSVをダウンロードできない問題。本記事は会議参加者が終了後のチャットを読む権限と参加経路を扱う。Microsoftは外部・匿名参加者や転送された招待からの参加者などは会議後チャットへアクセスできない場合があると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "他人のチャット履歴の共有を求める際は主催者と組織の情報管理ルールを確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/chat-in-microsoft-teams-meetings",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-attendance-report-missing-after-meeting/",
+      "/sns/teams-shifts-schedule-not-visible/",
+      "/sns/zoom-blur-background-option-missing/"
+    ],
+    "closest_existing_url": "/sns/teams-attendance-report-missing-after-meeting/",
+    "differentiation": "既存記事は出席者CSVをダウンロードできない問題。本記事は会議参加者が終了後のチャットを読む権限と参加経路を扱う",
+    "fact_check": "Microsoftは外部・匿名参加者や転送された招待からの参加者などは会議後チャットへアクセスできない場合があると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-all-albums-missing-after-leaving-group",
+    "path": "/sns/line-all-albums-missing-after-leaving-group/",
+    "title": "LINEの『すべてのアルバム』から写真が消えたとき",
+    "topic": "トーク内では見えたアルバムが一覧から見えなくなった症状",
+    "description": "トーク内では見えたアルバムが一覧から見えなくなった症状。グループ参加状態と一覧の表示対象を確認します。 アルバムを作ったトークまたはグループ名を確認する",
+    "answer": "グループ参加状態と一覧の表示対象を確認します。 アルバムを作ったトークまたはグループ名を確認する",
+    "steps": [
+      "アルバムを作ったトークまたはグループ名を確認する",
+      "現在そのグループのメンバーか調べる",
+      "トーク内のアルバムと『すべてのアルバム』の一覧を比べる",
+      "退会・削除済みの相手とのトークなら公式の表示条件を確認し、残る写真は正規の共有元で確認する"
+    ],
+    "causes": [
+      "グループを退会・退出して一覧の対象外になった",
+      "相手がLINEアカウントを削除した",
+      "アルバム自体の削除と一覧だけの非表示を混同している"
+    ],
+    "diagnosis": "トーク内では見えたアルバムが一覧から見えなくなった症状。既存記事はグループに新しいアルバムを作れない症状。本記事は既存アルバムが『すべてのアルバム』一覧に出ない条件を扱う。LINEは退会したグループのアルバムやアカウント削除済みの友だちとのアルバムは『すべてのアルバム』に表示されないと説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "グループを出る前に必要な写真の保存と共有許可を確認してください。勝手に他人の写真を再配布しないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20000248",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-group-album-new-album-fails/",
+      "/sns/line-chat-history-missing/",
+      "/sns/line-keep-memo-chat-missing/"
+    ],
+    "closest_existing_url": "/sns/line-group-album-new-album-fails/",
+    "differentiation": "既存記事はグループに新しいアルバムを作れない症状。本記事は既存アルバムが『すべてのアルバム』一覧に出ない条件を扱う",
+    "fact_check": "LINEは退会したグループのアルバムやアカウント削除済みの友だちとのアルバムは『すべてのアルバム』に表示されないと説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-stickers-missing-after-transfer",
+    "path": "/sns/line-stickers-missing-after-transfer/",
+    "title": "LINEの引き継ぎ後に購入済みスタンプが見えないとき",
+    "topic": "機種変更後に所有していたスタンプや着せかえが一覧から消えた症状",
+    "description": "機種変更後に所有していたスタンプや着せかえが一覧から消えた症状。購入したアカウントと再ダウンロードを確認します。 引き継いだLINEアカウントが以前の購入アカウントと同じか確認する",
+    "answer": "購入したアカウントと再ダウンロードを確認します。 引き継いだLINEアカウントが以前の購入アカウントと同じか確認する",
+    "steps": [
+      "引き継いだLINEアカウントが以前の購入アカウントと同じか確認する",
+      "ホームの設定からマイスタンプと絵文字のダウンロード一覧を確認する",
+      "着せかえも別の一覧から再ダウンロードを試す",
+      "購入履歴が一致しない場合はアカウントと購入情報を控えてLINE公式サポートへ相談する"
+    ],
+    "causes": [
+      "引き継ぎ後にスタンプをまだ再ダウンロードしていない",
+      "着せかえは別の一覧にある",
+      "以前と異なるLINEアカウントでログインしている"
+    ],
+    "diagnosis": "機種変更後に所有していたスタンプや着せかえが一覧から消えた症状。既存記事はトーク本文のバックアップと復元。本記事は購入済みスタンプ・絵文字・着せかえを同一アカウントで再取得する問題を扱う。LINEは引き継ぎ後にスタンプや絵文字をマイスタンプから、着せかえをマイ着せかえから再ダウンロードするよう案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "購入品が見えないだけで再購入しないでください。まず同じアカウントと購入履歴を確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20000170",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-chat-history-missing/",
+      "/sns/line-keep-memo-chat-missing/",
+      "/sns/line-chat-backup-fails/"
+    ],
+    "closest_existing_url": "/sns/line-chat-history-missing/",
+    "differentiation": "既存記事はトーク本文のバックアップと復元。本記事は購入済みスタンプ・絵文字・着せかえを同一アカウントで再取得する問題を扱う",
+    "fact_check": "LINEは引き継ぎ後にスタンプや絵文字をマイスタンプから、着せかえをマイ着せかえから再ダウンロードするよう案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-shared-access-expiration-missing",
+    "path": "/google/drive-shared-access-expiration-missing/",
+    "title": "Googleドライブで共有相手のアクセス期限を設定できないとき",
+    "topic": "共有設定を開いても相手のアクセス期限を追加する項目が出ない症状",
+    "description": "共有設定を開いても相手のアクセス期限を追加する項目が出ない症状。アカウント種別、相手の役割、対象がファイルかフォルダかを確認します。",
+    "answer": "アカウント種別、相手の役割、対象がファイルかフォルダかを確認します。",
+    "steps": [
+      "ドライブの共有画面で自分がファイルの所有者か確認する",
+      "仕事用・学校用のGoogleアカウントで使っているか確認する",
+      "対象がフォルダなら相手の役割が閲覧者か確かめる",
+      "相手の名前横のメニューにアクセス期限の追加があるか確認し、なければ管理者に提供条件を相談する"
+    ],
+    "causes": [
+      "個人アカウントで組織向けの期限機能を探している",
+      "フォルダで閲覧者以外の役割に期限を付けようとしている",
+      "共有設定の相手ごとのメニューを開いていない"
+    ],
+    "diagnosis": "共有設定を開いても相手のアクセス期限を追加する項目が出ない症状。既存記事はファイル所有者の変更権限。本記事は共有相手の閲覧を将来の日時で終了させるアクセス期限の条件を扱う。Googleはアクセス期限を仕事用・学校用アカウントで案内し、フォルダでは閲覧者の役割に限定すると説明する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "期限を設定すると相手が資料を開けなくなります。共同作業や締切への影響を先に共有してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/drive/answer/7166529?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/drive-transfer-ownership-unavailable/",
+      "/google/docs-person-chip-no-document-access/",
+      "/google/drive-limited-access-folder-gray/"
+    ],
+    "closest_existing_url": "/google/drive-transfer-ownership-unavailable/",
+    "differentiation": "既存記事はファイル所有者の変更権限。本記事は共有相手の閲覧を将来の日時で終了させるアクセス期限の条件を扱う",
+    "fact_check": "Googleはアクセス期限を仕事用・学校用アカウントで案内し、フォルダでは閲覧者の役割に限定すると説明する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-screenshot-button-missing",
+    "path": "/browser/firefox-screenshot-button-missing/",
+    "title": "Firefoxでページのスクリーンショット操作が見つからないとき",
+    "topic": "Webページを保存したいのにFirefoxの撮影ボタンが見えない症状",
+    "description": "Webページを保存したいのにFirefoxの撮影ボタンが見えない症状。右クリック、キーボード、ツールバーの三つの公式操作を確認します。",
+    "answer": "右クリック、キーボード、ツールバーの三つの公式操作を確認します。",
+    "steps": [
+      "Webページの何もない場所を右クリックして『スクリーンショットを撮影』を探す",
+      "WindowsならCtrlとShiftとS、MacならCommandとShiftとSの操作を試す",
+      "ツールバーのカスタマイズ画面でスクリーンショットボタンを配置できるか確認する",
+      "撮影後に全ページ・表示範囲を選び、コピーかダウンロードか保存方法を決める"
+    ],
+    "causes": [
+      "ツールバーから撮影ボタンを外している",
+      "右クリックした場所が画像や入力欄で別のメニューになっている",
+      "画面キャプチャをOSの機能だけで探している"
+    ],
+    "diagnosis": "Webページを保存したいのにFirefoxの撮影ボタンが見えない症状。既存記事は長文ページのリーダー表示。本記事はFirefox標準のページ撮影とボタン配置、全ページ保存を扱う。Mozillaはページの右クリック、ショートカット、ツールバーへのボタン追加で撮影できると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "ページに個人情報や著作物が含まれる場合は保存・共有の範囲を確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/take-screenshots-firefox",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/firefox-reader-view-button-missing/",
+      "/browser/edge-read-aloud-control-missing/",
+      "/browser/firefox-pip-control-not-visible/"
+    ],
+    "closest_existing_url": "/browser/firefox-reader-view-button-missing/",
+    "differentiation": "既存記事は長文ページのリーダー表示。本記事はFirefox標準のページ撮影とボタン配置、全ページ保存を扱う",
+    "fact_check": "Mozillaはページの右クリック、ショートカット、ツールバーへのボタン追加で撮影できると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "mac",
+    "slug": "finder-smart-folder-new-files-missing",
+    "path": "/mac/finder-smart-folder-new-files-missing/",
+    "title": "Macのスマートフォルダに新しいファイルが出ないとき",
+    "topic": "Finderのスマートフォルダに条件に合うはずの新規ファイルが表示されない症状",
+    "description": "Finderのスマートフォルダに条件に合うはずの新規ファイルが表示されない症状。保存した検索条件と検索対象を確認します。 Finderで対象のスマートフォルダを開く",
+    "answer": "保存した検索条件と検索対象を確認します。 Finderで対象のスマートフォルダを開く",
+    "steps": [
+      "Finderで対象のスマートフォルダを開く",
+      "検索条件の種類、日付、対象フォルダを確認する",
+      "Finderで同じ条件を新たに検索しファイルが見つかるか比べる",
+      "必要なら条件を修正してスマートフォルダを保存し直し、通常のフォルダと違って実体を移動しないことを確認する"
+    ],
+    "causes": [
+      "スマートフォルダの条件が新しいファイルに一致しない",
+      "検索対象が別のフォルダに限定されている",
+      "通常のフォルダだと誤解してファイルの移動を期待している"
+    ],
+    "diagnosis": "Finderのスマートフォルダに条件に合うはずの新規ファイルが表示されない症状。既存記事はSpotlightで実ファイル自体を検索できない問題。本記事はFinderの保存済み検索条件が新しいファイルに一致しない問題を扱う。Appleはスマートフォルダは指定条件で文書を自動収集し、Finderで条件を変更して保存できると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "スマートフォルダから見えなくても実ファイルを削除したとは限りません。元の保存先を確認してください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/organize-your-files-in-the-finder-mchle9f0a1b2/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-spotlight-files-not-found/",
+      "/mac/finder-tags-missing-sidebar/",
+      "/mac/external-drive-not-showing/"
+    ],
+    "closest_existing_url": "/mac/mac-spotlight-files-not-found/",
+    "differentiation": "既存記事はSpotlightで実ファイル自体を検索できない問題。本記事はFinderの保存済み検索条件が新しいファイルに一致しない問題を扱う",
+    "fact_check": "Appleはスマートフォルダは指定条件で文書を自動収集し、Finderで条件を変更して保存できると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "android",
+    "slug": "pixel-best-take-option-missing",
+    "path": "/android/pixel-best-take-option-missing/",
+    "title": "Pixelの集合写真でベストテイクが出ないとき",
+    "topic": "複数枚撮った写真で表情を選びたいのに編集候補が見つからない症状",
+    "description": "複数枚撮った写真で表情を選びたいのに編集候補が見つからない症状。対応機種と似た構図の写真、Googleフォトの編集画面を確認します。",
+    "answer": "対応機種と似た構図の写真、Googleフォトの編集画面を確認します。",
+    "steps": [
+      "Pixel 8以降の対応機種か確認する",
+      "同じ人が写った似た構図の写真を複数枚撮っているか確認する",
+      "Googleフォトで対象写真を開き編集からベストテイクを探す",
+      "オートベストテイクと通常のベストテイクを区別し、Googleフォトの更新状態を確認する"
+    ],
+    "causes": [
+      "Pixel 8より前の機種で機能を探している",
+      "比較できる似た写真がない",
+      "Pixel 10以降向けオートベストテイクと通常機能を混同している"
+    ],
+    "diagnosis": "複数枚撮った写真で表情を選びたいのに編集候補が見つからない症状。既存記事は似た写真をGoogleフォトで束ねるスタック表示。本記事は複数の集合写真から人ごとに表情を選ぶPixelの編集機能を扱う。Googleは通常のベストテイクをPixel 8以降向けと説明し、似た集合写真から表情を選ぶ手順を示す。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "編集結果は合成された写真です。記録や証拠として用いる写真では加工の有無を明確にしてください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/pixelcamera/answer/9940184?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/photos-stacks-not-appearing/",
+      "/android/pixel-hold-for-me-not-offered/",
+      "/android/pixel-at-a-glance-weather-missing/"
+    ],
+    "closest_existing_url": "/google/photos-stacks-not-appearing/",
+    "differentiation": "既存記事は似た写真をGoogleフォトで束ねるスタック表示。本記事は複数の集合写真から人ごとに表情を選ぶPixelの編集機能を扱う",
+    "fact_check": "Googleは通常のベストテイクをPixel 8以降向けと説明し、似た集合写真から表情を選ぶ手順を示す。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-mouse-pointer-trails-unexpected",
+    "path": "/windows/windows-mouse-pointer-trails-unexpected/",
+    "title": "Windowsでマウスポインターの残像が出るとき",
+    "topic": "マウスを動かすたびに軌跡が残り画面が見づらい症状",
+    "description": "マウスを動かすたびに軌跡が残り画面が見づらい症状。ポインター軌跡とタッチ操作の視覚効果を区別します。 設定のアクセシビリティからマウスポインターとタッチを開く",
+    "answer": "ポインター軌跡とタッチ操作の視覚効果を区別します。 設定のアクセシビリティからマウスポインターとタッチを開く",
+    "steps": [
+      "設定のアクセシビリティからマウスポインターとタッチを開く",
+      "『マウスポインターの軌跡』がオンか確認して必要に応じてオフにする",
+      "画面をタッチしたときだけ円が出るならタッチインジケーターを別に確認する",
+      "特定のマウスだけで残像が続く場合は接続先や表示ドライバーの症状と分けて記録する"
+    ],
+    "causes": [
+      "ポインター軌跡が有効になっている",
+      "タッチインジケーターをマウスの軌跡と混同している",
+      "描画不良を軌跡設定と誤認している"
+    ],
+    "diagnosis": "マウスを動かすたびに軌跡が残り画面が見づらい症状。既存記事は三本指のタッチパッド操作。本記事はマウスを動かす際の視覚的な残像を消すアクセシビリティ設定を扱う。Microsoftはマウスポインターとタッチ設定で軌跡とタッチインジケーターを別々に設定できると案内する。まず対象の画面、アカウント、端末を確かめ、条件を一つずつ比較してください。期待した動作と実際の表示を記録すると、利用条件と設定の問題を区別できます。機能そのものがないのか、設定済みなのに結果が違うのかも分けて確認します。",
+    "caution": "軌跡設定を切っても画面全体が乱れるなら表示装置の問題を疑い、無理な設定変更を重ねないでください。設定を一度に複数変えず、変更前の状態と結果を控えてください。共有や保存に関わる操作は本人または管理者の権限内で行ってください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/make-windows-easier-to-see",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-three-finger-touchpad-gesture-wrong-action/",
+      "/windows/windows-black-screen-with-cursor/",
+      "/windows/windows-input-language-icon-missing/"
+    ],
+    "closest_existing_url": "/windows/windows-three-finger-touchpad-gesture-wrong-action/",
+    "differentiation": "既存記事は三本指のタッチパッド操作。本記事はマウスを動かす際の視覚的な残像を消すアクセシビリティ設定を扱う",
+    "fact_check": "Microsoftはマウスポインターとタッチ設定で軌跡とタッチインジケーターを別々に設定できると案内する。対象機能の条件と操作は提供元の公式資料本文で照合した。"
+  }
+]
