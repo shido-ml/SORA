@@ -1,5 +1,155 @@
 [
   {
+    "title": "Gmailの返信で差出人が別アドレスになるとき",
+    "description": "別名アドレス宛てのメールに返信すると、意図しない差出人や返信先になる。送信アドレスの既定値と、返信時に元メールの宛先を使う設定を分けて確認します。",
+    "url": "/google/gmail-reply-from-wrong-alias/"
+  },
+  {
+    "title": "Googleフォトで写真が前日の日付に並ぶとき",
+    "description": "写真は存在するが、撮影日と違う日の一覧に並んで見つけにくい。写真の詳細で日時を確認し、バックアップ済み写真なら公式の日時編集を検討します。",
+    "url": "/google/photos-previous-day-sort/"
+  },
+  {
+    "title": "Google Chatのスペースで一部の通知だけ届かないとき",
+    "description": "スペースのメッセージは読めるが、返信やメンションの通知条件が想定と違う。そのスペースの通知レベルとミュート状態を確認し、必要な通知範囲に設定します。",
+    "url": "/google/chat-space-notification-level/"
+  },
+  {
+    "title": "Googleフォームの事前入力リンクで回答が空欄になるとき",
+    "description": "事前入力したつもりの回答が、配布したフォームの画面では空欄になる。通常の回答用リンクと事前入力用リンクを区別し、フォーム上で入力して取得したURLを再配布します。",
+    "url": "/google/forms-prefilled-answer-link-blank/"
+  },
+  {
+    "title": "iPhoneのヘルスケアで歩数がApple Watchと違うとき",
+    "description": "iPhoneとApple Watchの両方で歩数を記録しており、ヘルスケアの値が想定と違う。歩数のデータソースと優先順位を確認し、記録元の違いを切り分けます。",
+    "url": "/iphone/health-step-source-priority/"
+  },
+  {
+    "title": "Macで画面収録をアプリに許可できないとき",
+    "description": "画面共有や録画を始めたいアプリが、Macの画面とシステムオーディオ収録の許可一覧に見当たらない。プライバシーとセキュリティで対象アプリの画面収録許可を確認し、必要なアプリだけ追加・再起動します。",
+    "url": "/mac/screen-recording-permission-app-missing/"
+  },
+  {
+    "title": "Windowsのごみ箱からファイルが自動で消えるとき",
+    "description": "ごみ箱へ移したファイルが後日見当たらず、手動で空にした覚えがない。ストレージセンサーによるごみ箱の自動整理条件を確認し、必要な保持期間に見直します。",
+    "url": "/windows/recycle-bin-auto-empty-storage-sense/"
+  },
+  {
+    "title": "Discordで大きなファイルを送信できないとき",
+    "description": "テキストは送れるのに、ファイルを添付したときだけサイズエラーが出る。ファイルの実サイズと現在のアカウントに適用される添付上限を照合し、安全な共有方法を選びます。",
+    "url": "/sns/discord-file-upload-size-error/"
+  },
+  {
+    "title": "MacでUSB機器をつないでも「接続を許可」が必要なとき",
+    "description": "Appleシリコン搭載Macノートに新しいUSB機器をつないだが認識されず、接続許可の表示が出る。Macをロック解除した状態で接続し、表示された機器を確認してから必要なものだけ許可します。",
+    "url": "/mac/mac-usb-accessory-permission-prompt/"
+  },
+  {
+    "title": "Windowsで復元ポイントを作成できないとき",
+    "description": "「復元ポイントの作成」を開いても作成ボタンが使えず、事前の復元ポイントを保存できない。対象ドライブのシステムの保護が有効か、使用するディスク容量が確保されているかを確認します。",
+    "url": "/windows/system-protection-restore-point-unavailable/"
+  },
+  {
+    "title": "watchOS 27でトランシーバーが消えたとき",
+    "description": "Apple WatchをwatchOS 27に更新した後、トランシーバーが見つからず再ダウンロードもできない。watchOS 27ではトランシーバーが提供終了したため、設定や再インストールで復活しません。",
+    "url": "/iphone/watchos27-walkie-talkie-removed/"
+  },
+  {
+    "title": "MacのプレビューでPDFを印刷できないとき",
+    "description": "プレビューでPDFは開けるが印刷が制限され、他の文書は印刷できる。PDFの所有者が設定した印刷権限を確認し、許可が必要なら所有者に依頼します。",
+    "url": "/mac/preview-pdf-print-permission-denied/"
+  },
+  {
+    "title": "Google連絡先を削除してしまったとき",
+    "description": "Google連絡先で削除した相手を、同期される連絡先の一覧へ戻したい。削除に使ったGoogleアカウントのゴミ箱を確認し、保存期間内なら復元します。",
+    "url": "/google/contacts-trash-restore-deleted/"
+  },
+  {
+    "title": "YouTubeの自動吹き替えが別の言語になるとき",
+    "description": "自分の投稿動画の自動吹き替えが誤訳・別言語になり、元音声と合わない。元動画の言語設定を確認し、間違っていれば修正して吹き替えの再生成を待ちます。",
+    "url": "/google/youtube-auto-dub-wrong-language/"
+  },
+  {
+    "title": "Google Playのファミリーライブラリに購入済みアプリが出ないとき",
+    "description": "家族のGoogle Playで購入済みのアプリが共有一覧に見当たらない。購入者のファミリーライブラリへの追加状態と、そのアプリの共有対象条件を確認します。",
+    "url": "/android/google-play-family-library-app-missing/"
+  },
+  {
+    "title": "Androidでアプリのパスキー作成項目が出ないとき",
+    "description": "アプリやサイトの設定を探してもパスキー登録の項目が見つからない。そのサービスがパスキーに対応しているか、先に通常の方法でログインできているか確認します。",
+    "url": "/android/android-passkey-create-option-missing/"
+  },
+  {
+    "title": "Firefoxのプライベートウィンドウで拡張機能が動かないとき",
+    "description": "通常のウィンドウでは使える拡張機能が、プライベートウィンドウだけで動かない。拡張機能ごとの「プライベートウィンドウでの実行」許可を確認します。",
+    "url": "/browser/firefox-extension-private-window-inactive/"
+  },
+  {
+    "title": "EdgeでSmartScreenがダウンロードを止めるとき",
+    "description": "Microsoft Edgeのダウンロード欄に安全性の警告が出てファイルを保存できない。警告を無視せず、配布元とファイルの信頼性を先に確認します。",
+    "url": "/browser/edge-smartscreen-download-blocked/"
+  },
+  {
+    "title": "Zoomの会議中に自分の名前を変更できないとき",
+    "description": "Zoom会議の参加者一覧から自分の名前を変更する項目が見つからない。ホスト側で参加者の名前変更が許可されているか確認し、必要ならホストに依頼します。",
+    "url": "/sns/zoom-participant-rename-option-missing/"
+  },
+  {
+    "title": "Zoomで仮想背景の画像を追加できないとき",
+    "description": "Zoomの仮想背景メニューは使えるが、自分の画像を追加すると失敗する。画像の形式と容量、アカウントでの背景追加許可を確認します。",
+    "url": "/sns/zoom-virtual-background-image-upload-fails/"
+  },
+  {
+    "title": "Teams会議で参加者のマイクをオンにできないとき",
+    "description": "Teams会議では聞こえるが、参加者として自分のマイクをオンにする操作が使えない。会議主催者が参加者のマイクを無効にしていないか確認し、発言が必要なら主催者へ依頼します。",
+    "url": "/sns/teams-attendee-microphone-disabled/"
+  },
+  {
+    "title": "LINEアルバムで特定の写真だけ追加できないとき",
+    "description": "LINEのアルバムは作成済みで他の写真は追加できるが、一枚だけアップロードに失敗する。その写真のファイル容量と画素数を確認し、LINEのアルバムの条件に合うコピーを用意します。",
+    "url": "/sns/line-album-photo-size-rejected/"
+  },
+  {
+    "title": "Googleマップで車椅子対応ルートを選べないとき",
+    "description": "Googleマップの経路候補で車椅子対応の条件を指定したいが、選択項目が見当たらない。移動手段を公共交通機関に切り替え、経路オプションの車椅子対応を確認します。",
+    "url": "/google/maps-wheelchair-route-option-missing/"
+  },
+  {
+    "title": "iPhoneのロック画面でメディカルIDが見えないとき",
+    "description": "ヘルスケアにメディカルIDを登録したが、ロック画面の緊急時画面から表示できない。メディカルIDの「ロック中に表示」を確認し、ロック画面の緊急時入口から試します。",
+    "url": "/iphone/medical-id-hidden-locked-screen/"
+  },
+  {
+    "title": "Google Playで契約中の定期購入が一覧に出ないとき",
+    "description": "支払いが続いているのにGoogle Playの「定期購入」に対象サービスが見当たらない。購入時に使ったGoogleアカウントと請求元を確認し、別アカウントの定期購入一覧を調べます。",
+    "url": "/android/google-play-subscription-not-listed/"
+  },
+  {
+    "title": "iPhoneで「承認と購入のリクエスト」が届かないとき",
+    "description": "子どもがアプリ購入を申請したのに、保護者のiPhoneに承認依頼が表示されない。ファミリー共有のメンバー、購入の共有、承認設定と保護者のApple Accountを照合します。",
+    "url": "/iphone/ask-to-buy-request-not-received/"
+  },
+  {
+    "title": "Apple Watchの水滴マークが消えず操作できないとき",
+    "description": "Apple Watchに水滴マークが出て画面をタップしても反応しない。防水ロックの状態を確認し、Digital Crownを長押しして解除します。",
+    "url": "/iphone/apple-watch-water-lock-wont-exit/"
+  },
+  {
+    "title": "Firefoxで拡張機能のショートカットが動かないとき",
+    "description": "Firefoxの拡張機能はボタンから使えるが、割り当てたキー操作では起動しない。Firefoxの拡張機能ショートカット設定で割り当てと競合を確認します。",
+    "url": "/browser/firefox-extension-shortcut-conflict/"
+  },
+  {
+    "title": "AirPodsで会話感知をオンにしても音量が下がらないとき",
+    "description": "AirPodsの会話感知を使いたいのに、自分が話し始めてもメディア音量が変わらない。対応するAirPodsと接続状態を確認し、コントロールセンターの会話感知を有効にします。",
+    "url": "/iphone/airpods-conversation-awareness-not-lowering-volume/"
+  },
+  {
+    "title": "Firefoxでサイトが違うコンテナーで開くとき",
+    "description": "Firefoxで特定サイトを開くたびに意図しない仕事用・個人用コンテナーへ切り替わる。Multi-Account Containersのサイト割り当てを確認し、誤った割り当てをサイト一覧から外します。",
+    "url": "/browser/firefox-site-opens-wrong-container/"
+  },
+  {
     "title": "Gmailのフィルタを作っても過去のメールが変わらないとき",
     "description": "新しいメールにはラベルが付くのに古い一致メールには付かない症状。既存の会話にも適用する選択と検索条件を確認します。 PC版Gmailの検索オプションで送信者や件名など条件を入力して検索結果を先に確認する",
     "url": "/google/gmail-filter-old-mail-unchanged/"

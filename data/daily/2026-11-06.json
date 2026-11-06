@@ -1,0 +1,992 @@
+[
+  {
+    "category": "google",
+    "slug": "gmail-reply-from-wrong-alias",
+    "path": "/google/gmail-reply-from-wrong-alias/",
+    "title": "Gmailの返信で差出人が別アドレスになるとき",
+    "topic": "別名アドレス宛てのメールに返信すると、意図しない差出人や返信先になる",
+    "description": "別名アドレス宛てのメールに返信すると、意図しない差出人や返信先になる。送信アドレスの既定値と、返信時に元メールの宛先を使う設定を分けて確認します。",
+    "answer": "送信アドレスの既定値と、返信時に元メールの宛先を使う設定を分けて確認します。",
+    "steps": [
+      "PC版Gmailの設定から「アカウントとインポート」の「名前」欄を開き、送信に使うアドレスが確認済みか見る",
+      "同じ欄で既定の差出人と「メールを受信したアドレスから返信する」の選択状態を確認する",
+      "自分宛てに別名アドレスでテストメールを送り、返信画面の差出人を送信前に確認する",
+      "返信先アドレスも変更したい場合は、差出人の設定と返信先の設定をそれぞれ見直す"
+    ],
+    "causes": [
+      "送信アドレスの既定値が主アドレスのまま",
+      "受信したアドレスから返信する設定が選ばれていない",
+      "差出人と返信先アドレスを同じ設定だと思っている"
+    ],
+    "diagnosis": "送信自体が失敗している場合は、返信設定より先に別名アドレスの認証と送信権限を確認します。返信画面の差出人表示と受信側に見える差出人を比べると、表示だけの誤認と実際の送信設定を分けられます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "テストメールには個人情報を入れず、送信前に差出人と返信先を毎回確認してください。組織のアドレスは管理者のポリシーが優先される場合があります。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/mail/answer/22370?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-send-as-verification-missing/",
+      "/google/gmail-emoji-reaction-unavailable/",
+      "/google/gmail-not-receiving-email/"
+    ],
+    "closest_existing_url": "/google/gmail-send-as-verification-missing/",
+    "differentiation": "既存記事は別名アドレス追加時の確認メール未着を扱う。本記事は追加・認証済みの別名アドレスで返信元または返信先が意図と違う場合の既定値を扱う。",
+    "fact_check": "GoogleのGmailヘルプは、別アドレスを常用するには既定の差出人と返信先をそれぞれ設定する必要があり、差出人だけの変更では返信が元のGmailアドレスへ届く場合があると説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "photos-previous-day-sort",
+    "path": "/google/photos-previous-day-sort/",
+    "title": "Googleフォトで写真が前日の日付に並ぶとき",
+    "topic": "写真は存在するが、撮影日と違う日の一覧に並んで見つけにくい",
+    "description": "写真は存在するが、撮影日と違う日の一覧に並んで見つけにくい。写真の詳細で日時を確認し、バックアップ済み写真なら公式の日時編集を検討します。",
+    "answer": "写真の詳細で日時を確認し、バックアップ済み写真なら公式の日時編集を検討します。",
+    "steps": [
+      "対象写真を開き、詳細情報の撮影日時とタイムゾーンを確認する",
+      "撮影直後の写真か、取り込みや共有で保存した写真かを確認し、実際の撮影日時と比較する",
+      "バックアップ済みの写真なら詳細の日時編集から正しい日時へ変更する",
+      "変更後に該当日と前日の写真一覧を確認し、必要なら元の日時を控えてから戻す"
+    ],
+    "causes": [
+      "写真のメタデータに記録された日時が意図と異なる",
+      "端末や取り込み元のタイムゾーンが違う",
+      "午前4時より前の写真が前日のグループに表示される"
+    ],
+    "diagnosis": "検索で写真が見つかるなら消失ではありません。まず詳細に表示される日時と一覧の区切りを比較してください。午前4時前のグループ表示だけならメタデータの誤りとは限りません。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "撮影日時を変えると他の端末や共有先での並びに影響し得ます。原本の日時をメモし、証拠写真や仕事の記録は変更前のコピーも保管してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/photos/answer/6128850?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-photos-missing-photos/",
+      "/google/photos-stacks-not-appearing/",
+      "/google/photos-partner-sharing-not-in-library/"
+    ],
+    "closest_existing_url": "/google/google-photos-missing-photos/",
+    "differentiation": "既存記事は写真が見当たらない場合にアカウント・ゴミ箱・バックアップを探す。本記事は写真が存在し、日時や日付グループだけがずれる場合の日時確認と修正を扱う。",
+    "fact_check": "Googleフォトヘルプは午前4時前の写真が前日のグループに入ること、アプリ内の日時編集はバックアップ済み写真が対象であることを明記している。"
+  },
+  {
+    "category": "google",
+    "slug": "chat-space-notification-level",
+    "path": "/google/chat-space-notification-level/",
+    "title": "Google Chatのスペースで一部の通知だけ届かないとき",
+    "topic": "スペースのメッセージは読めるが、返信やメンションの通知条件が想定と違う",
+    "description": "スペースのメッセージは読めるが、返信やメンションの通知条件が想定と違う。そのスペースの通知レベルとミュート状態を確認し、必要な通知範囲に設定します。",
+    "answer": "そのスペースの通知レベルとミュート状態を確認し、必要な通知範囲に設定します。",
+    "steps": [
+      "PC版Google Chatで対象スペース名のメニューから「通知」を開く",
+      "「すべて」「メインの会話」「自分宛て」など、表示される通知レベルを確認する",
+      "テスト用の新規メッセージと自分宛てメンションを別々に試し、通知条件の違いを確かめる",
+      "Chat側で通知対象なのに端末に出ない場合だけ、ブラウザまたはOSの通知許可を確認する"
+    ],
+    "causes": [
+      "スペースの通知レベルがメンション中心に設定されている",
+      "対象スペースがミュートされている",
+      "Chat内の未読表示と端末へのプッシュ通知を同じものと考えている"
+    ],
+    "diagnosis": "Chat内の更新印が出ない問題と、端末へ通知が届かない問題を分けます。同じスペースで通常メッセージと自分宛てのメンションを比べると、通知レベルによる差か分かります。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "業務用スペースでは重要連絡の取りこぼしに注意してください。全員の設定を変更せず、自分の通知設定だけを確認し、緊急連絡は別経路でも確認してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/chat/answer/7655718?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/chat-followed-thread-blue-dot-missing/",
+      "/android/private-space-notifications-while-locked/",
+      "/google/sheets-checkbox-custom-value-unexpected/"
+    ],
+    "closest_existing_url": "/google/chat-followed-thread-blue-dot-missing/",
+    "differentiation": "既存記事はフォロー中スレッドの青い更新印を扱う。本記事はスペースごとのメッセージ・メンション通知レベルと端末への通知を扱う。",
+    "fact_check": "Google Chatヘルプはスペース名の通知メニューで、すべてのメッセージや特定の会話など受信範囲を選べると案内している。"
+  },
+  {
+    "category": "google",
+    "slug": "forms-prefilled-answer-link-blank",
+    "path": "/google/forms-prefilled-answer-link-blank/",
+    "title": "Googleフォームの事前入力リンクで回答が空欄になるとき",
+    "topic": "事前入力したつもりの回答が、配布したフォームの画面では空欄になる",
+    "description": "事前入力したつもりの回答が、配布したフォームの画面では空欄になる。通常の回答用リンクと事前入力用リンクを区別し、フォーム上で入力して取得したURLを再配布します。",
+    "answer": "通常の回答用リンクと事前入力用リンクを区別し、フォーム上で入力して取得したURLを再配布します。",
+    "steps": [
+      "所有者としてフォームを開き、右上のメニューから「事前入力する」を選ぶ",
+      "開いた回答用画面で自動入力したい項目だけ入力して「リンクを取得」を選ぶ",
+      "得られたリンクを別ウィンドウで開き、入力済みの値と対象質問を照合する",
+      "質問を作り直した後は古いURLを使い回さず、事前入力リンクを作成し直して確認する"
+    ],
+    "causes": [
+      "通常の回答者用リンクを配布している",
+      "事前入力画面で値を入れる前にリンクをコピーした",
+      "質問の変更後に古いリンクだけを再利用している"
+    ],
+    "diagnosis": "フォームへのアクセス自体が拒否される場合は公開範囲を先に確認します。フォームは開くが値だけ空欄なら、通常リンクではなく事前入力画面で取得したリンクかを比較します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "URLには事前入力した値が含まれる可能性があります。個人情報や秘密の回答を事前入力せず、配布前に別ウィンドウで内容と共有相手を確認してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/docs/answer/2839588?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/forms-results-summary-link-missing/",
+      "/google/forms-edit-response-link-unavailable/",
+      "/google/forms-response-validation-rejects-answer/"
+    ],
+    "closest_existing_url": "/google/forms-results-summary-link-missing/",
+    "differentiation": "既存記事は回答後の集計結果リンクの公開設定を扱う。本記事は回答前に値を埋めた配布URLを正しく生成・検査する操作を扱う。",
+    "fact_check": "Googleフォームヘルプは「事前入力する」で値を入れてから「リンクを取得」を選び、そのリンクを回答者へ送る手順を明記している。"
+  },
+  {
+    "category": "iphone",
+    "slug": "health-step-source-priority",
+    "path": "/iphone/health-step-source-priority/",
+    "title": "iPhoneのヘルスケアで歩数がApple Watchと違うとき",
+    "topic": "iPhoneとApple Watchの両方で歩数を記録しており、ヘルスケアの値が想定と違う",
+    "description": "iPhoneとApple Watchの両方で歩数を記録しており、ヘルスケアの値が想定と違う。歩数のデータソースと優先順位を確認し、記録元の違いを切り分けます。",
+    "answer": "歩数のデータソースと優先順位を確認し、記録元の違いを切り分けます。",
+    "steps": [
+      "ヘルスケアで「歩数」を開き、表示されている日付と集計値を確認する",
+      "「データソースとアクセス」を開き、iPhone・Apple Watch・連携アプリの記録元を確認する",
+      "必要ならデータソースの優先順位を調整し、翌日の歩数で変化を確認する",
+      "記録が欠けている時間帯を特定し、その間にWatchを装着していたか、データが同期されていたか比べる"
+    ],
+    "causes": [
+      "iPhoneとApple Watchの記録元が混在している",
+      "優先するデータソースが意図と違う",
+      "Watchを装着していない時間帯の記録を比較している"
+    ],
+    "diagnosis": "同じ日付・同じ時間帯で値を比べます。まず歩数の詳細でどの端末が記録しているかを見て、Watchの故障やデータ消失と決めつけないでください。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "健康上の判断を歩数だけで行わないでください。データを削除して合わせる操作は復元できないことがあるため、記録元とバックアップを確認するまで避けてください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/108779",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/apple-watch-notifications-go-to-iphone/",
+      "/iphone/apple-watch-double-tap-unavailable/",
+      "/iphone/apple-watch-pairing-stuck/"
+    ],
+    "closest_existing_url": "/iphone/apple-watch-notifications-go-to-iphone/",
+    "differentiation": "既存記事はWatchとiPhoneへの通知の振り分けを扱う。本記事はヘルスケアの歩数集計とデータソースの優先順位を扱う。",
+    "fact_check": "Appleサポートはヘルスケアのデータソースを確認・並べ替えでき、優先順位に従って複数ソースのデータが扱われると説明している。"
+  },
+  {
+    "category": "mac",
+    "slug": "screen-recording-permission-app-missing",
+    "path": "/mac/screen-recording-permission-app-missing/",
+    "title": "Macで画面収録をアプリに許可できないとき",
+    "topic": "画面共有や録画を始めたいアプリが、Macの画面とシステムオーディオ収録の許可一覧に見当たらない",
+    "description": "画面共有や録画を始めたいアプリが、Macの画面とシステムオーディオ収録の許可一覧に見当たらない。プライバシーとセキュリティで対象アプリの画面収録許可を確認し、必要なアプリだけ追加・再起動します。",
+    "answer": "プライバシーとセキュリティで対象アプリの画面収録許可を確認し、必要なアプリだけ追加・再起動します。",
+    "steps": [
+      "Macのシステム設定から「プライバシーとセキュリティ」「画面とシステムオーディオの収録」を開く",
+      "対象アプリが一覧にあれば許可状態を確認し、アプリを終了して再度開く",
+      "一覧にない場合は同画面の追加操作で正規のアプリ本体を選べるか確認する",
+      "対象アプリで画面共有を一度開始し、権限ダイアログが出る場合は内容を確認して許可する"
+    ],
+    "causes": [
+      "画面収録の許可がオフになっている",
+      "別のアプリやヘルパーを選んでいる",
+      "権限変更後にアプリを再起動していない"
+    ],
+    "diagnosis": "相手のMacへ接続できない問題とは別です。アプリの録画開始時だけ画面が黒いなら、Mac側の画面収録権限とアプリ側の共有対象を分けて確認してください。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "画面収録権限を与えると画面上の機密情報が見える可能性があります。配布元を確認したアプリだけ許可し、業務端末で追加ボタンが使えない場合は管理者に相談してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/control-access-screen-system-audio-recording-mchld6aa7d23/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/mac-screen-sharing-connection-failed/",
+      "/iphone/iphone-screen-recording-control-missing/",
+      "/mac/mac-printer-not-appearing-add/"
+    ],
+    "closest_existing_url": "/mac/mac-screen-sharing-connection-failed/",
+    "differentiation": "既存記事は別のMacへ画面共有接続できない問題。本記事はローカルの録画・会議アプリが自分の画面を取得する権限の問題を扱う。",
+    "fact_check": "AppleのMacユーザガイドは「プライバシーとセキュリティ」の「画面とシステムオーディオの収録」でアプリごとに権限を切り替え、必要なアプリを追加できると案内している。"
+  },
+  {
+    "category": "windows",
+    "slug": "recycle-bin-auto-empty-storage-sense",
+    "path": "/windows/recycle-bin-auto-empty-storage-sense/",
+    "title": "Windowsのごみ箱からファイルが自動で消えるとき",
+    "topic": "ごみ箱へ移したファイルが後日見当たらず、手動で空にした覚えがない",
+    "description": "ごみ箱へ移したファイルが後日見当たらず、手動で空にした覚えがない。ストレージセンサーによるごみ箱の自動整理条件を確認し、必要な保持期間に見直します。",
+    "answer": "ストレージセンサーによるごみ箱の自動整理条件を確認し、必要な保持期間に見直します。",
+    "steps": [
+      "設定の「システム」「ストレージ」から「ストレージセンサー」を開く",
+      "ごみ箱内のファイルを削除するまでの期間と、ストレージセンサーの実行条件を確認する",
+      "消える前にファイルを退避したいなら、保管用フォルダーへ戻して別のバックアップを作る",
+      "今後の保持期間を変更し、テスト用の不要ファイルで実行結果を確認する"
+    ],
+    "causes": [
+      "ストレージセンサーが有効でごみ箱の保持期間が短い",
+      "空き容量不足時の自動整理を見落としている",
+      "ごみ箱を長期保管場所として使っている"
+    ],
+    "diagnosis": "実際に削除されたか、別のPCやクラウドのごみ箱にあるかを区別します。ストレージセンサーが有効でも保持期間内のファイルまで必ず消えるとは限りません。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "ごみ箱から消えたファイルの復元可能性は保存先やバックアップに依存します。ごみ箱を保管場所にせず、必要な原本は別の場所へ保存してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/storage-settings-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/storage-sense-downloads-not-cleared/",
+      "/windows/windows-recycle-bin-icon-missing/",
+      "/windows/nearby-sharing-received-file-missing/"
+    ],
+    "closest_existing_url": "/windows/storage-sense-downloads-not-cleared/",
+    "differentiation": "既存記事はダウンロードフォルダーの未使用ファイルが削除されない問題。本記事はごみ箱のファイルが自動削除される保持設定と消失予防を扱う。",
+    "fact_check": "Microsoftサポートはストレージセンサーが不要な一時ファイルやごみ箱の項目を自動削除できると説明している。"
+  },
+  {
+    "category": "sns",
+    "slug": "discord-file-upload-size-error",
+    "path": "/sns/discord-file-upload-size-error/",
+    "title": "Discordで大きなファイルを送信できないとき",
+    "topic": "テキストは送れるのに、ファイルを添付したときだけサイズエラーが出る",
+    "description": "テキストは送れるのに、ファイルを添付したときだけサイズエラーが出る。ファイルの実サイズと現在のアカウントに適用される添付上限を照合し、安全な共有方法を選びます。",
+    "answer": "ファイルの実サイズと現在のアカウントに適用される添付上限を照合し、安全な共有方法を選びます。",
+    "steps": [
+      "送信前にファイルのプロパティでMB単位のサイズを確認する",
+      "Discordのエラー表示と自分のアカウントの添付上限を比較する",
+      "動画や画像なら内容を損なわない範囲で圧縮・短縮して再確認する",
+      "制限を超える場合は、共有権限と保存期限を設定できる別の正規の共有手段を検討する"
+    ],
+    "causes": [
+      "ファイルサイズがアカウントの上限を超えている",
+      "送信する複数ファイルの条件を見落としている",
+      "通信失敗をサイズ超過と混同している"
+    ],
+    "diagnosis": "テキスト投稿ができるかを最初に確認します。テキストも送れなければチャンネル権限や通信を疑い、サイズ超過のエラーだけならファイル容量を測ります。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "外部ストレージで共有するときは公開範囲を限定し、個人情報や著作権で配布できないファイルを送らないでください。有料プランへの変更を前提にしません。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/discord-channel-message-permission-denied/",
+      "/sns/zoom-meeting-file-transfer-missing/",
+      "/sns/discord-dm-cannot-send/"
+    ],
+    "closest_existing_url": "/sns/discord-channel-message-permission-denied/",
+    "differentiation": "既存記事は特定チャンネルへのテキスト投稿権限がない場合。本記事はテキストは送れるがファイルサイズ制限で添付だけ拒否される場合を扱う。",
+    "fact_check": "Discordの公式FAQは2026年8月以降の無料アカウントのファイル添付上限を20MBと明記し、デスクトップとモバイルで同じ判定にしたと説明している。"
+  },
+  {
+    "category": "mac",
+    "slug": "mac-usb-accessory-permission-prompt",
+    "path": "/mac/mac-usb-accessory-permission-prompt/",
+    "title": "MacでUSB機器をつないでも「接続を許可」が必要なとき",
+    "topic": "Appleシリコン搭載Macノートに新しいUSB機器をつないだが認識されず、接続許可の表示が出る",
+    "description": "Appleシリコン搭載Macノートに新しいUSB機器をつないだが認識されず、接続許可の表示が出る。Macをロック解除した状態で接続し、表示された機器を確認してから必要なものだけ許可します。",
+    "answer": "Macをロック解除した状態で接続し、表示された機器を確認してから必要なものだけ許可します。",
+    "steps": [
+      "Macのロックを解除し、新しいUSB機器を直接つないで許可ダイアログの名前を確認する",
+      "信頼できる機器なら「許可」を選び、認識されるか確認する",
+      "毎回表示される場合はシステム設定の「プライバシーとセキュリティ」「アクセサリ」で接続時の確認方法を調べる",
+      "許可後も動かない場合は電力不足やケーブル不良を別途確認し、許可設定だけを原因と決めつけない"
+    ],
+    "causes": [
+      "初めてのアクセサリに対する接続承認が未完了",
+      "ロック中に接続してダイアログを見落とした",
+      "許可後の電力・ケーブル問題を権限問題と混同している"
+    ],
+    "diagnosis": "機器を認識しない原因は承認以外にもあります。許可ダイアログの有無と接続後の状態を分け、別ポートや電源付きハブの確認は必要になった場合だけ行います。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "知らないUSB機器を安易に許可しないでください。「常に許可」への変更は利便性と引き換えに確認機会を減らすため、共有Macでは管理者の方針を優先してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/102282",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/time-machine-backup-disk-not-found/",
+      "/android/android-usb-file-transfer-not-working/",
+      "/mac/mac-live-captions-option-missing/"
+    ],
+    "closest_existing_url": "/mac/time-machine-backup-disk-not-found/",
+    "differentiation": "既存記事はTime Machineのバックアップ先ディスクが見つからない問題。本記事はAppleシリコン搭載Macノートの新規USB機器全般に対する接続承認の仕組みを扱う。",
+    "fact_check": "AppleサポートはAppleシリコン搭載Macノートでは新規・不明なアクセサリに接続許可を求めることと、「プライバシーとセキュリティ」で確認頻度を選べることを説明している。"
+  },
+  {
+    "category": "windows",
+    "slug": "system-protection-restore-point-unavailable",
+    "path": "/windows/system-protection-restore-point-unavailable/",
+    "title": "Windowsで復元ポイントを作成できないとき",
+    "topic": "「復元ポイントの作成」を開いても作成ボタンが使えず、事前の復元ポイントを保存できない",
+    "description": "「復元ポイントの作成」を開いても作成ボタンが使えず、事前の復元ポイントを保存できない。対象ドライブのシステムの保護が有効か、使用するディスク容量が確保されているかを確認します。",
+    "answer": "対象ドライブのシステムの保護が有効か、使用するディスク容量が確保されているかを確認します。",
+    "steps": [
+      "スタートで「復元ポイントの作成」を検索して「システムの保護」タブを開く",
+      "Windowsが入ったドライブの「保護」欄を確認し、オフなら「構成」で有効化を検討する",
+      "システムの保護に割り当てるディスク容量を確認し、空き容量と合わせて無理のない値にする",
+      "設定を適用してから「作成」を選び、説明を付けて保存できたか確認する"
+    ],
+    "causes": [
+      "対象ドライブのシステムの保護がオフ",
+      "割り当て容量や空き容量が不足",
+      "管理対象PCで設定が制限されている"
+    ],
+    "diagnosis": "「作成」が押せない場合は、復元操作ではなく保護設定を調べます。対象ドライブと保護の状態、空き容量を見て、設定が管理者に制御される端末かを確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "復元ポイントは個人ファイルのバックアップを代替しません。実際に復元を適用するとアプリやシステム設定に影響するため、本記事の確認中に復元実行は行わないでください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/system-protection",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-backup-files-not-restored/",
+      "/windows/windows-c-drive-space-disappearing/",
+      "/windows/windows-pin-not-available/"
+    ],
+    "closest_existing_url": "/windows/windows-backup-files-not-restored/",
+    "differentiation": "既存記事は新しいPCへのバックアップファイルの復元を扱う。本記事は現在のPCで将来の設定復旧に備える復元ポイントの作成可否とシステムの保護設定を扱う。",
+    "fact_check": "Microsoftサポートはシステムの保護が既定では有効でないこと、構成から保護をオンにしてディスク容量を指定し、復元ポイントを作成する手順を明記する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "watchos27-walkie-talkie-removed",
+    "path": "/iphone/watchos27-walkie-talkie-removed/",
+    "title": "watchOS 27でトランシーバーが消えたとき",
+    "topic": "Apple WatchをwatchOS 27に更新した後、トランシーバーが見つからず再ダウンロードもできない",
+    "description": "Apple WatchをwatchOS 27に更新した後、トランシーバーが見つからず再ダウンロードもできない。watchOS 27ではトランシーバーが提供終了したため、設定や再インストールで復活しません。",
+    "answer": "watchOS 27ではトランシーバーが提供終了したため、設定や再インストールで復活しません。",
+    "steps": [
+      "Watchの設定でwatchOSのバージョンを確認する",
+      "watchOS 27ならAppleの提供終了案内を確認し、App Storeで復旧を繰り返さない",
+      "相手がwatchOS 26以前でもwatchOS 27のWatchとはトランシーバー通話を開始できないことを共有する",
+      "watchOS 26以前ならFaceTimeの設定と地域対応、アプリ削除の有無を確認する"
+    ],
+    "causes": [
+      "watchOS 27で機能自体が終了",
+      "旧OSでFaceTimeが未設定",
+      "旧OSでアプリを削除している"
+    ],
+    "diagnosis": "アップデート後に消えた場合はまずOSの版を確認します。watchOS 27なら不具合ではなく提供終了です。旧OSならFaceTimeの有効化やアプリの再取得を調べます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "古いOSへ戻すための非公式ファームウェア導入は避けてください。代替連絡手段を使い、更新前に必要な機能の提供状況を確認してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/108416",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/apple-watch-update-wont-start/",
+      "/iphone/passwords-shared-group-invitation-missing/",
+      "/iphone/apple-watch-double-tap-unavailable/"
+    ],
+    "closest_existing_url": "/iphone/apple-watch-update-wont-start/",
+    "differentiation": "既存記事はWatchの更新が始まらない場合。本記事は更新完了後のwatchOS 27で機能そのものが廃止された場合と、旧OSの設定不足を区別する。",
+    "fact_check": "AppleはwatchOS 27でトランシーバーを廃止し、App Storeから再取得できず、watchOS 26以前の利用者とも通話開始できないと明記する。"
+  },
+  {
+    "category": "mac",
+    "slug": "preview-pdf-print-permission-denied",
+    "path": "/mac/preview-pdf-print-permission-denied/",
+    "title": "MacのプレビューでPDFを印刷できないとき",
+    "topic": "プレビューでPDFは開けるが印刷が制限され、他の文書は印刷できる",
+    "description": "プレビューでPDFは開けるが印刷が制限され、他の文書は印刷できる。PDFの所有者が設定した印刷権限を確認し、許可が必要なら所有者に依頼します。",
+    "answer": "PDFの所有者が設定した印刷権限を確認し、許可が必要なら所有者に依頼します。",
+    "steps": [
+      "同じプリンターで別のPDFを印刷できるか確かめ、機器の障害と区別する",
+      "対象PDFをプレビューで開き、印刷や編集の制限に関する表示を確認する",
+      "正当な所有者ならプレビューの権限設定と所有者パスワードを確認する",
+      "共有されたPDFなら所有者へ印刷可能な版の提供や権限変更を依頼する"
+    ],
+    "causes": [
+      "PDFの所有者パスワードで印刷が制限",
+      "閲覧パスワードと所有者パスワードを混同",
+      "プリンターの問題と文書固有の制限を混同"
+    ],
+    "diagnosis": "他のPDFが印刷できるならプリンター全体をリセットしません。対象文書の権限表示を確認し、印刷不可が文書固有かを切り分けます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "所有者の許可なく制限を解除する手段は案内しません。業務文書や契約書は配布条件を守り、印刷が必要な理由を所有者へ伝えてください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/preview/password-protect-a-pdf-prvw587dd90f/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/firefox-pdf-annotations-not-in-saved-file/",
+      "/mac/mac-camera-not-working/",
+      "/mac/airplay-device-not-showing-mac/"
+    ],
+    "closest_existing_url": "/browser/firefox-pdf-annotations-not-in-saved-file/",
+    "differentiation": "既存記事はFirefoxでPDF注釈が保存版に反映されない問題。本記事はMacのプレビューでPDF自体に設定された印刷権限を扱う。",
+    "fact_check": "AppleのプレビューガイドはPDFに開封・印刷・変更の許可を設定でき、所有者パスワードを使って権限を管理すると説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "contacts-trash-restore-deleted",
+    "path": "/google/contacts-trash-restore-deleted/",
+    "title": "Google連絡先を削除してしまったとき",
+    "topic": "Google連絡先で削除した相手を、同期される連絡先の一覧へ戻したい",
+    "description": "Google連絡先で削除した相手を、同期される連絡先の一覧へ戻したい。削除に使ったGoogleアカウントのゴミ箱を確認し、保存期間内なら復元します。",
+    "answer": "削除に使ったGoogleアカウントのゴミ箱を確認し、保存期間内なら復元します。",
+    "steps": [
+      "contacts.google.comで削除時に使っていたGoogleアカウントを確認する",
+      "左側の「ゴミ箱」を開き、相手の名前と削除日を確認する",
+      "対象の連絡先だけを選んで「復元」し、通常一覧へ戻ったか確認する",
+      "複数端末で使う場合は同じGoogleアカウントで連絡先同期を確認する"
+    ],
+    "causes": [
+      "別アカウントのゴミ箱を見ている",
+      "削除後30日を超えゴミ箱から完全削除された",
+      "端末内だけの連絡先をGoogle連絡先と思っている"
+    ],
+    "diagnosis": "Web版の通常一覧にも見当たらず、ゴミ箱にあるなら同期の問題ではなく削除済みです。端末だけで見えない場合は同期設定を調べます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "ゴミ箱を空にしないでください。復元前に名前とメールアドレスを照合し、誤って別人の連絡先を戻さないようにしてください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/contacts/answer/7280886?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-google-contacts-not-syncing/",
+      "/google/google-calendar-not-syncing/",
+      "/google/photos-partner-sharing-not-in-library/"
+    ],
+    "closest_existing_url": "/android/android-google-contacts-not-syncing/",
+    "differentiation": "既存記事は削除していないGoogle連絡先がAndroidに同期されない場合。本記事はGoogle連絡先から削除済みで、Webのゴミ箱から戻す操作を扱う。",
+    "fact_check": "Google連絡先ヘルプは削除後の連絡先をゴミ箱に移し、30日以内なら対象を選んで復元できると明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "youtube-auto-dub-wrong-language",
+    "path": "/google/youtube-auto-dub-wrong-language/",
+    "title": "YouTubeの自動吹き替えが別の言語になるとき",
+    "topic": "自分の投稿動画の自動吹き替えが誤訳・別言語になり、元音声と合わない",
+    "description": "自分の投稿動画の自動吹き替えが誤訳・別言語になり、元音声と合わない。元動画の言語設定を確認し、間違っていれば修正して吹き替えの再生成を待ちます。",
+    "answer": "元動画の言語設定を確認し、間違っていれば修正して吹き替えの再生成を待ちます。",
+    "steps": [
+      "YouTube Studioで対象動画の元の言語設定を確認する",
+      "実際に話している言語と動画の元言語が異なる場合は正しい言語へ修正する",
+      "修正後に自動吹き替えの状態を確認し、再生成を待ってから対象言語を試聴する",
+      "公開に適さない吹き替えが残る場合は公開設定を見直し、必要なら手動音声トラックの制作を検討する"
+    ],
+    "causes": [
+      "元動画の言語設定が誤っている",
+      "自動生成の品質を手動編集できると思っている",
+      "再生成が終わる前の音声を確認している"
+    ],
+    "diagnosis": "字幕と音声トラックは別です。投稿者が聞く元動画の言語設定と、視聴者が選ぶ吹き替え言語を分けて調べます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "自動吹き替えを公開する前に重要な固有名詞や説明の意味を人が確認してください。誤訳が残る場合は不正確な音声を流し続けないよう公開状態を見直してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/youtube/answer/15569972?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/youtube-subtitles-not-available/",
+      "/google/youtube-pin-comment-option-missing/",
+      "/google/youtube-video-chapters-not-appearing/"
+    ],
+    "closest_existing_url": "/google/youtube-subtitles-not-available/",
+    "differentiation": "既存記事は視聴者側の字幕が表示されない問題。本記事は投稿者側の自動吹き替え音声が誤訳されるときの元言語設定と再生成を扱う。",
+    "fact_check": "YouTubeヘルプは元動画の言語が誤ると自動吹き替えが誤訳され得ること、自動吹き替えは直接編集できず言語修正で再生成されることを示す。"
+  },
+  {
+    "category": "android",
+    "slug": "google-play-family-library-app-missing",
+    "path": "/android/google-play-family-library-app-missing/",
+    "title": "Google Playのファミリーライブラリに購入済みアプリが出ないとき",
+    "topic": "家族のGoogle Playで購入済みのアプリが共有一覧に見当たらない",
+    "description": "家族のGoogle Playで購入済みのアプリが共有一覧に見当たらない。購入者のファミリーライブラリへの追加状態と、そのアプリの共有対象条件を確認します。",
+    "answer": "購入者のファミリーライブラリへの追加状態と、そのアプリの共有対象条件を確認します。",
+    "steps": [
+      "購入した本人のGoogle Playアカウントと購入履歴を確認する",
+      "購入したアプリの詳細にファミリーライブラリへの追加項目があるか確認する",
+      "ファミリーライブラリの設定が手動追加か自動追加かを確認する",
+      "家族側で同じファミリーグループと正しいGoogleアカウントを選び、共有済み項目を再確認する"
+    ],
+    "causes": [
+      "購入アプリをライブラリに手動追加していない",
+      "購入したアカウントと閲覧中のアカウントが違う",
+      "そのコンテンツが共有の対象外"
+    ],
+    "diagnosis": "購入者のライブラリに追加済みかを先に確認します。家族側だけに見えない場合は所属グループとアカウントを照合し、再購入を急ぎません。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "家族のアカウントに無断でログインしないでください。購入履歴や支払い情報を共有せず、必要な設定だけ本人と一緒に確認してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/googleplay/answer/7007852?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/family-purchases-not-visible/",
+      "/android/play-store-apps-not-auto-updating/",
+      "/android/android-find-hub-device-not-showing/"
+    ],
+    "closest_existing_url": "/iphone/family-purchases-not-visible/",
+    "differentiation": "既存記事はAppleのファミリー共有で購入項目が見えない場合。本記事はGoogle Play固有のファミリーライブラリ登録方法とコンテンツ対象条件を扱う。",
+    "fact_check": "Google Playヘルプは購入済みアプリを詳細画面からライブラリに追加でき、設定で手動追加と自動追加を選べると案内する。"
+  },
+  {
+    "category": "android",
+    "slug": "android-passkey-create-option-missing",
+    "path": "/android/android-passkey-create-option-missing/",
+    "title": "Androidでアプリのパスキー作成項目が出ないとき",
+    "topic": "アプリやサイトの設定を探してもパスキー登録の項目が見つからない",
+    "description": "アプリやサイトの設定を探してもパスキー登録の項目が見つからない。そのサービスがパスキーに対応しているか、先に通常の方法でログインできているか確認します。",
+    "answer": "そのサービスがパスキーに対応しているか、先に通常の方法でログインできているか確認します。",
+    "steps": [
+      "対象サービスの公式ヘルプでパスキーの提供有無と対応アカウントを確認する",
+      "アプリまたはサイトへ通常の方法でログインし、アカウントのセキュリティ設定を見る",
+      "作成項目があれば表示されるアカウントと保存先を確かめ、画面ロックで本人確認する",
+      "項目がない場合は対応端末・アプリ版・管理ポリシーを確認し、未対応なら既存のログイン方法を維持する"
+    ],
+    "causes": [
+      "サービス自体がパスキー未対応",
+      "ログイン前に登録項目を探している",
+      "端末の画面ロックや管理制限の条件を満たさない"
+    ],
+    "diagnosis": "「作成」と「既存の鍵でログイン」は別です。まずサービス側が新規登録に対応しているかを確認し、未対応を端末故障と決めつけません。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "パスキーを試すために既存の認証手段を先に削除しないでください。共有端末では保存先を確認し、アカウント復旧手段を維持してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/14124480?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/google-account-passkey-not-working/",
+      "/android/android-add-user-option-missing/",
+      "/android/android-live-transcribe-app-missing/"
+    ],
+    "closest_existing_url": "/google/google-account-passkey-not-working/",
+    "differentiation": "既存記事はGoogleアカウントの作成済みパスキーで認証できない場合。本記事は第三者アプリやサイトで作成項目自体が出ない場合の提供条件を扱う。",
+    "fact_check": "GoogleのAndroidヘルプは、すべてのアプリやサイトがパスキーに対応するわけではなく、通常ログイン後に作成項目を探して画面ロックで登録すると案内する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-extension-private-window-inactive",
+    "path": "/browser/firefox-extension-private-window-inactive/",
+    "title": "Firefoxのプライベートウィンドウで拡張機能が動かないとき",
+    "topic": "通常のウィンドウでは使える拡張機能が、プライベートウィンドウだけで動かない",
+    "description": "通常のウィンドウでは使える拡張機能が、プライベートウィンドウだけで動かない。拡張機能ごとの「プライベートウィンドウでの実行」許可を確認します。",
+    "answer": "拡張機能ごとの「プライベートウィンドウでの実行」許可を確認します。",
+    "steps": [
+      "同じページを通常ウィンドウとプライベートウィンドウで開いて差を確認する",
+      "Firefoxの「拡張機能とテーマ」で対象拡張機能の詳細を開く",
+      "プライベートウィンドウでの実行許可を確認し、必要で信頼できる拡張機能だけ許可する",
+      "新しいプライベートウィンドウで再試行し、サイト固有の権限も必要なら別に確認する"
+    ],
+    "causes": [
+      "プライベートウィンドウでの拡張機能実行が許可されていない",
+      "拡張機能側が対象サイトに対応していない",
+      "通常画面との違いをサイト側の不具合と誤認"
+    ],
+    "diagnosis": "通常画面では動くという条件が重要です。サイト全体の故障や拡張機能の未インストールとは分け、プライベートウィンドウ固有の許可を確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "プライベート閲覧中に拡張機能を許可すると、その拡張機能が閲覧中の情報へアクセスする可能性があります。必要性と配布元を確認してから許可してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/extensions-private-browsing",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/safari-extension-not-running-one-site/",
+      "/browser/firefox-unsigned-addon-disabled/",
+      "/browser/firefox-tracking-protection-breaks-site/"
+    ],
+    "closest_existing_url": "/browser/safari-extension-not-running-one-site/",
+    "differentiation": "既存記事はSafariで特定サイトだけ拡張機能が動かない場合。本記事はFirefoxのプライベートウィンドウでの拡張機能実行許可を扱う。",
+    "fact_check": "Mozillaサポートはプライベートウィンドウで拡張機能を動かすには個別に許可が必要と説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "edge-smartscreen-download-blocked",
+    "path": "/browser/edge-smartscreen-download-blocked/",
+    "title": "EdgeでSmartScreenがダウンロードを止めるとき",
+    "topic": "Microsoft Edgeのダウンロード欄に安全性の警告が出てファイルを保存できない",
+    "description": "Microsoft Edgeのダウンロード欄に安全性の警告が出てファイルを保存できない。警告を無視せず、配布元とファイルの信頼性を先に確認します。",
+    "answer": "警告を無視せず、配布元とファイルの信頼性を先に確認します。",
+    "steps": [
+      "Edgeのダウンロード欄で警告文と対象ファイル名を確認する",
+      "公式の配布元URL・発行元・ハッシュなど検証できる情報を探し、別サイトからの同名ファイルと区別する",
+      "配布元が不明または警告が一致する場合はダウンロードを中止する",
+      "仕事用PCで必要なファイルなら管理者に警告内容と配布元を伝えて判断を求める"
+    ],
+    "causes": [
+      "SmartScreenが既知の危険な配布元やファイルを検知",
+      "評判情報の少ない新しいファイルへの警告",
+      "一般的な通信失敗を安全性警告と混同"
+    ],
+    "diagnosis": "ネットワークエラーとSmartScreen警告は別です。警告文が表示された場合、再試行やブラウザ変更より前に配布元を検証します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "警告を回避するためにSmartScreenを停止したり、別の非公式サイトから取得したりしないでください。疑わしいファイルは実行せず管理者へ相談してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/edge/how-can-smartscreen-help-protect-me-in-microsoft-edge",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-file-download-failed/",
+      "/browser/edge-sync-not-working/",
+      "/browser/chrome-multiple-automatic-downloads-blocked/"
+    ],
+    "closest_existing_url": "/browser/chrome-file-download-failed/",
+    "differentiation": "既存記事はChromeの一般的なダウンロード失敗。本記事はEdgeのSmartScreenが示す安全性警告の意味と配布元確認を扱う。",
+    "fact_check": "MicrosoftはSmartScreenが悪意のあるサイト・プログラムの情報と既知のダウンロードの評判を照合し、危険な取得を警告・ブロックすると説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-participant-rename-option-missing",
+    "path": "/sns/zoom-participant-rename-option-missing/",
+    "title": "Zoomの会議中に自分の名前を変更できないとき",
+    "topic": "Zoom会議の参加者一覧から自分の名前を変更する項目が見つからない",
+    "description": "Zoom会議の参加者一覧から自分の名前を変更する項目が見つからない。ホスト側で参加者の名前変更が許可されているか確認し、必要ならホストに依頼します。",
+    "answer": "ホスト側で参加者の名前変更が許可されているか確認し、必要ならホストに依頼します。",
+    "steps": [
+      "参加者一覧の自分の名前を開き、名前変更項目の有無を確認する",
+      "別の会議では使えるか比較し、その会議だけの制限か調べる",
+      "ホストに「参加者が自分の名前を変更できる」設定を確認してもらう",
+      "組織で設定が固定されている場合はホストまたは管理者に必要な表示名を伝える"
+    ],
+    "causes": [
+      "ホストが参加者の名前変更を許可していない",
+      "組織管理者が会議設定を固定",
+      "アカウントのプロフィール名と会議中の表示名を混同"
+    ],
+    "diagnosis": "プロフィール自体の名前変更と、参加中の会議での表示名変更を分けます。一つの会議だけで項目がない場合はホストの会議設定を優先して確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "他人になりすます表示名に変更しないでください。学校や業務の会議では主催者の本人確認ルールに従い、必要な名前を主催者へ伝えてください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061891",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/zoom-waiting-room-admit-button-missing/",
+      "/sns/zoom-meeting-file-transfer-missing/"
+    ],
+    "closest_existing_url": "/sns/zoom-participant-screen-share-disabled/",
+    "differentiation": "既存記事は参加者の画面共有をホストが制限する場合。本記事は会議中の参加者の名前変更許可と表示名を扱う。",
+    "fact_check": "Zoomの公式サポートはホストが参加者の名前変更を無効にすると参加者側には名前変更項目が表示されないと説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "zoom-virtual-background-image-upload-fails",
+    "path": "/sns/zoom-virtual-background-image-upload-fails/",
+    "title": "Zoomで仮想背景の画像を追加できないとき",
+    "topic": "Zoomの仮想背景メニューは使えるが、自分の画像を追加すると失敗する",
+    "description": "Zoomの仮想背景メニューは使えるが、自分の画像を追加すると失敗する。画像の形式と容量、アカウントでの背景追加許可を確認します。",
+    "answer": "画像の形式と容量、アカウントでの背景追加許可を確認します。",
+    "steps": [
+      "Zoomの仮想背景で標準画像を選べるか確認し、機能全体の問題と区別する",
+      "追加する画像が24ビットのPNGまたはJPEGか、15MB以下か確かめる",
+      "対応する画像を小さな別名ファイルとして用意し、再度追加する",
+      "同じ条件でも追加ボタンが使えないなら、アカウントやグループの背景設定を管理者に確認してもらう"
+    ],
+    "causes": [
+      "画像形式または容量が要件外",
+      "画像ファイル自体が破損",
+      "組織の背景追加制限"
+    ],
+    "diagnosis": "標準背景が使えるならカメラ要件より先に画像ファイルを調べます。追加ボタン自体がない場合は組織の提供設定を確認してください。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "背景に勤務先の資料や他人の顔を無断で使わないでください。画像変換時には元データを残し、非公式サイトへ機密画像をアップロードしないでください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060387",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-blur-background-option-missing/",
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/zoom-computer-recording-conversion-fails/"
+    ],
+    "closest_existing_url": "/sns/zoom-blur-background-option-missing/",
+    "differentiation": "既存記事はぼかし機能そのものが見当たらない場合。本記事は仮想背景機能は使えるがカスタム画像のアップロードだけ失敗する場合のファイル条件を扱う。",
+    "fact_check": "Zoomサポートはカスタム仮想背景画像を24ビットPNGまたはJPG/JPEG、最大15MBと案内する。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-attendee-microphone-disabled",
+    "path": "/sns/teams-attendee-microphone-disabled/",
+    "title": "Teams会議で参加者のマイクをオンにできないとき",
+    "topic": "Teams会議では聞こえるが、参加者として自分のマイクをオンにする操作が使えない",
+    "description": "Teams会議では聞こえるが、参加者として自分のマイクをオンにする操作が使えない。会議主催者が参加者のマイクを無効にしていないか確認し、発言が必要なら主催者へ依頼します。",
+    "answer": "会議主催者が参加者のマイクを無効にしていないか確認し、発言が必要なら主催者へ依頼します。",
+    "steps": [
+      "マイクのアイコンや案内に「参加者のマイク」が制限されていないか確認する",
+      "自分の会議ロールが参加者か発表者かを主催者に確認する",
+      "主催者に会議オプションの「参加者のマイクを許可」を確認してもらう",
+      "許可された後も音が入らない場合は、Teamsの入力デバイスとOSのマイク許可を別に調べる"
+    ],
+    "causes": [
+      "主催者が参加者のマイクを無効化",
+      "会議ロールが発表者ではなく参加者",
+      "権限の問題と入力機器の問題を混同"
+    ],
+    "diagnosis": "発言できない会議が一つだけなら、端末の故障と決めつけずロールと主催者の会議設定を確認します。許可後も無音なら入力機器を調べます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "主催者の意図した会議運営を迂回しないでください。発言が必要な場合はチャットや挙手で知らせ、権限変更は主催者に任せてください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/manage-attendee-audio-and-video-permissions-in-microsoft-teams-meetings",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-transcription-button-locked/",
+      "/sns/zoom-participant-screen-share-disabled/",
+      "/sns/teams-annotation-request-not-working/"
+    ],
+    "closest_existing_url": "/sns/teams-transcription-button-locked/",
+    "differentiation": "既存記事は文字起こしの利用権限や提供条件。本記事は主催者が会議参加者のマイク入力を制限している場合を扱う。",
+    "fact_check": "Microsoftサポートは会議主催者が会議オプションで参加者のマイクとカメラを無効にでき、発表者とは適用が異なると説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "line-album-photo-size-rejected",
+    "path": "/sns/line-album-photo-size-rejected/",
+    "title": "LINEアルバムで特定の写真だけ追加できないとき",
+    "topic": "LINEのアルバムは作成済みで他の写真は追加できるが、一枚だけアップロードに失敗する",
+    "description": "LINEのアルバムは作成済みで他の写真は追加できるが、一枚だけアップロードに失敗する。その写真のファイル容量と画素数を確認し、LINEのアルバムの条件に合うコピーを用意します。",
+    "answer": "その写真のファイル容量と画素数を確認し、LINEのアルバムの条件に合うコピーを用意します。",
+    "steps": [
+      "同じアルバムに小さな別の写真を追加できるか確認する",
+      "失敗する写真の容量と解像度を端末の情報画面で確認する",
+      "容量が20MB、解像度が1億画素を超える場合は元画像を残して縮小したコピーを作る",
+      "縮小したコピーを追加し、元画像が必要なら別の保管方法を検討する"
+    ],
+    "causes": [
+      "写真がアルバムの容量上限を超える",
+      "画素数が上限を超える",
+      "特定ファイルの破損や形式の問題"
+    ],
+    "diagnosis": "他の写真は送れるならアルバムの権限より対象画像の条件を確認します。すべて送れない場合は通信やグループの状態を調べます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "縮小コピーは元画像と画質が異なります。重要な原本は別途保管し、外部の画像変換サービスに個人写真を安易に送らないでください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://help.line.me/line/smartphone/sp?contentId=20000248",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/line-group-album-new-album-fails/",
+      "/sns/line-all-albums-missing-after-leaving-group/",
+      "/sns/line-stickers-missing-after-transfer/"
+    ],
+    "closest_existing_url": "/sns/line-group-album-new-album-fails/",
+    "differentiation": "既存記事はグループに新しいアルバム自体を作れない場合。本記事は既存アルバムに特定の大きい写真だけ追加できない場合のファイル条件を扱う。",
+    "fact_check": "LINE公式ヘルプはアルバムに追加する写真の上限を20MB、1億画素と明記する。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-wheelchair-route-option-missing",
+    "path": "/google/maps-wheelchair-route-option-missing/",
+    "title": "Googleマップで車椅子対応ルートを選べないとき",
+    "topic": "Googleマップの経路候補で車椅子対応の条件を指定したいが、選択項目が見当たらない",
+    "description": "Googleマップの経路候補で車椅子対応の条件を指定したいが、選択項目が見当たらない。移動手段を公共交通機関に切り替え、経路オプションの車椅子対応を確認します。",
+    "answer": "移動手段を公共交通機関に切り替え、経路オプションの車椅子対応を確認します。",
+    "steps": [
+      "目的地を指定して「経路」を開く",
+      "移動手段が車や徒歩ではなく「公共交通機関」になっているか確認する",
+      "「オプション」の「ルート」から車椅子対応を選ぶ",
+      "表示された駅や乗り換え経路の最新設備情報を、交通事業者の公式案内でも確認する"
+    ],
+    "causes": [
+      "車や徒歩の経路画面で公共交通向けの条件を探している",
+      "経路オプションを開いていない",
+      "地域のデータに対応情報がない"
+    ],
+    "diagnosis": "この選択肢は自動車経路の有料道路回避とは別です。まず移動手段のタブを確認し、選択後の経路内容も個別に見ます。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "車椅子対応の表示は現地での利用可能性を保証しません。エレベーターの停止や工事は変わるため、移動前に交通事業者の最新情報も確認してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/maps/answer/6396990?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/maps-avoid-tolls-route-not-applied/",
+      "/google/maps-offline-map-not-updating/",
+      "/google/google-maps-offline-map-not-downloading/"
+    ],
+    "closest_existing_url": "/google/maps-avoid-tolls-route-not-applied/",
+    "differentiation": "既存記事は自動車ルートの有料道路回避設定。本記事は公共交通機関の車椅子対応経路フィルターと設備確認を扱う。",
+    "fact_check": "Googleマップヘルプは公共交通機関を選んで経路のオプションを開き、車椅子対応ルートを選ぶ手順を示す。"
+  },
+  {
+    "category": "iphone",
+    "slug": "medical-id-hidden-locked-screen",
+    "path": "/iphone/medical-id-hidden-locked-screen/",
+    "title": "iPhoneのロック画面でメディカルIDが見えないとき",
+    "topic": "ヘルスケアにメディカルIDを登録したが、ロック画面の緊急時画面から表示できない",
+    "description": "ヘルスケアにメディカルIDを登録したが、ロック画面の緊急時画面から表示できない。メディカルIDの「ロック中に表示」を確認し、ロック画面の緊急時入口から試します。",
+    "answer": "メディカルIDの「ロック中に表示」を確認し、ロック画面の緊急時入口から試します。",
+    "steps": [
+      "ヘルスケアのプロフィールから「メディカルID」を開き、必要な情報が保存されているか確認する",
+      "「編集」で「ロック中に表示」の選択状態を確認する",
+      "iPhoneをロックし、パスコード画面の「緊急時」から「メディカルID」が表示されるか試す",
+      "表示内容に変更があれば必要な範囲で更新し、緊急連絡先が正しいか確認する"
+    ],
+    "causes": [
+      "ロック中に表示がオフ",
+      "メディカルIDの保存が完了していない",
+      "通常の通知画面と緊急時画面を混同"
+    ],
+    "diagnosis": "ヘルスケア内で読めることと、ロック画面から見えることは別です。登録済みなら公開設定と緊急時画面の入口を確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "ロック中に表示すると医療情報や緊急連絡先を端末を拾った人も見られます。表示する情報を必要最小限にし、内容を本人が確認してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-my/105072",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/health-medication-follow-up-reminder-missing/",
+      "/iphone/iphone-built-in-app-cannot-hide/",
+      "/iphone/iphone-screen-recording-control-missing/"
+    ],
+    "closest_existing_url": "/iphone/health-medication-follow-up-reminder-missing/",
+    "differentiation": "既存記事は服薬フォローアップ通知が出ない場合。本記事は緊急時にロック画面から見せるメディカルIDの公開設定を扱う。",
+    "fact_check": "AppleサポートはメディカルIDをヘルスケアで編集し、「ロック中に表示」をオンにするとパスコードなしでも緊急時画面から閲覧できると説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "google-play-subscription-not-listed",
+    "path": "/android/google-play-subscription-not-listed/",
+    "title": "Google Playで契約中の定期購入が一覧に出ないとき",
+    "topic": "支払いが続いているのにGoogle Playの「定期購入」に対象サービスが見当たらない",
+    "description": "支払いが続いているのにGoogle Playの「定期購入」に対象サービスが見当たらない。購入時に使ったGoogleアカウントと請求元を確認し、別アカウントの定期購入一覧を調べます。",
+    "answer": "購入時に使ったGoogleアカウントと請求元を確認し、別アカウントの定期購入一覧を調べます。",
+    "steps": [
+      "Playストア右上で現在のGoogleアカウントを確認する",
+      "「お支払いと定期購入」から「定期購入」を開き、対象があるか確認する",
+      "複数アカウントを使っていれば購入時のアカウントへ切り替えて同じ画面を確認する",
+      "見つからなければ請求メールや決済明細でGoogle Play経由か、サービス提供元との直接契約かを確かめる"
+    ],
+    "causes": [
+      "購入したGoogleアカウントと現在のアカウントが違う",
+      "Google Play以外の経路で契約した",
+      "無料体験や解約済みの状態を契約中と思っている"
+    ],
+    "diagnosis": "一覧に見えないだけで解約済みと判断しません。請求明細のサービス名・日付・購入元とアカウントを照合してください。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "確認のために再購入すると二重請求の恐れがあります。領収書やカード番号を第三者に送らず、必要なら正規の購入履歴と提供元のサポートを利用してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/googleplay/answer/9818348?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/google-play-parental-pin-forgotten/",
+      "/android/android-find-hub-device-not-showing/",
+      "/android/play-store-apps-not-auto-updating/"
+    ],
+    "closest_existing_url": "/android/google-play-parental-pin-forgotten/",
+    "differentiation": "既存記事はGoogle Playの保護者PINを忘れた場合。本記事は請求があるのに定期購入一覧に契約が見えない場合のアカウントと請求経路を扱う。",
+    "fact_check": "Google Playヘルプは定期購入が見つからないとき、契約したGoogleアカウントでログインしているか確認するよう案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "ask-to-buy-request-not-received",
+    "path": "/iphone/ask-to-buy-request-not-received/",
+    "title": "iPhoneで「承認と購入のリクエスト」が届かないとき",
+    "topic": "子どもがアプリ購入を申請したのに、保護者のiPhoneに承認依頼が表示されない",
+    "description": "子どもがアプリ購入を申請したのに、保護者のiPhoneに承認依頼が表示されない。ファミリー共有のメンバー、購入の共有、承認設定と保護者のApple Accountを照合します。",
+    "answer": "ファミリー共有のメンバー、購入の共有、承認設定と保護者のApple Accountを照合します。",
+    "steps": [
+      "保護者のiPhoneの「設定」「ファミリー」で子どもが同じグループにいるか確認する",
+      "子どもの項目で「承認と購入」が有効か、購入の共有設定を確認する",
+      "保護者のメッセージや通知に保留中のリクエストがないか確認する",
+      "子どもと保護者が正しいApple Accountでメディアと購入にサインインしているか照合する"
+    ],
+    "causes": [
+      "承認と購入の設定が対象の子どもに有効でない",
+      "保護者が別Apple Accountを見ている",
+      "通知を見逃したか申請が正常に送られていない"
+    ],
+    "diagnosis": "既に購入済みのアプリが見つからない問題とは別です。申請が発生したか、保護者の端末に通知が届いたかを順に確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "子どものアカウントで保護者のパスワードを入力しないでください。購入や支払いの承認は保護者本人が正規の画面で行ってください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/118233",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/family-purchases-not-visible/",
+      "/iphone/wifi-network-not-showing/",
+      "/iphone/iphone-live-voicemail-not-appearing/"
+    ],
+    "closest_existing_url": "/iphone/family-purchases-not-visible/",
+    "differentiation": "既存記事は家族が購入済みのコンテンツを見られない問題。本記事は購入前に子どもから保護者へ送る承認リクエストの未着を扱う。",
+    "fact_check": "Appleサポートはリクエストが見えない場合にファミリー共有設定とサインイン中のApple Accountを確認するよう案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "apple-watch-water-lock-wont-exit",
+    "path": "/iphone/apple-watch-water-lock-wont-exit/",
+    "title": "Apple Watchの水滴マークが消えず操作できないとき",
+    "topic": "Apple Watchに水滴マークが出て画面をタップしても反応しない",
+    "description": "Apple Watchに水滴マークが出て画面をタップしても反応しない。防水ロックの状態を確認し、Digital Crownを長押しして解除します。",
+    "answer": "防水ロックの状態を確認し、Digital Crownを長押しして解除します。",
+    "steps": [
+      "文字盤上部の水滴マークがあるか確認する",
+      "サイドボタンからコントロールセンターを開き、防水ロックが有効か確認する",
+      "Digital Crownを画面に「ロック解除」と出るまで長押しする",
+      "解除音の後に画面を操作し、表示が残る場合はOSや物理ボタンの状態を確認する"
+    ],
+    "causes": [
+      "水泳などの運動で防水ロックが自動で有効になった",
+      "防水ロック中のタップ無効を故障と誤認",
+      "Crownを回すだけで解除できると思っている"
+    ],
+    "diagnosis": "運動後に急にタップできなくなった場合はまず水滴マークを確認します。マークがないなら防水ロックではなく別の操作問題として扱います。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "防水ロックは耐水性能を増やす機能ではありません。濡れているWatchの充電は乾燥と製品の注意事項を確認し、無理にCrownを回さないでください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/108352",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/apple-watch-double-tap-unavailable/",
+      "/iphone/apple-watch-notifications-go-to-iphone/",
+      "/iphone/back-tap-not-responding/"
+    ],
+    "closest_existing_url": "/iphone/apple-watch-double-tap-unavailable/",
+    "differentiation": "既存記事はジェスチャーのダブルタップ機能が反応しない場合。本記事は防水ロックが有効で画面操作が止まる状態と解除方法を扱う。",
+    "fact_check": "Appleサポートは防水ロック中にタップや手首フリックが無効になり、Digital Crownの長押しで解除・排水音が鳴ると説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-extension-shortcut-conflict",
+    "path": "/browser/firefox-extension-shortcut-conflict/",
+    "title": "Firefoxで拡張機能のショートカットが動かないとき",
+    "topic": "Firefoxの拡張機能はボタンから使えるが、割り当てたキー操作では起動しない",
+    "description": "Firefoxの拡張機能はボタンから使えるが、割り当てたキー操作では起動しない。Firefoxの拡張機能ショートカット設定で割り当てと競合を確認します。",
+    "answer": "Firefoxの拡張機能ショートカット設定で割り当てと競合を確認します。",
+    "steps": [
+      "拡張機能のボタンから機能が動くか確認し、拡張機能自体の故障と区別する",
+      "Firefoxの「拡張機能とテーマ」から拡張機能ショートカットの管理を開く",
+      "対象のキー割り当てが空欄でないか、FirefoxやOSの既存操作と重なっていないか確認する",
+      "重ならない組み合わせに変更し、入力欄以外で試す"
+    ],
+    "causes": [
+      "拡張機能にショートカットが割り当てられていない",
+      "FirefoxやOSのキー操作と衝突",
+      "ページの入力欄がキー入力を受け取っている"
+    ],
+    "diagnosis": "ボタンで動くなら拡張機能の未インストールではありません。キー割り当てと入力欄での挙動を分けて確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "ショートカットを一括リセットせず対象の拡張機能だけ変更してください。業務端末で制限がある場合は組織の設定に従ってください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/mac/keyboard-shortcut-conflict/",
+      "/browser/firefox-tracking-protection-breaks-site/",
+      "/browser/firefox-containers-icon-missing/"
+    ],
+    "closest_existing_url": "/mac/keyboard-shortcut-conflict/",
+    "differentiation": "既存記事はmacOS全体のキーボードショートカット競合。本記事はFirefoxの拡張機能ごとの割り当て管理とブラウザ内での動作を扱う。",
+    "fact_check": "MozillaサポートはFirefoxの拡張機能管理画面からキーボードショートカットを変更できると説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "airpods-conversation-awareness-not-lowering-volume",
+    "path": "/iphone/airpods-conversation-awareness-not-lowering-volume/",
+    "title": "AirPodsで会話感知をオンにしても音量が下がらないとき",
+    "topic": "AirPodsの会話感知を使いたいのに、自分が話し始めてもメディア音量が変わらない",
+    "description": "AirPodsの会話感知を使いたいのに、自分が話し始めてもメディア音量が変わらない。対応するAirPodsと接続状態を確認し、コントロールセンターの会話感知を有効にします。",
+    "answer": "対応するAirPodsと接続状態を確認し、コントロールセンターの会話感知を有効にします。",
+    "steps": [
+      "AirPodsのモデルが会話感知に対応するかAppleの案内で確認する",
+      "AirPodsを装着してiPhoneへ接続し、コントロールセンターの音量コントロールを開く",
+      "会話感知がオンか確認し、別の音楽再生と自分の発話で挙動を比較する",
+      "Macで使う場合はサウンド設定のAirPodsで会話感知の状態を確認する"
+    ],
+    "causes": [
+      "利用しているAirPodsが対象モデルではない",
+      "別の出力機器に接続中",
+      "会話感知とノイズコントロールの設定を混同"
+    ],
+    "diagnosis": "相手の声を聞く透明モードと、自分が話し始めたときの会話感知を区別します。接続先と機能のオンオフを確認してから故障を疑ってください。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "交通中は音量変化に頼らず周囲の安全を優先してください。聴覚支援の代わりとみなさず、必要なら専門機関へ相談してください。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/104979",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/airpods-personalized-spatial-audio-setup-missing/",
+      "/iphone/iphone-focus-not-syncing-other-devices/",
+      "/iphone/photos-deleted-storage-not-reduced/"
+    ],
+    "closest_existing_url": "/iphone/airpods-personalized-spatial-audio-setup-missing/",
+    "differentiation": "既存記事は頭部形状に合わせた空間オーディオの設定。本記事は装着中の発話に応じて再生音を調整する会話感知の条件と設定を扱う。",
+    "fact_check": "Appleサポートは対応AirPodsを装着・接続した状態で会話感知を有効にする操作を案内する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-site-opens-wrong-container",
+    "path": "/browser/firefox-site-opens-wrong-container/",
+    "title": "Firefoxでサイトが違うコンテナーで開くとき",
+    "topic": "Firefoxで特定サイトを開くたびに意図しない仕事用・個人用コンテナーへ切り替わる",
+    "description": "Firefoxで特定サイトを開くたびに意図しない仕事用・個人用コンテナーへ切り替わる。Multi-Account Containersのサイト割り当てを確認し、誤った割り当てをサイト一覧から外します。",
+    "answer": "Multi-Account Containersのサイト割り当てを確認し、誤った割り当てをサイト一覧から外します。",
+    "steps": [
+      "FirefoxのツールバーでMulti-Account Containersのアイコンを開き、対象サイトに「常にこのコンテナーで開く」の割り当てがあるか確認する",
+      "アイコンの「コンテナーを管理」から、意図しない開き先として指定されたコンテナーを選ぶ",
+      "「サイト一覧を管理」で対象サイトを探し、割り当てを削除する",
+      "対象サイトを新しいタブで開き直して開き先を確認し、必要なら正しいコンテナーに改めて割り当てる"
+    ],
+    "causes": [
+      "以前に対象サイトを別のコンテナーへ常時割り当てた",
+      "サイトの割り当てと現在のログイン先を混同している",
+      "プライベートウィンドウではコンテナー機能が無効になる"
+    ],
+    "diagnosis": "まずコンテナーのアイコンが使えるかを確認します。特定サイトだけ開き先が違うなら、そのサイトの常時割り当てを疑います。割り当てを削除した後、同じサイトを新しいタブで開き直し、ログイン先も確認します。 変更前後の表示を同じ端末・同じアカウントで比較し、どの条件でだけ再現するか記録します。これにより設定の問題と別の症状を取り違えずに済みます。",
+    "caution": "コンテナーの削除は、その中のタブや関連する使い方に影響します。今回はサイトの割り当てだけを変更し、コンテナー本体を消さないでください。職場の管理対象端末なら管理者の方針も確認します。 設定を一度に複数変えず、各手順の結果を確かめてから次へ進んでください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/containers",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/firefox-containers-icon-missing/",
+      "/browser/firefox-site-autoplay-exception-not-working/",
+      "/browser/firefox-reader-view-button-missing/"
+    ],
+    "closest_existing_url": "/browser/firefox-containers-icon-missing/",
+    "differentiation": "既存記事はコンテナーのアイコン自体が見えない症状。本記事はアイコンを使える状態で、特定サイトの保存済み割り当てが誤ったコンテナーを開く場合の解除手順を扱う。",
+    "fact_check": "Mozilla公式の「Multi-Account Containers」は、サイトを特定のコンテナーに常時割り当てる機能と、「コンテナーを管理」→「サイト一覧を管理」から割り当てを削除する手順を明記している。"
+  }
+]
