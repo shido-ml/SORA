@@ -1,5 +1,155 @@
 [
   {
+    "title": "新しいOutlookで予約送信の項目が出ないとき",
+    "description": "新しいOutlookのメール作成画面で送信ボタン横の予約送信を選べない。使用中のOutlookの版とメールアカウントの種類を確認します。IMAP・POPでは新しいOutlookの予約送信は利用できません。",
+    "url": "/windows/new-outlook-schedule-send-option-missing/"
+  },
+  {
+    "title": "Outlookでメールの色カテゴリを付けられないとき",
+    "description": "Outlookでメールのカテゴリ分けをしようとしてもカテゴリの項目がない、または使えない。メールアカウントがIMAPかを確認します。Outlookの色カテゴリはIMAPアカウントではサポートされません。",
+    "url": "/windows/outlook-color-category-imap-unavailable/"
+  },
+  {
+    "title": "Googleカレンダーのスマホアプリで予約スケジュールを作れないとき",
+    "description": "カレンダーのスマホアプリで予約受付ページを作ろうとしても予約スケジュールの項目がない。予約スケジュールの作成は対応ブラウザを使うパソコンで行います。スマホアプリには作成機能がありません。",
+    "url": "/google/calendar-appointment-schedule-mobile-create-missing/"
+  },
+  {
+    "title": "Teamsのブレイクアウトルームへ参加者を移せないとき",
+    "description": "Teams会議で割り当てた参加者がブレイクアウトルームに入らず、メイン会議に残る。参加者の接続状態とルームの開閉を確認し、必要なら主催者から「参加を依頼」を送ります。",
+    "url": "/sns/teams-breakout-participant-not-joining/"
+  },
+  {
+    "title": "Teams会議で全員がロビー待機になるとき",
+    "description": "Teamsの会議リンクを開いた参加者がロビーから直接入れず、主催者の許可を待つ。主催者が会議アクセスの「ロビーを通過できるユーザー」を確認し、参加者の種類に合う設定にします。",
+    "url": "/sns/teams-lobby-everyone-waits/"
+  },
+  {
+    "title": "Teams会議で翻訳字幕の言語を選べないとき",
+    "description": "Teams会議で通常の字幕は出るのに、翻訳先言語を選ぶ項目がない。通常字幕と翻訳字幕を分けて確認し、会議主催者または本人に必要なライセンスがあるか確かめます。",
+    "url": "/sns/teams-translated-captions-option-missing/"
+  },
+  {
+    "title": "Teamsで音楽や周囲の音が相手に届かないとき",
+    "description": "Teams会議で声は届くのに、楽器や再生中の音楽など背景音だけ消される。マイクの不具合と決めつけず、Teamsのノイズ抑制設定を確認します。音楽共有なら画面共有の音声送出も検討します。",
+    "url": "/sns/teams-noise-suppression-off-music/"
+  },
+  {
+    "title": "Firefoxを閉じるとWeb通知が届かないとき",
+    "description": "Firefoxを開いている間はWebサイトの通知が届くのに、ウィンドウを閉じると届かない。Windows版Firefoxの対象バージョンと通知設定を確認し、サイト側がプッシュ通知に対応するか切り分けます。",
+    "url": "/browser/firefox-closed-notification-missing/"
+  },
+  {
+    "title": "Firefoxでブックマークツールバーだけ消えたとき",
+    "description": "Firefoxのブックマーク一覧には項目が残っているのに、アドレスバー下のブックマークツールバーだけ表示されない。ブックマークを復元する前に、ツールバーの表示設定とブックマークが入っているフォルダーを確認します。",
+    "url": "/browser/firefox-bookmarks-toolbar-hidden/"
+  },
+  {
+    "title": "Googleドライブで削除後も空き容量が増えないとき",
+    "description": "Googleドライブから大きいファイルを削除したのにGoogleアカウントの使用量が変わらない。ゴミ箱内の容量と反映時間を確認します。大量削除後は使用量の更新に48〜72時間かかる場合があります。",
+    "url": "/google/drive-storage-not-updated-after-delete/"
+  },
+  {
+    "title": "Google Meetのコンパニオンモードで声が届かないとき",
+    "description": "Google Meetの会議に参加できているのに、マイクやスピーカーが使えない。参加画面がコンパニオンモードなら音声が無効になる仕様です。音声参加が必要なら通常の参加方法で入り直します。",
+    "url": "/google/meet-companion-mode-no-microphone/"
+  },
+  {
+    "title": "iPhoneでメモのパスワードを再設定しても古いメモが開かないとき",
+    "description": "メモのカスタムパスワードを忘れ、設定で再設定した後も以前からロックされていたメモを開けない。パスワードの再設定は今後ロックするメモ用です。以前のメモには旧パスワードまたは利用可能なFace ID・Touch IDが必要です。",
+    "url": "/iphone/notes-old-lock-password-reset-no-access/"
+  },
+  {
+    "title": "Windowsのライブキャプションに自分の声が出ないとき",
+    "description": "Windows 11のライブキャプションでPCの再生音は文字になるのに、自分が話した声だけ表示されない。ライブキャプションの「マイク音声を含める」は初期状態でオフです。入力機器と権限も確認します。",
+    "url": "/windows/windows-live-captions-own-voice-missing/"
+  },
+  {
+    "title": "iPhoneの支援アクセスから出るパスコードを忘れたとき",
+    "description": "iPhoneの支援アクセスを終了しようとしても専用パスコードが分からず通常画面へ戻れない。支援アクセス用の復旧Apple Accountを設定済みなら、公式の「パスコードを忘れた場合」から退出と再設定を試します。",
+    "url": "/iphone/assistive-access-passcode-forgotten/"
+  },
+  {
+    "title": "Androidでアプリが集中モードにより使えないとき",
+    "description": "Androidの特定アプリが一時停止され、開けず、通知も来なくなった。Digital Wellbeingの集中モードで対象アプリが選ばれているか、時間指定で自動開始されていないかを確認します。",
+    "url": "/android/android-focus-mode-app-paused/"
+  },
+  {
+    "title": "Androidのバッテリーセーバーが勝手にオンになるとき",
+    "description": "Androidで一定の時間や残量になるとバッテリーセーバーが自動で有効になり、アプリ動作が遅くなる。設定のバッテリーセーバーで自動開始のスケジュールと現在の残量を確認します。",
+    "url": "/android/android-battery-saver-auto-on/"
+  },
+  {
+    "title": "iPhoneの「探す」でAirTagの置き忘れ通知が来ないとき",
+    "description": "AirTagなどの持ち物を離れた場所に残してもiPhoneの置き忘れ通知が出ない。対象アイテムの「手元から離れたときに通知」と信頼できる場所、探すアプリの通知許可を確認します。",
+    "url": "/iphone/find-my-left-behind-alert-missing/"
+  },
+  {
+    "title": "Wordで文書が保護ビューになり編集できないとき",
+    "description": "Wordの文書を開けるが入力できず、上部に保護ビューや編集を有効にする案内が出る。まずファイルの入手元を確認し、信頼できる文書だけ編集を有効にします。所有者や組織の制限は別に確認します。",
+    "url": "/windows/word-protected-view-cannot-edit/"
+  },
+  {
+    "title": "Wordで変更履歴をオフにしても取り消し線が残るとき",
+    "description": "Wordで変更履歴の記録をオフにした後も、文書内の削除部分に取り消し線や色が残る。変更履歴をオフにしても既存の変更記録は残ります。表示を切り替えるか、内容を確認して一件ずつ承認・却下します。",
+    "url": "/windows/word-track-changes-strikethrough-remains/"
+  },
+  {
+    "title": "Wordの途中でページ番号が1に戻るとき",
+    "description": "Wordの文書で章が変わるところからページ番号が突然1に戻り、通し番号にならない。セクション区切りと各セクションのページ番号形式を確認し、必要なら前のセクションから続けます。",
+    "url": "/windows/word-page-number-restarts-section/"
+  },
+  {
+    "title": "Excelのセルに「#####」だけ表示されるとき",
+    "description": "Excelで数値や日付が見えるはずのセルに「#####」が並び、値を読めない。まず列幅を広げます。日付や時刻の計算結果が負数の場合は、幅を広げても同じ表示になることがあります。",
+    "url": "/windows/excel-cell-shows-hashes/"
+  },
+  {
+    "title": "Excelで計算結果の代わりに数式が表示されるとき",
+    "description": "Excelの表で計算済みの値ではなく「=SUM(...)」などの数式がセルにそのまま見える。「数式の表示」がオンになっているか確認し、数式タブから表示を切り替えます。",
+    "url": "/windows/excel-formulas-shown-instead-values/"
+  },
+  {
+    "title": "Excelの計算で「#VALUE!」が出るとき",
+    "description": "Excelで足し算や引き算の式に#VALUE!が表示され、数値の計算結果が出ない。参照セルに数値に見える文字列や空白が混じっていないか、数式の評価で原因箇所を確認します。",
+    "url": "/windows/excel-value-error-text-in-numbers/"
+  },
+  {
+    "title": "PowerPointのスライドが勝手に次へ進むとき",
+    "description": "PowerPointの発表中、クリックしていないのにスライドが設定時間で次へ進む。記録済みのスライド切り替え時間を確認し、手動で進めたい場合はスライドショーの設定を手動にします。",
+    "url": "/windows/powerpoint-slides-advance-automatically/"
+  },
+  {
+    "title": "PowerPointを移動した後に動画が再生されないとき",
+    "description": "PowerPointのファイルだけを別PCやフォルダーへ移すと、埋め込んだはずの動画が再生されない。動画がファイルへのリンクか、プレゼンテーション内に埋め込まれているかを確認します。リンクなら元の動画ファイルも必要です。",
+    "url": "/windows/powerpoint-linked-video-missing-after-move/"
+  },
+  {
+    "title": "PowerPointを別のPCで開くと文字の形が変わるとき",
+    "description": "PowerPointで作った資料を別のPCで開くと、文字の形や行の折り返しが変わる。移動先PCに元のフォントがあるか確認します。ない場合は代替フォントへの置換や埋め込み条件を検討します。",
+    "url": "/windows/powerpoint-font-changes-other-pc/"
+  },
+  {
+    "title": "Google連絡先の名前や電話番号を誤って変更したとき",
+    "description": "連絡先の名前や電話番号を誤って上書きし、以前の情報に戻したい。Google連絡先の変更履歴を確認し、必要なら過去30日以内の変更をまとめて取り消します。取り消し前に現在の連絡先をエクスポートしてください。",
+    "url": "/google/contacts-incorrect-edits-undo/"
+  },
+  {
+    "title": "Teamsで共有した画面が参加者に見えないとき",
+    "description": "Teams会議やイベントで自分の画面共有は開始できているのに、参加者の画面には表示されない。「参加者に表示する内容を管理」が有効な会議では、共有開始後に管理画面から共有内容をライブ表示へ切り替える必要があります。",
+    "url": "/sns/teams-shared-screen-not-visible-to-attendees/"
+  },
+  {
+    "title": "iPhoneの設定変更で「セキュリティ遅延」が始まったとき",
+    "description": "Apple AccountのパスワードやiPhoneのパスコードを変更しようとすると、セキュリティ遅延で待つよう求められる。盗難デバイスの保護による正規の待機か確認します。対象操作では生体認証、約1時間の待機、再度の生体認証が必要で、待機を無理に解除しません。",
+    "url": "/iphone/stolen-device-protection-security-delay/"
+  },
+  {
+    "title": "iPhoneのリマインダーが指定場所で通知しないとき",
+    "description": "iPhoneのリマインダーに場所を設定したのに、到着または出発時の通知が届かない。対象リマインダーの到着・出発条件と範囲、位置情報サービス、リマインダーの正確な位置情報への許可を順に確認します。",
+    "url": "/iphone/reminders-location-alert-not-arriving/"
+  },
+  {
     "title": "Gmailの返信で差出人が別アドレスになるとき",
     "description": "別名アドレス宛てのメールに返信すると、意図しない差出人や返信先になる。送信アドレスの既定値と、返信時に元メールの宛先を使う設定を分けて確認します。",
     "url": "/google/gmail-reply-from-wrong-alias/"

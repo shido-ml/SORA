@@ -1,0 +1,992 @@
+[
+  {
+    "category": "windows",
+    "slug": "new-outlook-schedule-send-option-missing",
+    "path": "/windows/new-outlook-schedule-send-option-missing/",
+    "title": "新しいOutlookで予約送信の項目が出ないとき",
+    "topic": "新しいOutlookのメール作成画面で送信ボタン横の予約送信を選べない",
+    "description": "新しいOutlookのメール作成画面で送信ボタン横の予約送信を選べない。使用中のOutlookの版とメールアカウントの種類を確認します。IMAP・POPでは新しいOutlookの予約送信は利用できません。",
+    "answer": "使用中のOutlookの版とメールアカウントの種類を確認します。IMAP・POPでは新しいOutlookの予約送信は利用できません。",
+    "steps": [
+      "メール作成画面の送信ボタン横の下向きメニューを確認する",
+      "新しいOutlookか従来版Outlookかを確認し、公式手順の該当タブと照合する",
+      "アカウント設定で対象メールがIMAP・POPかを確認する",
+      "対応アカウントなら予約送信を試し、送信時刻まで下書きに残るか確認する"
+    ],
+    "causes": [
+      "IMAPまたはPOPのメールアカウントを使っている",
+      "従来版Outlookと新しいOutlookの操作場所を混同している",
+      "送信ボタン本体だけを見て下向きメニューを開いていない"
+    ],
+    "diagnosis": "送信済みでないメールがあるなら、まず下書きと送信トレイを別々に確認します。機能が見えない場合と、予約済みメールが送られない場合を混同しないことが切り分けの鍵です。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "アカウントの種類を変えるためにメールを削除したり再設定したりしないでください。送信前の文面が失われるおそれがあるため、まず下書きを保存します。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/outlook/mail/delay-or-schedule-sending-email-messages-in-outlook",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-scheduled-send-not-sent/",
+      "/windows/classic-outlook-search-misses-recent-mail/",
+      "/windows/new-outlook-offline-mail-missing/"
+    ],
+    "closest_existing_url": "/google/gmail-scheduled-send-not-sent/",
+    "differentiation": "既存記事はGmailで予約済みメールが時刻になっても送信されない問題。本記事は新しいOutlookで予約送信の操作自体が出ない条件、特にIMAP・POP非対応を扱う。",
+    "fact_check": "Microsoft公式の予約送信案内は新しいOutlookの送信ボタン横のメニューを示し、IMAP・POPアカウントではこの機能を使えないと明記する。"
+  },
+  {
+    "category": "windows",
+    "slug": "outlook-color-category-imap-unavailable",
+    "path": "/windows/outlook-color-category-imap-unavailable/",
+    "title": "Outlookでメールの色カテゴリを付けられないとき",
+    "topic": "Outlookでメールのカテゴリ分けをしようとしてもカテゴリの項目がない、または使えない",
+    "description": "Outlookでメールのカテゴリ分けをしようとしてもカテゴリの項目がない、または使えない。メールアカウントがIMAPかを確認します。Outlookの色カテゴリはIMAPアカウントではサポートされません。",
+    "answer": "メールアカウントがIMAPかを確認します。Outlookの色カテゴリはIMAPアカウントではサポートされません。",
+    "steps": [
+      "カテゴリを付けたいメールを右クリックし「分類」またはCategorizeを確認する",
+      "Outlookの版を確認し、設定内のカテゴリ管理場所と照合する",
+      "メールアカウントの種類がIMAPかを確認する",
+      "対応アカウントならカテゴリ一覧と新規カテゴリ作成を試し、対象メールへの反映を確認する"
+    ],
+    "causes": [
+      "IMAPアカウントでカテゴリ機能を探している",
+      "最近使ったカテゴリだけがメニューに表示されている",
+      "メール以外の予定表カテゴリと操作場所を混同している"
+    ],
+    "diagnosis": "すべてのメールで項目がないのか、特定アカウントのメールだけなのかを比較します。IMAPの非対応と、一覧に一部しか表示されない状態を区別します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "カテゴリが見えないことをメール消失と判断しないでください。アカウントの変更や削除はせず、現在のアカウント種類と設定画面を確認します。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/outlook/mail/create-and-assign-color-categories-in-outlook",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/classic-outlook-search-misses-recent-mail/",
+      "/windows/new-outlook-offline-mail-missing/",
+      "/windows/outlook-message-recall-option-missing/"
+    ],
+    "closest_existing_url": "/windows/classic-outlook-search-misses-recent-mail/",
+    "differentiation": "既存記事は従来版Outlookの検索結果に最近のメールが出ない問題。本記事は新旧Outlookの色カテゴリ機能とIMAPの提供条件を扱う。",
+    "fact_check": "Microsoft公式の色カテゴリ案内はIMAPメールアカウントがカテゴリに対応しないと明記し、新しいOutlookでは最近使ったカテゴリ以外は管理画面で確認する手順を示す。"
+  },
+  {
+    "category": "google",
+    "slug": "calendar-appointment-schedule-mobile-create-missing",
+    "path": "/google/calendar-appointment-schedule-mobile-create-missing/",
+    "title": "Googleカレンダーのスマホアプリで予約スケジュールを作れないとき",
+    "topic": "カレンダーのスマホアプリで予約受付ページを作ろうとしても予約スケジュールの項目がない",
+    "description": "カレンダーのスマホアプリで予約受付ページを作ろうとしても予約スケジュールの項目がない。予約スケジュールの作成は対応ブラウザを使うパソコンで行います。スマホアプリには作成機能がありません。",
+    "answer": "予約スケジュールの作成は対応ブラウザを使うパソコンで行います。スマホアプリには作成機能がありません。",
+    "steps": [
+      "スマホアプリで探しているのが通常の予定ではなく予約スケジュールか確認する",
+      "パソコンの対応ブラウザでGoogleカレンダーを開く",
+      "左上の「作成」から「予約スケジュール」を選ぶ",
+      "時間枠と受付ページを設定して保存し、公開する前に表示を確認する"
+    ],
+    "causes": [
+      "AndroidまたはiPhoneのカレンダーアプリで作成しようとしている",
+      "通常の予定作成メニューと予約スケジュールを混同している",
+      "職場や学校のアカウントで管理者の設定確認が必要"
+    ],
+    "diagnosis": "スマホで予定を入れることと、他人向けの予約スケジュールを作成することは別です。どの画面で項目を探しているかを先に確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "予約ページには名前や空き時間が表示されます。公開前に表示する情報を確認し、職場アカウントでは共有方針と利用条件を確認してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/calendar/answer/10729749?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/calendar-booking-page-no-slots/",
+      "/google/google-calendar-not-syncing/",
+      "/google/google-calendar-invite-not-appearing/"
+    ],
+    "closest_existing_url": "/google/calendar-booking-page-no-slots/",
+    "differentiation": "既存記事は作成済みの予約ページに空き枠が表示されない問題。本記事は作成前にスマホアプリに予約スケジュール項目がないという提供端末の条件を扱う。",
+    "fact_check": "Googleカレンダー公式ヘルプは予約スケジュール作成にパソコンと対応ブラウザが必要で、Android・iPhone・iPadアプリでは作成できないと説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-breakout-participant-not-joining",
+    "path": "/sns/teams-breakout-participant-not-joining/",
+    "title": "Teamsのブレイクアウトルームへ参加者を移せないとき",
+    "topic": "Teams会議で割り当てた参加者がブレイクアウトルームに入らず、メイン会議に残る",
+    "description": "Teams会議で割り当てた参加者がブレイクアウトルームに入らず、メイン会議に残る。参加者の接続状態とルームの開閉を確認し、必要なら主催者から「参加を依頼」を送ります。",
+    "answer": "参加者の接続状態とルームの開閉を確認し、必要なら主催者から「参加を依頼」を送ります。",
+    "steps": [
+      "主催者の会議コントロールでブレイクアウトルームを開き、対象ルームと参加者の割り当てを確認する",
+      "参加者がメイン会議に接続中か確認し、対象の名前のメニューを開く",
+      "「参加を依頼」を選び、参加者側に移動の案内が出るか確認する",
+      "参加できない場合はルームが開いているか、参加者が別ルーム内にいるかを確認する"
+    ],
+    "causes": [
+      "割り当て後に参加者がルームへ移動していない",
+      "ルームが閉じた状態になっている",
+      "参加者を開いたルーム間で直接移せると誤解している"
+    ],
+    "diagnosis": "全員が移れないのか一人だけなのかを比較し、ルームの開閉と割り当てを確認します。参加者の再入室を急ぐ前に主催者側の状態を確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "会議中に参加者を強制的に退出させないでください。発言や共有が続いている場合は、移動前に主催者と参加者でタイミングを合わせます。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/breakout-rooms-troubleshooting-guide-in-microsoft-teams",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/zoom-breakout-rooms-option-missing/",
+      "/sns/teams-attendee-microphone-disabled/",
+      "/sns/teams-annotation-request-not-working/"
+    ],
+    "closest_existing_url": "/sns/zoom-breakout-rooms-option-missing/",
+    "differentiation": "既存記事はZoomでルーム作成メニュー自体が出ない問題。本記事はTeamsで作成・割り当て済みのルームへ特定参加者が移動しない場合の主催者操作を扱う。",
+    "fact_check": "Microsoft公式のTeamsブレイクアウトルーム対処案内は、参加者の名前のメニューからAsk to joinを選べることと、開いたルーム間の移動に制限があることを説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-lobby-everyone-waits",
+    "path": "/sns/teams-lobby-everyone-waits/",
+    "title": "Teams会議で全員がロビー待機になるとき",
+    "topic": "Teamsの会議リンクを開いた参加者がロビーから直接入れず、主催者の許可を待つ",
+    "description": "Teamsの会議リンクを開いた参加者がロビーから直接入れず、主催者の許可を待つ。主催者が会議アクセスの「ロビーを通過できるユーザー」を確認し、参加者の種類に合う設定にします。",
+    "answer": "主催者が会議アクセスの「ロビーを通過できるユーザー」を確認し、参加者の種類に合う設定にします。",
+    "steps": [
+      "主催者として会議の詳細から「オプション」と「会議アクセス」を開く",
+      "「ロビーを通過できるユーザー」が主催者のみ等になっていないか確認する",
+      "招待済み、組織内、ゲスト、匿名参加者のどれが待機しているかを見分ける",
+      "会議に合う範囲へ変更して適用し、新しく参加する人で挙動を確認する"
+    ],
+    "causes": [
+      "通過許可が主催者・共同主催者だけに限定されている",
+      "組織外や匿名参加者に別条件が適用される",
+      "会議テンプレートや機密ラベルで設定変更が制限される"
+    ],
+    "diagnosis": "「全員」を選んでも匿名参加者が組織の方針で待機する場合があります。待機している人の種類を確認し、設定の反映範囲を切り分けます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "ロビーを広く開放すると会議リンクを持つ人が入室できる範囲が広がります。参加者の確認が必要な会議では、便利さだけで設定を緩めないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/using-the-lobby-in-microsoft-teams-meetings",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-attendee-microphone-disabled/",
+      "/sns/teams-meeting-chat-after-meeting-inaccessible/",
+      "/sns/teams-annotation-request-not-working/"
+    ],
+    "closest_existing_url": "/sns/teams-attendee-microphone-disabled/",
+    "differentiation": "既存記事は参加後のマイク入力の主催者制限。本記事は参加前にロビーで待つアクセス設定と参加者属性の違いを扱う。",
+    "fact_check": "Microsoft公式のTeamsロビー案内は通過できる対象ごとの違いと、会議前・会議中に会議アクセスを変更する操作、管理者方針やテンプレートによる制限を説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-translated-captions-option-missing",
+    "path": "/sns/teams-translated-captions-option-missing/",
+    "title": "Teams会議で翻訳字幕の言語を選べないとき",
+    "topic": "Teams会議で通常の字幕は出るのに、翻訳先言語を選ぶ項目がない",
+    "description": "Teams会議で通常の字幕は出るのに、翻訳先言語を選ぶ項目がない。通常字幕と翻訳字幕を分けて確認し、会議主催者または本人に必要なライセンスがあるか確かめます。",
+    "answer": "通常字幕と翻訳字幕を分けて確認し、会議主催者または本人に必要なライセンスがあるか確かめます。",
+    "steps": [
+      "会議コントロールで通常のライブ字幕をオンにできるか確認する",
+      "字幕の設定から翻訳先言語の選択項目が出るか見る",
+      "主催者にTeams Premiumまたは対象のCopilotライセンスがあるか確認してもらう",
+      "主催者に対象ライセンスがない場合は参加者本人のライセンス有無も確認し、管理者へ相談する"
+    ],
+    "causes": [
+      "通常のライブ字幕と翻訳字幕を同じ機能だと思っている",
+      "主催者にも本人にも対象ライセンスがない",
+      "会議の音声言語設定や組織ポリシーが影響している"
+    ],
+    "diagnosis": "通常字幕が出るかを最初に試すと、音声認識全体の問題と翻訳機能だけの提供条件を分けられます。主催者と参加者の権限の違いも確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "翻訳字幕を利用するために個人で有料契約を進めないでください。組織の管理者に提供範囲と必要性を確認し、機密会議の内容を外部ツールへ無断入力しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/use-live-captions-in-microsoft-teams-meetings",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-transcription-button-locked/",
+      "/sns/teams-attendee-microphone-disabled/",
+      "/sns/teams-annotation-request-not-working/"
+    ],
+    "closest_existing_url": "/sns/teams-transcription-button-locked/",
+    "differentiation": "既存記事は録画後にも使う文字起こし開始権限。本記事は会議中の字幕表示は可能だが翻訳先言語だけ選べないライセンス条件を扱う。",
+    "fact_check": "Microsoft公式は通常のライブ字幕と翻訳字幕を区別し、翻訳字幕はTeams PremiumまたはMicrosoft 365 Copilot等の対象ライセンスに依存すると説明する。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-noise-suppression-off-music",
+    "path": "/sns/teams-noise-suppression-off-music/",
+    "title": "Teamsで音楽や周囲の音が相手に届かないとき",
+    "topic": "Teams会議で声は届くのに、楽器や再生中の音楽など背景音だけ消される",
+    "description": "Teams会議で声は届くのに、楽器や再生中の音楽など背景音だけ消される。マイクの不具合と決めつけず、Teamsのノイズ抑制設定を確認します。音楽共有なら画面共有の音声送出も検討します。",
+    "answer": "マイクの不具合と決めつけず、Teamsのノイズ抑制設定を確認します。音楽共有なら画面共有の音声送出も検討します。",
+    "steps": [
+      "Teamsの設定から「デバイス」を開き、ノイズ抑制がオンか確認する",
+      "会議中なら「その他の操作」から「音声設定」を開いて同じ状態を確認する",
+      "静かな環境で音楽を共有する目的ならノイズ抑制をオフにして短くテストする",
+      "PCの再生音を届けたい場合はマイクに聞かせる方法と画面共有の音声共有を区別する"
+    ],
+    "causes": [
+      "ノイズ抑制が背景音として音楽を減らしている",
+      "音楽をマイクではなくPCで再生している",
+      "マイク入力と画面共有の音声送出を混同している"
+    ],
+    "diagnosis": "声も届かない場合は入力デバイスや主催者制限の問題です。声だけ届くかを比較し、対象がマイク入力かPCの再生音か確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "ノイズ抑制をオフにすると会議室の会話や生活音も伝わる可能性があります。参加者に目的を伝え、必要な時間だけ切り替えてください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/reduce-background-noise-in-microsoft-teams-meetings",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-attendee-microphone-disabled/",
+      "/sns/zoom-microphone-not-working/",
+      "/sns/discord-microphone-not-working/"
+    ],
+    "closest_existing_url": "/sns/teams-attendee-microphone-disabled/",
+    "differentiation": "既存記事は主催者の設定で参加者のマイク自体が無効。本記事は声は届くが背景音・楽器音がノイズ抑制で消える状況を扱う。",
+    "fact_check": "Microsoft公式はTeamsのノイズ抑制が背景音を除く機能で、音楽などを高忠実度で共有する際には抑制をオフにする選択とPC音声共有を案内する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-closed-notification-missing",
+    "path": "/browser/firefox-closed-notification-missing/",
+    "title": "Firefoxを閉じるとWeb通知が届かないとき",
+    "topic": "Firefoxを開いている間はWebサイトの通知が届くのに、ウィンドウを閉じると届かない",
+    "description": "Firefoxを開いている間はWebサイトの通知が届くのに、ウィンドウを閉じると届かない。Windows版Firefoxの対象バージョンと通知設定を確認し、サイト側がプッシュ通知に対応するか切り分けます。",
+    "answer": "Windows版Firefoxの対象バージョンと通知設定を確認し、サイト側がプッシュ通知に対応するか切り分けます。",
+    "steps": [
+      "FirefoxのバージョンとWindowsでの利用かを確認する",
+      "設定の「権限とデータ」から通知と「Firefoxを閉じたときにWebサイトの通知を許可」の状態を確認する",
+      "対象サイトの通知許可とサイト内の通知設定を確認する",
+      "Firefoxを一度開いた後で閉じ、対応するサイトのプッシュ通知を試す"
+    ],
+    "causes": [
+      "閉じた状態の通知機能の対象外のOSや管理対象環境である",
+      "サイトが開いているタブ内でしか通知を生成していない",
+      "PC再起動後にFirefoxをまだ一度も開いていない"
+    ],
+    "diagnosis": "Firefoxを開いている時にも通知が来ないならサイト許可から調べます。開いている時だけ来るなら通知方式と閉じた状態の対応条件を調べます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "通知を有効にすると画面に内容が表示される場合があります。共有PCではプライバシーを確認し、未知のサイトへ通知許可を追加しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/closed-browser-notifications",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-desktop-notifications-missing/",
+      "/browser/firefox-extension-private-window-inactive/",
+      "/browser/firefox-site-autoplay-exception-not-working/"
+    ],
+    "closest_existing_url": "/google/gmail-desktop-notifications-missing/",
+    "differentiation": "既存記事はGmailの新着通知の権限問題。本記事はFirefoxを閉じた後も通知が届く条件と、プッシュ通知とタブ内通知の違いを扱う。",
+    "fact_check": "Mozilla公式は閉じた状態での通知が一部のWindows版Firefox利用者向けで、macOS・Linux・組織管理版では利用できず、サイト側がプッシュ通知を使う必要があると説明する。"
+  },
+  {
+    "category": "browser",
+    "slug": "firefox-bookmarks-toolbar-hidden",
+    "path": "/browser/firefox-bookmarks-toolbar-hidden/",
+    "title": "Firefoxでブックマークツールバーだけ消えたとき",
+    "topic": "Firefoxのブックマーク一覧には項目が残っているのに、アドレスバー下のブックマークツールバーだけ表示されない",
+    "description": "Firefoxのブックマーク一覧には項目が残っているのに、アドレスバー下のブックマークツールバーだけ表示されない。ブックマークを復元する前に、ツールバーの表示設定とブックマークが入っているフォルダーを確認します。",
+    "answer": "ブックマークを復元する前に、ツールバーの表示設定とブックマークが入っているフォルダーを確認します。",
+    "steps": [
+      "メニューのブックマーク一覧を開き、保存済みの項目が残っているか確認する",
+      "ナビゲーションバーの空き部分を右クリックしてブックマークツールバーの表示状態を見る",
+      "メニューバーの「表示」から「ツールバー」→「ブックマークツールバー」も確認する",
+      "ツールバーを表示しても項目がない場合は、ライブラリー内の保存先フォルダーを確認する"
+    ],
+    "causes": [
+      "ツールバーだけが非表示になっている",
+      "ブックマークがツールバー以外のフォルダーに入っている",
+      "ブラウザーの別プロファイルを開いている"
+    ],
+    "diagnosis": "保存済み項目が一覧にもないならツールバー設定だけでは直りません。表示の問題かデータ・プロファイルの問題かを先に見分けます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "ブックマークのバックアップをいきなり復元すると現在の一覧を上書きする場合があります。まず表示設定を確認し、復元が必要なら現在のデータを保全してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.mozilla.org/en-US/kb/recover-lost-or-missing-bookmarks",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/chrome-bookmarks-missing/",
+      "/browser/firefox-screenshot-button-missing/",
+      "/browser/firefox-translate-icon-missing/"
+    ],
+    "closest_existing_url": "/browser/chrome-bookmarks-missing/",
+    "differentiation": "既存記事はChromeのブックマーク消失全般。本記事はFirefoxでブックマークが存在するのにツールバーだけ隠れた場合の表示操作を扱う。",
+    "fact_check": "Mozilla公式のブックマーク復旧案内は、ツールバーだけ見えない場合の右クリックまたは「表示」メニューでの再表示手順を示し、別プロファイルの場合との切り分けを説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "drive-storage-not-updated-after-delete",
+    "path": "/google/drive-storage-not-updated-after-delete/",
+    "title": "Googleドライブで削除後も空き容量が増えないとき",
+    "topic": "Googleドライブから大きいファイルを削除したのにGoogleアカウントの使用量が変わらない",
+    "description": "Googleドライブから大きいファイルを削除したのにGoogleアカウントの使用量が変わらない。ゴミ箱内の容量と反映時間を確認します。大量削除後は使用量の更新に48〜72時間かかる場合があります。",
+    "answer": "ゴミ箱内の容量と反映時間を確認します。大量削除後は使用量の更新に48〜72時間かかる場合があります。",
+    "steps": [
+      "Googleアカウントのストレージ画面でDrive・Gmail・フォトの内訳を確認する",
+      "Driveのゴミ箱に削除したファイルが残っているか確認する",
+      "永久削除が必要な場合は共有相手や復元要否を確かめてからゴミ箱を空にする",
+      "多数のファイルを消した直後なら48〜72時間待って同じストレージ画面を確認する"
+    ],
+    "causes": [
+      "ゴミ箱内のファイルが容量に計上されている",
+      "Gmailやフォトの使用量が支配的である",
+      "大量削除後の容量集計がまだ更新されていない"
+    ],
+    "diagnosis": "削除したファイルの所有者と、どのサービスの容量が減る予定だったかを確認します。見た目のファイル数だけで容量が空いたと判断しません。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "ゴミ箱を空にしたファイルは復元できなくなることがあります。共有相手への影響とバックアップを確認し、容量を急いで空けるために必要なファイルを削除しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/drive/answer/6374270?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/gmail-storage-full/",
+      "/google/google-drive-files-missing/",
+      "/google/drive-approvals-option-missing/"
+    ],
+    "closest_existing_url": "/google/gmail-storage-full/",
+    "differentiation": "既存記事はGmailの送受信が止まる容量不足への対処。本記事はDriveのファイルを削除した後も空き容量が増えない理由とゴミ箱・反映待ちを扱う。",
+    "fact_check": "Google公式のストレージ案内はゴミ箱と迷惑メール内の項目も容量に含まれ、まとめて削除した後の更新に最大48〜72時間かかる場合があると記す。"
+  },
+  {
+    "category": "google",
+    "slug": "meet-companion-mode-no-microphone",
+    "path": "/google/meet-companion-mode-no-microphone/",
+    "title": "Google Meetのコンパニオンモードで声が届かないとき",
+    "topic": "Google Meetの会議に参加できているのに、マイクやスピーカーが使えない",
+    "description": "Google Meetの会議に参加できているのに、マイクやスピーカーが使えない。参加画面がコンパニオンモードなら音声が無効になる仕様です。音声参加が必要なら通常の参加方法で入り直します。",
+    "answer": "参加画面がコンパニオンモードなら音声が無効になる仕様です。音声参加が必要なら通常の参加方法で入り直します。",
+    "steps": [
+      "会議画面にコンパニオンモードの表示があるか確認する",
+      "コンパニオンモードなら会議室の機器や別端末で音声を使っているか確認する",
+      "自分のPCで話す必要があるなら会議を退出し、通常の参加方法で入り直す",
+      "通常参加後にマイクとスピーカーの選択を確認し、短いテストで相手に聞こえるか確かめる"
+    ],
+    "causes": [
+      "エコー防止のためコンパニオンモードで音声が無効になっている",
+      "会議室機器の音声と自分のPCの役割を混同している",
+      "通常参加に戻った後もOS側のマイク権限がない"
+    ],
+    "diagnosis": "マイクボタンが押せない状態と、押せるが相手に聞こえない状態を分けます。参加モードを確認することで、権限設定を変える前に原因を絞れます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "会議室の音声機器とPCの両方で通常参加するとエコーが生じます。入り直す際は利用するマイク・スピーカーを一組に決めてください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/meet/answer/11295507?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-attendee-microphone-disabled/",
+      "/google/meet-cannot-join-meeting/",
+      "/google/meet-qa-option-unavailable/"
+    ],
+    "closest_existing_url": "/sns/teams-attendee-microphone-disabled/",
+    "differentiation": "既存記事はTeams主催者が参加者マイクを制限した場合。本記事はGoogle Meetのコンパニオンモードで音声を使えない設計上の条件を扱う。",
+    "fact_check": "Google Meet公式ヘルプはコンパニオンモードでマイクと会議音声がエコー防止のためオフになり、話すには会議室の機器等を使うと説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "notes-old-lock-password-reset-no-access",
+    "path": "/iphone/notes-old-lock-password-reset-no-access/",
+    "title": "iPhoneでメモのパスワードを再設定しても古いメモが開かないとき",
+    "topic": "メモのカスタムパスワードを忘れ、設定で再設定した後も以前からロックされていたメモを開けない",
+    "description": "メモのカスタムパスワードを忘れ、設定で再設定した後も以前からロックされていたメモを開けない。パスワードの再設定は今後ロックするメモ用です。以前のメモには旧パスワードまたは利用可能なFace ID・Touch IDが必要です。",
+    "answer": "パスワードの再設定は今後ロックするメモ用です。以前のメモには旧パスワードまたは利用可能なFace ID・Touch IDが必要です。",
+    "steps": [
+      "対象メモをロックした時の方法が端末のパスコードかカスタムパスワードか確認する",
+      "以前のカスタムパスワードとヒントを慎重に確認する",
+      "Face ID・Touch IDでまだ開ける場合は内容を保全し、公式手順でパスワード変更を検討する",
+      "新しいパスワードで古いメモを開けない場合は、再設定の対象範囲を理解してから今後のロック方法を選ぶ"
+    ],
+    "causes": [
+      "カスタムパスワードの再設定が古いメモにも適用されると誤解している",
+      "メモのアカウントごとに別のパスワードを使っている",
+      "生体認証設定が変わって旧パスワードの入力を求められた"
+    ],
+    "diagnosis": "新しいメモは開けるのに古いメモだけ開けないなら、同期障害ではなくロックした時の認証方法を調べます。メモが複数アカウントに分かれていないかも確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "古いメモを開くために不明な解除アプリへ内容やApple Account情報を渡さないでください。Appleも忘れた旧カスタムパスワードからの復旧を保証していません。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-asia/guide/iphone/iphf177bb154/26/ios/26",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/locked-note-collaboration-unavailable/",
+      "/iphone/medical-id-hidden-locked-screen/",
+      "/iphone/screen-time-passcode-reset-iphone/"
+    ],
+    "closest_existing_url": "/iphone/locked-note-collaboration-unavailable/",
+    "differentiation": "既存記事はロック中のメモを共同編集できない提供条件。本記事はカスタムパスワード再設定後も過去のロック済みメモを開けない理由と保全を扱う。",
+    "fact_check": "Apple公式のメモのロック案内はカスタムパスワードを忘れた場合、再設定しても以前のロック済みメモは開けず、今後ロックするメモに新パスワードが使われると明記する。"
+  },
+  {
+    "category": "windows",
+    "slug": "windows-live-captions-own-voice-missing",
+    "path": "/windows/windows-live-captions-own-voice-missing/",
+    "title": "Windowsのライブキャプションに自分の声が出ないとき",
+    "topic": "Windows 11のライブキャプションでPCの再生音は文字になるのに、自分が話した声だけ表示されない",
+    "description": "Windows 11のライブキャプションでPCの再生音は文字になるのに、自分が話した声だけ表示されない。ライブキャプションの「マイク音声を含める」は初期状態でオフです。入力機器と権限も確認します。",
+    "answer": "ライブキャプションの「マイク音声を含める」は初期状態でオフです。入力機器と権限も確認します。",
+    "steps": [
+      "ライブキャプションの設定から「設定」→「基本設定」を開く",
+      "「マイク音声を含める」がオフなら目的を確認してオンにする",
+      "Windowsのサウンド設定で目的のマイクが入力機器になっているか確認する",
+      "静かな場で自分だけが話して表示を試し、PCの再生音と同時に話した場合と比較する"
+    ],
+    "causes": [
+      "マイク音声を含める設定がオフである",
+      "別のマイクが入力機器として選ばれている",
+      "PC再生音が優先され同時に話した声が表示されない"
+    ],
+    "diagnosis": "PCから流れる動画の字幕は出るか、マイクだけ出ないかを分けます。自分の声の試験は他の再生音を止めた状態で行います。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "マイクを有効にすると周囲の会話も文字として画面に表示される可能性があります。共有画面や会議中のプライバシーに注意してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/accessibility/windows/use-live-captions-to-better-understand-audio",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-live-captions-language-download-stuck/",
+      "/windows/windows-hdr-toggle-unavailable/",
+      "/windows/windows-search-not-working/"
+    ],
+    "closest_existing_url": "/windows/windows-live-captions-language-download-stuck/",
+    "differentiation": "既存記事はライブキャプションの言語ファイル準備が進まない問題。本記事は機能が動作しているのに自分のマイク音声だけ字幕に出ない条件を扱う。",
+    "fact_check": "Microsoft公式はマイク音声の取り込みが毎回初期状態でオフであり、PC再生音と同時の場合は再生音の字幕が優先されると説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "assistive-access-passcode-forgotten",
+    "path": "/iphone/assistive-access-passcode-forgotten/",
+    "title": "iPhoneの支援アクセスから出るパスコードを忘れたとき",
+    "topic": "iPhoneの支援アクセスを終了しようとしても専用パスコードが分からず通常画面へ戻れない",
+    "description": "iPhoneの支援アクセスを終了しようとしても専用パスコードが分からず通常画面へ戻れない。支援アクセス用の復旧Apple Accountを設定済みなら、公式の「パスコードを忘れた場合」から退出と再設定を試します。",
+    "answer": "支援アクセス用の復旧Apple Accountを設定済みなら、公式の「パスコードを忘れた場合」から退出と再設定を試します。",
+    "steps": [
+      "画面がアクセスガイドではなく支援アクセスであることを確認する",
+      "サイドボタンまたはホームボタンを3回押して「支援アクセスを終了」を選ぶ",
+      "「支援アクセスのパスコードを忘れた場合」が表示されたら設定済みの復旧Apple Accountで認証する",
+      "退出できたら設定のアクセシビリティから支援アクセスのパスコードを再設定する"
+    ],
+    "causes": [
+      "端末ロック解除用と支援アクセス用のパスコードを混同している",
+      "設定時に復旧Apple Accountを登録していない",
+      "アクセスガイドの画面と支援アクセスを取り違えている"
+    ],
+    "diagnosis": "画面に「支援アクセス」と「アクセスガイド」のどちらが表示されるか記録します。復旧方法が異なるため、似たボタン操作だけで判断しません。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "復旧Apple Accountを設定していない場合、初期化前にバックアップと端末の所有者を確認してください。本人や支援者の同意なしにデータを消去しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-ie/guide/assistive-access-iphone/dev813e51961/27/ios/27",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/guided-access-wont-end-iphone/",
+      "/iphone/screen-time-passcode-reset-iphone/",
+      "/iphone/japan-transit-express-card-wrong/"
+    ],
+    "closest_existing_url": "/iphone/guided-access-wont-end-iphone/",
+    "differentiation": "既存記事は一つのアプリに固定するアクセスガイドの終了。本記事は支援アクセス全体の退出と、事前設定した復旧Apple Accountを使う専用パスコード再設定を扱う。",
+    "fact_check": "Appleの支援アクセス公式案内は復旧Apple Accountが登録済みならパスコードを忘れた画面から退出でき、未登録で忘れた場合はiPhoneのリセットが必要と説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "android-focus-mode-app-paused",
+    "path": "/android/android-focus-mode-app-paused/",
+    "title": "Androidでアプリが集中モードにより使えないとき",
+    "topic": "Androidの特定アプリが一時停止され、開けず、通知も来なくなった",
+    "description": "Androidの特定アプリが一時停止され、開けず、通知も来なくなった。Digital Wellbeingの集中モードで対象アプリが選ばれているか、時間指定で自動開始されていないかを確認します。",
+    "answer": "Digital Wellbeingの集中モードで対象アプリが選ばれているか、時間指定で自動開始されていないかを確認します。",
+    "steps": [
+      "設定の「Digital Wellbeing」から「集中モード」を開く",
+      "一時停止対象アプリの一覧に問題のアプリがあるか確認する",
+      "集中モードがオンなら一時的にオフにしてアプリが開けるか試す",
+      "再び同じ時間に止まる場合は集中モードのスケジュールを確認する"
+    ],
+    "causes": [
+      "集中モードが対象アプリを一時停止している",
+      "集中モードのスケジュールが毎日有効になる",
+      "仕事用プロファイルの一時停止やアーカイブと取り違えている"
+    ],
+    "diagnosis": "かばん印の仕事用アプリだけか、任意に選んだ個人用アプリかを確認します。集中モードを一時的にオフにして挙動が変わるなら原因を絞れます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "集中モードを解除すると仕事や学習を中断する通知が再び届きます。意図的な設定なら利用者の目的を確認し、管理対象の仕事用設定は勝手に変更しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9346420?hl=en-GB",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-work-apps-grayed-out/",
+      "/android/android-archived-app-icon-dimmed/",
+      "/android/android-camera-permission-denied-app/"
+    ],
+    "closest_existing_url": "/android/android-work-apps-grayed-out/",
+    "differentiation": "既存記事は仕事用プロファイル全体が一時停止してかばん印のアプリが灰色になる問題。本記事は個人用アプリも対象になるDigital Wellbeingの集中モード選択と時間指定を扱う。",
+    "fact_check": "GoogleのAndroid公式ヘルプは集中モードで選んだアプリが使えず通知も来ないこと、オン・オフと自動スケジュールを設定できることを説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "android-battery-saver-auto-on",
+    "path": "/android/android-battery-saver-auto-on/",
+    "title": "Androidのバッテリーセーバーが勝手にオンになるとき",
+    "topic": "Androidで一定の時間や残量になるとバッテリーセーバーが自動で有効になり、アプリ動作が遅くなる",
+    "description": "Androidで一定の時間や残量になるとバッテリーセーバーが自動で有効になり、アプリ動作が遅くなる。設定のバッテリーセーバーで自動開始のスケジュールと現在の残量を確認します。",
+    "answer": "設定のバッテリーセーバーで自動開始のスケジュールと現在の残量を確認します。",
+    "steps": [
+      "設定の「バッテリー」から「バッテリーセーバー」を開く",
+      "現在のオン・オフと自動開始のスケジュールまたは残量条件を確認する",
+      "意図しない条件なら設定を見直し、残量が条件を下回るときの挙動を確認する",
+      "動作が遅いアプリがある場合はセーバーが有効な時だけ起きるか比較する"
+    ],
+    "causes": [
+      "残量に応じた自動開始が設定されている",
+      "以前に時間や条件を指定した",
+      "セーバーによる背景処理制限をアプリ故障と誤認している"
+    ],
+    "diagnosis": "バッテリー表示の残量とセーバーがオンになる時点を記録します。画面が暗くなるなどの変化が同時に起きるかも確認すると切り分けやすくなります。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "セーバーをオフにすると稼働時間が短くなる場合があります。長時間外出や電源が使えない場面では必要性を見極め、アプリをむやみに削除しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/7664692?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/pixel-adaptive-charging-not-activating/",
+      "/android/android-battery-drains-fast/",
+      "/android/google-play-download-pending/"
+    ],
+    "closest_existing_url": "/android/pixel-adaptive-charging-not-activating/",
+    "differentiation": "既存記事はPixelの充電速度を調整するアダプティブ充電。本記事はAndroidの消費電力を抑えるバッテリーセーバーが自動でオンになる条件を扱う。",
+    "fact_check": "GoogleのAndroid公式ヘルプは設定のバッテリーセーバーで自動開始スケジュールを選べること、オンの時は背景動作や一部機能が制限されることを説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "find-my-left-behind-alert-missing",
+    "path": "/iphone/find-my-left-behind-alert-missing/",
+    "title": "iPhoneの「探す」でAirTagの置き忘れ通知が来ないとき",
+    "topic": "AirTagなどの持ち物を離れた場所に残してもiPhoneの置き忘れ通知が出ない",
+    "description": "AirTagなどの持ち物を離れた場所に残してもiPhoneの置き忘れ通知が出ない。対象アイテムの「手元から離れたときに通知」と信頼できる場所、探すアプリの通知許可を確認します。",
+    "answer": "対象アイテムの「手元から離れたときに通知」と信頼できる場所、探すアプリの通知許可を確認します。",
+    "steps": [
+      "「探す」アプリの持ち物から対象のAirTagを選ぶ",
+      "通知欄の「手元から離れたときに通知」がオンか確認する",
+      "通知しない場所として自宅などが登録されていないか確認する",
+      "iPhone側で「探す」の通知許可を確認し、安全な場所で条件を比べる"
+    ],
+    "causes": [
+      "対象アイテムの置き忘れ通知がオフ",
+      "信頼できる場所では通知されない設定",
+      "探すアプリ自体の通知が許可されていない"
+    ],
+    "diagnosis": "まず対象アイテムが「探す」に存在するかを確認します。存在しない場合は登録問題であり、存在して特定の場所だけ通知しないなら例外地点を調べます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "置き忘れ通知は盗難防止や緊急連絡の保証ではありません。試すために貴重品を公共の場所に置かず、自宅など安全な環境で確認してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-ie/guide/iphone/iph5fe280d90/26/ios/26",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/airtag-not-showing-find-my-iphone/",
+      "/iphone/notifications-not-arriving/",
+      "/iphone/health-medication-follow-up-reminder-missing/"
+    ],
+    "closest_existing_url": "/iphone/airtag-not-showing-find-my-iphone/",
+    "differentiation": "既存記事はAirTagが「探す」の持ち物一覧に表示されない問題。本記事は表示済みのAirTagから離れた時だけ通知が来ない設定を扱う。",
+    "fact_check": "Apple公式は持ち物ごとに置き忘れ通知をオンにし、通知しない信頼できる場所を設定できること、探すアプリの通知許可が必要なことを示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-protected-view-cannot-edit",
+    "path": "/windows/word-protected-view-cannot-edit/",
+    "title": "Wordで文書が保護ビューになり編集できないとき",
+    "topic": "Wordの文書を開けるが入力できず、上部に保護ビューや編集を有効にする案内が出る",
+    "description": "Wordの文書を開けるが入力できず、上部に保護ビューや編集を有効にする案内が出る。まずファイルの入手元を確認し、信頼できる文書だけ編集を有効にします。所有者や組織の制限は別に確認します。",
+    "answer": "まずファイルの入手元を確認し、信頼できる文書だけ編集を有効にします。所有者や組織の制限は別に確認します。",
+    "steps": [
+      "画面上部に保護ビューの黄色いバーが出ているか確認する",
+      "ファイルを送った相手と入手元が確かか、内容を開く必要があるか確認する",
+      "信頼できる場合だけ「編集を有効にする」を選ぶ",
+      "バーがない場合は「ファイル」→「情報」の保護設定や所有者が付けた編集制限を確認する"
+    ],
+    "causes": [
+      "インターネット由来の文書が保護ビューで開かれた",
+      "文書の所有者が編集制限を設定した",
+      "組織のポリシーで編集が制限されている"
+    ],
+    "diagnosis": "文書が全く開けないのか、読めるが編集だけできないのかを分けます。保護ビューの表示がないなら、共有権限や文書保護を調べます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "知らない送信者の添付ファイルで保護ビューを解除しないでください。マクロや不審な内容を有効にする前に送信元を別経路で確かめます。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/enable-editing-in-your-document",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-view-only-cannot-edit/",
+      "/windows/clipchamp-screen-record-tab-audio-missing/",
+      "/windows/smart-app-control-off-cannot-enable/"
+    ],
+    "closest_existing_url": "/google/docs-view-only-cannot-edit/",
+    "differentiation": "既存記事はGoogleドキュメントで共有権限が閲覧のみの状態。本記事はWordのローカル文書が安全保護のため保護ビューで開く場合と所有者制限を区別する。",
+    "fact_check": "Microsoft公式はWordで編集できない原因に保護ビューを挙げ、所有者や組織による編集制限はローカルでは解除できない場合があると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-track-changes-strikethrough-remains",
+    "path": "/windows/word-track-changes-strikethrough-remains/",
+    "title": "Wordで変更履歴をオフにしても取り消し線が残るとき",
+    "topic": "Wordで変更履歴の記録をオフにした後も、文書内の削除部分に取り消し線や色が残る",
+    "description": "Wordで変更履歴の記録をオフにした後も、文書内の削除部分に取り消し線や色が残る。変更履歴をオフにしても既存の変更記録は残ります。表示を切り替えるか、内容を確認して一件ずつ承認・却下します。",
+    "answer": "変更履歴をオフにしても既存の変更記録は残ります。表示を切り替えるか、内容を確認して一件ずつ承認・却下します。",
+    "steps": [
+      "「校閲」タブで変更履歴の記録が現在オフか確認する",
+      "表示方法がすべての変更履歴か簡易表示かを確認する",
+      "残った取り消し線を変更履歴として一件ずつ確認する",
+      "共同作業者と合意した変更だけ承認または却下し、保存後の表示を確認する"
+    ],
+    "causes": [
+      "変更履歴をオフにすれば過去の記録も消えると誤解している",
+      "レビュー用に共有され変更履歴をオフにできない",
+      "表示方法がすべての変更履歴になっている"
+    ],
+    "diagnosis": "新しく入力した文字にも記録が付くか、過去の変更だけ残っているかを比較します。後者なら記録の停止は成功しており、残存分のレビューが必要です。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "「すべて承認」は共同編集者の意図しない変更も確定します。変更内容を読む前に一括で承認・却下しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/training/track-changes-in-word",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-suggesting-mode-option-missing/",
+      "/windows/windows-security-allowed-threat-restore/",
+      "/windows/night-light-not-changing-color-windows/"
+    ],
+    "closest_existing_url": "/google/docs-suggesting-mode-option-missing/",
+    "differentiation": "既存記事はGoogleドキュメントで提案モードの選択項目が出ない問題。本記事はWordの変更履歴をオフにしても過去の取り消し線が残る理由と承認・却下を扱う。",
+    "fact_check": "Microsoft公式は変更履歴をオフにしても既存の色付き下線や取り消し線は残り、個々の変更を承認または却下できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-page-number-restarts-section",
+    "path": "/windows/word-page-number-restarts-section/",
+    "title": "Wordの途中でページ番号が1に戻るとき",
+    "topic": "Wordの文書で章が変わるところからページ番号が突然1に戻り、通し番号にならない",
+    "description": "Wordの文書で章が変わるところからページ番号が突然1に戻り、通し番号にならない。セクション区切りと各セクションのページ番号形式を確認し、必要なら前のセクションから続けます。",
+    "answer": "セクション区切りと各セクションのページ番号形式を確認し、必要なら前のセクションから続けます。",
+    "steps": [
+      "「ホーム」の編集記号表示でページ番号が変わる前後にセクション区切りがあるか確認する",
+      "番号が戻った章のヘッダーまたはフッターを開く",
+      "「前と同じヘッダー/フッター」のリンクとページ番号の書式設定を確認する",
+      "通し番号が必要ならページ番号の開始値を変更して各章の表示を確認する"
+    ],
+    "causes": [
+      "章のセクションに開始番号1が設定されている",
+      "セクション間でヘッダーやフッターのリンクが外れている",
+      "改ページとセクション区切りを混同している"
+    ],
+    "diagnosis": "番号が戻る位置を確認し、ページ区切りかセクション区切りかを見分けます。変更前の文書をコピーして、意図した章立てが保たれるか比べます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "長い文書のセクション区切りを削除すると章ごとの余白や向きも変わる場合があります。番号の設定だけを先に確認し、元ファイルを保全してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/customize-page-numbers-and-their-formats-in-different-word-document-sections",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/docs-line-numbers-unavailable-pageless/",
+      "/windows/windows-color-filter-accidentally-enabled/",
+      "/windows/night-light-not-changing-color-windows/"
+    ],
+    "closest_existing_url": "/google/docs-line-numbers-unavailable-pageless/",
+    "differentiation": "既存記事はGoogleドキュメントの行番号がページ分けなし表示では使えない問題。本記事はWordのセクションごとのページ番号開始値と前セクションへのリンクを扱う。",
+    "fact_check": "Microsoft公式はWordでセクション区切りを作り、ヘッダー・フッターのリンクを確認したうえで「ページ番号の書式設定」の開始番号を設定する手順を示す。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-cell-shows-hashes",
+    "path": "/windows/excel-cell-shows-hashes/",
+    "title": "Excelのセルに「#####」だけ表示されるとき",
+    "topic": "Excelで数値や日付が見えるはずのセルに「#####」が並び、値を読めない",
+    "description": "Excelで数値や日付が見えるはずのセルに「#####」が並び、値を読めない。まず列幅を広げます。日付や時刻の計算結果が負数の場合は、幅を広げても同じ表示になることがあります。",
+    "answer": "まず列幅を広げます。日付や時刻の計算結果が負数の場合は、幅を広げても同じ表示になることがあります。",
+    "steps": [
+      "対象セルを選び数式バーに元の値や式が残るか確認する",
+      "列見出し右端をドラッグまたはダブルクリックして列幅を広げる",
+      "表示が変わらない場合はセルの表示形式が日付・時刻か確認する",
+      "日付計算が負数になっていないか参照元と式を確認する"
+    ],
+    "causes": [
+      "列幅が値の表示に足りない",
+      "負の日付・時刻を表示しようとしている",
+      "数式の結果と表示形式が合っていない"
+    ],
+    "diagnosis": "数式バーに値が残っていれば消失ではなく表示の問題です。列幅で直る場合と、負の日付計算を直す必要がある場合を分けます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "値を消して入れ直す前に元の数式と参照先を確認してください。共有表では列幅変更が印刷レイアウトにも影響する場合があります。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/how-to-correct-a-error",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-array-result-blocked-by-existing-cell/",
+      "/windows/windows-black-screen-with-cursor/",
+      "/windows/touch-keyboard-icon-missing-windows/"
+    ],
+    "closest_existing_url": "/google/sheets-array-result-blocked-by-existing-cell/",
+    "differentiation": "既存記事はGoogle Sheetsで配列の結果が隣のセルに展開できない問題。本記事はExcelで値自体は残るのに列幅または負の日付で#####と表示される問題を扱う。",
+    "fact_check": "Microsoft公式はExcelの#####表示に列幅不足と負の日付・時刻という二つの原因を挙げ、列見出しから幅を広げる操作を案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-formulas-shown-instead-values",
+    "path": "/windows/excel-formulas-shown-instead-values/",
+    "title": "Excelで計算結果の代わりに数式が表示されるとき",
+    "topic": "Excelの表で計算済みの値ではなく「=SUM(...)」などの数式がセルにそのまま見える",
+    "description": "Excelの表で計算済みの値ではなく「=SUM(...)」などの数式がセルにそのまま見える。「数式の表示」がオンになっているか確認し、数式タブから表示を切り替えます。",
+    "answer": "「数式の表示」がオンになっているか確認し、数式タブから表示を切り替えます。",
+    "steps": [
+      "数式がすべてのセルで見えるか、特定セルだけかを確認する",
+      "Excelの「数式」タブで「数式の表示」がオンか確認する",
+      "オンなら切り替え、数式の結果が見えるか確認する",
+      "特定セルだけならセルの入力形式や先頭の文字を確認し、式が文字列として入っていないか調べる"
+    ],
+    "causes": [
+      "ワークシート全体の「数式の表示」がオン",
+      "Ctrlとグレイヴアクセントのショートカットを誤って押した",
+      "特定セルの数式が文字列として入力された"
+    ],
+    "diagnosis": "一つのセルだけか表全体かが重要です。全体なら表示設定を、特定セルだけなら入力した文字の扱いを確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "数式を値に貼り替えると計算の仕組みが失われます。表示の問題だけなら内容を編集せず、切り替え操作で確認してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/display-or-hide-formulas",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-array-result-blocked-by-existing-cell/",
+      "/windows/windows-search-not-working/",
+      "/windows/touch-keyboard-icon-missing-windows/"
+    ],
+    "closest_existing_url": "/google/sheets-array-result-blocked-by-existing-cell/",
+    "differentiation": "既存記事はGoogle Sheetsの配列数式が展開しない計算エラー。本記事はExcelで計算式が表示されて結果が隠れる表示設定を扱う。",
+    "fact_check": "Microsoft公式はExcelの「数式」→「数式の表示」またはCtrl+グレイヴアクセントで数式と結果の表示を切り替えられると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-value-error-text-in-numbers",
+    "path": "/windows/excel-value-error-text-in-numbers/",
+    "title": "Excelの計算で「#VALUE!」が出るとき",
+    "topic": "Excelで足し算や引き算の式に#VALUE!が表示され、数値の計算結果が出ない",
+    "description": "Excelで足し算や引き算の式に#VALUE!が表示され、数値の計算結果が出ない。参照セルに数値に見える文字列や空白が混じっていないか、数式の評価で原因箇所を確認します。",
+    "answer": "参照セルに数値に見える文字列や空白が混じっていないか、数式の評価で原因箇所を確認します。",
+    "steps": [
+      "エラーのセルを選び数式と参照先を確認する",
+      "「数式」タブの「数式の検証」でどの参照値からエラーになるか調べる",
+      "数値のつもりのセルに空白や文字列が含まれていないか確認する",
+      "元データの意味を保ったまま必要な値だけ修正し、計算結果を再確認する"
+    ],
+    "causes": [
+      "数値に見えるセルが実際には文字列である",
+      "見えない空白や特殊文字が混じっている",
+      "式の演算対象に予期しない型の値がある"
+    ],
+    "diagnosis": "式そのものが誤っている場合と、参照値だけが文字列になっている場合を分けます。エラーを隠す前に原因セルを特定します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "IFERRORでエラーを隠すと誤った集計に気づけなくなります。会計や集計の表では元データを勝手に削除せず、修正前のコピーを保存してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/how-to-correct-a-value-error",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-array-result-blocked-by-existing-cell/",
+      "/windows/windows-search-not-working/",
+      "/windows/windows-taskbar-clock-seconds-hidden/"
+    ],
+    "closest_existing_url": "/google/sheets-array-result-blocked-by-existing-cell/",
+    "differentiation": "既存記事はSheetsの配列数式が展開できないエラー。本記事はExcelの#VALUE!で参照セルの文字列・空白を数式の評価で特定する手順を扱う。",
+    "fact_check": "Microsoft公式はExcelの#VALUE!の一因として文字列・見えない空白を示し、「数式の検証」やISTEXTで原因セルを探す方法を案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-slides-advance-automatically",
+    "path": "/windows/powerpoint-slides-advance-automatically/",
+    "title": "PowerPointのスライドが勝手に次へ進むとき",
+    "topic": "PowerPointの発表中、クリックしていないのにスライドが設定時間で次へ進む",
+    "description": "PowerPointの発表中、クリックしていないのにスライドが設定時間で次へ進む。記録済みのスライド切り替え時間を確認し、手動で進めたい場合はスライドショーの設定を手動にします。",
+    "answer": "記録済みのスライド切り替え時間を確認し、手動で進めたい場合はスライドショーの設定を手動にします。",
+    "steps": [
+      "スライド一覧で各ページに記録された所要時間があるか確認する",
+      "「スライドショー」タブの「スライドショーの設定」を開く",
+      "「スライドの切り替え」を手動にして発表を試す",
+      "記録済み時間を残したい場合は削除せず、必要に応じて「タイミングを使用」を再び選ぶ"
+    ],
+    "causes": [
+      "リハーサルや録画で切り替え時間が記録された",
+      "スライドショー設定でタイミング使用が有効",
+      "自動切り替えと画面切り替え効果を混同している"
+    ],
+    "diagnosis": "一部のスライドだけか全体かを比較し、記録済み時間の有無を確認します。発表の練習用と本番用で同じファイルを使っていないかも確認します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "記録済みタイミングを一括削除すると自動再生用の資料に影響します。設定を切り替える前に元ファイルを保存し、発表前に全ページを通して確認してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/training/rehearse-and-time-the-delivery-of-a-presentation",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/slides-speaker-notes-not-visible/",
+      "/windows/microphone-indicator-unexpected/",
+      "/windows/lock-screen-spotlight-not-changing/"
+    ],
+    "closest_existing_url": "/google/slides-speaker-notes-not-visible/",
+    "differentiation": "既存記事はGoogleスライドで発表者メモが見えない問題。本記事はPowerPointで保存済みの発表タイミングによりページが自動で進む場合の設定を扱う。",
+    "fact_check": "Microsoft公式のPowerPoint案内は記録済み時間を確認し、手動進行にするにはスライドショー設定で「手動」を選ぶと説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-linked-video-missing-after-move",
+    "path": "/windows/powerpoint-linked-video-missing-after-move/",
+    "title": "PowerPointを移動した後に動画が再生されないとき",
+    "topic": "PowerPointのファイルだけを別PCやフォルダーへ移すと、埋め込んだはずの動画が再生されない",
+    "description": "PowerPointのファイルだけを別PCやフォルダーへ移すと、埋め込んだはずの動画が再生されない。動画がファイルへのリンクか、プレゼンテーション内に埋め込まれているかを確認します。リンクなら元の動画ファイルも必要です。",
+    "answer": "動画がファイルへのリンクか、プレゼンテーション内に埋め込まれているかを確認します。リンクなら元の動画ファイルも必要です。",
+    "steps": [
+      "元のPCで同じスライドの動画が再生できるか確認する",
+      "動画が外部ファイルへのリンクとして挿入されていないか確認する",
+      "リンクの場合は元の動画を同じ場所関係で一緒に持ち運び、移動先で再生を試す",
+      "再配布する資料なら適切な動画形式で埋め込み直す方法を検討し、全ページをテストする"
+    ],
+    "causes": [
+      "動画が埋め込みではなく外部ファイルへのリンク",
+      "移動先に元の動画がない",
+      "移動先PCで必要な動画形式の互換性がない"
+    ],
+    "diagnosis": "動画だけが再生できないのか、音声も含め全メディアが失敗するのか確認します。元PCでは動くなら移動先のパスや互換性を疑います。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "プレゼンテーションに動画を埋め込むとファイル容量が増えます。著作権や機密資料の取り扱いを確認し、外部へ無断配布しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/tips-for-improving-audio-and-video-playback-and-compatibility-in-powerpoint",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/slides-audio-unavailable-to-viewers/",
+      "/windows/nearby-sharing-received-file-missing/",
+      "/windows/controlled-folder-access-blocks-save/"
+    ],
+    "closest_existing_url": "/google/slides-audio-unavailable-to-viewers/",
+    "differentiation": "既存記事はGoogleスライドの音声ファイルが共有相手の権限で再生できない問題。本記事はPowerPointのローカル動画リンクがファイル移動で切れる場合の同梱と埋め込みを扱う。",
+    "fact_check": "Microsoft公式はPowerPointではリンクされたメディアより埋め込みを推奨し、リンクを使うなら発表先でも参照できるよう動画ファイルを同じディレクトリに置き事前テストすると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-font-changes-other-pc",
+    "path": "/windows/powerpoint-font-changes-other-pc/",
+    "title": "PowerPointを別のPCで開くと文字の形が変わるとき",
+    "topic": "PowerPointで作った資料を別のPCで開くと、文字の形や行の折り返しが変わる",
+    "description": "PowerPointで作った資料を別のPCで開くと、文字の形や行の折り返しが変わる。移動先PCに元のフォントがあるか確認します。ない場合は代替フォントへの置換や埋め込み条件を検討します。",
+    "answer": "移動先PCに元のフォントがあるか確認します。ない場合は代替フォントへの置換や埋め込み条件を検討します。",
+    "steps": [
+      "元PCで使用しているフォント名を確認する",
+      "移動先PCで同じフォントが利用できるか確認する",
+      "利用できない場合は双方にあるフォントへ変更するか、許可されたフォント埋め込みを検討する",
+      "別PCで再び開き、見出しと表の折り返し、図形内の文字を確認する"
+    ],
+    "causes": [
+      "移動先PCに使用フォントがインストールされていない",
+      "フォントのライセンスが埋め込みを許可していない",
+      "代替フォントで文字幅が変わっている"
+    ],
+    "diagnosis": "元PCと移動先PCで同じ資料を並べ、どのフォントの文字だけ形が変わるか確認します。資料の内容が消えた問題とは分けて考えます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "不明なサイトからフォントを入れないでください。フォント埋め込みや再配布の許諾を確認し、社外共有時はPDF版も含めて表示を検証してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/use-decorative-fonts-from-third-party-vendors",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/slides-speaker-notes-not-visible/",
+      "/windows/default-printer-keeps-switching/",
+      "/windows/windows-auto-brightness-changing/"
+    ],
+    "closest_existing_url": "/google/slides-speaker-notes-not-visible/",
+    "differentiation": "既存記事はGoogleスライドの発表者メモが本番中に出ない問題。本記事はPowerPointの別PCへの配布でフォント置換によりレイアウトが変わる問題を扱う。",
+    "fact_check": "Microsoft公式は移動先に元フォントがないと代替フォントに置き換わること、フォントの埋め込み可否がライセンスに左右されることを説明する。"
+  },
+  {
+    "category": "google",
+    "slug": "contacts-incorrect-edits-undo",
+    "path": "/google/contacts-incorrect-edits-undo/",
+    "title": "Google連絡先の名前や電話番号を誤って変更したとき",
+    "topic": "連絡先の名前や電話番号を誤って上書きし、以前の情報に戻したい",
+    "description": "連絡先の名前や電話番号を誤って上書きし、以前の情報に戻したい。Google連絡先の変更履歴を確認し、必要なら過去30日以内の変更をまとめて取り消します。取り消し前に現在の連絡先をエクスポートしてください。",
+    "answer": "Google連絡先の変更履歴を確認し、必要なら過去30日以内の変更をまとめて取り消します。取り消し前に現在の連絡先をエクスポートしてください。",
+    "steps": [
+      "contacts.google.comを開き、対象のGoogleアカウントが正しいか確認する",
+      "該当連絡先を選び、右下の履歴で編集前後の情報を確認する",
+      "単一の連絡先なら履歴を参考に正しい値を手動で戻し、保存する",
+      "広範囲の誤編集なら設定の「変更を元に戻す」で30日以内の時点を選ぶ前に、現在の連絡先をエクスポートして影響を確認する"
+    ],
+    "causes": [
+      "名前や電話番号を誤って上書きした",
+      "別のGoogleアカウントの連絡先を見ている",
+      "複数の編集をまとめて戻す必要がある"
+    ],
+    "diagnosis": "対象が一件だけか多数かを先に切り分けます。一件なら履歴で元の情報を確認し、個別編集を優先します。多数なら一括取り消しの対象時点と影響する別の編集を調べます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "「変更を元に戻す」はその時点以降の編集全体に作用し、後から追加した連絡先も一時的に見えなくなる可能性があります。実行前にエクスポートし、必要な情報を控えてください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/contacts/answer/7280886?co=GENIE.Platform%3DDesktop&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/contacts-trash-restore-deleted/",
+      "/google/drive-file-previous-version-not-found/",
+      "/google/takeout-recent-changes-not-in-archive/"
+    ],
+    "closest_existing_url": "/google/contacts-trash-restore-deleted/",
+    "differentiation": "既存記事は削除した連絡先をゴミ箱から復元する手順。本記事は残っている連絡先の誤編集を履歴で調べ、単独修正か全件への一括取り消しか判断する。",
+    "fact_check": "Google公式ヘルプは連絡先の編集履歴の表示と、過去30日以内の変更をまとめて取り消す手順を明記し、後から追加した連絡先が表示されなくなる可能性も警告している。"
+  },
+  {
+    "category": "sns",
+    "slug": "teams-shared-screen-not-visible-to-attendees",
+    "path": "/sns/teams-shared-screen-not-visible-to-attendees/",
+    "title": "Teamsで共有した画面が参加者に見えないとき",
+    "topic": "Teams会議やイベントで自分の画面共有は開始できているのに、参加者の画面には表示されない",
+    "description": "Teams会議やイベントで自分の画面共有は開始できているのに、参加者の画面には表示されない。「参加者に表示する内容を管理」が有効な会議では、共有開始後に管理画面から共有内容をライブ表示へ切り替える必要があります。",
+    "answer": "「参加者に表示する内容を管理」が有効な会議では、共有開始後に管理画面から共有内容をライブ表示へ切り替える必要があります。",
+    "steps": [
+      "会議の種類と「参加者に表示する内容を管理」の設定が有効か主催者に確認する",
+      "共有者はTeamsの「共有」から画面またはウインドウを選ぶ",
+      "管理画面に共有内容のプレビューが現れたら、表示権限のある主催者や共同開催者がライブ表示の切り替えをオンにする",
+      "別の参加者の画面で実際に表示されたことを確認し、終了後は共有停止と表示切り替えの状態を確認する"
+    ],
+    "causes": [
+      "「参加者に表示する内容を管理」が有効でプレビューに留まっている",
+      "共有者にライブ表示を操作する権限がない",
+      "別の共有で前の内容が管理画面から外れた"
+    ],
+    "diagnosis": "共有者の画面に赤枠や共有状態があるかと、参加者の実画面で見えるかを分けて確認します。管理画面にプレビューだけ出ているなら公開操作を担当者に依頼します。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "共有画面には通知や個人情報が映り込む可能性があります。ライブ表示前に対象ウインドウと内容を確認し、主催者の許可なく会議設定を変えないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/teams/meetings/manage-what-attendees-see-in-microsoft-teams",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/sns/teams-annotation-request-not-working/",
+      "/sns/teams-attendee-microphone-disabled/",
+      "/sns/teams-shifts-schedule-not-visible/"
+    ],
+    "closest_existing_url": "/sns/teams-annotation-request-not-working/",
+    "differentiation": "既存記事は画面共有への注釈権限の問題。本記事は共有自体は始まっているが、イベントの制作ツールのプレビューからライブへ出していないため参加者に見えない問題を扱う。",
+    "fact_check": "Microsoft公式ヘルプは「参加者に表示する内容を管理」を有効にした会議では共有画面がまず管理画面に現れ、切り替え操作でライブ表示すること、操作可能な役割が限定されることを説明している。"
+  },
+  {
+    "category": "iphone",
+    "slug": "stolen-device-protection-security-delay",
+    "path": "/iphone/stolen-device-protection-security-delay/",
+    "title": "iPhoneの設定変更で「セキュリティ遅延」が始まったとき",
+    "topic": "Apple AccountのパスワードやiPhoneのパスコードを変更しようとすると、セキュリティ遅延で待つよう求められる",
+    "description": "Apple AccountのパスワードやiPhoneのパスコードを変更しようとすると、セキュリティ遅延で待つよう求められる。盗難デバイスの保護による正規の待機か確認します。対象操作では生体認証、約1時間の待機、再度の生体認証が必要で、待機を無理に解除しません。",
+    "answer": "盗難デバイスの保護による正規の待機か確認します。対象操作では生体認証、約1時間の待機、再度の生体認証が必要で、待機を無理に解除しません。",
+    "steps": [
+      "「設定」のFace IDとパスコードまたはTouch IDとパスコードで「盗難デバイスの保護」が有効か確認する",
+      "変更しようとしている操作がApple Accountのパスワード変更や端末パスコード変更など保護対象か確認する",
+      "案内に従いFace IDまたはTouch IDで認証し、表示された遅延の終了まで待つ",
+      "終了後にもう一度生体認証し、本人が意図した変更だけを完了する"
+    ],
+    "causes": [
+      "普段と違う場所で重要な設定を変更している",
+      "「常に」セキュリティ遅延を要求する設定になっている",
+      "新しい端末で普段の場所の認識がまだ安定していない"
+    ],
+    "diagnosis": "操作が失敗したのか、セキュリティ遅延が進行中なのかを画面表示で分けます。保護対象の変更であることと本人の操作であることを確認してから待機を続けます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "盗難対策の待機を回避するために保護を無効化したり、他人に認証を頼んだりしないでください。身に覚えのない変更要求なら操作を中断し、Apple Accountの安全を確認してください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-us/120340",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/stolen-device-protection-setting-missing/",
+      "/iphone/screen-time-passcode-reset-iphone/",
+      "/iphone/forgot-apple-account-password/"
+    ],
+    "closest_existing_url": "/iphone/stolen-device-protection-setting-missing/",
+    "differentiation": "既存記事は盗難デバイスの保護の設定項目自体がない問題。本記事は機能が有効で設定変更中に正規の待機が始まった場合の操作、認証と保護の意味を扱う。",
+    "fact_check": "Apple公式は保護対象の設定変更には生体認証、約1時間の遅延、二度目の生体認証が必要で、慣れた場所または「常に」の設定で条件が変わると説明している。"
+  },
+  {
+    "category": "iphone",
+    "slug": "reminders-location-alert-not-arriving",
+    "path": "/iphone/reminders-location-alert-not-arriving/",
+    "title": "iPhoneのリマインダーが指定場所で通知しないとき",
+    "topic": "iPhoneのリマインダーに場所を設定したのに、到着または出発時の通知が届かない",
+    "description": "iPhoneのリマインダーに場所を設定したのに、到着または出発時の通知が届かない。対象リマインダーの到着・出発条件と範囲、位置情報サービス、リマインダーの正確な位置情報への許可を順に確認します。",
+    "answer": "対象リマインダーの到着・出発条件と範囲、位置情報サービス、リマインダーの正確な位置情報への許可を順に確認します。",
+    "steps": [
+      "リマインダーの該当項目を開き、場所と到着時・出発時の選択を確認する",
+      "カスタム場所を使っている場合は地図上の位置と通知範囲を確認する",
+      "「設定」から「プライバシーとセキュリティ」→「位置情報サービス」を開き、全体の許可を確認する",
+      "同画面の「リマインダー」でアプリの位置情報への許可と「正確な位置情報」を確認し、安全な場所で通知条件を試す"
+    ],
+    "causes": [
+      "到着と出発を逆に設定している",
+      "場所の範囲が意図した地点とずれている",
+      "リマインダーに正確な位置情報が許可されていない"
+    ],
+    "diagnosis": "時間指定の通知も届かないのか、場所指定だけが届かないのかを分けます。後者なら対象地点と到着・出発の条件、位置情報の許可を優先して調べます。 同じアカウントと端末で変更前後を比較し、再現する条件を記録します。設定を一度に複数変えず、結果を見て次の確認に進みます。",
+    "caution": "位置情報の共有範囲はプライバシーに関わります。通知のために必要な設定だけを確認し、他アプリへの位置情報許可まで一括で変更しないでください。 操作前に対象と影響を確認し、仕事や共有のアカウントでは管理者の方針を優先してください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-ie/guide/iphone/iphec7a1de82/ios",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/keep-reminder-notification-missing/",
+      "/iphone/health-medication-follow-up-reminder-missing/",
+      "/iphone/contact-poster-not-shared/"
+    ],
+    "closest_existing_url": "/google/keep-reminder-notification-missing/",
+    "differentiation": "既存記事はGoogle Keepの一般的なリマインダー通知。本記事はiPhone標準リマインダーの場所トリガーについて、到着・出発と地図上の範囲、正確な位置情報の許可を切り分ける。",
+    "fact_check": "Apple公式ガイドは場所によるリマインダーの設定方法と、通知を受けるためにリマインダーの位置情報を「使用中」にし正確な位置情報をオンにする必要を明記している。"
+  }
+]
