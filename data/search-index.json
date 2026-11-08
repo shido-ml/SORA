@@ -1,5 +1,155 @@
 [
   {
+    "title": "Excelで循環参照の警告が消えないとき",
+    "description": "Excelで数式を入力すると循環参照と表示され、計算結果が期待どおりにならない。数式タブのエラーチェックから循環参照のセルを特定し、参照先が自分に戻る経路を修正します。",
+    "url": "/windows/excel-circular-reference-warning/"
+  },
+  {
+    "title": "Excelのフィルターで一致する行が出ないとき",
+    "description": "Excelで列の値を選んで絞り込んでも、あるはずの行が表示されない。別の列に残るフィルターと、同じ列に混在する文字列・数値を確認します。フィルターは列ごとに条件が重なります。",
+    "url": "/windows/excel-filter-matching-rows-missing/"
+  },
+  {
+    "title": "Excelの日付が数字の連番で表示されるとき",
+    "description": "Excelのセルで日付の代わりに5桁前後の数値が表示される。値が日付のシリアル値なら、セルの表示形式を日付に戻します。文字列として保存された日付は別に変換します。",
+    "url": "/windows/excel-date-shows-serial-number/"
+  },
+  {
+    "title": "Excelで固定したい行や列と違う場所が動かないとき",
+    "description": "Excelでウィンドウ枠の固定を使うと、意図した見出しと違う行や列が固定される。固定は選択セルの上の行と左の列に適用されます。一度解除し、境界の右下のセルを選び直します。",
+    "url": "/windows/excel-freeze-panes-wrong-rows/"
+  },
+  {
+    "title": "Excelで商品コードや郵便番号の先頭の0が消えるとき",
+    "description": "Excelに00123のような番号を入力またはCSVで読み込むと、先頭の0がなくなる。計算しない識別子は文字列として取り込みます。表示形式だけの後変更では消えた桁が復元されない場合があります。",
+    "url": "/windows/excel-leading-zero-disappears/"
+  },
+  {
+    "title": "Excelの印刷結果が1ページに縮みすぎて読めないとき",
+    "description": "Excelの印刷プレビューで表全体が1ページに小さく収まり、文字が読めない。「1ページに収める」拡大縮小設定を確認し、横幅だけ1ページ・高さは自動などに調整します。",
+    "url": "/windows/excel-print-too-small-one-page/"
+  },
+  {
+    "title": "Excelを開くと外部リンクの更新を求められるとき",
+    "description": "Excelのブックを開くたびに外部ブックへのリンク更新警告が表示される。リンク元が信頼できるか確認し、「ブックのリンク」で参照先を調べます。切断は数式を値に変えるため慎重に行います。",
+    "url": "/windows/excel-workbook-link-update-warning/"
+  },
+  {
+    "title": "Excelの条件付き書式が想定と違う色になるとき",
+    "description": "Excelで条件付き書式の条件を満たすセルが、別の色や書式で表示される。重なったルールの優先順位と適用先、「条件を満たす場合は停止」を確認します。",
+    "url": "/windows/excel-conditional-format-wrong-rule/"
+  },
+  {
+    "title": "Excelで値を変えても数式の計算結果が更新されないとき",
+    "description": "Excelの参照セルを書き換えても、別セルの数式結果が古いまま残る。計算方法が手動になっていないか確認し、F9で更新した結果を比較します。",
+    "url": "/windows/excel-formula-result-not-recalculating/"
+  },
+  {
+    "title": "Excelの入力規則のプルダウン矢印が出ないとき",
+    "description": "Excelで選択リストを設定したセルを選んでも、プルダウン矢印が見えない。対象セルの入力規則が「リスト」で、「ドロップダウンリストから選択する」が有効か確認します。",
+    "url": "/windows/excel-data-validation-arrow-missing/"
+  },
+  {
+    "title": "Wordで解決済みのコメントが見えないとき",
+    "description": "Wordの文書で以前のコメントが消えたように見え、解決済みの指摘を確認できない。モダンコメントのコンテキスト表示では解決済みが隠れます。コメント一覧表示に切り替えて確認します。",
+    "url": "/windows/word-resolved-comments-hidden/"
+  },
+  {
+    "title": "Wordで表紙だけ別のヘッダーにできないとき",
+    "description": "Wordの表紙のヘッダーを消すと2ページ目以降も消える、または表紙だけ違う内容にならない。ヘッダーとフッターの「先頭ページのみ別指定」を使い、表紙と本文の内容を分けます。",
+    "url": "/windows/word-first-page-header-not-different/"
+  },
+  {
+    "title": "Wordの長い表で見出し行が次ページに出ないとき",
+    "description": "Wordの表が複数ページにまたがると、次ページ以降に列見出しが表示されない。表の先頭行を含めて選択し「タイトル行の繰り返し」を指定します。手動改ページを表の途中に入れると繰り返されません。",
+    "url": "/windows/word-table-header-not-repeating/"
+  },
+  {
+    "title": "Wordで文章を直すと画像の位置が動くとき",
+    "description": "Wordの文章を追加・削除すると挿入した画像がずれ、想定した場所から移動する。画像の文字列の折り返し設定を確認します。「行内」は文字と一緒に動き、ページ上に位置を固定する設定もあります。",
+    "url": "/windows/word-picture-moves-with-text/"
+  },
+  {
+    "title": "WordでURLを入力すると勝手にリンクになるとき",
+    "description": "Wordの文書にWebアドレスを入力して改行すると自動で青いリンクに変わる。自動ハイパーリンクの設定を確認します。既存リンクだけ外す操作と、今後の自動変換を止める設定は別です。",
+    "url": "/windows/word-url-auto-hyperlink-unwanted/"
+  },
+  {
+    "title": "PowerPointの発表者ツールが観客側の画面に出るとき",
+    "description": "PowerPointを2画面で発表すると、ノート付きの発表者ツールがプロジェクター側に表示される。発表者ツールの「ディスプレイ設定」で発表者表示とスライド表示の画面を入れ替えます。",
+    "url": "/windows/powerpoint-presenter-view-wrong-monitor/"
+  },
+  {
+    "title": "PowerPointのスライドショーで特定のページが飛ばされるとき",
+    "description": "PowerPointの編集画面にはあるスライドが、発表時のスライドショーでは表示されない。該当スライドに「非表示スライド」が設定されていないか確認し、必要なら解除します。",
+    "url": "/windows/powerpoint-slide-skipped-hidden/"
+  },
+  {
+    "title": "PowerPointでスライド表示時に音声が自動再生されないとき",
+    "description": "PowerPointのスライドに入れた音声が、ページを表示しても自動で始まらない。音声オブジェクトの再生開始がクリック時になっていないか調べ、「自動」に設定します。",
+    "url": "/windows/powerpoint-audio-not-starting-automatically/"
+  },
+  {
+    "title": "PowerPointのアニメーションがクリックするまで始まらないとき",
+    "description": "PowerPointのスライドを表示しても、図形や文字のアニメーションがクリック待ちになる。対象効果の「開始」がクリック時か、前の動作と同時・後かを確認し、意図したタイミングへ変更します。",
+    "url": "/windows/powerpoint-animation-waits-for-click/"
+  },
+  {
+    "title": "PowerPointでスライド番号を入れても表示されないとき",
+    "description": "PowerPointでスライド番号を有効にしたつもりでも、発表画面や印刷で番号が見えない。「挿入」→「スライド番号」で番号を有効にし、「すべてに適用」とタイトルスライドの除外設定を確認します。",
+    "url": "/windows/powerpoint-slide-number-not-shown/"
+  },
+  {
+    "title": "iPhoneのメッセージで音声が聞いた後に消えるとき",
+    "description": "iPhoneのメッセージで受け取った音声メッセージが、再生後しばらくすると会話から消える。音声メッセージは既定で再生または送信から2分後に自分の端末上の会話から消えます。残す場合は「保存」か期限設定を確認します。",
+    "url": "/iphone/messages-audio-disappears-after-listening/"
+  },
+  {
+    "title": "iPhoneの写真アプリで「非表示」アルバムが見えないとき",
+    "description": "iPhoneで隠した写真を見ようとしても、写真アプリの「非表示」が一覧にない。写真アプリの「ユーティリティ」にある非表示コレクションと、「設定」→「アプリ」→「写真」の表示切り替えを確認します。",
+    "url": "/iphone/photos-hidden-album-not-visible/"
+  },
+  {
+    "title": "MacのFinderで右側のプレビュー欄が消えたとき",
+    "description": "MacのFinderでファイルを選んでも、右側に内容や情報を示すプレビュー欄が出ない。Finderの「表示」から「プレビューを表示」を選びます。スペースキーのクイックルックとは別の機能です。",
+    "url": "/mac/finder-preview-pane-missing/"
+  },
+  {
+    "title": "Googleマップのオフライン地図で徒歩ルートが出ないとき",
+    "description": "Googleマップに地域を保存したのに、通信がない場所で徒歩や公共交通の経路を検索できない。オフライン地図は主に保存範囲内の車の案内に使え、徒歩・自転車・公共交通のルートはオフラインでは使えません。",
+    "url": "/google/maps-offline-walking-route-unavailable/"
+  },
+  {
+    "title": "Androidアプリで選んだ写真しか表示されないとき",
+    "description": "Androidのアプリから写真を添付するとき、端末内の写真の一部しか選べない。アプリに与えた写真と動画へのアクセス範囲を確認します。必要な写真だけ追加で選ぶか、信頼できるアプリに限り許可を見直します。",
+    "url": "/android/app-sees-only-selected-photos/"
+  },
+  {
+    "title": "FaceTime通話でLive Photosの撮影ボタンが出ないとき",
+    "description": "iPhoneのFaceTimeビデオ通話中にLive Photosを撮るボタンが表示されない。通話コントロールを表示し、「設定」→「アプリ」→「FaceTime」のLive Photos設定と地域での提供状況を確認します。",
+    "url": "/iphone/facetime-live-photo-button-missing/"
+  },
+  {
+    "title": "GoogleメッセージのグループがMMSになってしまうとき",
+    "description": "Googleメッセージでグループを作ると、RCSではなくMMSの会話として始まる。参加者全員がRCSを使えるかを確認します。RCSタグがない相手を追加するとMMSグループになる場合があります。",
+    "url": "/android/google-messages-group-switches-to-mms/"
+  },
+  {
+    "title": "WindowsでPrint Screenキーを押すと切り取り画面が出るとき",
+    "description": "WindowsでPrint Screenキーを押すと画面全体のコピーではなく、範囲選択の切り取り操作が始まる。WindowsのアクセシビリティにあるPrint Screenキーの切り取り設定を確認します。標準のキー動作は設定によって変わります。",
+    "url": "/windows/print-screen-opens-snipping-tool/"
+  },
+  {
+    "title": "Excelのピボットテーブルでフィールド一覧が見えないとき",
+    "description": "Excelでピボットテーブルを編集したいのに、フィールド一覧の作業ウィンドウが表示されない。まずピボットテーブル内を選択し、一覧を閉じていた場合は右クリックの「フィールド リストの表示」で再表示します。",
+    "url": "/windows/excel-pivot-field-list-hidden/"
+  },
+  {
+    "title": "Wordの表の1行がページをまたいで分かれるとき",
+    "description": "Wordの表を印刷すると、同じ行の内容が前ページと次ページに分断されて読みにくい。表の行のプロパティで「行の途中で改ページする」の設定を確認し、分割したくない行では解除します。",
+    "url": "/windows/word-table-row-splits-across-pages/"
+  },
+  {
     "title": "新しいOutlookで予約送信の項目が出ないとき",
     "description": "新しいOutlookのメール作成画面で送信ボタン横の予約送信を選べない。使用中のOutlookの版とメールアカウントの種類を確認します。IMAP・POPでは新しいOutlookの予約送信は利用できません。",
     "url": "/windows/new-outlook-schedule-send-option-missing/"

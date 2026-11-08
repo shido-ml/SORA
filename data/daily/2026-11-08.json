@@ -1,0 +1,992 @@
+[
+  {
+    "category": "windows",
+    "slug": "excel-circular-reference-warning",
+    "path": "/windows/excel-circular-reference-warning/",
+    "title": "Excelで循環参照の警告が消えないとき",
+    "topic": "Excelで数式を入力すると循環参照と表示され、計算結果が期待どおりにならない",
+    "description": "Excelで数式を入力すると循環参照と表示され、計算結果が期待どおりにならない。数式タブのエラーチェックから循環参照のセルを特定し、参照先が自分に戻る経路を修正します。",
+    "answer": "数式タブのエラーチェックから循環参照のセルを特定し、参照先が自分に戻る経路を修正します。",
+    "steps": [
+      "「数式」→「エラーチェック」→「循環参照」で表示されたセルを選ぶ",
+      "そのセルの数式が自分自身を直接参照していないか確認する",
+      "間接参照なら「参照元のトレース」で戻る経路を追う",
+      "必要な計算式だけを修正し、ステータスバーの循環参照表示が消えるか確認する"
+    ],
+    "causes": [
+      "自分のセルを直接参照した",
+      "別シート経由で参照が自分に戻った",
+      "合計範囲に合計セル自身を含めた"
+    ],
+    "diagnosis": "特定の数式だけかブック全体かを分け、意図的な反復計算か誤った参照かを先に判断します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "反復計算を無条件に有効化して警告だけ消すと誤計算を見逃します。計算式の控えを保存してから変更します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/remove-or-allow-a-circular-reference-in-excel",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/excel-value-error-text-in-numbers/",
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-formulas-shown-instead-values/"
+    ],
+    "closest_existing_url": "/windows/excel-value-error-text-in-numbers/",
+    "differentiation": "既存記事は文字列の混入で起きる#VALUE!。本記事は参照経路が自分へ戻る計算構造をトレースして直す。",
+    "fact_check": "Microsoft公式は循環参照セルを「数式」のエラーチェックから列挙し、参照元・参照先のトレースで経路を追えると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-filter-matching-rows-missing",
+    "path": "/windows/excel-filter-matching-rows-missing/",
+    "title": "Excelのフィルターで一致する行が出ないとき",
+    "topic": "Excelで列の値を選んで絞り込んでも、あるはずの行が表示されない",
+    "description": "Excelで列の値を選んで絞り込んでも、あるはずの行が表示されない。別の列に残るフィルターと、同じ列に混在する文字列・数値を確認します。フィルターは列ごとに条件が重なります。",
+    "answer": "別の列に残るフィルターと、同じ列に混在する文字列・数値を確認します。フィルターは列ごとに条件が重なります。",
+    "steps": [
+      "列見出しのフィルターアイコンを見て、条件が有効な列をすべて確認する",
+      "一時的に全列のフィルターを解除し、目的の行が現れるか確認する",
+      "対象列で文字列と数値、日付の型が混在していないか比べる",
+      "必要な列だけ条件を入れ直し、表示行と元データを照合する"
+    ],
+    "causes": [
+      "別列の条件も有効で対象行が除外されている",
+      "同じ列で数字と文字列が混在する",
+      "元データ変更後にフィルターを再適用していない"
+    ],
+    "diagnosis": "フィルター後に行が削除されたのか非表示になっただけかを、全条件を解除した結果で切り分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "元の表を消したり行を再入力したりする前に、絞り込み条件を控え、必要ならブックを別名で保存します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/get-started/filter-data-in-a-range-or-table-in-excel?re=true",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-filter-view-not-saved/",
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-value-error-text-in-numbers/"
+    ],
+    "closest_existing_url": "/google/sheets-filter-view-not-saved/",
+    "differentiation": "既存記事はGoogle Sheetsのフィルタ表示を保存できない問題。本記事はExcelの複数列条件とデータ型混在で一致行が隠れる問題。",
+    "fact_check": "Microsoft公式は複数列のフィルターが加算的に適用され、文字列と数値の混在で使えるフィルターの種類が変わると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-date-shows-serial-number",
+    "path": "/windows/excel-date-shows-serial-number/",
+    "title": "Excelの日付が数字の連番で表示されるとき",
+    "topic": "Excelのセルで日付の代わりに5桁前後の数値が表示される",
+    "description": "Excelのセルで日付の代わりに5桁前後の数値が表示される。値が日付のシリアル値なら、セルの表示形式を日付に戻します。文字列として保存された日付は別に変換します。",
+    "answer": "値が日付のシリアル値なら、セルの表示形式を日付に戻します。文字列として保存された日付は別に変換します。",
+    "steps": [
+      "対象セルを選び、数式バーの元の値と表示形式を確認する",
+      "表示形式が「標準」や「数値」なら「セルの書式設定」で日付を選ぶ",
+      "必要な日付形式を選び、年月日が正しく表示されるか確認する",
+      "元データが文字列ならDATEVALUEなど別の変換方法を検討し、数値の単なる表示変更と区別する"
+    ],
+    "causes": [
+      "セルの表示形式が数値に変わった",
+      "CSV読み込みで日付を文字列として取得した",
+      "書式のコピーで日付形式が上書きされた"
+    ],
+    "diagnosis": "同じ列で一部のセルだけ数字なのか全セルかを比べ、値そのものと表示形式の問題を区別します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "表示形式だけの変更で元データの値は変わりません。文字列の日付を数値に変換する場合は原列を残して試します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/format-numbers-as-dates-or-times",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-formulas-shown-instead-values/",
+      "/windows/excel-value-error-text-in-numbers/"
+    ],
+    "closest_existing_url": "/windows/excel-cell-shows-hashes/",
+    "differentiation": "既存記事は列幅不足などで#####と見える問題。本記事は数値として表示された日付のシリアル値を日付形式へ戻す。",
+    "fact_check": "Microsoft公式は日付や時刻が内部的には数値として扱われ、セルの表示形式で年月日などの見え方を変えると案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-freeze-panes-wrong-rows",
+    "path": "/windows/excel-freeze-panes-wrong-rows/",
+    "title": "Excelで固定したい行や列と違う場所が動かないとき",
+    "topic": "Excelでウィンドウ枠の固定を使うと、意図した見出しと違う行や列が固定される",
+    "description": "Excelでウィンドウ枠の固定を使うと、意図した見出しと違う行や列が固定される。固定は選択セルの上の行と左の列に適用されます。一度解除し、境界の右下のセルを選び直します。",
+    "answer": "固定は選択セルの上の行と左の列に適用されます。一度解除し、境界の右下のセルを選び直します。",
+    "steps": [
+      "「表示」→「ウィンドウ枠の固定」で現在の固定を解除する",
+      "固定したい最終行の一つ下、最終列の一つ右にあるセルを選ぶ",
+      "「ウィンドウ枠の固定」を選び直す",
+      "上下左右へスクロールし、残る見出しの範囲を確認する"
+    ],
+    "causes": [
+      "境界ではないセルを選んで固定した",
+      "先頭行だけの固定と任意範囲の固定を取り違えた",
+      "分割表示と固定を混同した"
+    ],
+    "diagnosis": "先頭行だけ固定したいのか、複数行と複数列を同時に残したいのかを先に整理します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "共同編集の表では表示状態が他の作業に影響する場合があります。現在の固定位置を記録してから解除します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-gb/excel/get-started/freeze-panes-to-lock-rows-and-columns?nochrome=true",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/excel-formulas-shown-instead-values/",
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-value-error-text-in-numbers/"
+    ],
+    "closest_existing_url": "/windows/excel-formulas-shown-instead-values/",
+    "differentiation": "既存記事は数式の表示切り替え。本記事はスクロール時に残す行・列の境界と選択セルの位置を扱う。",
+    "fact_check": "Microsoft公式はウィンドウ枠の固定が選択セルより上の行と左の列に適用されること、解除方法を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-leading-zero-disappears",
+    "path": "/windows/excel-leading-zero-disappears/",
+    "title": "Excelで商品コードや郵便番号の先頭の0が消えるとき",
+    "topic": "Excelに00123のような番号を入力またはCSVで読み込むと、先頭の0がなくなる",
+    "description": "Excelに00123のような番号を入力またはCSVで読み込むと、先頭の0がなくなる。計算しない識別子は文字列として取り込みます。表示形式だけの後変更では消えた桁が復元されない場合があります。",
+    "answer": "計算しない識別子は文字列として取り込みます。表示形式だけの後変更では消えた桁が復元されない場合があります。",
+    "steps": [
+      "元のCSVや入力データに先頭の0が残っているか確認する",
+      "CSVは「データ」→「テキストまたはCSVから」で取り込み、対象列を文字列にする",
+      "手入力なら入力前に列の表示形式を文字列に設定する",
+      "取り込み後に元データと桁数を比較し、16桁以上の識別番号を数値として扱っていないか確認する"
+    ],
+    "causes": [
+      "Excelが番号を数値へ自動変換した",
+      "CSVをダブルクリックで開いて型を指定しなかった",
+      "表示形式だけで失われた値が戻ると思った"
+    ],
+    "diagnosis": "元データの0が残っているかを最初に比べ、単なる見た目の問題か値が変換された問題かを分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "電話番号や口座番号を計算用数値として扱わないでください。元のCSVを保存し、既に丸められた桁を推測で補わないでください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/keeping-leading-zeros-and-large-numbers",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-formulas-shown-instead-values/",
+      "/windows/excel-value-error-text-in-numbers/"
+    ],
+    "closest_existing_url": "/windows/excel-cell-shows-hashes/",
+    "differentiation": "既存記事は列幅などによる#####表示。本記事は先頭ゼロの自動削除と大きな識別番号の桁落ちを防ぐ取り込み型の問題。",
+    "fact_check": "Microsoft公式は先頭ゼロの自動削除、15桁を超える数値の精度制限、CSV取り込み時に列を文字列指定する手順を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-print-too-small-one-page",
+    "path": "/windows/excel-print-too-small-one-page/",
+    "title": "Excelの印刷結果が1ページに縮みすぎて読めないとき",
+    "topic": "Excelの印刷プレビューで表全体が1ページに小さく収まり、文字が読めない",
+    "description": "Excelの印刷プレビューで表全体が1ページに小さく収まり、文字が読めない。「1ページに収める」拡大縮小設定を確認し、横幅だけ1ページ・高さは自動などに調整します。",
+    "answer": "「1ページに収める」拡大縮小設定を確認し、横幅だけ1ページ・高さは自動などに調整します。",
+    "steps": [
+      "「ファイル」→「印刷」でプレビューと現在の拡大縮小設定を確認する",
+      "「ページレイアウト」の幅・高さで両方1ページになっていないか確認する",
+      "必要に応じ幅を1ページ、高さを自動にし、横向きや用紙サイズも比較する",
+      "印刷範囲を必要な列だけに限定し、プレビューの文字サイズを確認する"
+    ],
+    "causes": [
+      "幅と高さの両方が1ページに設定されている",
+      "不要な列まで印刷範囲に入っている",
+      "用紙方向やサイズが表に合っていない"
+    ],
+    "diagnosis": "表の横幅が原因か、空白を含む印刷範囲が原因かをプレビューのページ数で比較します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "印刷レイアウトを直すために表の列を削除しないでください。設定変更前のブックを保存しておきます。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/scale-a-worksheet",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/browser/edge-print-clipped-scaled-wrong/",
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-value-error-text-in-numbers/"
+    ],
+    "closest_existing_url": "/browser/edge-print-clipped-scaled-wrong/",
+    "differentiation": "既存記事はEdgeでWebページを印刷した際の切れや縮小。本記事はExcelシートの幅・高さのフィット設定と印刷範囲を調整する。",
+    "fact_check": "Microsoft公式は高さまで1ページにすると縮小され読みにくくなること、幅1ページ・高さ自動や印刷範囲の変更を案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-workbook-link-update-warning",
+    "path": "/windows/excel-workbook-link-update-warning/",
+    "title": "Excelを開くと外部リンクの更新を求められるとき",
+    "topic": "Excelのブックを開くたびに外部ブックへのリンク更新警告が表示される",
+    "description": "Excelのブックを開くたびに外部ブックへのリンク更新警告が表示される。リンク元が信頼できるか確認し、「ブックのリンク」で参照先を調べます。切断は数式を値に変えるため慎重に行います。",
+    "answer": "リンク元が信頼できるか確認し、「ブックのリンク」で参照先を調べます。切断は数式を値に変えるため慎重に行います。",
+    "steps": [
+      "警告で直ちに更新せず、ブックの作成者とリンク元を確認する",
+      "「データ」→「クエリと接続」→「ブックのリンク」で参照先を一覧にする",
+      "必要なリンクは元ファイルの場所を確認して更新または参照先を修正する",
+      "不要なリンクはコピーしたブックでのみ切断を試し、数式と値の変化を検算する"
+    ],
+    "causes": [
+      "別ブックのセルを数式で参照している",
+      "元ファイルが移動または改名された",
+      "現在のデータを置き換える外部更新が保留されている"
+    ],
+    "diagnosis": "どの参照先が必要かを一覧で確認し、単に警告を消す前に計算値の鮮度とファイルの信頼性を分けて判断します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "不明な外部ファイルの更新を安易に許可しないでください。リンクの切断前に必ずブックを複製します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/manage-workbook-links",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/powerpoint-linked-video-missing-after-move/",
+      "/windows/excel-formulas-shown-instead-values/",
+      "/windows/excel-cell-shows-hashes/"
+    ],
+    "closest_existing_url": "/windows/powerpoint-linked-video-missing-after-move/",
+    "differentiation": "既存記事はPowerPointの動画ファイルリンク切れ。本記事はExcel数式の外部ブック参照と更新警告、切断時の値への変換を扱う。",
+    "fact_check": "Microsoft公式は「ブックのリンク」で参照先を更新・変更でき、リンク切断時に数式が現在値へ変換され元に戻せないと警告する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-conditional-format-wrong-rule",
+    "path": "/windows/excel-conditional-format-wrong-rule/",
+    "title": "Excelの条件付き書式が想定と違う色になるとき",
+    "topic": "Excelで条件付き書式の条件を満たすセルが、別の色や書式で表示される",
+    "description": "Excelで条件付き書式の条件を満たすセルが、別の色や書式で表示される。重なったルールの優先順位と適用先、「条件を満たす場合は停止」を確認します。",
+    "answer": "重なったルールの優先順位と適用先、「条件を満たす場合は停止」を確認します。",
+    "steps": [
+      "対象セルを選び「ホーム」→「条件付き書式」→「ルールの管理」を開く",
+      "表示対象を現在の選択範囲やシートに切り替え、重なるルールを探す",
+      "適用先の範囲とルールの順序、「条件を満たす場合は停止」を確認する",
+      "必要なルールだけ順序や範囲を直し、条件が真と偽のセルで表示を比較する"
+    ],
+    "causes": [
+      "複数のルールが同じセルへ異なる書式を指定した",
+      "優先順位が意図と逆になっている",
+      "適用範囲が別の列や行にずれている"
+    ],
+    "diagnosis": "書式が全く出ないのか、別ルールの色になるのかを分け、ルール管理画面に表示される適用先を確認します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "シート全体のルール一括削除は避けてください。既存ルールの順序と適用範囲を控えてから編集します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-conditional-format-not-applying/",
+      "/windows/excel-formulas-shown-instead-values/",
+      "/windows/excel-cell-shows-hashes/"
+    ],
+    "closest_existing_url": "/google/sheets-conditional-format-not-applying/",
+    "differentiation": "既存記事はGoogle Sheetsで条件付き書式が反映されない問題。本記事はExcelの競合ルールの優先順位と停止条件による誤色を扱う。",
+    "fact_check": "Microsoft公式は競合する条件付き書式では上位ルールが優先され、管理画面で順序・適用先・停止条件を調整できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-formula-result-not-recalculating",
+    "path": "/windows/excel-formula-result-not-recalculating/",
+    "title": "Excelで値を変えても数式の計算結果が更新されないとき",
+    "topic": "Excelの参照セルを書き換えても、別セルの数式結果が古いまま残る",
+    "description": "Excelの参照セルを書き換えても、別セルの数式結果が古いまま残る。計算方法が手動になっていないか確認し、F9で更新した結果を比較します。",
+    "answer": "計算方法が手動になっていないか確認し、F9で更新した結果を比較します。",
+    "steps": [
+      "参照セルと数式セルを特定し、入力値が実際に変わっているか確認する",
+      "「数式」→「計算方法の設定」で手動か自動かを確認する",
+      "手動ならF9または「再計算実行」で結果が変わるか試す",
+      "必要なら自動へ戻し、開いている他のブックにも設定が影響することを確認する"
+    ],
+    "causes": [
+      "計算方法が手動になっている",
+      "外部参照先が更新されていない",
+      "数式が期待したセルを参照していない"
+    ],
+    "diagnosis": "F9で結果が変わるなら計算設定、変わらないなら参照先やデータ型を疑い、順に切り分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "自動計算へ戻すと大きなブックで処理時間が増えることがあります。共有ブックでは影響を確認してから変更します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/change-formula-recalculation-iteration-or-precision-in-excel",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/excel-formulas-shown-instead-values/",
+      "/windows/excel-value-error-text-in-numbers/",
+      "/windows/excel-cell-shows-hashes/"
+    ],
+    "closest_existing_url": "/windows/excel-formulas-shown-instead-values/",
+    "differentiation": "既存記事は数式そのものが表示される表示切り替え。本記事は数式は表示されず計算結果だけ古い場合の自動・手動再計算を扱う。",
+    "fact_check": "Microsoft公式は手動計算ではF9などで再計算すること、デスクトップ版の計算方法変更が開いている全ブックに影響すると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-data-validation-arrow-missing",
+    "path": "/windows/excel-data-validation-arrow-missing/",
+    "title": "Excelの入力規則のプルダウン矢印が出ないとき",
+    "topic": "Excelで選択リストを設定したセルを選んでも、プルダウン矢印が見えない",
+    "description": "Excelで選択リストを設定したセルを選んでも、プルダウン矢印が見えない。対象セルの入力規則が「リスト」で、「ドロップダウンリストから選択する」が有効か確認します。",
+    "answer": "対象セルの入力規則が「リスト」で、「ドロップダウンリストから選択する」が有効か確認します。",
+    "steps": [
+      "対象セルを一つ選び「データ」→「データの入力規則」を開く",
+      "「設定」タブの「入力値の種類」が「リスト」か確認する",
+      "「ドロップダウンリストから選択する」にチェックがあるか確認する",
+      "元の値の参照範囲を調べ、セル選択時に矢印と候補が出るか試す"
+    ],
+    "causes": [
+      "入力規則がリスト以外になっている",
+      "セル内のドロップダウンのチェックが外れている",
+      "候補の元データ範囲が空または変わった"
+    ],
+    "diagnosis": "リストの候補が空なのか、矢印そのものがないのかを分け、単一セルと同じ列の別セルで設定を比較します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "入力規則を一括削除すると誤入力防止も失われます。対象セルだけ確認し、元の候補範囲を保存します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/get-started/apply-data-validation-to-cells?ad=us&rs=en-us&ui=en-us",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-dropdown-entry-rejected/",
+      "/windows/excel-value-error-text-in-numbers/",
+      "/windows/excel-cell-shows-hashes/"
+    ],
+    "closest_existing_url": "/google/sheets-dropdown-entry-rejected/",
+    "differentiation": "既存記事はGoogle Sheetsでリスト外の入力が拒否される問題。本記事はExcelで候補の矢印自体が出ない入力規則の設定を確認する。",
+    "fact_check": "Microsoft公式は入力規則をリストにし、「In-cell dropdown」をオンにしないとセル横の矢印が表示されないと説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-resolved-comments-hidden",
+    "path": "/windows/word-resolved-comments-hidden/",
+    "title": "Wordで解決済みのコメントが見えないとき",
+    "topic": "Wordの文書で以前のコメントが消えたように見え、解決済みの指摘を確認できない",
+    "description": "Wordの文書で以前のコメントが消えたように見え、解決済みの指摘を確認できない。モダンコメントのコンテキスト表示では解決済みが隠れます。コメント一覧表示に切り替えて確認します。",
+    "answer": "モダンコメントのコンテキスト表示では解決済みが隠れます。コメント一覧表示に切り替えて確認します。",
+    "steps": [
+      "リボン右上の「コメント」または「校閲」→「コメントの表示」を開く",
+      "表示方法が「コンテキスト」か「一覧」か確認する",
+      "「一覧」に切り替え、解決済みのコメントがあるか探す",
+      "対象のコメントを選び本文の該当箇所を確認し、必要なら再開する"
+    ],
+    "causes": [
+      "コンテキスト表示が解決済みコメントを隠している",
+      "別の文書版やコピーを開いている",
+      "コメントが削除されたと解決済みを取り違えた"
+    ],
+    "diagnosis": "コメントが本当に削除されたのか表示だけの問題か、同一文書の一覧表示で判定します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "解決済みコメントを確認するために共同編集者のコメントを削除しないでください。再開する場合は文書の作業方針を確認します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/using-modern-comments-in-word",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/word-track-changes-strikethrough-remains/",
+      "/windows/word-protected-view-cannot-edit/",
+      "/windows/word-page-number-restarts-section/"
+    ],
+    "closest_existing_url": "/windows/word-track-changes-strikethrough-remains/",
+    "differentiation": "既存記事は変更履歴の取り消し線。本記事はモダンコメントの解決済みスレッドが表示方式で隠れる問題。",
+    "fact_check": "Microsoft公式はコンテキスト表示では解決済みコメントを隠し、一覧表示では有効・解決済みの両方を確認できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-first-page-header-not-different",
+    "path": "/windows/word-first-page-header-not-different/",
+    "title": "Wordで表紙だけ別のヘッダーにできないとき",
+    "topic": "Wordの表紙のヘッダーを消すと2ページ目以降も消える、または表紙だけ違う内容にならない",
+    "description": "Wordの表紙のヘッダーを消すと2ページ目以降も消える、または表紙だけ違う内容にならない。ヘッダーとフッターの「先頭ページのみ別指定」を使い、表紙と本文の内容を分けます。",
+    "answer": "ヘッダーとフッターの「先頭ページのみ別指定」を使い、表紙と本文の内容を分けます。",
+    "steps": [
+      "文書の1ページ目のヘッダー領域をダブルクリックする",
+      "「ヘッダーとフッター」の「先頭ページのみ別指定」を有効にする",
+      "表紙側のヘッダーを編集し、2ページ目の通常ヘッダーが残るか確認する",
+      "フッターも別にしたい場合は同じ設定下で内容を確認し、印刷プレビューで全ページを点検する"
+    ],
+    "causes": [
+      "先頭ページの別指定が無効",
+      "通常ヘッダーを直接削除していた",
+      "表紙以外の途中ページと先頭ページの設定を混同した"
+    ],
+    "diagnosis": "表紙だけ変えたいのか途中の任意ページだけ変えたいのかを先に分け、後者ならセクション区切りを検討します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "文書全体のヘッダーを一括削除せず、印刷プレビューで各ページの氏名や機密表示が正しく残るか確認します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/change-or-delete-a-header-or-footer-on-a-single-page",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/word-page-number-restarts-section/",
+      "/windows/word-protected-view-cannot-edit/",
+      "/windows/windows-bluetooth-toggle-missing/"
+    ],
+    "closest_existing_url": "/windows/word-page-number-restarts-section/",
+    "differentiation": "既存記事は途中セクションでページ番号が1へ戻る問題。本記事は表紙と本文のヘッダー・フッター内容を分ける先頭ページ設定。",
+    "fact_check": "Microsoft公式は先頭ページのみ別指定を有効にすると表紙のヘッダーやフッターを個別に編集できると案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-table-header-not-repeating",
+    "path": "/windows/word-table-header-not-repeating/",
+    "title": "Wordの長い表で見出し行が次ページに出ないとき",
+    "topic": "Wordの表が複数ページにまたがると、次ページ以降に列見出しが表示されない",
+    "description": "Wordの表が複数ページにまたがると、次ページ以降に列見出しが表示されない。表の先頭行を含めて選択し「タイトル行の繰り返し」を指定します。手動改ページを表の途中に入れると繰り返されません。",
+    "answer": "表の先頭行を含めて選択し「タイトル行の繰り返し」を指定します。手動改ページを表の途中に入れると繰り返されません。",
+    "steps": [
+      "表の最初の見出し行を含む行を選択する",
+      "「表のレイアウト」→「タイトル行の繰り返し」を選ぶ",
+      "印刷レイアウトまたは印刷プレビューで次ページの見出しを確認する",
+      "出ない場合は表の途中に手動の改ページがないか確認し、表の分割状態を見直す"
+    ],
+    "causes": [
+      "表の先頭行が選択されていない",
+      "タイトル行の繰り返しが未設定",
+      "表の途中に手動改ページを入れている"
+    ],
+    "diagnosis": "表が自動改ページされたのか、手動で表を分割したのかを調べ、先頭行の選択状態と合わせて確認します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "手動改ページを消すと文書の構成が変わることがあります。複製で試し、見出しと本文の対応を印刷前に点検します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-gb/word/repeat-table-header-on-subsequent-pages",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/word-page-number-restarts-section/",
+      "/windows/phone-link-android-sms-missing/",
+      "/windows/windows-app-notifications-not-showing/"
+    ],
+    "closest_existing_url": "/windows/word-page-number-restarts-section/",
+    "differentiation": "既存記事は文書のページ番号の継続。本記事は複数ページの表で列見出し行を自動再掲する表固有の設定。",
+    "fact_check": "Microsoft公式は見出し行の選択に表の先頭行が必要で、印刷レイアウトで表示され、表内の手動改ページでは繰り返されないと明記する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-picture-moves-with-text",
+    "path": "/windows/word-picture-moves-with-text/",
+    "title": "Wordで文章を直すと画像の位置が動くとき",
+    "topic": "Wordの文章を追加・削除すると挿入した画像がずれ、想定した場所から移動する",
+    "description": "Wordの文章を追加・削除すると挿入した画像がずれ、想定した場所から移動する。画像の文字列の折り返し設定を確認します。「行内」は文字と一緒に動き、ページ上に位置を固定する設定もあります。",
+    "answer": "画像の文字列の折り返し設定を確認します。「行内」は文字と一緒に動き、ページ上に位置を固定する設定もあります。",
+    "steps": [
+      "画像を選択し、横の「レイアウトオプション」または「図の形式」→「文字列の折り返し」を開く",
+      "現在が「行内」なら文章編集で移動することを確認する",
+      "ページ内に置きたいなら適切な折り返しと「ページ上で位置を固定」を選ぶ",
+      "前後の段落を少し編集して配置を確認し、印刷プレビューでも重なりを点検する"
+    ],
+    "causes": [
+      "画像が行内配置で文字に追随する",
+      "折り返し方法が意図と違う",
+      "ページ固定と文字に追随する配置を取り違えた"
+    ],
+    "diagnosis": "画像だけが動くのか段落や表も変わるのかを比べ、画像の配置方式に焦点を絞ります。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "ページ固定にすると周囲の文字と重なることがあります。文書の全ページを確認し、元の配置を控えてから変更します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/training/wrap-text-around-a-picture-in-word",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/powerpoint-font-changes-other-pc/",
+      "/windows/word-page-number-restarts-section/",
+      "/windows/word-protected-view-cannot-edit/"
+    ],
+    "closest_existing_url": "/windows/powerpoint-font-changes-other-pc/",
+    "differentiation": "既存記事は別PCでPowerPointのフォントが置換される問題。本記事はWord文書内で画像の折り返しと位置固定を設定する。",
+    "fact_check": "Microsoft公式は行内の画像が文字の追加削除に合わせて動き、文字列の折り返しからページ上の位置を固定できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-url-auto-hyperlink-unwanted",
+    "path": "/windows/word-url-auto-hyperlink-unwanted/",
+    "title": "WordでURLを入力すると勝手にリンクになるとき",
+    "topic": "Wordの文書にWebアドレスを入力して改行すると自動で青いリンクに変わる",
+    "description": "Wordの文書にWebアドレスを入力して改行すると自動で青いリンクに変わる。自動ハイパーリンクの設定を確認します。既存リンクだけ外す操作と、今後の自動変換を止める設定は別です。",
+    "answer": "自動ハイパーリンクの設定を確認します。既存リンクだけ外す操作と、今後の自動変換を止める設定は別です。",
+    "steps": [
+      "既にできたリンクは右クリックして「ハイパーリンクの削除」を選ぶ",
+      "今後も自動変換を止めるなら「ファイル」→「オプション」→「文章校正」を開く",
+      "「オートコレクトのオプション」の入力時に自動で書式設定する項目を開く",
+      "「インターネットとネットワークのアドレスをハイパーリンクに変更する」を外し、新しいURLで動作を試す"
+    ],
+    "causes": [
+      "自動書式設定のURL変換が有効",
+      "既存リンクの削除と今後の自動変換停止を混同した",
+      "Ctrlを押して開く動作の設定をリンク生成設定と取り違えた"
+    ],
+    "diagnosis": "一つの既存リンクだけ消したいのか、これから入力するURLの自動変換を止めたいのかを分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "文書全体のリンク一括削除では必要な参照先も失われます。共有文書ではURLのクリック可否を確認してください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/word/remove-or-turn-off-hyperlinks",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/word-protected-view-cannot-edit/",
+      "/windows/word-page-number-restarts-section/",
+      "/windows/windows-auto-brightness-changing/"
+    ],
+    "closest_existing_url": "/windows/word-protected-view-cannot-edit/",
+    "differentiation": "既存記事は保護ビューで編集できない問題。本記事は入力時の自動書式がURLをリンクへ変える設定と既存リンクの解除。",
+    "fact_check": "Microsoft公式は右クリックで既存のリンクを削除でき、オートコレクトの入力時の設定で今後の自動リンクを止められると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-presenter-view-wrong-monitor",
+    "path": "/windows/powerpoint-presenter-view-wrong-monitor/",
+    "title": "PowerPointの発表者ツールが観客側の画面に出るとき",
+    "topic": "PowerPointを2画面で発表すると、ノート付きの発表者ツールがプロジェクター側に表示される",
+    "description": "PowerPointを2画面で発表すると、ノート付きの発表者ツールがプロジェクター側に表示される。発表者ツールの「ディスプレイ設定」で発表者表示とスライド表示の画面を入れ替えます。",
+    "answer": "発表者ツールの「ディスプレイ設定」で発表者表示とスライド表示の画面を入れ替えます。",
+    "steps": [
+      "外部画面を接続し、どちらが自分用・観客用か確認する",
+      "スライドショーを始めて発表者ツールの画面を確認する",
+      "発表者ツール上部の「ディスプレイ設定」から表示画面の入れ替えを選ぶ",
+      "観客側にはスライドだけ、自分側にはノートが出ることを両画面で確認する"
+    ],
+    "causes": [
+      "発表者表示とスライド表示の画面割り当てが逆",
+      "外部画面接続後の配置が変わった",
+      "複製表示と拡張表示を取り違えた"
+    ],
+    "diagnosis": "ノートが消えたのではなく別画面に出ているかを両画面で確認し、観客側に見せる内容を分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "発表者ノートには非公開情報が含まれる場合があります。会議の画面共有先でも入れ替え後の表示を確認します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/training/start-the-presentation-and-see-your-notes-in-presenter-view?wt.mc_id=otc_powerpoint",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/slides-speaker-notes-not-visible/",
+      "/windows/powerpoint-slides-advance-automatically/",
+      "/windows/windows-black-screen-with-cursor/"
+    ],
+    "closest_existing_url": "/google/slides-speaker-notes-not-visible/",
+    "differentiation": "既存記事はGoogleスライドの発表者メモが本番で見えない問題。本記事はPowerPointの2画面でノートが観客側に露出する画面割り当てを直す。",
+    "fact_check": "Microsoft公式は発表者ツールの「ディスプレイ設定」から発表者表示とスライド表示の画面を入れ替える操作を案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-slide-skipped-hidden",
+    "path": "/windows/powerpoint-slide-skipped-hidden/",
+    "title": "PowerPointのスライドショーで特定のページが飛ばされるとき",
+    "topic": "PowerPointの編集画面にはあるスライドが、発表時のスライドショーでは表示されない",
+    "description": "PowerPointの編集画面にはあるスライドが、発表時のスライドショーでは表示されない。該当スライドに「非表示スライド」が設定されていないか確認し、必要なら解除します。",
+    "answer": "該当スライドに「非表示スライド」が設定されていないか確認し、必要なら解除します。",
+    "steps": [
+      "編集画面の左側で飛ばされるスライドのサムネイルを探す",
+      "スライド番号に斜線など非表示の印がないか確認する",
+      "右クリックして「非表示スライド」を解除する",
+      "最初からスライドショーを再生し、該当ページが順番に表示されるか確認する"
+    ],
+    "causes": [
+      "非表示スライドに設定されている",
+      "別の版のファイルを発表している",
+      "発表中だけ一時的に隠した設定を残している"
+    ],
+    "diagnosis": "すべてのページが速く進むのか、特定の番号だけ抜けるのかを区別し、非表示印を調べます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "意図的に非表示にした補足資料かもしれません。主催者や作成者と表示対象を確認してから解除します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/hide-or-show-a-slide",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/powerpoint-slides-advance-automatically/",
+      "/windows/powerpoint-linked-video-missing-after-move/",
+      "/windows/powerpoint-font-changes-other-pc/"
+    ],
+    "closest_existing_url": "/windows/powerpoint-slides-advance-automatically/",
+    "differentiation": "既存記事は保存済みタイミングで次のページへ自動移動する問題。本記事は特定ページが非表示指定で飛ばされる問題。",
+    "fact_check": "Microsoft公式は非表示スライドがファイル内には残るが通常のスライドショーでは表示されず、サムネイルの右クリックで解除できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-audio-not-starting-automatically",
+    "path": "/windows/powerpoint-audio-not-starting-automatically/",
+    "title": "PowerPointでスライド表示時に音声が自動再生されないとき",
+    "topic": "PowerPointのスライドに入れた音声が、ページを表示しても自動で始まらない",
+    "description": "PowerPointのスライドに入れた音声が、ページを表示しても自動で始まらない。音声オブジェクトの再生開始がクリック時になっていないか調べ、「自動」に設定します。",
+    "answer": "音声オブジェクトの再生開始がクリック時になっていないか調べ、「自動」に設定します。",
+    "steps": [
+      "編集画面で該当スライドの音声アイコンを選択する",
+      "「再生」タブの「開始」がクリック時か自動か確認する",
+      "ページ表示と同時に鳴らしたい場合は「自動」を選ぶ",
+      "スライドショーを最初から再生し、端末の音量と音声の開始を確認する"
+    ],
+    "causes": [
+      "音声の開始条件がクリック時になっている",
+      "アニメーションの遅延設定が入っている",
+      "端末の再生先や音量が想定と違う"
+    ],
+    "diagnosis": "音声ファイルそのものが再生不能か、クリックすれば鳴るが自動ではないのかを分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "会場で突然大音量にならないよう、テスト時は音量を下げ、発表前に再生先を確認してください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/play-music-or-other-sounds-automatically-when-a-slide-appears",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/powerpoint-linked-video-missing-after-move/",
+      "/windows/powerpoint-slides-advance-automatically/",
+      "/windows/powerpoint-font-changes-other-pc/"
+    ],
+    "closest_existing_url": "/windows/powerpoint-linked-video-missing-after-move/",
+    "differentiation": "既存記事はファイル移動で外部動画リンクが切れる問題。本記事はスライドにある音声の再生開始条件がクリック待ちになっている問題。",
+    "fact_check": "Microsoft公式は音声の再生タブで開始を自動またはクリック順に設定でき、スライドショーでテストするよう説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-animation-waits-for-click",
+    "path": "/windows/powerpoint-animation-waits-for-click/",
+    "title": "PowerPointのアニメーションがクリックするまで始まらないとき",
+    "topic": "PowerPointのスライドを表示しても、図形や文字のアニメーションがクリック待ちになる",
+    "description": "PowerPointのスライドを表示しても、図形や文字のアニメーションがクリック待ちになる。対象効果の「開始」がクリック時か、前の動作と同時・後かを確認し、意図したタイミングへ変更します。",
+    "answer": "対象効果の「開始」がクリック時か、前の動作と同時・後かを確認し、意図したタイミングへ変更します。",
+    "steps": [
+      "対象スライドの図形を選び「アニメーション」タブを開く",
+      "対象効果の「開始」が「クリック時」か確認する",
+      "自動で始めるなら「直前の動作と同時」または「直前の動作の後」を選ぶ",
+      "遅延時間と継続時間を点検し、スライドショーで順番を確認する"
+    ],
+    "causes": [
+      "開始がクリック時に設定されている",
+      "前の効果の完了待ちになっている",
+      "遅延時間が長く開始していないように見える"
+    ],
+    "diagnosis": "ページ送りは正常で特定の効果だけ止まるのかを見て、効果単位の開始条件を調べます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "一括で全効果を自動開始へ変えると説明順が崩れます。対象効果だけ変更し、発表の流れを確認します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/set-the-start-time-and-speed-of-an-animation-effect",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/powerpoint-slides-advance-automatically/",
+      "/windows/powerpoint-linked-video-missing-after-move/",
+      "/windows/powerpoint-font-changes-other-pc/"
+    ],
+    "closest_existing_url": "/windows/powerpoint-slides-advance-automatically/",
+    "differentiation": "既存記事はスライド全体が次のページへ進むタイミング。本記事は同じスライド内の図形・文字アニメーションの開始条件。",
+    "fact_check": "Microsoft公式は各アニメーションにクリック時、前と同時、前の後という開始条件と遅延・継続時間を設定できると説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "powerpoint-slide-number-not-shown",
+    "path": "/windows/powerpoint-slide-number-not-shown/",
+    "title": "PowerPointでスライド番号を入れても表示されないとき",
+    "topic": "PowerPointでスライド番号を有効にしたつもりでも、発表画面や印刷で番号が見えない",
+    "description": "PowerPointでスライド番号を有効にしたつもりでも、発表画面や印刷で番号が見えない。「挿入」→「スライド番号」で番号を有効にし、「すべてに適用」とタイトルスライドの除外設定を確認します。",
+    "answer": "「挿入」→「スライド番号」で番号を有効にし、「すべてに適用」とタイトルスライドの除外設定を確認します。",
+    "steps": [
+      "「挿入」タブから「スライド番号」を開く",
+      "「スライド」タブで「スライド番号」が選択されているか確認する",
+      "全ページへ出す場合は「すべてに適用」を選ぶ",
+      "表紙だけ出ない場合は「タイトルスライドに表示しない」の状態を確認し、各スライドで表示を点検する"
+    ],
+    "causes": [
+      "番号チェックを入れたが適用していない",
+      "タイトルスライドを除外している",
+      "一部スライドだけへ適用している"
+    ],
+    "diagnosis": "全ページで出ないのか表紙だけなのかを比べ、設定を保存したファイルで再確認します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "共有資料の表紙は意図的に番号を隠す場合があります。全適用前に資料のデザイン方針を確認してください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/word-page-number-restarts-section/",
+      "/windows/powerpoint-slides-advance-automatically/",
+      "/windows/powerpoint-linked-video-missing-after-move/"
+    ],
+    "closest_existing_url": "/windows/word-page-number-restarts-section/",
+    "differentiation": "既存記事はWordのセクション区切りでページ番号が1へ戻る問題。本記事はPowerPointの番号の挿入・全適用・表紙除外を確認する。",
+    "fact_check": "Microsoft公式はスライド番号のチェック、すべてに適用、タイトルスライドで非表示にする選択肢を案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "messages-audio-disappears-after-listening",
+    "path": "/iphone/messages-audio-disappears-after-listening/",
+    "title": "iPhoneのメッセージで音声が聞いた後に消えるとき",
+    "topic": "iPhoneのメッセージで受け取った音声メッセージが、再生後しばらくすると会話から消える",
+    "description": "iPhoneのメッセージで受け取った音声メッセージが、再生後しばらくすると会話から消える。音声メッセージは既定で再生または送信から2分後に自分の端末上の会話から消えます。残す場合は「保存」か期限設定を確認します。",
+    "answer": "音声メッセージは既定で再生または送信から2分後に自分の端末上の会話から消えます。残す場合は「保存」か期限設定を確認します。",
+    "steps": [
+      "消えたものが通常のテキストではなく音声メッセージか確認する",
+      "届いた音声の下に「保存」が出ていれば期限内に選ぶ",
+      "今後も残すなら「設定」→「アプリ」→「メッセージ」→音声メッセージの「有効期限」で「なし」を選ぶ",
+      "必要な音声は会話に残っているうちにボイスメモへの保存も検討する"
+    ],
+    "causes": [
+      "音声メッセージの有効期限が既定の2分",
+      "再生後に「保存」を選ばなかった",
+      "相手側に残る音声と自分の端末上で消える表示を混同した"
+    ],
+    "diagnosis": "自分の画面から消えたのか相手にも届いていないのかを区別し、会話の音声だけで起きるか確認します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "消えた音声を非公式の復元アプリで探さないでください。重要な記録は期限内に保存し、相手の声を扱う際はプライバシーに配慮します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-gb/guide/iphone/iph2e42d3117/27/ios/27",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/messages-check-in-option-missing/",
+      "/iphone/imessage-send-later-option-missing/",
+      "/iphone/safari-shared-with-you-links-missing/"
+    ],
+    "closest_existing_url": "/iphone/messages-check-in-option-missing/",
+    "differentiation": "既存記事はメッセージの到着確認メニューがない問題。本記事は送受信した音声メッセージの2分後の自動削除と保存設定を扱う。",
+    "fact_check": "Apple公式は音声メッセージが既定で送信または再生から2分後に自分の会話から消え、「保存」や有効期限「なし」で残せると説明する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "photos-hidden-album-not-visible",
+    "path": "/iphone/photos-hidden-album-not-visible/",
+    "title": "iPhoneの写真アプリで「非表示」アルバムが見えないとき",
+    "topic": "iPhoneで隠した写真を見ようとしても、写真アプリの「非表示」が一覧にない",
+    "description": "iPhoneで隠した写真を見ようとしても、写真アプリの「非表示」が一覧にない。写真アプリの「ユーティリティ」にある非表示コレクションと、「設定」→「アプリ」→「写真」の表示切り替えを確認します。",
+    "answer": "写真アプリの「ユーティリティ」にある非表示コレクションと、「設定」→「アプリ」→「写真」の表示切り替えを確認します。",
+    "steps": [
+      "写真アプリで「コレクション」を開き、下へスクロールして「ユーティリティ」を探す",
+      "「非表示」がなければ「設定」→「アプリ」→「写真」→「アルバム」を開く",
+      "「非表示アルバムを表示」を有効にする",
+      "写真アプリに戻り、Face IDなどでアルバムを開いて対象の写真を確認する"
+    ],
+    "causes": [
+      "非表示アルバムの表示設定がオフ",
+      "写真アプリの「コレクション」ではない画面を見ている",
+      "認証でロックされているのを写真消失と誤解した"
+    ],
+    "diagnosis": "写真そのものが削除されたのか、非表示コレクションの入口だけが隠れているのかを分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "非表示アルバムを表示すると端末を使う人に存在が分かります。共有端末なら表示の必要性を確認し、写真を削除しないでください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/personal-safety/hide-photos-and-videos-ipsb4de8251c/1.0/web/1.0",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/photos-locked-folder-missing/",
+      "/iphone/photos-duplicates-album-missing/",
+      "/iphone/live-photo-effects-missing/"
+    ],
+    "closest_existing_url": "/google/photos-locked-folder-missing/",
+    "differentiation": "既存記事はGoogleフォトのロックされたフォルダで写真が見えない問題。本記事はiPhone写真アプリ固有の非表示コレクションの表示設定と認証。",
+    "fact_check": "Apple公式は非表示の写真はライブラリに残り、設定で非表示アルバムの表示を切り替え、閲覧時はFace IDなどの認証が必要と説明する。"
+  },
+  {
+    "category": "mac",
+    "slug": "finder-preview-pane-missing",
+    "path": "/mac/finder-preview-pane-missing/",
+    "title": "MacのFinderで右側のプレビュー欄が消えたとき",
+    "topic": "MacのFinderでファイルを選んでも、右側に内容や情報を示すプレビュー欄が出ない",
+    "description": "MacのFinderでファイルを選んでも、右側に内容や情報を示すプレビュー欄が出ない。Finderの「表示」から「プレビューを表示」を選びます。スペースキーのクイックルックとは別の機能です。",
+    "answer": "Finderの「表示」から「プレビューを表示」を選びます。スペースキーのクイックルックとは別の機能です。",
+    "steps": [
+      "Finderでファイルの入ったフォルダを開く",
+      "メニューバーの「表示」を開き「プレビューを表示」を選ぶ",
+      "ファイルを一つ選び、右側にプレビューが現れるか確認する",
+      "内容は見えるが詳細情報がない場合は「プレビューオプションを表示」で項目を確認する"
+    ],
+    "causes": [
+      "Finderのプレビュー欄が非表示",
+      "ファイルを選択していない",
+      "プレビュー欄とスペースキーで開くクイックルックを取り違えた"
+    ],
+    "diagnosis": "どのファイルでも右欄がないのか、一種類のファイルだけ中身が見えないのかを区別します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "プレビューがないだけでファイルを移動・削除しないでください。機密ファイルのサムネイルを第三者に見せないよう注意します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/guide/mac-help/use-the-preview-pane-in-the-finder-on-mac-mchl1e4644c2/mac",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/drive-file-preview-unavailable/",
+      "/mac/finder-tags-missing-sidebar/",
+      "/mac/finder-smart-folder-new-files-missing/"
+    ],
+    "closest_existing_url": "/google/drive-file-preview-unavailable/",
+    "differentiation": "既存記事はGoogleドライブ内のファイルプレビューを開けない問題。本記事はMacのFinderの常設プレビュー欄の表示切り替え。",
+    "fact_check": "Apple公式ガイドはFinderでプレビュー欄を表示し、表示する情報はプレビューオプションから選べると案内する。"
+  },
+  {
+    "category": "google",
+    "slug": "maps-offline-walking-route-unavailable",
+    "path": "/google/maps-offline-walking-route-unavailable/",
+    "title": "Googleマップのオフライン地図で徒歩ルートが出ないとき",
+    "topic": "Googleマップに地域を保存したのに、通信がない場所で徒歩や公共交通の経路を検索できない",
+    "description": "Googleマップに地域を保存したのに、通信がない場所で徒歩や公共交通の経路を検索できない。オフライン地図は主に保存範囲内の車の案内に使え、徒歩・自転車・公共交通のルートはオフラインでは使えません。",
+    "answer": "オフライン地図は主に保存範囲内の車の案内に使え、徒歩・自転車・公共交通のルートはオフラインでは使えません。",
+    "steps": [
+      "プロフィール画像から「オフラインマップ」を開き、対象地域が保存されているか確認する",
+      "通信がある状態とない状態で、同じ目的地の経路種別を比べる",
+      "車の経路なら出発地から目的地まで保存範囲内か確認する",
+      "徒歩や公共交通が必要なら通信できる場所で事前に経路を確認し、現地では別の安全な案内手段も用意する"
+    ],
+    "causes": [
+      "徒歩・公共交通の経路はオフライン非対応",
+      "車の経路でも全行程が保存範囲に入っていない",
+      "保存した地図の有効期限が切れている"
+    ],
+    "diagnosis": "地図のダウンロード失敗か、徒歩案内だけ出ない仕様かを通信あり・なしで分けて判断します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "土地勘のない場所でオフラインの徒歩案内だけを頼りに出発しないでください。安全な代替経路を事前に確認します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/maps/answer/6291838?co=GENIE.Platform%3DAndroid&hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/maps-offline-map-not-updating/",
+      "/google/google-maps-offline-map-not-downloading/",
+      "/google/maps-wheelchair-route-option-missing/"
+    ],
+    "closest_existing_url": "/google/maps-offline-map-not-updating/",
+    "differentiation": "既存記事はオフライン地図の更新が進まない問題。本記事は地図が保存済みでも徒歩・公共交通の案内が提供されない機能条件。",
+    "fact_check": "Google公式はオフライン中は徒歩・自転車・公共交通の案内が利用不可で、車の案内も経路全体が保存地図内に必要と説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "app-sees-only-selected-photos",
+    "path": "/android/app-sees-only-selected-photos/",
+    "title": "Androidアプリで選んだ写真しか表示されないとき",
+    "topic": "Androidのアプリから写真を添付するとき、端末内の写真の一部しか選べない",
+    "description": "Androidのアプリから写真を添付するとき、端末内の写真の一部しか選べない。アプリに与えた写真と動画へのアクセス範囲を確認します。必要な写真だけ追加で選ぶか、信頼できるアプリに限り許可を見直します。",
+    "answer": "アプリに与えた写真と動画へのアクセス範囲を確認します。必要な写真だけ追加で選ぶか、信頼できるアプリに限り許可を見直します。",
+    "steps": [
+      "「設定」→「アプリ」で対象アプリを開く",
+      "「権限」→「写真と動画」で現在のアクセス範囲を確認する",
+      "選択した写真だけの許可なら、添付画面で必要な写真を追加できるか試す",
+      "全写真が本当に必要かを判断し、必要最小限の権限にした後に添付画面を再確認する"
+    ],
+    "causes": [
+      "選択した写真だけを許可している",
+      "Androidのフォトピッカーで別の保存先を見ている",
+      "アプリ側が一度に選べる件数を制限している"
+    ],
+    "diagnosis": "写真自体が端末から消えたのか、特定アプリの選択画面にだけ出ないのかを分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "写真全体へのアクセス許可は個人情報の範囲を広げます。必要な写真だけの共有で足りる場合は権限を広げないでください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/android/answer/9431959?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/unused-app-permissions-removed/",
+      "/android/android-screenshot-not-found/",
+      "/android/app-language-not-changing/"
+    ],
+    "closest_existing_url": "/android/unused-app-permissions-removed/",
+    "differentiation": "既存記事は長く使わないアプリの権限が自動解除される問題。本記事は利用中アプリに写真の一部だけアクセスを許した場合の添付範囲。",
+    "fact_check": "Google公式はアプリごとに写真と動画の権限を変更でき、Androidのフォトピッカーでは選んだ写真だけをアプリと共有できると案内する。"
+  },
+  {
+    "category": "iphone",
+    "slug": "facetime-live-photo-button-missing",
+    "path": "/iphone/facetime-live-photo-button-missing/",
+    "title": "FaceTime通話でLive Photosの撮影ボタンが出ないとき",
+    "topic": "iPhoneのFaceTimeビデオ通話中にLive Photosを撮るボタンが表示されない",
+    "description": "iPhoneのFaceTimeビデオ通話中にLive Photosを撮るボタンが表示されない。通話コントロールを表示し、「設定」→「アプリ」→「FaceTime」のLive Photos設定と地域での提供状況を確認します。",
+    "answer": "通話コントロールを表示し、「設定」→「アプリ」→「FaceTime」のLive Photos設定と地域での提供状況を確認します。",
+    "steps": [
+      "FaceTimeのビデオ通話中に画面をタップしてコントロールを表示する",
+      "1対1なら撮影ボタン、グループなら撮影したい人のタイルを開いてボタンを探す",
+      "「設定」→「アプリ」→「FaceTime」で「FaceTime Live Photos」が有効か確認する",
+      "地域・端末で利用できるか公式案内を確認し、相手の同意を得てから試す"
+    ],
+    "causes": [
+      "通話コントロールが隠れている",
+      "グループ通話で相手のタイルを開いていない",
+      "FaceTime Live Photosがオフまたは地域で非対応"
+    ],
+    "diagnosis": "通話自体は正常か、撮影コントロールだけがないのかを先に分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "撮影時は相手にも通知されます。相手が撮影を望まない場合は操作せず、保存した写真の扱いにも配慮してください。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.apple.com/en-euro/guide/iphone/iph912301241/27/ios/27",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/iphone/facetime-calls-not-connecting-iphone/",
+      "/iphone/live-photo-effects-missing/",
+      "/iphone/iphone-live-text-photo-button-missing/"
+    ],
+    "closest_existing_url": "/iphone/facetime-calls-not-connecting-iphone/",
+    "differentiation": "既存記事はFaceTime通話の接続失敗。本記事は接続済みのビデオ通話でLive Photos撮影ボタンが使えない場合の表示・設定・地域条件。",
+    "fact_check": "Apple公式はLive PhotosのFaceTime設定、1対1とグループ通話での撮影操作の違い、地域による利用条件を説明する。"
+  },
+  {
+    "category": "android",
+    "slug": "google-messages-group-switches-to-mms",
+    "path": "/android/google-messages-group-switches-to-mms/",
+    "title": "GoogleメッセージのグループがMMSになってしまうとき",
+    "topic": "Googleメッセージでグループを作ると、RCSではなくMMSの会話として始まる",
+    "description": "Googleメッセージでグループを作ると、RCSではなくMMSの会話として始まる。参加者全員がRCSを使えるかを確認します。RCSタグがない相手を追加するとMMSグループになる場合があります。",
+    "answer": "参加者全員がRCSを使えるかを確認します。RCSタグがない相手を追加するとMMSグループになる場合があります。",
+    "steps": [
+      "Googleメッセージで新しいグループの作成画面を開く",
+      "各参加者の候補にRCSの表示があるか確認する",
+      "RCS表示のない参加者がいる場合はMMSで作成されることを理解する",
+      "参加者にRCSの利用状況と通信事業者の条件を確認し、必要なら共有手段を変更する"
+    ],
+    "causes": [
+      "参加者の一人がRCSを有効にしていない",
+      "相手の端末や通信事業者でRCSが利用できない",
+      "SMS・MMSとRCSの会話形式を混同した"
+    ],
+    "diagnosis": "1対1のRCSも不通なのか、特定のグループだけMMSになるのかを比較します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "会話履歴を消して形式を変えようとしないでください。参加者の利用環境と料金条件を確認してから使います。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.google.com/messages/answer/9367099?hl=en",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/android/android-rcs-chat-not-connecting/",
+      "/android/google-messages-archived-chat-missing/",
+      "/android/google-messages-scheduled-send-option-missing/"
+    ],
+    "closest_existing_url": "/android/android-rcs-chat-not-connecting/",
+    "differentiation": "既存記事は自分の端末でRCSが接続できない問題。本記事は自分は接続済みでもグループ参加者のRCS可否でMMSになる問題。",
+    "fact_check": "Google公式は参加者にRCSタグがないとMMSグループが作られること、全員がRCSを有効にしている必要を説明する。"
+  },
+  {
+    "category": "windows",
+    "slug": "print-screen-opens-snipping-tool",
+    "path": "/windows/print-screen-opens-snipping-tool/",
+    "title": "WindowsでPrint Screenキーを押すと切り取り画面が出るとき",
+    "topic": "WindowsでPrint Screenキーを押すと画面全体のコピーではなく、範囲選択の切り取り操作が始まる",
+    "description": "WindowsでPrint Screenキーを押すと画面全体のコピーではなく、範囲選択の切り取り操作が始まる。WindowsのアクセシビリティにあるPrint Screenキーの切り取り設定を確認します。標準のキー動作は設定によって変わります。",
+    "answer": "WindowsのアクセシビリティにあるPrint Screenキーの切り取り設定を確認します。標準のキー動作は設定によって変わります。",
+    "steps": [
+      "「設定」→「アクセシビリティ」→「キーボード」を開く",
+      "「Print Screenキーを使用して画面の切り取りを開く」の状態を確認する",
+      "画面全体をクリップボードへコピーする旧来の動作が必要なら設定をオフにする",
+      "Print ScreenとWin+Shift+Sをそれぞれ試し、目的の画像がクリップボードへ入るか確認する"
+    ],
+    "causes": [
+      "Print Screenで切り取りを開く設定がオン",
+      "Win+Shift+SとPrint Screenの動作を混同した",
+      "撮影画像の保存先とクリップボードを取り違えた"
+    ],
+    "diagnosis": "撮影自体が失敗するのか、キーを押した後の操作が変わっただけかを切り分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "画面に機密情報がある場合はクリップボードや画像の共有先を確認してください。設定変更前の状態を控えます。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-gb/accessibility/windows/keyboard-shortcuts-in-windows",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/windows-screenshot-file-not-found/",
+      "/windows/windows-keyboard-wrong-characters/",
+      "/windows/windows-three-finger-touchpad-gesture-wrong-action/"
+    ],
+    "closest_existing_url": "/windows/windows-screenshot-file-not-found/",
+    "differentiation": "既存記事は撮影済みスクリーンショットの保存先探索。本記事はPrint Screenキーの動作が範囲選択に変わった設定とクリップボードの違い。",
+    "fact_check": "Microsoft公式ショートカット一覧はPrint Screenの既定の切り取り動作と、設定のアクセシビリティ→キーボードでオフにできることを明記する。"
+  },
+  {
+    "category": "windows",
+    "slug": "excel-pivot-field-list-hidden",
+    "path": "/windows/excel-pivot-field-list-hidden/",
+    "title": "Excelのピボットテーブルでフィールド一覧が見えないとき",
+    "topic": "Excelでピボットテーブルを編集したいのに、フィールド一覧の作業ウィンドウが表示されない",
+    "description": "Excelでピボットテーブルを編集したいのに、フィールド一覧の作業ウィンドウが表示されない。まずピボットテーブル内を選択し、一覧を閉じていた場合は右クリックの「フィールド リストの表示」で再表示します。",
+    "answer": "まずピボットテーブル内を選択し、一覧を閉じていた場合は右クリックの「フィールド リストの表示」で再表示します。",
+    "steps": [
+      "対象のピボットテーブル内のセルをクリックする",
+      "右クリックして「フィールド リストの表示」を選ぶ",
+      "一覧が出たら、行・列・値の領域とチェック項目を確認する",
+      "一覧そのものは出るが新しい列名がない場合だけ、ピボットテーブルの更新とデータソース範囲を別途確認する"
+    ],
+    "causes": [
+      "ピボットテーブル外のセルを選択している",
+      "フィールド一覧を手動で閉じた",
+      "一覧はあるが追加列が未更新で、症状を取り違えている"
+    ],
+    "diagnosis": "一覧自体がないのか、一覧内の特定のフィールドだけがないのかを区別します。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "一覧内に新しい列名がない症状なら、表示設定だけを繰り返さずデータ更新の手順へ進みます。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/excel/pivot-data-in-a-pivottable-or-pivotchart",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/google/sheets-pivot-new-rows-not-included/",
+      "/windows/excel-cell-shows-hashes/",
+      "/windows/excel-value-error-text-in-numbers/"
+    ],
+    "closest_existing_url": "/google/sheets-pivot-new-rows-not-included/",
+    "differentiation": "既存記事は集計対象に追加した行が出ない問題。本記事はExcelの編集ウィンドウ自体が隠れている問題で、最初の対処は一覧の再表示。",
+    "fact_check": "Microsoft公式はピボットテーブル内をクリックし、閉じたフィールド一覧を右クリックの「フィールド リストの表示」で再表示すると案内する。"
+  },
+  {
+    "category": "windows",
+    "slug": "word-table-row-splits-across-pages",
+    "path": "/windows/word-table-row-splits-across-pages/",
+    "title": "Wordの表の1行がページをまたいで分かれるとき",
+    "topic": "Wordの表を印刷すると、同じ行の内容が前ページと次ページに分断されて読みにくい",
+    "description": "Wordの表を印刷すると、同じ行の内容が前ページと次ページに分断されて読みにくい。表の行のプロパティで「行の途中で改ページする」の設定を確認し、分割したくない行では解除します。",
+    "answer": "表の行のプロパティで「行の途中で改ページする」の設定を確認し、分割したくない行では解除します。",
+    "steps": [
+      "分断されている行のセルを選択する",
+      "右クリックから「表のプロパティ」を開き「行」タブを選ぶ",
+      "「行の途中で改ページする」のチェックを外して確定する",
+      "印刷レイアウトと印刷プレビューで、行全体が次ページへ移ったか確認する"
+    ],
+    "causes": [
+      "表の行内での改ページが許可されている",
+      "行の内容が1ページの印刷可能な高さを超えている",
+      "段落の改ページ設定が別途影響している"
+    ],
+    "diagnosis": "見出し行が消えるのか、同じデータ行の途中で切れるのかを印刷レイアウトで切り分けます。症状が起きるファイルや機器だけでなく、同じ機能を使う別の対象でも再現するか比べます。表示された文言と操作の直前に変えた設定を控え、一度に一つずつ確認して原因を絞ります。",
+    "caution": "長い行が用紙の高さに収まらない場合は設定だけで完全に1ページに収まらないため、余白や内容の整理を検討します。共有中のファイルや組織の設定では、編集前に所有者や管理者の方針を確認します。元のデータを残してから試し、結果が違えば変更を戻せるようにしてください。",
+    "escalation": "各設定と表示された文言を記録しても改善しない場合は、対象サービスの公式サポートに相談します。",
+    "source_url": "https://support.microsoft.com/en-us/office/security-privacy/set-or-change-table-properties",
+    "source_label": "製品提供元の公式ヘルプ",
+    "related_existing": [
+      "/windows/word-page-number-restarts-section/",
+      "/windows/word-track-changes-strikethrough-remains/",
+      "/windows/phone-link-android-sms-missing/"
+    ],
+    "closest_existing_url": "/windows/word-page-number-restarts-section/",
+    "differentiation": "既存記事はセクション境界でページ番号が1に戻る問題。本記事は表のデータ行がページをまたいで分断される問題で、表の行プロパティを調べる。今日の見出し行反復記事とも、設定箇所と解決対象が異なる。",
+    "fact_check": "Microsoft公式の表のプロパティは「行」タブにページをまたぐ行の分割オプションがあると説明する。"
+  }
+]
